@@ -23,6 +23,6 @@ def test_exact_quadratic_surface_slope():
 def test_warning_uses_dimensional_eta_slope_without_extra_amplitude_factor(short_run):
     solver, snapshots = short_run
     diagnostic = Diagnostics(solver.fem, snapshots[0][0])
-    row = dict(snapshots[0][1], max_slope=.4, max_slope_times_tan_alpha=.014)
+    row = dict(snapshots[0][1], max_slope=.4)
     with pytest.warns(RuntimeWarning, match=SLOPE_WARNING):
         diagnostic.validate(row)

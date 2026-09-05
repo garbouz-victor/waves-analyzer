@@ -47,13 +47,13 @@ class SnapshotWriter:
     def _metadata(self):
         f, h = self.fem, self.file
         h.attrs.update({
-            "schema_version": "1.0", "status": "running", "config_json": self.solver.config.to_json(),
+            "schema_version": "1.5", "status": "running", "config_json": self.solver.config.to_json(),
             "created_utc": datetime.now(timezone.utc).isoformat(),
             "python_version": platform.python_version(),
             "dependencies_json": json.dumps({name: importlib.metadata.version(name)
                                               for name in ("numpy", "scipy", "scikit-fem", "h5py")}),
             "model": "linearized incompressible Navier–Stokes; fixed domain; sigma=0",
-            "integrator": "implicit midpoint, monolithic velocity/surface",
+            "integrator": self.solver.config.integrator+", monolithic velocity/surface",
             "pressure_convention": "q at snapshot time; constant determined by free-surface traction",
             "vorticity_convention": "omega = dw/dx - du/dz; elementwise DG P1, exact derivative of P2",
             "energy_units": "m^4/s^2; per unit density and out-of-plane span",

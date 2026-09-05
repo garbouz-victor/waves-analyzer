@@ -19,6 +19,7 @@ class SimulationConfig:
     nu: float = 0.01
     t_end: float = 5.0
     dt: float = 0.0025
+    integrator: str = "midpoint"
     snapshot_dt: float = 0.025
     mesh: str = "medium"
     nx: int = None
@@ -48,6 +49,8 @@ class SimulationConfig:
             raise ValueError("t_end must be nonnegative and |alpha_deg| < 90 degrees")
         if self.mesh not in MESH_PRESETS:
             raise ValueError(f"mesh must be one of {tuple(MESH_PRESETS)}")
+        if self.integrator not in ("midpoint", "sdirk2"):
+            raise ValueError("integrator must be midpoint or sdirk2")
         for name in ("nx", "nz", "visualization_nx", "visualization_nz"):
             n = getattr(self, name)
             if n is not None and (not isinstance(n, int) or isinstance(n, bool) or n < 4):

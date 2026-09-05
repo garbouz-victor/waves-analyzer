@@ -2,14 +2,14 @@
 
 from .diagnostics import Diagnostics
 from .fem_spaces import FEMSystem
-from .time_integrator import MidpointIntegrator
+from .time_integrator import INTEGRATORS
 
 
 class SloshingSolver:
     def __init__(self, config):
         self.config = config
         self.fem = FEMSystem(config)
-        self.integrator = MidpointIntegrator(self.fem)
+        self.integrator = INTEGRATORS[config.integrator](self.fem)
 
     def snapshots(self, eta_initial=None):
         state = self.integrator.initial_state(eta_initial)

@@ -5,3 +5,5 @@ scipy==1.7.3
 scikit-fem==11.0.0
 h5py==3.6.0
 pytest==7.1.1
+sympy==1.10.1
+matplotlib==3.5.1

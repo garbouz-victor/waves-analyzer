@@ -1,0 +1,9 @@
+{
+  "alpha_deg": 0.2,
+  "nu": 0.01,
+  "mesh": "medium",
+  "t_end": 0.5,
+  "dt": 0.0025,
+  "snapshot_dt": 0.025,
+  "integrator": "midpoint"
+}

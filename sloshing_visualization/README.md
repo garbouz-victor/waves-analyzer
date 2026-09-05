@@ -1,13 +1,16 @@
 # Вязкий sloshing с закреплёнными контактными точками
 
-Отдельный исследовательский проект на Python. Текущий этап — **STEP 1**:
-линейные нестационарные Navier–Stokes, физические тесты и сохранение решения.
-MP4, частицы, Plotly и полный convergence study будут следующими этапами;
-сейчас они **не реализованы**. Никакого заранее заданного движения или
+Отдельный исследовательский проект на Python. Текущий этап — **STEP 1.5**:
+независимая пространственная и временная проверка линейных Navier–Stokes.
+MP4, частицы и Plotly относятся к следующим этапам и сейчас **не реализованы**.
+Никакого заранее заданного движения или
 экспоненциального затухания в solver нет.
 
-Измеренные результаты, warnings и ограничения текущего этапа:
+Архив первого этапа с его измерениями и warnings:
 [STEP1_REPORT.md](STEP1_REPORT.md).
+
+Независимая проверка и обоснование выбора integrator/dt:
+[STEP1_5_REPORT.md](STEP1_5_REPORT.md).
 
 ## Запуск и воспроизводимость
 
@@ -41,7 +44,7 @@ python scripts/run_simulation.py --config configs/default.json --nu-preset 0.1
 даже если не совпал с очередным интервалом snapshots.
 
 Все параметры находятся в `SimulationConfig`, включая допуски физических
-проверок. `requirements-tested.txt` фиксирует окружение первого отчёта;
+проверок. `requirements-tested.txt` фиксирует проверенное окружение STEP 1.5;
 `requirements.txt` задаёт совместимые диапазоны для установки, в том числе
 на более новых Python. Локальное окружение STEP 1 использует доступные
 системные научные библиотеки через `--system-site-packages`; система не
@@ -192,7 +195,8 @@ Midpoint A-устойчива, но не L-устойчива: очень быс
 Tensor mesh также сохраняет узкие пристеночные ячейки на глубине: это
 простая первая версия, без адаптивного удаления глубинных вертикальных
 линий. Sparse direct solver на fine может требовать существенную память.
-Presets заданы для будущего convergence study; сам этот study ещё не выполнен.
+В STEP 1.5 выполнен short contact/bulk study на всех трёх presets до 0.1 s.
+Это ещё не пространственная сертификация всех полей на интервале 0…5 s.
 Малые сетки unit tests не следует считать production-разрешением.
 
 ## Diagnostics and failure policy
@@ -229,11 +233,8 @@ Warnings не подавляются и не исправляются измен
 ### Small-slope convention
 
 Eta уже размерная: `eta=x*tan(alpha)` на старте. Физически малым должно
-быть непосредственно `max |eta_x|`. Дополнительное умножение на tan(alpha)
-второй раз уменьшает амплитуду и задерживает предупреждение. Поэтому
-сохраняются **обе** величины: `max_slope` и
-`max_slope_times_tan_alpha=max_slope*abs(tan(alpha))`.
-Если любая превышает настраиваемый `small_slope_limit=0.3`, выводится:
+быть непосредственно `max |eta_x|`. Если `max_slope` превышает настраиваемый
+`small_slope_limit=0.3`, выводится:
 
 > Local small-slope assumption is breaking down near the wall.
 
@@ -249,7 +250,8 @@ src/sloshing/
   config.py              параметры и воспроизводимое имя run
   mesh.py                градуированная треугольная сетка
   fem_spaces.py          P2/P1, P2 след, матрицы weak formulation
-  time_integrator.py     совместный midpoint и восстановление q(t)
+  time_integrator.py     monolithic midpoint/SDIRK2 и восстановление q(t)
+  problems.py            нулевые production loads / явный validation interface
   solver.py              шаги и проверенные snapshots
   diagnostics.py         физические нормы, баланс, warnings
   storage.py             HDF5 и CSV без зависимости от renderer
@@ -257,11 +259,13 @@ src/sloshing/
   postprocess/
     vorticity.py         dw/dx − du/dz из FEM
     regular_grid.py      интерполяция полей в xv,zv
+  validation/            аналитический MMS, stiff/time/contact исследования
 scripts/run_simulation.py
 tests/                   физические и численные проверки
 configs/default.json
 results/                 рассчитанные поля
 output/                  будущая визуализация
+validation_results/      CSV/JSON/PDF/PNG проверок; локальный HDF5 кэш
 ```
 
 HDF5 содержит `times`; группу `mesh` с координатами, connectivity, dof
@@ -283,7 +287,7 @@ contact zoom должен опрашивать FEM с дополнительны
 
 ## How to watch the animation
 
-Этот раздел задаёт интерпретацию **будущих** анимаций, которых в STEP 1 ещё нет.
+Этот раздел задаёт интерпретацию **будущих** анимаций, которых в STEP 1.5 ещё нет.
 
 1. Сначала смотрите на surface + particles: при alpha>0 правая сторона выше,
    первые движения вверху ожидаются влево, справа вниз, слева вверх.
@@ -331,7 +335,131 @@ model. Фиктивная плёнка в результаты не добавл
 к сетке. Нельзя приписывать остаточную пристеночную структуру физической плёнке
 или считать проверку убывания энергии достаточной проверкой её сходимости.
 
-## Следующие этапы
+## STEP 1.5: independent validation commands
+
+```bash
+python -m pytest -q
+python -m pytest -q -m validation
+python scripts/generate_manufactured_solution.py
+python scripts/manufactured_convergence.py
+OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 OMP_NUM_THREADS=1 \
+  python scripts/time_stiffness_study.py --workers 2
+python scripts/contact_mesh_study.py
+```
+
+Обычный pytest включает symbolic MMS и короткий FEM MMS; marker `validation`
+включает дорогую пространственную сходимость и проверку загрязнения dt.
+`time_stiffness_study.py --unit-only` ограничивает исследование скалярной
+задачей и tiny FEM-модой. Полная команда выполняет 18 medium run до 0.5 s.
+CSV, JSON, научные PDF/PNG находятся в `validation_results/`. Кэш HDF5 содержит
+FEM коэффициенты для повторного анализа и не включается в git. Завершённые
+совместимые runs переиспользуются; failed/incompatible cache вызывает ошибку.
+Для независимого повторения укажите новый `--output`.
+`--workers 2` запускает независимые вязкости в отдельных процессах; это
+не меняет метод интегрирования. `--physical-only` переиспользует уже
+сделанные scalar/FEM-mode studies и запускает только physical refinement.
+Необрабатываемое завершение процесса может оставить `running` или повреждённый
+HDF5; такие файлы не считаются завершёнными и автоматически не перезаписываются.
+
+### Analytic manufactured solution
+
+MMS выполняется на `a=d=1`, равномерной сетке; production глубина остаётся 10 m.
+`psi=exp(-t)*(1-x²)²*(z+1)²`, `u=psi_z`, `w=-psi_x`,
+`eta=exp(-t)*d((1-x²)²)/dx`, `q=exp(-t)*x*(z+1)`.
+SymPy независимо выводит `f=v_t+grad(q)-nu*Laplacian(v)` и
+`r=Tn+g*eta*n`. Они входят как `(f,phi)+<r,phi>` в правую часть той же weak
+formulation, включая обе компоненты traction. Exact fields не зависят от FEM
+матриц. [SymPy lambdify](https://docs.sympy.org/latest/modules/utilities/lambdify.html)
+преобразует символические выражения в NumPy функции.
+
+ProductionProblem возвращает нулевые силы; CLI не имеет переключателя на MMS.
+Validation явно создаёт ManufacturedProblem. Initial velocity — constrained
+L2 projection аналитической скорости, initial eta — P2 L2 projection с точными
+endpoints. Это исключает несовместимую начальную div в DAE. Для нагрузки
+используется квадратура порядка 10, для ошибок — 12. Ошибки считаются
+относительно аналитических функций без сдвига константы pressure и без
+visualization grid; velocity H1 в таблицах означает градиентную полунорму.
+
+### Monolithic SDIRK2 and its energy budget
+
+`--integrator midpoint|sdirk2`, default `midpoint` сохранён. Обозначим
+`gamma=1-1/sqrt(2)`, `s=gamma*dt`, `b=(1-gamma,gamma)`. Для стадии i:
+
+```
+v_base   = v_n   + dt * sum_{j<i} a_ij k_v,j
+eta_base = eta_n + dt * sum_{j<i} a_ij R V_j
+
+(M/s + K + s*g*C*R) V_i - B^T Q_i = M*v_base/s - g*C*eta_base + F(t_n+c_i*dt)
+B V_i = 0
+eta_i = eta_base + s*R V_i
+k_v,i = (V_i-v_base)/s
+```
+
+`c=(gamma,1)`, `a_21=1-gamma`, конечное состояние равно второй стадии.
+Используется одна LU факторизация на обе стадии и все шаги. Никаких
+проекций div после шага или явного обновления eta нет. Midpoint использует
+силу в середине шага; SDIRK2 — в соответствующие моменты стадий.
+
+Для общего RK точный дискретный баланс квадратичной энергии:
+
+```
+E_{n+1} - E_n + dt*sum_i b_i V_i^T K V_i - dt*sum_i b_i V_i^T F_i + Q_RK = 0
+Q_RK = dt²/2 * sum_ij (b_i*a_ij+b_j*a_ji-b_i*b_j) <k_i,k_j>_G
+G = diag(M, g*S)
+```
+
+У midpoint `Q_RK=0`. У данного SDIRK2 матрица в скобках равна
+`diag(-gamma²,+gamma²)`. Поэтому поправка **знаковая**, а метод не является
+algebraically stable. Это не отменяет его A-/L-stability для линейной задачи.
+Поправка учитывается отдельно, не выдаётся за положительное вязкое тепло.
+Сохраняются `cumulative_viscous_dissipation`, `cumulative_work`,
+`rk_energy_correction`, итоговая невязка баланса; для production дополнительно
+проверяется отсутствие роста полной энергии на каждом внутреннем шаге.
+
+Завихренность сравнивается во всём объёме, слое `z>=-1` и полосах `x<=-0.9`,
+`x>=0.9`. Интегралы DG1² по обрезанным треугольникам точные. Для выявления
+temporal alternation сохраняются нормы и probes на **каждом dt**, включая
+точки `(±0.995,-0.005)` около контактов. Показатель `nu*dt/h_min²` основан
+на минимальной длине ребра и является только rough dimensional indicator,
+не спектральным радиусом FEM.
+
+Единицы новых норм: `||v||_L2` — m²/s, `||grad v||_L2` и `||omega||_L2`
+в двумерной области — m/s, `||q||_L2` — m³/s², поверхностная `||eta||_L2`
+— m^(3/2), `omega_max` и omega probes — 1/s. Относительные ошибки — доли;
+в отчёте проценты явно помечены `%`. MMS — математический benchmark линейного
+оператора, его большая аналитическая амплитуда не интерпретируется как
+физически допустимый свободный интерфейс.
+
+`configs/linear_safe.json` задаёт alpha=0.2°, основной **кандидат** для линейной
+физической анимации; это имя не гарантирует малого наклона у контакта во все
+моменты времени. `configs/contact_breakdown_demo.json` сохраняет alpha=2°:
+полезный формальный пример быстрого нарушения малого наклона у pinned contacts,
+а не «неправильный solver run». Измеренные ограничения и рекомендуемые
+настройки приведены в STEP1_5_REPORT. При nu=0.01, medium, alpha=0.2°
+измерен max slope=0.879 к 0.5 s: даже этот кандидат нарушает локальное
+условие малого наклона. Название конфига не является физической гарантией.
+
+### Measured recommendation, not an animation release
+
+Для следующего физического расчёта рекомендуются **SDIRK2, dt=0.00125 s**,
+medium, snapshots через 0.005 s. У SDIRK2 значительно меньше stiff residue
+в omega, чем у midpoint; dt=0.0025 уже хорошо согласуется по нормам полей
+на snapshots, но ближайшие к контакту probes в первые миллисекунды требуют
+осторожности. Default integrator и default alpha не изменены.
+
+Для физической интерпретации контактов разумный следующий угол — **0.02°**:
+по линейному масштабированию измеренного решения это даёт max slope≈0.0879
+на medium за 0…0.5 s при nu=0.01. Это вывод из линейности, не отдельный run
+и не гарантия для fine или 5 s. Alpha=0.2° остаётся параметром выполненного
+validation study и формального исследования локального breakdown.
+
+Подтверждены P2/P1 MMS orders, временная сходимость на medium и уменьшение
+bulk/contact L2 differences на трёх сетках при t=0.1. Pointwise corner slope
+и omega_max **не** объявляются пространственно сошедшимися. Интервал 0.5…5 s
+и nu=0.001 пока не прошли это temporal validation. Подробные числа и полный
+перечень тестов находятся в [отчёте](STEP1_5_REPORT.md).
+
+## Следующие этапы после validation
 
 Последовательность: физические тесты → coarse `0…1 s` и проверка полей →
 medium `0…5 s` → частицы → main MP4 → vorticity/contact-line MP4 →

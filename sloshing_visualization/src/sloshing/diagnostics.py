@@ -1,4 +1,4 @@
-"""Independent physical norms plus the exact midpoint energy budget."""
+"""Physical norms and exact discrete midpoint/SDIRK2 energy budgets."""
 
 import warnings
 
@@ -60,15 +60,19 @@ class Diagnostics:
         max_slope = float(max(np.max(abs(slopes_left)), np.max(abs(slopes_right))))
         volume = float(f.surface_weights @ state.eta)
         energy_scale = max(self.initial_energy, 1e-30)
+        budget = (kinetic+potential+state.dissipated_energy+state.rk_energy_correction
+                  -state.work_energy-self.initial_energy)
         result = {
             "time": state.time,
             "kinetic_energy": kinetic,
             "gravitational_potential_energy": potential,
             "total_energy": kinetic + potential,
             "viscous_dissipation": float(state.velocity @ (f.K @ state.velocity)),
-            "cumulative_dissipation_midpoint": state.dissipated_energy,
-            "energy_balance_residual": kinetic + potential + state.dissipated_energy - self.initial_energy,
-            "energy_balance_relative": (kinetic + potential + state.dissipated_energy - self.initial_energy) / energy_scale,
+            "cumulative_viscous_dissipation": state.dissipated_energy,
+            "cumulative_work": state.work_energy,
+            "rk_energy_correction": state.rk_energy_correction,
+            "energy_balance_residual": budget,
+            "energy_balance_relative": budget / energy_scale,
             "step_energy_residual": state.step_energy_residual,
             "max_step_energy_residual": state.max_step_energy_residual,
             "max_step_energy_increase": state.max_step_energy_increase,
@@ -82,7 +86,6 @@ class Diagnostics:
             "eta_right": float(state.eta[-1]),
             "contact_error": float(np.max(abs(state.eta[[0, -1]] - self.contacts))),
             "max_slope": max_slope,
-            "max_slope_times_tan_alpha": max_slope * abs(f.config.slope),
             "slope_left": float(slopes_left[0]),
             "slope_right": float(slopes_right[-1]),
         }
@@ -110,7 +113,7 @@ class Diagnostics:
                       for key, limit in checks.items() if abs(row[key]) > limit]
         if violations:
             raise PhysicsViolation(f"t={row['time']}: " + "; ".join(violations))
-        if max(row["max_slope"], row["max_slope_times_tan_alpha"]) > c.small_slope_limit and not self.slope_warned:
+        if row["max_slope"] > c.small_slope_limit and not self.slope_warned:
             warnings.warn(SLOPE_WARNING + f" max |eta_x|={row['max_slope']:.4g}", RuntimeWarning, stacklevel=2)
             self.slope_warned = True
         if (row["divergence_relative"] > c.divergence_relative_warning

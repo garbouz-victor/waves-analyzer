@@ -18,6 +18,7 @@ def main(argv=None):
         parser.add_argument(f"--{name}", type=float)
     parser.add_argument("--nu-preset", type=float, choices=VISCOSITY_PRESETS)
     parser.add_argument("--mesh", choices=tuple(MESH_PRESETS))
+    parser.add_argument("--integrator", choices=("midpoint", "sdirk2"))
     for name in ("nx", "nz", "visualization-nx", "visualization-nz"):
         parser.add_argument(f"--{name}", type=int)
     parser.add_argument("--output", type=Path)

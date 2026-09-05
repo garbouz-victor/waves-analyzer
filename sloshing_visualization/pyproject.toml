@@ -15,7 +15,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-test = ["pytest>=7,<9"]
+test = ["pytest>=7,<9", "sympy>=1.10,<2", "matplotlib>=3.5,<4"]
 
 [project.scripts]
 sloshing-run = "sloshing.cli:main"
@@ -26,4 +26,5 @@ where = ["src"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
-addopts = "-ra"
+addopts = "-ra -m 'not validation'"
+markers = ["validation: slower spatial and temporal convergence measurements"]

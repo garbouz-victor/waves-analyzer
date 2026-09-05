@@ -1,0 +1,114 @@
+{
+  "rows": [
+    {
+      "mesh": "coarse",
+      "nx": 40,
+      "nz": 70,
+      "time": 0.1,
+      "dt": 0.00125,
+      "integrator": "sdirk2",
+      "source": "validation_results/contact/runs/coarse.h5",
+      "eta_antisymmetry_max": 8.673617379884035e-18,
+      "max_slope": 0.04289472197522535,
+      "divergence_l2": 0.0007988188989900006,
+      "weak_divergence_l2": 1.2435830084608521e-15,
+      "volume_error": 8.74138001566438e-19,
+      "contact_error": 0.0,
+      "energy_balance_relative": -6.802746300667504e-16,
+      "omega_L2": 0.020949322098184744,
+      "omega_wall_left_L2": 0.014719757485561586,
+      "omega_wall_right_L2": 0.014719757485561688,
+      "omega_max": 0.6561845867821723,
+      "total_energy": 3.9626741713221776e-05,
+      "no_slip_max": 0.0,
+      "full_eta_difference_to_fine": 1.497524383570379e-06,
+      "bulk_eta_difference_to_fine": 1.6244574111730605e-07,
+      "intermediate_eta_difference_to_fine": 3.155230709205359e-07,
+      "contact_eta_difference_to_fine": 1.4639072617842687e-06
+    },
+    {
+      "mesh": "medium",
+      "nx": 80,
+      "nz": 140,
+      "time": 0.1,
+      "dt": 0.00125,
+      "integrator": "sdirk2",
+      "source": "validation_results/time/runs/nu0.01_sdirk2_dt0.00125.h5",
+      "eta_antisymmetry_max": 1.3444106938820255e-17,
+      "max_slope": 0.05503446073034717,
+      "divergence_l2": 0.0005205158277796279,
+      "weak_divergence_l2": 2.0658231564293043e-15,
+      "volume_error": 2.829090043829363e-19,
+      "contact_error": 0.0,
+      "energy_balance_relative": -1.700686575166876e-15,
+      "omega_L2": 0.021133793461610192,
+      "omega_wall_left_L2": 0.014851391981015373,
+      "omega_wall_right_L2": 0.014851391981015417,
+      "omega_max": 0.8738305496395025,
+      "total_energy": 3.962705317276706e-05,
+      "no_slip_max": 0.0,
+      "full_eta_difference_to_fine": 4.7617671482056614e-07,
+      "bulk_eta_difference_to_fine": 3.1387553527315315e-08,
+      "intermediate_eta_difference_to_fine": 6.600931492373608e-08,
+      "contact_eta_difference_to_fine": 4.7157929776508016e-07
+    },
+    {
+      "mesh": "fine",
+      "nx": 120,
+      "nz": 210,
+      "time": 0.1,
+      "dt": 0.00125,
+      "integrator": "sdirk2",
+      "source": "validation_results/contact/runs/fine.h5",
+      "eta_antisymmetry_max": 9.540979117872439e-18,
+      "max_slope": 0.06390330434369071,
+      "divergence_l2": 0.0004076072345027071,
+      "weak_divergence_l2": 3.001682520428502e-15,
+      "volume_error": 2.354751593366955e-19,
+      "contact_error": 0.0,
+      "energy_balance_relative": -2.210892547716939e-15,
+      "omega_L2": 0.021197111546037536,
+      "omega_wall_left_L2": 0.014896552028509234,
+      "omega_wall_right_L2": 0.014896552028509242,
+      "omega_max": 1.0301134567679604,
+      "total_energy": 3.962712221575999e-05,
+      "no_slip_max": 0.0,
+      "full_eta_difference_to_fine": 0.0,
+      "bulk_eta_difference_to_fine": 0.0,
+      "intermediate_eta_difference_to_fine": 0.0,
+      "contact_eta_difference_to_fine": 0.0
+    }
+  ],
+  "summary": {
+    "reference_is_fine_not_exact": true,
+    "consecutive_differences": [
+      {
+        "mesh": "coarse",
+        "reference": "medium",
+        "full": 1.314599572432062e-06,
+        "bulk": 1.4196393530120205e-07,
+        "intermediate": 2.626505420475883e-07,
+        "contact": 1.2880942234947974e-06
+      },
+      {
+        "mesh": "medium",
+        "reference": "fine",
+        "full": 4.7617671482056614e-07,
+        "bulk": 3.1387553527315315e-08,
+        "intermediate": 6.600931492373608e-08,
+        "contact": 4.7157929776508016e-07
+      }
+    ],
+    "medium_dt_vs_dt_half_at_t_0_1": {
+      "full": 2.6595502492547413e-09,
+      "bulk": 1.055300496269096e-09,
+      "intermediate": 2.637303588316212e-09,
+      "contact": 3.432743966091172e-10
+    },
+    "regions": {
+      "bulk": "|x|<=0.9",
+      "intermediate": "|x|<=0.98",
+      "contact": "0.98<|x|<=1"
+    }
+  }
+}

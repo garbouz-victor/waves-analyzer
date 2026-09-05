@@ -7,3 +7,4 @@ results/*.h5
 results/run_*/
 output/*
 !output/.gitkeep
+validation_results/**/*.h5
