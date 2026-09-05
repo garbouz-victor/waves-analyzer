@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sloshing-visualization"
+version = "0.1.0"
+description = "Linear viscous free-surface Navier–Stokes with pinned contact points"
+requires-python = ">=3.9"
+dependencies = [
+  "numpy>=1.21.5,<3",
+  "scipy>=1.7.3,<2",
+  "scikit-fem==11.0.0",
+  "h5py>=3.6,<4",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7,<9"]
+
+[project.scripts]
+sloshing-run = "sloshing.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"

@@ -1,0 +1,7 @@
+# Exact runtime used for the STEP 1 verification (Python 3.9.12).
+# On a newer Python use the compatible ranges in requirements.txt.
+numpy==1.21.5
+scipy==1.7.3
+scikit-fem==11.0.0
+h5py==3.6.0
+pytest==7.1.1
