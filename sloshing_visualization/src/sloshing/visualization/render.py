@@ -13,12 +13,13 @@ from matplotlib.animation import FFMpegWriter
 from matplotlib.backends.backend_pdf import PdfPages
 
 from .panels import MainFigure, SurfaceFigure, TracerFigure
+from .no_slip_panels import NoSlipFigure
 
 
 def signature(meta):
     payload = json.dumps(meta, sort_keys=True).encode()
     # Explorer implementation/report changes do not invalidate inspected MP4s.
-    for path in (Path(__file__).parent/name for name in ("panels.py","render.py","scope.py")):
+    for path in (Path(__file__).parent/name for name in ("panels.py","render.py","scope.py","data.py","wall_profiles.py","no_slip_panels.py")):
         payload += path.read_bytes()
     return hashlib.sha256(payload).hexdigest()
 
@@ -57,6 +58,8 @@ def preview(cache, meta, output):
             fig.update(meta["key_frames"][1]["index"]).savefig(dest/(name+".png"),dpi=100)
             plt.close(fig.fig)
     write_json(output/"preview_metrics.json",rows)
+    from .no_slip_figures import no_slip_previews
+    no_slip_previews(cache,meta,output)
     write_json(output/"static_preview_gate.json",{"status":"awaiting_inspection","signature":signature(meta),"runtime_s":time.perf_counter()-start})
 
 
@@ -93,7 +96,7 @@ def video(cache,meta,output,kind,short=False):
     if not short:
         require_gate(output,meta,"video_preview")
     names={"main":"bulk_flow_explained", "clean":"bulk_flow_clean", "vorticity":"bulk_vorticity",
-           "surface":"free_surface_true_scale", "tracers":"tracer_model_comparison"}
+           "surface":"free_surface_true_scale", "tracers":"tracer_model_comparison", "no_slip":"no_slip_boundary_layer"}
     stem="preview_0_1s" if short else names[kind]
     path=output/(stem+".mp4")
     manifest=output/(stem+"_render.json")
@@ -114,6 +117,7 @@ def video(cache,meta,output,kind,short=False):
             indices=np.flatnonzero(h["times"][:] <= (1.+1e-12 if short else 5.+1e-12))
             if kind=="surface":fig=SurfaceFigure(h,meta)
             elif kind=="tracers":fig=TracerFigure(h,meta)
+            elif kind=="no_slip":fig=NoSlipFigure(h,meta)
             else:fig=MainFigure(h,meta,clean=kind=="clean",omega=kind=="vorticity")
             writer=FFMpegWriter(fps=meta["fps"],codec="libx264",metadata={"title":stem,"comment":meta["interpretation"]},
                                extra_args=["-preset","veryfast","-crf","20","-pix_fmt","yuv420p","-threads","2","-movflags","+faststart"])

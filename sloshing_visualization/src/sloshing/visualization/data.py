@@ -17,8 +17,9 @@ from ..validation.contact import surface_value
 from ..validation.particles import particle_seeds, FEMVelocityHistory, advect
 from .scope import load_scope, compatible_cache, event_frames, LIMITATIONS
 from .tracers import linear_lagrangian_displacement, choose_magnification
+from .wall_profiles import profile_points,wall_normal_profiles,trace_speed_max,arrow_geometry
 
-SCHEMA = "step2-display-v1"
+SCHEMA = "step2-display-v2-no-slip"
 HISTORY_FIELDS = {key:key for key in ("kinetic_energy", "total_energy", "modal_eta", "slope_bulk", "slope_global")}
 HISTORY_FIELDS["potential_energy"] = "gravitational_potential_energy"
 
@@ -67,7 +68,7 @@ def prepare_data(dataset, medium, output, scope=None):
                 raise RuntimeError("Incomplete display cache; use a new output directory")
             compatible_cache(json.loads(h.attrs["identity"]), expected)
             metadata = json.loads(h.attrs["metadata"])
-            for key in ("u", "w", "omega", "eta", "linear_paths", "advected_paths"):
+            for key in ("u", "w", "omega", "eta", "linear_paths", "advected_paths", "wall_left_speed_max", "wall_right_speed_max", "profile_left_speed", "profile_right_speed"):
                 if h[key].shape[0] != metadata["frame_count"]:
                     raise RuntimeError("Truncated display cache: "+key)
         (output/"animation_metadata.json").write_text(json.dumps(metadata, indent=2, allow_nan=False)+"\n")
@@ -91,8 +92,19 @@ def prepare_data(dataset, medium, output, scope=None):
             mappings = {"near": grid_map(geo, x, z), "omega": grid_map(geo, x, z, 1),
                         "full": grid_map(geo, xf, zf), "full_omega": grid_map(geo, xf, zf, 1),
                         "seeds": geo.interpolation(seeds.T)}
-            qx, qz = np.meshgrid(np.linspace(-1, 1, 25), np.linspace(-1.45, -.15, 18))
+            qx, qz = np.meshgrid(np.linspace(-scope['arrow_seed_abs_x_max_m'], scope['arrow_seed_abs_x_max_m'], 25), np.linspace(-1.45, -.15, 18))
             mappings["arrows"] = geo.interpolation(np.array([qx.ravel(), qz.ravel()]))
+            eps=np.unique(np.r_[np.linspace(0,scope['profile_epsilon_max_m'],101),1e-5,1e-4,5e-4,1e-3,2e-3,5e-3,1e-2,2e-2,5e-2,1e-1])
+            profile_depths=np.array(scope['boundary_layer_depths_m'])
+            for side in ('left','right'):
+                points,profile_shape=profile_points(geo,side,profile_depths,eps)
+                mappings['profile_'+side]=geo.interpolation(points)
+            wall_z=np.sort(np.r_[geo.z,(geo.z[:-1]+geo.z[1:])/2])
+            wallmaps={side:geo.interpolation(np.array([np.full_like(wall_z,edge),wall_z])) for side,edge in (('left',-1.),('right',1.))}
+            zoomx,zoomz=np.linspace(-1,-.8,161),np.linspace(-1.2,0,121)
+            mappings['wall_zoom']=grid_map(geo,zoomx,zoomz)
+            zx,zz=np.meshgrid(np.linspace(-.94,-.82,5),np.linspace(-1.15,-.16,16))
+            mappings['zoom_arrows']=geo.interpolation(np.array([zx.ravel(),zz.ravel()]))
             # Exact line quadrature; depth uses a fixed log range later.
             depths = np.unique(np.r_[np.linspace(-10, -1.5, 25), np.linspace(-1.5, 0, 41)])
             depth_maps = []
@@ -102,14 +114,19 @@ def prepare_data(dataset, medium, output, scope=None):
             wallpoints = np.array([(side, depth) for side in (-1., 1.) for depth in np.linspace(-10, 0, 101)]).T
             wallmap = geo.interpolation(wallpoints)
             for key, values in (("times", times), ("x", x), ("z", z), ("full_x", xf), ("full_z", zf),
-                                ("eta_x", ex), ("seeds", seeds), ("arrow_x", qx), ("arrow_z", qz), ("depths", depths)):
+                                ("eta_x", ex), ("seeds", seeds), ("arrow_x", qx), ("arrow_z", qz), ("depths", depths),
+                                ('profile_epsilon',eps),('profile_depths',profile_depths),('wall_zoom_x',zoomx),('wall_zoom_z',zoomz),('zoom_arrow_x',zx),('zoom_arrow_z',zz)):
                 out.create_dataset(key, data=values)
             shapes = {"u": (len(z), len(x)), "w": (len(z), len(x)), "omega": (len(z), len(x)),
                       "full_u": (len(zf), len(xf)), "full_w": (len(zf), len(xf)), "full_omega": (len(zf), len(xf)),
                       "eta": (len(ex),), "arrow_u": qx.shape, "arrow_w": qx.shape, "seed_v": seeds.shape,
-                      "depth_q": (len(depths),), "ranges": (7,)}
+                      "depth_q": (len(depths),), "ranges": (7,), 'wall_zoom_u':(len(zoomz),len(zoomx)), 'wall_zoom_w':(len(zoomz),len(zoomx)),
+                      'zoom_arrow_u':zx.shape,'zoom_arrow_w':zx.shape}
+            for side in ('left','right'):
+                out.create_dataset('wall_'+side+'_speed_max',shape=(len(times),),dtype='f8')
+                for key in ('u','w','speed'):shapes['profile_'+side+'_'+key]=profile_shape
             for key, shape in shapes.items():
-                out.create_dataset(key, shape=(len(times),)+shape, dtype="f8" if key in ("eta", "seed_v", "ranges") else "f4",
+                out.create_dataset(key, shape=(len(times),)+shape, dtype="f8" if key in ("eta", "seed_v", "ranges") or key.startswith('profile_') else "f4",
                                    chunks=(1,)+shape, compression="gzip", compression_opts=1, shuffle=True, fletcher32=True)
             for key, source_key in HISTORY_FIELDS.items():
                 out.create_dataset(key, data=source["diagnostics/"+source_key][:])
@@ -131,6 +148,11 @@ def prepare_data(dataset, medium, output, scope=None):
                 speed = np.hypot(ud, wd)
                 speed_max = max(speed_max, float(speed[:, band].max()))
                 wall_max = max(wall_max, float(np.hypot(evaluate_map(u, wallmap), evaluate_map(w, wallmap)).max()))
+                for side in ('left','right'):
+                    out['wall_'+side+'_speed_max'][i]=trace_speed_max(evaluate_map(u,wallmaps[side]),evaluate_map(w,wallmaps[side]))
+                    for key,value in wall_normal_profiles(geo,u,w,side,profile_depths,eps,mappings['profile_'+side]).items():out['profile_'+side+'_'+key][i]=value
+                for key,coeff,mp in (('wall_zoom_u',u,'wall_zoom'),('wall_zoom_w',w,'wall_zoom'),('zoom_arrow_u',u,'zoom_arrows'),('zoom_arrow_w',w,'zoom_arrows')):
+                    out[key][i]=evaluate_map(coeff,mappings[mp]).reshape(shapes[key])
                 percentile_samples.append(np.asarray(abs(od[::2, band][:, ::2]), dtype=np.float32).ravel())
                 lo, hi = surface_extrema(sx, eta)
                 out["ranges"][i] = [lo, hi, speed.min(), speed.max(), speed[:, bulk].max(), abs(om).max(), abs(od[:, band]).max()]
@@ -196,6 +218,21 @@ def prepare_data(dataset, medium, output, scope=None):
                         "cache_quantization": "float32 display velocity/omega/depth; float64 eta, tracers and scientific histories",
                         "dependency_versions": {n: importlib.metadata.version(n) for n in ("numpy", "scipy", "matplotlib", "h5py", "plotly")},
                         "precompute_runtime_seconds": time.perf_counter()-started}
+            arrow=arrow_geometry(qx,qz,out['arrow_u'][:],out['arrow_w'][:],metadata['fixed_arrow_seconds'],scope)
+            profile_speed_max=max(float(out['profile_'+s+'_speed'][:].max()) for s in ('left','right'))
+            component_max={k:max(float(abs(out['profile_'+s+'_'+k][:]).max()) for s in ('left','right')) for k in ('u','w')}
+            wall_residual={s:float(out['wall_'+s+'_speed_max'][:].max()) for s in ('left','right')}
+            if max(wall_residual.values())>params['wall_tolerance']:raise RuntimeError('Exact P2 wall-trace maximum exceeds tolerance')
+            symmetry=float(abs(out['profile_left_speed'][:]-out['profile_right_speed'][:]).max())
+            metadata.update(arrow)
+            metadata['no_slip_visualization']={'wall_velocity_source':'actual P2 FEM; exact polynomial trace norm maximum',
+                'wall_speed_max':wall_residual,'arrow_seed_x_range':[float(qx.min()),float(qx.max())],
+                'arrow_wall_margin_m':arrow['wall_visual_margin'],'quiver_pivot':'tail',
+                'boundary_layer_profile_depths_m':profile_depths.tolist(),'profile_epsilon_range_m':[0.,float(eps[-1])],
+                'profile_speed_ylim_m_per_s':[0.,1.06*profile_speed_max],
+                'profile_component_ylim_m_per_s':{k:[-1.06*v,1.06*v] for k,v in component_max.items()},
+                'profile_left_right_speed_max_difference_m_per_s':symmetry,'profile_relative_symmetry_error':symmetry/max(profile_speed_max,1e-300),
+                'zoom_fixed_arrow_seconds':20.,'corner_patch_z_range_m':[scope['contact_corner_z_min_m'],scope['contact_corner_z_max_m']]}
             out.attrs.update(metadata=json.dumps(metadata, allow_nan=False), status="complete")
         except BaseException as exc:
             out.attrs.update(status="failed", failure=repr(exc))

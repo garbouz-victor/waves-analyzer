@@ -12,6 +12,10 @@ output/step2/*
 !output/step2/*.json
 !output/step2/key_phases.pdf
 !output/step2/key_phases.png
+!output/step2/no_slip_profiles.pdf
+!output/step2/no_slip_profiles.png
+!output/step2/before_arrow_geometry.png
+!output/step2/after_arrow_geometry.png
 !output/step2/frames_preview/
 output/step2/frames_preview/*
 !output/step2/frames_preview/*.png

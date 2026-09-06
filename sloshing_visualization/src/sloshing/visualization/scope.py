@@ -5,6 +5,7 @@ from pathlib import Path
 import numpy as np
 
 CONTACT_WARNING = "Pinned-contact region: not physically resolved by this model"
+CORNER_WARNING = "Unresolved contact corner; solid walls below it obey no-slip"
 FIXED_DOMAIN = "Velocity: fixed reference domain z <= 0. Surface: first-order interface displacement."
 LIMITATIONS = [CONTACT_WARNING, FIXED_DOMAIN,
     "No moving contact line, wetting/dewetting, film deposition or wall drainage",

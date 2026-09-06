@@ -5,9 +5,10 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.colors import Normalize
 from matplotlib.collections import LineCollection
+from matplotlib.patches import Rectangle
 import numpy as np
 
-from .scope import CONTACT_WARNING, FIXED_DOMAIN, magnify_positions, phase_label
+from .scope import CONTACT_WARNING, CORNER_WARNING, FIXED_DOMAIN, magnify_positions, phase_label
 
 plt.rcParams.update({"font.size": 11, "axes.titlesize": 13, "axes.labelsize": 11,
                      "figure.facecolor": "white", "savefig.facecolor": "white"})
@@ -28,12 +29,35 @@ def contact_mask(ax, scope, warning=True):
     a, b, c = (scope[k] for k in ("domain_abs_x_max_m", "bulk_abs_x_max_m", "transition_abs_x_max_m"))
     for side in (-1, 1):
         lo, hi = sorted((side*b, side*c))
-        artists.append(ax.axvspan(lo, hi, color="#bd9f54", alpha=.09, zorder=5))
+        patch=Rectangle((lo,0),hi-lo,1,transform=ax.get_xaxis_transform(),color="#bd9f54",alpha=.09,zorder=5)
+        ax.add_patch(patch);artists.append(patch)
         lo, hi = sorted((side*c, side*a))
-        artists.append(ax.axvspan(lo, hi, facecolor=".7", edgecolor=".4", alpha=.6, hatch="////", lw=.6, zorder=8))
+        patch=Rectangle((lo,0),hi-lo,1,transform=ax.get_xaxis_transform(),facecolor=".7",edgecolor=".4",alpha=.6,hatch="////",lw=.6,zorder=8)
+        ax.add_patch(patch);artists.append(patch)
     if warning:
         ax.text(.5, -.14, CONTACT_WARNING, ha="center", transform=ax.transAxes, fontsize=10, color=".3")
     return artists
+
+
+def contact_corner_mask(ax,scope,warning=True):
+    patches=[]
+    low,high=scope['contact_corner_z_min_m'],scope['contact_corner_z_max_m']
+    for lo,hi in ((-1.,-scope['transition_abs_x_max_m']),(scope['transition_abs_x_max_m'],1.)):
+        p=Rectangle((lo,low),hi-lo,high-low,facecolor='.7',edgecolor='.4',alpha=.6,hatch='////',lw=.6,zorder=8)
+        ax.add_patch(p);patches.append(p)
+    if warning:ax.text(.5,-.14,CORNER_WARNING,ha='center',transform=ax.transAxes,fontsize=10,color='.3')
+    return patches
+
+
+def solid_walls(ax,zmin,bottom=False,sides=(-1,1)):
+    segments=[([side,side],[zmin,0]) for side in sides]
+    if bottom:segments.append(([-1,1],[-10,-10]))
+    lines=[]
+    for x,z in segments:
+        ax.plot(x,z,color='white',lw=4.5,zorder=29,clip_on=False)
+        line,=ax.plot(x,z,color='black',lw=2.3,zorder=30,clip_on=False,label='_nolegend_')
+        lines.append(line)
+    return lines
 
 
 class SurfacePanel:
@@ -70,16 +94,19 @@ class FlowPanel:
         self.surface, = ax.plot(h["eta_x"][:], h["eta"][0], color="#146ea0", lw=1.5, zorder=10)
         ax.scatter([-1,1], h["eta"][0][[0,-1]], c="black", s=25, zorder=11)
         ax.axhline(0, color=".5", ls=":", lw=.8)
-        self.masks = contact_mask(ax, meta["scope"])
-        ax.set(xlim=(-1,1), ylim=(-1.5,.04), xlabel="x (m)", ylabel="z (m)")
+        self.masks = contact_corner_mask(ax, meta["scope"])
+        ax.set(xlim=(-1,1), ylim=(-10 if full else -1.5,.04), xlabel="x (m)", ylabel="z (m)")
         ax.set_aspect("equal", adjustable="box")
-        ax.text(.02,.02, "walls: u = w = 0", color="white" if field == "speed" else "black", transform=ax.transAxes, fontsize=10)
+        self.walls=solid_walls(ax,-10 if full else -1.5,bottom=full)
+        self.wall_label=ax.annotate('no-slip: u = w = 0',xy=(-1,-1.08),xytext=(-.76,-1.10),
+            fontsize=10,zorder=31,bbox={'facecolor':'white','alpha':.9,'edgecolor':'none','pad':3},
+            arrowprops={'arrowstyle':'-','color':'black','lw':1.2})
         ax.text(.5,1.01,"surface x1; reference domain unchanged", ha="center", transform=ax.transAxes, fontsize=10)
         self.q = None
         if not full:
             self.q = ax.quiver(h["arrow_x"][:], h["arrow_z"][:], np.zeros_like(h["arrow_x"][:]), np.zeros_like(h["arrow_z"][:]),
                                color="white" if field == "speed" else "#232323", angles="xy", scale_units="xy",
-                               scale=1/meta["fixed_arrow_seconds"], width=.0024, headwidth=3.4, zorder=4)
+                               scale=1/meta["fixed_arrow_seconds"], width=.0024, headwidth=3.4, pivot='tail', zorder=4)
             # Suppress Matplotlib's minimum-length dot at exact zero velocity.
             self.q.minlength = 0
             ax.quiverkey(self.q, .70, .045, meta["arrow_key_speed_m_per_s"], "0.5 mm/s (fixed arrows)",
@@ -125,8 +152,8 @@ class MainFigure:
         self.fig.text(.045,.018, FIXED_DOMAIN, fontsize=11, color=".3")
         ax = self.fig.add_axes([.055,.20,.555,.66])
         self.flow = FlowPanel(ax,h,meta,field="omega" if omega else "speed",tracers=not omega)
-        self.surface = SurfacePanel(self.fig.add_axes([.69,.76,.275,.14]),h,meta)
-        self.energy_ax = self.fig.add_axes([.69,.52,.275,.14])
+        self.surface = SurfacePanel(self.fig.add_axes([.69,.78,.275,.13]),h,meta)
+        self.energy_ax = self.fig.add_axes([.69,.57,.275,.13])
         self.times = h["times"][:]
         for key,col,label in (("kinetic_energy","#bf6532","K"),("potential_energy","#146ea0","P"),("total_energy","#202020","E")):
             self.energy_ax.plot(self.times,h[key][:]*1e7,color=col,label=label,lw=1.5)
@@ -134,7 +161,7 @@ class MainFigure:
         self.energy_ax.legend(ncol=3,fontsize=10,loc="upper right")
         self.energy_ax.grid(alpha=.2)
         self.energy_mark = self.energy_ax.axvline(0,color="#b5303c",lw=1.3)
-        self.modal_ax = self.fig.add_axes([.69,.305,.275,.105])
+        self.modal_ax = self.fig.add_axes([.69,.405,.275,.075])
         self.modal_ax.plot(self.times,h["modal_eta"][:]*1000,color="#584585",lw=1.5)
         self.modal_ax.axhline(0,color=".5",lw=.6)
         for t in meta["modal"]["zero_crossings_s"]:
@@ -142,7 +169,7 @@ class MainFigure:
         self.modal_ax.set(xlim=(0,5),xlabel="physical t (s)",ylabel="modal eta (mm)", title=f"Measured period ~{meta['modal']['estimated_period_s']:.3f} s")
         self.modal_mark = self.modal_ax.axvline(0,color="#b5303c",lw=1.3)
         # Dedicated full-depth PROFILE, never hiding the wall in the flow view.
-        self.depth_ax = self.fig.add_axes([.69,.095,.275,.105])
+        self.depth_ax = self.fig.add_axes([.69,.05,.275,.075])
         self.depth, = self.depth_ax.plot(h["depths"][:],np.ones(len(h["depths"]))*np.nan,color="#b74d32",lw=1.5)
         self.depth_ax.set(yscale="log", ylim=(meta["depth_log_display_min"],meta["depth_q_max"]*1.2),xlim=(-10,0))
         self.depth_ax.set_title("Full-depth penetration: Q(z)",fontsize=12)
@@ -152,6 +179,12 @@ class MainFigure:
         self.depth_ax.grid(alpha=.2)
         self.depth_ax.text(.02,.76,"zero off log axis",transform=self.depth_ax.transAxes,fontsize=8)
         self.clean, self.omega = clean, omega
+        self.wall_profile=None
+        self.wall_text=None
+        if not clean:
+            from .no_slip_panels import WallProfilePanel
+            self.wall_profile=WallProfilePanel(self.fig.add_axes([.69,.205,.275,.115]),h,meta,compact=True)
+            self.wall_text=self.fig.text(.055,.882,'',fontsize=11)
         if clean:
             self.energy_ax.set_visible(False)
             self.modal_ax.set_visible(False)
@@ -166,6 +199,10 @@ class MainFigure:
         self.surface.update(i)
         self.energy_mark.set_xdata([t,t])
         self.modal_mark.set_xdata([t,t])
+        if self.wall_profile is not None:
+            self.wall_profile.update(i)
+            l,r=(float(self.h['wall_'+s+'_speed_max'][i]) for s in ('left','right'))
+            self.wall_text.set_text(f'FEM wall velocity (actual P2): left {l:.2g}, right {r:.2g} m/s — no-slip')
         q = self.h["depth_q"][i]
         self.depth.set_ydata(np.where(q>0,q,np.nan))
         c=self.meta["parameters"]
@@ -201,7 +238,9 @@ class TracerFigure:
             ax=self.fig.add_axes(pos)
             ax.set(xlim=(-1,1),ylim=(-3.2,.05),xlabel="x (m)",ylabel="z (m)",title=title)
             ax.set_aspect("equal",adjustable="box")
-            contact_mask(ax,meta["scope"],warning=False)
+            contact_corner_mask(ax,meta["scope"],warning=False)
+            solid_walls(ax,-3.2)
+            ax.text(.5,.03,'Solid walls: u = w = 0',transform=ax.transAxes,ha='center',fontsize=9)
             ax.scatter(self.seeds[:,0],self.seeds[:,1],c=colors,marker="+",s=28)
             pts=ax.scatter(self.seeds[:,0],self.seeds[:,1],c=colors,s=38,edgecolors="black",lw=.5)
             trails=LineCollection([],colors=colors,lw=1.2)
@@ -209,7 +248,7 @@ class TracerFigure:
             surf,=ax.plot(h["eta_x"][:],h["eta"][0],color="#146ea0")
             ax.scatter([-1,1],h["eta"][0][[0,-1]],c="black",s=20)
             self.lines.append((key,pts,trails,surf))
-        self.fig.text(.5,.18,CONTACT_WARNING,ha="center",fontsize=11)
+        self.fig.text(.5,.18,CORNER_WARNING,ha="center",fontsize=11)
         self.fig.text(.5,.13,f"Tracer displacement x{meta['particle_displacement_magnification']:g} in BOTH panels / BOTH coordinates; surface x1",ha="center",fontsize=14)
         self.fig.text(.5,.073,"Difference is higher-order in perturbation amplitude. Do not interpret accumulated nonlinear drift physically.",ha="center",fontsize=13)
         self.fig.text(.5,.03,"Color = initial depth; + = initial reference point. These are displacement diagrams, not moving-mesh CFD.",ha="center",fontsize=12)
