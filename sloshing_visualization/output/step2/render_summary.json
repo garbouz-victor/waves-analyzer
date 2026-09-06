@@ -1,0 +1,102 @@
+{
+  "interpretation": "CONDITIONALLY QUALIFIED FOR BULK MODEL VISUALIZATION",
+  "source_fine": {
+    "path": "/home/victor/Projects/waves-analyzer/sloshing_visualization/validation_results/animation_qualification/runs/fine-full.h5",
+    "bytes": 2364886404,
+    "mtime_ns": 1788665248766948120,
+    "config_sha256": "7e164116408c32c49c9eeec24c27c9ed5dabe4e6cb63bb2917a9ecacdcea4f7c"
+  },
+  "renders": [
+    {
+      "status": "complete",
+      "signature": "7d05b664b338e245936148f0d82ded679fbebbcc464872cde9a76a7959f9d5a2",
+      "path": "output/step2/bulk_flow_clean.mp4",
+      "kind": "clean",
+      "runtime_s": 459.6808937769383,
+      "bytes": 4940588,
+      "video": {
+        "width": 1920,
+        "height": 1080,
+        "avg_frame_rate": "50/1",
+        "duration": "20.020000",
+        "nb_read_frames": "1001"
+      }
+    },
+    {
+      "status": "complete",
+      "signature": "7d05b664b338e245936148f0d82ded679fbebbcc464872cde9a76a7959f9d5a2",
+      "path": "output/step2/bulk_flow_explained.mp4",
+      "kind": "main",
+      "runtime_s": 445.72263294737786,
+      "bytes": 5109266,
+      "video": {
+        "width": 1920,
+        "height": 1080,
+        "avg_frame_rate": "50/1",
+        "duration": "20.020000",
+        "nb_read_frames": "1001"
+      }
+    },
+    {
+      "status": "complete",
+      "signature": "7d05b664b338e245936148f0d82ded679fbebbcc464872cde9a76a7959f9d5a2",
+      "path": "output/step2/bulk_vorticity.mp4",
+      "kind": "vorticity",
+      "runtime_s": 448.21348888333887,
+      "bytes": 3698669,
+      "video": {
+        "width": 1920,
+        "height": 1080,
+        "avg_frame_rate": "50/1",
+        "duration": "20.020000",
+        "nb_read_frames": "1001"
+      }
+    },
+    {
+      "status": "complete",
+      "signature": "7d05b664b338e245936148f0d82ded679fbebbcc464872cde9a76a7959f9d5a2",
+      "path": "output/step2/free_surface_true_scale.mp4",
+      "kind": "surface",
+      "runtime_s": 165.8527159485966,
+      "bytes": 1204570,
+      "video": {
+        "width": 1920,
+        "height": 1080,
+        "avg_frame_rate": "50/1",
+        "duration": "20.020000",
+        "nb_read_frames": "1001"
+      }
+    },
+    {
+      "status": "complete",
+      "signature": "7d05b664b338e245936148f0d82ded679fbebbcc464872cde9a76a7959f9d5a2",
+      "path": "output/step2/preview_0_1s.mp4",
+      "kind": "main",
+      "runtime_s": 78.766597061418,
+      "bytes": 1171064,
+      "video": {
+        "width": 1920,
+        "height": 1080,
+        "avg_frame_rate": "50/1",
+        "duration": "4.020000",
+        "nb_read_frames": "201"
+      }
+    },
+    {
+      "status": "complete",
+      "signature": "7d05b664b338e245936148f0d82ded679fbebbcc464872cde9a76a7959f9d5a2",
+      "path": "output/step2/tracer_model_comparison.mp4",
+      "kind": "tracers",
+      "runtime_s": 255.115121438168,
+      "bytes": 933805,
+      "video": {
+        "width": 1920,
+        "height": 1080,
+        "avg_frame_rate": "50/1",
+        "duration": "20.020000",
+        "nb_read_frames": "1001"
+      }
+    }
+  ],
+  "historical_step16_verdict": "unchanged: NOT QUALIFIED FOR PHYSICAL ANIMATION under global slope policy"
+}

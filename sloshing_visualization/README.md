@@ -1,10 +1,9 @@
 # Вязкий sloshing с закреплёнными контактными точками
 
-Отдельный исследовательский проект на Python. Текущий этап — **STEP 1.6**:
-qualification конкретного dataset после независимой проверки STEP 1.5.
-MP4, particle animation и Plotly относятся к следующим этапам и сейчас
-**не реализованы**. Есть только численная qualification контрольных
-траекторий и научные диагностические графики.
+Отдельный исследовательский проект на Python. Текущий этап — **STEP 2**:
+научная визуализация уже рассчитанного fine dataset, без изменения PDE.
+Созданы пять MP4, storyboard и автономный Plotly explorer.
+Интерпретация: **CONDITIONALLY QUALIFIED FOR BULK MODEL VISUALIZATION**.
 Никакого заранее заданного движения или
 экспоненциального затухания в solver нет.
 
@@ -13,6 +12,101 @@ MP4, particle animation и Plotly относятся к следующим эт�
 
 Независимая проверка и обоснование выбора integrator/dt:
 [STEP1_5_REPORT.md](STEP1_5_REPORT.md).
+
+Qualification исходного dataset: [STEP1_6_REPORT.md](STEP1_6_REPORT.md).
+Новая область интерпретации и результаты rendering: [STEP2_REPORT.md](STEP2_REPORT.md).
+
+## STEP 2 — scientific bulk visualization
+
+> The animation visualizes the validated bulk behavior of the current
+> linear pinned-contact model. The shaded contact zones are deliberately
+> excluded from physical interpretation.
+
+STEP 1.6 отклонил **глобальную** small-slope qualification: fine contact slope
+достигает 0.3734. Этот исторический verdict не изменён. STEP 2 показывает
+согласованные bulk-поля и явно помечает неразрешённые контакты, а не объявляет
+весь интерфейс физически разрешённым. Fine — reference, не точное continuum solution.
+
+Источник: `validation_results/animation_qualification/runs/fine-full.h5`:
+alpha=0.02°, nu=0.01 m²/s, fine 120×210, SDIRK2, dt=0.00125 s,
+snapshot_dt=0.005 s, 0…5 s. Medium используется только для provenance/uncertainty.
+Новый smaller-alpha PDE run не нужен для выбранной **bulk** интерпретации.
+
+Скорость вычислена на неподвижной области z≤0; показанная поверхность —
+first-order interface displacement, не moving-mesh CFD. Eta показывается
+без увеличения: количественная панель в mm, линия в flow panel ×1.
+Линейное лагранжево смещение трассеров увеличено **×181**, одинаково по x и z.
+Это диаграмма смещения, не физическая экскурсия на сантиметры. Скорость/omega
+имеют физические единицы и постоянные цветовые шкалы. Стрелки масштабируются
+одним фиксированным коэффициентом с physical velocity key; затухание не скрыто.
+
+Зоны из [animation_scope.json](configs/animation_scope.json): bulk |x|≤0.90,
+transition 0.90<|x|≤0.98, unqualified contact |x|>0.98. Это соглашение
+визуализации, не резкая граница физической применимости. Серые штрихованные
+полосы остаются в explained/clean видео. Ни eta, ни omega не сглаживаются.
+
+### Rendering commands and inspection gates
+
+Нужны `ffmpeg` и `ffprobe` в PATH. Matplotlib, Pillow и Plotly включены в
+`requirements.txt`; для package installation: `python -m pip install -e '.[test,render]'`.
+Для headless окружения можно задать `MPLCONFIGDIR=/tmp/sloshing-step2-mpl`.
+Все команды запускаются из `sloshing_visualization`:
+
+```bash
+export OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 OMP_NUM_THREADS=1
+python scripts/render_step2.py \
+  --dataset validation_results/animation_qualification/runs/fine-full.h5 \
+  --medium validation_results/animation_qualification/runs/medium-full.h5 \
+  --output output/step2 --preview
+
+# Просмотреть 10 PNG в frames_preview/, включая шесть measured key phases.
+python scripts/render_step2.py --accept-preview --preview-video
+# Просмотреть preview_0_1s.mp4. Только после проверки:
+python scripts/render_step2.py --accept-preview-video --all
+
+# Полное декодирование пяти видео, cadence и FEM/source проверки:
+python scripts/inspect_step2.py
+# Необязательный настоящий browser smoke test: Node >=22 + Chrome.
+node scripts/check_step2_explorer.mjs output/step2
+
+python -m pytest -q --junitxml=output/step2/test_runs/unit_final.xml
+python -m pytest -q -m validation --junitxml=output/step2/test_runs/validation_final.xml
+python scripts/audit_step2_artifacts.py
+```
+
+Подрежимы: `--main`, `--clean`, `--vorticity`, `--surface`, `--tracers`,
+`--storyboard`, `--explorer`, `--all`. Последний не обходит preview gates.
+Если используется другой `--output`, его нужно передавать на каждом шаге.
+Принятие preview — явное подтверждение просмотра, не автоматическая оценка красоты.
+
+Renderer **никогда не запускает solver**. При отсутствующих HDF5 остановится:
+восстановление выполняется отдельно через STEP 1.6 pipeline, например
+`python scripts/qualify_animation_dataset.py --phase all`.
+COMPLETE compatible HDF5/display/MP4 кэши переиспользуются. Изменённый fingerprint,
+running/failed или несовместимый кэш вызывает ошибку; используйте новый output
+либо сначала явно разберите старые артефакты. Полный HDF5 в RAM не загружается.
+Карты FEM интерполяции строятся один раз; следующий этап читает display cache по кадру.
+
+Результаты:
+[explained](output/step2/bulk_flow_explained.mp4),
+[clean](output/step2/bulk_flow_clean.mp4),
+[vorticity](output/step2/bulk_vorticity.mp4),
+[true-scale surface](output/step2/free_surface_true_scale.mp4),
+[tracer comparison](output/step2/tracer_model_comparison.mp4),
+[storyboard PDF](output/step2/key_phases.pdf),
+[explorer](output/step2/explorer.html),
+[metadata](output/step2/animation_metadata.json),
+[content fingerprints / audit](output/step2/artifact_audit.json).
+MP4, HTML и большой display cache локальны и ignored: после clone эти ссылки
+на regenerated artifacts работают после rendering. Metadata, отчёт и несколько
+preview PNG/PDF включены в Git. Все MP4: 1920×1080, 50 fps, 1001 snapshot,
+20.02 s, замедление физического времени ×4.
+
+Технические API: [Matplotlib FFMpegWriter](https://matplotlib.org/stable/api/_as_gen/matplotlib.animation.FFMpegWriter.html),
+[Plotly heatmap](https://plotly.com/javascript/reference/heatmap/).
+У display heatmap заданы явные границы ячеек, поэтому ни Matplotlib, ни Plotly
+не продолжают верхнюю полуячейку в z>0. Explorer содержит 101 реальный snapshot,
+работает offline и не является источником scientific error norms.
 
 ## Запуск и воспроизводимость
 
@@ -267,7 +361,7 @@ scripts/run_simulation.py
 tests/                   физические и численные проверки
 configs/default.json
 results/                 рассчитанные поля
-output/                  будущая визуализация
+output/step2/            научные видео, metadata, storyboard, explorer
 validation_results/      CSV/JSON/PDF/PNG проверок; локальный HDF5 кэш
 ```
 
@@ -290,19 +384,19 @@ contact zoom должен опрашивать FEM с дополнительны
 
 ## How to watch the animation
 
-Этот раздел задаёт интерпретацию **будущих** анимаций, которых в STEP 1.5 ещё нет.
+Для текущей STEP 2 анимации:
 
-1. Сначала смотрите на surface + particles: при alpha>0 правая сторона выше,
-   первые движения вверху ожидаются влево, справа вниз, слева вверх.
-2. Затем на velocity arrows: физические величины должны показывать, где
-   движение действительно сильнее. Full tank должен сохранять масштаб осей
-   или явно подписывать искажение; основной zoom будет около поверхности.
-3. Потом на vorticity: её знаки, слои у no-slip стенок и распространение
-   в объём, с одной цветовой шкалой на всю анимацию.
-4. Потом на wall zoom: закреплённые концы и рост локальных наклонов;
-   модель не описывает скольжение контактной линии.
-5. Потом на energy plot: обмен потенциальной и кинетической энергией,
-   уменьшение их суммы на рассчитанную вязкую диссипацию.
+1. Сначала смотрите на TRUE-SCALE eta в mm: справа выше, затем bulk профиль
+   проходит через почти горизонтальное положение; endpoints не двигаются.
+2. Сопоставьте velocity arrows: после release вверху поток влево, слева вверх,
+   справа вниз. Цвет speed и длины стрелок имеют постоянные шкалы.
+3. Сравните с K: первый максимум t=0.395 s близок к modal crossing t=0.4161 s,
+   но это не один и тот же момент и не заданное равенство.
+4. Следите за слоями linear tracers ×181 и full-depth профилем Q(z):
+   движение резко ослабевает с глубиной.
+5. После overshoot следите за reversal стрелок и последующим затуханием.
+6. В отдельном vorticity video смотрите на изменение знака и пристеночные слои.
+7. Серые contact strips не интерпретируйте как разрешённую contact-line physics.
 
 При небольшой вязкости возможны overshoot и смена направления циркуляции;
 при большой — сильное подавление колебаний. В глубоком сосуде движение
@@ -311,14 +405,16 @@ contact zoom должен опрашивать FEM с дополнительны
 несжимаемость сама по себе не предписывает знак горизонтальной скорости
 на каждой глубине. Они не закладываются в визуализацию как сценарий.
 
-Будущие частицы должны интегрироваться RK4 или solve_ivp по рассчитанной
-скорости с интерполяцией во времени, сохранять цвет начальной глубины и
-помечаться invalid при выходе из допустимой области линейной модели,
-без отражений и фиктивного движения над поверхностью.
+Default STEP 2 tracer: `X0 + integral v(X0,t) dt`, скорость оценивается
+в фиксированной начальной точке. Это first-order Lagrangian displacement.
+Отдельный comparison использует RK4 pathlines в линейном Eulerian field;
+их отличие higher-order и не доказывает nonlinear drift/mixing. Цвет начальной
+глубины постоянен; invalid trajectories не отражаются и не clip'аются.
 
 > Streamlines = instantaneous velocity field
 >
-> Pathlines = actual trajectories in unsteady flow
+> Pathlines = trajectories integrated in the supplied unsteady velocity field;
+> here this does not validate nonlinear transport in the physical experiment.
 
 ## What this animation can and cannot tell us
 
@@ -462,13 +558,13 @@ bulk/contact L2 differences на трёх сетках при t=0.1. Pointwise c
 и nu=0.001 пока не прошли это temporal validation. Подробные числа и полный
 перечень тестов находятся в [отчёте](STEP1_5_REPORT.md).
 
-## Следующие этапы после validation
+## STEP 1.6 historical qualification
 
 STEP 1.6 использует `configs/animation_candidate.json` и
 `configs/animation_candidate_fine.json`: alpha=0.02°, nu=0.01, SDIRK2,
 dt=0.00125, snapshot_dt=0.005, t_end=5. Эти configs — кандидаты, не обещание
 малого slope на всём интервале. Измерения и решение:
-[STEP1_6_REPORT.md](STEP1_6_REPORT.md). Production animations пока отсутствуют.
+[STEP1_6_REPORT.md](STEP1_6_REPORT.md). На этапе STEP 1.6 production animations отсутствовали.
 
 Результат реально выполненных medium/fine 0…5 s: **NOT QUALIFIED FOR
 PHYSICAL ANIMATION** для alpha=0.02°. На fine max slope=0.373408,
@@ -479,12 +575,13 @@ linear-small-slope policy у pinned contact, не instability solver. Bulk eta
 No-slip, volume, energy и symmetry проходят; strong divergence уменьшается
 на fine, но остаётся отдельной оговоркой для medium.
 
-Следующий **не рассчитанный** conservative candidate: alpha=0.0025°, fine,
+В STEP 1.6 предложен **не рассчитанный** conservative candidate: alpha=0.0025°, fine,
 nu=0.01, SDIRK2, dt=0.00125, snapshot_dt=0.005, t_end=5. По tan scaling
-измеренного fine решения ожидается max slope≈0.04668. Перед STEP 2 нужен
-отдельный confirmatory dataset; ни pointwise contact corner, ни wall film
-этой рекомендацией не квалифицируются. Текущие configs сохранены именно
-как выполненные 0.02° candidates, не заменены новым углом.
+измеренного fine решения ожидался max slope≈0.04668. STEP 2 не выполняет этот
+run: уменьшение amplitude не разрешает continuum corner и не улучшает
+relative field errors. Вместо глобальной qualification принята явно ограниченная
+bulk interpretation, описанная выше. Исторический отчёт/summary сохранены без
+изменений; текущие configs остаются выполненными 0.02° cases.
 
 ### STEP 1.6 commands and gates
 

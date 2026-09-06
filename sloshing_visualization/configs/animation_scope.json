@@ -1,0 +1,18 @@
+{
+  "interpretation": "CONDITIONALLY QUALIFIED FOR BULK MODEL VISUALIZATION",
+  "bulk_abs_x_max_m": 0.90,
+  "transition_abs_x_max_m": 0.98,
+  "domain_abs_x_max_m": 1.0,
+  "near_surface_z_min_m": -1.5,
+  "display_nx": 161,
+  "display_nz": 121,
+  "full_depth_nx": 81,
+  "full_depth_nz": 161,
+  "fps": 50,
+  "width_px": 1920,
+  "height_px": 1080,
+  "particle_target_p95_display_m": 0.075,
+  "surface_display_magnification": 1.0,
+  "omega_percentile": 99.5,
+  "convention": "Spatial zones are visualization conventions informed by STEP 1.6, not sharp physical validity boundaries."
+}

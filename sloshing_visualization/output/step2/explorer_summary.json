@@ -1,0 +1,35 @@
+{
+  "status": "complete",
+  "sources": {
+    "fine": {
+      "path": "/home/victor/Projects/waves-analyzer/sloshing_visualization/validation_results/animation_qualification/runs/fine-full.h5",
+      "bytes": 2364886404,
+      "mtime_ns": 1788665248766948120,
+      "config_sha256": "7e164116408c32c49c9eeec24c27c9ed5dabe4e6cb63bb2917a9ecacdcea4f7c"
+    },
+    "medium": {
+      "path": "/home/victor/Projects/waves-analyzer/sloshing_visualization/validation_results/animation_qualification/runs/medium-full.h5",
+      "bytes": 1072567328,
+      "mtime_ns": 1788657587171233015,
+      "config_sha256": "c21bc0de11b6c83b104e26aa1265d0dbecfd5f3a3fdf607f130b2ce17b50b091"
+    }
+  },
+  "frames": 101,
+  "source_snapshot_stride": 10,
+  "physical_sampling_s": 0.05,
+  "near_grid": [
+    81,
+    61
+  ],
+  "full_grid": [
+    41,
+    81
+  ],
+  "bytes": 36623262,
+  "sha256": "ab6e568ef98631cca0bf5f4e8592763b94d92ff76d824c4e28e360fe2fefbb2a",
+  "offline": true,
+  "field_precision": "6 significant digits, display only",
+  "normalization": "Same fixed physical limits and arrow/displacement factors as MP4",
+  "scope": "Exploration only, not scientific error norms; no new PDE states",
+  "runtime_seconds": 6.429984323680401
+}

@@ -1,0 +1,146 @@
+{
+  "status": "passed",
+  "source_commit_sha": "dc51e33fc18f598e0db311d68d6cdcce3d9b68ac",
+  "sources": {
+    "fine": {
+      "path": "/home/victor/Projects/waves-analyzer/sloshing_visualization/validation_results/animation_qualification/runs/fine-full.h5",
+      "bytes": 2364886404,
+      "mtime_ns": 1788665248766948120,
+      "config_sha256": "7e164116408c32c49c9eeec24c27c9ed5dabe4e6cb63bb2917a9ecacdcea4f7c",
+      "content_sha256": "fa299d74c9487a40a5fac55966c1288c950bc0a46116f80e7da0063f794cf09a",
+      "resolved_mesh": {
+        "nx_intervals": 120,
+        "nz_intervals": 210,
+        "triangles": 50400
+      }
+    },
+    "medium": {
+      "path": "/home/victor/Projects/waves-analyzer/sloshing_visualization/validation_results/animation_qualification/runs/medium-full.h5",
+      "bytes": 1072567328,
+      "mtime_ns": 1788657587171233015,
+      "config_sha256": "c21bc0de11b6c83b104e26aa1265d0dbecfd5f3a3fdf607f130b2ce17b50b091",
+      "content_sha256": "1860e6e07236e2bab9511fd0aea876ca7e57ddf5cfee019522499fc1a08bc94a",
+      "resolved_mesh": {
+        "nx_intervals": 80,
+        "nz_intervals": 140,
+        "triangles": 22400
+      }
+    }
+  },
+  "historical_sha256_unchanged": {
+    "STEP1_6_REPORT.md": "85da88bb6726ba486c2048d9a9048d6bfc88e65b0a9ee672f20ff3c0fcd456ef",
+    "validation_results/animation_qualification/summary.json": "997266bcecc6a2a21947119dba5c9d132571b423d27e832547365b91e4157858"
+  },
+  "render_code_sha256": {
+    "src/sloshing/visualization/__init__.py": "1ff9018269c7cc96ca39b17f05ca2bddea9e1ad252879c1592e772029964be84",
+    "src/sloshing/visualization/data.py": "d00e02ac360e3cf5e2576d6900baf299ddf63217fcac679394a8833e5a3feade",
+    "src/sloshing/visualization/explorer.py": "29d636348a97e50794ea5a9af5ae7f6f439c5a236e2e130bee98b997ee0d0261",
+    "src/sloshing/visualization/panels.py": "c9bac0ae28a14cb8f2fef785796a596700b15a3f0aaf82f243206a78e634d525",
+    "src/sloshing/visualization/render.py": "3a9c964aa853623bbe895778df41e616f1623a808369e679aa072f08d8c84f7d",
+    "src/sloshing/visualization/scope.py": "e5f053bb5d82493bf0eb7be032cea22422c609d297bf9a0cd94d6da2a85eba69",
+    "src/sloshing/visualization/storyboard.py": "6b3b5e7bbd9d9381bff71b7acb3a7088e97ff828d469aa3a42416dd1d198c4cf",
+    "src/sloshing/visualization/tracers.py": "4449bb55b656d8436da57fc94e6ced6baf60c19f8d43ef0ba0c860662edfd530",
+    "src/sloshing/visualization/explorer_template.html": "114a457d6c287c69f0e8861bc850fa119db2c2be6ab9da797fe19c9bba941958",
+    "configs/animation_scope.json": "73f4588c04ee6d9975ef55000944d76c2d3e75dfc80c3933ceeb6695c6e17761",
+    "scripts/render_step2.py": "c1077247133113f093a0e9ad196b93b63edd1abff319e8eedcd145c9faae004d"
+  },
+  "all_five_mp4_verified": true,
+  "browser_verified": true,
+  "test_count": 119,
+  "interpretation_samples": {
+    "energy_initial": 3.984396174467873e-07,
+    "energy_final": 8.718914113384673e-08,
+    "first_global_K_max_time_s": 0.395,
+    "K_max": 3.474744489439592e-07,
+    "depth_Q_relative_to_surface_at_K_max": [
+      {
+        "z_m": -1.0125,
+        "ratio": 0.20352105796337128
+      },
+      {
+        "z_m": -2.916666666666666,
+        "ratio": 0.008555183187127113
+      },
+      {
+        "z_m": -5.041666666666666,
+        "ratio": 0.0002470515901222825
+      },
+      {
+        "z_m": -10.0,
+        "ratio": 0.0
+      }
+    ],
+    "calculated_direction_samples": [
+      {
+        "time_s": 0.1,
+        "samples": [
+          {
+            "x_z_m": [
+              0.0,
+              -0.1
+            ],
+            "u_w_m_per_s": [
+              -0.00030176369692165117,
+              4.7919828243305085e-19
+            ]
+          },
+          {
+            "x_z_m": [
+              -0.75,
+              -0.1
+            ],
+            "u_w_m_per_s": [
+              -0.00023615806250153098,
+              0.00034326774650289446
+            ]
+          },
+          {
+            "x_z_m": [
+              0.75,
+              -0.1
+            ],
+            "u_w_m_per_s": [
+              -0.0002361580625015282,
+              -0.0003432677465028925
+            ]
+          }
+        ]
+      },
+      {
+        "time_s": 1.0,
+        "samples": [
+          {
+            "x_z_m": [
+              0.0,
+              -0.1
+            ],
+            "u_w_m_per_s": [
+              0.0006462781914505683,
+              3.165380696887965e-18
+            ]
+          },
+          {
+            "x_z_m": [
+              -0.75,
+              -0.1
+            ],
+            "u_w_m_per_s": [
+              0.00010119706794621844,
+              -0.0004741624499785308
+            ]
+          },
+          {
+            "x_z_m": [
+              0.75,
+              -0.1
+            ],
+            "u_w_m_per_s": [
+              0.00010119706794622143,
+              0.000474162449978532
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "status": "complete",
+  "signature": "7d05b664b338e245936148f0d82ded679fbebbcc464872cde9a76a7959f9d5a2",
+  "path": "output/step2/free_surface_true_scale.mp4",
+  "kind": "surface",
+  "runtime_s": 165.8527159485966,
+  "bytes": 1204570,
+  "video": {
+    "width": 1920,
+    "height": 1080,
+    "avg_frame_rate": "50/1",
+    "duration": "20.020000",
+    "nb_read_frames": "1001"
+  }
+}

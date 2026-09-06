@@ -1,0 +1,80 @@
+{
+  "status": "passed",
+  "html_sha256": "ab6e568ef98631cca0bf5f4e8592763b94d92ff76d824c4e28e360fe2fefbb2a",
+  "checks": [
+    "offline load",
+    "time slider",
+    "fixed speed scale",
+    "fixed omega scale",
+    "contact warning persists",
+    "arrow/tracer toggles",
+    "full/bulk/near views",
+    "reference-domain heatmap edges",
+    "play/pause"
+  ],
+  "initial": {
+    "clim": [
+      0,
+      0.0011726242906210666
+    ],
+    "topEdge": 0,
+    "time": "t = 0.000 s · snapshot 0",
+    "range": [
+      -1.5,
+      0.04
+    ],
+    "warning": "Pinned-contact region: not physically resolved by this model. |x| > 0.98 remains unqualified even when shading is switched off or outside the selected view.",
+    "arrows": true,
+    "tracers": true,
+    "shapes": 13
+  },
+  "moving": {
+    "clim": [
+      0,
+      0.0011726242906210666
+    ],
+    "topEdge": 0,
+    "time": "t = 0.400 s · snapshot 80",
+    "range": [
+      -1.5,
+      0.04
+    ],
+    "warning": "Pinned-contact region: not physically resolved by this model. |x| > 0.98 remains unqualified even when shading is switched off or outside the selected view.",
+    "arrows": true,
+    "tracers": true,
+    "shapes": 13
+  },
+  "vort": {
+    "clim": [
+      -0.005971933943219597,
+      0.005971933943219597
+    ],
+    "topEdge": 0,
+    "time": "t = 0.400 s · snapshot 80",
+    "range": [
+      -1.5,
+      0.04
+    ],
+    "warning": "Pinned-contact region: not physically resolved by this model. |x| > 0.98 remains unqualified even when shading is switched off or outside the selected view.",
+    "arrows": true,
+    "tracers": true,
+    "shapes": 13
+  },
+  "full": {
+    "clim": [
+      -0.005971933943219597,
+      0.005971933943219597
+    ],
+    "topEdge": 0,
+    "time": "t = 4.500 s · snapshot 900",
+    "range": [
+      -10,
+      0.04
+    ],
+    "warning": "Pinned-contact region: not physically resolved by this model. |x| > 0.98 remains unqualified even when shading is switched off or outside the selected view.",
+    "arrows": false,
+    "tracers": false,
+    "shapes": 5
+  },
+  "browser_exceptions": []
+}

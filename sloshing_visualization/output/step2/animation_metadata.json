@@ -1,0 +1,253 @@
+{
+  "schema": "step2-display-v1",
+  "source_commit_sha": "dc51e33fc18f598e0db311d68d6cdcce3d9b68ac",
+  "sources": {
+    "fine": {
+      "path": "/home/victor/Projects/waves-analyzer/sloshing_visualization/validation_results/animation_qualification/runs/fine-full.h5",
+      "bytes": 2364886404,
+      "mtime_ns": 1788665248766948120,
+      "config_sha256": "7e164116408c32c49c9eeec24c27c9ed5dabe4e6cb63bb2917a9ecacdcea4f7c"
+    },
+    "medium": {
+      "path": "/home/victor/Projects/waves-analyzer/sloshing_visualization/validation_results/animation_qualification/runs/medium-full.h5",
+      "bytes": 1072567328,
+      "mtime_ns": 1788657587171233015,
+      "config_sha256": "c21bc0de11b6c83b104e26aa1265d0dbecfd5f3a3fdf607f130b2ce17b50b091"
+    }
+  },
+  "parameters": {
+    "a": 1.0,
+    "alpha_deg": 0.02,
+    "contact_tolerance": 1e-12,
+    "d": 10.0,
+    "divergence_relative_warning": 0.15,
+    "dt": 0.00125,
+    "energy_relative_tolerance": 1e-08,
+    "g": 9.81,
+    "integrator": "sdirk2",
+    "mesh": "fine",
+    "nu": 0.01,
+    "nx": null,
+    "nz": null,
+    "small_slope_limit": 0.3,
+    "snapshot_dt": 0.005,
+    "t_end": 5.0,
+    "visualization_nx": 81,
+    "visualization_nz": 241,
+    "volume_tolerance": 1e-10,
+    "wall_tolerance": 1e-12,
+    "weak_divergence_tolerance": 1e-09,
+    "x_grading": 1.8,
+    "z_grading": 4.0
+  },
+  "scope": {
+    "interpretation": "CONDITIONALLY QUALIFIED FOR BULK MODEL VISUALIZATION",
+    "bulk_abs_x_max_m": 0.9,
+    "transition_abs_x_max_m": 0.98,
+    "domain_abs_x_max_m": 1.0,
+    "near_surface_z_min_m": -1.5,
+    "display_nx": 161,
+    "display_nz": 121,
+    "full_depth_nx": 81,
+    "full_depth_nz": 161,
+    "fps": 50,
+    "width_px": 1920,
+    "height_px": 1080,
+    "particle_target_p95_display_m": 0.075,
+    "surface_display_magnification": 1.0,
+    "omega_percentile": 99.5,
+    "convention": "Spatial zones are visualization conventions informed by STEP 1.6, not sharp physical validity boundaries."
+  },
+  "interpretation": "CONDITIONALLY QUALIFIED FOR BULK MODEL VISUALIZATION",
+  "limitations": [
+    "Pinned-contact region: not physically resolved by this model",
+    "Velocity: fixed reference domain z <= 0. Surface: first-order interface displacement.",
+    "No moving contact line, wetting/dewetting, film deposition or wall drainage",
+    "Pointwise corner omega and slope are not converged; fine is not an exact continuum solution",
+    "No validated nonlinear particle drift or mixing prediction",
+    "Wall-vorticity field difference is about 5.7%; bulk velocity difference about 0.0793%",
+    "Taylor-Hood is weakly, not pointwise, divergence-free",
+    "Display grids and color statistics are not scientific error norms"
+  ],
+  "frame_count": 1001,
+  "fps": 50,
+  "physical_time_range_s": [
+    0.0,
+    5.0
+  ],
+  "playback_slowdown": 4.0,
+  "video_duration_s": 20.02,
+  "velocity_color_range_m_per_s": [
+    0.0,
+    0.0011726242906210666
+  ],
+  "velocity_scale_method": "Maximum on fixed 161x121 near-surface display grid, |x|<=0.98, ALL snapshots; a display statistic, not a norm",
+  "vorticity_color_range_per_s": [
+    -0.005971933943219597,
+    0.005971933943219597
+  ],
+  "vorticity_scale_method": "99.5 percentile |DG1 omega| on every second near-surface display row/eligible column, |x|<=0.98, ALL snapshots; corners excluded only from scale",
+  "color_saturation": "Out-of-range values remain unchanged; fixed colorbar extend indicators denote saturation, not clipping of fields",
+  "particle_displacement_magnification": 181.0,
+  "particle_p95_displacement_m": 0.00038098011365610374,
+  "particle_displacement_max_m": 0.000527692783225703,
+  "tracer_model_separation_max_m": 3.131139503395752e-07,
+  "surface_display_magnification": 1.0,
+  "surface_axis_units": "mm; conversion only, no amplitude magnification",
+  "true_eta_range_m": [
+    -0.0003490658645764051,
+    0.0003490658645764051
+  ],
+  "surface_ylim_mm": [
+    -0.39095376832557377,
+    0.39095376832557377
+  ],
+  "fixed_arrow_seconds": 102.33456782346151,
+  "arrow_key_speed_m_per_s": 0.0005,
+  "wall_interpolation_speed_max_m_per_s": 0.0,
+  "modal": {
+    "modal_basis": "sin(pi*x/(2*a)); diagnostic projection only",
+    "inviscid_reference_period_s": 1.6006096324801131,
+    "zero_crossings_s": [
+      0.41609755320693254,
+      1.2224424156046594,
+      2.030149231281564,
+      2.836772871146356,
+      3.6451090348160804,
+      4.451008440241439
+    ],
+    "first_zero_crossing_s": 0.41609755320693254,
+    "next_zero_crossing_s": 1.2224424156046594,
+    "first_opposite_extremum": {
+      "time": 0.8097940078797644,
+      "amplitude": -0.00024824297246766604,
+      "kind": "minimum"
+    },
+    "extrema": [
+      {
+        "time": 0.8097940078797644,
+        "amplitude": -0.00024824297246766604,
+        "kind": "minimum"
+      },
+      {
+        "time": 1.6159495533507882,
+        "amplitude": 0.00022077121514032803,
+        "kind": "maximum"
+      },
+      {
+        "time": 2.4230051277212805,
+        "amplitude": -0.00019352141230982608,
+        "kind": "minimum"
+      },
+      {
+        "time": 3.2310346002945223,
+        "amplitude": 0.00017166237253193363,
+        "kind": "maximum"
+      },
+      {
+        "time": 4.037689907248165,
+        "amplitude": -0.00015093045423976537,
+        "kind": "minimum"
+      },
+      {
+        "time": 4.845141520036906,
+        "amplitude": 0.00013368581266361444,
+        "kind": "maximum"
+      }
+    ],
+    "estimated_period_s": 1.6132472797295838,
+    "half_cycle_period_estimates_s": [
+      1.6126897247954537,
+      1.615413631353809,
+      1.6132472797295838,
+      1.6166723273394492,
+      1.6117988108507166
+    ],
+    "same_sign_damping": [
+      {
+        "from_time": 1.6159495533507882,
+        "to_time": 3.2310346002945223,
+        "amplitude_ratio": 0.7775577645972573,
+        "log_decrement": 0.2515973423865684,
+        "effective_decay_rate_per_s": 0.15577962464742792
+      },
+      {
+        "from_time": 3.2310346002945223,
+        "to_time": 4.845141520036906,
+        "amplitude_ratio": 0.7787717872694869,
+        "log_decrement": 0.25003723203974365,
+        "effective_decay_rate_per_s": 0.15490747792571904
+      },
+      {
+        "from_time": 0.8097940078797644,
+        "to_time": 2.4230051277212805,
+        "amplitude_ratio": 0.7795645145001335,
+        "log_decrement": 0.2490198299576306,
+        "effective_decay_rate_per_s": 0.15436282758954367
+      },
+      {
+        "from_time": 2.4230051277212805,
+        "to_time": 4.037689907248165,
+        "amplitude_ratio": 0.7799160435958737,
+        "log_decrement": 0.2485690015072608,
+        "effective_decay_rate_per_s": 0.1539427414309891
+      }
+    ],
+    "opposite_to_initial_amplitude_ratio": 0.8773630503012496
+  },
+  "key_frames": [
+    {
+      "name": "t0",
+      "phase": "Release",
+      "event_time_s": 0.0,
+      "index": 0,
+      "selected_time_s": 0.0
+    },
+    {
+      "name": "first_zero",
+      "phase": "First modal crossing",
+      "event_time_s": 0.41609755320693254,
+      "index": 83,
+      "selected_time_s": 0.41500000000000004
+    },
+    {
+      "name": "opposite_extremum",
+      "phase": "Opposite modal extremum",
+      "event_time_s": 0.8097940078797644,
+      "index": 162,
+      "selected_time_s": 0.81
+    },
+    {
+      "name": "next_zero",
+      "phase": "Next modal crossing",
+      "event_time_s": 1.2224424156046594,
+      "index": 244,
+      "selected_time_s": 1.22
+    },
+    {
+      "name": "next_positive",
+      "phase": "Next positive modal extremum",
+      "event_time_s": 1.6159495533507882,
+      "index": 323,
+      "selected_time_s": 1.615
+    },
+    {
+      "name": "late_cycle",
+      "phase": "Damped late extremum",
+      "event_time_s": 4.037689907248165,
+      "index": 808,
+      "selected_time_s": 4.04
+    }
+  ],
+  "depth_q_max": 0.001403203932568431,
+  "depth_log_display_min": 1e-10,
+  "cache_quantization": "float32 display velocity/omega/depth; float64 eta, tracers and scientific histories",
+  "dependency_versions": {
+    "numpy": "1.21.5",
+    "scipy": "1.7.3",
+    "matplotlib": "3.5.1",
+    "h5py": "3.6.0",
+    "plotly": "5.6.0"
+  },
+  "precompute_runtime_seconds": 122.29931083507836
+}

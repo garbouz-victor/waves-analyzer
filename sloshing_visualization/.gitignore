@@ -7,6 +7,14 @@ results/*.h5
 results/run_*/
 output/*
 !output/.gitkeep
+!output/step2/
+output/step2/*
+!output/step2/*.json
+!output/step2/key_phases.pdf
+!output/step2/key_phases.png
+!output/step2/frames_preview/
+output/step2/frames_preview/*
+!output/step2/frames_preview/*.png
 validation_results/**/*.h5
 validation_results/animation_qualification/runs/
 validation_results/animation_qualification/raw/

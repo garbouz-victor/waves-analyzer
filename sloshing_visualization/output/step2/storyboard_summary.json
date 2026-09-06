@@ -1,0 +1,200 @@
+{
+  "pages": 9,
+  "frames": [
+    {
+      "name": "t0",
+      "phase": "Release",
+      "event_time_s": 0.0,
+      "index": 0,
+      "selected_time_s": 0.0,
+      "eta_range_m": [
+        -0.0003490658645764051,
+        0.0003490658645764051
+      ],
+      "display_grid_speed_range_m_per_s": [
+        0.0,
+        0.0
+      ],
+      "bulk_display_grid_speed_max_m_per_s": 0.0,
+      "kinetic_energy": 0.0,
+      "potential_energy": 3.984396174467873e-07,
+      "total_energy": 3.984396174467873e-07,
+      "surface_magnification": 1.0,
+      "tracer_magnification": 181.0
+    },
+    {
+      "name": "first_zero",
+      "phase": "First modal crossing",
+      "event_time_s": 0.41609755320693254,
+      "index": 83,
+      "selected_time_s": 0.41500000000000004,
+      "eta_range_m": [
+        -0.0003490658645764051,
+        0.0003490658645764051
+      ],
+      "display_grid_speed_range_m_per_s": [
+        0.0,
+        0.0011247881582110769
+      ],
+      "bulk_display_grid_speed_max_m_per_s": 0.001117751809956412,
+      "kinetic_energy": 3.457225572105101e-07,
+      "potential_energy": 5.874016424733024e-09,
+      "total_energy": 3.515965736352431e-07,
+      "surface_magnification": 1.0,
+      "tracer_magnification": 181.0
+    },
+    {
+      "name": "opposite_extremum",
+      "phase": "Opposite modal extremum",
+      "event_time_s": 0.8097940078797644,
+      "index": 162,
+      "selected_time_s": 0.81,
+      "eta_range_m": [
+        -0.0003490658645764051,
+        0.0003490658645764051
+      ],
+      "display_grid_speed_range_m_per_s": [
+        0.0,
+        0.00037129038710335326
+      ],
+      "bulk_display_grid_speed_max_m_per_s": 0.00023931069499926288,
+      "kinetic_energy": 3.758289275066133e-09,
+      "potential_energy": 3.0948779201087483e-07,
+      "total_energy": 3.1324608128594096e-07,
+      "surface_magnification": 1.0,
+      "tracer_magnification": 181.0
+    },
+    {
+      "name": "next_zero",
+      "phase": "Next modal crossing",
+      "event_time_s": 1.2224424156046594,
+      "index": 244,
+      "selected_time_s": 1.22,
+      "eta_range_m": [
+        -0.0003490658645764051,
+        0.0003490658645764051
+      ],
+      "display_grid_speed_range_m_per_s": [
+        0.0,
+        0.0009482686921745392
+      ],
+      "bulk_display_grid_speed_max_m_per_s": 0.0009482686921745392,
+      "kinetic_energy": 2.720485272280085e-07,
+      "potential_energy": 3.9534792248591535e-09,
+      "total_energy": 2.7600200645286765e-07,
+      "surface_magnification": 1.0,
+      "tracer_magnification": 181.0
+    },
+    {
+      "name": "next_positive",
+      "phase": "Next positive modal extremum",
+      "event_time_s": 1.6159495533507882,
+      "index": 323,
+      "selected_time_s": 1.615,
+      "eta_range_m": [
+        -0.0003490658645764051,
+        0.0003490658645764051
+      ],
+      "display_grid_speed_range_m_per_s": [
+        0.0,
+        0.00043530070674407457
+      ],
+      "bulk_display_grid_speed_max_m_per_s": 0.00027620756274277056,
+      "kinetic_energy": 3.7862779359160036e-09,
+      "potential_energy": 2.4061983238283334e-07,
+      "total_energy": 2.444061103187493e-07,
+      "surface_magnification": 1.0,
+      "tracer_magnification": 181.0
+    },
+    {
+      "name": "late_485",
+      "phase": "Damped modal minimum",
+      "event_time_s": 2.4230051277212805,
+      "index": 485,
+      "selected_time_s": 2.4250000000000003,
+      "eta_range_m": [
+        -0.0003490658645764051,
+        0.0003490658645764051
+      ],
+      "display_grid_speed_range_m_per_s": [
+        0.0,
+        0.0003270541074343275
+      ],
+      "bulk_display_grid_speed_max_m_per_s": 0.00019270022407241757,
+      "kinetic_energy": 1.7891738836385843e-09,
+      "potential_energy": 1.8696641654118926e-07,
+      "total_energy": 1.8875559042482786e-07,
+      "surface_magnification": 1.0,
+      "tracer_magnification": 181.0
+    },
+    {
+      "name": "late_646",
+      "phase": "Damped modal maximum",
+      "event_time_s": 3.2310346002945223,
+      "index": 646,
+      "selected_time_s": 3.23,
+      "eta_range_m": [
+        -0.0003490658645764051,
+        0.0003490658645764051
+      ],
+      "display_grid_speed_range_m_per_s": [
+        0.0,
+        0.0002815291829376667
+      ],
+      "bulk_display_grid_speed_max_m_per_s": 0.00017047020706045655,
+      "kinetic_energy": 1.2730691071866752e-09,
+      "potential_energy": 1.4577107215169895e-07,
+      "total_energy": 1.4704414125888563e-07,
+      "surface_magnification": 1.0,
+      "tracer_magnification": 181.0
+    },
+    {
+      "name": "late_cycle",
+      "phase": "Damped late extremum",
+      "event_time_s": 4.037689907248165,
+      "index": 808,
+      "selected_time_s": 4.04,
+      "eta_range_m": [
+        -0.0003490658645764051,
+        0.0003490658645764051
+      ],
+      "display_grid_speed_range_m_per_s": [
+        0.0,
+        0.0002779441462510404
+      ],
+      "bulk_display_grid_speed_max_m_per_s": 0.00016825209883918803,
+      "kinetic_energy": 1.297244832447291e-09,
+      "potential_energy": 1.1381013280675944e-07,
+      "total_energy": 1.1510737763920673e-07,
+      "surface_magnification": 1.0,
+      "tracer_magnification": 181.0
+    },
+    {
+      "name": "late_969",
+      "phase": "Damped modal maximum",
+      "event_time_s": 4.845141520036906,
+      "index": 969,
+      "selected_time_s": 4.845,
+      "eta_range_m": [
+        -0.0003490658645764051,
+        0.0003490658645764051
+      ],
+      "display_grid_speed_range_m_per_s": [
+        0.0,
+        0.0002226717412934234
+      ],
+      "bulk_display_grid_speed_max_m_per_s": 0.0001314273826746405,
+      "kinetic_energy": 7.390130918647438e-10,
+      "potential_energy": 8.84661211868772e-08,
+      "total_energy": 8.920513427874194e-08,
+      "surface_magnification": 1.0,
+      "tracer_magnification": 181.0
+    }
+  ],
+  "source": {
+    "path": "/home/victor/Projects/waves-analyzer/sloshing_visualization/validation_results/animation_qualification/runs/fine-full.h5",
+    "bytes": 2364886404,
+    "mtime_ns": 1788665248766948120,
+    "config_sha256": "7e164116408c32c49c9eeec24c27c9ed5dabe4e6cb63bb2917a9ecacdcea4f7c"
+  }
+}

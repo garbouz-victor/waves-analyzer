@@ -1,0 +1,96 @@
+{
+  "videos": {
+    "preview_0_1s.mp4": {
+      "width": 1920,
+      "height": 1080,
+      "avg_frame_rate": "50/1",
+      "duration": "4.020000",
+      "nb_read_frames": "201",
+      "decode_passed": true,
+      "constant_frame_interval_passed": true,
+      "sha256": "7d6bb28bb2081c5e31d6eebbf1b0bd28deaf4f171b3709dc49a484b512b51f96",
+      "bytes": 1171064
+    },
+    "bulk_flow_explained.mp4": {
+      "width": 1920,
+      "height": 1080,
+      "avg_frame_rate": "50/1",
+      "duration": "20.020000",
+      "nb_read_frames": "1001",
+      "decode_passed": true,
+      "constant_frame_interval_passed": true,
+      "sha256": "c0a75ae2db0f9fa2a98367f66a2bfec662610f5592bc24b6a1395febbbc06b25",
+      "bytes": 5109266
+    },
+    "bulk_flow_clean.mp4": {
+      "width": 1920,
+      "height": 1080,
+      "avg_frame_rate": "50/1",
+      "duration": "20.020000",
+      "nb_read_frames": "1001",
+      "decode_passed": true,
+      "constant_frame_interval_passed": true,
+      "sha256": "830529fb0f55c7ab4f34a5a8fa172a3371a31147edd82d01f43b7fb650ac47ae",
+      "bytes": 4940588
+    },
+    "bulk_vorticity.mp4": {
+      "width": 1920,
+      "height": 1080,
+      "avg_frame_rate": "50/1",
+      "duration": "20.020000",
+      "nb_read_frames": "1001",
+      "decode_passed": true,
+      "constant_frame_interval_passed": true,
+      "sha256": "6f45d27ffbd50c8a1d2caaf18c4503177c9007271877ad5dd07aee9073cfe43e",
+      "bytes": 3698669
+    },
+    "free_surface_true_scale.mp4": {
+      "width": 1920,
+      "height": 1080,
+      "avg_frame_rate": "50/1",
+      "duration": "20.020000",
+      "nb_read_frames": "1001",
+      "decode_passed": true,
+      "constant_frame_interval_passed": true,
+      "sha256": "a5f67019036502920b81525af9455abda9579afaca7e87b1b6d879e7f4ddbcf4",
+      "bytes": 1204570
+    },
+    "tracer_model_comparison.mp4": {
+      "width": 1920,
+      "height": 1080,
+      "avg_frame_rate": "50/1",
+      "duration": "20.020000",
+      "nb_read_frames": "1001",
+      "decode_passed": true,
+      "constant_frame_interval_passed": true,
+      "sha256": "848f85b007c1d903b14176bfc4fdda11658b90896ff06bbaa1bc7fa963db6c25",
+      "bytes": 933805
+    }
+  },
+  "cache_fem_max_absolute_rounding_difference": {
+    "u": 2.9082565999524745e-11,
+    "w": 5.760369221549655e-11,
+    "omega": 9.912619336471806e-09,
+    "eta": 0.0
+  },
+  "all_snapshot_arrow_tip_bounds": {
+    "x_min": -1.0,
+    "x_max": 1.0,
+    "z_max": -0.05443656593561172
+  },
+  "sources": {
+    "fine": {
+      "path": "/home/victor/Projects/waves-analyzer/sloshing_visualization/validation_results/animation_qualification/runs/fine-full.h5",
+      "bytes": 2364886404,
+      "mtime_ns": 1788665248766948120,
+      "config_sha256": "7e164116408c32c49c9eeec24c27c9ed5dabe4e6cb63bb2917a9ecacdcea4f7c"
+    },
+    "medium": {
+      "path": "/home/victor/Projects/waves-analyzer/sloshing_visualization/validation_results/animation_qualification/runs/medium-full.h5",
+      "bytes": 1072567328,
+      "mtime_ns": 1788657587171233015,
+      "config_sha256": "c21bc0de11b6c83b104e26aa1265d0dbecfd5f3a3fdf607f130b2ce17b50b091"
+    }
+  },
+  "signature": "7d05b664b338e245936148f0d82ded679fbebbcc464872cde9a76a7959f9d5a2"
+}

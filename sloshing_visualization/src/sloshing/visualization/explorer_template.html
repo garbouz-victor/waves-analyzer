@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>STEP 2 — scientific bulk-flow explorer</title>
+<style>
+body{font:15px system-ui,sans-serif;margin:18px;color:#24313b;background:white}
+h1{font-size:22px;margin:0 0 8px} .controls{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin:10px 0}
+#time{width:min(65vw,800px)} #plot{height:680px;min-width:850px} #warning{padding:10px;background:#eee;border-left:5px solid #777}
+.note{font-size:13px;line-height:1.5} #status{font-variant-numeric:tabular-nums}
+</style><script>__PLOTLY_JS__</script></head>
+<body><h1>CONDITIONALLY QUALIFIED FOR BULK MODEL VISUALIZATION</h1>
+<div class="note">Fine FEM source · α = 0.02° · ν = 0.01 m²/s · SDIRK2 · dt = 0.00125 s.
+Velocity: fixed reference domain z ≤ 0. Plotted surface: first-order interface displacement, ×1.</div>
+<div class="controls"><button id="play">Play</button><input id="time" type="range" min="0" max="100" value="0" step="1"><span id="status"></span></div>
+<div class="controls">
+<label><input id="speed" type="radio" name="field" checked>Speed (m/s)</label>
+<label><input id="vorticity" type="radio" name="field">Vorticity (1/s)</label>
+<label><input id="arrows" type="checkbox" checked>Velocity arrows</label>
+<label><input id="tracers" type="checkbox" checked>Linear tracers</label>
+<label><input id="contact" type="checkbox" checked>Contact shading</label>
+<label>View <select id="view"><option value="near">Near surface</option><option value="bulk">Bulk |x|≤0.9</option><option value="full">Full depth (equal aspect)</option></select></label>
+</div><div id="plot"></div>
+<div id="warning">Pinned-contact region: not physically resolved by this model. |x| &gt; 0.98 remains unqualified even when shading is switched off or outside the selected view.</div>
+<p class="note" id="scales"></p>
+<p class="note">Gray zones: |x| &gt; 0.98; pale transition: 0.90 &lt; |x| ≤ 0.98. These boundaries are a visualization convention, not sharp physical validity limits.
+Pointwise corner extrema are excluded only from the fixed vorticity color range; data are not smoothed or clipped. Saturated colors can exceed the displayed range.
+Tracer colors encode initial depth. No nonlinear drift/mixing, moving contact line, wetting, wall film or drainage is predicted here.
+101 saved states; no interpolated PDE frames. Browser playback timing is approximate; use MP4 for fixed 4× slowdown. Display samples are not scientific norms.</p>
+<script>
+'use strict';
+const D=__STEP2_DATA__, M=D.meta, $=id=>document.getElementById(id), plot=$('plot');
+let timer=null, busy=false, previousView=null;
+$('time').max=D.frames.length-1;
+$('scales').textContent=`Fixed speed range: ${M.velocity_color_range_m_per_s.join(' … ')} m/s. Fixed omega range: ${M.vorticity_color_range_per_s.join(' … ')} 1/s (|x|≤0.98 scale statistics). Tracer displacement ×${M.particle_displacement_magnification}, same x/z factor. Surface axes: true eta in mm. Arrow key: 0.5 mm/s → ${(M.fixed_arrow_seconds*.0005).toFixed(4)} m on the diagram; arrows shown in the near-surface layer only.`;
+function line(x,y,name,extra={}){return {type:'scatter',mode:'lines',x,y,name,hoverinfo:'skip',...extra};}
+function arrows(f){
+  const x=[],y=[],s=M.fixed_arrow_seconds;
+  for(let k=0;k<D.arrow_x.length;k++){
+    const ox=D.arrow_x[k],oz=D.arrow_z[k],dx=s*f.arrow_u[k],dz=s*f.arrow_w[k];
+    if(dx===0 && dz===0)continue;
+    const tx=ox+dx,tz=oz+dz;
+    x.push(ox,tx,null,tx-.22*dx+.10*dz,tx,tx-.22*dx-.10*dz,null);
+    y.push(oz,tz,null,tz-.22*dz-.10*dx,tz,tz-.22*dz+.10*dx,null);
+  }
+  return line(x,y,'velocity arrows',{line:{color:$('speed').checked?'white':'#222',width:1},visible:$('arrows').checked});
+}
+function masks(xref,yref,y0,y1){
+  const shapes=[];
+  for(const sign of [-1,1]){
+    if($('contact').checked){
+      for(const [lo,hi,color] of [[.90,.98,'rgba(189,159,84,.10)'],[.98,1,'rgba(100,100,100,.5)']])
+        shapes.push({type:'rect',xref,yref,x0:sign*lo,x1:sign*hi,y0,y1,fillcolor:color,line:{width:0},layer:'above'});
+    }
+    shapes.push({type:'line',xref,yref,x0:sign*.98,x1:sign*.98,y0,y1,line:{color:'#777',dash:'dot',width:1},layer:'above'});
+  }
+  return shapes;
+}
+function draw(){
+  const i=+$('time').value,f=D.frames[i],full=$('view').value==='full',grid=D.grids[full?'full':'near'],v=f[full?'full':'near'];
+  const speed=$('speed').checked,lim=speed?M.velocity_color_range_m_per_s:M.vorticity_color_range_per_s;
+  const values=speed?v.u.map((row,j)=>row.map((u,k)=>Math.hypot(u,v.w[j][k]))):v.omega;
+  const zrange=full?[-10,.04]:[-1.5,.04],xrange=$('view').value==='bulk'?[-.9,.9]:[-1,1];
+  const field={type:'heatmap',x:grid.x,y:grid.z,z:values,zmin:lim[0],zmax:lim[1],zauto:false,zsmooth:false,
+    colorscale:speed?'Viridis':'RdBu',reversescale:!speed,name:speed?'speed':'omega',
+    colorbar:{x:.615,len:.8,thickness:13,title:speed?'m/s':'1/s'},hovertemplate:'x=%{x:.4f} m<br>z=%{y:.4f} m<br>%{z:.5g}<extra></extra>'};
+  const colors={'-0.1':'#f5b52e','-0.3':'#ea6f42','-1':'#32bcad','-3':'#a98ced'};
+  const p=f.paths.map((a,k)=>a.map((q,j)=>D.seeds[k][j]+M.particle_displacement_magnification*(q-D.seeds[k][j])));
+  const tracers={type:'scatter',mode:'markers',x:p.map(a=>a[0]),y:p.map(a=>a[1]),name:'linear tracers',visible:$('tracers').checked,
+    marker:{size:7,color:D.seeds.map(a=>colors[a[1]]),line:{color:'#111',width:.5}},customdata:f.paths,
+    hovertemplate:'Actual tracer: x=%{customdata[0]:.7f}, z=%{customdata[1]:.7f} m<br>Glyph displacement magnified<extra></extra>'};
+  const mm=f.eta.map(e=>e*1000), axis={xaxis:'x2',yaxis:'y2'};
+  const traces=[field,arrows(f),line(D.eta_x,f.eta,'surface ×1',{line:{color:'#1686b0',width:2}}),tracers,
+    {type:'scatter',mode:'markers',x:[-1,1],y:[f.eta[0],f.eta[f.eta.length-1]],marker:{color:'black',size:7},hoverinfo:'skip',name:'pinned'},
+    line(D.eta_x,D.initial_eta.map(e=>e*1000),'initial eta',{...axis,line:{color:'#aaa',dash:'dash'}}),
+    line(D.eta_x,mm,'eta (mm)',{...axis,line:{color:'#006786',width:2},hoverinfo:'x+y'}),
+    {type:'scatter',mode:'markers',x:[-1,1],y:[mm[0],mm[mm.length-1]],...axis,marker:{color:'black',size:7},hoverinfo:'skip',name:'pinned endpoints'}];
+  for(const [key,name,color] of [['kinetic_energy','K','#de7225'],['potential_energy','P','#1379a0'],['total_energy','E','#333']])
+    traces.push(line(D.times,D[key],name,{xaxis:'x3',yaxis:'y3',line:{color,width:2},showlegend:true,hoverinfo:'x+y'}));
+  const shapes=[...masks('x','y',zrange[0],zrange[1]),...masks('x2','y2',...M.surface_ylim_mm),
+    {type:'line',xref:'x3',yref:'y3 domain',x0:f.t,x1:f.t,y0:0,y1:1,line:{color:'#333',dash:'dot'}}];
+  const layout={margin:{l:65,r:40,t:55,b:60},showlegend:false,legend:{x:.74,y:.40,orientation:'h'},shapes,
+    title:{text:`t = ${f.t.toFixed(3)} s | ${f.phase}`,font:{size:16}},
+    xaxis:{domain:[0,.59],range:xrange,autorange:false,title:'x (m)',constrain:'domain',fixedrange:true},
+    yaxis:{domain:[.06,.95],range:zrange,autorange:false,title:'z (m)',scaleanchor:'x',scaleratio:1,constrain:'domain',fixedrange:true},
+    xaxis2:{domain:[.75,1],range:[-1,1],anchor:'y2',title:'x (m)',fixedrange:true},
+    yaxis2:{domain:[.61,.95],range:M.surface_ylim_mm,anchor:'x2',title:'TRUE eta (mm)',fixedrange:true},
+    xaxis3:{domain:[.75,1],range:[0,5],anchor:'y3',title:'physical time (s)',fixedrange:true},
+    yaxis3:{domain:[.08,.40],range:[0,1.05*D.total_energy[0]],anchor:'x3',title:'K / P / E (m⁴/s²)',fixedrange:true},
+    annotations:[{xref:'paper',yref:'paper',x:.27,y:1.02,text:'Fixed domain; walls u = w = 0',showarrow:false},
+      {xref:'paper',yref:'paper',x:.87,y:.48,text:'K orange · P blue · E black',showarrow:false,font:{size:12}}]};
+  $('status').textContent=`t = ${f.t.toFixed(3)} s · snapshot ${D.indices[i]}`;
+  // A view change resets Plotly's previous equal-aspect constraint state.
+  // Within each view only data change; physical scales remain fixed.
+  const render=previousView===$('view').value?Plotly.react:Plotly.newPlot;
+  previousView=$('view').value;
+  window.step2RenderPromise=render(plot,traces,layout,{responsive:true,displaylogo:false,modeBarButtonsToRemove:['autoScale2d','resetScale2d']});
+  return window.step2RenderPromise;
+}
+for(const id of ['time','speed','vorticity','arrows','tracers','contact','view'])$(id).addEventListener(id==='time'?'input':'change',draw);
+$('play').onclick=()=>{
+  if(timer){clearInterval(timer);timer=null;$('play').textContent='Play';return;}
+  $('play').textContent='Pause';timer=setInterval(async()=>{
+    if(busy)return;busy=true;
+    $('time').value=(+$('time').value+1)%D.frames.length;
+    try{await draw();}finally{busy=false;}
+  },200);
+};
+window.step2Ready=false;
+draw().then(()=>{window.step2Ready=true;});
+</script></body></html>

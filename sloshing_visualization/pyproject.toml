@@ -15,13 +15,17 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-test = ["pytest>=7,<9", "sympy>=1.10,<2", "matplotlib>=3.5,<4"]
+test = ["pytest>=7,<9", "sympy>=1.10,<2", "matplotlib>=3.5,<4", "pillow>=9,<13", "plotly>=5,<7"]
+render = ["matplotlib>=3.5,<4", "pillow>=9,<13", "plotly>=5,<7"]
 
 [project.scripts]
 sloshing-run = "sloshing.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+"sloshing.visualization" = ["*.html"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

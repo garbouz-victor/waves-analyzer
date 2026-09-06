@@ -1,0 +1,128 @@
+[
+  {
+    "name": "t0",
+    "phase": "Release",
+    "event_time_s": 0.0,
+    "index": 0,
+    "selected_time_s": 0.0,
+    "eta_range_m": [
+      -0.0003490658645764051,
+      0.0003490658645764051
+    ],
+    "display_grid_speed_range_m_per_s": [
+      0.0,
+      0.0
+    ],
+    "bulk_display_grid_speed_max_m_per_s": 0.0,
+    "kinetic_energy": 0.0,
+    "potential_energy": 3.984396174467873e-07,
+    "total_energy": 3.984396174467873e-07,
+    "surface_magnification": 1.0,
+    "tracer_magnification": 181.0
+  },
+  {
+    "name": "first_zero",
+    "phase": "First modal crossing",
+    "event_time_s": 0.41609755320693254,
+    "index": 83,
+    "selected_time_s": 0.41500000000000004,
+    "eta_range_m": [
+      -0.0003490658645764051,
+      0.0003490658645764051
+    ],
+    "display_grid_speed_range_m_per_s": [
+      0.0,
+      0.0011247881582110769
+    ],
+    "bulk_display_grid_speed_max_m_per_s": 0.001117751809956412,
+    "kinetic_energy": 3.457225572105101e-07,
+    "potential_energy": 5.874016424733024e-09,
+    "total_energy": 3.515965736352431e-07,
+    "surface_magnification": 1.0,
+    "tracer_magnification": 181.0
+  },
+  {
+    "name": "opposite_extremum",
+    "phase": "Opposite modal extremum",
+    "event_time_s": 0.8097940078797644,
+    "index": 162,
+    "selected_time_s": 0.81,
+    "eta_range_m": [
+      -0.0003490658645764051,
+      0.0003490658645764051
+    ],
+    "display_grid_speed_range_m_per_s": [
+      0.0,
+      0.00037129038710335326
+    ],
+    "bulk_display_grid_speed_max_m_per_s": 0.00023931069499926288,
+    "kinetic_energy": 3.758289275066133e-09,
+    "potential_energy": 3.0948779201087483e-07,
+    "total_energy": 3.1324608128594096e-07,
+    "surface_magnification": 1.0,
+    "tracer_magnification": 181.0
+  },
+  {
+    "name": "next_zero",
+    "phase": "Next modal crossing",
+    "event_time_s": 1.2224424156046594,
+    "index": 244,
+    "selected_time_s": 1.22,
+    "eta_range_m": [
+      -0.0003490658645764051,
+      0.0003490658645764051
+    ],
+    "display_grid_speed_range_m_per_s": [
+      0.0,
+      0.0009482686921745392
+    ],
+    "bulk_display_grid_speed_max_m_per_s": 0.0009482686921745392,
+    "kinetic_energy": 2.720485272280085e-07,
+    "potential_energy": 3.9534792248591535e-09,
+    "total_energy": 2.7600200645286765e-07,
+    "surface_magnification": 1.0,
+    "tracer_magnification": 181.0
+  },
+  {
+    "name": "next_positive",
+    "phase": "Next positive modal extremum",
+    "event_time_s": 1.6159495533507882,
+    "index": 323,
+    "selected_time_s": 1.615,
+    "eta_range_m": [
+      -0.0003490658645764051,
+      0.0003490658645764051
+    ],
+    "display_grid_speed_range_m_per_s": [
+      0.0,
+      0.00043530070674407457
+    ],
+    "bulk_display_grid_speed_max_m_per_s": 0.00027620756274277056,
+    "kinetic_energy": 3.7862779359160036e-09,
+    "potential_energy": 2.4061983238283334e-07,
+    "total_energy": 2.444061103187493e-07,
+    "surface_magnification": 1.0,
+    "tracer_magnification": 181.0
+  },
+  {
+    "name": "late_cycle",
+    "phase": "Damped late extremum",
+    "event_time_s": 4.037689907248165,
+    "index": 808,
+    "selected_time_s": 4.04,
+    "eta_range_m": [
+      -0.0003490658645764051,
+      0.0003490658645764051
+    ],
+    "display_grid_speed_range_m_per_s": [
+      0.0,
+      0.0002779441462510404
+    ],
+    "bulk_display_grid_speed_max_m_per_s": 0.00016825209883918803,
+    "kinetic_energy": 1.297244832447291e-09,
+    "potential_energy": 1.1381013280675944e-07,
+    "total_energy": 1.1510737763920673e-07,
+    "surface_magnification": 1.0,
+    "tracer_magnification": 181.0
+  }
+]
