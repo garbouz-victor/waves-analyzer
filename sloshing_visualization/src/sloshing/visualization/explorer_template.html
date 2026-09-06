@@ -19,9 +19,9 @@ Velocity: fixed reference domain z ≤ 0. Plotted surface: first-order interface
 <label><input id="contact" type="checkbox" checked>Contact shading</label>
 <label>View <select id="view"><option value="near">Near surface</option><option value="bulk">Bulk |x|≤0.9</option><option value="full">Full depth (equal aspect)</option></select></label>
 </div><div id="plot"></div>
-<div id="warning">Pinned-contact region: not physically resolved by this model. |x| &gt; 0.98 remains unqualified even when shading is switched off or outside the selected view.</div>
+<div id="warning">Contact corner: not physically resolved by this model. The near-surface corner remains unqualified even when shading is switched off. Solid walls below the corner obey u = w = 0.</div>
 <p class="note" id="scales"></p>
-<p class="note">Gray zones: |x| &gt; 0.98; pale transition: 0.90 &lt; |x| ≤ 0.98. These boundaries are a visualization convention, not sharp physical validity limits.
+<p class="note">Flow: gray corner patches |x| &gt; 0.98, −0.12 ≤ z ≤ 0.04 m; black solid walls have zero FEM velocity. Surface graph: x strips and pale transition 0.90 &lt; |x| ≤ 0.98. Patch depth is a drawing convention, not a physical singularity thickness.
 Pointwise corner extrema are excluded only from the fixed vorticity color range; data are not smoothed or clipped. Saturated colors can exceed the displayed range.
 Tracer colors encode initial depth. No nonlinear drift/mixing, moving contact line, wetting, wall film or drainage is predicted here.
 101 saved states; no interpolated PDE frames. Browser playback timing is approximate; use MP4 for fixed 4× slowdown. Display samples are not scientific norms.</p>
@@ -45,10 +45,12 @@ function arrows(f){
 }
 function masks(xref,yref,y0,y1){
   const shapes=[];
+  if(xref==='x'){y0=M.scope.contact_corner_z_min_m;y1=M.scope.contact_corner_z_max_m;}
   for(const sign of [-1,1]){
     if($('contact').checked){
-      for(const [lo,hi,color] of [[.90,.98,'rgba(189,159,84,.10)'],[.98,1,'rgba(100,100,100,.5)']])
-        shapes.push({type:'rect',xref,yref,x0:sign*lo,x1:sign*hi,y0,y1,fillcolor:color,line:{width:0},layer:'above'});
+      for(const [lo,hi,color] of [[.90,.98,'rgba(189,159,84,.10)'],[.98,1,'rgba(100,100,100,.5)']]){
+        if(xref==='x' && lo===.90)continue;
+        shapes.push({type:'rect',xref,yref,x0:sign*lo,x1:sign*hi,y0,y1,fillcolor:color,line:{width:0},layer:'above'});}
     }
     shapes.push({type:'line',xref,yref,x0:sign*.98,x1:sign*.98,y0,y1,line:{color:'#777',dash:'dot',width:1},layer:'above'});
   }
@@ -77,6 +79,8 @@ function draw(){
     traces.push(line(D.times,D[key],name,{xaxis:'x3',yaxis:'y3',line:{color,width:2},showlegend:true,hoverinfo:'x+y'}));
   const shapes=[...masks('x','y',zrange[0],zrange[1]),...masks('x2','y2',...M.surface_ylim_mm),
     {type:'line',xref:'x3',yref:'y3 domain',x0:f.t,x1:f.t,y0:0,y1:1,line:{color:'#333',dash:'dot'}}];
+  for(const side of [-1,1])shapes.push({type:'line',xref:'x',yref:'y',x0:side,x1:side,y0:zrange[0],y1:0,line:{color:'black',width:3},layer:'above'});
+  if(full)shapes.push({type:'line',xref:'x',yref:'y',x0:-1,x1:1,y0:-10,y1:-10,line:{color:'black',width:3},layer:'above'});
   const layout={margin:{l:65,r:40,t:55,b:60},showlegend:false,legend:{x:.74,y:.40,orientation:'h'},shapes,
     title:{text:`t = ${f.t.toFixed(3)} s | ${f.phase}`,font:{size:16}},
     xaxis:{domain:[0,.59],range:xrange,autorange:false,title:'x (m)',constrain:'domain',fixedrange:true},

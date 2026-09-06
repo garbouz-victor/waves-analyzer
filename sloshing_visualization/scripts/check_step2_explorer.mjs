@@ -44,6 +44,15 @@ try{
     warning:document.getElementById('warning').textContent,arrows:p.data[1].visible,tracers:p.data[3].visible,
     shapes:p.layout.shapes.length};})()`);
   const initial=await state();assert.equal(initial.topEdge,0);
+  const wallGeometry=await evaluate(`(()=>{const s=document.getElementById('plot').layout.shapes;return {
+    corners:s.filter(a=>a.xref==='x'&&a.type==='rect'),
+    walls:s.filter(a=>a.xref==='x'&&a.type==='line'&&Math.abs(a.x0)===1&&a.x0===a.x1)
+  };})()`);
+  assert.equal(wallGeometry.corners.length,2);
+  for(const patch of wallGeometry.corners){assert.equal(patch.y0,-.12);assert.equal(patch.y1,.04);assert.equal(patch.layer,'above');}
+  assert.equal(wallGeometry.walls.length,2);
+  for(const wall of wallGeometry.walls){assert.equal(wall.line.color,'black');assert.equal(wall.layer,'above');}
+  assert.match(initial.warning,/u = w = 0/);
   const change=async(id,value)=>{await evaluate(`document.getElementById('${id}').${typeof value==='boolean'?'checked':'value'}=${JSON.stringify(value)};document.getElementById('${id}').dispatchEvent(new Event('${id==='time'?'input':'change'}'));window.step2RenderPromise.then(()=>true)`);};
   await change('time','8');const moving=await state();assert.deepEqual(moving.clim,initial.clim);assert.match(moving.time,/0.400/);
   await change('vorticity',true);const vort=await state();assert.equal(vort.clim[0],-vort.clim[1]);
@@ -62,7 +71,8 @@ try{
   assert.deepEqual(exceptions,[],'No browser runtime exceptions');
   const generated=JSON.parse(await readFile(join(out,'explorer_summary.json'),'utf8'));
   const result={status:'passed',html_sha256:generated.sha256,checks:['offline load','time slider','fixed speed scale','fixed omega scale',
-    'contact warning persists','arrow/tracer toggles','full/bulk/near views','reference-domain heatmap edges','play/pause'],initial,moving,vort,full,browser_exceptions:exceptions};
+    'contact warning persists','corner-only 2D mask','solid wall geometry','explicit no-slip statement',
+    'arrow/tracer toggles','full/bulk/near views','reference-domain heatmap edges','play/pause'],initial,moving,vort,full,wallGeometry,browser_exceptions:exceptions};
   await writeFile(join(out,'explorer_inspection.json'),JSON.stringify(result,null,2)+'\n');
   console.log(JSON.stringify({status:result.status,checks:result.checks,html_sha256:generated.sha256},null,2));
 }finally{

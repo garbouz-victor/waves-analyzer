@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pytest
 from sloshing.visualization.panels import FlowPanel,SurfacePanel
-from sloshing.visualization.scope import load_scope,CONTACT_WARNING
+from sloshing.visualization.scope import load_scope,CORNER_WARNING
 
 
 @pytest.mark.parametrize("field",["speed","omega"])
@@ -25,6 +25,6 @@ def test_two_actual_frames_keep_clim_and_arrow_scale(field):
     clim=p.image.get_clim();scale=p.q.scale;limits=sax.get_ylim()
     p.update(1);s.update(1)
     assert p.image.get_clim()==clim and p.q.scale==scale and sax.get_ylim()==limits
-    assert any(t.get_text()==CONTACT_WARNING for t in ax.texts)
+    assert any(t.get_text()==CORNER_WARNING for t in ax.texts)
     np.testing.assert_allclose(s.line.get_ydata(),h["eta"][1]*1000)
     plt.close(fig)

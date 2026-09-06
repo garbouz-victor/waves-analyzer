@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "signature": "e4d52c9374ec5665ce559228ea901d09fa9a679f2557fe22011cf814ecc1c1c3",
+  "fine_content_sha256": "fa299d74c9487a40a5fac55966c1288c950bc0a46116f80e7da0063f794cf09a",
+  "wall_speed_max_m_per_s": {
+    "left": 0.0,
+    "right": 0.0
+  },
+  "full_frame_count": 1001,
+  "all_frame_glyph_data_bounds": [
+    [
+      -0.8777066955334283,
+      -1.4605054284937489
+    ],
+    [
+      0.8711361833686568,
+      -0.05389440357378894
+    ]
+  ],
+  "actual_glyph_wall_margin_m": 0.12229330446657172,
+  "conservative_geometry": {
+    "arrow_seed_x_min": -0.85,
+    "arrow_seed_x_max": 0.85,
+    "arrow_seed_nx": 25,
+    "arrow_seed_z_min": -1.45,
+    "arrow_seed_z_max": -0.15,
+    "fixed_arrow_seconds": 102.33456782346151,
+    "maximum_rendered_arrow_dx": 0.08391211926937103,
+    "maximum_rendered_arrow_length": 0.09952016174793243,
+    "wall_visual_margin": 0.057927880730629044,
+    "contact_strip_visual_margin_m": 0.03792788073062903,
+    "glyph_head_half_width_bound_m": 0.008159999999999999,
+    "tip_x_range": [
+      -0.876271142065525,
+      0.8691450379788875
+    ]
+  },
+  "speed_profile_symmetry_max_m_per_s": 3.176712365382528e-17,
+  "profile_source_exact_match": true,
+  "public_artist_geometry": true,
+  "runtime_s": 261.013822295703
+}

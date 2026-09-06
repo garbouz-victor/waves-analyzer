@@ -8,41 +8,8 @@
       "nb_read_frames": "201",
       "decode_passed": true,
       "constant_frame_interval_passed": true,
-      "sha256": "7d6bb28bb2081c5e31d6eebbf1b0bd28deaf4f171b3709dc49a484b512b51f96",
-      "bytes": 1171064
-    },
-    "bulk_flow_explained.mp4": {
-      "width": 1920,
-      "height": 1080,
-      "avg_frame_rate": "50/1",
-      "duration": "20.020000",
-      "nb_read_frames": "1001",
-      "decode_passed": true,
-      "constant_frame_interval_passed": true,
-      "sha256": "c0a75ae2db0f9fa2a98367f66a2bfec662610f5592bc24b6a1395febbbc06b25",
-      "bytes": 5109266
-    },
-    "bulk_flow_clean.mp4": {
-      "width": 1920,
-      "height": 1080,
-      "avg_frame_rate": "50/1",
-      "duration": "20.020000",
-      "nb_read_frames": "1001",
-      "decode_passed": true,
-      "constant_frame_interval_passed": true,
-      "sha256": "830529fb0f55c7ab4f34a5a8fa172a3371a31147edd82d01f43b7fb650ac47ae",
-      "bytes": 4940588
-    },
-    "bulk_vorticity.mp4": {
-      "width": 1920,
-      "height": 1080,
-      "avg_frame_rate": "50/1",
-      "duration": "20.020000",
-      "nb_read_frames": "1001",
-      "decode_passed": true,
-      "constant_frame_interval_passed": true,
-      "sha256": "6f45d27ffbd50c8a1d2caaf18c4503177c9007271877ad5dd07aee9073cfe43e",
-      "bytes": 3698669
+      "sha256": "4cce7b5c9376df530ef7077a8ba8a1940ce851f251bd2111d0a38e960e30d9d6",
+      "bytes": 1287580
     },
     "free_surface_true_scale.mp4": {
       "width": 1920,
@@ -55,6 +22,50 @@
       "sha256": "a5f67019036502920b81525af9455abda9579afaca7e87b1b6d879e7f4ddbcf4",
       "bytes": 1204570
     },
+    "bulk_flow_explained.mp4": {
+      "width": 1920,
+      "height": 1080,
+      "avg_frame_rate": "50/1",
+      "duration": "20.020000",
+      "nb_read_frames": "1001",
+      "decode_passed": true,
+      "constant_frame_interval_passed": true,
+      "sha256": "ac80bbf416c74118808819acf93924b7efed1315666ece4d1315052f44138f7d",
+      "bytes": 5611054
+    },
+    "bulk_flow_clean.mp4": {
+      "width": 1920,
+      "height": 1080,
+      "avg_frame_rate": "50/1",
+      "duration": "20.020000",
+      "nb_read_frames": "1001",
+      "decode_passed": true,
+      "constant_frame_interval_passed": true,
+      "sha256": "131844f33f2550ed660a20e82a51be7aeeafbb029c12300c4c9b542450c66739",
+      "bytes": 5091137
+    },
+    "bulk_vorticity.mp4": {
+      "width": 1920,
+      "height": 1080,
+      "avg_frame_rate": "50/1",
+      "duration": "20.020000",
+      "nb_read_frames": "1001",
+      "decode_passed": true,
+      "constant_frame_interval_passed": true,
+      "sha256": "ecf5474ea2b8980a55f1d79abadae8ec97aef70a5451c1b343408bd93ae6c717",
+      "bytes": 4271443
+    },
+    "no_slip_boundary_layer.mp4": {
+      "width": 1920,
+      "height": 1080,
+      "avg_frame_rate": "50/1",
+      "duration": "20.020000",
+      "nb_read_frames": "1001",
+      "decode_passed": true,
+      "constant_frame_interval_passed": true,
+      "sha256": "0a905157d849310b5c5433292ef0a649c9f52e8e76be831657e8ae6f3a957a5a",
+      "bytes": 2300246
+    },
     "tracer_model_comparison.mp4": {
       "width": 1920,
       "height": 1080,
@@ -63,8 +74,8 @@
       "nb_read_frames": "1001",
       "decode_passed": true,
       "constant_frame_interval_passed": true,
-      "sha256": "848f85b007c1d903b14176bfc4fdda11658b90896ff06bbaa1bc7fa963db6c25",
-      "bytes": 933805
+      "sha256": "14f75a8969e73b66b413e48ef1a783bfed2fa2bb7a483bd1e665841402382398",
+      "bytes": 921632
     }
   },
   "cache_fem_max_absolute_rounding_difference": {
@@ -74,9 +85,9 @@
     "eta": 0.0
   },
   "all_snapshot_arrow_tip_bounds": {
-    "x_min": -1.0,
-    "x_max": 1.0,
-    "z_max": -0.05443656593561172
+    "x_min": -0.876271142065525,
+    "x_max": 0.8691450379788875,
+    "z_max": -0.05389440953731536
   },
   "sources": {
     "fine": {
@@ -92,5 +103,5 @@
       "config_sha256": "c21bc0de11b6c83b104e26aa1265d0dbecfd5f3a3fdf607f130b2ce17b50b091"
     }
   },
-  "signature": "7d05b664b338e245936148f0d82ded679fbebbcc464872cde9a76a7959f9d5a2"
+  "signature": "e4d52c9374ec5665ce559228ea901d09fa9a679f2557fe22011cf814ecc1c1c3"
 }

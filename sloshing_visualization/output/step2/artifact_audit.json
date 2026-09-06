@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "source_commit_sha": "dc51e33fc18f598e0db311d68d6cdcce3d9b68ac",
+  "source_commit_sha": "4172787060cdf38ed590eaaca393dc6fb6e8c0e7",
   "sources": {
     "fine": {
       "path": "/home/victor/Projects/waves-analyzer/sloshing_visualization/validation_results/animation_qualification/runs/fine-full.h5",
@@ -33,20 +33,30 @@
   },
   "render_code_sha256": {
     "src/sloshing/visualization/__init__.py": "1ff9018269c7cc96ca39b17f05ca2bddea9e1ad252879c1592e772029964be84",
-    "src/sloshing/visualization/data.py": "d00e02ac360e3cf5e2576d6900baf299ddf63217fcac679394a8833e5a3feade",
+    "src/sloshing/visualization/data.py": "70ec22242ddbe3646676ea9991235fe65b44b107e5d6e492eac114f36dcc4070",
     "src/sloshing/visualization/explorer.py": "29d636348a97e50794ea5a9af5ae7f6f439c5a236e2e130bee98b997ee0d0261",
-    "src/sloshing/visualization/panels.py": "c9bac0ae28a14cb8f2fef785796a596700b15a3f0aaf82f243206a78e634d525",
-    "src/sloshing/visualization/render.py": "3a9c964aa853623bbe895778df41e616f1623a808369e679aa072f08d8c84f7d",
-    "src/sloshing/visualization/scope.py": "e5f053bb5d82493bf0eb7be032cea22422c609d297bf9a0cd94d6da2a85eba69",
+    "src/sloshing/visualization/no_slip_figures.py": "686a1a41eedc370abf57658c848683fbdc5273851df0ea65227a0ce47f0877f6",
+    "src/sloshing/visualization/no_slip_panels.py": "c7efafcd55c3dea503ff55170bc6366988151f2d976f90df7394c011ab257ef8",
+    "src/sloshing/visualization/panels.py": "e84070ba50e9e71b72a913627061633cf5c29ff22a42bef3b93a9639be1a3c74",
+    "src/sloshing/visualization/render.py": "ff9851682bc0f6ac69f0d3e312a4a3c61c0b300dd75c646bbf2c162351a453cf",
+    "src/sloshing/visualization/scope.py": "be767f5ce82caea012aee2a9735d3242420f7fe9e5a1a2d763d67c5c8aaeca38",
     "src/sloshing/visualization/storyboard.py": "6b3b5e7bbd9d9381bff71b7acb3a7088e97ff828d469aa3a42416dd1d198c4cf",
     "src/sloshing/visualization/tracers.py": "4449bb55b656d8436da57fc94e6ced6baf60c19f8d43ef0ba0c860662edfd530",
-    "src/sloshing/visualization/explorer_template.html": "114a457d6c287c69f0e8861bc850fa119db2c2be6ab9da797fe19c9bba941958",
-    "configs/animation_scope.json": "73f4588c04ee6d9975ef55000944d76c2d3e75dfc80c3933ceeb6695c6e17761",
-    "scripts/render_step2.py": "c1077247133113f093a0e9ad196b93b63edd1abff319e8eedcd145c9faae004d"
+    "src/sloshing/visualization/wall_profiles.py": "6031233b8224eabf9f30cac22ff8a952584c7b1884bd6f3ab5832765c3f33f16",
+    "src/sloshing/visualization/explorer_template.html": "3ed252c5254fe38f291f8f7d443fcbef26bd1f227b1e1f13e0b8be632572cf10",
+    "configs/animation_scope.json": "c9585c1c2fb6e02c0c8989fe6e630ae39bc737b612ce7c09ae8422d6fcd742f3",
+    "scripts/render_step2.py": "b429d5ff464209e372fb1c11533ce5d7dc5c8bd87b6955ebe1391fae5255629e"
   },
-  "all_five_mp4_verified": true,
+  "all_six_mp4_verified": true,
+  "no_slip_verified": true,
+  "no_slip_inspection_sha256": "d8703f44337bbbb1fb107b54acec0372b783245a23d025381d2efdc5ce089963",
+  "main_wall_outer_stroke_halfwidth_m": 0.006751543209876541,
+  "actual_arrow_to_wall_ink_margin_m": 0.11554176125669517,
+  "conservative_arrow_to_wall_ink_margin_m": 0.051176337520752506,
+  "ci_code_matches_tested_snapshot": "5360e12b74bd6b0f27884ab672485d8e4cb30ba1",
+  "ci_run_url": "https://github.com/garbouz-victor/waves-analyzer/actions/runs/34057551865",
   "browser_verified": true,
-  "test_count": 119,
+  "test_count": 130,
   "interpretation_samples": {
     "energy_initial": 3.984396174467873e-07,
     "energy_final": 8.718914113384673e-08,

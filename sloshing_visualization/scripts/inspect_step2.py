@@ -22,7 +22,7 @@ from sloshing.visualization.render import probe_video,signature,write_json
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output",type=Path,default=Path("output/step2"))
-    parser.add_argument("--video",help="One MP4 filename; default: all five full outputs")
+    parser.add_argument("--video",nargs="+",help="MP4 filenames to inspect together; default: all six full outputs")
     args=parser.parse_args();out=args.output
     meta=json.loads((out/"animation_metadata.json").read_text())
     for key,stored in meta["sources"].items():
@@ -46,7 +46,7 @@ def main():
         tipx=cache["arrow_x"][:]+arrow_s*cache["arrow_u"][:]
         assert tipz.max()<=0 and tipx.min()>=-1 and tipx.max()<=1
         arrow_bounds={"x_min":float(tipx.min()),"x_max":float(tipx.max()),"z_max":float(tipz.max())}
-    names=[args.video] if args.video else [s+".mp4" for s in ("bulk_flow_explained","bulk_flow_clean","bulk_vorticity","free_surface_true_scale","tracer_model_comparison")]
+    names=args.video or [s+".mp4" for s in ("bulk_flow_explained","bulk_flow_clean","bulk_vorticity","free_surface_true_scale","tracer_model_comparison","no_slip_boundary_layer")]
     inspection=out/"video_inspection";inspection.mkdir(exist_ok=True)
     summary_path=out/"inspection_summary.json"
     result=json.loads(summary_path.read_text()) if summary_path.exists() else {"videos":{}}

@@ -16,7 +16,7 @@ def main():
     p.add_argument("--dataset",type=Path,default=Path("validation_results/animation_qualification/runs/fine-full.h5"))
     p.add_argument("--medium",type=Path,default=Path("validation_results/animation_qualification/runs/medium-full.h5"))
     p.add_argument("--output",type=Path,default=Path("output/step2"))
-    for name in ("prepare","preview","preview-video","accept-preview","accept-preview-video","main","clean","vorticity","surface","tracers","storyboard","explorer","all"):
+    for name in ("prepare","preview","preview-video","accept-preview","accept-preview-video","main","clean","vorticity","surface","tracers","storyboard","explorer","no-slip","profiles","all"):
         p.add_argument("--"+name,action="store_true")
     args=p.parse_args()
     cache,meta=prepare_data(args.dataset,args.medium,args.output)
@@ -24,10 +24,13 @@ def main():
     if args.accept_preview:accept_gate(args.output,meta,"static_preview")
     if args.preview_video:video(cache,meta,args.output,"main",short=True)
     if args.accept_preview_video:accept_gate(args.output,meta,"video_preview")
-    for kind in ("main","clean","vorticity","surface","tracers"):
+    for kind in ("main","clean","vorticity","surface","tracers","no_slip"):
         if getattr(args,kind) or args.all:
             video(cache,meta,args.output,kind)
     if args.storyboard or args.all:storyboard(cache,meta,args.output)
+    if args.profiles or args.all:
+        from sloshing.visualization.no_slip_figures import static_profiles
+        static_profiles(cache,meta,args.output)
     if args.explorer or args.all:
         from sloshing.visualization.explorer import explorer
         explorer(cache,meta,args.output)

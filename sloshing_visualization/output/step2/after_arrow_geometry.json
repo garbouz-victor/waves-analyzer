@@ -1,0 +1,26 @@
+{
+  "stage": "after",
+  "time_s": 0.395,
+  "index": 79,
+  "seed_x_range": [
+    -0.85,
+    0.85
+  ],
+  "nearest_nonzero_left_seed_x": -0.85,
+  "nearest_seed_distance_m": 0.15000000000000002,
+  "fixed_arrow_seconds": 102.33456782346151,
+  "maximum_rendered_arrow_dx_m": 0.08391211926937103,
+  "maximum_rendered_arrow_length_m": 0.09952016174793243,
+  "all_tip_x_range": [
+    -0.876271142065525,
+    0.8691450379788875
+  ],
+  "annotated_tail_xz_m": [
+    -0.85,
+    -0.15
+  ],
+  "annotated_tip_xz_m": [
+    -0.8753765136003494,
+    -0.05427634119987487
+  ]
+}

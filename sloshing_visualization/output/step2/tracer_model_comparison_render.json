@@ -1,10 +1,10 @@
 {
   "status": "complete",
-  "signature": "7d05b664b338e245936148f0d82ded679fbebbcc464872cde9a76a7959f9d5a2",
+  "signature": "e4d52c9374ec5665ce559228ea901d09fa9a679f2557fe22011cf814ecc1c1c3",
   "path": "output/step2/tracer_model_comparison.mp4",
   "kind": "tracers",
-  "runtime_s": 255.115121438168,
-  "bytes": 933805,
+  "runtime_s": 250.09962153621018,
+  "bytes": 921632,
   "video": {
     "width": 1920,
     "height": 1080,

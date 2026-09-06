@@ -9,11 +9,11 @@
   "renders": [
     {
       "status": "complete",
-      "signature": "7d05b664b338e245936148f0d82ded679fbebbcc464872cde9a76a7959f9d5a2",
+      "signature": "e4d52c9374ec5665ce559228ea901d09fa9a679f2557fe22011cf814ecc1c1c3",
       "path": "output/step2/bulk_flow_clean.mp4",
       "kind": "clean",
-      "runtime_s": 459.6808937769383,
-      "bytes": 4940588,
+      "runtime_s": 1305.0897210771218,
+      "bytes": 5091137,
       "video": {
         "width": 1920,
         "height": 1080,
@@ -24,11 +24,11 @@
     },
     {
       "status": "complete",
-      "signature": "7d05b664b338e245936148f0d82ded679fbebbcc464872cde9a76a7959f9d5a2",
+      "signature": "e4d52c9374ec5665ce559228ea901d09fa9a679f2557fe22011cf814ecc1c1c3",
       "path": "output/step2/bulk_flow_explained.mp4",
       "kind": "main",
-      "runtime_s": 445.72263294737786,
-      "bytes": 5109266,
+      "runtime_s": 1391.2658041445538,
+      "bytes": 5611054,
       "video": {
         "width": 1920,
         "height": 1080,
@@ -39,11 +39,11 @@
     },
     {
       "status": "complete",
-      "signature": "7d05b664b338e245936148f0d82ded679fbebbcc464872cde9a76a7959f9d5a2",
+      "signature": "e4d52c9374ec5665ce559228ea901d09fa9a679f2557fe22011cf814ecc1c1c3",
       "path": "output/step2/bulk_vorticity.mp4",
       "kind": "vorticity",
-      "runtime_s": 448.21348888333887,
-      "bytes": 3698669,
+      "runtime_s": 1233.2217024136335,
+      "bytes": 4271443,
       "video": {
         "width": 1920,
         "height": 1080,
@@ -54,10 +54,10 @@
     },
     {
       "status": "complete",
-      "signature": "7d05b664b338e245936148f0d82ded679fbebbcc464872cde9a76a7959f9d5a2",
+      "signature": "e4d52c9374ec5665ce559228ea901d09fa9a679f2557fe22011cf814ecc1c1c3",
       "path": "output/step2/free_surface_true_scale.mp4",
       "kind": "surface",
-      "runtime_s": 165.8527159485966,
+      "runtime_s": 395.4736798303202,
       "bytes": 1204570,
       "video": {
         "width": 1920,
@@ -69,11 +69,26 @@
     },
     {
       "status": "complete",
-      "signature": "7d05b664b338e245936148f0d82ded679fbebbcc464872cde9a76a7959f9d5a2",
+      "signature": "e4d52c9374ec5665ce559228ea901d09fa9a679f2557fe22011cf814ecc1c1c3",
+      "path": "output/step2/no_slip_boundary_layer.mp4",
+      "kind": "no_slip",
+      "runtime_s": 1083.417335357517,
+      "bytes": 2300246,
+      "video": {
+        "width": 1920,
+        "height": 1080,
+        "avg_frame_rate": "50/1",
+        "duration": "20.020000",
+        "nb_read_frames": "1001"
+      }
+    },
+    {
+      "status": "complete",
+      "signature": "e4d52c9374ec5665ce559228ea901d09fa9a679f2557fe22011cf814ecc1c1c3",
       "path": "output/step2/preview_0_1s.mp4",
       "kind": "main",
-      "runtime_s": 78.766597061418,
-      "bytes": 1171064,
+      "runtime_s": 101.1701876334846,
+      "bytes": 1287580,
       "video": {
         "width": 1920,
         "height": 1080,
@@ -84,11 +99,11 @@
     },
     {
       "status": "complete",
-      "signature": "7d05b664b338e245936148f0d82ded679fbebbcc464872cde9a76a7959f9d5a2",
+      "signature": "e4d52c9374ec5665ce559228ea901d09fa9a679f2557fe22011cf814ecc1c1c3",
       "path": "output/step2/tracer_model_comparison.mp4",
       "kind": "tracers",
-      "runtime_s": 255.115121438168,
-      "bytes": 933805,
+      "runtime_s": 250.09962153621018,
+      "bytes": 921632,
       "video": {
         "width": 1920,
         "height": 1080,

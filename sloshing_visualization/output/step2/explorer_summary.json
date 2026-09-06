@@ -25,11 +25,11 @@
     41,
     81
   ],
-  "bytes": 36623262,
-  "sha256": "ab6e568ef98631cca0bf5f4e8592763b94d92ff76d824c4e28e360fe2fefbb2a",
+  "bytes": 36655689,
+  "sha256": "de7679946060244f3aebf561e1c48a2a3df005922b66936311a4c551abbf61bb",
   "offline": true,
   "field_precision": "6 significant digits, display only",
   "normalization": "Same fixed physical limits and arrow/displacement factors as MP4",
   "scope": "Exploration only, not scientific error norms; no new PDE states",
-  "runtime_seconds": 6.429984323680401
+  "runtime_seconds": 18.96283248718828
 }

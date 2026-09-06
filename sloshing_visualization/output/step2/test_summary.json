@@ -6,9 +6,9 @@
       "errors": "0",
       "failures": "0",
       "skipped": "0",
-      "tests": "117",
-      "time": "16.654",
-      "timestamp": "2026-09-06T16:12:04.114980",
+      "tests": "128",
+      "time": "54.558",
+      "timestamp": "2026-09-06T23:32:32.144688",
       "hostname": "victor-ThinkPad-W541"
     },
     {
@@ -18,12 +18,12 @@
       "failures": "0",
       "skipped": "0",
       "tests": "2",
-      "time": "26.950",
-      "timestamp": "2026-09-06T16:13:56.707551",
+      "time": "86.485",
+      "timestamp": "2026-09-06T23:35:03.199966",
       "hostname": "victor-ThinkPad-W541"
     }
   ],
-  "passed": 119,
+  "passed": 130,
   "tests": [
     {
       "id": "tests.test_amplitude_scaling::test_real_production_path_scales_with_tan_alpha",
@@ -263,6 +263,50 @@
     },
     {
       "id": "tests.test_no_slip::test_every_viscosity_preset_obeys_constraints[1.0]",
+      "status": "passed"
+    },
+    {
+      "id": "tests.test_no_slip_visualization::test_wall_profiles_match_p2_polynomial_and_independent_skfem_probes[left--1.0]",
+      "status": "passed"
+    },
+    {
+      "id": "tests.test_no_slip_visualization::test_wall_profiles_match_p2_polynomial_and_independent_skfem_probes[right-1.0]",
+      "status": "passed"
+    },
+    {
+      "id": "tests.test_no_slip_visualization::test_exact_wall_trace_and_bottom_for_constrained_fem",
+      "status": "passed"
+    },
+    {
+      "id": "tests.test_no_slip_visualization::test_trace_norm_checks_between_nodes_not_only_nodal_max",
+      "status": "passed"
+    },
+    {
+      "id": "tests.test_no_slip_visualization::test_production_reflection_of_wall_normal_profiles",
+      "status": "passed"
+    },
+    {
+      "id": "tests.test_no_slip_visualization::test_arrow_envelope_has_fixed_margin_and_does_not_shorten_vectors",
+      "status": "passed"
+    },
+    {
+      "id": "tests.test_no_slip_visualization::test_flow_walls_above_quiver_tail_pivot_and_corner_only_mask",
+      "status": "passed"
+    },
+    {
+      "id": "tests.test_no_slip_visualization::test_public_patch_geometry_and_full_depth_bottom_wall",
+      "status": "passed"
+    },
+    {
+      "id": "tests.test_no_slip_visualization::test_profile_axes_fixed_and_zero_visible[speed]",
+      "status": "passed"
+    },
+    {
+      "id": "tests.test_no_slip_visualization::test_profile_axes_fixed_and_zero_visible[u]",
+      "status": "passed"
+    },
+    {
+      "id": "tests.test_no_slip_visualization::test_profile_axes_fixed_and_zero_visible[w]",
       "status": "passed"
     },
     {

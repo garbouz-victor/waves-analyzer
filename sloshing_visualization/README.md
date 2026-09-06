@@ -1,8 +1,9 @@
 # Вязкий sloshing с закреплёнными контактными точками
 
-Отдельный исследовательский проект на Python. Текущий этап — **STEP 2**:
+Отдельный исследовательский проект на Python. Текущий этап — **STEP 2.1**:
 научная визуализация уже рассчитанного fine dataset, без изменения PDE.
-Созданы пять MP4, storyboard и автономный Plotly explorer.
+К пяти STEP 2 MP4 добавлена диагностика no-slip / пристеночного слоя;
+есть storyboard и автономный Plotly explorer.
 Интерпретация: **CONDITIONALLY QUALIFIED FOR BULK MODEL VISUALIZATION**.
 Никакого заранее заданного движения или
 экспоненциального затухания в solver нет.
@@ -15,6 +16,7 @@
 
 Qualification исходного dataset: [STEP1_6_REPORT.md](STEP1_6_REPORT.md).
 Новая область интерпретации и результаты rendering: [STEP2_REPORT.md](STEP2_REPORT.md).
+Устранение визуальной неоднозначности no-slip: [STEP2_1_REPORT.md](STEP2_1_REPORT.md).
 
 ## STEP 2 — scientific bulk visualization
 
@@ -42,8 +44,28 @@ first-order interface displacement, не moving-mesh CFD. Eta показывае
 
 Зоны из [animation_scope.json](configs/animation_scope.json): bulk |x|≤0.90,
 transition 0.90<|x|≤0.98, unqualified contact |x|>0.98. Это соглашение
-визуализации, не резкая граница физической применимости. Серые штрихованные
-полосы остаются в explained/clean видео. Ни eta, ни omega не сглаживаются.
+визуализации, не резкая граница физической применимости. На графике eta серые
+штрихованные x-полосы сохраняются. На двумерных flow/vorticity/tracer panels
+они заменены **угловыми patches**: |x|>0.98 и −0.12≤z≤0.04 m.
+Их высота — соглашение рисунка, не измеренная толщина сингулярности.
+Остальная вертикальная стенка не помечается как «неразрешённая».
+Ни eta, ни omega, ни скорость не сглаживаются.
+
+### STEP 2.1 — no-slip is zero at the wall, not in a finite strip
+
+Толстые чёрные линии показывают solid walls: **u=w=0**. Это не требует
+нулевой скорости в точках внутри жидкости, даже близко к стенке. Старые стрелки
+с x=−0.9167 m могли казаться движением самой стенки. Теперь их seeds ограничены
+x∈[−0.85,0.85], pivot явно `tail`, длины по-прежнему пропорциональны скорости
+с постоянным фактором 102.334568 s. Проверены все 1001 набора glyphs:
+фактический зазор до стенки ≥0.12229 m. Скорость FEM на обеих стенках равна 0.
+
+Explained video содержит синхронный **|v| vs distance from wall** inset:
+три глубины −0.05, −0.2, −1 m, расстояния 0…0.15 m, actual P2 evaluation,
+постоянная шкала mm/s. Отдельное видео дополнительно показывает компоненты u/w.
+Никакой искусственный zero-speed strip не добавлен. Contact-line singularity
+и нарушение no-slip — разные понятия; точечная corner physics остаётся
+неразрешённой. Подробности и реальные профили — в [STEP2_1_REPORT.md](STEP2_1_REPORT.md).
 
 ### Rendering commands and inspection gates
 
@@ -59,13 +81,18 @@ python scripts/render_step2.py \
   --medium validation_results/animation_qualification/runs/medium-full.h5 \
   --output output/step2 --preview
 
-# Просмотреть 10 PNG в frames_preview/, включая шесть measured key phases.
+# Просмотреть PNG в frames_preview/, включая no_slip_t*.png и no_slip_diagnostic.png.
 python scripts/render_step2.py --accept-preview --preview-video
 # Просмотреть preview_0_1s.mp4. Только после проверки:
-python scripts/render_step2.py --accept-preview-video --all
+python scripts/render_step2.py --accept-preview-video
+python scripts/render_step2.py --all
 
-# Полное декодирование пяти видео, cadence и FEM/source проверки:
+# Полное декодирование шести видео, cadence и FEM/source проверки:
 python scripts/inspect_step2.py
+# Все 1001 wall traces, glyph geometry и actual FEM wall profiles:
+python scripts/inspect_no_slip.py
+# Annotated crop из нового encoded main video:
+python scripts/audit_no_slip_geometry.py --stage after
 # Необязательный настоящий browser smoke test: Node >=22 + Chrome.
 node scripts/check_step2_explorer.mjs output/step2
 
@@ -75,7 +102,9 @@ python scripts/audit_step2_artifacts.py
 ```
 
 Подрежимы: `--main`, `--clean`, `--vorticity`, `--surface`, `--tracers`,
-`--storyboard`, `--explorer`, `--all`. Последний не обходит preview gates.
+`--no-slip`, `--profiles`, `--storyboard`, `--explorer`, `--all`.
+Последний не обходит preview gates. При параллельном рендеринге отдельных
+видео сначала завершите отдельную команду `--accept-preview-video`.
 Если используется другой `--output`, его нужно передавать на каждом шаге.
 Принятие preview — явное подтверждение просмотра, не автоматическая оценка красоты.
 
@@ -87,16 +116,29 @@ running/failed или несовместимый кэш вызывает оши�
 либо сначала явно разберите старые артефакты. Полный HDF5 в RAM не загружается.
 Карты FEM интерполяции строятся один раз; следующий этап читает display cache по кадру.
 
+При переходе со старого STEP 2 cache на STEP 2.1 старые gates **не подходят**.
+Безопаснее выбрать новый `--output` и повторить все gates. Если нужно сохранить
+стандартный `output/step2`, предоставлена явная, не удаляющая FEM команда
+`python scripts/archive_step2_outputs.py`: она перемещает прежние generated
+artifacts в `output/step2/archive_step2_4172787` и отказывается перезаписать
+существующий архив. В рабочем репозитории этот архив уже создан; повторно
+запускать эту команду не нужно. Сам renderer старые файлы молча не заменяет.
+
 Результаты:
 [explained](output/step2/bulk_flow_explained.mp4),
 [clean](output/step2/bulk_flow_clean.mp4),
 [vorticity](output/step2/bulk_vorticity.mp4),
 [true-scale surface](output/step2/free_surface_true_scale.mp4),
 [tracer comparison](output/step2/tracer_model_comparison.mp4),
+[no-slip boundary layer](output/step2/no_slip_boundary_layer.mp4),
+[wall-normal profiles PDF](output/step2/no_slip_profiles.pdf),
+[profiles PNG](output/step2/no_slip_profiles.png),
 [storyboard PDF](output/step2/key_phases.pdf),
 [explorer](output/step2/explorer.html),
 [metadata](output/step2/animation_metadata.json),
 [content fingerprints / audit](output/step2/artifact_audit.json).
+Геометрия стрелок: [до](output/step2/before_arrow_geometry.png) /
+[после](output/step2/after_arrow_geometry.png).
 MP4, HTML и большой display cache локальны и ignored: после clone эти ссылки
 на regenerated artifacts работают после rendering. Metadata, отчёт и несколько
 preview PNG/PDF включены в Git. Все MP4: 1920×1080, 50 fps, 1001 snapshot,
@@ -396,7 +438,9 @@ contact zoom должен опрашивать FEM с дополнительны
    движение резко ослабевает с глубиной.
 5. После overshoot следите за reversal стрелок и последующим затуханием.
 6. В отдельном vorticity video смотрите на изменение знака и пристеночные слои.
-7. Серые contact strips не интерпретируйте как разрешённую contact-line physics.
+7. Серые contact corner patches (и x-strips на eta panel) не интерпретируйте
+   как разрешённую contact-line physics. Чёрная стенка ниже угла имеет u=w=0;
+   inset показывает рост скорости от нуля внутри жидкости, не движение стенки.
 
 При небольшой вязкости возможны overshoot и смена направления циркуляции;
 при большой — сильное подавление колебаний. В глубоком сосуде движение

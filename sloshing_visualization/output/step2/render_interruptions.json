@@ -1,0 +1,9 @@
+{
+  "renderer_signature": "e4d52c9374ec5665ce559228ea901d09fa9a679f2557fe22011cf814ecc1c1c3",
+  "interrupted_outputs": [
+    {"name": "tracer_model_comparison", "exit_code": 143, "last_reported_frame": 901},
+    {"name": "no_slip_boundary_layer", "exit_code": 143, "last_reported_frame": 329}
+  ],
+  "interpretation": "SIGTERM interrupted render processes. Cause of external termination not established. No Python/FEM error was reported, and no production PDE was running.",
+  "recovery": "Incomplete MP4/manifests rejected and recoverably moved to ignored interrupted_step2_1. Restart only those renders from unchanged validated display cache. Never reuse a failed/running manifest as complete."
+}

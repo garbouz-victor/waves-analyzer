@@ -1,5 +1,8 @@
 # STEP 2 — scientific bulk-flow visualization
 
+No-slip visualization ambiguity corrected in [STEP2_1_REPORT.md](STEP2_1_REPORT.md).
+Ниже сохранён исторический отчёт STEP 2; текущие generated outputs обновлены STEP 2.1.
+
 ## 1. Goal
 
 **CONDITIONALLY QUALIFIED FOR BULK MODEL VISUALIZATION.**

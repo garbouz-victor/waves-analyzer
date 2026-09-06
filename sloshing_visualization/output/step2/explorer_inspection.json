@@ -1,12 +1,15 @@
 {
   "status": "passed",
-  "html_sha256": "ab6e568ef98631cca0bf5f4e8592763b94d92ff76d824c4e28e360fe2fefbb2a",
+  "html_sha256": "de7679946060244f3aebf561e1c48a2a3df005922b66936311a4c551abbf61bb",
   "checks": [
     "offline load",
     "time slider",
     "fixed speed scale",
     "fixed omega scale",
     "contact warning persists",
+    "corner-only 2D mask",
+    "solid wall geometry",
+    "explicit no-slip statement",
     "arrow/tracer toggles",
     "full/bulk/near views",
     "reference-domain heatmap edges",
@@ -23,7 +26,7 @@
       -1.5,
       0.04
     ],
-    "warning": "Pinned-contact region: not physically resolved by this model. |x| > 0.98 remains unqualified even when shading is switched off or outside the selected view.",
+    "warning": "Contact corner: not physically resolved by this model. The near-surface corner remains unqualified even when shading is switched off. Solid walls below the corner obey u = w = 0.",
     "arrows": true,
     "tracers": true,
     "shapes": 13
@@ -39,7 +42,7 @@
       -1.5,
       0.04
     ],
-    "warning": "Pinned-contact region: not physically resolved by this model. |x| > 0.98 remains unqualified even when shading is switched off or outside the selected view.",
+    "warning": "Contact corner: not physically resolved by this model. The near-surface corner remains unqualified even when shading is switched off. Solid walls below the corner obey u = w = 0.",
     "arrows": true,
     "tracers": true,
     "shapes": 13
@@ -55,7 +58,7 @@
       -1.5,
       0.04
     ],
-    "warning": "Pinned-contact region: not physically resolved by this model. |x| > 0.98 remains unqualified even when shading is switched off or outside the selected view.",
+    "warning": "Contact corner: not physically resolved by this model. The near-surface corner remains unqualified even when shading is switched off. Solid walls below the corner obey u = w = 0.",
     "arrows": true,
     "tracers": true,
     "shapes": 13
@@ -71,10 +74,72 @@
       -10,
       0.04
     ],
-    "warning": "Pinned-contact region: not physically resolved by this model. |x| > 0.98 remains unqualified even when shading is switched off or outside the selected view.",
+    "warning": "Contact corner: not physically resolved by this model. The near-surface corner remains unqualified even when shading is switched off. Solid walls below the corner obey u = w = 0.",
     "arrows": false,
     "tracers": false,
-    "shapes": 5
+    "shapes": 8
+  },
+  "wallGeometry": {
+    "corners": [
+      {
+        "type": "rect",
+        "xref": "x",
+        "yref": "y",
+        "x0": -0.98,
+        "x1": -1,
+        "y0": -0.12,
+        "y1": 0.04,
+        "fillcolor": "rgba(100,100,100,.5)",
+        "line": {
+          "width": 0
+        },
+        "layer": "above"
+      },
+      {
+        "type": "rect",
+        "xref": "x",
+        "yref": "y",
+        "x0": 0.98,
+        "x1": 1,
+        "y0": -0.12,
+        "y1": 0.04,
+        "fillcolor": "rgba(100,100,100,.5)",
+        "line": {
+          "width": 0
+        },
+        "layer": "above"
+      }
+    ],
+    "walls": [
+      {
+        "type": "line",
+        "xref": "x",
+        "yref": "y",
+        "x0": -1,
+        "x1": -1,
+        "y0": -1.5,
+        "y1": 0,
+        "line": {
+          "color": "black",
+          "width": 3
+        },
+        "layer": "above"
+      },
+      {
+        "type": "line",
+        "xref": "x",
+        "yref": "y",
+        "x0": 1,
+        "x1": 1,
+        "y0": -1.5,
+        "y1": 0,
+        "line": {
+          "color": "black",
+          "width": 3
+        },
+        "layer": "above"
+      }
+    ]
   },
   "browser_exceptions": []
 }

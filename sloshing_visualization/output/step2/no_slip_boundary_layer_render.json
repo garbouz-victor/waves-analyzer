@@ -1,15 +1,15 @@
 {
   "status": "complete",
   "signature": "e4d52c9374ec5665ce559228ea901d09fa9a679f2557fe22011cf814ecc1c1c3",
-  "path": "output/step2/preview_0_1s.mp4",
-  "kind": "main",
-  "runtime_s": 101.1701876334846,
-  "bytes": 1287580,
+  "path": "output/step2/no_slip_boundary_layer.mp4",
+  "kind": "no_slip",
+  "runtime_s": 1083.417335357517,
+  "bytes": 2300246,
   "video": {
     "width": 1920,
     "height": 1080,
     "avg_frame_rate": "50/1",
-    "duration": "4.020000",
-    "nb_read_frames": "201"
+    "duration": "20.020000",
+    "nb_read_frames": "1001"
   }
 }

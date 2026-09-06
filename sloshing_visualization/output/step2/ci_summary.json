@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "repository": "garbouz-victor/waves-analyzer",
+  "branch": "validation/step2-1-no-slip",
+  "tested_commit": "5360e12b74bd6b0f27884ab672485d8e4cb30ba1",
+  "tested_tree": "aac73a2c0b7b0a9f21490a481201a386ff045ec4",
+  "run_id": 34057551865,
+  "job_id": 101552103497,
+  "url": "https://github.com/garbouz-victor/waves-analyzer/actions/runs/34057551865",
+  "python": "3.11.16",
+  "matplotlib": "3.11.1",
+  "numpy": "2.4.6",
+  "passed": 128,
+  "deselected_validation_tests": 2,
+  "warnings": 14,
+  "pytest_runtime_s": 6.90,
+  "scope": "Pre-final-commit validation snapshot: src/, tests/, configs/, render_step2.py and CI workflow. Full FEM/MP4 jobs are deliberately not run in CI.",
+  "historical_failing_run": "https://github.com/garbouz-victor/waves-analyzer/actions/runs/34037166277",
+  "fix": "Public Rectangle get_x/get_width/get_y/get_height API; no assumption about get_xy return shape."
+}

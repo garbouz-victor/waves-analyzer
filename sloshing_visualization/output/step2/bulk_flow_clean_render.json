@@ -1,10 +1,10 @@
 {
   "status": "complete",
-  "signature": "7d05b664b338e245936148f0d82ded679fbebbcc464872cde9a76a7959f9d5a2",
+  "signature": "e4d52c9374ec5665ce559228ea901d09fa9a679f2557fe22011cf814ecc1c1c3",
   "path": "output/step2/bulk_flow_clean.mp4",
   "kind": "clean",
-  "runtime_s": 459.6808937769383,
-  "bytes": 4940588,
+  "runtime_s": 1305.0897210771218,
+  "bytes": 5091137,
   "video": {
     "width": 1920,
     "height": 1080,

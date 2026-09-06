@@ -14,5 +14,12 @@
   "particle_target_p95_display_m": 0.075,
   "surface_display_magnification": 1.0,
   "omega_percentile": 99.5,
+  "arrow_seed_abs_x_max_m": 0.85,
+  "arrow_margin_extra_m": 0.02,
+  "contact_corner_z_min_m": -0.12,
+  "contact_corner_z_max_m": 0.04,
+  "boundary_layer_depths_m": [-0.05, -0.20, -1.00],
+  "profile_epsilon_max_m": 0.15,
+  "contact_corner_convention": "Corner patch depth is a drawing convention, not singularity or boundary-layer thickness. Solid no-slip walls below it remain valid boundary conditions.",
   "convention": "Spatial zones are visualization conventions informed by STEP 1.6, not sharp physical validity boundaries."
 }

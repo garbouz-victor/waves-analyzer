@@ -9,6 +9,6 @@ def test_contact_hatching_and_warning_always_added():
     hatched=[a for a in artists if a.get_hatch()]
     assert len(hatched)==2
     assert any(CONTACT_WARNING==t.get_text() for t in ax.texts)
-    spans=sorted((a.get_xy()[:,0].min(),a.get_xy()[:,0].max()) for a in hatched)
+    spans=sorted((a.get_x(),a.get_x()+a.get_width()) for a in hatched)
     assert spans==[(-1.,-.98),(.98,1.)]
     plt.close(fig)

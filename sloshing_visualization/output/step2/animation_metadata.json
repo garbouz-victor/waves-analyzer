@@ -1,6 +1,6 @@
 {
-  "schema": "step2-display-v1",
-  "source_commit_sha": "dc51e33fc18f598e0db311d68d6cdcce3d9b68ac",
+  "schema": "step2-display-v2-no-slip",
+  "source_commit_sha": "4172787060cdf38ed590eaaca393dc6fb6e8c0e7",
   "sources": {
     "fine": {
       "path": "/home/victor/Projects/waves-analyzer/sloshing_visualization/validation_results/animation_qualification/runs/fine-full.h5",
@@ -56,6 +56,17 @@
     "particle_target_p95_display_m": 0.075,
     "surface_display_magnification": 1.0,
     "omega_percentile": 99.5,
+    "arrow_seed_abs_x_max_m": 0.85,
+    "arrow_margin_extra_m": 0.02,
+    "contact_corner_z_min_m": -0.12,
+    "contact_corner_z_max_m": 0.04,
+    "boundary_layer_depths_m": [
+      -0.05,
+      -0.2,
+      -1.0
+    ],
+    "profile_epsilon_max_m": 0.15,
+    "contact_corner_convention": "Corner patch depth is a drawing convention, not singularity or boundary-layer thickness. Solid no-slip walls below it remain valid boundary conditions.",
     "convention": "Spatial zones are visualization conventions informed by STEP 1.6, not sharp physical validity boundaries."
   },
   "interpretation": "CONDITIONALLY QUALIFIED FOR BULK MODEL VISUALIZATION",
@@ -249,5 +260,62 @@
     "h5py": "3.6.0",
     "plotly": "5.6.0"
   },
-  "precompute_runtime_seconds": 122.29931083507836
+  "precompute_runtime_seconds": 141.21856459602714,
+  "arrow_seed_x_min": -0.85,
+  "arrow_seed_x_max": 0.85,
+  "arrow_seed_nx": 25,
+  "arrow_seed_z_min": -1.45,
+  "arrow_seed_z_max": -0.15,
+  "maximum_rendered_arrow_dx": 0.08391211926937103,
+  "maximum_rendered_arrow_length": 0.09952016174793243,
+  "wall_visual_margin": 0.057927880730629044,
+  "contact_strip_visual_margin_m": 0.03792788073062903,
+  "glyph_head_half_width_bound_m": 0.008159999999999999,
+  "tip_x_range": [
+    -0.876271142065525,
+    0.8691450379788875
+  ],
+  "no_slip_visualization": {
+    "wall_velocity_source": "actual P2 FEM; exact polynomial trace norm maximum",
+    "wall_speed_max": {
+      "left": 0.0,
+      "right": 0.0
+    },
+    "arrow_seed_x_range": [
+      -0.85,
+      0.85
+    ],
+    "arrow_wall_margin_m": 0.057927880730629044,
+    "quiver_pivot": "tail",
+    "boundary_layer_profile_depths_m": [
+      -0.05,
+      -0.2,
+      -1.0
+    ],
+    "profile_epsilon_range_m": [
+      0.0,
+      0.15
+    ],
+    "profile_speed_ylim_m_per_s": [
+      0.0,
+      0.0012230914020437108
+    ],
+    "profile_component_ylim_m_per_s": {
+      "u": [
+        -0.00039444547888923095,
+        0.00039444547888923095
+      ],
+      "w": [
+        -0.0011665034528697538,
+        0.0011665034528697538
+      ]
+    },
+    "profile_left_right_speed_max_difference_m_per_s": 3.176712365382528e-17,
+    "profile_relative_symmetry_error": 2.75311812484243e-14,
+    "zoom_fixed_arrow_seconds": 20.0,
+    "corner_patch_z_range_m": [
+      -0.12,
+      0.04
+    ]
+  }
 }
