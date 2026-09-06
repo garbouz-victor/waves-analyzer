@@ -8,3 +8,6 @@ results/run_*/
 output/*
 !output/.gitkeep
 validation_results/**/*.h5
+validation_results/animation_qualification/runs/
+validation_results/animation_qualification/raw/
+validation_results/animation_qualification/*.npz

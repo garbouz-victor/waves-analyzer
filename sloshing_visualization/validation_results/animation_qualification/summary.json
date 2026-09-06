@@ -1,0 +1,290 @@
+{
+  "status": "failed",
+  "decision": "NOT QUALIFIED FOR PHYSICAL ANIMATION",
+  "parameters": {
+    "a": 1.0,
+    "alpha_deg": 0.02,
+    "contact_tolerance": 1e-12,
+    "d": 10.0,
+    "divergence_relative_warning": 0.15,
+    "dt": 0.00125,
+    "energy_relative_tolerance": 1e-08,
+    "g": 9.81,
+    "integrator": "sdirk2",
+    "mesh": "medium",
+    "nu": 0.01,
+    "nx": null,
+    "nz": null,
+    "small_slope_limit": 0.3,
+    "snapshot_dt": 0.005,
+    "t_end": 5.0,
+    "visualization_nx": 81,
+    "visualization_nz": 241,
+    "volume_tolerance": 1e-10,
+    "wall_tolerance": 1e-12,
+    "weak_divergence_tolerance": 1e-09,
+    "x_grading": 1.8,
+    "z_grading": 4.0
+  },
+  "policy": {
+    "slope_conservative": 0.1,
+    "slope_failure": 0.3,
+    "eta_bulk_relative_limit": 0.01,
+    "velocity_relative_limit": 0.02,
+    "omega_wall_relative_limit": 0.1,
+    "strong_divergence_particle_caution": 0.05,
+    "significant_fraction": 0.1,
+    "particle_bulk_separation_limit_m": 0.005,
+    "particle_snapshot_separation_limit_m": 1e-05,
+    "particle_rk_step_limit_m": 1e-06,
+    "symmetry_absolute_limit": 1e-12
+  },
+  "medium_run_complete": true,
+  "fine_run_complete": true,
+  "max_slope_global": 0.37340762866770183,
+  "max_slope_time": 4.32,
+  "max_slope_mesh": "fine",
+  "max_slope_bulk": 0.0004537186104791194,
+  "max_slope_intermediate": 0.004119921692940292,
+  "max_slope_contact": 0.37340762866770183,
+  "max_relative_strong_divergence_medium": 0.0842805614771418,
+  "max_relative_strong_divergence_fine": 0.06442786778797642,
+  "medium_fine_eta_bulk_relative_max": 0.0007596084733341114,
+  "medium_fine_velocity_relative_max": 0.0007929261996743193,
+  "medium_fine_omega_wall_relative_max": 0.05730430239119283,
+  "particle_bulk_separation_max_m": 4.027060919881401e-07,
+  "particle_near_wall_separation_max_m": 7.60592773491892e-07,
+  "particle_snapshot_sampling_error_max_m": 1.2933055657687553e-08,
+  "no_slip_max": 0.0,
+  "contact_error_max": 0.0,
+  "volume_error_max": 4.866204281975955e-19,
+  "energy_balance_relative_max": 4.520142388551473e-13,
+  "extrapolated_alpha_for_slope_0_1_deg": 0.005356077171056701,
+  "extrapolated_alpha_for_slope_0_05_deg": 0.002678038591379015,
+  "extrapolated_angles_have_not_been_run": true,
+  "failures": [
+    "Local small-slope linearization exceeds 0.3 (model qualification failure, not solver instability)"
+  ],
+  "conditions": [
+    "Medium relative strong divergence exceeds 5% for significant active time; particle interpretation requires caution"
+  ],
+  "limitations": [
+    "Pointwise corner omega_max and limiting slope are not spatially resolved",
+    "No moving contact line, wall film, wetting/dewetting or drainage physics",
+    "Taylor-Hood is not pointwise divergence-free",
+    "Particle paths advect the linear velocity field; tiny second-order net drift is not a validated nonlinear transport prediction",
+    "Only two production mesh levels in STEP 1.6; fine is a numerical reference, not exact",
+    "Particle snapshot refinement covers 0...0.5 s; RK invalidity time is stage-resolved",
+    "PDE temporal refinement on 0...5 s is not repeated; dt is inherited from STEP 1.5"
+  ],
+  "sources": {
+    "medium": {
+      "path": "/home/victor/Projects/waves-analyzer/sloshing_visualization/validation_results/animation_qualification/runs/medium-full.h5",
+      "bytes": 1072567328,
+      "mtime_ns": 1788657587171233015,
+      "config_sha256": "c21bc0de11b6c83b104e26aa1265d0dbecfd5f3a3fdf607f130b2ce17b50b091"
+    },
+    "fine": {
+      "path": "/home/victor/Projects/waves-analyzer/sloshing_visualization/validation_results/animation_qualification/runs/fine-full.h5",
+      "bytes": 2364886404,
+      "mtime_ns": 1788665248766948120,
+      "config_sha256": "7e164116408c32c49c9eeec24c27c9ed5dabe4e6cb63bb2917a9ecacdcea4f7c"
+    }
+  },
+  "discrete_static_surface_diagnostic": {
+    "medium": {
+      "purpose": "discrete algebraic interpretation; not an independent benchmark or a wall-film model",
+      "max_slope": 0.2545580242678147,
+      "potential_energy": 7.255599299772656e-10,
+      "interior_surface_load_residual": 9.305781891221561e-24,
+      "surface_integral": 2.6469779601696886e-23
+    },
+    "fine": {
+      "purpose": "discrete algebraic interpretation; not an independent benchmark or a wall-film model",
+      "max_slope": 0.387722572610647,
+      "potential_energy": 4.764186192565687e-10,
+      "interior_surface_load_residual": 4.963083675318166e-24,
+      "surface_integral": -4.341043854678289e-21
+    }
+  },
+  "modal_diagnostic": {
+    "modal_basis": "sin(pi*x/(2*a)); diagnostic projection only",
+    "inviscid_reference_period_s": 1.6006096324801131,
+    "zero_crossings_s": [
+      0.41611617048803096,
+      1.222267261536083,
+      2.0300795729960743,
+      2.8363998410685407,
+      3.6449710253479743,
+      4.4504245267839195
+    ],
+    "first_zero_crossing_s": 0.41611617048803096,
+    "next_zero_crossing_s": 1.222267261536083,
+    "first_opposite_extremum": {
+      "time": 0.8097241766654879,
+      "amplitude": -0.0002481371417837472,
+      "kind": "minimum"
+    },
+    "extrema": [
+      {
+        "time": 0.8097241766654879,
+        "amplitude": -0.0002481371417837472,
+        "kind": "minimum"
+      },
+      {
+        "time": 1.6158242182359437,
+        "amplitude": 0.00022081344872769654,
+        "kind": "maximum"
+      },
+      {
+        "time": 2.4227974336920832,
+        "amplitude": -0.00019341440072872246,
+        "kind": "minimum"
+      },
+      {
+        "time": 3.2307706751674794,
+        "amplitude": 0.00017175059649566002,
+        "kind": "maximum"
+      },
+      {
+        "time": 4.037348253643034,
+        "amplitude": -0.0001508156309235439,
+        "kind": "minimum"
+      },
+      {
+        "time": 4.844739418791195,
+        "amplitude": 0.00013380545743993378,
+        "kind": "maximum"
+      }
+    ],
+    "estimated_period_s": 1.6126405361449327,
+    "half_cycle_period_estimates_s": [
+      1.612302182096104,
+      1.6156246229199827,
+      1.6126405361449327,
+      1.6171423685588673,
+      1.6109070028718904
+    ],
+    "same_sign_damping": [
+      {
+        "from_time": 1.6158242182359437,
+        "to_time": 3.2307706751674794,
+        "amplitude_ratio": 0.7778085867743499,
+        "log_decrement": 0.25127481749840214,
+        "effective_decay_rate_per_s": 0.15559328076785564
+      },
+      {
+        "from_time": 3.2307706751674794,
+        "to_time": 4.844739418791195,
+        "amplitude_ratio": 0.7790683710569525,
+        "log_decrement": 0.249656469238806,
+        "effective_decay_rate_per_s": 0.15468482287846055
+      },
+      {
+        "from_time": 0.8097241766654879,
+        "to_time": 2.4227974336920832,
+        "amplitude_ratio": 0.7794657395436759,
+        "log_decrement": 0.24914654328642402,
+        "effective_decay_rate_per_s": 0.15445457433574963
+      },
+      {
+        "from_time": 2.4227974336920832,
+        "to_time": 4.037348253643034,
+        "amplitude_ratio": 0.7797538877938753,
+        "log_decrement": 0.24877693755747135,
+        "effective_decay_rate_per_s": 0.1540843028806173
+      }
+    ],
+    "opposite_to_initial_amplitude_ratio": 0.876989013804927
+  },
+  "modal_diagnostic_fine": {
+    "modal_basis": "sin(pi*x/(2*a)); diagnostic projection only",
+    "inviscid_reference_period_s": 1.6006096324801131,
+    "zero_crossings_s": [
+      0.41609755320693254,
+      1.2224424156046594,
+      2.030149231281564,
+      2.836772871146356,
+      3.6451090348160804,
+      4.451008440241439
+    ],
+    "first_zero_crossing_s": 0.41609755320693254,
+    "next_zero_crossing_s": 1.2224424156046594,
+    "first_opposite_extremum": {
+      "time": 0.8097940078797644,
+      "amplitude": -0.00024824297246766604,
+      "kind": "minimum"
+    },
+    "extrema": [
+      {
+        "time": 0.8097940078797644,
+        "amplitude": -0.00024824297246766604,
+        "kind": "minimum"
+      },
+      {
+        "time": 1.6159495533507882,
+        "amplitude": 0.00022077121514032803,
+        "kind": "maximum"
+      },
+      {
+        "time": 2.4230051277212805,
+        "amplitude": -0.00019352141230982608,
+        "kind": "minimum"
+      },
+      {
+        "time": 3.2310346002945223,
+        "amplitude": 0.00017166237253193363,
+        "kind": "maximum"
+      },
+      {
+        "time": 4.037689907248165,
+        "amplitude": -0.00015093045423976537,
+        "kind": "minimum"
+      },
+      {
+        "time": 4.845141520036906,
+        "amplitude": 0.00013368581266361444,
+        "kind": "maximum"
+      }
+    ],
+    "estimated_period_s": 1.6132472797295838,
+    "half_cycle_period_estimates_s": [
+      1.6126897247954537,
+      1.615413631353809,
+      1.6132472797295838,
+      1.6166723273394492,
+      1.6117988108507166
+    ],
+    "same_sign_damping": [
+      {
+        "from_time": 1.6159495533507882,
+        "to_time": 3.2310346002945223,
+        "amplitude_ratio": 0.7775577645972573,
+        "log_decrement": 0.2515973423865684,
+        "effective_decay_rate_per_s": 0.15577962464742792
+      },
+      {
+        "from_time": 3.2310346002945223,
+        "to_time": 4.845141520036906,
+        "amplitude_ratio": 0.7787717872694869,
+        "log_decrement": 0.25003723203974365,
+        "effective_decay_rate_per_s": 0.15490747792571904
+      },
+      {
+        "from_time": 0.8097940078797644,
+        "to_time": 2.4230051277212805,
+        "amplitude_ratio": 0.7795645145001335,
+        "log_decrement": 0.2490198299576306,
+        "effective_decay_rate_per_s": 0.15436282758954367
+      },
+      {
+        "from_time": 2.4230051277212805,
+        "to_time": 4.037689907248165,
+        "amplitude_ratio": 0.7799160435958737,
+        "log_decrement": 0.2485690015072608,
+        "effective_decay_rate_per_s": 0.1539427414309891
+      }
+    ],
+    "opposite_to_initial_amplitude_ratio": 0.8773630503012496
+  }
+}

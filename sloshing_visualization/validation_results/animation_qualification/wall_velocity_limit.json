@@ -1,0 +1,607 @@
+{
+  "rows": [
+    {
+      "mesh": "fine",
+      "time": 0.1,
+      "z": -1.0,
+      "side": -1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 4.566948771712468e-05,
+      "speed_at_epsilon_1e_5": 2.9973446773480494e-08,
+      "ratio_smallest_to_largest_epsilon": 0.0006563123054748292
+    },
+    {
+      "mesh": "fine",
+      "time": 0.1,
+      "z": -1.0,
+      "side": 1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 4.566948771712425e-05,
+      "speed_at_epsilon_1e_5": 2.997344677348174e-08,
+      "ratio_smallest_to_largest_epsilon": 0.0006563123054748627
+    },
+    {
+      "mesh": "fine",
+      "time": 0.1,
+      "z": -0.2,
+      "side": -1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.00020410073597709462,
+      "speed_at_epsilon_1e_5": 1.3373712530612033e-07,
+      "ratio_smallest_to_largest_epsilon": 0.0006552505784257882
+    },
+    {
+      "mesh": "fine",
+      "time": 0.1,
+      "z": -0.2,
+      "side": 1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.00020410073597709348,
+      "speed_at_epsilon_1e_5": 1.3373712530611922e-07,
+      "ratio_smallest_to_largest_epsilon": 0.0006552505784257865
+    },
+    {
+      "mesh": "fine",
+      "time": 0.1,
+      "z": -0.05,
+      "side": -1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.0003518738490400561,
+      "speed_at_epsilon_1e_5": 2.2942110554386975e-07,
+      "ratio_smallest_to_largest_epsilon": 0.0006519981697126724
+    },
+    {
+      "mesh": "fine",
+      "time": 0.1,
+      "z": -0.05,
+      "side": 1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.00035187384904005457,
+      "speed_at_epsilon_1e_5": 2.2942110554387063e-07,
+      "ratio_smallest_to_largest_epsilon": 0.0006519981697126777
+    },
+    {
+      "mesh": "fine",
+      "time": 0.5,
+      "z": -1.0,
+      "side": -1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 3.10230182243342e-05,
+      "speed_at_epsilon_1e_5": 1.3161131100187664e-08,
+      "ratio_smallest_to_largest_epsilon": 0.00042423760979723695
+    },
+    {
+      "mesh": "fine",
+      "time": 0.5,
+      "z": -1.0,
+      "side": 1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 3.102301822433187e-05,
+      "speed_at_epsilon_1e_5": 1.3161131100185297e-08,
+      "ratio_smallest_to_largest_epsilon": 0.0004242376097971925
+    },
+    {
+      "mesh": "fine",
+      "time": 0.5,
+      "z": -0.2,
+      "side": -1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.00014099217889095575,
+      "speed_at_epsilon_1e_5": 6.161300967521212e-08,
+      "ratio_smallest_to_largest_epsilon": 0.00043699593949011887
+    },
+    {
+      "mesh": "fine",
+      "time": 0.5,
+      "z": -0.2,
+      "side": 1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.00014099217889095326,
+      "speed_at_epsilon_1e_5": 6.161300967519964e-08,
+      "ratio_smallest_to_largest_epsilon": 0.0004369959394900381
+    },
+    {
+      "mesh": "fine",
+      "time": 0.5,
+      "z": -0.05,
+      "side": -1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.0004067713078399721,
+      "speed_at_epsilon_1e_5": 2.1267578207063685e-07,
+      "ratio_smallest_to_largest_epsilon": 0.0005228387006939674
+    },
+    {
+      "mesh": "fine",
+      "time": 0.5,
+      "z": -0.05,
+      "side": 1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.0004067713078399619,
+      "speed_at_epsilon_1e_5": 2.1267578207060612e-07,
+      "ratio_smallest_to_largest_epsilon": 0.000522838700693905
+    },
+    {
+      "mesh": "fine",
+      "time": 1.0,
+      "z": -1.0,
+      "side": -1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 6.896010734651524e-05,
+      "speed_at_epsilon_1e_5": 3.9904278014791254e-08,
+      "ratio_smallest_to_largest_epsilon": 0.0005786574231138829
+    },
+    {
+      "mesh": "fine",
+      "time": 1.0,
+      "z": -1.0,
+      "side": 1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 6.89601073465156e-05,
+      "speed_at_epsilon_1e_5": 3.9904278014789963e-08,
+      "ratio_smallest_to_largest_epsilon": 0.0005786574231138611
+    },
+    {
+      "mesh": "fine",
+      "time": 1.0,
+      "z": -0.2,
+      "side": -1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.00023692387121700137,
+      "speed_at_epsilon_1e_5": 1.4067418370485683e-07,
+      "ratio_smallest_to_largest_epsilon": 0.0005937526809023465
+    },
+    {
+      "mesh": "fine",
+      "time": 1.0,
+      "z": -0.2,
+      "side": 1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.00023692387121700232,
+      "speed_at_epsilon_1e_5": 1.406741837048535e-07,
+      "ratio_smallest_to_largest_epsilon": 0.00059375268090233
+    },
+    {
+      "mesh": "fine",
+      "time": 1.0,
+      "z": -0.05,
+      "side": -1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.00026499896144159513,
+      "speed_at_epsilon_1e_5": 1.633170906892824e-07,
+      "ratio_smallest_to_largest_epsilon": 0.0006162933235694093
+    },
+    {
+      "mesh": "fine",
+      "time": 1.0,
+      "z": -0.05,
+      "side": 1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.00026499896144159454,
+      "speed_at_epsilon_1e_5": 1.6331709068928051e-07,
+      "ratio_smallest_to_largest_epsilon": 0.0006162933235694035
+    },
+    {
+      "mesh": "fine",
+      "time": 2.0,
+      "z": -1.0,
+      "side": -1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 4.760731393533741e-05,
+      "speed_at_epsilon_1e_5": 2.4605886657013472e-08,
+      "ratio_smallest_to_largest_epsilon": 0.0005168509756806359
+    },
+    {
+      "mesh": "fine",
+      "time": 2.0,
+      "z": -1.0,
+      "side": 1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 4.7607313935336494e-05,
+      "speed_at_epsilon_1e_5": 2.4605886657011166e-08,
+      "ratio_smallest_to_largest_epsilon": 0.0005168509756805973
+    },
+    {
+      "mesh": "fine",
+      "time": 2.0,
+      "z": -0.2,
+      "side": -1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.0002184156358124022,
+      "speed_at_epsilon_1e_5": 1.1728489520338118e-07,
+      "ratio_smallest_to_largest_epsilon": 0.0005369803071430175
+    },
+    {
+      "mesh": "fine",
+      "time": 2.0,
+      "z": -0.2,
+      "side": 1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.000218415635812404,
+      "speed_at_epsilon_1e_5": 1.17284895203386e-07,
+      "ratio_smallest_to_largest_epsilon": 0.0005369803071430351
+    },
+    {
+      "mesh": "fine",
+      "time": 2.0,
+      "z": -0.05,
+      "side": -1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.0004055551127118834,
+      "speed_at_epsilon_1e_5": 2.2953676712937415e-07,
+      "ratio_smallest_to_largest_epsilon": 0.0005659816876539857
+    },
+    {
+      "mesh": "fine",
+      "time": 2.0,
+      "z": -0.05,
+      "side": 1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.0004055551127118791,
+      "speed_at_epsilon_1e_5": 2.2953676712937573e-07,
+      "ratio_smallest_to_largest_epsilon": 0.0005659816876539956
+    },
+    {
+      "mesh": "fine",
+      "time": 5.0,
+      "z": -1.0,
+      "side": -1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 3.440919986623848e-05,
+      "speed_at_epsilon_1e_5": 2.0414795884724023e-08,
+      "ratio_smallest_to_largest_epsilon": 0.0005932946992107932
+    },
+    {
+      "mesh": "fine",
+      "time": 5.0,
+      "z": -1.0,
+      "side": 1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 3.4409199866237996e-05,
+      "speed_at_epsilon_1e_5": 2.0414795884723007e-08,
+      "ratio_smallest_to_largest_epsilon": 0.0005932946992107719
+    },
+    {
+      "mesh": "fine",
+      "time": 5.0,
+      "z": -0.2,
+      "side": -1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.00012706351146162464,
+      "speed_at_epsilon_1e_5": 7.727699805870832e-08,
+      "ratio_smallest_to_largest_epsilon": 0.0006081761567092162
+    },
+    {
+      "mesh": "fine",
+      "time": 5.0,
+      "z": -0.2,
+      "side": 1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.00012706351146162456,
+      "speed_at_epsilon_1e_5": 7.727699805870626e-08,
+      "ratio_smallest_to_largest_epsilon": 0.0006081761567092004
+    },
+    {
+      "mesh": "fine",
+      "time": 5.0,
+      "z": -0.05,
+      "side": -1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.00013532045861927344,
+      "speed_at_epsilon_1e_5": 8.511608427397306e-08,
+      "ratio_smallest_to_largest_epsilon": 0.0006289964218451898
+    },
+    {
+      "mesh": "fine",
+      "time": 5.0,
+      "z": -0.05,
+      "side": 1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.00013532045861927436,
+      "speed_at_epsilon_1e_5": 8.511608427397509e-08,
+      "ratio_smallest_to_largest_epsilon": 0.0006289964218452004
+    },
+    {
+      "mesh": "medium",
+      "time": 0.1,
+      "z": -1.0,
+      "side": -1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 4.5667949502014985e-05,
+      "speed_at_epsilon_1e_5": 2.9985546582642064e-08,
+      "ratio_smallest_to_largest_epsilon": 0.0006565993636591681
+    },
+    {
+      "mesh": "medium",
+      "time": 0.1,
+      "z": -1.0,
+      "side": 1,
+      "wall_speed": 1.71048829523511e-21,
+      "speed_at_epsilon_0_02": 4.5667949502015114e-05,
+      "speed_at_epsilon_1e_5": 2.998554658264307e-08,
+      "ratio_smallest_to_largest_epsilon": 0.0006565993636591883
+    },
+    {
+      "mesh": "medium",
+      "time": 0.1,
+      "z": -0.2,
+      "side": -1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.0002040801632190802,
+      "speed_at_epsilon_1e_5": 1.337036898653233e-07,
+      "ratio_smallest_to_largest_epsilon": 0.0006551527975886235
+    },
+    {
+      "mesh": "medium",
+      "time": 0.1,
+      "z": -0.2,
+      "side": 1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.00020408016321908008,
+      "speed_at_epsilon_1e_5": 1.337036898653282e-07,
+      "ratio_smallest_to_largest_epsilon": 0.0006551527975886479
+    },
+    {
+      "mesh": "medium",
+      "time": 0.1,
+      "z": -0.05,
+      "side": -1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.0003516163615187257,
+      "speed_at_epsilon_1e_5": 2.2923556756739163e-07,
+      "ratio_smallest_to_largest_epsilon": 0.0006519479542341588
+    },
+    {
+      "mesh": "medium",
+      "time": 0.1,
+      "z": -0.05,
+      "side": 1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.0003516163615187232,
+      "speed_at_epsilon_1e_5": 2.2923556756739475e-07,
+      "ratio_smallest_to_largest_epsilon": 0.0006519479542341724
+    },
+    {
+      "mesh": "medium",
+      "time": 0.5,
+      "z": -1.0,
+      "side": -1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 3.100971329326273e-05,
+      "speed_at_epsilon_1e_5": 1.3153402644530274e-08,
+      "ratio_smallest_to_largest_epsilon": 0.00042417040493528276
+    },
+    {
+      "mesh": "medium",
+      "time": 0.5,
+      "z": -1.0,
+      "side": 1,
+      "wall_speed": 7.501345065485521e-22,
+      "speed_at_epsilon_0_02": 3.100971329326425e-05,
+      "speed_at_epsilon_1e_5": 1.3153402644534335e-08,
+      "ratio_smallest_to_largest_epsilon": 0.00042417040493539297
+    },
+    {
+      "mesh": "medium",
+      "time": 0.5,
+      "z": -0.2,
+      "side": -1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.0001409098688465402,
+      "speed_at_epsilon_1e_5": 6.16258577468481e-08,
+      "ratio_smallest_to_largest_epsilon": 0.00043734238241299175
+    },
+    {
+      "mesh": "medium",
+      "time": 0.5,
+      "z": -0.2,
+      "side": 1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.00014090986884653992,
+      "speed_at_epsilon_1e_5": 6.162585774685458e-08,
+      "ratio_smallest_to_largest_epsilon": 0.00043734238241303864
+    },
+    {
+      "mesh": "medium",
+      "time": 0.5,
+      "z": -0.05,
+      "side": -1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.0004062801926325139,
+      "speed_at_epsilon_1e_5": 2.1328460499841059e-07,
+      "ratio_smallest_to_largest_epsilon": 0.0005249692425722793
+    },
+    {
+      "mesh": "medium",
+      "time": 0.5,
+      "z": -0.05,
+      "side": 1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.00040628019263251554,
+      "speed_at_epsilon_1e_5": 2.1328460499843425e-07,
+      "ratio_smallest_to_largest_epsilon": 0.0005249692425723355
+    },
+    {
+      "mesh": "medium",
+      "time": 1.0,
+      "z": -1.0,
+      "side": -1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 6.895709556525015e-05,
+      "speed_at_epsilon_1e_5": 3.9917776322523487e-08,
+      "ratio_smallest_to_largest_epsilon": 0.0005788784460150526
+    },
+    {
+      "mesh": "medium",
+      "time": 1.0,
+      "z": -1.0,
+      "side": 1,
+      "wall_speed": 2.2769196426242735e-21,
+      "speed_at_epsilon_0_02": 6.895709556525093e-05,
+      "speed_at_epsilon_1e_5": 3.9917776322529455e-08,
+      "ratio_smallest_to_largest_epsilon": 0.0005788784460151327
+    },
+    {
+      "mesh": "medium",
+      "time": 1.0,
+      "z": -0.2,
+      "side": -1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.00023686874298733834,
+      "speed_at_epsilon_1e_5": 1.4065274461520448e-07,
+      "ratio_smallest_to_largest_epsilon": 0.0005938003589723232
+    },
+    {
+      "mesh": "medium",
+      "time": 1.0,
+      "z": -0.2,
+      "side": 1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.00023686874298733883,
+      "speed_at_epsilon_1e_5": 1.4065274461520668e-07,
+      "ratio_smallest_to_largest_epsilon": 0.0005938003589723313
+    },
+    {
+      "mesh": "medium",
+      "time": 1.0,
+      "z": -0.05,
+      "side": -1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.0002646485622727865,
+      "speed_at_epsilon_1e_5": 1.6283145150159942e-07,
+      "ratio_smallest_to_largest_epsilon": 0.0006152742720504972
+    },
+    {
+      "mesh": "medium",
+      "time": 1.0,
+      "z": -0.05,
+      "side": 1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.00026464856227278153,
+      "speed_at_epsilon_1e_5": 1.6283145150159486e-07,
+      "ratio_smallest_to_largest_epsilon": 0.0006152742720504917
+    },
+    {
+      "mesh": "medium",
+      "time": 2.0,
+      "z": -1.0,
+      "side": -1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 4.7584683699765555e-05,
+      "speed_at_epsilon_1e_5": 2.459760514004096e-08,
+      "ratio_smallest_to_largest_epsilon": 0.0005169227412593298
+    },
+    {
+      "mesh": "medium",
+      "time": 2.0,
+      "z": -1.0,
+      "side": 1,
+      "wall_speed": 1.402968117970455e-21,
+      "speed_at_epsilon_0_02": 4.7584683699766246e-05,
+      "speed_at_epsilon_1e_5": 2.4597605140042352e-08,
+      "ratio_smallest_to_largest_epsilon": 0.0005169227412593516
+    },
+    {
+      "mesh": "medium",
+      "time": 2.0,
+      "z": -0.2,
+      "side": -1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.00021830388001212062,
+      "speed_at_epsilon_1e_5": 1.1726828091339375e-07,
+      "ratio_smallest_to_largest_epsilon": 0.000537179095977968
+    },
+    {
+      "mesh": "medium",
+      "time": 2.0,
+      "z": -0.2,
+      "side": 1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.000218303880012119,
+      "speed_at_epsilon_1e_5": 1.1726828091339565e-07,
+      "ratio_smallest_to_largest_epsilon": 0.0005371790959779807
+    },
+    {
+      "mesh": "medium",
+      "time": 2.0,
+      "z": -0.05,
+      "side": -1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.00040500859121895855,
+      "speed_at_epsilon_1e_5": 2.2950578179928214e-07,
+      "ratio_smallest_to_largest_epsilon": 0.0005666689220308542
+    },
+    {
+      "mesh": "medium",
+      "time": 2.0,
+      "z": -0.05,
+      "side": 1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.0004050085912189565,
+      "speed_at_epsilon_1e_5": 2.295057817992934e-07,
+      "ratio_smallest_to_largest_epsilon": 0.0005666689220308849
+    },
+    {
+      "mesh": "medium",
+      "time": 5.0,
+      "z": -1.0,
+      "side": -1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 3.442887423537003e-05,
+      "speed_at_epsilon_1e_5": 2.043097434937889e-08,
+      "ratio_smallest_to_largest_epsilon": 0.0005934255709235304
+    },
+    {
+      "mesh": "medium",
+      "time": 5.0,
+      "z": -1.0,
+      "side": 1,
+      "wall_speed": 1.1654019215639876e-21,
+      "speed_at_epsilon_0_02": 3.442887423537056e-05,
+      "speed_at_epsilon_1e_5": 2.0430974349381445e-08,
+      "ratio_smallest_to_largest_epsilon": 0.0005934255709235956
+    },
+    {
+      "mesh": "medium",
+      "time": 5.0,
+      "z": -0.2,
+      "side": -1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.00012714132983832714,
+      "speed_at_epsilon_1e_5": 7.731245533572488e-08,
+      "ratio_smallest_to_largest_epsilon": 0.0006080827960037493
+    },
+    {
+      "mesh": "medium",
+      "time": 5.0,
+      "z": -0.2,
+      "side": 1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.00012714132983832906,
+      "speed_at_epsilon_1e_5": 7.731245533573266e-08,
+      "ratio_smallest_to_largest_epsilon": 0.0006080827960038012
+    },
+    {
+      "mesh": "medium",
+      "time": 5.0,
+      "z": -0.05,
+      "side": -1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.00013541003679951545,
+      "speed_at_epsilon_1e_5": 8.495712354986369e-08,
+      "ratio_smallest_to_largest_epsilon": 0.0006274063988007697
+    },
+    {
+      "mesh": "medium",
+      "time": 5.0,
+      "z": -0.05,
+      "side": 1,
+      "wall_speed": 0.0,
+      "speed_at_epsilon_0_02": 0.00013541003679951497,
+      "speed_at_epsilon_1e_5": 8.495712354986939e-08,
+      "ratio_smallest_to_largest_epsilon": 0.000627406398800814
+    }
+  ],
+  "summary": {
+    "wall_velocity_max_m_per_s": 2.2769196426242735e-21
+  }
+}

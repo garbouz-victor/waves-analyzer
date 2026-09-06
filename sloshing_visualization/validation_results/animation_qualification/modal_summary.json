@@ -1,0 +1,90 @@
+{
+  "modal_basis": "sin(pi*x/(2*a)); diagnostic projection only",
+  "inviscid_reference_period_s": 1.6006096324801131,
+  "zero_crossings_s": [
+    0.41611617048803096,
+    1.222267261536083,
+    2.0300795729960743,
+    2.8363998410685407,
+    3.6449710253479743,
+    4.4504245267839195
+  ],
+  "first_zero_crossing_s": 0.41611617048803096,
+  "next_zero_crossing_s": 1.222267261536083,
+  "first_opposite_extremum": {
+    "time": 0.8097241766654879,
+    "amplitude": -0.0002481371417837472,
+    "kind": "minimum"
+  },
+  "extrema": [
+    {
+      "time": 0.8097241766654879,
+      "amplitude": -0.0002481371417837472,
+      "kind": "minimum"
+    },
+    {
+      "time": 1.6158242182359437,
+      "amplitude": 0.00022081344872769654,
+      "kind": "maximum"
+    },
+    {
+      "time": 2.4227974336920832,
+      "amplitude": -0.00019341440072872246,
+      "kind": "minimum"
+    },
+    {
+      "time": 3.2307706751674794,
+      "amplitude": 0.00017175059649566002,
+      "kind": "maximum"
+    },
+    {
+      "time": 4.037348253643034,
+      "amplitude": -0.0001508156309235439,
+      "kind": "minimum"
+    },
+    {
+      "time": 4.844739418791195,
+      "amplitude": 0.00013380545743993378,
+      "kind": "maximum"
+    }
+  ],
+  "estimated_period_s": 1.6126405361449327,
+  "half_cycle_period_estimates_s": [
+    1.612302182096104,
+    1.6156246229199827,
+    1.6126405361449327,
+    1.6171423685588673,
+    1.6109070028718904
+  ],
+  "same_sign_damping": [
+    {
+      "from_time": 1.6158242182359437,
+      "to_time": 3.2307706751674794,
+      "amplitude_ratio": 0.7778085867743499,
+      "log_decrement": 0.25127481749840214,
+      "effective_decay_rate_per_s": 0.15559328076785564
+    },
+    {
+      "from_time": 3.2307706751674794,
+      "to_time": 4.844739418791195,
+      "amplitude_ratio": 0.7790683710569525,
+      "log_decrement": 0.249656469238806,
+      "effective_decay_rate_per_s": 0.15468482287846055
+    },
+    {
+      "from_time": 0.8097241766654879,
+      "to_time": 2.4227974336920832,
+      "amplitude_ratio": 0.7794657395436759,
+      "log_decrement": 0.24914654328642402,
+      "effective_decay_rate_per_s": 0.15445457433574963
+    },
+    {
+      "from_time": 2.4227974336920832,
+      "to_time": 4.037348253643034,
+      "amplitude_ratio": 0.7797538877938753,
+      "log_decrement": 0.24877693755747135,
+      "effective_decay_rate_per_s": 0.1540843028806173
+    }
+  ],
+  "opposite_to_initial_amplitude_ratio": 0.876989013804927
+}

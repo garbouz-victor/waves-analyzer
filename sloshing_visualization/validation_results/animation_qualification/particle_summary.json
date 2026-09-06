@@ -1,0 +1,60 @@
+{
+  "sources": {
+    "medium": {
+      "path": "/home/victor/Projects/waves-analyzer/sloshing_visualization/validation_results/animation_qualification/runs/medium-full.h5",
+      "bytes": 1072567328,
+      "mtime_ns": 1788657587171233015,
+      "config_sha256": "c21bc0de11b6c83b104e26aa1265d0dbecfd5f3a3fdf607f130b2ce17b50b091"
+    },
+    "fine": {
+      "path": "/home/victor/Projects/waves-analyzer/sloshing_visualization/validation_results/animation_qualification/runs/fine-full.h5",
+      "bytes": 2364886404,
+      "mtime_ns": 1788665248766948120,
+      "config_sha256": "7e164116408c32c49c9eeec24c27c9ed5dabe4e6cb63bb2917a9ecacdcea4f7c"
+    }
+  },
+  "sampling_source": {
+    "path": "/home/victor/Projects/waves-analyzer/sloshing_visualization/validation_results/animation_qualification/runs/sampling-dense.h5",
+    "bytes": 216709461,
+    "mtime_ns": 1788680031050012090,
+    "config_sha256": "3f852cd95692136897aed6c1fd7407073e44f1868cad337e8948d4361e19ddf0"
+  },
+  "mesh": {
+    "bulk_separation_max_m": 4.027060919881401e-07,
+    "bulk_separation_final_m": 1.627039421133474e-07,
+    "bulk_invalid_count": 0,
+    "near_wall_separation_max_m": 7.60592773491892e-07,
+    "near_wall_separation_final_m": 4.215644375206732e-07,
+    "near_wall_invalid_count": 0,
+    "bulk_reference_displacement_max_m": 0.0005278147683786458,
+    "bulk_relative_to_peak_displacement": 0.0007629685945036788,
+    "near_wall_reference_displacement_max_m": 0.0006011348501694596,
+    "near_wall_relative_to_peak_displacement": 0.0012652614854678302
+  },
+  "snapshot": {
+    "bulk_separation_max_m": 9.276835400991667e-09,
+    "bulk_separation_final_m": 9.276835400991667e-09,
+    "bulk_invalid_count": 0,
+    "near_wall_separation_max_m": 1.2933055657687553e-08,
+    "near_wall_separation_final_m": 1.2933055657687553e-08,
+    "near_wall_invalid_count": 0
+  },
+  "rk_step": {
+    "bulk_separation_max_m": 8.444266117371776e-15,
+    "bulk_separation_final_m": 8.444266117371776e-15,
+    "bulk_invalid_count": 0,
+    "near_wall_separation_max_m": 2.9205407954182373e-15,
+    "near_wall_separation_final_m": 2.886579864025407e-15,
+    "near_wall_invalid_count": 0
+  },
+  "bulk_seeds": 28,
+  "near_wall_seeds": 12,
+  "integration": "RK4, max_step=0.0025 s",
+  "spatial_interpolation": "actual element P2, no smoothing",
+  "temporal_interpolation": "linear between saved FEM states; RK stops at snapshot knots",
+  "first_invalid_time_resolution_s": 0.0025,
+  "sampling_test_end_s": 0.5,
+  "same_underlying_snapshot_field_max_difference": 0.0,
+  "wall_velocity_max_m_per_s": 2.2769196426242735e-21,
+  "runtime_seconds": 546.1655663633719
+}

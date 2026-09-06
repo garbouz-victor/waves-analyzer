@@ -112,8 +112,12 @@ class SDIRK2Integrator(IntegratorBase):
         f, dt = self.fem, self.fem.config.dt
         b1, b2 = 1-GAMMA, GAMMA
         v1, e1, kv1, ke1, load1, _ = self._stage(state.velocity, state.eta, state.time+GAMMA*dt)
-        v2, e2, kv2, ke2, load2, _ = self._stage(state.velocity+dt*b1*kv1,
+        v2, e2, kv2, ke2, load2, pressure2 = self._stage(state.velocity+dt*b1*kv1,
                                               state.eta+dt*b1*ke1, state.time+dt)
+        # Stiff accuracy: stage 2 IS the endpoint state. B*k_v2=0, hence
+        # its pressure also solves the instantaneous acceleration saddle system.
+        # Exposing it avoids a redundant LU solve for each saved snapshot.
+        self.last_stage_pressure = pressure2
         loss = dt*(b1*float(v1@(f.K@v1))+b2*float(v2@(f.K@v2)))
         work = dt*(b1*float(v1@load1)+b2*float(v2@load2))
         # RK identity: m_ij=b_i*a_ij+b_j*a_ji-b_i*b_j=diag(-gamma²,+gamma²).

@@ -1,8 +1,10 @@
 # Вязкий sloshing с закреплёнными контактными точками
 
-Отдельный исследовательский проект на Python. Текущий этап — **STEP 1.5**:
-независимая пространственная и временная проверка линейных Navier–Stokes.
-MP4, частицы и Plotly относятся к следующим этапам и сейчас **не реализованы**.
+Отдельный исследовательский проект на Python. Текущий этап — **STEP 1.6**:
+qualification конкретного dataset после независимой проверки STEP 1.5.
+MP4, particle animation и Plotly относятся к следующим этапам и сейчас
+**не реализованы**. Есть только численная qualification контрольных
+траекторий и научные диагностические графики.
 Никакого заранее заданного движения или
 экспоненциального затухания в solver нет.
 
@@ -25,10 +27,11 @@ python -m pytest -q
 # Короткая проверка solver, не production simulation:
 python scripts/run_simulation.py --mesh coarse --t-end 0.1
 
-# STEP 2, после физических тестов:
+# Исторический STEP 1 short run (не qualification для animation):
 python scripts/run_simulation.py --mesh coarse --t-end 1
 
-# STEP 3, после проверки STEP 2:
+# Исторические defaults для воспроизводимости; near-contact slope может
+# нарушить линейное приближение. Это НЕ рекомендация для STEP 2 animation:
 python scripts/run_simulation.py \
   --a 1 --d 10 --alpha-deg 2 --nu 0.01 \
   --t-end 5 --dt 0.0025 --mesh medium
@@ -44,7 +47,7 @@ python scripts/run_simulation.py --config configs/default.json --nu-preset 0.1
 даже если не совпал с очередным интервалом snapshots.
 
 Все параметры находятся в `SimulationConfig`, включая допуски физических
-проверок. `requirements-tested.txt` фиксирует проверенное окружение STEP 1.5;
+проверок. `requirements-tested.txt` фиксирует проверенное окружение STEP 1.5/1.6;
 `requirements.txt` задаёт совместимые диапазоны для установки, в том числе
 на более новых Python. Локальное окружение STEP 1 использует доступные
 системные научные библиотеки через `--system-site-packages`; система не
@@ -430,7 +433,7 @@ temporal alternation сохраняются нормы и probes на **кажд
 оператора, его большая аналитическая амплитуда не интерпретируется как
 физически допустимый свободный интерфейс.
 
-`configs/linear_safe.json` задаёт alpha=0.2°, основной **кандидат** для линейной
+`configs/validation_alpha_0_2.json` (ранее `linear_safe.json`) задаёт alpha=0.2°, исторический **кандидат** для линейной
 физической анимации; это имя не гарантирует малого наклона у контакта во все
 моменты времени. `configs/contact_breakdown_demo.json` сохраняет alpha=2°:
 полезный формальный пример быстрого нарушения малого наклона у pinned contacts,
@@ -439,7 +442,7 @@ temporal alternation сохраняются нормы и probes на **кажд
 измерен max slope=0.879 к 0.5 s: даже этот кандидат нарушает локальное
 условие малого наклона. Название конфига не является физической гарантией.
 
-### Measured recommendation, not an animation release
+### STEP 1.5 measured recommendation (historical, not an animation release)
 
 Для следующего физического расчёта рекомендуются **SDIRK2, dt=0.00125 s**,
 medium, snapshots через 0.005 s. У SDIRK2 значительно меньше stiff residue
@@ -461,10 +464,99 @@ bulk/contact L2 differences на трёх сетках при t=0.1. Pointwise c
 
 ## Следующие этапы после validation
 
-Последовательность: физические тесты → coarse `0…1 s` и проверка полей →
-medium `0…5 s` → частицы → main MP4 → vorticity/contact-line MP4 →
-convergence study по eta, энергии и probes → viscosity comparison.
-Полный study должен включать coarse/medium/fine и уточнение dt, отдельно
-оценивать bulk и контактные градиенты. Быстрый тест уменьшения div на малых
-сетках не заменяет этот study. Косметика до прохождения физических проверок
-не является частью текущего этапа.
+STEP 1.6 использует `configs/animation_candidate.json` и
+`configs/animation_candidate_fine.json`: alpha=0.02°, nu=0.01, SDIRK2,
+dt=0.00125, snapshot_dt=0.005, t_end=5. Эти configs — кандидаты, не обещание
+малого slope на всём интервале. Измерения и решение:
+[STEP1_6_REPORT.md](STEP1_6_REPORT.md). Production animations пока отсутствуют.
+
+Результат реально выполненных medium/fine 0…5 s: **NOT QUALIFIED FOR
+PHYSICAL ANIMATION** для alpha=0.02°. На fine max slope=0.373408,
+первый сохранённый snapshot выше 0.3 — t=2.365 s. Это локальное нарушение
+linear-small-slope policy у pinned contact, не instability solver. Bulk eta
+согласуется в пределах 0.0760%, velocity — 0.0793%, wall omega L2 — 5.731%
+от пиковых fine norms. Максимальная bulk path separation — 0.403 µm.
+No-slip, volume, energy и symmetry проходят; strong divergence уменьшается
+на fine, но остаётся отдельной оговоркой для medium.
+
+Следующий **не рассчитанный** conservative candidate: alpha=0.0025°, fine,
+nu=0.01, SDIRK2, dt=0.00125, snapshot_dt=0.005, t_end=5. По tan scaling
+измеренного fine решения ожидается max slope≈0.04668. Перед STEP 2 нужен
+отдельный confirmatory dataset; ни pointwise contact corner, ни wall film
+этой рекомендацией не квалифицируются. Текущие configs сохранены именно
+как выполненные 0.02° candidates, не заменены новым углом.
+
+### STEP 1.6 commands and gates
+
+```bash
+python scripts/qualify_animation_dataset.py --phase medium-short
+python scripts/qualify_animation_dataset.py --phase medium-full
+python scripts/qualify_animation_dataset.py --phase fine-short
+python scripts/qualify_animation_dataset.py --phase fine-full
+python scripts/qualify_animation_dataset.py --phase compare
+python scripts/qualify_animation_dataset.py --phase particles
+python scripts/qualify_animation_dataset.py --phase summary
+# All gates sequentially, or resume using COMPLETE compatible caches:
+python scripts/qualify_animation_dataset.py --phase all
+```
+
+Успешный exit команды означает завершение исследования; физический verdict
+нужно читать в `summary.json` (`qualified` / `conditional` / `failed`).
+
+Для каждой команды рекомендуется окружение `OPENBLAS_NUM_THREADS=1
+MKL_NUM_THREADS=1 OMP_NUM_THREADS=1`. Default output:
+`validation_results/animation_qualification`; другой `--output` даёт новый
+независимый расчёт. Full run продолжает COMPLETE short prefix в **новом**
+файле, сохраняя исходный prefix. State restart включает cumulative viscous
+loss, RK correction и энергетические максимумы. Running/failed/truncated
+HDF5 не переиспользуется. Это фазовый restart, не автоматическое возобновление
+произвольно оборванной записи. Источник comparison проверяется по config,
+размеру и времени изменения completed dataset. При первом чтении каждой
+ревизии файла проверяются все FEM snapshots и probes на конечность и полноту;
+не только конечный state. Новые chunked datasets используют Fletcher32.
+Старые completed prefixes не переписываются ради добавления checksum.
+
+HDF5 содержит P2 u/w, P1 q, P2 eta, DG1 omega, mesh/dof maps, probes,
+diagnostics и restart accounting. Visualization grid не сохраняется.
+`runs/`, `raw/` и NPZ trajectories ignored; в Git — компактные summaries
+и научные PDF/PNG. Units: regional slope — безразмерный; volume L2 velocity —
+m²/s; omega/div L2 — m/s; surface L2 — m^(3/2); horizontal velocity L2(dx) —
+m^(3/2)/s; particle separations — m.
+
+Cross-mesh integrals используют точное геометрическое разбиение по рёбрам
+обеих сеток, затем квадратуру порядка 4 на общих треугольниках. Это точно
+интегрирует квадрат разности P2 velocity и DG1 omega. Regional P2 slopes
+вычисляются по концам соответствующих отрезков, включая границы областей
+внутри FEM edge. Угловые производные не сглаживаются.
+
+Контрольные частицы: 28 bulk + 12 near-wall seeds. Spatial interpolation —
+реальные P2 elements; time interpolation — линейная между snapshots; RK4
+останавливает шаг на каждом временном узле. Проверяются RK step refinement,
+snapshot_dt=0.005 vs 0.0025 при одном PDE dt и medium vs fine. Выход над
+P2 surface/reference domain делает путь invalid навсегда, без отражений;
+first-invalid time определяется с точностью RK stage, не event root solver.
+
+Qualification policy отделена от solver tolerances. Slope<=0.1 — conservative,
+0.1…0.3 — conditional, >0.3 — failed linear-small-slope qualification.
+Инженерные ориентиры для интегрального сравнения: bulk eta 1%, velocity 2%,
+wall omega 10%; bulk path mesh difference 0.005 m, snapshot difference 10 µm,
+ODE-step difference 1 µm.
+Они заданы до получения medium/fine comparison, не являются теоремами
+об ошибке и публикуются вместе с фактическими значениями. Significant
+strong-divergence caution: >5% более чем на 10% активного времени; активные
+snapshots имеют gradient norm >1% пикового. Уменьшение alpha снижает
+абсолютный slope, но не улучшает относительные пространственные ошибки
+или relative strong divergence.
+
+GitHub Actions выполняет только `python -m pytest -q` на Python 3.11,
+не длинные qualification runs. Конфигурация основана на официальных
+[setup-python](https://github.com/actions/setup-python) и
+[checkout](https://github.com/actions/checkout); локальные научные измерения
+пока сделаны в указанном в requirements-tested.txt окружении Python 3.9.
+
+STEP 2 является отдельной итерацией после явного решения qualification.
+Прохождение unit tests само по себе не разрешает физические утверждения
+об анимации. Measured medium/fine fields и проверка траекторий выполнены,
+но глобальный small-slope gate не пройден. Неразрешённый contact corner
+нельзя выдавать за точную физику стенки.
+Production renderer, MP4 и Plotly не входят в STEP 1.6.

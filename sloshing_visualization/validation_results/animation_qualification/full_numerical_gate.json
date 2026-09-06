@@ -1,0 +1,17 @@
+{
+  "numerical_gate_passed": true,
+  "problems": [],
+  "policy": {
+    "slope_conservative": 0.1,
+    "slope_failure": 0.3,
+    "eta_bulk_relative_limit": 0.01,
+    "velocity_relative_limit": 0.02,
+    "omega_wall_relative_limit": 0.1,
+    "strong_divergence_particle_caution": 0.05,
+    "significant_fraction": 0.1,
+    "particle_bulk_separation_limit_m": 0.005,
+    "particle_snapshot_separation_limit_m": 1e-05,
+    "particle_rk_step_limit_m": 1e-06,
+    "symmetry_absolute_limit": 1e-12
+  }
+}

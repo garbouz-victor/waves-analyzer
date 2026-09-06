@@ -1,0 +1,49 @@
+{
+  "rows": [
+    {
+      "mesh": "medium",
+      "slope_global_max": 0.2697347067781843,
+      "slope_bulk_max": 0.000453650107996066,
+      "slope_intermediate_max": 0.004119921692940292,
+      "slope_contact_max": 0.2697347067781843,
+      "divergence_l2_max": 0.00017343667203445202,
+      "divergence_relative_max": 0.0842805614771418,
+      "divergence_bulk_l2_max": 2.663132543576319e-06,
+      "divergence_bulk_relative_max": 0.03607161429371896,
+      "volume_error_max": 4.866204281975955e-19,
+      "contact_error_max": 0.0,
+      "energy_balance_relative_max": 3.8385336156746624e-13,
+      "max_step_energy_increase_max": 0.0,
+      "omega_L2_max": 0.0036965559798173356,
+      "omega_wall_left_L2_max": 0.002565207313005599,
+      "omega_wall_right_L2_max": 0.002565207313005595,
+      "omega_max_max": 0.29528332795181805,
+      "eta_antisymmetry_max": 5.414234598849488e-18,
+      "first_slope_above_0.1": 0.545,
+      "first_slope_above_0.3": null
+    },
+    {
+      "mesh": "fine",
+      "slope_global_max": 0.37340762866770183,
+      "slope_bulk_max": 0.0004537186104791194,
+      "slope_intermediate_max": 0.004089948564937829,
+      "slope_contact_max": 0.37340762866770183,
+      "divergence_l2_max": 0.00013573932642652338,
+      "divergence_relative_max": 0.06442786778797642,
+      "divergence_bulk_l2_max": 9.807231540236372e-07,
+      "divergence_bulk_relative_max": 0.016228664084590463,
+      "volume_error_max": 1.1029957160027092e-19,
+      "contact_error_max": 0.0,
+      "energy_balance_relative_max": 4.520142388551473e-13,
+      "max_step_energy_increase_max": 0.0,
+      "omega_L2_max": 0.0037166648014928076,
+      "omega_wall_left_L2_max": 0.002579290226847538,
+      "omega_wall_right_L2_max": 0.0025792902268475426,
+      "omega_max_max": 0.35790243807407995,
+      "eta_antisymmetry_max": 1.0869126779167182e-17,
+      "first_slope_above_0.1": 0.49,
+      "first_slope_above_0.3": 2.365
+    }
+  ],
+  "summary": {}
+}
