@@ -44,4 +44,5 @@ jobs:
           tests/test_step3a3_*.py
           tests/test_step3a4_*.py
           tests/test_step3a5_*.py
+          tests/test_step3a6_*.py
       # Tiny spectral/CH checks only; never the 96x48 scientific series in CI.

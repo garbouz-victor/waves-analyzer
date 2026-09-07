@@ -1,0 +1,477 @@
+{
+  "execution_status": "complete",
+  "nonlinear_solver_status": "converged",
+  "physical_checks": "passed",
+  "accepted": true,
+  "formulation": "absolute",
+  "initial_guess": "phi_old",
+  "accuracy_level": "P2",
+  "dt": 1e-06,
+  "physical_check_details": {
+    "finite": true,
+    "mass": true,
+    "resolution": true,
+    "topology": true,
+    "energy": true,
+    "BE_work": true,
+    "decomposition": true,
+    "material": true
+  },
+  "evidence": {
+    "old": {
+      "E_kin": 0.0,
+      "E_gravity": 0.0,
+      "E_interface": 0.05995161915611929,
+      "E_wall": 0.0056911635284269835,
+      "phase_mass": -0.6060961027499487,
+      "liquid_volume": 0.0569519486252139,
+      "viscous_dissipation": 0.0,
+      "CH_dissipation": 0.11400313905309394,
+      "slip_dissipation": 0.0,
+      "time": 0.0,
+      "E_total": 0.06564278268454628,
+      "strong_divergence_L2": 0.0,
+      "relative_strong_divergence": 0.0,
+      "wall_normal_velocity_L2": 0.0,
+      "omega_L2": 0.0,
+      "speed_max_dof_sample": 0.0,
+      "phi_min_dof": -0.9790806990532334,
+      "phi_max_dof": 1.0156953397485375,
+      "wall_relaxation_dissipation": 0.0,
+      "mass_error_abs": 0.0,
+      "mu_mean_Pa": 0.1799201039372238,
+      "mu_std_Pa": 0.001643190259740797,
+      "relative_mu_variation": 0.009132888564327002,
+      "mass_error_relative_to_domain": 0.0,
+      "liquid_volume_error_relative": 0.0,
+      "interval_viscous_dissipation": 0.0,
+      "interval_CH_dissipation": 0.0,
+      "interval_slip_dissipation": 0.0,
+      "delta_E_interval": 0.0,
+      "local_budget_defect": 0.0,
+      "cumulative_viscous_dissipation": 0.0,
+      "cumulative_CH_dissipation": 0.0,
+      "cumulative_slip_dissipation": 0.0,
+      "energy_budget_defect": 0.0,
+      "energy_budget_relative": 0.0,
+      "E_positive_scale": 0.06564278268454628,
+      "energy_budget_relative_to_initial_scale": 0.0,
+      "energy_change_relative_applicable": 0.0,
+      "energy_budget_relative_to_change": 0.0,
+      "energy_budget_symmetric_diagnostic": 0.0,
+      "energy_budget_symmetric_diagnostic_only": 1.0,
+      "cells_across_transition_certified_min": 8.328131075834218,
+      "wall_crossings": 2
+    },
+    "new": {
+      "E_kin": 0.0,
+      "E_gravity": 0.0,
+      "E_interface": 0.05995161414033737,
+      "E_wall": 0.005691163528426991,
+      "phase_mass": -0.6060961027499464,
+      "liquid_volume": 0.056951948625214244,
+      "viscous_dissipation": 0.0,
+      "CH_dissipation": 0.0036696718854782933,
+      "slip_dissipation": 0.0,
+      "time": 1e-06,
+      "E_total": 0.06564277766876436,
+      "strong_divergence_L2": 0.0,
+      "relative_strong_divergence": 0.0,
+      "wall_normal_velocity_L2": 0.0,
+      "omega_L2": 0.0,
+      "speed_max_dof_sample": 0.0,
+      "phi_min_dof": -0.9790808427895074,
+      "phi_max_dof": 1.0156953397485375,
+      "wall_relaxation_dissipation": 0.0,
+      "mass_error_abs": 2.3314683517128287e-15,
+      "mu_mean_Pa": 0.1799201105597237,
+      "mu_std_Pa": 0.0013222889248987939,
+      "relative_mu_variation": 0.007349311429307208,
+      "mass_error_relative_to_domain": 3.23815048849004e-15,
+      "liquid_volume_error_relative": 6.0918845372353295e-15,
+      "interval_viscous_dissipation": 0.0,
+      "interval_CH_dissipation": 5.883640546928611e-08,
+      "interval_slip_dissipation": 0.0,
+      "delta_E_interval": -5.015781914807782e-09,
+      "local_budget_defect": 5.382062355447833e-08,
+      "cumulative_viscous_dissipation": 0.0,
+      "cumulative_CH_dissipation": 5.883640546928611e-08,
+      "cumulative_slip_dissipation": 0.0,
+      "energy_budget_defect": 5.382062355447833e-08,
+      "energy_budget_relative": 8.199016152791594e-07,
+      "E_positive_scale": 0.06564277766876436,
+      "energy_budget_relative_to_initial_scale": 8.199016152791594e-07,
+      "energy_change_relative_applicable": 0.0,
+      "energy_budget_relative_to_change": 0.0,
+      "energy_budget_symmetric_diagnostic": 0.8415759609790068,
+      "energy_budget_symmetric_diagnostic_only": 1.0,
+      "cells_across_transition_certified_min": 8.328131075834218,
+      "wall_crossings": 2
+    },
+    "resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.01250000000000019,
+      "epsilon_over_h_normal": 1.9999999999999698,
+      "cells_across_transition_min": 8.328131075834218,
+      "qualified_resolution": true,
+      "cells_across_transition_p05": 8.364786275562437,
+      "cells_across_transition_p50": 11.512338770512198,
+      "cells_across_transition_p95": 14.850696399871715,
+      "active_cell_count": 1766,
+      "active_cell_count_exact": 1766,
+      "active_cell_count_conservative_fallback": 0,
+      "diameter_fallback_active_cells": 0,
+      "diameter_fallback_local_cells_by_rank": [
+        []
+      ],
+      "worst_cell": {
+        "h_normal_m": 0.01250000000000019,
+        "h_cert": 0.01250000000000019,
+        "h_directional": 0.012499996273995284,
+        "rank": 0,
+        "local_cell": 9739,
+        "centroid": [
+          0.002083333333333326,
+          0.19374999999999998
+        ],
+        "bounds": [
+          [
+            0.0,
+            0.18749999999999997
+          ],
+          [
+            0.006249999999999978,
+            0.19999999999999998
+          ]
+        ],
+        "vertices": [
+          [
+            0.0,
+            0.18749999999999997
+          ],
+          [
+            0.0,
+            0.19999999999999998
+          ],
+          [
+            0.006249999999999978,
+            0.19374999999999998
+          ]
+        ],
+        "phi_min_exact": -0.9168268310921242,
+        "phi_max_exact": -0.858240414505694,
+        "phi_min_bound": -0.9168268310921242,
+        "phi_max_bound": -0.858240414505694,
+        "range_status": "exact",
+        "range_fallback_reason": "",
+        "normal_width_fallback_reason": "",
+        "min_witness": {
+          "candidate_type": "vertex",
+          "reference_point": [
+            1.0,
+            0.0
+          ],
+          "physical_point": [
+            0.0,
+            0.19999999999999998
+          ],
+          "value": -0.9168268310920951
+        },
+        "max_witness": {
+          "candidate_type": "vertex",
+          "reference_point": [
+            0.0,
+            0.0
+          ],
+          "physical_point": [
+            0.0,
+            0.18749999999999997
+          ],
+          "value": -0.8582404145057231
+        }
+      },
+      "worst_certified_cell": {
+        "h_normal_m": 0.01250000000000019,
+        "h_cert": 0.01250000000000019,
+        "h_directional": 0.012499996273995284,
+        "rank": 0,
+        "local_cell": 9739,
+        "centroid": [
+          0.002083333333333326,
+          0.19374999999999998
+        ],
+        "bounds": [
+          [
+            0.0,
+            0.18749999999999997
+          ],
+          [
+            0.006249999999999978,
+            0.19999999999999998
+          ]
+        ],
+        "vertices": [
+          [
+            0.0,
+            0.18749999999999997
+          ],
+          [
+            0.0,
+            0.19999999999999998
+          ],
+          [
+            0.006249999999999978,
+            0.19374999999999998
+          ]
+        ],
+        "phi_min_exact": -0.9168268310921242,
+        "phi_max_exact": -0.858240414505694,
+        "phi_min_bound": -0.9168268310921242,
+        "phi_max_bound": -0.858240414505694,
+        "range_status": "exact",
+        "range_fallback_reason": "",
+        "normal_width_fallback_reason": "",
+        "min_witness": {
+          "candidate_type": "vertex",
+          "reference_point": [
+            1.0,
+            0.0
+          ],
+          "physical_point": [
+            0.0,
+            0.19999999999999998
+          ],
+          "value": -0.9168268310920951
+        },
+        "max_witness": {
+          "candidate_type": "vertex",
+          "reference_point": [
+            0.0,
+            0.0
+          ],
+          "physical_point": [
+            0.0,
+            0.18749999999999997
+          ],
+          "value": -0.8582404145057231
+        }
+      },
+      "worst_exact_active_cell": {
+        "h_normal_m": 0.01250000000000019,
+        "h_cert": 0.01250000000000019,
+        "h_directional": 0.012499996273995284,
+        "rank": 0,
+        "local_cell": 9739,
+        "centroid": [
+          0.002083333333333326,
+          0.19374999999999998
+        ],
+        "bounds": [
+          [
+            0.0,
+            0.18749999999999997
+          ],
+          [
+            0.006249999999999978,
+            0.19999999999999998
+          ]
+        ],
+        "vertices": [
+          [
+            0.0,
+            0.18749999999999997
+          ],
+          [
+            0.0,
+            0.19999999999999998
+          ],
+          [
+            0.006249999999999978,
+            0.19374999999999998
+          ]
+        ],
+        "phi_min_exact": -0.9168268310921242,
+        "phi_max_exact": -0.858240414505694,
+        "phi_min_bound": -0.9168268310921242,
+        "phi_max_bound": -0.858240414505694,
+        "range_status": "exact",
+        "range_fallback_reason": "",
+        "normal_width_fallback_reason": "",
+        "min_witness": {
+          "candidate_type": "vertex",
+          "reference_point": [
+            1.0,
+            0.0
+          ],
+          "physical_point": [
+            0.0,
+            0.19999999999999998
+          ],
+          "value": -0.9168268310920951
+        },
+        "max_witness": {
+          "candidate_type": "vertex",
+          "reference_point": [
+            0.0,
+            0.0
+          ],
+          "physical_point": [
+            0.0,
+            0.18749999999999997
+          ],
+          "value": -0.8582404145057231
+        }
+      },
+      "time": 1e-06,
+      "algorithm_version": "triangle-p2-extrema-gradient-cone-v2",
+      "activation": "CG1 exact vertices; P2 vertices + edge extrema + interior stationary point; labelled Bernstein fallback",
+      "h_normal_method": "maximum over complete affine-gradient cone; diameter for origin/near-origin hull",
+      "hard_gate_metric": "cells_across_transition_certified_min",
+      "cells_across_transition_certified_min": 8.328131075834218,
+      "cells_across_transition_directional_min": 8.328131105254938,
+      "cells_across_transition_certified_p05": 8.364786275562437,
+      "cells_across_transition_certified_p50": 11.512338770512198,
+      "cells_across_transition_certified_p95": 14.850696399871715,
+      "cells_across_transition_directional_p05": 8.364786275563343,
+      "cells_across_transition_directional_p50": 11.512338770523437,
+      "cells_across_transition_directional_p95": 14.850696399883493
+    },
+    "BE_work": {
+      "B_BE": 1.3461097031491239e-09,
+      "energy_work": -3.669671885450581e-09,
+      "Delta_E": -5.015781588615432e-09,
+      "time": 1e-06,
+      "step": 1,
+      "dt": 1e-06,
+      "D_old": 0.11400313905309394,
+      "D_new": 0.0036696718854782933,
+      "trapezoid_integral": 5.883640546928611e-08,
+      "BE_endpoint_integral": 3.669671885478293e-09,
+      "weak_work_defect": 2.7712204881751533e-20,
+      "continuum_local_defect": 5.3820623880670675e-08,
+      "trapezoid_gap": 5.5166733583807815e-08,
+      "decomposition_roundoff": -1.5729666528308374e-20,
+      "weak_work_identity_roundoff": -1.5727391781623853e-20,
+      "diagnostic_only": true,
+      "remainder_label": "signed discrete BE work remainder; NOT physical heat"
+    },
+    "checks": {
+      "finite": true,
+      "mass": true,
+      "resolution": true,
+      "topology": true,
+      "energy": true,
+      "BE_work": true,
+      "decomposition": true,
+      "material": true
+    }
+  },
+  "SNES": {
+    "reason": 2,
+    "iterations": 2,
+    "initial_residual": 0.784388568715275,
+    "final_residual": 1.0597937903250502e-13,
+    "atol_target": 3e-13,
+    "rtol_target": 2.3531657061458247e-13,
+    "effective_target": 3e-13,
+    "actual_controls": {
+      "atol": 3e-13,
+      "rtol": 3e-13,
+      "stol": 0.0,
+      "max_it": 30,
+      "snes_type": "newtonls",
+      "line_search_type": "bt",
+      "ksp_type": "preonly",
+      "pc_type": "lu",
+      "factor_solver_type": "mumps"
+    },
+    "snes_type": "newtonls",
+    "line_search_type": "bt",
+    "tolerances": [
+      3e-13,
+      3e-13,
+      0.0,
+      30
+    ],
+    "accepted": true
+  },
+  "controls_before": {
+    "atol": 3e-13,
+    "rtol": 3e-13,
+    "stol": 0.0,
+    "max_it": 30,
+    "snes_type": "newtonls",
+    "line_search_type": "bt",
+    "ksp_type": "preonly",
+    "pc_type": "lu",
+    "factor_solver_type": "mumps"
+  },
+  "controls_after": {
+    "atol": 3e-13,
+    "rtol": 3e-13,
+    "stol": 0.0,
+    "max_it": 30,
+    "snes_type": "newtonls",
+    "line_search_type": "bt",
+    "ksp_type": "preonly",
+    "pc_type": "lu",
+    "factor_solver_type": "mumps"
+  },
+  "residuals": {
+    "literal_absolute_UFL": {
+      "algebraic_norm": 1.0597932126813618e-13,
+      "Riesz_L2": 2.7298491068537035e-11
+    },
+    "coefficient_difference_sparse": {
+      "algebraic_norm": 1.2535354766757357e-13,
+      "Riesz_L2": 3.3452827012024125e-11
+    },
+    "chemical_reconstructed": {
+      "algebraic_norm": 1.1065107559633037e-16,
+      "Riesz_L2": 3.990831953022474e-14
+    }
+  },
+  "actual_solution_residual": {
+    "phase_algebraic": 1.0597932126813618e-13,
+    "chemical_algebraic": 1.1065107559633037e-16,
+    "phase_Riesz_L2": 2.7298491068537035e-11,
+    "chemical_Riesz_L2": 3.990831953022474e-14
+  },
+  "newton_error_estimate": {
+    "estimated_errors": {
+      "phi_relative": 3.2688554907696096e-17,
+      "mu_relative": 2.002555552267425e-15,
+      "D_relative": 2.109627090383291e-14,
+      "energy_absolute": 3.3462534222913304e-20,
+      "mass_absolute": 1.8677244515626618e-19
+    },
+    "engineering_checks": {
+      "phi_relative": true,
+      "mu_relative": true,
+      "D_relative": true,
+      "energy_absolute": true,
+      "mass_absolute": true
+    },
+    "D_linear_correction": 7.741639221781745e-17,
+    "D_quadratic_term": 3.0672955487689104e-27,
+    "linear_solve_reason": 4,
+    "linear_solve_relative_residual": 5.4380791085899e-15,
+    "finite": true,
+    "published": false,
+    "rigorous_bound": false
+  },
+  "snapshot_sha256": "8009e04d9a5ef1eb64dfb95820173a37c3ea7f6993244eff84a596579e644763",
+  "archive_roundtrip": true,
+  "retained_rate_sha256": null,
+  "residual_vector_sha256": {
+    "literal_absolute_UFL": "08f656e4b50dcdf28ae567313fceedf9edf357c1015433fd4bd00e55ebbe5744",
+    "coefficient_difference_sparse": "e77fa8dcd6ceee6d8877c4d147efaeed30c32b33cf954d35b064b78f4fc7cd75",
+    "chemical_reconstructed": "5a60668b47e17cc5a2539215d90e9fc586dfca991d2cda2195d4a8378710a04f",
+    "native_phase": "08f656e4b50dcdf28ae567313fceedf9edf357c1015433fd4bd00e55ebbe5744",
+    "native_chemical": "5a60668b47e17cc5a2539215d90e9fc586dfca991d2cda2195d4a8378710a04f"
+  },
+  "reconstructed_phi_sha256": "976c7536c77014f7042b5a84006874e60fac4772c33d068bb24cb29991790d06",
+  "log": {
+    "runtime_s": 4.297550654999213
+  }
+}

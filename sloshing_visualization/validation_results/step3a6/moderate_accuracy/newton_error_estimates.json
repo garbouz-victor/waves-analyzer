@@ -1,0 +1,71 @@
+{
+  "P2_absolute": {
+    "estimated_errors": {
+      "phi_relative": 3.2688554907696096e-17,
+      "mu_relative": 2.002555552267425e-15,
+      "D_relative": 2.109627090383291e-14,
+      "energy_absolute": 3.3462534222913304e-20,
+      "mass_absolute": 1.8677244515626618e-19
+    },
+    "engineering_checks": {
+      "phi_relative": true,
+      "mu_relative": true,
+      "D_relative": true,
+      "energy_absolute": true,
+      "mass_absolute": true
+    },
+    "D_linear_correction": 7.741639221781745e-17,
+    "D_quadratic_term": 3.0672955487689104e-27,
+    "linear_solve_reason": 4,
+    "linear_solve_relative_residual": 5.4380791085899e-15,
+    "finite": true,
+    "published": false,
+    "rigorous_bound": false
+  },
+  "P2_rate_semidiscrete": {
+    "estimated_errors": {
+      "phi_relative": 5.119592544673649e-15,
+      "mu_relative": 2.797927055258671e-12,
+      "D_relative": 1.7931038252256863e-12,
+      "energy_absolute": 3.283043121224e-21,
+      "mass_absolute": 4.1834603798947014e-23
+    },
+    "engineering_checks": {
+      "phi_relative": true,
+      "mu_relative": true,
+      "D_relative": true,
+      "energy_absolute": true,
+      "mass_absolute": true
+    },
+    "D_linear_correction": -6.580101643364042e-15,
+    "D_quadratic_term": 1.0515411347618972e-21,
+    "linear_solve_reason": 4,
+    "linear_solve_relative_residual": 5.137531222524156e-11,
+    "finite": true,
+    "published": false,
+    "rigorous_bound": false
+  },
+  "P2_rate_zero": {
+    "estimated_errors": {
+      "phi_relative": 3.0664918096994306e-18,
+      "mu_relative": 8.503519122242214e-16,
+      "D_relative": 5.910990368838728e-16,
+      "energy_absolute": 1.553257458743354e-23,
+      "mass_absolute": 8.082604468101584e-23
+    },
+    "engineering_checks": {
+      "phi_relative": true,
+      "mu_relative": true,
+      "D_relative": true,
+      "energy_absolute": true,
+      "mass_absolute": true
+    },
+    "D_linear_correction": 2.1691395168812985e-18,
+    "D_quadratic_term": 2.1392730616603843e-28,
+    "linear_solve_reason": 4,
+    "linear_solve_relative_residual": 4.0800135050222705e-14,
+    "finite": true,
+    "published": false,
+    "rigorous_bound": false
+  }
+}

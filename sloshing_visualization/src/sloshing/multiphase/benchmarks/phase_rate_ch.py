@@ -168,11 +168,14 @@ class NewtonTrace:
         snes = self.engine.problem.solver
         rows = [r for r in self.rows if r["interval"] == self.interval]
         r0 = rows[0]["residual"] if rows else None
-        c = self.engine.solver.config
+        from ..nonlinear_accuracy import actual_controls
+        controls = actual_controls(snes)
+        atol, rtol = controls["atol"], controls["rtol"]
         return {"reason": snes.getConvergedReason(), "iterations": snes.getIterationNumber(),
             "initial_residual": r0, "final_residual": snes.getFunctionNorm(),
-            "atol_target": c.snes_atol, "rtol_target": c.snes_rtol*r0 if r0 is not None else None,
-            "effective_target": max(c.snes_atol, c.snes_rtol*r0) if r0 is not None else None,
+            "atol_target": atol, "rtol_target": rtol*r0 if r0 is not None else None,
+            "effective_target": max(atol, rtol*r0) if r0 is not None else None,
+            "actual_controls": controls,
             "snes_type": snes.getType(), "line_search_type": snes.getLineSearch().getType(),
             "tolerances": list(snes.getTolerances()), "accepted": snes.getConvergedReason() > 0}
 

@@ -1,0 +1,42 @@
+{
+  "execution_status": "failed",
+  "nonlinear_solver_status": "diverged",
+  "physical_checks": "not_run",
+  "accepted": false,
+  "formulation": "absolute",
+  "initial_guess": "phi_old",
+  "accuracy_level": "P0",
+  "dt": 4.657657028534679e-12,
+  "error": "error code 91\n[0] SNESSolve() at /usr/local/petsc/src/snes/interface/snes.c:4906\n[0] SNESSolve_NEWTONLS() at /usr/local/petsc/src/snes/impls/ls/ls.c:254\n[0] SNESSolve has not converged due DIVERGED_LINE_SEARCH.",
+  "numerical_accuracy_floor_detected": null,
+  "accuracy_floor_note": "A diverged solve alone does not prove a floating-point floor",
+  "SNES": {
+    "reason": -6,
+    "iterations": 11,
+    "initial_residual": 0.784388568715275,
+    "final_residual": 1.1109110367278936e-08,
+    "atol_target": 1e-10,
+    "rtol_target": 7.84388568715275e-10,
+    "effective_target": 7.84388568715275e-10,
+    "actual_controls": {
+      "atol": 1e-10,
+      "rtol": 1e-09,
+      "stol": 0.0,
+      "max_it": 30,
+      "snes_type": "newtonls",
+      "line_search_type": "bt",
+      "ksp_type": "preonly",
+      "pc_type": "lu",
+      "factor_solver_type": "mumps"
+    },
+    "snes_type": "newtonls",
+    "line_search_type": "bt",
+    "tolerances": [
+      1e-09,
+      1e-10,
+      0.0,
+      30
+    ],
+    "accepted": false
+  }
+}

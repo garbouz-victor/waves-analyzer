@@ -1,0 +1,138 @@
+{
+  "implementation": {
+    "git_commit": "7ed5609cb9f13012f750b3f7fce7c98454386b4c",
+    "source_sha256": "b03c1b0b50462467793d1237362572f7d572f3b30d300e9d9f02ff4ba01767f2",
+    "source_archive_sha256": "d344a9d306709291a2c685d8ae8d3ca625655ddabcff5589fe4ea5cd9522e772",
+    "docker_image": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+    "rate_version": "isolated-CH-BE-phase-rate-v2-transactional-retained",
+    "absolute_version": "STEP3A4-IsolatedCH-absolute"
+  },
+  "historical_input_provenance": {
+    "git_commit": "29d40b6cbddb882d5b6248dc2f52df5f8f93b2eb",
+    "multiphase_source_sha256": "6120797457f880dd022ee5da8d5aa14bf672868a7d530f901d40a3bf5e0173db",
+    "config_fingerprint": "fc852830b59288fdec8d6d7ac7df08892c5cead61151456d0253283cff90dbb6",
+    "docker_image_digest": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+    "rank_count": 1,
+    "dt_schedule": {
+      "blocks": [
+        {
+          "start": 0.0,
+          "end": 0.001,
+          "dt": 1e-05,
+          "count": 100,
+          "offset": 0,
+          "phase": "main",
+          "scheme": "be"
+        }
+      ],
+      "total_steps": 100,
+      "switch_rule": "first main interval BE, then fixed-spacing BDF2; no micro-history reuse"
+    },
+    "mesh_fingerprint": "93dbd2cf76148bcd50afef9e353c55f92c15789ad0e303dbb97435a4672b9b15",
+    "mesh_fingerprint_scope": "rank-ordered geometry/connectivity; rank/partition sensitive",
+    "equilibrium_fingerprint": "df3a6176bc442190c15ca8e4b6faa2c885dbbe89d5126196148d92b1552809fc",
+    "perturbation_coefficient_sha256": "831db9041c11ce04ab8974f34e841b62b56bd77474290e3c978c9b5f5af724d0",
+    "initial_phi_sha256": "6e59cd0bd3ee5c421af9694508d439e8e05a565de329ed38a14af39444d4e681",
+    "quadrature_degree": 12,
+    "mobility": 1.0,
+    "target_mass": -0.6060961027495515,
+    "input_recovery": "replay unchanged historical initializer; require BOTH archived coefficient hashes",
+    "spectrum_algorithm_version": "mass-zero-sparse-linearized-ch-v1"
+  },
+  "policy_sha256": "ec1b019d57c3aee93fda09dfdcb2e5f79d8a9722feb9a8b311272176660bb11b",
+  "required_hashes": {
+    "initial_phi_sha256": "6e59cd0bd3ee5c421af9694508d439e8e05a565de329ed38a14af39444d4e681",
+    "perturbation_coefficient_sha256": "831db9041c11ce04ab8974f34e841b62b56bd77474290e3c978c9b5f5af724d0",
+    "equilibrium_fingerprint": "df3a6176bc442190c15ca8e4b6faa2c885dbbe89d5126196148d92b1552809fc",
+    "optimized_plan_sha256": "5d291468a3520da5267a8d76b8015d0709f5e28b44fbaa5f8a7c6b264664e2b8"
+  },
+  "stack": {
+    "dolfinx": "0.10.0",
+    "PETSc": [
+      3,
+      24,
+      0
+    ],
+    "MUMPS": "5.8.1",
+    "scipy": "1.16.2",
+    "ufl": "2025.2.0",
+    "scalar_dtype": "float64",
+    "precision_bits": 64
+  },
+  "physical_config": {
+    "name": "prepared_variational_equilibrium60_symmetric_mesh",
+    "rho_liquid": 1.0,
+    "rho_gas": 1.0,
+    "mu_liquid": 1.0,
+    "mu_gas": 1.0,
+    "sigma": 0.1,
+    "epsilon": 0.025,
+    "mobility": 1.0,
+    "slip_length_m": 0.01,
+    "theta_equilibrium_deg": 60.0,
+    "g": 0.0,
+    "a_x": 0.0,
+    "length_scale_m": 0.3,
+    "velocity_scale_m_per_s": 0.1,
+    "x_min": -0.6,
+    "x_max": 0.6,
+    "z_min": 0.0,
+    "z_max": 0.6,
+    "nx": 96,
+    "nz": 48,
+    "phase_degree": 2,
+    "dt": 1e-05,
+    "t_end": 0.001,
+    "x_grading": 0.0,
+    "z_grading": 0.0,
+    "wetting_walls": [
+      "bottom"
+    ],
+    "no_slip_walls": [],
+    "free_slip_walls": [
+      "left",
+      "right",
+      "top"
+    ],
+    "time_scheme": "be",
+    "quadrature_degree": 12,
+    "snes_atol": 1e-10,
+    "snes_rtol": 1e-09,
+    "snes_max_it": 30,
+    "max_unknowns": 210000,
+    "refinement_levels": 0,
+    "refinement_circle_x": 0.0,
+    "refinement_circle_z": -0.15,
+    "refinement_circle_radius": 0.3,
+    "refinement_band_m": 0.16,
+    "startup_dt": null,
+    "startup_t_end": 0.0,
+    "startup_stages": [],
+    "refinement_boxes": [],
+    "mesh_diagonal": "crossed"
+  },
+  "physical_config_fingerprint": "d42900144d7d75c67e4455351ac98a0c41083623ed06de5c2987c1d35a485650",
+  "mesh_fingerprint": "93dbd2cf76148bcd50afef9e353c55f92c15789ad0e303dbb97435a4672b9b15",
+  "nonlinear_solver_controls": {
+    "atol": 3e-13,
+    "rtol": 3e-13,
+    "stol": 0.0,
+    "max_it": 30,
+    "snes_type": "newtonls",
+    "line_search_type": "bt",
+    "ksp_type": "preonly",
+    "pc_type": "lu",
+    "factor_solver_type": "mumps"
+  },
+  "actual_initial_physical_guess_sha256": "6e59cd0bd3ee5c421af9694508d439e8e05a565de329ed38a14af39444d4e681",
+  "old_physical_phi_sha256": "6e59cd0bd3ee5c421af9694508d439e8e05a565de329ed38a14af39444d4e681",
+  "mu_old_sha256": "e711921b7399300a33c9875d3d4e1f59025a072dc0c9715515c58f8ee03bcbad",
+  "dt": 1e-06,
+  "initial_guess_policy": "phi_old",
+  "initial_array_sha256": {
+    "phi_old": "6e59cd0bd3ee5c421af9694508d439e8e05a565de329ed38a14af39444d4e681",
+    "mu_old": "e711921b7399300a33c9875d3d4e1f59025a072dc0c9715515c58f8ee03bcbad",
+    "phi_guess": "6e59cd0bd3ee5c421af9694508d439e8e05a565de329ed38a14af39444d4e681",
+    "mixed_guess": "89acde670af72bb74acb52f756859a916ac0ef3895ec2aa3dd2e2d8f465e639a"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "local_pytest": {
+    "status": "passed",
+    "passed": 277,
+    "skipped": 24,
+    "deselected": 2,
+    "wall_s": 33.05,
+    "artifact": "local_all.xml"
+  },
+  "pinned_Docker_pytest": {
+    "status": "passed",
+    "passed": 186,
+    "wall_s": 81.51,
+    "artifact": "docker_all_final.xml"
+  },
+  "pre_scientific_pinned_checks": {
+    "status": "passed",
+    "passed": 20,
+    "wall_s": 2.91,
+    "artifact": "cheap_docker_final.xml"
+  },
+  "development_failures_preserved": {
+    "cheap_docker.xml": "First coarse strict absolute fixture did not converge at dt=1e-6; toy moderate interval changed to 1e-3; scientific intervals unchanged",
+    "docker_all.xml": "No tests ran because wildcard was not expanded; corrected invocation expanded it inside the container"
+  },
+  "remote_CI": "not_run_for_changes",
+  "pushed": false,
+  "production_experiments_in_CI": false
+}

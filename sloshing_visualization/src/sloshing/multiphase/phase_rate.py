@@ -9,7 +9,7 @@ import numpy as np
 from scipy.sparse import csr_matrix
 from scipy.sparse.linalg import splu
 
-VERSION = "isolated-CH-BE-phase-rate-v1"
+VERSION = "isolated-CH-BE-phase-rate-v2-transactional-retained"
 ABSOLUTE_VERSION = "STEP3A4-IsolatedCH-absolute"
 
 
@@ -127,7 +127,7 @@ an already initialized (including prepared constant-mu) physical observer.
         return {"rate_L2": self.metric.norm(rate), "rate_max_abs": float(max(abs(rate))),
             "dt_times_rate_max_abs": float(dt*max(abs(rate))), "mu_L2": self.metric.norm(mu)}
 
-    def step(self, dt, end_time=None):
+    def step(self, dt, end_time=None, *, candidate_validator=None):
         if not np.isfinite(dt) or dt <= 0:
             raise ValueError("Positive finite BE dt required")
         s = self.solver
@@ -146,26 +146,38 @@ an already initialized (including prepared constant-mu) physical observer.
         snes = self.problem.solver
         if snes.getConvergedReason() <= 0:
             raise RuntimeError("Phase-rate SNES failed; no publish or retry")
-        self.state.x.scatter_forward()
+        from dolfinx import fem
+        from .nonlinear_accuracy import (synchronized_solution, check_candidate_material,
+            publish_candidate, rate_arrays)
+        synchronized_solution(self.problem, self.state)
         rate = self.state.x.array[self.rate_map].copy()
         mu = self.state.x.array[self.mu_map].copy()
         physical = reconstruct_phase(self.phi_old.x.array, rate, dt)
         if not np.isfinite(mu).all():
             raise RuntimeError("Nonfinite mu; no publish")
-        # Atomic physical publication occurs only after positive convergence.
-        s.older.x.array[:] = s.state.x.array
-        s.state.x.array[self.physical_phi_map] = physical
-        s.state.x.array[self.physical_mu_map] = mu
-        s.state.x.scatter_forward(); s.older.x.scatter_forward()
-        s.old.x.array[:] = s.state.x.array; s.old.x.scatter_forward()
-        s._check_material()
-        self.last_accepted_rate = rate
-        s.step_number += 1
-        s.time = float(end_time) if end_time is not None else s.time+dt
-        s.current_dt, s.current_phase = dt, "isolated_ch_phase_rate_be"
-        result = {"step": s.step_number, "time": s.time, "dt": dt, "reason": snes.getConvergedReason(),
+        candidate = fem.Function(s.space)
+        candidate.x.array[:] = s.state.x.array
+        candidate.x.array[self.physical_phi_map] = physical
+        candidate.x.array[self.physical_mu_map] = mu
+        candidate.x.scatter_forward()
+        target_time = float(end_time) if end_time is not None else s.time+dt
+        if not np.isfinite(target_time) or target_time <= s.time:
+            raise ValueError("Invalid physical endpoint; no publish")
+        check_candidate_material(s, candidate)
+        snapshot = rate_arrays(self.phi_old.x.array, rate, mu, dt,
+            mixed_Function=self.state.x.array, PETSc_solution=self.problem.x.array,
+            rate_map=self.rate_map, mu_map=self.mu_map,
+            physical_phi_map=self.physical_phi_map, physical_mu_map=self.physical_mu_map)
+        result = {"step": s.step_number+1, "time": target_time, "dt": dt, "reason": snes.getConvergedReason(),
             "snes_iterations": snes.getIterationNumber(), "residual": snes.getFunctionNorm(),
             "runtime_s": time.perf_counter()-before, "dt_reductions": 0,
             "formulation": VERSION, **self.rate_statistics(dt)}
+        # Diagnostics use a private observer; failure cannot advance their
+        # cumulative accounting or any accepted physical field/history.
+        if candidate_validator is not None:
+            candidate_validator(candidate, snapshot, dt, target_time)
+        publish_candidate(s, candidate, dt, target_time, "isolated_ch_phase_rate_be")
+        self.last_accepted_rate = rate
+        self.last_snapshot = snapshot
         self.history.append(result)
         return result

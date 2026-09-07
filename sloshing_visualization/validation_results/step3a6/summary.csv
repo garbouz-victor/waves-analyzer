@@ -1,0 +1,9 @@
+run,accepted,reason,iterations,initial_residual,final_residual,physical_checks
+P1_absolute,True,2,2,0.784388568715275,1.0597937903250502e-13,passed
+P1_rate_semidiscrete,True,2,2,0.0022499094540893378,1.0687828242204918e-14,passed
+P2_absolute,True,2,2,0.784388568715275,1.0597937903250502e-13,passed
+P2_rate_semidiscrete,True,2,2,0.0022499094540893378,1.0687828242204918e-14,passed
+P2_rate_zero,True,2,2,0.784388568715275,9.917679305136229e-15,passed
+rate_semidiscrete,True,2,1,1.0479306253010026e-08,1.0169481201173405e-14,passed
+rate_zero,True,2,1,0.784388568715275,1.018174249112058e-14,passed
+absolute_control,False,-6,11,0.784388568715275,1.1109110367278936e-08,not_run

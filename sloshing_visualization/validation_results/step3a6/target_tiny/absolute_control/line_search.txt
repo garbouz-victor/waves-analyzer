@@ -1,0 +1,55 @@
+      Line search: Using full step: fnorm 7.843885687153e-01 gnorm 1.284725027459e-08
+      Line search: Using full step: fnorm 1.284725027459e-08 gnorm 1.155195414377e-08
+      Line search: Using full step: fnorm 1.155195414377e-08 gnorm 1.123268997478e-08
+      Line search: gnorm after quadratic fit 1.111334028240e-08
+      Line search: Quadratically determined step, lambda=4.9208009468209984e-01
+      Line search: gnorm after quadratic fit 1.111358365017e-08
+      Line search: Cubic step, current gnorm 1.111224573692e-08 lambda=2.0730465717735283e-01
+      Line search: gnorm after quadratic fit 1.111302323914e-08
+      Line search: Cubic step, current gnorm 1.111137953374e-08 lambda=2.0726007148973005e-01
+      Line search: gnorm after quadratic fit 1.111257927368e-08
+      Line search: Cubic step, current gnorm 1.111069373766e-08 lambda=2.0722429860011476e-01
+      Line search: gnorm after quadratic fit 1.111222875272e-08
+      Line search: Cubic step, current gnorm 1.111015117488e-08 lambda=2.0719616876390612e-01
+      Line search: gnorm after quadratic fit 1.111195018324e-08
+      Line search: Cubic step, current gnorm 1.110972130870e-08 lambda=2.0717425961764990e-01
+      Line search: gnorm after quadratic fit 1.111172940856e-08
+      Line search: Cubic step, current gnorm 1.110938047416e-08 lambda=2.0715640658673604e-01
+      Line search: gnorm after quadratic fit 1.111155416347e-08
+      Line search: Cubic step, current gnorm 1.110911036728e-08 lambda=2.0714247553668208e-01
+      Line search: gnorm after quadratic fit 1.111141575873e-08
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110889638511e-08 lambda=2.0713141358808551e-01
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110901720188e-08 lambda=9.0197453847999876e-02
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110906993616e-08 lambda=3.9154949394683031e-02
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110909278651e-08 lambda=1.7006531058770542e-02
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110910275152e-08 lambda=7.3859035307839082e-03
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110910703108e-08 lambda=3.2077354633422250e-03
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110910925838e-08 lambda=1.3931335775409232e-03
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110911030223e-08 lambda=6.0502472283128247e-04
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110911036728e-08 lambda=2.6273497478041549e-04
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110911036728e-08 lambda=1.1409492551513215e-04
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110911036728e-08 lambda=4.9546695132374198e-05
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110911036728e-08 lambda=2.1516075882599092e-05
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110911036728e-08 lambda=9.3435398189316530e-06
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110911036728e-08 lambda=4.0575120159990971e-06
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110911036728e-08 lambda=1.7620092680395634e-06
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110911036728e-08 lambda=7.6516758262324973e-07
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110911036728e-08 lambda=3.3228056180770296e-07
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110911036728e-08 lambda=1.4429567360501066e-07
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110911036728e-08 lambda=6.2661629400910421e-08
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110911036728e-08 lambda=2.7211348068032435e-08
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110911036728e-08 lambda=1.1816760444292740e-08
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110911036728e-08 lambda=5.1315292079132272e-09
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110911036728e-08 lambda=2.2284104121265036e-09
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110911036728e-08 lambda=9.6770626526224104e-10
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110911036728e-08 lambda=4.2023471562142095e-10
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110911036728e-08 lambda=1.8249051654694001e-10
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110911036728e-08 lambda=7.9248066358160332e-11
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110911036728e-08 lambda=3.4414150062926601e-11
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110911036728e-08 lambda=1.4944638765077925e-11
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110911036728e-08 lambda=6.4898370992828947e-12
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110911036728e-08 lambda=2.8182672219316772e-12
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110911036728e-08 lambda=1.2238566257837386e-12
+      Line search: Cubic step no good, shrinking lambda, current gnorm 1.110911036728e-08 lambda=5.3147019871597898e-13
+      Line search: unable to find good step length! After 33 tries 
+      Line search: fnorm=1.1109110367278936e-08, gnorm=1.1109110367278936e-08, ynorm=5.9145241432912549e-13, minlambda=9.9999999999999998e-13, lambda=5.3147019871597898e-13, initial slope=-1.2341233315238434e-16

@@ -47,3 +47,4 @@ validation_results/step3a3/krylov/rational/krylov_reference.npz
 # unrestarted basis above remains local-only and is fingerprinted in JSON.
 validation_results/step3a4/cache/
 validation_results/step3a5/cache/
+validation_results/step3a6/cache/

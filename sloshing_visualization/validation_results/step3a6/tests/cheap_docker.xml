@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="20" time="23.287" timestamp="2026-09-07T19:57:06.992334+00:00" hostname="5a0c2e1d7234"><testcase classname="tests.test_step3a5_phase_rate" name="test_scalar_moderate_equivalence_and_jacobian_chain_rule" time="0.001" /><testcase classname="tests.test_step3a5_phase_rate" name="test_tiny_absolute_subtraction_loses_digits_but_rate_retains_root" time="0.001" /><testcase classname="tests.test_step3a5_phase_rate" name="test_reconstruction_is_exact_coefficient_expression_without_aliases" time="0.001" /><testcase classname="tests.test_step3a5_phase_rate" name="test_tiny_FE_residual_and_jacobian_equivalence_and_FD" time="10.252" /><testcase classname="tests.test_step3a5_phase_rate" name="test_prepared_uniform_rate_equilibrium_is_preserved" time="0.114" /><testcase classname="tests.test_step3a5_phase_rate" name="test_tiny_nonlinear_rate_convergence_and_diagnostic_trace" time="3.573" /><testcase classname="tests.test_step3a5_phase_rate" name="test_rate_failed_SNES_does_not_publish_or_advance[True]" time="0.002" /><testcase classname="tests.test_step3a5_phase_rate" name="test_rate_failed_SNES_does_not_publish_or_advance[False]" time="0.002" /><testcase classname="tests.test_step3a5_phase_rate" name="test_failed_moderate_gate_forbids_linear_and_downstream_work" time="0.005" /><testcase classname="tests.test_step3a5_phase_rate" name="test_unscaled_phase_rate_guess_across_dt_changes_is_pure_kinematics" time="0.001" /><testcase classname="tests.test_step3a6_accuracy" name="test_controls_are_separate_from_physics_and_cannot_leak" time="0.004" /><testcase classname="tests.test_step3a6_accuracy" name="test_NewtonTrace_target_uses_actual_not_config_tolerances" time="0.002" /><testcase classname="tests.test_step3a6_accuracy" name="test_retained_rate_snapshot_roundtrip_and_independent_arrays" time="0.016" /><testcase classname="tests.test_step3a6_accuracy" name="test_finite_and_snapshot_reject_nonfinite[nan]" time="0.002" /><testcase classname="tests.test_step3a6_accuracy" name="test_finite_and_snapshot_reject_nonfinite[inf]" time="0.002" /><testcase classname="tests.test_step3a6_accuracy" name="test_finite_and_snapshot_reject_nonfinite[-inf]" time="0.002" /><testcase classname="tests.test_step3a6_accuracy" name="test_cross_PASS_never_overrides_physical_FAIL_and_P1_cross_FAIL_can_proceed" time="0.034" /><testcase classname="tests.test_step3a6_accuracy" name="test_strict_tiny_FEM_moderate_comparison_and_matched_guess" time="0.180"><failure message="petsc4py.PETSc.Error: error code 91&#10;[0] SNESSolve() at /usr/local/petsc/src/snes/interface/snes.c:4906&#10;[0] SNESSolve_NEWTONLS() at /usr/local/petsc/src/snes/impls/ls/ls.c:253&#10;[0] SNESSolve has not converged due to DIVERGED_LINE_SEARCH. Suggest running with -snes_linesearch_monitor">tmp_path = PosixPath('/tmp/pytest-of-root/pytest-0/test_strict_tiny_FEM_moderate_0')
+
+    def test_strict_tiny_FEM_moderate_comparison_and_matched_guess(tmp_path):
+        from test_step3a5_phase_rate import tiny_solver
+        from sloshing.multiphase.isolated_ch import IsolatedCH
+        from sloshing.multiphase.phase_rate import IsolatedCHPhaseRate,PhaseMetric
+        from sloshing.multiphase.benchmarks.accuracy_ch import residual_audit
+        fields={}
+        for name in ("absolute","semidiscrete","zero"):
+            s=tiny_solver()
+            initial=lambda x:.2+.1*np.cos(2*x[0])*np.cos(3*x[1])
+            engine=IsolatedCH(s,initial) if name=="absolute" else IsolatedCHPhaseRate(s,initial,initial_guess=name)
+            mu_old=s.state.sub(3).collapse().x.array.copy()
+            apply_controls(engine.problem.solver,NonlinearControls(3e-13,3e-13),"tiny_accuracy_"+name+"_")
+&gt;           engine.step(1e-6)
+
+tests/test_step3a6_accuracy.py:92: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/sloshing/multiphase/isolated_ch.py:52: in step
+    self.problem.solve()
+/usr/local/dolfinx-real/lib/python3.12/dist-packages/dolfinx/fem/petsc.py:1351: in solve
+    self.solver.solve(None, self.x)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+&gt;   ???
+E   petsc4py.PETSc.Error: error code 91
+E   [0] SNESSolve() at /usr/local/petsc/src/snes/interface/snes.c:4906
+E   [0] SNESSolve_NEWTONLS() at /usr/local/petsc/src/snes/impls/ls/ls.c:253
+E   [0] SNESSolve has not converged due to DIVERGED_LINE_SEARCH. Suggest running with -snes_linesearch_monitor
+
+petsc4py/PETSc/SNES.pyx:1738: Error</failure></testcase><testcase classname="tests.test_step3a6_accuracy" name="test_converged_SNES_material_failure_preserves_every_accepted_field" time="8.587" /><testcase classname="tests.test_step3a6_accuracy" name="test_physical_validator_failure_does_not_publish" time="0.128" /></testsuite></testsuites>

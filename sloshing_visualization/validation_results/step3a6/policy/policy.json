@@ -1,0 +1,78 @@
+{
+  "policy": {
+    "moderate_dt": 1e-06,
+    "tiny_dt": 4.657657028534679e-12,
+    "delta": 0.001,
+    "controls": {
+      "P0": {
+        "atol": 1e-10,
+        "rtol": 1e-09,
+        "stol": 0.0,
+        "max_it": 30,
+        "snes_type": "newtonls",
+        "line_search_type": "bt",
+        "ksp_type": "preonly",
+        "pc_type": "lu",
+        "factor_solver_type": "mumps"
+      },
+      "P1": {
+        "atol": 1e-12,
+        "rtol": 1e-12,
+        "stol": 0.0,
+        "max_it": 30,
+        "snes_type": "newtonls",
+        "line_search_type": "bt",
+        "ksp_type": "preonly",
+        "pc_type": "lu",
+        "factor_solver_type": "mumps"
+      },
+      "P2": {
+        "atol": 3e-13,
+        "rtol": 3e-13,
+        "stol": 0.0,
+        "max_it": 30,
+        "snes_type": "newtonls",
+        "line_search_type": "bt",
+        "ksp_type": "preonly",
+        "pc_type": "lu",
+        "factor_solver_type": "mumps"
+      }
+    },
+    "hashes": {
+      "initial_phi_sha256": "6e59cd0bd3ee5c421af9694508d439e8e05a565de329ed38a14af39444d4e681",
+      "perturbation_coefficient_sha256": "831db9041c11ce04ab8974f34e841b62b56bd77474290e3c978c9b5f5af724d0",
+      "equilibrium_fingerprint": "df3a6176bc442190c15ca8e4b6faa2c885dbbe89d5126196148d92b1552809fc",
+      "optimized_plan_sha256": "5d291468a3520da5267a8d76b8015d0709f5e28b44fbaa5f8a7c6b264664e2b8"
+    },
+    "relative_comparison": 1e-10,
+    "absolute_energy_mass_comparison": 1e-12,
+    "newton_estimate_fraction": 0.25,
+    "mass_domain": 1e-10,
+    "certified_cells": 8.0,
+    "energy_growth": 1e-09,
+    "weak_work": 1e-12,
+    "linear_endpoint": 1e-10,
+    "linear_increment": 1e-06,
+    "linear_mass": 1e-11,
+    "nonlinear_increment": 0.001,
+    "contrast_ratio": 10.0,
+    "wall_budget_s": 1800.0,
+    "moderate_runs": [
+      "P1_absolute",
+      "P1_rate_semidiscrete",
+      "P2_absolute",
+      "P2_rate_semidiscrete",
+      "P2_rate_zero"
+    ],
+    "target_runs": [
+      "rate_semidiscrete",
+      "rate_zero",
+      "absolute_control"
+    ],
+    "pilot_authorized": false,
+    "full_series_authorized": false,
+    "full_CHNS_transfer": "not_qualified"
+  },
+  "policy_sha256": "ec1b019d57c3aee93fda09dfdcb2e5f79d8a9722feb9a8b311272176660bb11b",
+  "design_sha256": "2e0acabba969d05d8e82063ae4aaaf005be3aa741e6701e749d0680aea22092c"
+}

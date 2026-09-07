@@ -1,0 +1,186 @@
+{
+  "wall_s": 19.314103326993063,
+  "cpu_s": 14.072861644,
+  "peak_RSS_bytes": 939864064,
+  "peak_RSS_scope": "Linux process lifetime high-water mark, not stage increment",
+  "categories": {
+    "assembly": {
+      "count": 1,
+      "wall_s": 0.5481335819931701,
+      "cpu_s": 0.5449801379999997
+    },
+    "factorization_setup": null,
+    "nonlinear_SNES": {
+      "count": 1,
+      "wall_s": 3.274318896001205,
+      "cpu_s": 3.2702668009999982
+    },
+    "linear_solve": null,
+    "diagnostics": {
+      "count": 2,
+      "wall_s": 1.5732808669854421,
+      "cpu_s": 1.5189979139999963
+    },
+    "interface_resolution": null,
+    "contact_geometry": null,
+    "filesystem_write": null,
+    "BE_work": null,
+    "initialization": null,
+    "initialization_JIT": {
+      "count": 1,
+      "wall_s": 9.379422715021065,
+      "cpu_s": 5.098487427000002
+    },
+    "archival_IO": {
+      "count": 1,
+      "wall_s": 0.5257743580150418,
+      "cpu_s": 0.49344642999999877
+    },
+    "residual_reassembly": {
+      "count": 1,
+      "wall_s": 0.571994347992586,
+      "cpu_s": 0.5404708559999989
+    },
+    "diagnostic_Newton_factor": {
+      "count": 1,
+      "wall_s": 1.8783314479805995,
+      "cpu_s": 1.8781261720000018
+    },
+    "diagnostic_Newton_solve": {
+      "count": 1,
+      "wall_s": 0.06455241100047715,
+      "cpu_s": 0.06455710400000214
+    }
+  },
+  "records": {
+    "assembly": [
+      {
+        "wall_s": 0.5481335819931701,
+        "cpu_s": 0.5449801379999997
+      }
+    ],
+    "factorization_setup": [],
+    "nonlinear_SNES": [
+      {
+        "wall_s": 3.274318896001205,
+        "cpu_s": 3.2702668009999982
+      }
+    ],
+    "linear_solve": [],
+    "diagnostics": [
+      {
+        "wall_s": 0.626559697004268,
+        "cpu_s": 0.6264946889999976
+      },
+      {
+        "wall_s": 0.9467211699811742,
+        "cpu_s": 0.8925032249999987
+      }
+    ],
+    "interface_resolution": [],
+    "contact_geometry": [],
+    "filesystem_write": [],
+    "BE_work": [],
+    "initialization": [],
+    "initialization_JIT": [
+      {
+        "wall_s": 9.379422715021065,
+        "cpu_s": 5.098487427000002
+      }
+    ],
+    "archival_IO": [
+      {
+        "wall_s": 0.5257743580150418,
+        "cpu_s": 0.49344642999999877
+      }
+    ],
+    "residual_reassembly": [
+      {
+        "wall_s": 0.571994347992586,
+        "cpu_s": 0.5404708559999989
+      }
+    ],
+    "diagnostic_Newton_factor": [
+      {
+        "wall_s": 1.8783314479805995,
+        "cpu_s": 1.8781261720000018
+      }
+    ],
+    "diagnostic_Newton_solve": [
+      {
+        "wall_s": 0.06455241100047715,
+        "cpu_s": 0.06455710400000214
+      }
+    ]
+  },
+  "timing_semantics": "application category timers; nested PETSc events reported separately",
+  "PETSc": {
+    "inclusive_nested_events": {
+      "MatLUFactorSym": {
+        "count": 7,
+        "flops": 0.0,
+        "time": 6.473523227999863,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "MatLUFactorNum": {
+        "count": 10,
+        "flops": 81232985.0,
+        "time": 4.952947178000272,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "MatSolve": {
+        "count": 10,
+        "flops": 144211044.0,
+        "time": 0.5719897340002262,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "KSPSolve": {
+        "count": 10,
+        "flops": 144211044.0,
+        "time": 0.5722585740003296,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "PCSetUp": {
+        "count": 10,
+        "flops": 81232985.0,
+        "time": 11.427229465000323,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "SNESFunctionEval": {
+        "count": 9,
+        "flops": 0.0,
+        "time": 1.1790495720000536,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "SNESJacobianEval": {
+        "count": 6,
+        "flops": 10907124.0,
+        "time": 3.1827326209999,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "SNESSolve": {
+        "count": 3,
+        "flops": 220106073.0,
+        "time": 12.459603694000066,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      }
+    },
+    "available": true
+  }
+}

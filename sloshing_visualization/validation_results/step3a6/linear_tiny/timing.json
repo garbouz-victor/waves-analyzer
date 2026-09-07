@@ -1,0 +1,151 @@
+{
+  "wall_s": 4.932397391006816,
+  "cpu_s": 4.844130852999999,
+  "peak_RSS_bytes": 502530048,
+  "peak_RSS_scope": "Linux process lifetime high-water mark, not stage increment",
+  "categories": {
+    "assembly": {
+      "count": 2,
+      "wall_s": 0.13234458499937318,
+      "cpu_s": 0.13235483199999942
+    },
+    "factorization_setup": {
+      "count": 2,
+      "wall_s": 2.744874034979148,
+      "cpu_s": 2.744592325
+    },
+    "nonlinear_SNES": null,
+    "linear_solve": {
+      "count": 2,
+      "wall_s": 0.11971252900548279,
+      "cpu_s": 0.11973070099999994
+    },
+    "diagnostics": null,
+    "interface_resolution": null,
+    "contact_geometry": null,
+    "filesystem_write": null,
+    "BE_work": null,
+    "initialization": {
+      "count": 1,
+      "wall_s": 1.2278901140089147,
+      "cpu_s": 1.219098726
+    }
+  },
+  "records": {
+    "assembly": [
+      {
+        "dt": 4.657657028534679e-12,
+        "wall_s": 0.09395847900304943,
+        "cpu_s": 0.09396780499999968
+      },
+      {
+        "wall_s": 0.03838610599632375,
+        "cpu_s": 0.03838702699999974
+      }
+    ],
+    "factorization_setup": [
+      {
+        "dt": 4.657657028534679e-12,
+        "wall_s": 1.334223812998971,
+        "cpu_s": 1.3340482370000002
+      },
+      {
+        "wall_s": 1.4106502219801769,
+        "cpu_s": 1.410544088
+      }
+    ],
+    "nonlinear_SNES": [],
+    "linear_solve": [
+      {
+        "dt": 4.657657028534679e-12,
+        "wall_s": 0.049039973004255444,
+        "cpu_s": 0.04904713700000052
+      },
+      {
+        "wall_s": 0.07067255600122735,
+        "cpu_s": 0.07068356399999942
+      }
+    ],
+    "diagnostics": [],
+    "interface_resolution": [],
+    "contact_geometry": [],
+    "filesystem_write": [],
+    "BE_work": [],
+    "initialization": [
+      {
+        "wall_s": 1.2278901140089147,
+        "cpu_s": 1.219098726
+      }
+    ]
+  },
+  "timing_semantics": "application category timers; nested PETSc events reported separately",
+  "PETSc": {
+    "inclusive_nested_events": {
+      "MatLUFactorSym": {
+        "count": 2,
+        "flops": 0.0,
+        "time": 1.6798425599999973,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "MatLUFactorNum": {
+        "count": 2,
+        "flops": 20298880.0,
+        "time": 0.9578140509999002,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "MatSolve": {
+        "count": 2,
+        "flops": 35816232.0,
+        "time": 0.11648771600005148,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "KSPSolve": {
+        "count": 2,
+        "flops": 35816232.0,
+        "time": 0.116541581999968,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "PCSetUp": {
+        "count": 2,
+        "flops": 20298880.0,
+        "time": 2.6377986300000202,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "SNESFunctionEval": {
+        "count": 0,
+        "flops": 0.0,
+        "time": 0.0,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "SNESJacobianEval": {
+        "count": 0,
+        "flops": 0.0,
+        "time": 0.0,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "SNESSolve": {
+        "count": 0,
+        "flops": 0.0,
+        "time": 0.0,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      }
+    },
+    "available": true
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "execution_status": "complete",
+  "linear_comparison": "passed",
+  "benchmark": "full sparse LINEAR one-step only",
+  "errors": {
+    "endpoint_relative": 2.630086842303337e-16,
+    "increment_relative": 1.9528483059363634e-11,
+    "mass_domain": 1.0618306496279706e-18
+  },
+  "checks": {
+    "endpoint_relative": true,
+    "increment_relative": true,
+    "mass_domain": true,
+    "finite": true,
+    "KSP_converged": true
+  },
+  "array_sha256": {
+    "q0": "680075c7805340fc06629990ce928da2eef9068384696d4304d83ba0b49bff51",
+    "q_new_old_linear": "a5307700f810cf677e842b5b99d81c5a825d7aa613f51679a101117118b101bc",
+    "q_new_rate_linear": "fc332b0b453f79f8c12725652b96ad18d500076045d68fed645eb5ea5ce59045",
+    "rate_linear": "48fd9558b0938b8ef7dc8bc94c502a5ac462e0d6fc01ee1a1c52983cbcec531e",
+    "mu_linear": "415473394d1d2565f66b3d91ea8c2636589882317816f5f92999559bb923fdcb",
+    "increment_from_rate": "655dd27a3845901573b23cdf5991db55d997ce70c6f782327fa4a1ed7e65d9f3",
+    "increment_old_physical": "7cc45a31e29c02ce92cf35b79bb24a6e189bbd6700d090386653941948a78a63",
+    "increment_rate_physical": "b27b8f6d668fdbbffd5c5b17b9afc0aac84d844abc23767a2825d76f3c0292df",
+    "dt": "6543ccca61cf51b0f084664736c61e6097f1cb044f85dc7a8ff813fdb648205d"
+  },
+  "KSP_reason": 4,
+  "sparse_system_relative_residual": 9.059722133201474e-11
+}

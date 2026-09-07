@@ -1,0 +1,15 @@
+{
+  "accepted": false,
+  "execution_status": "failed",
+  "array_sha256": {
+    "last_evaluated_Function": "3b2908a715c8f28bf6d8afcdef2e6fb5133c5ac77385382f6eb1d37db141398e",
+    "internal_SNES_iterate": "3b2908a715c8f28bf6d8afcdef2e6fb5133c5ac77385382f6eb1d37db141398e",
+    "accepted_physical_state": "839aee8bab142d753a70e9db3d6aaffab0bb60212bcd27c66a7a4c35d037d21d",
+    "phi_old": "6e59cd0bd3ee5c421af9694508d439e8e05a565de329ed38a14af39444d4e681",
+    "mu_old": "e711921b7399300a33c9875d3d4e1f59025a072dc0c9715515c58f8ee03bcbad",
+    "phase_map": "1f0061f0e9f1fcf7fa41a46c57fc1fa63aa1b6699ad175a4bb2ed333e693fbe5",
+    "mu_map": "348e21cf3e5cd7784c3ec8a1f4b593ff4d5f7b35310feaede686d6c453dc72c3",
+    "dt": "6543ccca61cf51b0f084664736c61e6097f1cb044f85dc7a8ff813fdb648205d"
+  },
+  "note": "Function last residual trial, internal SNES iterate, and physical accepted state are DISTINCT; no rejected field published"
+}

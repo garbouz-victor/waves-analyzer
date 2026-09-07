@@ -1,0 +1,129 @@
+{
+  "wall_s": 26.896335279976483,
+  "cpu_s": 26.537712550000002,
+  "peak_RSS_bytes": 973193216,
+  "peak_RSS_scope": "Linux process lifetime high-water mark, not stage increment",
+  "categories": {
+    "assembly": null,
+    "factorization_setup": null,
+    "nonlinear_SNES": {
+      "count": 1,
+      "wall_s": 20.9326764739817,
+      "cpu_s": 20.832689134999995
+    },
+    "linear_solve": null,
+    "diagnostics": {
+      "count": 1,
+      "wall_s": 0.8417985429987311,
+      "cpu_s": 0.8417697239999988
+    },
+    "interface_resolution": null,
+    "contact_geometry": null,
+    "filesystem_write": null,
+    "BE_work": null,
+    "initialization": null,
+    "initialization_JIT": {
+      "count": 1,
+      "wall_s": 4.366641314991284,
+      "cpu_s": 4.211811195999999
+    }
+  },
+  "records": {
+    "assembly": [],
+    "factorization_setup": [],
+    "nonlinear_SNES": [
+      {
+        "wall_s": 20.9326764739817,
+        "cpu_s": 20.832689134999995
+      }
+    ],
+    "linear_solve": [],
+    "diagnostics": [
+      {
+        "wall_s": 0.8417985429987311,
+        "cpu_s": 0.8417697239999988
+      }
+    ],
+    "interface_resolution": [],
+    "contact_geometry": [],
+    "filesystem_write": [],
+    "BE_work": [],
+    "initialization": [],
+    "initialization_JIT": [
+      {
+        "wall_s": 4.366641314991284,
+        "cpu_s": 4.211811195999999
+      }
+    ]
+  },
+  "timing_semantics": "application category timers; nested PETSc events reported separately",
+  "PETSc": {
+    "inclusive_nested_events": {
+      "MatLUFactorSym": {
+        "count": 6,
+        "flops": 0.0,
+        "time": 4.138597278999896,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "MatLUFactorNum": {
+        "count": 17,
+        "flops": 155604541.0,
+        "time": 8.308930811999971,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "MatSolve": {
+        "count": 17,
+        "flops": 272475936.0,
+        "time": 0.952426341999967,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "KSPSolve": {
+        "count": 17,
+        "flops": 272475936.0,
+        "time": 0.9528139520000423,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "PCSetUp": {
+        "count": 17,
+        "flops": 155604541.0,
+        "time": 12.448485497999968,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "SNESFunctionEval": {
+        "count": 66,
+        "flops": 0.0,
+        "time": 7.420280722000257,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "SNESJacobianEval": {
+        "count": 14,
+        "flops": 32251380.0,
+        "time": 5.326491539999893,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "SNESSolve": {
+        "count": 3,
+        "flops": 71816946.0,
+        "time": 3.7275607210000317,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      }
+    },
+    "available": true
+  }
+}
