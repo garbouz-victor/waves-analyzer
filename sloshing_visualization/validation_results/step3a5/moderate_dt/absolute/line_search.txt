@@ -1,0 +1,1 @@
+      Line search: Using full step: fnorm 7.843885687153e-01 gnorm 1.768754327739e-11

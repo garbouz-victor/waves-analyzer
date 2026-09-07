@@ -1,0 +1,14 @@
+{
+  "git_commit_at_report_generation": "6106f8977be23a12446c2ea2d5aed0ea3311cf17",
+  "current_multiphase_source_sha256": "4673dc5bcb4e4753324452af0faefb4dd99600b6c685ebfa0ca74c1f827cb5dc",
+  "report_generator_sha256": "eda98e9ccc4bf14a6f562c61c7f9c3295ed0c3f9330eac694034016e5af0d624",
+  "scientific_run_provenance_is_separate": true,
+  "input_sha256": {
+    "validation_results/step3a5/moderate_dt/status.json": "8302ea4a1bad1231ab80fc272b4a6421224487371a6389c3780f7a2ee068026f",
+    "validation_results/step3a5/moderate_dt/provenance.json": "dbd0e41faf6754b61660cb27fb351bd396dcaf8cefe68eca435a0da72345181b",
+    "validation_results/step3a5/algebraic_equivalence/moderate_postmortem/status.json": "d47f4cbe2e55574b1695844e45dca6ffe294b57a9d3ecf33f002058114305116",
+    "validation_results/step3a5/pure_tests_final.xml": "2db61520955728191ddfebf20977ebaaed4dd9c6ff0e10807bf8b4eaf424dcfc",
+    "validation_results/step3a5/docker_tests_final.xml": "d28eb548c1d82d9a834810fa2bb4bc172ef01d68bbe73ca2b361ee1ac7f5e7ca",
+    "validation_results/step3a4/performance/failed_interval_audit/status.json": "4b4710428f0dec5a96a7f8c18f99ccbb050d371a243c779e352138b9f69523b5"
+  }
+}

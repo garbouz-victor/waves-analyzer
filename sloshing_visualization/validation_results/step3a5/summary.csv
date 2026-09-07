@@ -1,0 +1,10 @@
+scope,metric,absolute,phase_rate,difference,threshold,status
+moderate_dt,phi_L2_relative,,,1.9758694794471097e-11,1e-10,PASS
+moderate_dt,mu_L2_relative,,,1.672496974051572e-08,1e-10,FAIL
+moderate_dt,energy_absolute,,,2.914335439641036e-16,1e-12,PASS
+moderate_dt,mass_absolute,,,2.886579864025407e-15,1e-12,PASS
+moderate_dt,D_CH_relative,,,1.5872725356302908e-09,1e-10,FAIL
+tiny_step_linear,execution,,,,,NOT RUN: moderate gate failed
+tiny_step_nonlinear,execution,,,,,NOT RUN: moderate gate failed
+pilot,execution,,,,,NOT RUN: moderate gate failed
+tiny_step_full_ch_from_isolated,execution,,,,,NOT RUN: moderate gate failed

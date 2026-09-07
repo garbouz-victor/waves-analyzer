@@ -1,0 +1,40 @@
+{
+  "policy": {
+    "tiny_dt": 4.657657028534679e-12,
+    "moderate_dt": 1e-06,
+    "snes_atol": 1e-10,
+    "snes_rtol": 1e-09,
+    "snes_stol": 0.0,
+    "snes_max_it": 30,
+    "snes_type": "newtonls",
+    "snes_linesearch_type": "bt",
+    "moderate_phi_mu_D_relative": 1e-10,
+    "moderate_energy_mass_absolute": 1e-12,
+    "linear_endpoint_relative": 1e-10,
+    "linear_increment_relative": 1e-06,
+    "linear_mass_domain": 1e-11,
+    "nonlinear_increment_relative": 0.001,
+    "mass_domain": 1e-10,
+    "certified_cells": 8.0,
+    "energy_growth_J_per_m": 1e-09,
+    "weak_work_J_per_m": 1e-12,
+    "root_cause_residual_ratio": 10.0,
+    "initial_guess": "unprojected semidiscrete rate; unchanged consistent mu",
+    "pilot_guess": "previous accepted rate, unscaled at block changes",
+    "pilot_steps": 50,
+    "series_execution_authorized": false,
+    "isolated_level0_wall_s": 7200.0,
+    "isolated_series_wall_s": 28800.0,
+    "analysis_stage_wall_s": 3600.0,
+    "analysis_total_wall_s": 7200.0,
+    "full_CHNS_study_wall_s": 7200.0,
+    "required_hashes": {
+      "initial_phi_sha256": "6e59cd0bd3ee5c421af9694508d439e8e05a565de329ed38a14af39444d4e681",
+      "perturbation_coefficient_sha256": "831db9041c11ce04ab8974f34e841b62b56bd77474290e3c978c9b5f5af724d0",
+      "equilibrium_fingerprint": "df3a6176bc442190c15ca8e4b6faa2c885dbbe89d5126196148d92b1552809fc",
+      "optimized_plan_sha256": "5d291468a3520da5267a8d76b8015d0709f5e28b44fbaa5f8a7c6b264664e2b8"
+    }
+  },
+  "policy_sha256": "e25c19d0411b8df7cb4d5640cd5a8a585b9232aa10adf0e39e484dcd22f7778c",
+  "design_sha256": "b9a751f415557085572867ca4a6bbfe5925f49f81e7f5c7a1fb9134c7d67bb41"
+}

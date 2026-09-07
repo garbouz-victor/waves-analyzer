@@ -11,7 +11,7 @@ step3_commit="$(git -C "$step3_project_dir" rev-parse HEAD)"
 step3_image="$(docker image inspect --format '{{.Id}}' waves-step3:0.10.0)"
 exec docker run --rm --network=none --user "${STEP3_DOCKER_USER:-$step3_uid}" \
   --env "STEP3_GIT_COMMIT=$step3_commit" --env "STEP3_DOCKER_IMAGE_DIGEST=$step3_image" \
-  --env XDG_CACHE_HOME=/work/validation_results/step3a4/cache \
-  --env MPLCONFIGDIR=/work/validation_results/step3a4/cache/matplotlib \
+  --env XDG_CACHE_HOME=/work/validation_results/step3a5/cache \
+  --env MPLCONFIGDIR=/work/validation_results/step3a5/cache/matplotlib \
   --mount "type=bind,source=${step3_project_dir},target=/work" \
   waves-step3:0.10.0 "$@"

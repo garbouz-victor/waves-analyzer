@@ -1,0 +1,72 @@
+{
+  "status": "complete",
+  "qualification_status": "diagnostic_only",
+  "PDE_steps": 0,
+  "nonlinear_solves": 0,
+  "no_tolerance_or_policy_changes": true,
+  "comparison_qualification": "failed",
+  "states": {
+    "absolute": {
+      "algebraic_norms": {
+        "absolute_literal_phase": 1.1395242942041474e-13,
+        "physical_chemical": 1.7687176202924624e-11,
+        "coefficient_difference_UFL_phase": 8.810893774038857e-14,
+        "recovered_rate_UFL_phase": 8.810907947909439e-14,
+        "sparse_coefficient_phase": 1.0122583936679091e-13,
+        "recovered_rate_chemical": 1.7687176295522417e-11
+      },
+      "Riesz_L2_norms": {
+        "absolute_literal_phase": 2.955479797368153e-11,
+        "physical_chemical": 3.644600265229293e-09,
+        "coefficient_difference_UFL_phase": 2.2049995619395732e-11,
+        "recovered_rate_UFL_phase": 2.2050014572270653e-11,
+        "sparse_coefficient_phase": 2.6672393912332076e-11,
+        "recovered_rate_chemical": 3.6446002712472856e-09
+      },
+      "chemical_form_difference_norm": 6.321161579619099e-17,
+      "literal_time_vs_coefficient_norm": 7.319836841829584e-14,
+      "phase_time_block_norm": 0.029866562344153247,
+      "phase_flux_block_norm": 0.02986656234415394,
+      "rate_recovered_L2": 6.065135031169093,
+      "rate_recovered_max": 75.85049576586123,
+      "dt_times_rate_recovered_max": 7.585049576586123e-05,
+      "max_ULP_over_dt": 2.220446049250313e-10,
+      "rate_recovery_note": "diagnostic coefficient difference only; original moderate rate coefficients were not archived",
+      "reconstruction_bitwise_equal": true
+    },
+    "phase_rate": {
+      "algebraic_norms": {
+        "absolute_literal_phase": 1.1378223236193307e-13,
+        "physical_chemical": 3.551209351639062e-15,
+        "coefficient_difference_UFL_phase": 8.834685804640059e-14,
+        "recovered_rate_UFL_phase": 8.834694721991113e-14,
+        "sparse_coefficient_phase": 1.0179068752565871e-13,
+        "recovered_rate_chemical": 3.5509081253222945e-15
+      },
+      "Riesz_L2_norms": {
+        "absolute_literal_phase": 2.966794974788412e-11,
+        "physical_chemical": 7.443809951244999e-13,
+        "coefficient_difference_UFL_phase": 2.2188404528468086e-11,
+        "recovered_rate_UFL_phase": 2.218841715400423e-11,
+        "sparse_coefficient_phase": 2.682489651019072e-11,
+        "recovered_rate_chemical": 7.440460305347624e-13
+      },
+      "chemical_form_difference_norm": 6.265485078346775e-17,
+      "literal_time_vs_coefficient_norm": 7.300747082350755e-14,
+      "phase_time_block_norm": 0.029866562309240424,
+      "phase_flux_block_norm": 0.029866562309240726,
+      "rate_recovered_L2": 6.065135024041835,
+      "rate_recovered_max": 75.85024192979795,
+      "dt_times_rate_recovered_max": 7.585024192979795e-05,
+      "max_ULP_over_dt": 2.220446049250313e-10,
+      "rate_recovery_note": "diagnostic coefficient difference only; original moderate rate coefficients were not archived",
+      "reconstruction_bitwise_equal": true
+    }
+  },
+  "chemical_Jacobian_displacement_closure_relative": 2.4744318767220287e-06,
+  "mu_difference_L2": 2.5534245409513007e-09,
+  "mu_difference_mean": -6.358996293444232e-10,
+  "mu_difference_zero_mean_L2": 2.495762745643122e-09,
+  "source_comparison_sha256": "8302ea4a1bad1231ab80fc272b4a6421224487371a6389c3780f7a2ee068026f",
+  "interpretation": "Both original solvers stopped at their unchanged SNES targets; this audit does not override the failed physical mu/D comparison gate."
+}
