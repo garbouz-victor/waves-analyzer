@@ -13,7 +13,8 @@ from .material import density, viscosity
 from .mesh import WALL_IDS
 from .energy_validation import positive_energy_scale
 from .validation_policy import EnergyPolicy, MIN_TRANSITION_CELLS
-from .resolution import REFERENCE_POINTS, local_resolution
+from .resolution import REFERENCE_POINTS, normal_widths
+from .p2_certification import polynomial_ranges, certified_normal_widths, physical_gradients, ALGORITHM_VERSION
 
 
 class Diagnostics:
@@ -103,44 +104,94 @@ class Diagnostics:
         row["energy_change_relative_applicable"]=float(change>max(EnergyPolicy().change_floor_absolute,
                                                             EnergyPolicy().change_floor_fraction*scale))
         row["energy_budget_relative_to_change"]=abs(row["energy_budget_defect"])/change if row["energy_change_relative_applicable"] else 0.
+        row["energy_budget_symmetric_diagnostic"]=abs(row["energy_budget_defect"])/(change+sum(self.cumulative.values())+EnergyPolicy().change_floor_absolute)
+        row["energy_budget_symmetric_diagnostic_only"]=1.0  # numeric history CSV; true
         self.previous=dict(row)
         return row
 
 
-def interface_resolution(solver):
-    """Bernstein/vertex active cells, seven gradient samples; no centroid filtering."""
+def resolution_cell_data(solver):
+    """Actual reference nodal values and affine gradient samples, no raster."""
     mesh,c=solver.mesh,solver.config
     cells=np.arange(mesh.topology.index_map(2).size_local,dtype=np.int32)
-    if not hasattr(solver,"_resolution_expressions"):
-        phi=ufl.split(solver.state)[2]
-        nnodes=3 if c.phase_degree==1 else 6
-        solver._resolution_expressions=(fem.Expression(phi,REFERENCE_POINTS[:nnodes]),
-            fem.Expression(ufl.grad(phi),REFERENCE_POINTS))
-    ve,ge=solver._resolution_expressions
+    phi=solver.state.sub(2).collapse()
     nnodes=3 if c.phase_degree==1 else 6
-    values=ve.eval(mesh,cells).reshape(-1,nnodes)
-    gradients=ge.eval(mesh,cells).reshape(-1,7,2)
+    if not hasattr(solver,"_resolution_cell_dofs"):
+        Q=phi.function_space
+        native_points=Q.element.interpolation_points
+        order=np.linalg.norm(REFERENCE_POINTS[:nnodes,None,:]-native_points[None,:,:],axis=-1).argmin(axis=1)
+        if not np.allclose(native_points[order],REFERENCE_POINTS[:nnodes],rtol=0,atol=1e-14):
+            raise ValueError("Unexpected Lagrange triangle interpolation nodes")
+        solver._resolution_cell_dofs=np.array([Q.dofmap.cell_dofs(int(i))[order] for i in cells])
+    values=phi.x.array[solver._resolution_cell_dofs]
     tri=mesh.geometry.x[mesh.geometry.dofmap[cells],:2]
-    indices,widths,counts=local_resolution(tri,values,gradients,c.phase_degree,c.epsilon)
+    gradients=physical_gradients(tri,values,REFERENCE_POINTS,c.phase_degree)
+    ranges=polynomial_ranges(values,c.phase_degree)
+    active=(ranges["min"]<=.9)&(ranges["max"]>=-.9)
+    indices=np.flatnonzero(active)
+    certified=certified_normal_widths(tri[active],gradients[active,:3])
+    directional=normal_widths(tri[active],gradients[active])
+    return tri,values,gradients,ranges,indices,certified,directional
+
+
+def interface_resolution(solver):
+    """Hard gate: actual P2 ranges and certified complete-gradient-cone width."""
+    c=solver.config
+    tri,values,gradients,ranges,indices,certified,directional=resolution_cell_data(solver)
+    widths=certified["width"]
+    counts=transition_width(c.epsilon)/widths
     worst=None
-    if widths.size:
-        i=int(np.argmax(widths));triangle=tri[indices[i]]
-        worst={"h_normal_m":float(widths[i]),"rank":solver.comm.rank,"local_cell":int(indices[i]),
+    def witness(i):
+        ci=int(indices[i]);triangle=tri[ci]
+        result={"h_normal_m":float(widths[i]),"h_cert":float(widths[i]),
+               "h_directional":float(directional[i]),"rank":solver.comm.rank,"local_cell":ci,
                "centroid":triangle.mean(axis=0).tolist(),
                "bounds":[triangle.min(axis=0).tolist(),triangle.max(axis=0).tolist()],
-               "vertices":triangle.tolist()}
+               "vertices":triangle.tolist(),"phi_min_exact":float(ranges["min"][ci]) if ranges["exact"][ci] else None,
+               "phi_max_exact":float(ranges["max"][ci]) if ranges["exact"][ci] else None,
+               "phi_min_bound":float(ranges["min"][ci]),"phi_max_bound":float(ranges["max"][ci]),
+               "range_status":str(ranges["status"][ci]),
+               "range_fallback_reason":str(ranges["fallback_reason"][ci]),
+               "normal_width_fallback_reason":str(certified["fallback_reason"][i])}
+        for side in ("min","max"):
+            point=ranges[side+"_point"][ci]
+            result[side+"_witness"]={"candidate_type":str(ranges[side+"_type"][ci]),
+                "reference_point":point.tolist() if ranges["exact"][ci] else None,
+                "physical_point":(triangle[0]+point@(triangle[1:]-triangle[0])).tolist() if ranges["exact"][ci] else None,
+                "value":float(ranges[side+"_value"][ci]) if ranges["exact"][ci] else None}
+        return result
+    if widths.size:
+        worst=witness(int(np.argmax(widths)))
+    exact_indices=np.flatnonzero(ranges["exact"][indices])
+    exact_worst=witness(int(exact_indices[np.argmax(widths[exact_indices])])) if len(exact_indices) else None
     all_worst=solver.comm.allgather(worst)
+    all_exact_worst=solver.comm.allgather(exact_worst)
     all_counts=np.concatenate(solver.comm.allgather(counts))
+    all_directional=np.concatenate(solver.comm.allgather(transition_width(c.epsilon)/directional))
     hmax=max((r["h_normal_m"] for r in all_worst if r),default=0.)
     if hmax == 0:
-        return {"interface_present":False,"qualified_resolution":False,"active_cell_count":0}
+        return {"interface_present":False,"qualified_resolution":False,"active_cell_count":0,
+                "active_cell_count_exact":0,"algorithm_version":ALGORITHM_VERSION}
     count=transition_width(c.epsilon)/hmax
     worst=max((r for r in all_worst if r),key=lambda r:r["h_normal_m"])
     quantiles=np.percentile(all_counts,[5,50,95])
-    return {"interface_present":True,"h_normal_max_m":hmax,"epsilon_over_h_normal":c.epsilon/hmax,
+    result={"interface_present":True,"h_normal_max_m":hmax,"epsilon_over_h_normal":c.epsilon/hmax,
             "cells_across_transition_min":count,"qualified_resolution":count>=MIN_TRANSITION_CELLS,
             "cells_across_transition_p05":float(quantiles[0]),"cells_across_transition_p50":float(quantiles[1]),
             "cells_across_transition_p95":float(quantiles[2]),"active_cell_count":len(all_counts),
-            "worst_cell":worst,"time":solver.time,
-            "activation":"CG1 exact vertex bounds; CG2 conservative Bernstein convex hull",
-            "h_normal_method":"worst of vertex/edge-midpoint/centroid gradient directions; diameter if constant"}
+            "active_cell_count_exact":solver.comm.allreduce(len(exact_indices),op=MPI.SUM),
+            "active_cell_count_conservative_fallback":solver.comm.allreduce(int((~ranges["exact"][indices]).sum()),op=MPI.SUM),
+            "diameter_fallback_active_cells":solver.comm.allreduce(int(certified["diameter_fallback"].sum()),op=MPI.SUM),
+            "diameter_fallback_local_cells_by_rank":solver.comm.allgather(indices[certified["diameter_fallback"]].tolist()),
+            "worst_cell":worst,"worst_certified_cell":worst,
+            "worst_exact_active_cell":max((r for r in all_exact_worst if r),key=lambda r:r["h_cert"],default=None),
+            "time":solver.time,"algorithm_version":ALGORITHM_VERSION,
+            "activation":"CG1 exact vertices; P2 vertices + edge extrema + interior stationary point; labelled Bernstein fallback",
+            "h_normal_method":"maximum over complete affine-gradient cone; diameter for origin/near-origin hull",
+            "hard_gate_metric":"cells_across_transition_certified_min",
+            "cells_across_transition_certified_min":count,
+            "cells_across_transition_directional_min":float(all_directional.min())}
+    for name,data in (("certified",all_counts),("directional",all_directional)):
+        for pct,value in zip(("p05","p50","p95"),np.percentile(data,[5,50,95])):
+            result[f"cells_across_transition_{name}_{pct}"]=float(value)
+    return result

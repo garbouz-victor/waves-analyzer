@@ -1,12 +1,12 @@
-"""Conservative polynomial activation; robust sampled normal spacing on triangles.
+"""Exact polynomial activation; certified and diagnostic normal spacing.
 
 Reference nodal order: (0,0),(1,0),(0,1),(.5,0),(.5,.5),(0,.5).
-Bernstein bounds can activate extra cells; they cannot miss a true band crossing.
-The normal spacing is sampled, not an exact supremum over all gradient directions.
+Bernstein bounds remain available for explicit historical comparisons only.
 """
 import numpy as np
 from .free_energy import transition_width
 from .validation_policy import TRANSITION_PHI_LIMIT
+from .p2_certification import polynomial_ranges, certified_normal_widths
 
 REFERENCE_POINTS=np.array([[0.,0.],[1.,0.],[0.,1.],[.5,0.],[.5,.5],[0.,.5],[1/3,1/3]])
 
@@ -27,8 +27,8 @@ def polynomial_bounds(nodal_values, degree):
 
 
 def active_transition_cells(nodal_values, degree, limit=TRANSITION_PHI_LIMIT):
-    lower,upper=polynomial_bounds(nodal_values,degree)
-    return (lower<=limit)&(upper>=-limit)
+    result=polynomial_ranges(nodal_values,degree)
+    return (result["min"]<=limit)&(result["max"]>=-limit)
 
 
 def normal_widths(triangles,gradients):
@@ -49,6 +49,6 @@ def normal_widths(triangles,gradients):
 def local_resolution(triangles,values,gradients,degree,epsilon):
     active=active_transition_cells(values,degree)
     indices=np.flatnonzero(active)
-    widths=normal_widths(triangles[active],gradients[active])
+    widths=certified_normal_widths(triangles[active],gradients[active,:3])["width"]
     counts=transition_width(epsilon)/widths
     return indices,widths,counts

@@ -1,0 +1,25 @@
+{
+  "git_commit": "04904c00c90b54da0ea03525399407ef2ce98b6c",
+  "multiphase_source_sha256": "798026e57030b8e1ba847cae13bfeae1e78536b791567283eaa44c616806f9f6",
+  "config_fingerprint": "fc852830b59288fdec8d6d7ac7df08892c5cead61151456d0253283cff90dbb6",
+  "docker_image_digest": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+  "rank_count": 1,
+  "dt_schedule": {
+    "blocks": [
+      {
+        "start": 0.0,
+        "end": 0.001,
+        "dt": 1e-05,
+        "count": 100,
+        "offset": 0,
+        "phase": "main",
+        "scheme": "be"
+      }
+    ],
+    "total_steps": 100,
+    "switch_rule": "first main interval BE, then fixed-spacing BDF2; no micro-history reuse"
+  },
+  "mesh_fingerprint": "93dbd2cf76148bcd50afef9e353c55f92c15789ad0e303dbb97435a4672b9b15",
+  "mesh_fingerprint_scope": "rank-ordered geometry/connectivity; rank/partition sensitive",
+  "equilibrium_source_fingerprint": "df3a6176bc442190c15ca8e4b6faa2c885dbbe89d5126196148d92b1552809fc"
+}

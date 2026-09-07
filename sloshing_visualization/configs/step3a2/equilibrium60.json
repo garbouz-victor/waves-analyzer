@@ -1,0 +1,14 @@
+{
+  "name": "prepared_variational_equilibrium60",
+  "rho_liquid": 1.0, "rho_gas": 1.0, "mu_liquid": 1.0, "mu_gas": 1.0,
+  "sigma": 0.1, "epsilon": 0.025, "mobility": 1.0, "slip_length_m": 0.01,
+  "theta_equilibrium_deg": 60.0, "g": 0.0, "a_x": 0.0,
+  "length_scale_m": 0.3, "velocity_scale_m_per_s": 0.1,
+  "x_min": -0.6, "x_max": 0.6, "z_min": 0.0, "z_max": 0.6,
+  "nx": 36, "nz": 18, "phase_degree": 2, "quadrature_degree": 12,
+  "dt": 0.00001, "t_end": 0.001, "time_scheme": "be",
+  "snes_atol": 1e-10, "snes_rtol": 1e-9, "snes_max_it": 30,
+  "refinement_levels": 2, "refinement_circle_radius": 0.3,
+  "refinement_circle_z": -0.15, "refinement_band_m": 0.16,
+  "wetting_walls": ["bottom"], "no_slip_walls": [], "free_slip_walls": ["left", "right", "top"]
+}

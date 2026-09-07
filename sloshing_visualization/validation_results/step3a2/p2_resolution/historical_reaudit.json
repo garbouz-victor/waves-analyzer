@@ -1,0 +1,317 @@
+{
+  "scope": "read-only historical t=0.5 checkpoint; no PDE advance",
+  "source": "validation_results/step3/contact/theta60_resolved",
+  "checkpoint_sha256_before": "14c5be2cb7d3d0c05fb8b902924a9a49c8c2efd4d9c99981747951d3d9c4a948",
+  "checkpoint_sha256_after": "14c5be2cb7d3d0c05fb8b902924a9a49c8c2efd4d9c99981747951d3d9c4a948",
+  "provenance": {
+    "git_commit": "04904c00c90b54da0ea03525399407ef2ce98b6c",
+    "multiphase_source_sha256": "bb835db9e52f0c1b3463ef63ef0ebff42dccf55088cab22b9b834c0e29c8507f",
+    "config_fingerprint": "4a8675c2ed7fee1a6e9eff85e321b4f030113b8b8497e869faad8d33185f3602",
+    "docker_image_digest": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+    "rank_count": 1,
+    "dt_schedule": {
+      "blocks": [
+        {
+          "start": 0.0,
+          "end": 0.5,
+          "dt": 0.01,
+          "count": 50,
+          "offset": 0,
+          "phase": "main",
+          "scheme": "bdf2"
+        }
+      ],
+      "total_steps": 50,
+      "switch_rule": "first main interval BE, then fixed-spacing BDF2; no micro-history reuse"
+    },
+    "mesh_fingerprint": "4d8b2cf194d33d708364a6351b2cfa336ff6c07881baf82ea0593982a5cb2029",
+    "mesh_fingerprint_scope": "rank-ordered geometry/connectivity; rank/partition sensitive"
+  },
+  "old_centroid_indicator": {
+    "interface_present": true,
+    "h_normal_max_m": 0.013901944158243085,
+    "epsilon_over_h_normal": 1.7983096260084157,
+    "cells_across_transition_min": 7.4882791401663615,
+    "qualified_resolution": false
+  },
+  "step3a1_bernstein_sampled": {
+    "interface_present": true,
+    "h_normal_max_m": 0.02692813962251156,
+    "epsilon_over_h_normal": 0.9283968499294448,
+    "cells_across_transition_min": 3.8659053283020612,
+    "qualified_resolution": false,
+    "cells_across_transition_p05": 8.839710951454444,
+    "cells_across_transition_p50": 12.072036262238829,
+    "cells_across_transition_p95": 16.546513193138203,
+    "active_cell_count": 3244,
+    "worst_cell": {
+      "h_normal_m": 0.02692813962251156,
+      "rank": 0,
+      "local_cell": 8612,
+      "centroid": [
+        -0.48333333333333334,
+        0.005555555555555556
+      ],
+      "bounds": [
+        [
+          -0.5,
+          0.0
+        ],
+        [
+          -0.4666666666666667,
+          0.016666666666666666
+        ]
+      ],
+      "vertices": [
+        [
+          -0.48333333333333334,
+          0.016666666666666666
+        ],
+        [
+          -0.4666666666666667,
+          0.0
+        ],
+        [
+          -0.5,
+          0.0
+        ]
+      ]
+    },
+    "time": 0.5,
+    "activation": "CG1 exact vertex bounds; CG2 conservative Bernstein convex hull",
+    "h_normal_method": "worst of vertex/edge-midpoint/centroid gradient directions; diameter if constant"
+  },
+  "remeasured_bernstein_active_count": 3244,
+  "remeasured_bernstein_sampled_min": 3.8659053283020612,
+  "bernstein_false_positive_count": 0,
+  "bernstein_false_positive_cell_ids": [],
+  "exact_p2_certified_normal": {
+    "interface_present": true,
+    "h_normal_max_m": 0.026928139622531672,
+    "epsilon_over_h_normal": 0.9283968499287514,
+    "cells_across_transition_min": 3.865905328299174,
+    "qualified_resolution": false,
+    "cells_across_transition_p05": 8.839710951453947,
+    "cells_across_transition_p50": 12.072036262227368,
+    "cells_across_transition_p95": 16.546513193123413,
+    "active_cell_count": 3244,
+    "active_cell_count_exact": 3244,
+    "active_cell_count_conservative_fallback": 0,
+    "diameter_fallback_active_cells": 0,
+    "diameter_fallback_local_cells_by_rank": [
+      []
+    ],
+    "worst_cell": {
+      "h_normal_m": 0.026928139622531672,
+      "h_cert": 0.026928139622531672,
+      "h_directional": 0.02692813962251156,
+      "rank": 0,
+      "local_cell": 8612,
+      "centroid": [
+        -0.48333333333333334,
+        0.005555555555555556
+      ],
+      "bounds": [
+        [
+          -0.5,
+          0.0
+        ],
+        [
+          -0.4666666666666667,
+          0.016666666666666666
+        ]
+      ],
+      "vertices": [
+        [
+          -0.48333333333333334,
+          0.016666666666666666
+        ],
+        [
+          -0.4666666666666667,
+          0.0
+        ],
+        [
+          -0.5,
+          0.0
+        ]
+      ],
+      "phi_min_exact": -0.9496029932541956,
+      "phi_max_exact": -0.8575853314780564,
+      "phi_min_bound": -0.9496029932541956,
+      "phi_max_bound": -0.8575853314780564,
+      "range_status": "exact",
+      "range_fallback_reason": "",
+      "normal_width_fallback_reason": "",
+      "min_witness": {
+        "candidate_type": "edge",
+        "reference_point": [
+          0.0,
+          0.7066312167843398
+        ],
+        "physical_point": [
+          -0.495110520279739,
+          0.004889479720261002
+        ],
+        "value": -0.9496029932541654
+      },
+      "max_witness": {
+        "candidate_type": "vertex",
+        "reference_point": [
+          1.0,
+          0.0
+        ],
+        "physical_point": [
+          -0.4666666666666667,
+          0.0
+        ],
+        "value": -0.8575853314780866
+      }
+    },
+    "worst_certified_cell": {
+      "h_normal_m": 0.026928139622531672,
+      "h_cert": 0.026928139622531672,
+      "h_directional": 0.02692813962251156,
+      "rank": 0,
+      "local_cell": 8612,
+      "centroid": [
+        -0.48333333333333334,
+        0.005555555555555556
+      ],
+      "bounds": [
+        [
+          -0.5,
+          0.0
+        ],
+        [
+          -0.4666666666666667,
+          0.016666666666666666
+        ]
+      ],
+      "vertices": [
+        [
+          -0.48333333333333334,
+          0.016666666666666666
+        ],
+        [
+          -0.4666666666666667,
+          0.0
+        ],
+        [
+          -0.5,
+          0.0
+        ]
+      ],
+      "phi_min_exact": -0.9496029932541956,
+      "phi_max_exact": -0.8575853314780564,
+      "phi_min_bound": -0.9496029932541956,
+      "phi_max_bound": -0.8575853314780564,
+      "range_status": "exact",
+      "range_fallback_reason": "",
+      "normal_width_fallback_reason": "",
+      "min_witness": {
+        "candidate_type": "edge",
+        "reference_point": [
+          0.0,
+          0.7066312167843398
+        ],
+        "physical_point": [
+          -0.495110520279739,
+          0.004889479720261002
+        ],
+        "value": -0.9496029932541654
+      },
+      "max_witness": {
+        "candidate_type": "vertex",
+        "reference_point": [
+          1.0,
+          0.0
+        ],
+        "physical_point": [
+          -0.4666666666666667,
+          0.0
+        ],
+        "value": -0.8575853314780866
+      }
+    },
+    "worst_exact_active_cell": {
+      "h_normal_m": 0.026928139622531672,
+      "h_cert": 0.026928139622531672,
+      "h_directional": 0.02692813962251156,
+      "rank": 0,
+      "local_cell": 8612,
+      "centroid": [
+        -0.48333333333333334,
+        0.005555555555555556
+      ],
+      "bounds": [
+        [
+          -0.5,
+          0.0
+        ],
+        [
+          -0.4666666666666667,
+          0.016666666666666666
+        ]
+      ],
+      "vertices": [
+        [
+          -0.48333333333333334,
+          0.016666666666666666
+        ],
+        [
+          -0.4666666666666667,
+          0.0
+        ],
+        [
+          -0.5,
+          0.0
+        ]
+      ],
+      "phi_min_exact": -0.9496029932541956,
+      "phi_max_exact": -0.8575853314780564,
+      "phi_min_bound": -0.9496029932541956,
+      "phi_max_bound": -0.8575853314780564,
+      "range_status": "exact",
+      "range_fallback_reason": "",
+      "normal_width_fallback_reason": "",
+      "min_witness": {
+        "candidate_type": "edge",
+        "reference_point": [
+          0.0,
+          0.7066312167843398
+        ],
+        "physical_point": [
+          -0.495110520279739,
+          0.004889479720261002
+        ],
+        "value": -0.9496029932541654
+      },
+      "max_witness": {
+        "candidate_type": "vertex",
+        "reference_point": [
+          1.0,
+          0.0
+        ],
+        "physical_point": [
+          -0.4666666666666667,
+          0.0
+        ],
+        "value": -0.8575853314780866
+      }
+    },
+    "time": 0.5,
+    "algorithm_version": "triangle-p2-extrema-gradient-cone-v1",
+    "activation": "CG1 exact vertices; P2 vertices + edge extrema + interior stationary point; labelled Bernstein fallback",
+    "h_normal_method": "maximum over complete affine-gradient cone; diameter for origin/near-origin hull",
+    "hard_gate_metric": "cells_across_transition_certified_min",
+    "cells_across_transition_certified_min": 3.865905328299174,
+    "cells_across_transition_directional_min": 3.8659053283020612,
+    "cells_across_transition_certified_p05": 8.839710951453947,
+    "cells_across_transition_certified_p50": 12.072036262227368,
+    "cells_across_transition_certified_p95": 16.546513193123413,
+    "cells_across_transition_directional_p05": 8.839710951454444,
+    "cells_across_transition_directional_p50": 12.072036262238829,
+    "cells_across_transition_directional_p95": 16.546513193138203
+  },
+  "false_positive_witnesses": []
+}

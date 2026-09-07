@@ -51,6 +51,7 @@ class ModelConfig:
     startup_t_end: float = 0.0
     startup_stages: tuple = ()  # optional declared BE blocks {t_end, dt}; never variable-step BDF2
     refinement_boxes: tuple = ()
+    mesh_diagonal: str = "right"
 
     def __post_init__(self):
         for key,value in asdict(self).items():
@@ -79,6 +80,8 @@ class ModelConfig:
             raise ValueError("Invalid local interface-refinement request")
         if self.time_scheme not in ("be", "bdf2"):
             raise ValueError("Supported schemes: be, bdf2 (BE startup)")
+        if self.mesh_diagonal not in ("right","crossed"):
+            raise ValueError("Supported triangle diagonals: right, crossed")
         object.__setattr__(self,"startup_stages",tuple(dict(s) for s in self.startup_stages))
         if self.startup_stages and (self.startup_dt is not None or self.startup_t_end!=0):
             raise ValueError("Choose startup_dt/startup_t_end OR explicit BE startup_stages")

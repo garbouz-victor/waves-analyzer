@@ -1,0 +1,10 @@
+{
+  "scope": "STEP3A.2 independent nonzero-transient qualification; original summary preserved",
+  "original_reported_single_history_status": "passed",
+  "actual_change_final_ratio": 13.078324048200406,
+  "actual_change_limit": 0.05,
+  "actual_change_floor_applied": false,
+  "nonzero_final_closure_pass": false,
+  "temporal_series_qualification": "failed",
+  "note": "Legacy relative-to-change metric can be N/A below its significance floor; this predeclared nonzero-transient final gate remains mandatory."
+}

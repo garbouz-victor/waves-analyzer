@@ -10,8 +10,11 @@ WALL_IDS = {"left": 1, "right": 2, "bottom": 3, "top": 4}
 def estimate_unknowns(config):
     vertices = (config.nx+1)*(config.nz+1)
     p2 = (2*config.nx+1)*(2*config.nz+1)
+    if config.mesh_diagonal=="crossed":
+        vertices+=config.nx*config.nz
+        p2+=4*config.nx*config.nz
     phase = vertices if config.phase_degree == 1 else p2
-    return {"cells": 2*config.nx*config.nz, "velocity_dofs": 2*p2,
+    return {"cells": (4 if config.mesh_diagonal=="crossed" else 2)*config.nx*config.nz, "velocity_dofs": 2*p2,
             "pressure_dofs": vertices, "phi_dofs": phase, "mu_dofs": phase,
             "total_unknowns": 2*p2+vertices+2*phase,
             "matrix_memory_estimate_bytes": (2*p2+vertices+2*phase)*180*12,
@@ -24,7 +27,8 @@ def make_mesh(config, comm=MPI.COMM_WORLD):
         raise ValueError(f"Cost guard: {estimate}; raise max_unknowns explicitly after resource review")
     domain = dmesh.create_rectangle(comm, [[config.x_min, config.z_min],
                                            [config.x_max, config.z_max]],
-                                    [config.nx, config.nz], dmesh.CellType.triangle)
+                                    [config.nx, config.nz], dmesh.CellType.triangle,
+                                    diagonal=getattr(dmesh.DiagonalType,config.mesh_diagonal))
     xyz = domain.geometry.x
     if config.x_grading:
         center, half = (config.x_min+config.x_max)/2, (config.x_max-config.x_min)/2

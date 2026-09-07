@@ -1,0 +1,8 @@
+{
+  "schema": "step3-chns-checkpoint-v2",
+  "status": "complete",
+  "ranks": 1,
+  "step": 10,
+  "time": 0.0001,
+  "config_fingerprint": "2771e43b1b229d164c795dca2bf6f591431ae4d1608cc893b6c847ea636f84e7"
+}

@@ -1,0 +1,25 @@
+{
+  "subtracted_discrete_mean": -2.592978232839356e-17,
+  "mass": -7.127692069507307e-18,
+  "construction": "two C-infinity compact bumps with opposite discrete integrals, normalized then zero mean",
+  "centers_reference_domain": [
+    [
+      -0.12,
+      0.32
+    ],
+    [
+      0.12,
+      0.43
+    ]
+  ],
+  "radii_m": [
+    0.09,
+    0.06
+  ],
+  "delta": 0.001,
+  "mass_change": -5.062863153572842e-21,
+  "psi_coefficient_sha256": "831db9041c11ce04ab8974f34e841b62b56bd77474290e3c978c9b5f5af724d0",
+  "initial_phi_coefficient_sha256": "6e59cd0bd3ee5c421af9694508d439e8e05a565de329ed38a14af39444d4e681",
+  "wall_trace_max_abs_psi": 2.592978232839356e-17,
+  "definition": "phi_eq + delta*psi_h; bulk compact support away from wall/contact line, plus roundoff-level mean subtraction"
+}

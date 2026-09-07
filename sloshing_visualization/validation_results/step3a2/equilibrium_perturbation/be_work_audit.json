@@ -1,0 +1,115 @@
+{
+  "scope": "LAST accepted BE interval only; read-only checkpoints, not a global/startup qualification",
+  "diagnostic_only": true,
+  "identity": "Delta E + dt*D_new + B_BE = weak_work_defect",
+  "continuum_decomposition": "Delta E + trapezoid(D) = weak_work_defect - B_BE + dt/2*(D_old-D_new)",
+  "B_BE": "rho/2*||du||^2 + lambda*epsilon/2*||grad dphi||^2 + integral bulk_remainder + integral wall_remainder",
+  "nonnegative_remainder_not_assumed": true,
+  "measurements": [
+    {
+      "run": "be_dt_1e-5",
+      "dt": 1e-05,
+      "interval_end": 0.0001,
+      "BE_remainder": 3.5730027786940504e-11,
+      "weak_work_defect": 1.8307947138605534e-19,
+      "trapezoid_minus_BE_endpoint_power": 7.619635080016547e-11,
+      "continuum_local_defect_from_fields": 4.046632321546912e-11,
+      "continuum_local_defect_from_history": 4.046699940281452e-11,
+      "decomposition_roundoff": 1.916468265595114e-20,
+      "provenance": {
+        "git_commit": "04904c00c90b54da0ea03525399407ef2ce98b6c",
+        "multiphase_source_sha256": "093993397176a7d1eb974af1257df86f316610431624f20893b96571213241b7",
+        "config_fingerprint": "2771e43b1b229d164c795dca2bf6f591431ae4d1608cc893b6c847ea636f84e7",
+        "docker_image_digest": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+        "rank_count": 1,
+        "dt_schedule": {
+          "blocks": [
+            {
+              "start": 0.0,
+              "end": 0.0001,
+              "dt": 1e-05,
+              "count": 10,
+              "offset": 0,
+              "phase": "main",
+              "scheme": "be"
+            }
+          ],
+          "total_steps": 10,
+          "switch_rule": "first main interval BE, then fixed-spacing BDF2; no micro-history reuse"
+        },
+        "mesh_fingerprint": "93dbd2cf76148bcd50afef9e353c55f92c15789ad0e303dbb97435a4672b9b15",
+        "mesh_fingerprint_scope": "rank-ordered geometry/connectivity; rank/partition sensitive"
+      }
+    },
+    {
+      "run": "be_dt_5e-6",
+      "dt": 5e-06,
+      "interval_end": 0.0001,
+      "BE_remainder": 8.137650664519642e-12,
+      "weak_work_defect": 1.6705155454813331e-19,
+      "trapezoid_minus_BE_endpoint_power": 1.6780647453206533e-11,
+      "continuum_local_defect_from_fields": 8.642996952425353e-12,
+      "continuum_local_defect_from_history": 8.640544640970663e-12,
+      "decomposition_roundoff": -3.3130926134092903e-21,
+      "provenance": {
+        "git_commit": "04904c00c90b54da0ea03525399407ef2ce98b6c",
+        "multiphase_source_sha256": "093993397176a7d1eb974af1257df86f316610431624f20893b96571213241b7",
+        "config_fingerprint": "68117d6b4fa3d8bf04b8b1be8df3b0f27d0389b1c32a6f62ade9ad480759eb32",
+        "docker_image_digest": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+        "rank_count": 1,
+        "dt_schedule": {
+          "blocks": [
+            {
+              "start": 0.0,
+              "end": 0.0001,
+              "dt": 5e-06,
+              "count": 20,
+              "offset": 0,
+              "phase": "main",
+              "scheme": "be"
+            }
+          ],
+          "total_steps": 20,
+          "switch_rule": "first main interval BE, then fixed-spacing BDF2; no micro-history reuse"
+        },
+        "mesh_fingerprint": "93dbd2cf76148bcd50afef9e353c55f92c15789ad0e303dbb97435a4672b9b15",
+        "mesh_fingerprint_scope": "rank-ordered geometry/connectivity; rank/partition sensitive"
+      }
+    },
+    {
+      "run": "be_dt_2_5e-6",
+      "dt": 2.5e-06,
+      "interval_end": 0.0001,
+      "BE_remainder": 1.9421120216086823e-12,
+      "weak_work_defect": 8.271250363556218e-20,
+      "trapezoid_minus_BE_endpoint_power": 3.942631750724651e-12,
+      "continuum_local_defect_from_fields": 2.0005199531076053e-12,
+      "continuum_local_defect_from_history": 2.001140321070444e-12,
+      "decomposition_roundoff": 1.412791330353616e-19,
+      "provenance": {
+        "git_commit": "04904c00c90b54da0ea03525399407ef2ce98b6c",
+        "multiphase_source_sha256": "093993397176a7d1eb974af1257df86f316610431624f20893b96571213241b7",
+        "config_fingerprint": "1d10cb35d26a27a821214d965119116aac20e04a0cf48195e7a316d105a2800d",
+        "docker_image_digest": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+        "rank_count": 1,
+        "dt_schedule": {
+          "blocks": [
+            {
+              "start": 0.0,
+              "end": 0.0001,
+              "dt": 2.5e-06,
+              "count": 40,
+              "offset": 0,
+              "phase": "main",
+              "scheme": "be"
+            }
+          ],
+          "total_steps": 40,
+          "switch_rule": "first main interval BE, then fixed-spacing BDF2; no micro-history reuse"
+        },
+        "mesh_fingerprint": "93dbd2cf76148bcd50afef9e353c55f92c15789ad0e303dbb97435a4672b9b15",
+        "mesh_fingerprint_scope": "rank-ordered geometry/connectivity; rank/partition sensitive"
+      }
+    }
+  ]
+}

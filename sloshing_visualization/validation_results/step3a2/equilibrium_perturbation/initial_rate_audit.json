@@ -1,0 +1,41 @@
+{
+  "scope": "perturbed t=0 semidiscrete diagnostic; no transient advance, not a replacement energy gate",
+  "equilibrium_source_fingerprint": "df3a6176bc442190c15ca8e4b6faa2c885dbbe89d5126196148d92b1552809fc",
+  "provenance": {
+    "git_commit": "04904c00c90b54da0ea03525399407ef2ce98b6c",
+    "multiphase_source_sha256": "85845882d709153ab7f70dc00d9ae825896b57b5e5b8157303c94e61f490eddb",
+    "config_fingerprint": "fc852830b59288fdec8d6d7ac7df08892c5cead61151456d0253283cff90dbb6",
+    "docker_image_digest": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+    "rank_count": 1,
+    "dt_schedule": {
+      "blocks": [
+        {
+          "start": 0.0,
+          "end": 0.001,
+          "dt": 1e-05,
+          "count": 100,
+          "offset": 0,
+          "phase": "main",
+          "scheme": "be"
+        }
+      ],
+      "total_steps": 100,
+      "switch_rule": "first main interval BE, then fixed-spacing BDF2; no micro-history reuse"
+    },
+    "mesh_fingerprint": "93dbd2cf76148bcd50afef9e353c55f92c15789ad0e303dbb97435a4672b9b15",
+    "mesh_fingerprint_scope": "rank-ordered geometry/connectivity; rank/partition sensitive"
+  },
+  "D_CH": 0.11400313905309394,
+  "mu_times_phase_rate": -0.11400313905309918,
+  "free_energy_directional_rate": -0.11400313905310154,
+  "phase_rate_L2": 283.7841311244838,
+  "phase_mass_rate": 4.484846996747389e-16,
+  "chemical_identity_defect": -2.3592239273284576e-15,
+  "CH_identity_defect": -5.245803791353865e-15,
+  "semidiscrete_energy_identity_defect": -7.605027718682322e-15,
+  "relative_semidiscrete_defect": 6.670893259474621e-14,
+  "initial_excess_energy": 5.542888467657825e-08,
+  "excess_energy_over_initial_power_s": 4.862048987156724e-07,
+  "definition": "(phi_dot_h,s)=-M(grad mu,grad s); independently differentiate F_h in direction phi_dot_h",
+  "diagnostic_only": true
+}

@@ -33,3 +33,7 @@ validation_results/step3a1/cache/
 validation_results/step3a1/**/checkpoint/
 validation_results/step3a1/**/nonlinear.csv
 validation_results/step3a1/**/*.xdmf
+validation_results/step3a2/cache/
+validation_results/step3a2/**/*.npz
+!validation_results/step3a2/equilibrium60/prepared_symmetric/prepared.h5
+!validation_results/step3a2/equilibrium60/prepared_symmetric_fine/prepared.h5

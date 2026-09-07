@@ -86,6 +86,26 @@ class CHNSSolver:
         if self.comm.allreduce(failure, op=MPI.MAX):
             raise RuntimeError("Inadmissible material coefficient / nonfinite phi; no clipping applied")
 
+    def initialize_prepared_equilibrium(self, prepared):
+        """Preserve certified constant mu exactly; no chemical re-projection."""
+        from .equilibrium import validate_prepared
+        validate_prepared(self,prepared)
+        _,mapping=self.space.sub(2).collapse()
+        if len(mapping)!=len(prepared.phi_coefficients):
+            raise ValueError("Prepared equilibrium coefficient layout mismatch")
+        self.state.x.array[:]=0.
+        self.state.x.array[mapping]=prepared.phi_coefficients
+        _,mu_mapping=self.space.sub(3).collapse()
+        self.state.x.array[mu_mapping]=prepared.metadata["mu_star"]
+        self.state.x.scatter_forward()
+        for previous in (self.old,self.older):
+            previous.x.array[:]=self.state.x.array
+            previous.x.scatter_forward()
+        self.step_number,self.time=0,0.
+        self.current_phase,self.current_dt,self.history_spacing="initial",None,None
+        self.equilibrium_source_fingerprint=prepared.metadata["fingerprint"]
+        self._check_material()
+
     def advance(self):
         started = time.perf_counter()
         number = self.step_number+1

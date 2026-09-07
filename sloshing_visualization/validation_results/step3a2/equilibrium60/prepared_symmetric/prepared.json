@@ -1,0 +1,198 @@
+{
+  "schema": "step3a2-prepared-variational-equilibrium-v1",
+  "status": "complete",
+  "algorithm_version": "constrained-p2-global-scalar-snes-v2",
+  "algorithm_sha256": "725bb135ee7af44167fb1fad24484ac87eb63a89f286c19954dde2d961f593ae",
+  "target_mass": -0.6060961027495515,
+  "phase_mass": -0.6060961027499464,
+  "mass_residual": -3.949063298591682e-13,
+  "mass_residual_relative_to_domain": 5.48481013695104e-13,
+  "free_energy": 0.0656427272556616,
+  "mu_star": 0.17992028183404365,
+  "stationarity": {
+    "L2": 4.732799594130518e-14,
+    "normalized": 1.6732973435060827e-13,
+    "mu_scale_Pa": 0.33333333333333337,
+    "domain_area": 0.7199999999976175,
+    "definition": "||L2 Riesz(EL defect)|| / ((sigma/L_reference)*sqrt(area))"
+  },
+  "policy": {
+    "mass_domain_tolerance": 1e-10,
+    "normalized_riesz_tolerance": 1e-08,
+    "snes_atol": 1e-13,
+    "snes_rtol": 1e-12,
+    "snes_max_it": 80,
+    "mu_spread_tolerance": 1e-12,
+    "initial_ch_tolerance": 1e-16,
+    "wall_improvement_ratio": 0.5,
+    "first_variation_tolerance": 1e-08,
+    "line_search": "nleqerr"
+  },
+  "snes_history": [
+    {
+      "iteration": 0,
+      "mu_star": 0.16666666666666669,
+      "phase_mass": -0.6060961027498353,
+      "mass_residual": -2.8377300509419e-13,
+      "snes_residual": 0.0006920687030247841,
+      "energy": 0.0668511936194712,
+      "newton_update_norm": 0.0
+    },
+    {
+      "iteration": 1,
+      "mu_star": 0.16942423731079642,
+      "phase_mass": -0.6060961027495527,
+      "mass_residual": -1.2212453270876722e-15,
+      "snes_residual": 0.0002942296613262714,
+      "energy": 0.06582669913285126,
+      "newton_update_norm": 12.296963954520765
+    },
+    {
+      "iteration": 2,
+      "mu_star": 0.174793841509237,
+      "phase_mass": -0.6060961027495515,
+      "mass_residual": 0.0,
+      "snes_residual": 1.4114780587818373e-05,
+      "energy": 0.06564524483621623,
+      "newton_update_norm": 1.9804154792335356
+    },
+    {
+      "iteration": 3,
+      "mu_star": 0.17977482350524893,
+      "phase_mass": -0.6060961027495517,
+      "mass_residual": -2.220446049250313e-16,
+      "snes_residual": 2.5072406319168344e-06,
+      "energy": 0.0656427416567345,
+      "newton_update_norm": 0.8262299817546691
+    },
+    {
+      "iteration": 4,
+      "mu_star": 0.1799187233810321,
+      "phase_mass": -0.6060961027495502,
+      "mass_residual": 1.3322676295501878e-15,
+      "snes_residual": 7.891922763237508e-09,
+      "energy": 0.0656427272562635,
+      "newton_update_norm": 0.04305680922728349
+    },
+    {
+      "iteration": 5,
+      "mu_star": 0.17992028179289252,
+      "phase_mass": -0.6060961027495518,
+      "mass_residual": -3.3306690738754696e-16,
+      "snes_residual": 6.967448602433416e-13,
+      "energy": 0.0656427272556243,
+      "newton_update_norm": 0.0004383113804452566
+    },
+    {
+      "iteration": 6,
+      "mu_star": 0.17992028180100217,
+      "phase_mass": -0.6060961027495526,
+      "mass_residual": -1.1102230246251565e-15,
+      "snes_residual": 5.594438612538891e-13,
+      "energy": 0.06564272725563802,
+      "newton_update_norm": 5.405374682589292e-06
+    },
+    {
+      "iteration": 7,
+      "mu_star": 0.1799202818019893,
+      "phase_mass": -0.6060961027495525,
+      "mass_residual": -9.992007221626409e-16,
+      "snes_residual": 5.427302398026996e-13,
+      "energy": 0.06564272725563668,
+      "newton_update_norm": 5.722551604431953e-06
+    },
+    {
+      "iteration": 8,
+      "mu_star": 0.17992028183404365,
+      "phase_mass": -0.606096102749552,
+      "mass_residual": -4.440892098500626e-16,
+      "snes_residual": 4.657631536799114e-16,
+      "energy": 0.0656427272556616,
+      "newton_update_norm": 5.124801457810231e-06
+    }
+  ],
+  "snes_reason": 2,
+  "snes_iterations": 8,
+  "outer_root_history": [],
+  "outer_root_note": "not applicable: one coupled global-scalar augmented SNES",
+  "quadrature_degree": 12,
+  "config": {
+    "name": "prepared_variational_equilibrium60_symmetric_mesh",
+    "rho_liquid": 1.0,
+    "rho_gas": 1.0,
+    "mu_liquid": 1.0,
+    "mu_gas": 1.0,
+    "sigma": 0.1,
+    "epsilon": 0.025,
+    "mobility": 1.0,
+    "slip_length_m": 0.01,
+    "theta_equilibrium_deg": 60.0,
+    "g": 0.0,
+    "a_x": 0.0,
+    "length_scale_m": 0.3,
+    "velocity_scale_m_per_s": 0.1,
+    "x_min": -0.6,
+    "x_max": 0.6,
+    "z_min": 0.0,
+    "z_max": 0.6,
+    "nx": 96,
+    "nz": 48,
+    "phase_degree": 2,
+    "dt": 1e-05,
+    "t_end": 0.001,
+    "x_grading": 0.0,
+    "z_grading": 0.0,
+    "wetting_walls": [
+      "bottom"
+    ],
+    "no_slip_walls": [],
+    "free_slip_walls": [
+      "left",
+      "right",
+      "top"
+    ],
+    "time_scheme": "be",
+    "quadrature_degree": 12,
+    "snes_atol": 1e-10,
+    "snes_rtol": 1e-09,
+    "snes_max_it": 30,
+    "max_unknowns": 210000,
+    "refinement_levels": 0,
+    "refinement_circle_x": 0.0,
+    "refinement_circle_z": -0.15,
+    "refinement_circle_radius": 0.3,
+    "refinement_band_m": 0.16,
+    "startup_dt": null,
+    "startup_t_end": 0.0,
+    "startup_stages": [],
+    "refinement_boxes": [],
+    "mesh_diagonal": "crossed"
+  },
+  "equilibrium_config_fingerprint": "d42900144d7d75c67e4455351ac98a0c41083623ed06de5c2987c1d35a485650",
+  "provenance": {
+    "git_commit": "04904c00c90b54da0ea03525399407ef2ce98b6c",
+    "multiphase_source_sha256": "798026e57030b8e1ba847cae13bfeae1e78536b791567283eaa44c616806f9f6",
+    "config_fingerprint": "fc852830b59288fdec8d6d7ac7df08892c5cead61151456d0253283cff90dbb6",
+    "docker_image_digest": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+    "rank_count": 1,
+    "dt_schedule": {
+      "blocks": [
+        {
+          "start": 0.0,
+          "end": 0.001,
+          "dt": 1e-05,
+          "count": 100,
+          "offset": 0,
+          "phase": "main",
+          "scheme": "be"
+        }
+      ],
+      "total_steps": 100,
+      "switch_rule": "first main interval BE, then fixed-spacing BDF2; no micro-history reuse"
+    },
+    "mesh_fingerprint": "93dbd2cf76148bcd50afef9e353c55f92c15789ad0e303dbb97435a4672b9b15",
+    "mesh_fingerprint_scope": "rank-ordered geometry/connectivity; rank/partition sensitive"
+  },
+  "coefficient_sha256": "18c9a8724b2155978803fb6ded4468df23249cbffd0a69bf876635a1f51b1ada",
+  "fingerprint": "df3a6176bc442190c15ca8e4b6faa2c885dbbe89d5126196148d92b1552809fc"
+}

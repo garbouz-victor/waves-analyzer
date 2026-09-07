@@ -1,0 +1,68 @@
+{
+  "scope": "tiny prepared flat state; investigate over-tight 1e-13 transient SNES atol",
+  "provenance": {
+    "git_commit": "04904c00c90b54da0ea03525399407ef2ce98b6c",
+    "multiphase_source_sha256": "dfb517ea9c1f7df95ca82e36eabdeb9a08f5b88e229431edd6ea5b9e6c317b55",
+    "config_fingerprint": "8ab4b3af424b415620bb79be7d435a4a5c0a5ea58c0d511f80c0faf05ad7661f",
+    "docker_image_digest": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+    "rank_count": 1,
+    "dt_schedule": {
+      "blocks": [
+        {
+          "start": 0.0,
+          "end": 4e-05,
+          "dt": 1e-05,
+          "count": 4,
+          "offset": 0,
+          "phase": "main",
+          "scheme": "bdf2"
+        }
+      ],
+      "total_steps": 4,
+      "switch_rule": "first main interval BE, then fixed-spacing BDF2; no micro-history reuse"
+    },
+    "mesh_fingerprint": "ab785b09161e811f03e2b11b6cdf9f5ebc41e82e4dc810ca054557dc8e776de6",
+    "mesh_fingerprint_scope": "rank-ordered geometry/connectivity; rank/partition sensitive"
+  },
+  "stationarity": {
+    "L2": 1.1328689850149788e-12,
+    "normalized": 1.1328689850149982e-11,
+    "mu_scale_Pa": 0.1,
+    "domain_area": 0.9999999999999657,
+    "definition": "||L2 Riesz(EL defect)|| / ((sigma/L_reference)*sqrt(area))"
+  },
+  "blocks": [
+    {
+      "momentum_algebraic_norm_diagnostic": 3.232428792521129e-32,
+      "continuity_algebraic_norm_diagnostic": 0.0,
+      "phase_algebraic_norm_diagnostic": 2.0388482498603906e-31,
+      "chemical_algebraic_norm_diagnostic": 6.961654146514349e-14,
+      "chemical_plus_stationary_algebraic_norm": 0.0,
+      "note": "transient chemical = minus stationary EL; raw norms diagnostic only; no essential-BC lifting",
+      "quadrature_degree": 12,
+      "scheme": "be",
+      "time_coefficients": [
+        99999.99999999999,
+        -99999.99999999999,
+        0.0
+      ]
+    },
+    {
+      "momentum_algebraic_norm_diagnostic": 3.232428792521129e-32,
+      "continuity_algebraic_norm_diagnostic": 0.0,
+      "phase_algebraic_norm_diagnostic": 1.3990946602199587e-12,
+      "chemical_algebraic_norm_diagnostic": 6.961654146514349e-14,
+      "chemical_plus_stationary_algebraic_norm": 0.0,
+      "note": "transient chemical = minus stationary EL; raw norms diagnostic only; no essential-BC lifting",
+      "quadrature_degree": 12,
+      "scheme": "bdf2",
+      "time_coefficients": [
+        150000.0,
+        -199999.99999999997,
+        49999.99999999999
+      ]
+    }
+  ],
+  "roundoff_scale_per_unit_mass_weight": 7.105427357601001e-10,
+  "analysis": "BDF2 forms a weighted sum of O(phi/dt) terms; floating arithmetic need not cancel identical fields. Existing transient default atol=1e-10 exceeds this tiny-mesh algebraic rounding floor. Scientific field/mass/energy thresholds are unchanged; stationary augmented atol remains 1e-13."
+}
