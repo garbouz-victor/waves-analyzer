@@ -41,4 +41,5 @@ jobs:
           tests/test_step3_model.py tests/test_step3_interface.py tests/test_step3_fenicsx.py
           tests/test_step3a1_*.py
           tests/test_step3a2_*.py
-      # No tank, film movie, full spatial/regularization sweep in ordinary CI.
+          tests/test_step3a3_*.py
+      # Tiny spectral/CH checks only; never the 96x48 scientific series in CI.

@@ -1,0 +1,11 @@
+stage,metric,value,status
+operator,relative mass defect,3.058468592995611e-17,PASS
+operator,H symmetry,6.834842548746689e-17,PASS
+reference,max relative L2 self-difference,3.6160886127391173e-07,PASS
+planner,level0 predicted hours,4.648975755379258,COST STOP
+low_mode,n=20 final budget/actual change,0.025611450069249194,PASS
+low_mode,n=40 final budget/actual change,0.012656251393775284,PASS
+low_mode,n=80 final budget/actual change,0.006292283823033573,PASS
+nonlinear_level0,integrated D_CH,,NOT RUN
+nonlinear_level1,integrated D_CH,,NOT RUN
+nonlinear_level2,integrated D_CH,,NOT RUN

@@ -1,0 +1,10 @@
+{
+  "status": "not_run",
+  "reason": "No new full nonlinear stiff-bump interval was authorized after the planner cost STOP",
+  "first_interval_weak_work_defect": null,
+  "first_interval_B_BE": null,
+  "first_interval_trapezoid_gap": null,
+  "available_independent_evidence": "Measured isolated-CH low-mode BE work at EVERY interval in ../low_mode/; not substituted for stiff-bump data",
+  "physical_continuum_dissipation": "D_CH + D_visc + D_slip",
+  "numerical_BE_work_remainder": "B_BE; signed, diagnostic only, never physical heat"
+}

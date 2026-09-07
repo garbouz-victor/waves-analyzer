@@ -1,0 +1,16 @@
+{
+  "status": "interrupted",
+  "qualification_status": "not_qualified",
+  "stage": "krylov/restarted",
+  "reason": "Stopped at the one-hour resource guard before first ncv=32 full-horizon action completed; no self-convergence claim",
+  "last_completed_time": 0.00007711254,
+  "last_completed_time_elapsed_s": 2736.52,
+  "last_completed_action_applications": 2336,
+  "last_completed_action_restarts": 73,
+  "interrupt_signal": "SIGINT",
+  "process_exit_code": 1,
+  "exception": "PETSc MatShell wrapped KeyboardInterrupt as MFNSolve error 101 and SystemError",
+  "source_archive": "multiphase_source.tar.gz",
+  "no_nonlinear_transient_advance": true,
+  "qualified_alternative": "../rational_balanced"
+}

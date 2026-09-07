@@ -37,3 +37,11 @@ validation_results/step3a2/cache/
 validation_results/step3a2/**/*.npz
 !validation_results/step3a2/equilibrium60/prepared_symmetric/prepared.h5
 !validation_results/step3a2/equilibrium60/prepared_symmetric_fine/prepared.h5
+validation_results/step3a3/cache/
+validation_results/step3a3/krylov/basis.npz
+validation_results/step3a3/krylov/krylov_reference.npz
+validation_results/step3a3/krylov/restarted/reference_*.npz
+validation_results/step3a3/krylov/rational/basis.npz
+validation_results/step3a3/krylov/rational/krylov_reference.npz
+# Qualified rational basis/reference are retained for replay; the large failed
+# unrestarted basis above remains local-only and is fingerprinted in JSON.

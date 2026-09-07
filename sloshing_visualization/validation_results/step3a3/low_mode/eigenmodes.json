@@ -1,0 +1,58 @@
+[
+  {
+    "real": -3259.575709365278,
+    "imag": 0.0,
+    "relative_full_operator_residual": 1.2840239522551403e-09,
+    "relative_mass": 3.194361284757064e-19,
+    "tau": 0.0003067883949211063
+  },
+  {
+    "real": -3438.483416349326,
+    "imag": 0.0,
+    "relative_full_operator_residual": 1.6526310653370014e-09,
+    "relative_mass": 3.358521507656532e-17,
+    "tau": 0.00029082589005524726
+  },
+  {
+    "real": -3206.615667607074,
+    "imag": 0.0,
+    "relative_full_operator_residual": 1.5948056041702557e-09,
+    "relative_mass": 6.857395264262079e-18,
+    "tau": 0.0003118552716192042
+  },
+  {
+    "real": -3054.8280850260917,
+    "imag": 0.0,
+    "relative_full_operator_residual": 3.1720697052957316e-09,
+    "relative_mass": 1.857121791925638e-17,
+    "tau": 0.0003273506633324863
+  },
+  {
+    "real": -3735.2874319223274,
+    "imag": 0.0,
+    "relative_full_operator_residual": 2.5879148305936715e-09,
+    "relative_mass": 2.233657128366377e-17,
+    "tau": 0.00026771701461414984
+  },
+  {
+    "real": -3823.4229485154274,
+    "imag": 0.0,
+    "relative_full_operator_residual": 2.224602127771854e-09,
+    "relative_mass": 1.7061882212208668e-17,
+    "tau": 0.00026154574407947297
+  },
+  {
+    "real": -2832.503934292861,
+    "imag": 0.0,
+    "relative_full_operator_residual": 3.2602681098866936e-09,
+    "relative_mass": 1.996475802973165e-19,
+    "tau": 0.0003530445228665328
+  },
+  {
+    "real": -3862.4483958649425,
+    "imag": 0.0,
+    "relative_full_operator_residual": 1.9209532037782197e-09,
+    "relative_mass": 9.958421305230147e-18,
+    "tau": 0.00025890313539737625
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "generator": "scripts/step3a3_report.py",
+  "generator_sha256": "e35f206c715dfce9797deccf2edc9d1f00426784b1469811efbb689e63f94805",
+  "report_sha256": "3ca70407a07e5302d60958e97a86bcfc8312c321ccb64de215b6e04578d1828c",
+  "data_scope": "read-only measured STEP3A3 plus explicitly labelled historical STEP3A2",
+  "scientific_verdict": "MODEL NOT YET VALIDATED"
+}

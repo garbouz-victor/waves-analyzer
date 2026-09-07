@@ -1,0 +1,8 @@
+{
+  "status": "not_run",
+  "qualification_status": "not_qualified",
+  "reason": "Planner exceeded the predeclared production cost guard: level0 4.64898 hours, three-level series 32.5428 hours; limits 3/10 hours",
+  "full_sparse_schedule_verification": "not_run after cost STOP",
+  "nonlinear_execution_authorized": false,
+  "scientific_verdict": "MODEL NOT YET VALIDATED"
+}

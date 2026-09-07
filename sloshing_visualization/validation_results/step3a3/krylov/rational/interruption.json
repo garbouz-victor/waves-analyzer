@@ -1,0 +1,13 @@
+{
+  "status": "interrupted",
+  "qualification_status": "not_qualified",
+  "reason": "Unbalanced SuperLU resolvent cost: replaced by mathematically equivalent scaled sparse MUMPS solve in a separate run",
+  "last_console_milestone": {"dimension": 16, "elapsed_s": 420.08},
+  "earlier_milestone": {"dimension": 8, "elapsed_s": 215.49},
+  "observed_container_RSS_GiB": 4.19,
+  "interrupt_signal": "SIGINT",
+  "process_exit_code": 130,
+  "source_archive": "multiphase_source.tar.gz",
+  "no_nonlinear_transient_advance": true,
+  "continuation": "../rational_balanced"
+}

@@ -1,0 +1,7 @@
+{
+  "status": "not_run",
+  "qualification_status": "not_qualified",
+  "reason": "Level0 not authorized: predeclared cost STOP",
+  "schedule_rule": "quarter every block dt, same boundaries, 7184 intervals if later authorized",
+  "scientific_verdict": "MODEL NOT YET VALIDATED"
+}

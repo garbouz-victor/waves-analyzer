@@ -1,0 +1,65 @@
+{
+  "algorithm_version": "mass-zero-sparse-linearized-ch-v1",
+  "mobility": 1.0,
+  "mass_sha256": "82d04130e73a7570994abed41ef82339df328e567968d2d5a764bcb87c576c00",
+  "provenance": {
+    "git_commit": "29d40b6cbddb882d5b6248dc2f52df5f8f93b2eb",
+    "multiphase_source_sha256": "6120797457f880dd022ee5da8d5aa14bf672868a7d530f901d40a3bf5e0173db",
+    "config_fingerprint": "fc852830b59288fdec8d6d7ac7df08892c5cead61151456d0253283cff90dbb6",
+    "docker_image_digest": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+    "rank_count": 1,
+    "dt_schedule": {
+      "blocks": [
+        {
+          "start": 0.0,
+          "end": 0.001,
+          "dt": 1e-05,
+          "count": 100,
+          "offset": 0,
+          "phase": "main",
+          "scheme": "be"
+        }
+      ],
+      "total_steps": 100,
+      "switch_rule": "first main interval BE, then fixed-spacing BDF2; no micro-history reuse"
+    },
+    "mesh_fingerprint": "93dbd2cf76148bcd50afef9e353c55f92c15789ad0e303dbb97435a4672b9b15",
+    "mesh_fingerprint_scope": "rank-ordered geometry/connectivity; rank/partition sensitive",
+    "equilibrium_fingerprint": "df3a6176bc442190c15ca8e4b6faa2c885dbbe89d5126196148d92b1552809fc",
+    "perturbation_coefficient_sha256": "831db9041c11ce04ab8974f34e841b62b56bd77474290e3c978c9b5f5af724d0",
+    "initial_phi_sha256": "6e59cd0bd3ee5c421af9694508d439e8e05a565de329ed38a14af39444d4e681",
+    "quadrature_degree": 12,
+    "mobility": 1.0,
+    "target_mass": -0.6060961027495515,
+    "input_recovery": "replay unchanged historical initializer; require BOTH archived coefficient hashes",
+    "spectrum_algorithm_version": "mass-zero-sparse-linearized-ch-v1"
+  },
+  "M0": {
+    "shape": [
+      37153,
+      37153
+    ],
+    "indptr": "aecc82cb010f39e795852ebb5e23b6e83e60c1185a43be768e981de74e23749b",
+    "indices": "ff357e6e7825ddc0f6348947acb3b2fe64e9653e6e34a20ecceaf599f14fb895",
+    "values": "d6e2799eaa6a7cb86dbb5952645cf648bd4770dab708aae392ebc68f6f70e17a"
+  },
+  "K": {
+    "shape": [
+      37153,
+      37153
+    ],
+    "indptr": "aecc82cb010f39e795852ebb5e23b6e83e60c1185a43be768e981de74e23749b",
+    "indices": "ff357e6e7825ddc0f6348947acb3b2fe64e9653e6e34a20ecceaf599f14fb895",
+    "values": "84d75395c9b653c909bb51a09a01740953586aabf949a85b61b7ca8292c8c8d0"
+  },
+  "H": {
+    "shape": [
+      37153,
+      37153
+    ],
+    "indptr": "aecc82cb010f39e795852ebb5e23b6e83e60c1185a43be768e981de74e23749b",
+    "indices": "ff357e6e7825ddc0f6348947acb3b2fe64e9653e6e34a20ecceaf599f14fb895",
+    "values": "28794248fac5ed0145a572cd4deeec71ba076dc194a34c38aa2f1ca8a25a89a9"
+  },
+  "fingerprint": "ac5ccddf57928bae2482d197ac0af74cac1534cb2631b1f3add01b9095533fc7"
+}

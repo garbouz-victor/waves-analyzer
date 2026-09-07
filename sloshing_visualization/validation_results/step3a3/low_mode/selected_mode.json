@@ -1,0 +1,25 @@
+{
+  "real": -3259.575709365278,
+  "imag": 0.0,
+  "relative_full_operator_residual": 1.2840239522551403e-09,
+  "relative_mass": 3.194361284757064e-19,
+  "tau": 0.0003067883949211063,
+  "coefficient_sha256": "7bcb7624b2acd59336ac88adf1e8fa93a90163b510b411ff8d93545d9721e399",
+  "M_norm": 1.0,
+  "coefficient_max": 6.836945745731061,
+  "operator_fingerprint": "ac5ccddf57928bae2482d197ac0af74cac1534cb2631b1f3add01b9095533fc7",
+  "Krylov_sha256": "20ee6c7a10693c04b98f3b04d4cd576c5d800556799b297a59350c417d1bffea",
+  "target_tau": 0.0003,
+  "initial_max_delta_phi": 0.0001,
+  "amplitude_checks": [
+    5e-05,
+    2.5e-05
+  ],
+  "temporal_steps": [
+    20,
+    40,
+    80
+  ],
+  "amplitude_check_steps": 20,
+  "benchmark": "isolated CH temporal benchmark; u=0; not full CHNS qualification"
+}

@@ -1,0 +1,307 @@
+{
+  "status": "complete",
+  "qualification_status": "passed",
+  "scope": "independent actual operator residual for all archived converged significant Ritz vectors",
+  "count": 33,
+  "max_full_operator_relative_residual": 2.6964632066171142e-08,
+  "rows": [
+    {
+      "mode": 55,
+      "real": -10581814086.703129,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 2.6964632056685988e-08,
+      "full_operator_relative_residual": 2.6964632066171142e-08,
+      "passed": true
+    },
+    {
+      "mode": 63,
+      "real": -10603680316.516714,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 4.105772932740779e-10,
+      "full_operator_relative_residual": 4.1057728936784057e-10,
+      "passed": true
+    },
+    {
+      "mode": 65,
+      "real": -10608450837.883137,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 3.863906113830839e-10,
+      "full_operator_relative_residual": 3.863906108464523e-10,
+      "passed": true
+    },
+    {
+      "mode": 64,
+      "real": -10618601947.962,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 5.515410495257428e-12,
+      "full_operator_relative_residual": 5.515424820634574e-12,
+      "passed": true
+    },
+    {
+      "mode": 40,
+      "real": -10661903572.911255,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 9.124269917374939e-17,
+      "full_operator_relative_residual": 9.41927035303828e-15,
+      "passed": true
+    },
+    {
+      "mode": 30,
+      "real": -10670162800.574564,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 6.63893554125556e-17,
+      "full_operator_relative_residual": 8.384221156271042e-15,
+      "passed": true
+    },
+    {
+      "mode": 29,
+      "real": -10671341325.881203,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 1.2589322885544612e-16,
+      "full_operator_relative_residual": 1.1426482165479425e-14,
+      "passed": true
+    },
+    {
+      "mode": 28,
+      "real": -10672603853.912096,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 1.200680918748668e-16,
+      "full_operator_relative_residual": 1.0130405080623845e-14,
+      "passed": true
+    },
+    {
+      "mode": 27,
+      "real": -10676077719.040115,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 5.689246650956158e-17,
+      "full_operator_relative_residual": 1.052607448908988e-14,
+      "passed": true
+    },
+    {
+      "mode": 26,
+      "real": -10680492562.670702,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 1.660413838814819e-17,
+      "full_operator_relative_residual": 9.817926450726137e-15,
+      "passed": true
+    },
+    {
+      "mode": 25,
+      "real": -10684804101.929823,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 6.222879139584625e-18,
+      "full_operator_relative_residual": 8.812815284673122e-15,
+      "passed": true
+    },
+    {
+      "mode": 24,
+      "real": -10686167110.163507,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 1.0005432774713527e-18,
+      "full_operator_relative_residual": 1.0947837103579128e-14,
+      "passed": true
+    },
+    {
+      "mode": 23,
+      "real": -10686984860.547493,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 6.011439138859226e-19,
+      "full_operator_relative_residual": 1.0247713344182675e-14,
+      "passed": true
+    },
+    {
+      "mode": 22,
+      "real": -10689579433.299982,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 6.223255281741343e-18,
+      "full_operator_relative_residual": 8.544794779312884e-15,
+      "passed": true
+    },
+    {
+      "mode": 21,
+      "real": -10690817471.508326,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 2.0328453465732387e-18,
+      "full_operator_relative_residual": 9.624076830375784e-15,
+      "passed": true
+    },
+    {
+      "mode": 20,
+      "real": -10691889226.08376,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 3.671921237012601e-19,
+      "full_operator_relative_residual": 9.182193334330665e-15,
+      "passed": true
+    },
+    {
+      "mode": 19,
+      "real": -10696357007.399855,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 1.5735208828338733e-19,
+      "full_operator_relative_residual": 1.1060687536063748e-14,
+      "passed": true
+    },
+    {
+      "mode": 18,
+      "real": -10699232197.290028,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 5.209890120382875e-19,
+      "full_operator_relative_residual": 9.523224482901312e-15,
+      "passed": true
+    },
+    {
+      "mode": 17,
+      "real": -10704194581.954918,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 4.813011436491219e-19,
+      "full_operator_relative_residual": 1.0340981631528076e-14,
+      "passed": true
+    },
+    {
+      "mode": 16,
+      "real": -10705001311.987946,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 4.1026667448552747e-19,
+      "full_operator_relative_residual": 1.3245396003251777e-14,
+      "passed": true
+    },
+    {
+      "mode": 15,
+      "real": -10709230890.912489,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 7.834449259534119e-20,
+      "full_operator_relative_residual": 1.05325277423797e-14,
+      "passed": true
+    },
+    {
+      "mode": 14,
+      "real": -10711679616.983698,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 4.021168547353327e-19,
+      "full_operator_relative_residual": 9.619655601057812e-15,
+      "passed": true
+    },
+    {
+      "mode": 13,
+      "real": -10713381260.853615,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 2.4096322554039857e-20,
+      "full_operator_relative_residual": 1.1340393672034855e-14,
+      "passed": true
+    },
+    {
+      "mode": 12,
+      "real": -10715325910.460367,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 6.419600542240197e-19,
+      "full_operator_relative_residual": 9.635716360975824e-15,
+      "passed": true
+    },
+    {
+      "mode": 11,
+      "real": -10716768669.947376,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 1.6373335160651713e-19,
+      "full_operator_relative_residual": 6.696365985054324e-15,
+      "passed": true
+    },
+    {
+      "mode": 10,
+      "real": -10717496438.667925,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 2.710318386148728e-19,
+      "full_operator_relative_residual": 8.775449042551894e-15,
+      "passed": true
+    },
+    {
+      "mode": 9,
+      "real": -10724052025.65174,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 5.353580273715016e-20,
+      "full_operator_relative_residual": 1.0573353364868294e-14,
+      "passed": true
+    },
+    {
+      "mode": 8,
+      "real": -10725145984.149546,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 1.448640592956312e-19,
+      "full_operator_relative_residual": 1.0278860797479835e-14,
+      "passed": true
+    },
+    {
+      "mode": 7,
+      "real": -10727866525.754904,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 2.4038778628668673e-19,
+      "full_operator_relative_residual": 8.344378916796475e-15,
+      "passed": true
+    },
+    {
+      "mode": 6,
+      "real": -10729152389.043715,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 3.757281865841447e-20,
+      "full_operator_relative_residual": 1.1572861306857488e-14,
+      "passed": true
+    },
+    {
+      "mode": 5,
+      "real": -10730246322.410322,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 3.9663882669931126e-20,
+      "full_operator_relative_residual": 1.0113957870238277e-14,
+      "passed": true
+    },
+    {
+      "mode": 4,
+      "real": -10733950726.126709,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 3.758241174561222e-20,
+      "full_operator_relative_residual": 1.458076482132226e-14,
+      "passed": true
+    },
+    {
+      "mode": 3,
+      "real": -10735011121.188166,
+      "imag": 0.0,
+      "archived_recurrence_estimate": 2.0945929201015103e-21,
+      "full_operator_relative_residual": 1.0060026474287734e-14,
+      "passed": true
+    }
+  ],
+  "operator_fingerprint": "ac5ccddf57928bae2482d197ac0af74cac1534cb2631b1f3add01b9095533fc7",
+  "provenance": {
+    "git_commit": "29d40b6cbddb882d5b6248dc2f52df5f8f93b2eb",
+    "multiphase_source_sha256": "dc730f91dd0c7e976f53d2551c1440383b0fdce65b7ed7828bdf994b063d42b9",
+    "config_fingerprint": "fc852830b59288fdec8d6d7ac7df08892c5cead61151456d0253283cff90dbb6",
+    "docker_image_digest": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+    "rank_count": 1,
+    "dt_schedule": {
+      "blocks": [
+        {
+          "start": 0.0,
+          "end": 0.001,
+          "dt": 1e-05,
+          "count": 100,
+          "offset": 0,
+          "phase": "main",
+          "scheme": "be"
+        }
+      ],
+      "total_steps": 100,
+      "switch_rule": "first main interval BE, then fixed-spacing BDF2; no micro-history reuse"
+    },
+    "mesh_fingerprint": "93dbd2cf76148bcd50afef9e353c55f92c15789ad0e303dbb97435a4672b9b15",
+    "mesh_fingerprint_scope": "rank-ordered geometry/connectivity; rank/partition sensitive",
+    "equilibrium_fingerprint": "df3a6176bc442190c15ca8e4b6faa2c885dbbe89d5126196148d92b1552809fc",
+    "perturbation_coefficient_sha256": "831db9041c11ce04ab8974f34e841b62b56bd77474290e3c978c9b5f5af724d0",
+    "initial_phi_sha256": "6e59cd0bd3ee5c421af9694508d439e8e05a565de329ed38a14af39444d4e681",
+    "quadrature_degree": 12,
+    "mobility": 1.0,
+    "target_mass": -0.6060961027495515,
+    "input_recovery": "replay unchanged historical initializer; require BOTH archived coefficient hashes",
+    "spectrum_algorithm_version": "mass-zero-sparse-linearized-ch-v1",
+    "audit_script_sha256": "e139cc25e8e64d27760f2454e35e00b2f756373aa0988a65d3b2019a3024d036"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "status": "interrupted",
+  "stage": "krylov/rational",
+  "qualification_status": "not_qualified",
+  "reason": "Unbalanced sparse factorization cost; see interruption.json. No nonlinear advance.",
+  "continuation": "../rational_balanced"
+}
