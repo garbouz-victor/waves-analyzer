@@ -1,0 +1,32 @@
+stage,metric,value,status
+baseline_sparse,endpoint_relative_L2_error,0.0007783388808171719,PASS
+baseline_sparse,max_checkpoint_relative_L2_error,0.0009204464671513375,PASS
+baseline_sparse,max_quadratic_energy_relative_error,0.0008285156613016073,PASS
+baseline_sparse,integrated_D2_relative_error,0.0017172781873511234,PASS
+baseline_sparse,linear_BE_integrated_D2,0.04333967284242515,PASS
+baseline_sparse,reference_integrated_D2,0.04326537415911412,PASS
+baseline_sparse,max_mass_domain,1.259376778840005e-17,PASS
+optimized_sparse,endpoint_relative_L2_error,0.0007872033924320699,PASS
+optimized_sparse,max_checkpoint_relative_L2_error,0.0009482599811565769,PASS
+optimized_sparse,max_quadratic_energy_relative_error,0.0008542045559127828,PASS
+optimized_sparse,integrated_D2_relative_error,0.002163516420581102,PASS
+optimized_sparse,linear_BE_integrated_D2,0.04335897950654995,PASS
+optimized_sparse,reference_integrated_D2,0.04326537415911412,PASS
+optimized_sparse,max_mass_domain,1.909779539188493e-18,PASS
+isolated_pilot,SNES_reason,-6,STOP
+isolated_pilot,SNES_iterations,11,STOP
+isolated_pilot,SNES_residual,1.1109110367278936e-08,STOP
+isolated_pilot,accepted_steps,0,STOP
+isolated_level0,integrated_D_CH,,NOT RUN
+isolated_level0,DeltaF,,NOT RUN
+isolated_level0,budget_defect,,NOT RUN
+isolated_level0,endpoint_L2_difference,,NOT RUN
+isolated_level1,integrated_D_CH,,NOT RUN
+isolated_level1,DeltaF,,NOT RUN
+isolated_level1,budget_defect,,NOT RUN
+isolated_level1,endpoint_L2_difference,,NOT RUN
+isolated_level2,integrated_D_CH,,NOT RUN
+isolated_level2,DeltaF,,NOT RUN
+isolated_level2,budget_defect,,NOT RUN
+isolated_level2,endpoint_L2_difference,,NOT RUN
+overall,scientific_verdict,MODEL NOT YET VALIDATED,NOT QUALIFIED

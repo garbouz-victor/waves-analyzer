@@ -1,5 +1,6 @@
 """Isolated CH temporal BENCHMARK, u=0; never a production CHNS replacement."""
 import time
+from contextlib import nullcontext
 import numpy as np
 
 
@@ -12,6 +13,7 @@ class IsolatedCH:
         from petsc4py import PETSc
         from .equilibrium import chemical_stationary_form, _measures
         self.solver = solver
+        self.performance = None
         c = solver.config
         if c.g or c.a_x or c.rho_liquid != c.rho_gas:
             raise ValueError("Isolated CH benchmark requires matched density, zero body force")
@@ -23,9 +25,10 @@ class IsolatedCH:
         old_phi, _ = ufl.split(self.old)
         test, chi = ufl.TestFunctions(space)
         dx, _ = _measures(solver)
-        F = ((phi-old_phi)/self.dt*test+c.mobility*ufl.inner(ufl.grad(mu), ufl.grad(test)))*dx
-        F += mu*chi*dx-chemical_stationary_form(solver, phi, 0., chi)
-        self.problem = NonlinearProblem(F, self.state, petsc_options_prefix="step3a3_isolated_",
+        self.phase_form = ((phi-old_phi)/self.dt*test+c.mobility*ufl.inner(ufl.grad(mu), ufl.grad(test)))*dx
+        self.chemical_form = mu*chi*dx-chemical_stationary_form(solver, phi, 0., chi)
+        self.F = self.phase_form+self.chemical_form
+        self.problem = NonlinearProblem(self.F, self.state, petsc_options_prefix="step3a3_isolated_",
             petsc_options={"snes_type": "newtonls", "snes_linesearch_type": "bt", "snes_stol": 0.,
                 "snes_atol": c.snes_atol, "snes_rtol": c.snes_rtol, "snes_max_it": c.snes_max_it,
                 "ksp_type": "preonly", "pc_type": "lu", "pc_factor_mat_solver_type": "mumps",
@@ -45,7 +48,8 @@ class IsolatedCH:
         s = self.solver
         before = time.perf_counter()
         self.dt.value = dt
-        self.problem.solve()
+        with self.performance.measure("nonlinear_SNES", dt=float(dt)) if self.performance else nullcontext():
+            self.problem.solve()
         snes = self.problem.solver
         if snes.getConvergedReason() <= 0:
             raise RuntimeError("Isolated CH SNES failed; no timestep retry")

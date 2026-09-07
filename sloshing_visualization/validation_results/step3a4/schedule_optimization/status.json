@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "qualification_status": "passed",
+  "total_steps": 1068,
+  "saved_intervals": 728,
+  "reduction_percent": 40.53452115812918,
+  "reproducible": true,
+  "plan_sha256": "5d291468a3520da5267a8d76b8015d0709f5e28b44fbaa5f8a7c6b264664e2b8",
+  "predicted_errors": {
+    "endpoint_relative_L2_error": 0.0007872033928532018,
+    "max_checkpoint_relative_L2_error": 0.0009482599810749337,
+    "max_quadratic_energy_relative_error": 0.00085420455610023,
+    "integrated_D2_relative_error": 0.0021635161711683892
+  },
+  "requires_full_sparse": true
+}

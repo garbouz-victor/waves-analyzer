@@ -1,0 +1,33 @@
+{
+  "git_commit": "ec01bf3a570cbf2d58c8e16bc133f43f8a7c8baa",
+  "multiphase_source_sha256": "b54c4c084d83934065e055d778b1b0a6ab7d872cda74fe1f91db08f642272410",
+  "config_fingerprint": "fc852830b59288fdec8d6d7ac7df08892c5cead61151456d0253283cff90dbb6",
+  "docker_image_digest": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+  "rank_count": 1,
+  "dt_schedule": {
+    "blocks": [
+      {
+        "start": 0.0,
+        "end": 0.001,
+        "dt": 1e-05,
+        "count": 100,
+        "offset": 0,
+        "phase": "main",
+        "scheme": "be"
+      }
+    ],
+    "total_steps": 100,
+    "switch_rule": "first main interval BE, then fixed-spacing BDF2; no micro-history reuse"
+  },
+  "mesh_fingerprint": "93dbd2cf76148bcd50afef9e353c55f92c15789ad0e303dbb97435a4672b9b15",
+  "mesh_fingerprint_scope": "rank-ordered geometry/connectivity; rank/partition sensitive",
+  "equilibrium_fingerprint": "df3a6176bc442190c15ca8e4b6faa2c885dbbe89d5126196148d92b1552809fc",
+  "perturbation_coefficient_sha256": "831db9041c11ce04ab8974f34e841b62b56bd77474290e3c978c9b5f5af724d0",
+  "initial_phi_sha256": "6e59cd0bd3ee5c421af9694508d439e8e05a565de329ed38a14af39444d4e681",
+  "quadrature_degree": 12,
+  "mobility": 1.0,
+  "target_mass": -0.6060961027495515,
+  "input_recovery": "load frozen, historical-hash-verified coefficient arrays",
+  "optimized_plan_sha256": "5d291468a3520da5267a8d76b8015d0709f5e28b44fbaa5f8a7c6b264664e2b8",
+  "benchmark": "FULL NONLINEAR isolated CH; u=0 by construction"
+}

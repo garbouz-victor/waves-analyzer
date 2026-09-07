@@ -1,0 +1,14 @@
+{
+  "status": "stopped",
+  "qualification_status": "failed",
+  "reason": "error code 91\n[0] SNESSolve() at /usr/local/petsc/src/snes/interface/snes.c:4906\n[0] SNESSolve_NEWTONLS() at /usr/local/petsc/src/snes/impls/ls/ls.c:253\n[0] SNESSolve has not converged due to DIVERGED_LINE_SEARCH. Suggest running with -snes_linesearch_monitor",
+  "accepted_steps": 0,
+  "attempted_interval": 1,
+  "isolated_CH_execution_authorized": false,
+  "full_CHNS_probe_authorized": false,
+  "optimized_plan_sha256": "5d291468a3520da5267a8d76b8015d0709f5e28b44fbaa5f8a7c6b264664e2b8",
+  "pilot": true,
+  "SNES_reason": -6,
+  "SNES_residual": 1.1109110367278936e-08,
+  "SNES_iterations": 11
+}

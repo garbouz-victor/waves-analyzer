@@ -1,0 +1,82 @@
+{
+  "git_commit": "ec01bf3a570cbf2d58c8e16bc133f43f8a7c8baa",
+  "docker_image_digest": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+  "multiphase_source_sha256": "b54c4c084d83934065e055d778b1b0a6ab7d872cda74fe1f91db08f642272410",
+  "source_archive_sha256": "b50abba25ac5eb905722cbd070fc9ff5740a67b6727729b52d4d091f841f6a6f",
+  "historical_input_provenance": {
+    "git_commit": "29d40b6cbddb882d5b6248dc2f52df5f8f93b2eb",
+    "multiphase_source_sha256": "6120797457f880dd022ee5da8d5aa14bf672868a7d530f901d40a3bf5e0173db",
+    "config_fingerprint": "fc852830b59288fdec8d6d7ac7df08892c5cead61151456d0253283cff90dbb6",
+    "docker_image_digest": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+    "rank_count": 1,
+    "dt_schedule": {
+      "blocks": [
+        {
+          "start": 0.0,
+          "end": 0.001,
+          "dt": 1e-05,
+          "count": 100,
+          "offset": 0,
+          "phase": "main",
+          "scheme": "be"
+        }
+      ],
+      "total_steps": 100,
+      "switch_rule": "first main interval BE, then fixed-spacing BDF2; no micro-history reuse"
+    },
+    "mesh_fingerprint": "93dbd2cf76148bcd50afef9e353c55f92c15789ad0e303dbb97435a4672b9b15",
+    "mesh_fingerprint_scope": "rank-ordered geometry/connectivity; rank/partition sensitive",
+    "equilibrium_fingerprint": "df3a6176bc442190c15ca8e4b6faa2c885dbbe89d5126196148d92b1552809fc",
+    "perturbation_coefficient_sha256": "831db9041c11ce04ab8974f34e841b62b56bd77474290e3c978c9b5f5af724d0",
+    "initial_phi_sha256": "6e59cd0bd3ee5c421af9694508d439e8e05a565de329ed38a14af39444d4e681",
+    "quadrature_degree": 12,
+    "mobility": 1.0,
+    "target_mass": -0.6060961027495515,
+    "input_recovery": "replay unchanged historical initializer; require BOTH archived coefficient hashes",
+    "spectrum_algorithm_version": "mass-zero-sparse-linearized-ch-v1"
+  },
+  "policy": {
+    "analysis_stage_wall_s": 3600.0,
+    "analysis_total_wall_s": 7200.0,
+    "optimizer_cpu_s": 1800.0,
+    "optimizer_evaluations": 5000,
+    "optimizer_rounds": 24,
+    "optimizer_max_splits": 3,
+    "isolated_level0_wall_s": 7200.0,
+    "isolated_series_wall_s": 28800.0,
+    "isolated_pilot_steps": 50,
+    "coupling_wall_s": 7200.0,
+    "linear_mass_domain": 1e-11,
+    "nonlinear_mass_domain": 1e-10,
+    "certified_cells": 8.0,
+    "energy_growth_J_per_m": 1e-09,
+    "weak_work_J_per_m": 1e-12,
+    "final_budget_relative": 0.05,
+    "last_D_difference_relative": 0.05,
+    "coupling_phi_relative": 0.001,
+    "coupling_energy_relative": 0.001,
+    "coupling_power_relative": 0.01,
+    "coupling_kinetic_over_excess": 0.0001,
+    "coupling_hydro_over_CH": 0.0001,
+    "coupling_power_floor_fraction": 1e-08,
+    "coupling_field_floor_fraction": 1e-12,
+    "t_end": 0.0001,
+    "linear_limits": {
+      "endpoint_relative_L2_error": 0.001,
+      "max_checkpoint_relative_L2_error": 0.001,
+      "max_quadratic_energy_relative_error": 0.001,
+      "integrated_D2_relative_error": 0.01
+    },
+    "version": "step3a4-policy-v1",
+    "nonlinear_SNESTolerances_changed": false
+  },
+  "policy_sha256": "f28b662ff5d7d5c55093efffdeeb644d4406b2bb8221921ab41bafcb62e07d6a",
+  "design_sha256": "1c235cb203d2ef8789f1c4129b9ec9b8d9cfc9ca1ffda97523da8777dace6a0b",
+  "equilibrium_fingerprint": "df3a6176bc442190c15ca8e4b6faa2c885dbbe89d5126196148d92b1552809fc",
+  "perturbation_coefficient_sha256": "831db9041c11ce04ab8974f34e841b62b56bd77474290e3c978c9b5f5af724d0",
+  "initial_phi_sha256": "6e59cd0bd3ee5c421af9694508d439e8e05a565de329ed38a14af39444d4e681",
+  "mesh_fingerprint": "93dbd2cf76148bcd50afef9e353c55f92c15789ad0e303dbb97435a4672b9b15",
+  "quadrature_degree": 12,
+  "mobility": 1.0,
+  "target_mass": -0.6060961027495515
+}

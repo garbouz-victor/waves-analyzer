@@ -1,0 +1,803 @@
+{
+  "status": "complete",
+  "qualification_status": "profile_only",
+  "provenance": {
+    "git_commit": "ec01bf3a570cbf2d58c8e16bc133f43f8a7c8baa",
+    "multiphase_source_sha256": "e85074172d7f3feb851b051739d2ac5075f14d0d141b1a4cf8e770fe0ee7edc9",
+    "config_fingerprint": "fc852830b59288fdec8d6d7ac7df08892c5cead61151456d0253283cff90dbb6",
+    "docker_image_digest": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+    "rank_count": 1,
+    "dt_schedule": {
+      "blocks": [
+        {
+          "start": 0.0,
+          "end": 0.001,
+          "dt": 1e-05,
+          "count": 100,
+          "offset": 0,
+          "phase": "main",
+          "scheme": "be"
+        }
+      ],
+      "total_steps": 100,
+      "switch_rule": "first main interval BE, then fixed-spacing BDF2; no micro-history reuse"
+    },
+    "mesh_fingerprint": "93dbd2cf76148bcd50afef9e353c55f92c15789ad0e303dbb97435a4672b9b15",
+    "mesh_fingerprint_scope": "rank-ordered geometry/connectivity; rank/partition sensitive",
+    "equilibrium_fingerprint": "df3a6176bc442190c15ca8e4b6faa2c885dbbe89d5126196148d92b1552809fc",
+    "perturbation_coefficient_sha256": "831db9041c11ce04ab8974f34e841b62b56bd77474290e3c978c9b5f5af724d0",
+    "initial_phi_sha256": "6e59cd0bd3ee5c421af9694508d439e8e05a565de329ed38a14af39444d4e681",
+    "quadrature_degree": 12,
+    "mobility": 1.0,
+    "target_mass": -0.6060961027495515,
+    "input_recovery": "load frozen, historical-hash-verified coefficient arrays"
+  },
+  "initial": {
+    "row": {
+      "E_kin": 0.0,
+      "E_gravity": 0.0,
+      "E_interface": 0.05995161915611929,
+      "E_wall": 0.0056911635284269835,
+      "phase_mass": -0.6060961027499487,
+      "liquid_volume": 0.0569519486252139,
+      "viscous_dissipation": 0.0,
+      "CH_dissipation": 0.11400313905309394,
+      "slip_dissipation": 0.0,
+      "time": 0.0,
+      "E_total": 0.06564278268454628,
+      "strong_divergence_L2": 0.0,
+      "relative_strong_divergence": 0.0,
+      "wall_normal_velocity_L2": 0.0,
+      "omega_L2": 0.0,
+      "speed_max_dof_sample": 0.0,
+      "phi_min_dof": -0.9790806990532334,
+      "phi_max_dof": 1.0156953397485375,
+      "wall_relaxation_dissipation": 0.0,
+      "mass_error_abs": 0.0,
+      "mu_mean_Pa": 0.1799201039372238,
+      "mu_std_Pa": 0.001643190259740797,
+      "relative_mu_variation": 0.009132888564327002,
+      "mass_error_relative_to_domain": 0.0,
+      "liquid_volume_error_relative": 0.0,
+      "interval_viscous_dissipation": 0.0,
+      "interval_CH_dissipation": 0.0,
+      "interval_slip_dissipation": 0.0,
+      "delta_E_interval": 0.0,
+      "local_budget_defect": 0.0,
+      "cumulative_viscous_dissipation": 0.0,
+      "cumulative_CH_dissipation": 0.0,
+      "cumulative_slip_dissipation": 0.0,
+      "energy_budget_defect": 0.0,
+      "energy_budget_relative": 0.0,
+      "E_positive_scale": 0.06564278268454628,
+      "energy_budget_relative_to_initial_scale": 0.0,
+      "energy_change_relative_applicable": 0.0,
+      "energy_budget_relative_to_change": 0.0,
+      "energy_budget_symmetric_diagnostic": 0.0,
+      "energy_budget_symmetric_diagnostic_only": 1.0
+    },
+    "resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.01250000000000019,
+      "epsilon_over_h_normal": 1.9999999999999698,
+      "cells_across_transition_min": 8.328131075834218,
+      "qualified_resolution": true,
+      "cells_across_transition_p05": 8.364786268726496,
+      "cells_across_transition_p50": 11.512338770513319,
+      "cells_across_transition_p95": 14.850696399387989,
+      "active_cell_count": 1766,
+      "active_cell_count_exact": 1766,
+      "active_cell_count_conservative_fallback": 0,
+      "diameter_fallback_active_cells": 0,
+      "diameter_fallback_local_cells_by_rank": [
+        []
+      ],
+      "worst_cell": {
+        "h_normal_m": 0.01250000000000019,
+        "h_cert": 0.01250000000000019,
+        "h_directional": 0.012499996273875102,
+        "rank": 0,
+        "local_cell": 9739,
+        "centroid": [
+          0.002083333333333326,
+          0.19374999999999998
+        ],
+        "bounds": [
+          [
+            0.0,
+            0.18749999999999997
+          ],
+          [
+            0.006249999999999978,
+            0.19999999999999998
+          ]
+        ],
+        "vertices": [
+          [
+            0.0,
+            0.18749999999999997
+          ],
+          [
+            0.0,
+            0.19999999999999998
+          ],
+          [
+            0.006249999999999978,
+            0.19374999999999998
+          ]
+        ],
+        "phi_min_exact": -0.9168268302529363,
+        "phi_max_exact": -0.8582404146919939,
+        "phi_min_bound": -0.9168268302529363,
+        "phi_max_bound": -0.8582404146919939,
+        "range_status": "exact",
+        "range_fallback_reason": "",
+        "normal_width_fallback_reason": "",
+        "min_witness": {
+          "candidate_type": "vertex",
+          "reference_point": [
+            1.0,
+            0.0
+          ],
+          "physical_point": [
+            0.0,
+            0.19999999999999998
+          ],
+          "value": -0.9168268302529072
+        },
+        "max_witness": {
+          "candidate_type": "vertex",
+          "reference_point": [
+            0.0,
+            0.0
+          ],
+          "physical_point": [
+            0.0,
+            0.18749999999999997
+          ],
+          "value": -0.858240414692023
+        }
+      },
+      "worst_certified_cell": {
+        "h_normal_m": 0.01250000000000019,
+        "h_cert": 0.01250000000000019,
+        "h_directional": 0.012499996273875102,
+        "rank": 0,
+        "local_cell": 9739,
+        "centroid": [
+          0.002083333333333326,
+          0.19374999999999998
+        ],
+        "bounds": [
+          [
+            0.0,
+            0.18749999999999997
+          ],
+          [
+            0.006249999999999978,
+            0.19999999999999998
+          ]
+        ],
+        "vertices": [
+          [
+            0.0,
+            0.18749999999999997
+          ],
+          [
+            0.0,
+            0.19999999999999998
+          ],
+          [
+            0.006249999999999978,
+            0.19374999999999998
+          ]
+        ],
+        "phi_min_exact": -0.9168268302529363,
+        "phi_max_exact": -0.8582404146919939,
+        "phi_min_bound": -0.9168268302529363,
+        "phi_max_bound": -0.8582404146919939,
+        "range_status": "exact",
+        "range_fallback_reason": "",
+        "normal_width_fallback_reason": "",
+        "min_witness": {
+          "candidate_type": "vertex",
+          "reference_point": [
+            1.0,
+            0.0
+          ],
+          "physical_point": [
+            0.0,
+            0.19999999999999998
+          ],
+          "value": -0.9168268302529072
+        },
+        "max_witness": {
+          "candidate_type": "vertex",
+          "reference_point": [
+            0.0,
+            0.0
+          ],
+          "physical_point": [
+            0.0,
+            0.18749999999999997
+          ],
+          "value": -0.858240414692023
+        }
+      },
+      "worst_exact_active_cell": {
+        "h_normal_m": 0.01250000000000019,
+        "h_cert": 0.01250000000000019,
+        "h_directional": 0.012499996273875102,
+        "rank": 0,
+        "local_cell": 9739,
+        "centroid": [
+          0.002083333333333326,
+          0.19374999999999998
+        ],
+        "bounds": [
+          [
+            0.0,
+            0.18749999999999997
+          ],
+          [
+            0.006249999999999978,
+            0.19999999999999998
+          ]
+        ],
+        "vertices": [
+          [
+            0.0,
+            0.18749999999999997
+          ],
+          [
+            0.0,
+            0.19999999999999998
+          ],
+          [
+            0.006249999999999978,
+            0.19374999999999998
+          ]
+        ],
+        "phi_min_exact": -0.9168268302529363,
+        "phi_max_exact": -0.8582404146919939,
+        "phi_min_bound": -0.9168268302529363,
+        "phi_max_bound": -0.8582404146919939,
+        "range_status": "exact",
+        "range_fallback_reason": "",
+        "normal_width_fallback_reason": "",
+        "min_witness": {
+          "candidate_type": "vertex",
+          "reference_point": [
+            1.0,
+            0.0
+          ],
+          "physical_point": [
+            0.0,
+            0.19999999999999998
+          ],
+          "value": -0.9168268302529072
+        },
+        "max_witness": {
+          "candidate_type": "vertex",
+          "reference_point": [
+            0.0,
+            0.0
+          ],
+          "physical_point": [
+            0.0,
+            0.18749999999999997
+          ],
+          "value": -0.858240414692023
+        }
+      },
+      "time": 0.0,
+      "algorithm_version": "triangle-p2-extrema-gradient-cone-v2",
+      "activation": "CG1 exact vertices; P2 vertices + edge extrema + interior stationary point; labelled Bernstein fallback",
+      "h_normal_method": "maximum over complete affine-gradient cone; diameter for origin/near-origin hull",
+      "hard_gate_metric": "cells_across_transition_certified_min",
+      "cells_across_transition_certified_min": 8.328131075834218,
+      "cells_across_transition_directional_min": 8.328131105254938,
+      "cells_across_transition_certified_p05": 8.364786268726496,
+      "cells_across_transition_certified_p50": 11.512338770513319,
+      "cells_across_transition_certified_p95": 14.850696399387989,
+      "cells_across_transition_directional_p05": 8.364786268727391,
+      "cells_across_transition_directional_p50": 11.512338770524533,
+      "cells_across_transition_directional_p95": 14.850696399399748
+    },
+    "geometry": {
+      "time": 0.0,
+      "crossings": [
+        {
+          "component": 0,
+          "coordinate": -0.24218464979892992
+        },
+        {
+          "component": 0,
+          "coordinate": 0.24218466349610684
+        }
+      ],
+      "fits": [
+        {
+          "center_x": -2.521508869047893e-07,
+          "center_z": -0.13908576226772873,
+          "radius": 0.2783897571098727,
+          "radial_rms": 1.1709851204069047e-05,
+          "points": 236,
+          "theta_deg": 60.02592815495431,
+          "window": [
+            2.0,
+            6.0
+          ]
+        },
+        {
+          "center_x": -2.521508869047893e-07,
+          "center_z": -0.13908576226772873,
+          "radius": 0.2783897571098727,
+          "radial_rms": 1.1709851204069047e-05,
+          "points": 236,
+          "theta_deg": 60.02592815495431,
+          "window": [
+            2.0,
+            10.0
+          ]
+        },
+        {
+          "center_x": -2.0364021498224444e-07,
+          "center_z": -0.1389916639915573,
+          "radius": 0.2783008057806772,
+          "radial_rms": 7.631065466994742e-06,
+          "points": 200,
+          "theta_deg": 60.037729268330025,
+          "window": [
+            3.0,
+            8.0
+          ]
+        }
+      ],
+      "interface_resolution": {
+        "interface_present": true,
+        "h_normal_max_m": 0.01250000000000019,
+        "epsilon_over_h_normal": 1.9999999999999698,
+        "cells_across_transition_min": 8.328131075834218,
+        "qualified_resolution": true,
+        "cells_across_transition_p05": 8.364786268726496,
+        "cells_across_transition_p50": 11.512338770513319,
+        "cells_across_transition_p95": 14.850696399387989,
+        "active_cell_count": 1766,
+        "active_cell_count_exact": 1766,
+        "active_cell_count_conservative_fallback": 0,
+        "diameter_fallback_active_cells": 0,
+        "diameter_fallback_local_cells_by_rank": [
+          []
+        ],
+        "worst_cell": {
+          "h_normal_m": 0.01250000000000019,
+          "h_cert": 0.01250000000000019,
+          "h_directional": 0.012499996273875102,
+          "rank": 0,
+          "local_cell": 9739,
+          "centroid": [
+            0.002083333333333326,
+            0.19374999999999998
+          ],
+          "bounds": [
+            [
+              0.0,
+              0.18749999999999997
+            ],
+            [
+              0.006249999999999978,
+              0.19999999999999998
+            ]
+          ],
+          "vertices": [
+            [
+              0.0,
+              0.18749999999999997
+            ],
+            [
+              0.0,
+              0.19999999999999998
+            ],
+            [
+              0.006249999999999978,
+              0.19374999999999998
+            ]
+          ],
+          "phi_min_exact": -0.9168268302529363,
+          "phi_max_exact": -0.8582404146919939,
+          "phi_min_bound": -0.9168268302529363,
+          "phi_max_bound": -0.8582404146919939,
+          "range_status": "exact",
+          "range_fallback_reason": "",
+          "normal_width_fallback_reason": "",
+          "min_witness": {
+            "candidate_type": "vertex",
+            "reference_point": [
+              1.0,
+              0.0
+            ],
+            "physical_point": [
+              0.0,
+              0.19999999999999998
+            ],
+            "value": -0.9168268302529072
+          },
+          "max_witness": {
+            "candidate_type": "vertex",
+            "reference_point": [
+              0.0,
+              0.0
+            ],
+            "physical_point": [
+              0.0,
+              0.18749999999999997
+            ],
+            "value": -0.858240414692023
+          }
+        },
+        "worst_certified_cell": {
+          "h_normal_m": 0.01250000000000019,
+          "h_cert": 0.01250000000000019,
+          "h_directional": 0.012499996273875102,
+          "rank": 0,
+          "local_cell": 9739,
+          "centroid": [
+            0.002083333333333326,
+            0.19374999999999998
+          ],
+          "bounds": [
+            [
+              0.0,
+              0.18749999999999997
+            ],
+            [
+              0.006249999999999978,
+              0.19999999999999998
+            ]
+          ],
+          "vertices": [
+            [
+              0.0,
+              0.18749999999999997
+            ],
+            [
+              0.0,
+              0.19999999999999998
+            ],
+            [
+              0.006249999999999978,
+              0.19374999999999998
+            ]
+          ],
+          "phi_min_exact": -0.9168268302529363,
+          "phi_max_exact": -0.8582404146919939,
+          "phi_min_bound": -0.9168268302529363,
+          "phi_max_bound": -0.8582404146919939,
+          "range_status": "exact",
+          "range_fallback_reason": "",
+          "normal_width_fallback_reason": "",
+          "min_witness": {
+            "candidate_type": "vertex",
+            "reference_point": [
+              1.0,
+              0.0
+            ],
+            "physical_point": [
+              0.0,
+              0.19999999999999998
+            ],
+            "value": -0.9168268302529072
+          },
+          "max_witness": {
+            "candidate_type": "vertex",
+            "reference_point": [
+              0.0,
+              0.0
+            ],
+            "physical_point": [
+              0.0,
+              0.18749999999999997
+            ],
+            "value": -0.858240414692023
+          }
+        },
+        "worst_exact_active_cell": {
+          "h_normal_m": 0.01250000000000019,
+          "h_cert": 0.01250000000000019,
+          "h_directional": 0.012499996273875102,
+          "rank": 0,
+          "local_cell": 9739,
+          "centroid": [
+            0.002083333333333326,
+            0.19374999999999998
+          ],
+          "bounds": [
+            [
+              0.0,
+              0.18749999999999997
+            ],
+            [
+              0.006249999999999978,
+              0.19999999999999998
+            ]
+          ],
+          "vertices": [
+            [
+              0.0,
+              0.18749999999999997
+            ],
+            [
+              0.0,
+              0.19999999999999998
+            ],
+            [
+              0.006249999999999978,
+              0.19374999999999998
+            ]
+          ],
+          "phi_min_exact": -0.9168268302529363,
+          "phi_max_exact": -0.8582404146919939,
+          "phi_min_bound": -0.9168268302529363,
+          "phi_max_bound": -0.8582404146919939,
+          "range_status": "exact",
+          "range_fallback_reason": "",
+          "normal_width_fallback_reason": "",
+          "min_witness": {
+            "candidate_type": "vertex",
+            "reference_point": [
+              1.0,
+              0.0
+            ],
+            "physical_point": [
+              0.0,
+              0.19999999999999998
+            ],
+            "value": -0.9168268302529072
+          },
+          "max_witness": {
+            "candidate_type": "vertex",
+            "reference_point": [
+              0.0,
+              0.0
+            ],
+            "physical_point": [
+              0.0,
+              0.18749999999999997
+            ],
+            "value": -0.858240414692023
+          }
+        },
+        "time": 0.0,
+        "algorithm_version": "triangle-p2-extrema-gradient-cone-v2",
+        "activation": "CG1 exact vertices; P2 vertices + edge extrema + interior stationary point; labelled Bernstein fallback",
+        "h_normal_method": "maximum over complete affine-gradient cone; diameter for origin/near-origin hull",
+        "hard_gate_metric": "cells_across_transition_certified_min",
+        "cells_across_transition_certified_min": 8.328131075834218,
+        "cells_across_transition_directional_min": 8.328131105254938,
+        "cells_across_transition_certified_p05": 8.364786268726496,
+        "cells_across_transition_certified_p50": 11.512338770513319,
+        "cells_across_transition_certified_p95": 14.850696399387989,
+        "cells_across_transition_directional_p05": 8.364786268727391,
+        "cells_across_transition_directional_p50": 11.512338770524533,
+        "cells_across_transition_directional_p95": 14.850696399399748
+      }
+    },
+    "work": {
+      "B_BE": 0.0,
+      "energy_work": 0.0,
+      "Delta_E": 0.0,
+      "time": 0.0,
+      "step": 0,
+      "dt": 0.0,
+      "D_old": 0.11400313905309394,
+      "D_new": 0.11400313905309394,
+      "trapezoid_integral": 0.0,
+      "BE_endpoint_integral": 0.0,
+      "weak_work_defect": 0.0,
+      "continuum_local_defect": 0.0,
+      "trapezoid_gap": 0.0,
+      "decomposition_roundoff": 0.0,
+      "weak_work_identity_roundoff": 0.0,
+      "diagnostic_only": true,
+      "remainder_label": "signed discrete BE work remainder; NOT physical heat"
+    }
+  },
+  "timing": {
+    "wall_s": 16.265765884978464,
+    "cpu_s": 7.846386050000001,
+    "peak_RSS_bytes": 359383040,
+    "peak_RSS_scope": "Linux process lifetime high-water mark, not stage increment",
+    "categories": {
+      "assembly": null,
+      "factorization_setup": null,
+      "nonlinear_SNES": null,
+      "linear_solve": null,
+      "diagnostics": {
+        "count": 3,
+        "wall_s": 0.4581711390055716,
+        "cpu_s": 0.45817045899999975
+      },
+      "interface_resolution": {
+        "count": 3,
+        "wall_s": 0.3646649580041412,
+        "cpu_s": 0.36466233499999934
+      },
+      "contact_geometry": {
+        "count": 3,
+        "wall_s": 2.264059918001294,
+        "cpu_s": 2.050471712000003
+      },
+      "filesystem_write": {
+        "count": 3,
+        "wall_s": 0.008337217004736885,
+        "cpu_s": 0.0038471229999990086
+      },
+      "BE_work": {
+        "count": 3,
+        "wall_s": 0.4118535030283965,
+        "cpu_s": 0.41186492800000174
+      },
+      "initialization": {
+        "count": 1,
+        "wall_s": 12.75785462098429,
+        "cpu_s": 4.556606408
+      }
+    },
+    "records": {
+      "assembly": [],
+      "factorization_setup": [],
+      "nonlinear_SNES": [],
+      "linear_solve": [],
+      "diagnostics": [
+        {
+          "wall_s": 0.16757505101850256,
+          "cpu_s": 0.16758159699999986
+        },
+        {
+          "wall_s": 0.15831995999906212,
+          "cpu_s": 0.15832419100000017
+        },
+        {
+          "wall_s": 0.13227612798800692,
+          "cpu_s": 0.13226467099999972
+        }
+      ],
+      "interface_resolution": [
+        {
+          "wall_s": 0.18285989298601635,
+          "cpu_s": 0.18285431400000007
+        },
+        {
+          "wall_s": 0.09778340702177957,
+          "cpu_s": 0.09778812299999995
+        },
+        {
+          "wall_s": 0.08402165799634531,
+          "cpu_s": 0.08401989799999932
+        }
+      ],
+      "contact_geometry": [
+        {
+          "wall_s": 0.9442227649851702,
+          "cpu_s": 0.7326358750000006
+        },
+        {
+          "wall_s": 0.6060421479924116,
+          "cpu_s": 0.605045800000001
+        },
+        {
+          "wall_s": 0.7137950050237123,
+          "cpu_s": 0.7127900370000013
+        }
+      ],
+      "filesystem_write": [
+        {
+          "wall_s": 0.0015862429863773286,
+          "cpu_s": 0.0008953509999996001
+        },
+        {
+          "wall_s": 0.0016199300007428974,
+          "cpu_s": 0.0009329089999994267
+        },
+        {
+          "wall_s": 0.005131044017616659,
+          "cpu_s": 0.002018862999999982
+        }
+      ],
+      "BE_work": [
+        {
+          "wall_s": 0.11206954601220787,
+          "cpu_s": 0.11207166700000037
+        },
+        {
+          "wall_s": 0.11584723001578823,
+          "cpu_s": 0.11585125100000049
+        },
+        {
+          "wall_s": 0.18393672700040042,
+          "cpu_s": 0.18394201000000088
+        }
+      ],
+      "initialization": [
+        {
+          "wall_s": 12.75785462098429,
+          "cpu_s": 4.556606408
+        }
+      ]
+    },
+    "timing_semantics": "application category timers; nested PETSc events reported separately",
+    "analysis_budget_charged": true,
+    "PETSc": {
+      "inclusive_nested_events": {
+        "MatLUFactorSym": {
+          "count": 1,
+          "flops": 0.0,
+          "time": 0.2805676210000456,
+          "numMessages": 0.0,
+          "messageLength": 0.0,
+          "numReductions": 0.0
+        },
+        "MatLUFactorNum": {
+          "count": 1,
+          "flops": 2287143.0,
+          "time": 0.08602724900015346,
+          "numMessages": 0.0,
+          "messageLength": 0.0,
+          "numReductions": 0.0
+        },
+        "MatSolve": {
+          "count": 1,
+          "flops": 5315384.0,
+          "time": 0.013293470999997226,
+          "numMessages": 0.0,
+          "messageLength": 0.0,
+          "numReductions": 0.0
+        },
+        "KSPSolve": {
+          "count": 1,
+          "flops": 5315384.0,
+          "time": 0.013317272999984198,
+          "numMessages": 0.0,
+          "messageLength": 0.0,
+          "numReductions": 0.0
+        },
+        "PCSetUp": {
+          "count": 1,
+          "flops": 2287143.0,
+          "time": 0.3667344770001364,
+          "numMessages": 0.0,
+          "messageLength": 0.0,
+          "numReductions": 0.0
+        },
+        "SNESFunctionEval": {
+          "count": 0,
+          "flops": 0.0,
+          "time": 0.0,
+          "numMessages": 0.0,
+          "messageLength": 0.0,
+          "numReductions": 0.0
+        },
+        "SNESJacobianEval": {
+          "count": 0,
+          "flops": 0.0,
+          "time": 0.0,
+          "numMessages": 0.0,
+          "messageLength": 0.0,
+          "numReductions": 0.0
+        },
+        "SNESSolve": {
+          "count": 0,
+          "flops": 0.0,
+          "time": 0.0,
+          "numMessages": 0.0,
+          "messageLength": 0.0,
+          "numReductions": 0.0
+        }
+      },
+      "available": true
+    },
+    "time_advance": false,
+    "geometry_timer_includes_duplicate_resolution": true
+  }
+}

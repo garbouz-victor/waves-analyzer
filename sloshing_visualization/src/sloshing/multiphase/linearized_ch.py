@@ -6,6 +6,7 @@ small diagnostic data; the production operator/inverse is never densified.
 """
 import hashlib
 import json
+from contextlib import nullcontext
 import numpy as np
 from scipy.sparse import bmat, csr_matrix
 from scipy.sparse.linalg import LinearOperator, splu
@@ -40,6 +41,7 @@ class LinearizedCH:
         self.mass_lu = splu(self.M0.tocsc())
         self._be_cache = {}
         self.resolvent_backend = "scipy_superlu"
+        self.performance = None  # instrumentation has no effect on operator identity
         identity = {"algorithm_version": ALGORITHM_VERSION, "mobility": self.mobility,
                     "mass_sha256": array_hash(self.mass), "provenance": provenance or {}}
         for name in ("M0", "K", "H"):
@@ -97,13 +99,16 @@ class LinearizedCH:
             # gives EXACTLY M(q_new-q_old)+dt*mobility*K*M^-1*H*q_new=0.
             # Balanced block magnitudes avoid pathological SuperLU pivot fill
             # for the extremely small resolvent times in the CH spectrum.
-            root_dt = np.sqrt(dt)
-            a = bmat([[self.M0, root_dt*self.mobility*self.K], [-root_dt*self.H, self.M0]], format="csc")
+            with self.performance.measure("assembly", dt=float(dt)) if self.performance else nullcontext():
+                root_dt = np.sqrt(dt)
+                a = bmat([[self.M0, root_dt*self.mobility*self.K], [-root_dt*self.H, self.M0]], format="csc")
             # Only a few distinct block steps are normally used. Call clear to
             # avoid retaining LU factors from rejected planner candidates.
-            self._be_cache[dt] = (PETScSparseFactor(a) if self.resolvent_backend == "petsc_mumps" else splu(a))
-        rhs = np.concatenate((self.M0 @ q, np.zeros(self.size)))
-        result = self._be_cache[dt].solve(rhs)
+            with self.performance.measure("factorization_setup", dt=float(dt)) if self.performance else nullcontext():
+                self._be_cache[dt] = (PETScSparseFactor(a) if self.resolvent_backend == "petsc_mumps" else splu(a))
+        with self.performance.measure("linear_solve", dt=float(dt)) if self.performance else nullcontext():
+            rhs = np.concatenate((self.M0 @ q, np.zeros(self.size)))
+            result = self._be_cache[dt].solve(rhs)
         return self.project(result[:self.size])
 
     def clear_be_cache(self):

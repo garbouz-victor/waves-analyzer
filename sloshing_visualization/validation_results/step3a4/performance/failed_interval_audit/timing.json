@@ -1,0 +1,68 @@
+{
+  "wall_s": 10.38024199201027,
+  "cpu_s": 6.711119751,
+  "peak_RSS_bytes": 398065664,
+  "peak_RSS_scope": "Linux process lifetime high-water mark, not stage increment",
+  "categories": {
+    "assembly": {
+      "count": 1,
+      "wall_s": 6.1880990019999444,
+      "cpu_s": 2.696665273
+    },
+    "factorization_setup": null,
+    "nonlinear_SNES": null,
+    "linear_solve": null,
+    "diagnostics": {
+      "count": 1,
+      "wall_s": 0.48929063699324615,
+      "cpu_s": 0.48003837599999954
+    },
+    "interface_resolution": null,
+    "contact_geometry": null,
+    "filesystem_write": null,
+    "BE_work": {
+      "count": 1,
+      "wall_s": 0.3204339960066136,
+      "cpu_s": 0.30729167099999977
+    },
+    "initialization": {
+      "count": 1,
+      "wall_s": 3.378438654995989,
+      "cpu_s": 3.2251867290000007
+    }
+  },
+  "records": {
+    "assembly": [
+      {
+        "wall_s": 6.1880990019999444,
+        "cpu_s": 2.696665273
+      }
+    ],
+    "factorization_setup": [],
+    "nonlinear_SNES": [],
+    "linear_solve": [],
+    "diagnostics": [
+      {
+        "wall_s": 0.48929063699324615,
+        "cpu_s": 0.48003837599999954
+      }
+    ],
+    "interface_resolution": [],
+    "contact_geometry": [],
+    "filesystem_write": [],
+    "BE_work": [
+      {
+        "wall_s": 0.3204339960066136,
+        "cpu_s": 0.30729167099999977
+      }
+    ],
+    "initialization": [
+      {
+        "wall_s": 3.378438654995989,
+        "cpu_s": 3.2251867290000007
+      }
+    ]
+  },
+  "timing_semantics": "application category timers; nested PETSc events reported separately",
+  "analysis_budget_charged": true
+}

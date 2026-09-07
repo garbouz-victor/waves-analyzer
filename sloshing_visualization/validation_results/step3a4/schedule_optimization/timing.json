@@ -1,0 +1,104 @@
+{
+  "wall_s": 4.1580545869946945,
+  "cpu_s": 4.116790848,
+  "peak_RSS_bytes": 281804800,
+  "peak_RSS_scope": "Linux process lifetime high-water mark, not stage increment",
+  "categories": {
+    "assembly": null,
+    "factorization_setup": null,
+    "nonlinear_SNES": null,
+    "linear_solve": null,
+    "diagnostics": null,
+    "interface_resolution": null,
+    "contact_geometry": null,
+    "filesystem_write": {
+      "count": 9,
+      "wall_s": 0.012628291005967185,
+      "cpu_s": 0.005316022999999337
+    },
+    "BE_work": null,
+    "initialization": {
+      "count": 1,
+      "wall_s": 2.192400483007077,
+      "cpu_s": 2.169165682
+    },
+    "reduced_optimization": {
+      "count": 1,
+      "wall_s": 0.9522641260118689,
+      "cpu_s": 0.9448925850000003
+    },
+    "reproducibility_repeat": {
+      "count": 1,
+      "wall_s": 0.9873804569942877,
+      "cpu_s": 0.9873230189999997
+    }
+  },
+  "records": {
+    "assembly": [],
+    "factorization_setup": [],
+    "nonlinear_SNES": [],
+    "linear_solve": [],
+    "diagnostics": [],
+    "interface_resolution": [],
+    "contact_geometry": [],
+    "filesystem_write": [
+      {
+        "wall_s": 0.0014291599800344557,
+        "cpu_s": 0.0007815549999996563
+      },
+      {
+        "wall_s": 0.0008511540072504431,
+        "cpu_s": 0.00037301400000000484
+      },
+      {
+        "wall_s": 0.0010035019950009882,
+        "cpu_s": 0.0004573539999999099
+      },
+      {
+        "wall_s": 0.0014138649858068675,
+        "cpu_s": 0.00046045800000005244
+      },
+      {
+        "wall_s": 0.0013436330191325396,
+        "cpu_s": 0.0005193480000000861
+      },
+      {
+        "wall_s": 0.0011204269831068814,
+        "cpu_s": 0.00045651400000013
+      },
+      {
+        "wall_s": 0.001574210007674992,
+        "cpu_s": 0.0006676570000001547
+      },
+      {
+        "wall_s": 0.002318313025170937,
+        "cpu_s": 0.0007494740000000277
+      },
+      {
+        "wall_s": 0.0015740270027890801,
+        "cpu_s": 0.000850648999999315
+      }
+    ],
+    "BE_work": [],
+    "initialization": [
+      {
+        "wall_s": 2.192400483007077,
+        "cpu_s": 2.169165682
+      }
+    ],
+    "reduced_optimization": [
+      {
+        "wall_s": 0.9522641260118689,
+        "cpu_s": 0.9448925850000003
+      }
+    ],
+    "reproducibility_repeat": [
+      {
+        "wall_s": 0.9873804569942877,
+        "cpu_s": 0.9873230189999997
+      }
+    ]
+  },
+  "timing_semantics": "application category timers; nested PETSc events reported separately",
+  "analysis_budget_charged": true
+}

@@ -1,0 +1,15 @@
+{
+  "status": "not_run",
+  "qualification_status": "not_qualified",
+  "level": 0,
+  "reason": "STOP: isolated cost pilot rejected first SNES interval; no retry",
+  "planned_steps": 1068,
+  "accepted_steps": 0,
+  "min_dt": 4.657657028534679e-12,
+  "t_end": 0.0001,
+  "integrated_D_CH": null,
+  "DeltaF": null,
+  "budget_defect": null,
+  "endpoint_L2_difference": null,
+  "optimized_plan_sha256": "5d291468a3520da5267a8d76b8015d0709f5e28b44fbaa5f8a7c6b264664e2b8"
+}

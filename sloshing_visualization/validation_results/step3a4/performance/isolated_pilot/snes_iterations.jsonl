@@ -1,0 +1,12 @@
+{"interval": 1, "iteration": 0, "residual": 0.784388568715275, "dt": 4.657657028534679e-12}
+{"interval": 1, "iteration": 1, "residual": 1.2847250274591428e-08, "dt": 4.657657028534679e-12}
+{"interval": 1, "iteration": 2, "residual": 1.1551954143769471e-08, "dt": 4.657657028534679e-12}
+{"interval": 1, "iteration": 3, "residual": 1.1232689974779214e-08, "dt": 4.657657028534679e-12}
+{"interval": 1, "iteration": 4, "residual": 1.1113340282402698e-08, "dt": 4.657657028534679e-12}
+{"interval": 1, "iteration": 5, "residual": 1.1112245736918812e-08, "dt": 4.657657028534679e-12}
+{"interval": 1, "iteration": 6, "residual": 1.1111379533741691e-08, "dt": 4.657657028534679e-12}
+{"interval": 1, "iteration": 7, "residual": 1.1110693737657359e-08, "dt": 4.657657028534679e-12}
+{"interval": 1, "iteration": 8, "residual": 1.1110151174878126e-08, "dt": 4.657657028534679e-12}
+{"interval": 1, "iteration": 9, "residual": 1.1109721308702134e-08, "dt": 4.657657028534679e-12}
+{"interval": 1, "iteration": 10, "residual": 1.1109380474155843e-08, "dt": 4.657657028534679e-12}
+{"interval": 1, "iteration": 11, "residual": 1.1109110367278936e-08, "dt": 4.657657028534679e-12}

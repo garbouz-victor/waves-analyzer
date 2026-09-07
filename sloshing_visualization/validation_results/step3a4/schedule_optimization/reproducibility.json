@@ -1,0 +1,7 @@
+{
+  "independent_optimizer_repeat_matched": true,
+  "optimizer_core_semantic_sha256": "2c22ab5db535cefe83a7043cb45da463e9385c3d80de34bbed2a3cd45f358d45",
+  "frozen_execution_artifact_sha256": "5d291468a3520da5267a8d76b8015d0709f5e28b44fbaa5f8a7c6b264664e2b8",
+  "semantics": "Core hash covers deterministic optimizer inputs, policies, history, blocks/errors. Execution hash additionally covers archival provenance; gzip timestamps are not optimizer input.",
+  "core_and_executed_schedule_match": true
+}

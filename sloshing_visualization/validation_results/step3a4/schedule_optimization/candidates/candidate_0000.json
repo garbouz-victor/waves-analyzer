@@ -1,0 +1,35 @@
+{
+  "candidate": 0,
+  "action": "original",
+  "block": null,
+  "refinements": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "steps": 898,
+  "errors": {
+    "endpoint_relative_L2_error": 0.0015553513085043303,
+    "max_checkpoint_relative_L2_error": 0.0018364916751474588,
+    "max_quadratic_energy_relative_error": 0.001655805439627278,
+    "integrated_D2_relative_error": 0.0034532423769115805
+  },
+  "passed": false,
+  "global_violation": 0.8364916751474587
+}

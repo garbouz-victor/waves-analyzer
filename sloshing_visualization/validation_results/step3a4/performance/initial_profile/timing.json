@@ -1,0 +1,197 @@
+{
+  "wall_s": 16.265765884978464,
+  "cpu_s": 7.846386050000001,
+  "peak_RSS_bytes": 359383040,
+  "peak_RSS_scope": "Linux process lifetime high-water mark, not stage increment",
+  "categories": {
+    "assembly": null,
+    "factorization_setup": null,
+    "nonlinear_SNES": null,
+    "linear_solve": null,
+    "diagnostics": {
+      "count": 3,
+      "wall_s": 0.4581711390055716,
+      "cpu_s": 0.45817045899999975
+    },
+    "interface_resolution": {
+      "count": 3,
+      "wall_s": 0.3646649580041412,
+      "cpu_s": 0.36466233499999934
+    },
+    "contact_geometry": {
+      "count": 3,
+      "wall_s": 2.264059918001294,
+      "cpu_s": 2.050471712000003
+    },
+    "filesystem_write": {
+      "count": 3,
+      "wall_s": 0.008337217004736885,
+      "cpu_s": 0.0038471229999990086
+    },
+    "BE_work": {
+      "count": 3,
+      "wall_s": 0.4118535030283965,
+      "cpu_s": 0.41186492800000174
+    },
+    "initialization": {
+      "count": 1,
+      "wall_s": 12.75785462098429,
+      "cpu_s": 4.556606408
+    }
+  },
+  "records": {
+    "assembly": [],
+    "factorization_setup": [],
+    "nonlinear_SNES": [],
+    "linear_solve": [],
+    "diagnostics": [
+      {
+        "wall_s": 0.16757505101850256,
+        "cpu_s": 0.16758159699999986
+      },
+      {
+        "wall_s": 0.15831995999906212,
+        "cpu_s": 0.15832419100000017
+      },
+      {
+        "wall_s": 0.13227612798800692,
+        "cpu_s": 0.13226467099999972
+      }
+    ],
+    "interface_resolution": [
+      {
+        "wall_s": 0.18285989298601635,
+        "cpu_s": 0.18285431400000007
+      },
+      {
+        "wall_s": 0.09778340702177957,
+        "cpu_s": 0.09778812299999995
+      },
+      {
+        "wall_s": 0.08402165799634531,
+        "cpu_s": 0.08401989799999932
+      }
+    ],
+    "contact_geometry": [
+      {
+        "wall_s": 0.9442227649851702,
+        "cpu_s": 0.7326358750000006
+      },
+      {
+        "wall_s": 0.6060421479924116,
+        "cpu_s": 0.605045800000001
+      },
+      {
+        "wall_s": 0.7137950050237123,
+        "cpu_s": 0.7127900370000013
+      }
+    ],
+    "filesystem_write": [
+      {
+        "wall_s": 0.0015862429863773286,
+        "cpu_s": 0.0008953509999996001
+      },
+      {
+        "wall_s": 0.0016199300007428974,
+        "cpu_s": 0.0009329089999994267
+      },
+      {
+        "wall_s": 0.005131044017616659,
+        "cpu_s": 0.002018862999999982
+      }
+    ],
+    "BE_work": [
+      {
+        "wall_s": 0.11206954601220787,
+        "cpu_s": 0.11207166700000037
+      },
+      {
+        "wall_s": 0.11584723001578823,
+        "cpu_s": 0.11585125100000049
+      },
+      {
+        "wall_s": 0.18393672700040042,
+        "cpu_s": 0.18394201000000088
+      }
+    ],
+    "initialization": [
+      {
+        "wall_s": 12.75785462098429,
+        "cpu_s": 4.556606408
+      }
+    ]
+  },
+  "timing_semantics": "application category timers; nested PETSc events reported separately",
+  "analysis_budget_charged": true,
+  "PETSc": {
+    "inclusive_nested_events": {
+      "MatLUFactorSym": {
+        "count": 1,
+        "flops": 0.0,
+        "time": 0.2805676210000456,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "MatLUFactorNum": {
+        "count": 1,
+        "flops": 2287143.0,
+        "time": 0.08602724900015346,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "MatSolve": {
+        "count": 1,
+        "flops": 5315384.0,
+        "time": 0.013293470999997226,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "KSPSolve": {
+        "count": 1,
+        "flops": 5315384.0,
+        "time": 0.013317272999984198,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "PCSetUp": {
+        "count": 1,
+        "flops": 2287143.0,
+        "time": 0.3667344770001364,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "SNESFunctionEval": {
+        "count": 0,
+        "flops": 0.0,
+        "time": 0.0,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "SNESJacobianEval": {
+        "count": 0,
+        "flops": 0.0,
+        "time": 0.0,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "SNESSolve": {
+        "count": 0,
+        "flops": 0.0,
+        "time": 0.0,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      }
+    },
+    "available": true
+  },
+  "time_advance": false,
+  "geometry_timer_includes_duplicate_resolution": true
+}

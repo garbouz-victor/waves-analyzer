@@ -1,0 +1,28 @@
+{
+  "status": "not_run",
+  "execution_authorized": false,
+  "reason": "Isolated nonlinear temporal convergence prerequisite NOT obtained",
+  "reference_derived_checkpoint_times": [
+    4.657657028534679e-10,
+    4.869673576473578e-07,
+    2.4519769661017965e-06,
+    9.854149083386479e-06
+  ],
+  "reference_derived_checkpoint_indices": [
+    100,
+    590,
+    679,
+    745
+  ],
+  "target_times": [
+    4.657657028534678e-10,
+    4.862048987156724e-07,
+    2.431024493578362e-06,
+    1e-05
+  ],
+  "times_semantics": "predeclared selectors evaluated before pilot; not an authorized/frozen CHNS execution plan",
+  "prefix_steps_if_later_authorized": 745,
+  "historical_cost_prefix_estimate_wall_s": 6942.4014342578885,
+  "optimized_plan_sha256": "5d291468a3520da5267a8d76b8015d0709f5e28b44fbaa5f8a7c6b264664e2b8",
+  "comparison_metrics": null
+}

@@ -1,0 +1,171 @@
+{
+  "wall_s": 17.114237420988502,
+  "cpu_s": 16.187211023,
+  "peak_RSS_bytes": 415297536,
+  "peak_RSS_scope": "Linux process lifetime high-water mark, not stage increment",
+  "categories": {
+    "assembly": null,
+    "factorization_setup": null,
+    "nonlinear_SNES": {
+      "count": 1,
+      "wall_s": 12.620930377976038,
+      "cpu_s": 12.611631008
+    },
+    "linear_solve": null,
+    "diagnostics": {
+      "count": 1,
+      "wall_s": 0.22553523202077486,
+      "cpu_s": 0.22552700000000003
+    },
+    "interface_resolution": {
+      "count": 1,
+      "wall_s": 0.18101869599195197,
+      "cpu_s": 0.18100599899999992
+    },
+    "contact_geometry": {
+      "count": 1,
+      "wall_s": 0.7786275589896832,
+      "cpu_s": 0.7766826189999998
+    },
+    "filesystem_write": {
+      "count": 2,
+      "wall_s": 0.006161806988529861,
+      "cpu_s": 0.0025663719999995394
+    },
+    "BE_work": null,
+    "initialization": {
+      "count": 1,
+      "wall_s": 2.9548793059948366,
+      "cpu_s": 2.062456788
+    },
+    "wall_topology": {
+      "count": 1,
+      "wall_s": 0.010832675005076453,
+      "cpu_s": 0.010839018999999617
+    }
+  },
+  "records": {
+    "assembly": [],
+    "factorization_setup": [],
+    "nonlinear_SNES": [
+      {
+        "dt": 4.657657028534679e-12,
+        "wall_s": 12.620930377976038,
+        "cpu_s": 12.611631008
+      }
+    ],
+    "linear_solve": [],
+    "diagnostics": [
+      {
+        "wall_s": 0.22553523202077486,
+        "cpu_s": 0.22552700000000003
+      }
+    ],
+    "interface_resolution": [
+      {
+        "wall_s": 0.18101869599195197,
+        "cpu_s": 0.18100599899999992
+      }
+    ],
+    "contact_geometry": [
+      {
+        "wall_s": 0.7786275589896832,
+        "cpu_s": 0.7766826189999998
+      }
+    ],
+    "filesystem_write": [
+      {
+        "wall_s": 0.0036995330010540783,
+        "cpu_s": 0.001415535999999662
+      },
+      {
+        "wall_s": 0.0024622739874757826,
+        "cpu_s": 0.0011508359999998774
+      }
+    ],
+    "BE_work": [],
+    "initialization": [
+      {
+        "wall_s": 2.9548793059948366,
+        "cpu_s": 2.062456788
+      }
+    ],
+    "wall_topology": [
+      {
+        "wall_s": 0.010832675005076453,
+        "cpu_s": 0.010839018999999617
+      }
+    ]
+  },
+  "timing_semantics": "application category timers; nested PETSc events reported separately",
+  "analysis_budget_charged": false,
+  "PETSc": {
+    "inclusive_nested_events": {
+      "MatLUFactorSym": {
+        "count": 2,
+        "flops": 0.0,
+        "time": 0.8621351379997577,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "MatLUFactorNum": {
+        "count": 13,
+        "flops": 129781239.0,
+        "time": 4.298198439000771,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "MatSolve": {
+        "count": 13,
+        "flops": 225198056.0,
+        "time": 0.4329439760003879,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "KSPSolve": {
+        "count": 13,
+        "flops": 225198056.0,
+        "time": 0.43321171299976413,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "PCSetUp": {
+        "count": 13,
+        "flops": 129781239.0,
+        "time": 5.160868558999482,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "SNESFunctionEval": {
+        "count": 62,
+        "flops": 0.0,
+        "time": 4.382084500999554,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "SNESJacobianEval": {
+        "count": 12,
+        "flops": 30316028.0,
+        "time": 2.985984190000181,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      },
+      "SNESSolve": {
+        "count": 1,
+        "flops": 0.0,
+        "time": 0.0,
+        "numMessages": 0.0,
+        "messageLength": 0.0,
+        "numReductions": 0.0
+      }
+    },
+    "available": true
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "candidate": 5,
+  "action": "trial_split",
+  "block": 17,
+  "refinements": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    0
+  ],
+  "steps": 1300,
+  "errors": {
+    "endpoint_relative_L2_error": 0.0004751926440593941,
+    "max_checkpoint_relative_L2_error": 0.0010887221655942055,
+    "max_quadratic_energy_relative_error": 0.0009601672958042696,
+    "integrated_D2_relative_error": 0.0022723959490509316
+  },
+  "passed": false,
+  "global_violation": 0.08872216559420543
+}

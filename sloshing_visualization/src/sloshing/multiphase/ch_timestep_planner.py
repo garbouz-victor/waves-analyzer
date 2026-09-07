@@ -202,13 +202,15 @@ def validate_plan(plan, input_fingerprints):
         raise ValueError("Plan policy fingerprint mismatch")
 
 
-def verify_full_sparse_schedule(operator, reference, basis, blocks, monitor=None):
+def verify_full_sparse_schedule(operator, reference, basis, blocks, monitor=None,
+                                performance=None, check_budget=None):
     """Check coupled sparse BE against the qualified lifted exponential.
 
     Computes physical D2 independently at every endpoint, including t=0.
     The analysis projection in operator.be_step removes roundoff mass only.
     No dense full operator/inverse and no energy-derived power integral.
     """
+    from contextlib import nullcontext
     basis = np.asarray(basis)
     if basis.shape != (operator.size, reference.size):
         raise ValueError("Incompatible Krylov lifting basis")
@@ -224,18 +226,21 @@ def verify_full_sparse_schedule(operator, reference, basis, blocks, monitor=None
             local = []
             dt = block["dt"]
             for j in range(block["steps"]):
+                if check_budget:
+                    check_budget()
                 t = block["t_start"]+(j+1)*dt
                 q = operator.be_step(q, dt)
-                exact = basis @ reference.state(t)
-                power = operator.power(q)
-                integral += dt*(previous_power+power)/2
-                previous_power = power
-                row = {"time": t, "dt": dt,
-                    "relative_L2_error": operator.norm(q-exact)/max(operator.norm(exact), 1e-14*initial_norm),
-                    "relative_energy_error": abs(operator.energy(q)-operator.energy(exact))/
-                        max(abs(operator.energy(exact)), 1e-14*abs(initial_energy)),
-                    "D2": power, "integrated_D2": integral,
-                    "mass_domain": float(abs(operator.mass @ q)/operator.area)}
+                with performance.measure("diagnostics") if performance else nullcontext():
+                    exact = basis @ reference.state(t)
+                    power = operator.power(q)
+                    integral += dt*(previous_power+power)/2
+                    previous_power = power
+                    row = {"time": t, "dt": dt,
+                        "relative_L2_error": operator.norm(q-exact)/max(operator.norm(exact), 1e-14*initial_norm),
+                        "relative_energy_error": abs(operator.energy(q)-operator.energy(exact))/
+                            max(abs(operator.energy(exact)), 1e-14*abs(initial_energy)),
+                        "D2": power, "integrated_D2": integral,
+                        "mass_domain": float(abs(operator.mass @ q)/operator.area)}
                 rows.append(row); local.append(row)
             report = {"block": block["block"], "time": t, "dt": dt, "steps": block["steps"],
                 "max_relative_L2_error": max(r["relative_L2_error"] for r in local),
