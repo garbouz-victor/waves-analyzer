@@ -11,7 +11,7 @@ from petsc4py import PETSc
 from .mesh import make_mesh, WALL_IDS
 from .boundary import velocity_pressure_bcs
 from .weak_form import residual
-from .time_integrator import derivative_coefficients
+from .time_integrator import derivative_coefficients, IntegrationSchedule
 from .free_energy import bulk_derivative, wall_derivative, lambda_from_sigma
 from .material import density_derivative, assert_admissible
 
@@ -19,6 +19,7 @@ from .material import density_derivative, assert_admissible
 class CHNSSolver:
     def __init__(self, config, comm=MPI.COMM_WORLD):
         self.config, self.comm = config, comm
+        self.schedule=IntegrationSchedule(config)
         self.mesh, self.tags, self.facets, self.mesh_report = make_mesh(config, comm)
         cell = self.mesh.basix_cell()
         self.space = fem.functionspace(self.mesh, mixed_element([
@@ -37,6 +38,9 @@ class CHNSSolver:
                 "ksp_type": "preonly", "pc_type": "lu", "pc_factor_mat_solver_type": "mumps",
                 "snes_error_if_not_converged": True, "ksp_error_if_not_converged": True})
         self.step_number, self.time = 0, 0.0
+        self.current_phase="initial"
+        self.current_dt=None
+        self.history_spacing=None
         self.logs = []
         points, _ = basix.make_quadrature(self.mesh.basix_cell(), config.quadrature_degree)
         self.phase_quadrature = fem.Expression(ufl.split(self.state)[2], points)
@@ -85,8 +89,12 @@ class CHNSSolver:
     def advance(self):
         started = time.perf_counter()
         number = self.step_number+1
-        for c, value in zip(self.coefficients, derivative_coefficients(number, self.config.dt,
-                                                                       self.config.time_scheme)):
+        interval=self.schedule.step(self.step_number)
+        if interval["scheme"]=="bdf2" and (self.history_spacing is None or
+                not np.isclose(self.history_spacing,interval["dt"],rtol=1e-12,atol=1e-15)):
+            raise RuntimeError("Refusing constant-step BDF2 with unequal history spacing")
+        for c, value in zip(self.coefficients, derivative_coefficients(
+                2 if interval["scheme"]=="bdf2" else 1,interval["dt"],interval["scheme"])):
             c.value = value
         self.problem.solve()
         snes = self.problem.solver
@@ -94,12 +102,15 @@ class CHNSSolver:
             raise RuntimeError(f"SNES failed: {snes.getConvergedReason()}")
         self.state.x.scatter_forward()
         self._check_material()
-        self.step_number, self.time = number, number*self.config.dt
+        self.step_number, self.time = number, interval["time"]
+        self.current_phase,self.current_dt=interval["phase"],interval["dt"]
+        self.history_spacing=interval["dt"]
         row = {"step": number, "time": self.time,
                "newton_iterations": snes.getIterationNumber(),
                "linear_iterations": snes.getLinearSolveIterations(),
                "residual": snes.getFunctionNorm(), "reason": snes.getConvergedReason(),
-               "runtime_s": time.perf_counter()-started, "dt_reductions": 0}
+               "runtime_s": time.perf_counter()-started, "dt_reductions": 0,
+               "dt":self.current_dt,"scheme_phase":self.current_phase}
         self.logs.append(row)
         self.older.x.array[:] = self.old.x.array
         self.old.x.array[:] = self.state.x.array

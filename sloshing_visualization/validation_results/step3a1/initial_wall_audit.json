@@ -1,0 +1,25 @@
+{
+  "scope": "analytic natural-wall residual of the initial geometries, before FEM interpolation",
+  "parameters": {
+    "radius_m": 0.3,
+    "epsilon_m": 0.025,
+    "sigma_N_per_m": 0.1,
+    "half_width_m": 0.6
+  },
+  "formula": "L = (3 sigma / 4) [R cos(theta_initial)/r - cos(theta_target)] (1-phi^2), r=sqrt(x^2+R^2 cos^2(theta_initial))",
+  "interpretation": "theta_initial=theta_target makes L=0 at r=R (phi=0) only, not on the entire diffuse wall trace. Geometrically compatible is not a prepared variational equilibrium.",
+  "measurements": [
+    {
+      "theta_initial_deg": 60.0,
+      "theta_target_deg": 60.0,
+      "wall_variation_L2_N_per_sqrt_m": 0.0008598580495899046,
+      "wall_variation_max_sampled_N_per_m": 0.002183433025868322
+    },
+    {
+      "theta_initial_deg": 90.0,
+      "theta_target_deg": 60.0,
+      "wall_variation_L2_N_per_sqrt_m": 0.011514448378992194,
+      "wall_variation_max_sampled_N_per_m": 0.03749999324932577
+    }
+  ]
+}

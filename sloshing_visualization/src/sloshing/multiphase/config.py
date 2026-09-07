@@ -47,6 +47,10 @@ class ModelConfig:
     refinement_circle_z: float = 0.0
     refinement_circle_radius: float = 0.25
     refinement_band_m: float = 0.12
+    startup_dt: float = None
+    startup_t_end: float = 0.0
+    startup_stages: tuple = ()  # optional declared BE blocks {t_end, dt}; never variable-step BDF2
+    refinement_boxes: tuple = ()
 
     def __post_init__(self):
         for key,value in asdict(self).items():
@@ -75,6 +79,31 @@ class ModelConfig:
             raise ValueError("Invalid local interface-refinement request")
         if self.time_scheme not in ("be", "bdf2"):
             raise ValueError("Supported schemes: be, bdf2 (BE startup)")
+        object.__setattr__(self,"startup_stages",tuple(dict(s) for s in self.startup_stages))
+        if self.startup_stages and (self.startup_dt is not None or self.startup_t_end!=0):
+            raise ValueError("Choose startup_dt/startup_t_end OR explicit BE startup_stages")
+        if (self.startup_dt is None)!=(self.startup_t_end==0):
+            raise ValueError("startup_dt and a positive startup_t_end must be specified together")
+        if self.startup_dt is not None and (not math.isfinite(self.startup_dt) or self.startup_dt<=0):
+            raise ValueError("startup_dt must be positive")
+        if self.startup_t_end<0 or self.startup_t_end>self.t_end:
+            raise ValueError("Invalid startup_t_end")
+        last_end=0.
+        for block in self.startup_stages:
+            if set(block)!={"t_end","dt"} or not all(math.isfinite(float(v)) for v in block.values()):
+                raise ValueError("BE startup blocks require finite t_end,dt")
+            if block["dt"]<=0 or not last_end<block["t_end"]<=self.t_end:
+                raise ValueError("Startup blocks must increase in time with positive dt")
+            last_end=block["t_end"]
+        object.__setattr__(self,"refinement_boxes",tuple(dict(b) for b in self.refinement_boxes))
+        for box in self.refinement_boxes:
+            if set(box)!={"x_min","x_max","z_min","z_max","levels"}:
+                raise ValueError("A refinement box requires x_min,x_max,z_min,z_max,levels")
+            if not all(math.isfinite(float(v)) for v in box.values()) or not isinstance(box["levels"],int):
+                raise ValueError("Nonfinite box geometry or noninteger levels")
+            if not (self.x_min<=box["x_min"]<box["x_max"]<=self.x_max and
+                    self.z_min<=box["z_min"]<box["z_max"]<=self.z_max and 1<=box["levels"]<=3):
+                raise ValueError("Refinement box must lie in domain, levels 1..3")
         if self.quadrature_degree < 6 * self.phase_degree:
             # Quartic energy requires 4p; chemical residual/Jacobian with tests
             # and material/capillary products benefit from the stricter 6p rule.

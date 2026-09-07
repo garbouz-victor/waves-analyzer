@@ -6,6 +6,9 @@ from ..initialization import sessile_drop
 from ..interface import contour_segments, connected_polylines
 from ..contact_line import all_wall_crossings,sessile_apparent_angle
 from ..diagnostics import interface_resolution
+from ..energy_validation import read_history, validate_energy
+from ..validation_policy import ANGLE_ERROR_DEG, ANGLE_FIT_SPREAD_DEG
+from ..settling import validate_settling
 from .common import run_case
 
 
@@ -24,6 +27,9 @@ def summarize(solver,result,output,initial_angle):
     observations=json.loads((folder/"observations.json").read_text())
     final=observations[-1]
     c=solver.config
+    history=read_history(folder/"history.csv")
+    energy_gate=validate_energy(history)
+    settling=validate_settling(observations,history,energy_gate["E_scale_initial_J_per_m"])
     angle=final["fits"][1]["theta_deg"]
     errors=[abs(f["theta_deg"]-c.theta_equilibrium_deg) for f in final["fits"]]
     before=sorted(p["coordinate"] for p in observations[0]["crossings"])
@@ -34,21 +40,23 @@ def summarize(solver,result,output,initial_angle):
     expected_direction=np.sign(initial_angle-c.theta_equilibrium_deg)
     movement_correct=abs(initial_angle-c.theta_equilibrium_deg)<1e-6 or half_width_change*expected_direction>0
     theta_history=[r["fits"][1]["theta_deg"] for r in observations]
-    last_change=abs(theta_history[-1]-theta_history[-2])
-    checks={"apparent_angle_within_3_degrees":max(errors)<3.,
-        "fit_window_spread_below_1_degree":np.ptp([f["theta_deg"] for f in final["fits"]])<1.,
-        "angle_settling_below_0_05_degree_per_step":last_change<.05,
+    checks={"apparent_angle_within_3_degrees":max(errors)<ANGLE_ERROR_DEG,
+        "fit_window_spread_below_1_degree":np.ptp([f["theta_deg"] for f in final["fits"]])<ANGLE_FIT_SPREAD_DEG,
+        "physical_time_settling":settling["qualified"],
         "correct_motion_direction":bool(movement_correct),
-        "interface_resolved_at_all_samples":all(r["interface_resolution"]["qualified_resolution"] for r in observations),
-        "mass_conservation":result["max_mass_error_relative"]<1e-8,
-        "no_unexplained_energy_growth":result["max_energy_increase_step"]<1e-9}
+        "interface_resolved_at_all_samples":result.get("interface_resolved_all_times",False),
+        "mass_conservation":energy_gate["mass_ok"],
+        "no_unexplained_energy_growth":energy_gate["energy_growth_ok"],
+        "energy_budget_closure":energy_gate["energy_budget_ok"]}
     checks={key:bool(value) for key,value in checks.items()}
     summary={"status":"passed" if all(checks.values()) else "failed","checks":checks,
+        "qualification_status":"passed" if all(checks.values()) else "failed",
+        "energy_validation":energy_gate,
         "initial_theta_deg":initial_angle,"target_theta_deg":c.theta_equilibrium_deg,
         "measured_theta_deg":angle,"fit_windows":final["fits"],
         "contact_half_width_change_m":half_width_change,
         "initial_crossings":before,"final_crossings":after,
-        "late_angle_step_change_deg":last_change,"run":result}
+        "settling":settling,"run":result}
     components=connected_polylines(contour_segments(solver))
     if solver.comm.rank==0:
         (folder/"contact.json").write_text(json.dumps(summary,indent=2)+"\n")

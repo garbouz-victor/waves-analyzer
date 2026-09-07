@@ -5,6 +5,7 @@ from pathlib import Path
 from mpi4py import MPI
 from .common import run_case
 from ..initialization import flat_interface
+from ..validation_policy import MIN_TRANSITION_CELLS, EnergyPolicy
 
 
 def study(config, output):
@@ -19,6 +20,7 @@ def study(config, output):
             "mass_error_relative":r["max_mass_error_relative"],
             "energy_increase_max":r["max_energy_increase_step"],
             "energy_budget_relative":r["max_energy_budget_relative"],
+            "energy_budget_qualified":r["energy_validation"]["qualified"],
             "transition_cells":r["final_interface_resolution"]["cells_across_transition_min"],
             "runtime_s":r["runtime_s"]})
     # Declared before looking at study results: monotone spurious-current and
@@ -28,10 +30,12 @@ def study(config, output):
         for a,b in zip(p2,p2[1:])),
         "surface_energy_error_decreases":all(b["surface_energy_error_abs"] < a["surface_energy_error_abs"]
         for a,b in zip(p2,p2[1:])),
-        "mass_conservation":max(r["mass_error_relative"] for r in rows)<1e-8,
-        "no_unexplained_energy_growth":max(r["energy_increase_max"] for r in rows)<1e-9,
-        "finest_interface_resolved":p2[-1]["transition_cells"]>=8}
-    result={"status":"passed" if all(checks.values()) else "failed","checks":checks,"rows":rows,
+        "mass_conservation":max(r["mass_error_relative"] for r in rows)<=EnergyPolicy().mass_relative_tolerance,
+        "no_unexplained_energy_growth":max(r["energy_increase_max"] for r in rows)<=EnergyPolicy().growth_absolute_tolerance,
+        "energy_budget_closure":all(r["energy_budget_qualified"] for r in rows),
+        "finest_interface_resolved":p2[-1]["transition_cells"]>=MIN_TRANSITION_CELLS}
+    status="passed" if all(checks.values()) else "failed"
+    result={"status":status,"qualification_status":status,"checks":checks,"rows":rows,
             "scope":"flat matched-density benchmark only; not whole-model qualification"}
     if MPI.COMM_WORLD.rank==0:
         with (output/"summary.csv").open("w",newline="") as f:

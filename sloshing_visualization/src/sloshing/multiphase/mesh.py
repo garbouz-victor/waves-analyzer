@@ -36,14 +36,25 @@ def make_mesh(config, comm=MPI.COMM_WORLD):
         scale = np.where(xyz[:, 1] >= center, config.z_max-center, center-config.z_min)
         s = (xyz[:, 1]-center)/scale
         xyz[:, 1] = center+scale*np.sinh(config.z_grading*s)/np.sinh(config.z_grading)
-    for level in range(config.refinement_levels):
+    levels=max([config.refinement_levels]+[b["levels"] for b in config.refinement_boxes])
+    for level in range(levels):
         domain.topology.create_entities(1)
         domain.topology.create_connectivity(1,2)
         domain.topology.create_connectivity(1,0)
         edges=np.arange(domain.topology.index_map(1).size_local,dtype=np.int32)
         mid=dmesh.compute_midpoints(domain,1,edges)
         radius=np.hypot(mid[:,0]-config.refinement_circle_x,mid[:,1]-config.refinement_circle_z)
-        selected=edges[np.abs(radius-config.refinement_circle_radius)<config.refinement_band_m]
+        mask=(np.abs(radius-config.refinement_circle_radius)<config.refinement_band_m) if level<config.refinement_levels else np.zeros(len(edges),dtype=bool)
+        for box in config.refinement_boxes:
+            if level<box["levels"]:
+                # Mark edges intersecting the box, not only edges with an inside
+                # midpoint: a narrow boundary crossing must not disappear.
+                edge_nodes=dmesh.entities_to_geometry(domain,1,edges,False)
+                coordinates=domain.geometry.x[edge_nodes,:2]
+                lower,upper=coordinates.min(axis=1),coordinates.max(axis=1)
+                mask|=((lower[:,0]<=box["x_max"])&(upper[:,0]>=box["x_min"])
+                    &(lower[:,1]<=box["z_max"])&(upper[:,1]>=box["z_min"]))
+        selected=edges[mask]
         domain,_,_=dmesh.refine(domain,selected)
     xyz=domain.geometry.x
     # Recompute actual FE counts after grading/local refinement, before assembly.
@@ -80,6 +91,7 @@ def make_mesh(config, comm=MPI.COMM_WORLD):
     hmin = comm.allreduce(float(edges.min()), op=MPI.MIN)
     aspect = comm.allreduce(float(np.max(edges.max(axis=1)/min_alt)), op=MPI.MAX)
     estimate.update(h_min_m=hmin, h_max_m=hmax, aspect_ratio_max=aspect,
+                    refinement_boxes=list(config.refinement_boxes),
                     epsilon_over_h_max=config.epsilon/hmax,
                     transition_cells_conservative=transition_width(config.epsilon)/hmax,
                     interface_resolution_policy="phi=-0.9..0.9 width / h_normal >=8; h_max is conservative")

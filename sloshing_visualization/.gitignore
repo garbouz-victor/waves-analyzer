@@ -29,3 +29,7 @@ validation_results/step3/**/checkpoint/
 validation_results/step3/**/nonlinear.csv
 validation_results/step3/**/*.xdmf
 validation_results/step3/**/*.bp/
+validation_results/step3a1/cache/
+validation_results/step3a1/**/checkpoint/
+validation_results/step3a1/**/nonlinear.csv
+validation_results/step3a1/**/*.xdmf

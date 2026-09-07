@@ -5,6 +5,7 @@ on:
     paths:
       - 'sloshing_visualization/src/sloshing/multiphase/**'
       - 'sloshing_visualization/configs/step3/**'
+      - 'sloshing_visualization/configs/step3a1/**'
       - 'sloshing_visualization/docker/step3/**'
       - 'sloshing_visualization/scripts/step3*'
       - 'sloshing_visualization/tests/test_step3*'
@@ -13,6 +14,7 @@ on:
     paths:
       - 'sloshing_visualization/src/sloshing/multiphase/**'
       - 'sloshing_visualization/configs/step3/**'
+      - 'sloshing_visualization/configs/step3a1/**'
       - 'sloshing_visualization/docker/step3/**'
       - 'sloshing_visualization/scripts/step3*'
       - 'sloshing_visualization/tests/test_step3*'
@@ -35,4 +37,5 @@ jobs:
       - run: >-
           bash docker/step3/run.sh python3 -m pytest -q
           tests/test_step3_model.py tests/test_step3_interface.py tests/test_step3_fenicsx.py
+          tests/test_step3a1_*.py
       # No tank, film movie, full spatial/regularization sweep in ordinary CI.

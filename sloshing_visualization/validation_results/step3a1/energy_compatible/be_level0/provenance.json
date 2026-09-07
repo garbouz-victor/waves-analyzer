@@ -1,0 +1,51 @@
+{
+  "git_commit": "15a9e07c496c757cf40d35cd10fbc721afb9805a",
+  "multiphase_source_sha256": "16eca3b39c02b21f55025c7101809b6ca1e613726bb90dd038958c9d799f67b0",
+  "config_fingerprint": "83f35e42178a7684f5bf7c19d9291a9b5a651b9482b7ca9f214be48332613d67",
+  "docker_image_digest": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+  "rank_count": 1,
+  "dt_schedule": {
+    "blocks": [
+      {
+        "start": 0.0,
+        "end": 1e-06,
+        "dt": 1e-08,
+        "count": 100,
+        "offset": 0,
+        "phase": "startup_be",
+        "scheme": "be"
+      },
+      {
+        "start": 1e-06,
+        "end": 1e-05,
+        "dt": 1e-07,
+        "count": 90,
+        "offset": 100,
+        "phase": "startup_be",
+        "scheme": "be"
+      },
+      {
+        "start": 1e-05,
+        "end": 0.0001,
+        "dt": 1e-06,
+        "count": 90,
+        "offset": 190,
+        "phase": "startup_be",
+        "scheme": "be"
+      },
+      {
+        "start": 0.0001,
+        "end": 0.001,
+        "dt": 1e-05,
+        "count": 90,
+        "offset": 280,
+        "phase": "main",
+        "scheme": "be"
+      }
+    ],
+    "total_steps": 370,
+    "switch_rule": "first main interval BE, then fixed-spacing BDF2; no micro-history reuse"
+  },
+  "mesh_fingerprint": "1ebb6d804ee0d7d469214cee02e994ab5fd571871f1b82022be9ef7d037b42cc",
+  "mesh_fingerprint_scope": "rank-ordered geometry/connectivity; rank/partition sensitive"
+}

@@ -9,6 +9,8 @@ from ..initialization import droplet
 from ..material import density_derivative
 from ..interface import contour_segments, fit_circle, connected_polylines
 from .common import run_case
+from ..energy_validation import read_history, validate_energy
+from ..validation_policy import LAPLACE_PRESSURE_RELATIVE_TOLERANCE, CHEMICAL_EQUILIBRIUM_RELATIVE_TOLERANCE
 
 
 def measure(solver):
@@ -53,13 +55,16 @@ def run(config,output,radius=None):
 
 def summarize(solver,result,output):
     measurement,components=measure(solver)
-    checks={"pressure_error_below_5_percent":measurement["pressure_relative_error"]<.05,
-            "near_chemical_equilibrium":measurement["relative_mu_std"]<.01,
-            "interface_resolved":result["final_interface_resolution"]["qualified_resolution"],
-            "mass_conservation":result["max_mass_error_relative"]<1e-8,
-            "no_unexplained_energy_growth":result["max_energy_increase_step"]<1e-9}
+    energy_gate=validate_energy(read_history(Path(output)/"history.csv"))
+    checks={"pressure_error_below_5_percent":measurement["pressure_relative_error"]<LAPLACE_PRESSURE_RELATIVE_TOLERANCE,
+            "near_chemical_equilibrium":measurement["relative_mu_std"]<CHEMICAL_EQUILIBRIUM_RELATIVE_TOLERANCE,
+            "interface_resolved":result.get("interface_resolved_all_times",False),
+            "mass_conservation":energy_gate["mass_ok"],
+            "no_unexplained_energy_growth":energy_gate["energy_growth_ok"],
+            "energy_budget_closure":energy_gate["energy_budget_ok"]}
     status="passed" if all(checks.values()) else "failed"
-    summary={"status":status,"checks":checks,"measurement":measurement,
+    summary={"status":status,"qualification_status":status,"checks":checks,"measurement":measurement,
+             "energy_validation":energy_gate,
              "scope":"one radius/epsilon, not a convergence study","run":result}
     if solver.comm.rank==0:
         folder=Path(output)
@@ -74,6 +79,9 @@ def analyze_complete(output):
     from ..solver import CHNSSolver
     from ..diagnostics import Diagnostics
     from ..storage import load_checkpoint
+    historical=Path(__file__).resolve().parents[4]/"validation_results/step3"
+    if Path(output).resolve()==historical.resolve() or historical.resolve() in Path(output).resolve().parents:
+        raise ValueError("Historical STEP 3 files are read-only; write a separate step3a1 audit")
     result=json.loads((Path(output)/"summary.json").read_text())
     if result["status"]!="complete":
         raise ValueError("Only a complete solver checkpoint can be analyzed")

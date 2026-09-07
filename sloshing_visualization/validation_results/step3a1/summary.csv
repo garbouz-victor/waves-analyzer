@@ -1,0 +1,11 @@
+gate,passed
+compatible_energy_baseline_passed,False
+laplace_pressure_and_energy_passed,False
+contact_60_geometry_passed,False
+contact_60_direction_passed,False
+contact_60_mass_passed,False
+contact_60_resolution_passed,False
+contact_60_startup_energy_passed,False
+contact_60_energy_budget_passed,False
+contact_60_settling_passed,False
+contact_60_scientific_run_passed,False

@@ -738,26 +738,23 @@ failed run не перезаписывается и не принимается 
 ```bash
 # Analytic spatial operator consistency (not full solution-error MMS)
 bash docker/step3/run.sh python3 scripts/step3_benchmarks.py \
-  --benchmark operators --output validation_results/step3/reproduction/operators
+  --benchmark operators --output validation_results/step3a1/reproduction/operators
 
 # Flat interface: h + CG1/CG2 phase comparison
 bash docker/step3/run.sh python3 scripts/step3_benchmarks.py \
-  --study --output validation_results/step3/reproduction/flat
+  --study --output validation_results/step3a1/reproduction/flat
 
-# Laplace baseline; no plotting/simulation of a tank
+# Laplace refinement: BLOCKED until the compatible energy series passes.
+bash docker/step3/run.sh python3 scripts/step3a1_benchmarks.py \
+  --phase laplace --radius 0.30 --dt 0.005 \
+  --output validation_results/step3a1/reproduction/laplace
+
+# Analyze a NEW complete Laplace checkpoint without PDE timesteps.
+# Historical validation_results/step3 outputs are now write-protected.
 bash docker/step3/run.sh python3 scripts/step3_benchmarks.py \
-  --benchmark laplace --output validation_results/step3/reproduction/laplace
+  --benchmark laplace --analyze-only --output validation_results/step3a1/reproduction/laplace
 
-# This diagnostic currently returns a NONZERO exit status: its gate fails.
-bash docker/step3/run.sh python3 scripts/step3_benchmarks.py \
-  --benchmark contact --theta 60 \
-  --output validation_results/step3/reproduction/contact60
-
-# Analyze an already COMPLETE Laplace checkpoint without PDE timesteps
-bash docker/step3/run.sh python3 scripts/step3_benchmarks.py \
-  --benchmark laplace --analyze-only --output validation_results/step3/laplace/resolved
-
-# Regenerate measured gate summary/plots from the retained result directories
+# Regenerate the STEP 3A.1 measured summary, reading old data only as audit evidence
 .venv/bin/python scripts/step3_analyze.py
 ```
 
@@ -780,3 +777,52 @@ coupled/unit tests в контейнере; expensive sweeps и tank calculation
 Unit tests не заменяют scientific gates. На данный момент benchmark falling film,
 полный contact-angle/epsilon study, slip/mobility sensitivity и production
 pre-equilibration ещё **не выполнены**, film renderer не реализован.
+
+## STEP 3A.1 — energy startup / moving-interface gates
+
+Текущий verdict — **MODEL NOT YET VALIDATED**; последовательность остановлена
+на compatible-angle baseline. Код gates исправлен, но micro-time energy closure
+ещё не квалифицирован. Совпадение угла линии phi=0 с theta_e не означает,
+что весь diffuse tanh-профиль удовлетворяет вариационному wall condition.
+Подробности и реальные числа: [STEP3A1_REPORT.md](STEP3A1_REPORT.md),
+[policy до rerun](STEP3A1_DESIGN.md).
+
+Из `sloshing_visualization/`:
+
+```bash
+.venv/bin/python -m pytest -q
+bash docker/step3/run.sh python3 -m pytest -q \
+  tests/test_step3_model.py tests/test_step3_interface.py tests/test_step3_fenicsx.py \
+  tests/test_step3a1_*.py
+
+# Анализ уже имеющихся результатов, БЕЗ запуска PDE:
+.venv/bin/python scripts/step3_analyze.py
+.venv/bin/python scripts/step3a1_figures.py
+
+# Только осознанный повтор benchmark в НОВЫЙ каталог (~41 min на измеренной машине).
+# Ожидается ненулевой exit code: текущий scientific energy gate НЕ пройден.
+bash docker/step3/run.sh python3 scripts/step3a1_benchmarks.py \
+  --phase compatible --scheme be \
+  --output validation_results/step3a1/reproduction/compatible_be
+```
+
+`--refinement-factor 2` делит все объявленные dt на 2, не двигая границы BE
+блоков; это запрашивает новый расчёт, а не reuse cache. Полная time-convergence
+series этой итерацией не выполнена. `--scheme bdf2` использует один BE interval
+на main_dt перед стандартным constant-step BDF2. Это не variable-step BDF2.
+
+Старый `validation_results/step3/` остаётся историческим: не используйте прежние
+output paths для новой серии. Новые runs/анализ записывайте под
+`validation_results/step3a1/`. Положительный
+`status=complete` говорит только о завершении исполнения; научное решение
+находится в `qualification_status` и отдельных measured gates.
+
+Новые histories содержат мгновенные powers, cumulative и local energy defects,
+resolution quantiles и worst-cell location. HDF5, compiler caches и internal
+linear/Newton logs не предназначены для Git. Малый source archive baseline
+сохраняет точную версию модулей, соответствующую его provenance SHA.
+
+Laplace refinement и последующие 90→60/corridor/settling phases не запускать,
+пока repaired compatible-energy gate не пройден измерениями. Даже будущий PASS
+этих gates ещё не разрешит tank bridge или film demo: другие STEP 3A benchmarks
+остаются обязательными.

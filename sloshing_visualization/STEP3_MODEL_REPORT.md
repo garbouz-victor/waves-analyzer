@@ -316,3 +316,20 @@ Artifacts: [gate summary](validation_results/step3/summary.json),
 Raw HDF5/checkpoints and compiler caches remain ignored. See README for exact
 build/run commands. Benchmark `complete` means execution finished, **not** that
 its scientific gate passed. Commit A is intentionally not created.
+
+## STEP 3A.1 follow-up (base 15a9e07)
+
+The automatic energy, interface-activation and settling gates were repaired;
+see [STEP3A1_REPORT.md](STEP3A1_REPORT.md). Historical numbers above are retained,
+not retroactively converted into passes. The new Bernstein-based final-checkpoint
+audit finds only **3.8659** minimum nominal transition cells where the older
+centroid indicator reported 7.4883. Physical-time settling also rejects the old
+per-step apparent-angle success.
+
+A new 60°/60° geometrically compatible, spatially resolved BE startup baseline
+has a small overall energy defect (0.00533% of initial scale), but a **785%**
+first-interval defect relative to actual energy change. Direct curved tanh data
+are not a variational wall equilibrium merely because their zero-contour angle
+equals theta_e. The sequence stopped at that baseline; no new Laplace series,
+90→60 long run, tank or film followed. Current verdict remains
+**MODEL NOT YET VALIDATED**. The repaired gates must not be weakened to advance.

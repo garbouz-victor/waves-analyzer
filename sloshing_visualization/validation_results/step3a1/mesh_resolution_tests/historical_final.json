@@ -1,0 +1,59 @@
+{
+  "scope": "historical final checkpoint only; no timesteps, not an all-time new run",
+  "source": "validation_results/step3/contact/theta60_resolved",
+  "old_centroid_indicator": {
+    "interface_present": true,
+    "h_normal_max_m": 0.013901944158243085,
+    "epsilon_over_h_normal": 1.7983096260084157,
+    "cells_across_transition_min": 7.4882791401663615,
+    "qualified_resolution": false
+  },
+  "new_Bernstein_indicator": {
+    "interface_present": true,
+    "h_normal_max_m": 0.02692813962251156,
+    "epsilon_over_h_normal": 0.9283968499294448,
+    "cells_across_transition_min": 3.8659053283020612,
+    "qualified_resolution": false,
+    "cells_across_transition_p05": 8.839710951454444,
+    "cells_across_transition_p50": 12.072036262238829,
+    "cells_across_transition_p95": 16.546513193138203,
+    "active_cell_count": 3244,
+    "worst_cell": {
+      "h_normal_m": 0.02692813962251156,
+      "rank": 0,
+      "local_cell": 8612,
+      "centroid": [
+        -0.48333333333333334,
+        0.005555555555555556
+      ],
+      "bounds": [
+        [
+          -0.5,
+          0.0
+        ],
+        [
+          -0.4666666666666667,
+          0.016666666666666666
+        ]
+      ],
+      "vertices": [
+        [
+          -0.48333333333333334,
+          0.016666666666666666
+        ],
+        [
+          -0.4666666666666667,
+          0.0
+        ],
+        [
+          -0.5,
+          0.0
+        ]
+      ]
+    },
+    "time": 0.5,
+    "activation": "CG1 exact vertex bounds; CG2 conservative Bernstein convex hull",
+    "h_normal_method": "worst of vertex/edge-midpoint/centroid gradient directions; diameter if constant"
+  },
+  "analysis_source_sha256": "16eca3b39c02b21f55025c7101809b6ca1e613726bb90dd038958c9d799f67b0"
+}

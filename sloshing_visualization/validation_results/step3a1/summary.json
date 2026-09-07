@@ -1,0 +1,265 @@
+{
+  "status": "MODEL NOT YET VALIDATED",
+  "qualification_status": "failed_or_incomplete",
+  "gates": {
+    "compatible_energy_baseline_passed": false,
+    "laplace_pressure_and_energy_passed": false,
+    "contact_60_geometry_passed": false,
+    "contact_60_direction_passed": false,
+    "contact_60_mass_passed": false,
+    "contact_60_resolution_passed": false,
+    "contact_60_startup_energy_passed": false,
+    "contact_60_energy_budget_passed": false,
+    "contact_60_settling_passed": false,
+    "contact_60_scientific_run_passed": false
+  },
+  "contact_60": {
+    "geometry": "not_run",
+    "direction": "not_run",
+    "mass": "not_run",
+    "resolution": "not_run",
+    "energy_budget": "not_run",
+    "settling": "not_run",
+    "overall": "not_qualified"
+  },
+  "compatible_energy": {
+    "evidence_kind": "compatible_energy_series",
+    "qualification_status": "failed",
+    "checks": {
+      "single_histories_passed": false,
+      "BE_and_BDF2_measured": false,
+      "temporal_comparison_passed": false
+    },
+    "runs": [
+      {
+        "path": "energy_compatible/be_level0",
+        "execution_status": "complete",
+        "qualification_status": "failed",
+        "scheme": "be",
+        "energy_validation": {
+          "finite_metrics": true,
+          "mass_ok": true,
+          "energy_growth_ok": true,
+          "energy_budget_ok": false,
+          "qualified": false,
+          "scope": "single-history closure; does not establish temporal convergence",
+          "policy": {
+            "mass_relative_tolerance": 1e-08,
+            "growth_absolute_tolerance": 1e-09,
+            "budget_relative_tolerance": 0.01,
+            "change_relative_tolerance": 0.05,
+            "change_floor_absolute": 1e-10,
+            "change_floor_fraction": 1e-06,
+            "scale_floor": 1e-30,
+            "negative_power_tolerance": 1e-12,
+            "interval_fraction_warning": 0.5
+          },
+          "nonnegative_dissipation": true,
+          "saved_cumulative_consistent": true,
+          "energy_components_consistent": true,
+          "mass_error_relative_max": 6.106226635438361e-14,
+          "max_positive_energy_step_J_per_m": 0.0,
+          "absolute_budget_defect": 3.5641817383761743e-06,
+          "final_budget_defect_J_per_m": 3.5641817383761743e-06,
+          "max_local_budget_defect_J_per_m": 2.6259317577060312e-06,
+          "max_local_budget_defect_time_s": 1e-08,
+          "energy_change_final_J_per_m": -0.0002307648536496315,
+          "legacy_relative_budget_defect": 5.331520009830646e-05,
+          "legacy_metric_gates": false,
+          "absolute_budget_limit_from_initial_scale_J_per_m": 0.0006685113685786185,
+          "relative_budget_defect_to_initial_scale": 5.331520009830646e-05,
+          "relative_budget_defect_to_energy_change": 7.853507482988639,
+          "energy_change_floor_J_per_m": 6.685113685786184e-08,
+          "energy_change_applicable_samples": 370,
+          "E_scale_initial_J_per_m": 0.06685113685786184,
+          "E_scale_peak_J_per_m": 0.06685113685786184,
+          "dissipation_components": {
+            "viscous": {
+              "initial_power_W_per_m": 0.0,
+              "first_interval_J_per_m": 2.3833896034558647e-19,
+              "integral_J_per_m": 4.629850332219059e-11,
+              "largest_interval_fraction": 0.014609523406041066,
+              "simpson_uniform_J_per_m": null,
+              "trapezoid_minus_simpson_J_per_m": null
+            },
+            "CH": {
+              "initial_power_W_per_m": 577.4945782537685,
+              "first_interval_J_per_m": 2.960295959101667e-06,
+              "integral_J_per_m": 0.00023432897768023707,
+              "largest_interval_fraction": 0.01756076468270594,
+              "simpson_uniform_J_per_m": null,
+              "trapezoid_minus_simpson_J_per_m": null
+            },
+            "slip": {
+              "initial_power_W_per_m": 0.0,
+              "first_interval_J_per_m": 1.4849984239813862e-21,
+              "integral_J_per_m": 1.1409267276800745e-11,
+              "largest_interval_fraction": 0.011472035449337378,
+              "simpson_uniform_J_per_m": null,
+              "trapezoid_minus_simpson_J_per_m": null
+            }
+          },
+          "sampling_warnings": [],
+          "temporal_convergence_info": {
+            "status": "not_measured"
+          }
+        },
+        "minimum_cells": 8.833316937499314,
+        "provenance": {
+          "git_commit": "15a9e07c496c757cf40d35cd10fbc721afb9805a",
+          "multiphase_source_sha256": "16eca3b39c02b21f55025c7101809b6ca1e613726bb90dd038958c9d799f67b0",
+          "config_fingerprint": "83f35e42178a7684f5bf7c19d9291a9b5a651b9482b7ca9f214be48332613d67",
+          "docker_image_digest": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+          "rank_count": 1,
+          "dt_schedule": {
+            "blocks": [
+              {
+                "start": 0.0,
+                "end": 1e-06,
+                "dt": 1e-08,
+                "count": 100,
+                "offset": 0,
+                "phase": "startup_be",
+                "scheme": "be"
+              },
+              {
+                "start": 1e-06,
+                "end": 1e-05,
+                "dt": 1e-07,
+                "count": 90,
+                "offset": 100,
+                "phase": "startup_be",
+                "scheme": "be"
+              },
+              {
+                "start": 1e-05,
+                "end": 0.0001,
+                "dt": 1e-06,
+                "count": 90,
+                "offset": 190,
+                "phase": "startup_be",
+                "scheme": "be"
+              },
+              {
+                "start": 0.0001,
+                "end": 0.001,
+                "dt": 1e-05,
+                "count": 90,
+                "offset": 280,
+                "phase": "main",
+                "scheme": "be"
+              }
+            ],
+            "total_steps": 370,
+            "switch_rule": "first main interval BE, then fixed-spacing BDF2; no micro-history reuse"
+          },
+          "mesh_fingerprint": "1ebb6d804ee0d7d469214cee02e994ab5fd571871f1b82022be9ef7d037b42cc",
+          "mesh_fingerprint_scope": "rank-ordered geometry/connectivity; rank/partition sensitive"
+        }
+      }
+    ],
+    "temporal_comparison": {
+      "qualification_status": "not_run",
+      "source": "/home/victor/Projects/waves-analyzer/sloshing_visualization/validation_results/step3a1/energy_compatible/temporal_comparison.json"
+    },
+    "scope": "compatible-angle energy foundation; failed single history blocks later phases"
+  },
+  "laplace_time": {
+    "qualification_status": "not_run",
+    "source": "/home/victor/Projects/waves-analyzer/sloshing_visualization/validation_results/step3a1/laplace_time/qualification.json"
+  },
+  "startup_energy": {
+    "qualification_status": "not_run",
+    "source": "/home/victor/Projects/waves-analyzer/sloshing_visualization/validation_results/step3a1/startup_energy_qualification.json"
+  },
+  "contact_result": {
+    "qualification_status": "not_run",
+    "source": "/home/victor/Projects/waves-analyzer/sloshing_visualization/validation_results/step3a1/contact60_resolved/qualification.json"
+  },
+  "remaining_step3a": [
+    "theta 90/120 PDE cases",
+    "epsilon convergence",
+    "slip sensitivity",
+    "mobility sensitivity",
+    "falling-film PDE benchmark"
+  ],
+  "tank_bridge_allowed": false,
+  "film_demo_allowed": false,
+  "historical_energy_audit": {
+    "source": "historical STEP 3, different source and time scheme; not a new convergence-series member",
+    "energy_validation": {
+      "finite_metrics": true,
+      "mass_ok": true,
+      "energy_growth_ok": true,
+      "energy_budget_ok": false,
+      "qualified": false,
+      "scope": "single-history closure; does not establish temporal convergence",
+      "policy": {
+        "mass_relative_tolerance": 1e-08,
+        "growth_absolute_tolerance": 1e-09,
+        "budget_relative_tolerance": 0.01,
+        "change_relative_tolerance": 0.05,
+        "change_floor_absolute": 1e-10,
+        "change_floor_fraction": 1e-06,
+        "scale_floor": 1e-30,
+        "negative_power_tolerance": 1e-12,
+        "interval_fraction_warning": 0.5
+      },
+      "nonnegative_dissipation": true,
+      "saved_cumulative_consistent": true,
+      "energy_components_consistent": true,
+      "mass_error_relative_max": 7.393776948718925e-14,
+      "max_positive_energy_step_J_per_m": 0.0,
+      "absolute_budget_defect": 456.10346669001257,
+      "final_budget_defect_J_per_m": 456.1034663538315,
+      "max_local_budget_defect_J_per_m": 456.1032814085103,
+      "max_local_budget_defect_time_s": 0.01,
+      "energy_change_final_J_per_m": -0.005734648359944028,
+      "legacy_relative_budget_defect": 4839.375788706231,
+      "legacy_metric_gates": false,
+      "absolute_budget_limit_from_initial_scale_J_per_m": 0.0009424840859733032,
+      "relative_budget_defect_to_initial_scale": 4839.375788706231,
+      "relative_budget_defect_to_energy_change": 166873.81240446947,
+      "energy_change_floor_J_per_m": 9.424840859733032e-08,
+      "energy_change_applicable_samples": 50,
+      "E_scale_initial_J_per_m": 0.09424840859733032,
+      "E_scale_peak_J_per_m": 0.11044219039304944,
+      "dissipation_components": {
+        "viscous": {
+          "initial_power_W_per_m": 0.0,
+          "first_interval_J_per_m": 4.226123129103469e-07,
+          "integral_J_per_m": 1.150136825135445e-05,
+          "largest_interval_fraction": 0.14027403502458669,
+          "simpson_uniform_J_per_m": 1.1566161705833235e-05,
+          "trapezoid_minus_simpson_J_per_m": -6.479345447878619e-08
+        },
+        "CH": {
+          "initial_power_W_per_m": 91221.0739273854,
+          "first_interval_J_per_m": 456.1060141331811,
+          "integral_J_per_m": 456.10918847807,
+          "largest_interval_fraction": 0.999993040383818,
+          "simpson_uniform_J_per_m": 304.07437644162906,
+          "trapezoid_minus_simpson_J_per_m": 152.03481203644094
+        },
+        "slip": {
+          "initial_power_W_per_m": 0.0,
+          "first_interval_J_per_m": 7.53529120246973e-08,
+          "integral_J_per_m": 1.0227532276172755e-06,
+          "largest_interval_fraction": 0.1509968714942889,
+          "simpson_uniform_J_per_m": 1.044952013398435e-06,
+          "trapezoid_minus_simpson_J_per_m": -2.2198785781159526e-08
+        }
+      },
+      "sampling_warnings": [
+        "CH: >50% of its time integral in one interval; temporally suspicious"
+      ],
+      "temporal_convergence_info": {
+        "status": "not_measured"
+      }
+    },
+    "first_CH_interval_J_per_m": 456.1060141331811,
+    "first_CH_interval_percent": 99.9993040383818,
+    "actual_energy_decrease_J_per_m": 0.005734648359944028
+  },
+  "analysis_source_sha256": "b057288d44fbd797b28ae153abffd95d0bbd629c410883b04f4bffd8037071ad"
+}

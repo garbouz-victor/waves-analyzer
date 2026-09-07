@@ -1,0 +1,40 @@
+[
+  {
+    "case": "historical 90 to 60 (old source)",
+    "scope": "offline uniform-block Simpson diagnostic; primary gate remains trapezoid",
+    "CH": {
+      "trapezoid_J_per_m": 456.10918847807,
+      "block_simpson_J_per_m": 304.07437644162906,
+      "difference_J_per_m": 152.03481203644094
+    },
+    "viscous": {
+      "trapezoid_J_per_m": 1.150136825135445e-05,
+      "block_simpson_J_per_m": 1.1566161705833235e-05,
+      "difference_J_per_m": -6.479345447878619e-08
+    },
+    "slip": {
+      "trapezoid_J_per_m": 1.0227532276172755e-06,
+      "block_simpson_J_per_m": 1.044952013398435e-06,
+      "difference_J_per_m": -2.2198785781159526e-08
+    }
+  },
+  {
+    "case": "compatible 60 to 60: be_level0",
+    "scope": "offline uniform-block Simpson diagnostic; primary gate remains trapezoid",
+    "CH": {
+      "trapezoid_J_per_m": 0.00023432897768023707,
+      "block_simpson_J_per_m": 0.00023338541769854807,
+      "difference_J_per_m": 9.435599816889971e-07
+    },
+    "viscous": {
+      "trapezoid_J_per_m": 4.629850332219059e-11,
+      "block_simpson_J_per_m": 4.629946046546469e-11,
+      "difference_J_per_m": -9.571432741023495e-16
+    },
+    "slip": {
+      "trapezoid_J_per_m": 1.1409267276800745e-11,
+      "block_simpson_J_per_m": 1.140963088106183e-11,
+      "difference_J_per_m": -3.6360426108508355e-16
+    }
+  }
+]

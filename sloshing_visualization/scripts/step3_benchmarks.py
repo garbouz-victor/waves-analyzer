@@ -10,7 +10,7 @@ def parse_arguments(argv=None):
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--benchmark",choices=["flat","laplace","contact","operators","startup-energy"],default="flat")
     parser.add_argument("--config",type=Path)
-    parser.add_argument("--output",type=Path,default=Path("validation_results/step3/flat"))
+    parser.add_argument("--output",type=Path,default=Path("validation_results/step3a1/development/flat"))
     parser.add_argument("--nx",type=int)
     parser.add_argument("--nz",type=int)
     parser.add_argument("--dt",type=float)

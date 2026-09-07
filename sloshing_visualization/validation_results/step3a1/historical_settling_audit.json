@@ -1,0 +1,30 @@
+{
+  "qualified": false,
+  "qualification_status": "failed",
+  "policy": {
+    "window_s": 0.1,
+    "max_angle_rate_deg_per_s": 0.5,
+    "max_contact_line_speed_m_per_s": 0.0001,
+    "max_kinetic_energy_fraction": 1e-08,
+    "max_speed_m_per_s": 0.0001,
+    "max_relative_mu_variation": 0.01
+  },
+  "checks": {
+    "angle_rate": false,
+    "contact_speed": false,
+    "kinetic_fraction": true,
+    "speed": true,
+    "chemical_equilibrium": false
+  },
+  "window_start_s": 0.4,
+  "window_end_s": 0.5,
+  "angle_rate_deg_per_s": -2.1642337079883496,
+  "contact_left_speed_m_per_s": -0.006482054403999028,
+  "contact_right_speed_m_per_s": 0.006470809461167971,
+  "kinetic_fraction_peak": 2.678955221246323e-09,
+  "speed_peak_m_per_s": 4.942283203726101e-05,
+  "relative_mu_variation_peak": null,
+  "missing_metrics": [
+    "relative_mu_variation"
+  ]
+}
