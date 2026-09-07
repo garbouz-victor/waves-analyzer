@@ -1,0 +1,2960 @@
+[
+  {
+    "time": 0.0,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.3
+      },
+      {
+        "component": 0,
+        "coordinate": 0.30000000000000004
+      }
+    ],
+    "fits": [
+      {
+        "center_x": 3.1926007719599542e-09,
+        "center_z": 2.6701765931738675e-06,
+        "radius": 0.29999815941111285,
+        "radial_rms": 5.090113072974716e-06,
+        "points": 122,
+        "theta_deg": 90.0005099692933,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": 2.9517581753563552e-08,
+        "center_z": -3.6814547889896243e-06,
+        "radius": 0.3000004483035749,
+        "radial_rms": 5.488188296779244e-06,
+        "points": 272,
+        "theta_deg": 89.99929689497775,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": 6.1699693078441985e-09,
+        "center_z": -7.969845251344643e-06,
+        "radius": 0.3000029268237728,
+        "radial_rms": 5.652401363395605e-06,
+        "points": 158,
+        "theta_deg": 89.99847788652878,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.01178491901811396,
+      "epsilon_over_h_normal": 2.1213552644336255,
+      "cells_across_transition_min": 8.83346235030723,
+      "qualified_resolution": true
+    }
+  },
+  {
+    "time": 0.01,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.3342178592067859
+      },
+      {
+        "component": 0,
+        "coordinate": 0.3342178534079064
+      }
+    ],
+    "fits": [
+      {
+        "center_x": 1.3870283496719565e-05,
+        "center_z": -0.0563971581984916,
+        "radius": 0.3226556084300101,
+        "radial_rms": 0.0010574056505105135,
+        "points": 129,
+        "theta_deg": 79.93352910178109,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": 5.9042491705543904e-05,
+        "center_z": -0.024348816106257137,
+        "radius": 0.30857674110592714,
+        "radial_rms": 0.002692623645598531,
+        "points": 293,
+        "theta_deg": 85.47426625459552,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": 6.544452297860424e-06,
+        "center_z": -0.02766149825994412,
+        "radius": 0.30853139456956663,
+        "radial_rms": 0.0011861926536746179,
+        "points": 173,
+        "theta_deg": 84.85621854527264,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.01178511180683356,
+      "epsilon_over_h_normal": 2.121320561889267,
+      "cells_across_transition_min": 8.833317846638188,
+      "qualified_resolution": true
+    }
+  },
+  {
+    "time": 0.02,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.3461767707943352
+      },
+      {
+        "component": 0,
+        "coordinate": 0.34617676816239024
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -2.643390142215314e-05,
+        "center_z": -0.0889996157011745,
+        "radius": 0.3431952599679209,
+        "radial_rms": 0.0010835511651597286,
+        "points": 133,
+        "theta_deg": 74.96989890836606,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": -1.2335482631914614e-05,
+        "center_z": -0.046541813183995626,
+        "radius": 0.321539130626081,
+        "radial_rms": 0.0035814111120552905,
+        "points": 287,
+        "theta_deg": 81.67737324748816,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": 3.460278322910785e-05,
+        "center_z": -0.055404999830879736,
+        "radius": 0.3244781098728853,
+        "radial_rms": 0.0015225504903087315,
+        "points": 172,
+        "theta_deg": 80.16850653069694,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.011785112749097881,
+      "epsilon_over_h_normal": 2.121320392281668,
+      "cells_across_transition_min": 8.833317140381029,
+      "qualified_resolution": true
+    }
+  },
+  {
+    "time": 0.03,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.3538306979905562
+      },
+      {
+        "component": 0,
+        "coordinate": 0.3538306932801467
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -1.4440910520531933e-05,
+        "center_z": -0.10952148822051348,
+        "radius": 0.35873122055462814,
+        "radial_rms": 0.000977457816749545,
+        "points": 129,
+        "theta_deg": 72.22364447589388,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": -5.506765168767869e-05,
+        "center_z": -0.06447679386316682,
+        "radius": 0.33451525528881276,
+        "radial_rms": 0.0036485714879947707,
+        "points": 284,
+        "theta_deg": 78.88686358559139,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": 2.2034689016273713e-05,
+        "center_z": -0.0752854148673608,
+        "radius": 0.33858369266635024,
+        "radial_rms": 0.0014072892436968036,
+        "points": 157,
+        "theta_deg": 77.15267161849715,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.011785111918363844,
+      "epsilon_over_h_normal": 2.121320541813812,
+      "cells_across_transition_min": 8.833317763042677,
+      "qualified_resolution": true
+    }
+  },
+  {
+    "time": 0.04,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.3599741255446048
+      },
+      {
+        "component": 0,
+        "coordinate": 0.3599741131330302
+      }
+    ],
+    "fits": [
+      {
+        "center_x": 4.832079858372956e-06,
+        "center_z": -0.12070366298321962,
+        "radius": 0.3688588453615035,
+        "radial_rms": 0.0008630451690764716,
+        "points": 126,
+        "theta_deg": 70.89894029459666,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": 3.357043179420388e-05,
+        "center_z": -0.07863988533185612,
+        "radius": 0.34526501932522785,
+        "radial_rms": 0.003235565587181589,
+        "points": 291,
+        "theta_deg": 76.83437447283576,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -6.611003341691906e-06,
+        "center_z": -0.0915079797682686,
+        "radius": 0.3512611331189164,
+        "radial_rms": 0.0012974976314843432,
+        "points": 158,
+        "theta_deg": 74.899514970579,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.011785110802864152,
+      "epsilon_over_h_normal": 2.121320742603813,
+      "cells_across_transition_min": 8.833318599145402,
+      "qualified_resolution": true
+    }
+  },
+  {
+    "time": 0.05,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.3653339607917513
+      },
+      {
+        "component": 0,
+        "coordinate": 0.3653339383056902
+      }
+    ],
+    "fits": [
+      {
+        "center_x": 6.581383080842552e-06,
+        "center_z": -0.13102016477050277,
+        "radius": 0.3783570740608894,
+        "radial_rms": 0.0007650767427715016,
+        "points": 137,
+        "theta_deg": 69.73961653299519,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": 4.266331865209384e-05,
+        "center_z": -0.092803481597294,
+        "radius": 0.35602245721707243,
+        "radial_rms": 0.002985493601181797,
+        "points": 335,
+        "theta_deg": 74.89032746854168,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": 1.0488636314889026e-05,
+        "center_z": -0.10460242247677554,
+        "radius": 0.36188375757069163,
+        "radial_rms": 0.0011663263704808195,
+        "points": 188,
+        "theta_deg": 73.19892338212613,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.011785112979094736,
+      "epsilon_over_h_normal": 2.121320350882233,
+      "cells_across_transition_min": 8.833316967991069,
+      "qualified_resolution": true
+    }
+  },
+  {
+    "time": 0.06,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.370080674502401
+      },
+      {
+        "component": 0,
+        "coordinate": 0.370080639324921
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -5.888373725646128e-07,
+        "center_z": -0.14146616037954104,
+        "radius": 0.3876552470771661,
+        "radial_rms": 0.0007144488436018847,
+        "points": 144,
+        "theta_deg": 68.59686309391489,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": -2.6706147546879032e-06,
+        "center_z": -0.10530783019617783,
+        "radius": 0.3659514494728547,
+        "radial_rms": 0.0027776155317867568,
+        "points": 347,
+        "theta_deg": 73.27583379723029,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -5.527540065323064e-06,
+        "center_z": -0.11421470929951638,
+        "radius": 0.3701105079997954,
+        "radial_rms": 0.0010673029448908574,
+        "points": 194,
+        "theta_deg": 72.0253465538165,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.011785111870879494,
+      "epsilon_over_h_normal": 2.1213205503609966,
+      "cells_across_transition_min": 8.833317798633713,
+      "qualified_resolution": true
+    }
+  },
+  {
+    "time": 0.07,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.37435678781707293
+      },
+      {
+        "component": 0,
+        "coordinate": 0.3743567352218492
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -1.3201330581468291e-05,
+        "center_z": -0.1504103963738729,
+        "radius": 0.3956767261121843,
+        "radial_rms": 0.000646270866248453,
+        "points": 148,
+        "theta_deg": 67.6579824220078,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": -1.9096184650178866e-05,
+        "center_z": -0.11621356414226458,
+        "radius": 0.3746052351253269,
+        "radial_rms": 0.002484230685995108,
+        "points": 360,
+        "theta_deg": 71.92694316480784,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -1.0374640026050052e-06,
+        "center_z": -0.12538789964251373,
+        "radius": 0.37930334742495364,
+        "radial_rms": 0.0009326150618536739,
+        "points": 202,
+        "theta_deg": 70.69636936833373,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.011785111091374367,
+      "epsilon_over_h_normal": 2.121320690671956,
+      "cells_across_transition_min": 8.833318382897744,
+      "qualified_resolution": true
+    }
+  },
+  {
+    "time": 0.08,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.3781482158628492
+      },
+      {
+        "component": 0,
+        "coordinate": 0.37814813950441756
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -8.371108920956515e-06,
+        "center_z": -0.15765478460397922,
+        "radius": 0.40238340187115046,
+        "radial_rms": 0.0005708317933577566,
+        "points": 154,
+        "theta_deg": 66.93330311366635,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": 3.3340864201421676e-05,
+        "center_z": -0.12631303377914627,
+        "radius": 0.3826057026313916,
+        "radial_rms": 0.0021491880764527944,
+        "points": 382,
+        "theta_deg": 70.72279236427414,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": 9.097350918234706e-07,
+        "center_z": -0.13651778985800928,
+        "radius": 0.3884446234237893,
+        "radial_rms": 0.0008514244640920742,
+        "points": 215,
+        "theta_deg": 69.42413979646956,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.011785112736119513,
+      "epsilon_over_h_normal": 2.1213203946177743,
+      "cells_across_transition_min": 8.833317150108728,
+      "qualified_resolution": true
+    }
+  },
+  {
+    "time": 0.09,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.3815336028771021
+      },
+      {
+        "component": 0,
+        "coordinate": 0.38153349520430885
+      }
+    ],
+    "fits": [
+      {
+        "center_x": 1.576926459820361e-05,
+        "center_z": -0.16538587071080924,
+        "radius": 0.40925098404168686,
+        "radial_rms": 0.0005244050412405649,
+        "points": 141,
+        "theta_deg": 66.16410392824696,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": -7.767175805637957e-06,
+        "center_z": -0.13629263327489133,
+        "radius": 0.39070566754559494,
+        "radial_rms": 0.001973582104995947,
+        "points": 379,
+        "theta_deg": 69.58379635707446,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -2.0795709429124817e-05,
+        "center_z": -0.14659429067996257,
+        "radius": 0.3967973367082341,
+        "radial_rms": 0.0007730162305154047,
+        "points": 202,
+        "theta_deg": 68.31868483535449,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.011785113013728366,
+      "epsilon_over_h_normal": 2.1213203446481796,
+      "cells_across_transition_min": 8.833316942032061,
+      "qualified_resolution": true
+    }
+  },
+  {
+    "time": 0.1,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.384514711362007
+      },
+      {
+        "component": 0,
+        "coordinate": 0.3845145655006345
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -7.335058424768088e-07,
+        "center_z": -0.17333204578256178,
+        "radius": 0.41611325653984393,
+        "radial_rms": 0.0004539306536909995,
+        "points": 139,
+        "theta_deg": 65.38302422936512,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": 1.3438846142713718e-05,
+        "center_z": -0.14625376234031948,
+        "radius": 0.3987633997520959,
+        "radial_rms": 0.0018353666037627175,
+        "points": 379,
+        "theta_deg": 68.4835543426717,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": 5.497940669332279e-06,
+        "center_z": -0.15459790653015212,
+        "radius": 0.4035494197833859,
+        "radial_rms": 0.0007280834521724972,
+        "points": 196,
+        "theta_deg": 67.47445189926428,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.011784922380527696,
+      "epsilon_over_h_normal": 2.121354659179399,
+      "cells_across_transition_min": 8.833459829988962,
+      "qualified_resolution": true
+    }
+  },
+  {
+    "time": 0.11,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.3871670810346594
+      },
+      {
+        "component": 0,
+        "coordinate": 0.3871668851542915
+      }
+    ],
+    "fits": [
+      {
+        "center_x": 1.5974811856713846e-06,
+        "center_z": -0.17993845013586302,
+        "radius": 0.4219784725912755,
+        "radial_rms": 0.00042616199507131743,
+        "points": 136,
+        "theta_deg": 64.75966376828268,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": 4.460676517156687e-05,
+        "center_z": -0.15448193695240078,
+        "radius": 0.4054678627273141,
+        "radial_rms": 0.0017189688385125705,
+        "points": 395,
+        "theta_deg": 67.60456283158041,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -4.680145917254445e-06,
+        "center_z": -0.16166124545180444,
+        "radius": 0.409450145270296,
+        "radial_rms": 0.0006485364990934197,
+        "points": 187,
+        "theta_deg": 66.7449258029256,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.011785107314555732,
+      "epsilon_over_h_normal": 2.121321370499751,
+      "cells_across_transition_min": 8.833321213745236,
+      "qualified_resolution": true
+    }
+  },
+  {
+    "time": 0.12,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.3895396070175643
+      },
+      {
+        "component": 0,
+        "coordinate": 0.3895393528964269
+      }
+    ],
+    "fits": [
+      {
+        "center_x": 1.0871177711105742e-05,
+        "center_z": -0.18521699699391184,
+        "radius": 0.4267594701240411,
+        "radial_rms": 0.0003872363417719697,
+        "points": 134,
+        "theta_deg": 64.27781587754725,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": 3.537527152273836e-05,
+        "center_z": -0.16142072040581446,
+        "radius": 0.4110385786931939,
+        "radial_rms": 0.0015415011789583586,
+        "points": 406,
+        "theta_deg": 66.87650425641704,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": 2.3796576778958775e-06,
+        "center_z": -0.1688202463186111,
+        "radius": 0.41540673849816523,
+        "radial_rms": 0.00057412942409381,
+        "points": 191,
+        "theta_deg": 66.02127069814016,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.011784950877076705,
+      "epsilon_over_h_normal": 2.1213495296470284,
+      "cells_across_transition_min": 8.833438470279992,
+      "qualified_resolution": true
+    }
+  },
+  {
+    "time": 0.13,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.39165021632197805
+      },
+      {
+        "component": 0,
+        "coordinate": 0.3916498965061459
+      }
+    ],
+    "fits": [
+      {
+        "center_x": 2.4904665180401875e-06,
+        "center_z": -0.19010321350127746,
+        "radius": 0.43117189181295773,
+        "radial_rms": 0.00035916655881021545,
+        "points": 131,
+        "theta_deg": 63.8387513337821,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": 2.4782635486435468e-05,
+        "center_z": -0.1676923378329741,
+        "radius": 0.416173507706021,
+        "radial_rms": 0.0014090957384142733,
+        "points": 422,
+        "theta_deg": 66.23799136276014,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -6.948887990319342e-07,
+        "center_z": -0.17522523987135735,
+        "radius": 0.42077779479576544,
+        "radial_rms": 0.0005179565560467374,
+        "points": 186,
+        "theta_deg": 65.39048603020717,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.011785093734923757,
+      "epsilon_over_h_normal": 2.1213238148386893,
+      "cells_across_transition_min": 8.833331392132774,
+      "qualified_resolution": true
+    }
+  },
+  {
+    "time": 0.14,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.3935176732400211
+      },
+      {
+        "component": 0,
+        "coordinate": 0.39351727880812626
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -5.516456909546014e-06,
+        "center_z": -0.19503024199428198,
+        "radius": 0.43545955045755674,
+        "radial_rms": 0.00030174087193427564,
+        "points": 122,
+        "theta_deg": 63.39274952350273,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": -1.83806799891922e-05,
+        "center_z": -0.17359306591437676,
+        "radius": 0.4209024964419339,
+        "radial_rms": 0.0012495392236461964,
+        "points": 436,
+        "theta_deg": 65.64238746497712,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -6.134275248763628e-06,
+        "center_z": -0.18085270310307072,
+        "radius": 0.4255264018933786,
+        "radial_rms": 0.000477333661139367,
+        "points": 192,
+        "theta_deg": 64.84874422214502,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.011785075868664174,
+      "epsilon_over_h_normal": 2.1213270307808143,
+      "cells_across_transition_min": 8.833344783526549,
+      "qualified_resolution": true
+    }
+  },
+  {
+    "time": 0.15,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.3951928233760573
+      },
+      {
+        "component": 0,
+        "coordinate": 0.39519234384790586
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -5.064680983103363e-07,
+        "center_z": -0.19908318713232492,
+        "radius": 0.4390718693970756,
+        "radial_rms": 0.000265097505699818,
+        "points": 139,
+        "theta_deg": 63.03679393503151,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": -2.4034035135040714e-05,
+        "center_z": -0.17948406301109301,
+        "radius": 0.42565308681609537,
+        "radial_rms": 0.001094076121831921,
+        "points": 449,
+        "theta_deg": 65.06009290695181,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": 3.2586656432246033e-06,
+        "center_z": -0.1861219430139061,
+        "radius": 0.42995911033437645,
+        "radial_rms": 0.00042978858647952116,
+        "points": 212,
+        "theta_deg": 64.3493446883828,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.011785047023469775,
+      "epsilon_over_h_normal": 2.12133222296125,
+      "cells_across_transition_min": 8.833366404106169,
+      "qualified_resolution": true
+    }
+  },
+  {
+    "time": 0.16,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.3966918773243062
+      },
+      {
+        "component": 0,
+        "coordinate": 0.39669130626264026
+      }
+    ],
+    "fits": [
+      {
+        "center_x": 2.3838332637454314e-06,
+        "center_z": -0.20263636749657396,
+        "radius": 0.44228419125855,
+        "radial_rms": 0.0002357487983346871,
+        "points": 150,
+        "theta_deg": 62.73164200445833,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": -1.2772289926494012e-05,
+        "center_z": -0.18494718965180051,
+        "radius": 0.4300818711065486,
+        "radial_rms": 0.0009750387099487616,
+        "points": 463,
+        "theta_deg": 64.5306713372916,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": 6.535381054607627e-07,
+        "center_z": -0.1910903348588096,
+        "radius": 0.43412089832868583,
+        "radial_rms": 0.0003799086417271541,
+        "points": 225,
+        "theta_deg": 63.884780898300754,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.011785096823672125,
+      "epsilon_over_h_normal": 2.121323258862309,
+      "cells_across_transition_min": 8.833329077010688,
+      "qualified_resolution": true
+    }
+  },
+  {
+    "time": 0.17,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.39803091983240413
+      },
+      {
+        "component": 0,
+        "coordinate": 0.39803025186025814
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -3.7043380565361763e-07,
+        "center_z": -0.2056752802771024,
+        "radius": 0.44507465311234984,
+        "radial_rms": 0.000210226234247575,
+        "points": 154,
+        "theta_deg": 62.47638803980618,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": -5.520461209101983e-07,
+        "center_z": -0.18993446475450243,
+        "radius": 0.43415520183349715,
+        "radial_rms": 0.0008615427261218615,
+        "points": 468,
+        "theta_deg": 64.05675830896068,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -1.5432280445108415e-06,
+        "center_z": -0.19567038005820653,
+        "radius": 0.4379769444500965,
+        "radial_rms": 0.0003511417427421127,
+        "points": 226,
+        "theta_deg": 63.46403103961895,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.011785112807449205,
+      "epsilon_over_h_normal": 2.121320381778429,
+      "cells_across_transition_min": 8.833317096644855,
+      "qualified_resolution": true
+    }
+  },
+  {
+    "time": 0.18,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.39922570538652746
+      },
+      {
+        "component": 0,
+        "coordinate": 0.3992249360750317
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -1.9988022271357154e-06,
+        "center_z": -0.20871973612189637,
+        "radius": 0.4478033947113129,
+        "radial_rms": 0.0001896382140344774,
+        "points": 160,
+        "theta_deg": 62.2187708334267,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": -2.889579391007888e-05,
+        "center_z": -0.19469820271988983,
+        "radius": 0.4380669339386243,
+        "radial_rms": 0.0007769971172469026,
+        "points": 477,
+        "theta_deg": 63.61193903450224,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -6.1259323333247265e-06,
+        "center_z": -0.1998675565761834,
+        "radius": 0.44151624608953305,
+        "radial_rms": 0.0003250807973240485,
+        "points": 231,
+        "theta_deg": 63.083951085969254,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.011784993495890683,
+      "epsilon_over_h_normal": 2.121341858077161,
+      "cells_across_transition_min": 8.833406525360287,
+      "qualified_resolution": true
+    }
+  },
+  {
+    "time": 0.19,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.40028832161118055
+      },
+      {
+        "component": 0,
+        "coordinate": 0.40028745491807505
+      }
+    ],
+    "fits": [
+      {
+        "center_x": 4.67560678823636e-06,
+        "center_z": -0.21158195175998368,
+        "radius": 0.45034103443749995,
+        "radial_rms": 0.00017224815179199334,
+        "points": 169,
+        "theta_deg": 61.9769939967327,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": 6.177593235226636e-06,
+        "center_z": -0.19890583085160907,
+        "radius": 0.4415387412176051,
+        "radial_rms": 0.0007030885648782182,
+        "points": 488,
+        "theta_deg": 63.22530355863121,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": 7.362776577159647e-06,
+        "center_z": -0.20336459108067229,
+        "radius": 0.44447967485051626,
+        "radial_rms": 0.00028747409017163846,
+        "points": 235,
+        "theta_deg": 62.771900856772355,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.011784944745344195,
+      "epsilon_over_h_normal": 2.1213506333898255,
+      "cells_across_transition_min": 8.833443066337336,
+      "qualified_resolution": true
+    }
+  },
+  {
+    "time": 0.2,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.40123464624300237
+      },
+      {
+        "component": 0,
+        "coordinate": 0.40123366363496243
+      }
+    ],
+    "fits": [
+      {
+        "center_x": 2.6099277019671606e-06,
+        "center_z": -0.213965593694995,
+        "radius": 0.4524988001442601,
+        "radial_rms": 0.00015493814006749333,
+        "points": 167,
+        "theta_deg": 61.78032346008244,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": 2.9618560677497003e-06,
+        "center_z": -0.2025638692699277,
+        "radius": 0.4445385097663647,
+        "radial_rms": 0.0006361237473887735,
+        "points": 483,
+        "theta_deg": 62.89180276462082,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": 9.971882493027326e-08,
+        "center_z": -0.2065541348533012,
+        "radius": 0.4471822708321542,
+        "radial_rms": 0.00025905850754368075,
+        "points": 234,
+        "theta_deg": 62.49012782844895,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.01178510220296225,
+      "epsilon_over_h_normal": 2.1213222905878673,
+      "cells_across_transition_min": 8.833325045052455,
+      "qualified_resolution": true
+    }
+  },
+  {
+    "time": 0.21,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.40208619873861534
+      },
+      {
+        "component": 0,
+        "coordinate": 0.4020850969147513
+      }
+    ],
+    "fits": [
+      {
+        "center_x": 1.0267787841321015e-06,
+        "center_z": -0.21598161081485584,
+        "radius": 0.45434846067369766,
+        "radial_rms": 0.00013986420459151277,
+        "points": 168,
+        "theta_deg": 61.61684567686531,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": 2.5573382902359582e-06,
+        "center_z": -0.2057935276644517,
+        "radius": 0.4471949935266157,
+        "radial_rms": 0.0005721980073519731,
+        "points": 477,
+        "theta_deg": 62.60079546225207,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -3.35974992168763e-06,
+        "center_z": -0.20925881779819444,
+        "radius": 0.44949943654179386,
+        "radial_rms": 0.00023788041192190223,
+        "points": 239,
+        "theta_deg": 62.25499009282376,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.013807645359766807,
+      "epsilon_over_h_normal": 1.810591114459375,
+      "cells_across_transition_min": 7.539420062979329,
+      "qualified_resolution": false
+    }
+  },
+  {
+    "time": 0.22,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.4028520958213843
+      },
+      {
+        "component": 0,
+        "coordinate": 0.40285087236912076
+      }
+    ],
+    "fits": [
+      {
+        "center_x": 7.164400931714946e-07,
+        "center_z": -0.2181187822073447,
+        "radius": 0.456245903975918,
+        "radial_rms": 0.0001290504971927505,
+        "points": 177,
+        "theta_deg": 61.44038735025207,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": -4.146166550604213e-06,
+        "center_z": -0.20910442383192246,
+        "radius": 0.44994017401584696,
+        "radial_rms": 0.000529402495851894,
+        "points": 474,
+        "theta_deg": 62.306714522194476,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -2.3368257144442875e-06,
+        "center_z": -0.21192373229079964,
+        "radius": 0.45175946902545966,
+        "radial_rms": 0.00021368408048468205,
+        "points": 241,
+        "theta_deg": 62.023625263858555,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.01381857069835446,
+      "epsilon_over_h_normal": 1.8091596117807645,
+      "cells_across_transition_min": 7.53345919200789,
+      "qualified_resolution": false
+    }
+  },
+  {
+    "time": 0.23,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.4035406876759041
+      },
+      {
+        "component": 0,
+        "coordinate": 0.40353934094466054
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -1.4239039957569434e-06,
+        "center_z": -0.2198464221865515,
+        "radius": 0.45780332597849077,
+        "radial_rms": 0.00011441927272427791,
+        "points": 174,
+        "theta_deg": 61.30021290482205,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": -9.419211631147676e-06,
+        "center_z": -0.21153887837132168,
+        "radius": 0.4519520789073265,
+        "radial_rms": 0.0004663614406812843,
+        "points": 487,
+        "theta_deg": 62.091819445941894,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -1.447823540243679e-06,
+        "center_z": -0.21432644366575962,
+        "radius": 0.45380290191604006,
+        "radial_rms": 0.0001942186013060636,
+        "points": 242,
+        "theta_deg": 61.81697010383852,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.013828021358694764,
+      "epsilon_over_h_normal": 1.8079231548395416,
+      "cells_across_transition_min": 7.528310504269825,
+      "qualified_resolution": false
+    }
+  },
+  {
+    "time": 0.24,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.4041596050666957
+      },
+      {
+        "component": 0,
+        "coordinate": 0.40415813404167844
+      }
+    ],
+    "fits": [
+      {
+        "center_x": 2.120179016201667e-06,
+        "center_z": -0.2214110404194342,
+        "radius": 0.45921422174154497,
+        "radial_rms": 0.00010243485106794653,
+        "points": 181,
+        "theta_deg": 61.17395504141623,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": 5.501709008580437e-06,
+        "center_z": -0.21396519276729375,
+        "radius": 0.45395197037731466,
+        "radial_rms": 0.0004165171958831186,
+        "points": 490,
+        "theta_deg": 61.87876165576009,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": 8.701815207125195e-07,
+        "center_z": -0.2164740446622836,
+        "radius": 0.45562939769760463,
+        "radial_rms": 0.0001727651599919355,
+        "points": 252,
+        "theta_deg": 61.63349314102413,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.013836227086977348,
+      "epsilon_over_h_normal": 1.8068509459150168,
+      "cells_across_transition_min": 7.523845756037765,
+      "qualified_resolution": false
+    }
+  },
+  {
+    "time": 0.25,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.40471579847202477
+      },
+      {
+        "component": 0,
+        "coordinate": 0.4047142026572171
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -1.6698199838973866e-06,
+        "center_z": -0.2230529687207496,
+        "radius": 0.4606614689138949,
+        "radial_rms": 9.755076484736894e-05,
+        "points": 178,
+        "theta_deg": 61.03983068360728,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": -2.9893635764655273e-06,
+        "center_z": -0.21636703035477373,
+        "radius": 0.45595702447087255,
+        "radial_rms": 0.00038620533161515334,
+        "points": 482,
+        "theta_deg": 61.67099831022906,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": 8.823141604074913e-07,
+        "center_z": -0.2183884388016018,
+        "radius": 0.4572614854581958,
+        "radial_rms": 0.00015702672338258227,
+        "points": 241,
+        "theta_deg": 61.47117840605949,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.013843376226788384,
+      "epsilon_over_h_normal": 1.805917833224989,
+      "cells_across_transition_min": 7.519960213642227,
+      "qualified_resolution": false
+    }
+  },
+  {
+    "time": 0.26,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.40521557763226773
+      },
+      {
+        "component": 0,
+        "coordinate": 0.4052138569458881
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -2.589981030651123e-06,
+        "center_z": -0.22431972544703044,
+        "radius": 0.46180542557829507,
+        "radial_rms": 8.77725526340511e-05,
+        "points": 179,
+        "theta_deg": 60.938698728382015,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": -7.431506897902647e-06,
+        "center_z": -0.21825715314585722,
+        "radius": 0.4575265188810071,
+        "radial_rms": 0.0003453383081271837,
+        "points": 487,
+        "theta_deg": 61.507927332306785,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -1.7607912399770606e-06,
+        "center_z": -0.22014536251748934,
+        "radius": 0.4587590551229464,
+        "radial_rms": 0.0001418722861755843,
+        "points": 243,
+        "theta_deg": 61.32299494102129,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.013868890766433384,
+      "epsilon_over_h_normal": 1.8025954938304822,
+      "cells_across_transition_min": 7.506125774664297,
+      "qualified_resolution": false
+    }
+  },
+  {
+    "time": 0.27,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.4056646533512612
+      },
+      {
+        "component": 0,
+        "coordinate": 0.40566280803480387
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -7.040933990085343e-07,
+        "center_z": -0.22556047782664443,
+        "radius": 0.46290445325271934,
+        "radial_rms": 7.5520894444201e-05,
+        "points": 174,
+        "theta_deg": 60.83855074922615,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": -1.063642226322717e-05,
+        "center_z": -0.21997580929493002,
+        "radius": 0.45895014883453367,
+        "radial_rms": 0.0003107471051267976,
+        "points": 490,
+        "theta_deg": 61.360163446507904,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -2.1924868105833164e-06,
+        "center_z": -0.2216826935296934,
+        "radius": 0.4600693482224924,
+        "radial_rms": 0.00012700674933001366,
+        "points": 243,
+        "theta_deg": 61.19394643508734,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.01387295263818783,
+      "epsilon_over_h_normal": 1.8020677106027845,
+      "cells_across_transition_min": 7.50392805071435,
+      "qualified_resolution": false
+    }
+  },
+  {
+    "time": 0.28,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.4060681811910774
+      },
+      {
+        "component": 0,
+        "coordinate": 0.4060662117318007
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -1.1891863754508265e-06,
+        "center_z": -0.2266014700983352,
+        "radius": 0.4638441492940773,
+        "radial_rms": 6.769025416522336e-05,
+        "points": 168,
+        "theta_deg": 60.75603573660415,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": 2.2784106411642897e-06,
+        "center_z": -0.22155660063855523,
+        "radius": 0.4602654098125685,
+        "radial_rms": 0.0002782338093830784,
+        "points": 486,
+        "theta_deg": 61.225275946355815,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": 1.8716756599303222e-06,
+        "center_z": -0.2231238945104685,
+        "radius": 0.461298458111892,
+        "radial_rms": 0.00011515245116613494,
+        "points": 236,
+        "theta_deg": 61.07354053526104,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.013876504526828148,
+      "epsilon_over_h_normal": 1.8016064457490888,
+      "cells_across_transition_min": 7.502007313633223,
+      "qualified_resolution": false
+    }
+  },
+  {
+    "time": 0.29,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.4064308059376635
+      },
+      {
+        "component": 0,
+        "coordinate": 0.40642871300366307
+      }
+    ],
+    "fits": [
+      {
+        "center_x": 7.807649240493259e-07,
+        "center_z": -0.2275472304149445,
+        "radius": 0.4646975988800511,
+        "radial_rms": 6.080558169511812e-05,
+        "points": 165,
+        "theta_deg": 60.68128180709419,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": -3.0294671093333964e-06,
+        "center_z": -0.2229962913622285,
+        "radius": 0.4614601480531742,
+        "radial_rms": 0.0002515554172321808,
+        "points": 483,
+        "theta_deg": 61.10273273844074,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -3.083199108302442e-06,
+        "center_z": -0.22439473155648182,
+        "radius": 0.4623826489865121,
+        "radial_rms": 0.00010454463401254402,
+        "points": 235,
+        "theta_deg": 60.96780931537398,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.013879618731221677,
+      "epsilon_over_h_normal": 1.8012022148536002,
+      "cells_across_transition_min": 7.500324069691958,
+      "qualified_resolution": false
+    }
+  },
+  {
+    "time": 0.3,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.4067567056117799
+      },
+      {
+        "component": 0,
+        "coordinate": 0.40675448999841785
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -2.176629383216323e-07,
+        "center_z": -0.22840087805954198,
+        "radius": 0.465466908146694,
+        "radial_rms": 5.477585114504599e-05,
+        "points": 159,
+        "theta_deg": 60.613926538480335,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": 4.114219960599119e-07,
+        "center_z": -0.22430223151048811,
+        "radius": 0.4625487831624228,
+        "radial_rms": 0.00022602141408992706,
+        "points": 476,
+        "theta_deg": 60.9923332234884,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": 3.143591051749818e-08,
+        "center_z": -0.22553069836707523,
+        "radius": 0.4633549469240735,
+        "radial_rms": 9.414397156514936e-05,
+        "points": 228,
+        "theta_deg": 60.8738450669461,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.013882355856255468,
+      "epsilon_over_h_normal": 1.8008470794771378,
+      "cells_across_transition_min": 7.498845262709536,
+      "qualified_resolution": false
+    }
+  },
+  {
+    "time": 0.31,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.40704963399726557
+      },
+      {
+        "component": 0,
+        "coordinate": 0.4070472965835915
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -8.165539019694521e-07,
+        "center_z": -0.2291787628122013,
+        "radius": 0.4661662989351432,
+        "radial_rms": 4.953404729558996e-05,
+        "points": 155,
+        "theta_deg": 60.5525902489282,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": 8.003877310175151e-07,
+        "center_z": -0.2254775958948645,
+        "radius": 0.46352269616458597,
+        "radial_rms": 0.00020606766279328327,
+        "points": 462,
+        "theta_deg": 60.89291099746868,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -1.834874867766284e-07,
+        "center_z": -0.22652669558728394,
+        "radius": 0.46420590329211325,
+        "radial_rms": 8.347637732981293e-05,
+        "points": 227,
+        "theta_deg": 60.79160614216994,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.013884766948750626,
+      "epsilon_over_h_normal": 1.8005343620297165,
+      "cells_across_transition_min": 7.497543086763623,
+      "qualified_resolution": false
+    }
+  },
+  {
+    "time": 0.32,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.40731296094751035
+      },
+      {
+        "component": 0,
+        "coordinate": 0.4073105026613105
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -1.8342426147861829e-06,
+        "center_z": -0.2298712987820172,
+        "radius": 0.4667888500931802,
+        "radial_rms": 4.430865120329035e-05,
+        "points": 161,
+        "theta_deg": 60.4981001370659,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": -4.802501982553432e-06,
+        "center_z": -0.2265263193199562,
+        "radius": 0.4644035029959179,
+        "radial_rms": 0.0001854866263713668,
+        "points": 480,
+        "theta_deg": 60.805287986431665,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -3.121921119805793e-07,
+        "center_z": -0.22747156839624683,
+        "radius": 0.4650145243068531,
+        "radial_rms": 7.532733971406624e-05,
+        "points": 229,
+        "theta_deg": 60.7138989074252,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.013886895201490002,
+      "epsilon_over_h_normal": 1.8002584189817759,
+      "cells_across_transition_min": 7.4963940418272665,
+      "qualified_resolution": false
+    }
+  },
+  {
+    "time": 0.33,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.4075497100097214
+      },
+      {
+        "component": 0,
+        "coordinate": 0.40754713179991126
+      }
+    ],
+    "fits": [
+      {
+        "center_x": 5.099439060120584e-07,
+        "center_z": -0.23050201975075196,
+        "radius": 0.46735551397587105,
+        "radial_rms": 4.074002101787702e-05,
+        "points": 158,
+        "theta_deg": 60.4485524605372,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": 2.151297064443619e-06,
+        "center_z": -0.2274576747629574,
+        "radius": 0.46517966993527937,
+        "radial_rms": 0.0001664792803937227,
+        "points": 478,
+        "theta_deg": 60.72726833424192,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -1.3502736946836774e-06,
+        "center_z": -0.2282646598915618,
+        "radius": 0.46569922681867876,
+        "radial_rms": 7.086520819404805e-05,
+        "points": 233,
+        "theta_deg": 60.64925063123231,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.013888777320393897,
+      "epsilon_over_h_normal": 1.8000144593931025,
+      "cells_across_transition_min": 7.495378178111426,
+      "qualified_resolution": false
+    }
+  },
+  {
+    "time": 0.34,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.40776259313578184
+      },
+      {
+        "component": 0,
+        "coordinate": 0.40775989595097106
+      }
+    ],
+    "fits": [
+      {
+        "center_x": 6.809129420091304e-08,
+        "center_z": -0.2310467896696623,
+        "radius": 0.4678492426997185,
+        "radial_rms": 3.66271209589947e-05,
+        "points": 159,
+        "theta_deg": 60.40613211657413,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": -7.662464547286071e-07,
+        "center_z": -0.2283176933346962,
+        "radius": 0.4658948368821147,
+        "radial_rms": 0.00014994845516951437,
+        "points": 470,
+        "theta_deg": 60.6552956085791,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -8.356137267026874e-07,
+        "center_z": -0.22902183633105452,
+        "radius": 0.46634640621783735,
+        "radial_rms": 6.421160443697852e-05,
+        "points": 233,
+        "theta_deg": 60.587217592782736,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.013890444627360055,
+      "epsilon_over_h_normal": 1.799798398876118,
+      "cells_across_transition_min": 7.494478487958546,
+      "qualified_resolution": false
+    }
+  },
+  {
+    "time": 0.35000000000000003,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.4079540424198939
+      },
+      {
+        "component": 0,
+        "coordinate": 0.4079512271920834
+      }
+    ],
+    "fits": [
+      {
+        "center_x": 2.184918820243388e-07,
+        "center_z": -0.23155202050403917,
+        "radius": 0.46830407020455794,
+        "radial_rms": 3.353897291222252e-05,
+        "points": 155,
+        "theta_deg": 60.36664122994347,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": 2.497614645298817e-06,
+        "center_z": -0.22909072125973864,
+        "radius": 0.4665407555593946,
+        "radial_rms": 0.00013487507643064118,
+        "points": 467,
+        "theta_deg": 60.59096195184245,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": 1.0253464135483181e-07,
+        "center_z": -0.22974138859692167,
+        "radius": 0.46696118567939215,
+        "radial_rms": 5.798114157132419e-05,
+        "points": 230,
+        "theta_deg": 60.52837461246462,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.013891923954473306,
+      "epsilon_over_h_normal": 1.7996067414369779,
+      "cells_across_transition_min": 7.493680413821138,
+      "qualified_resolution": false
+    }
+  },
+  {
+    "time": 0.36,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.40812623892218375
+      },
+      {
+        "component": 0,
+        "coordinate": 0.4081233065546865
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -1.7125276868212067e-06,
+        "center_z": -0.2320149305656773,
+        "radius": 0.4687201813461963,
+        "radial_rms": 3.073633397956823e-05,
+        "points": 154,
+        "theta_deg": 60.330469015930554,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": -2.339347086728763e-06,
+        "center_z": -0.22979951620341596,
+        "radius": 0.46713519852699553,
+        "radial_rms": 0.0001227157002124485,
+        "points": 468,
+        "theta_deg": 60.53224679207903,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -2.947008059592821e-07,
+        "center_z": -0.23036738492558823,
+        "radius": 0.4674973895452374,
+        "radial_rms": 5.2946255438374484e-05,
+        "points": 228,
+        "theta_deg": 60.47737481098721,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.013893238372652161,
+      "epsilon_over_h_normal": 1.7994364833767411,
+      "cells_across_transition_min": 7.492971448099953,
+      "qualified_resolution": false
+    }
+  },
+  {
+    "time": 0.37,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.40828113871409244
+      },
+      {
+        "component": 0,
+        "coordinate": 0.40827809007289445
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -2.2418094544285813e-07,
+        "center_z": -0.2324202679531342,
+        "radius": 0.46908647929033814,
+        "radial_rms": 2.808010751440948e-05,
+        "points": 153,
+        "theta_deg": 60.298972719759625,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": 4.418663474238201e-07,
+        "center_z": -0.23041303932321433,
+        "radius": 0.46764412391453314,
+        "radial_rms": 0.00011086537089770067,
+        "points": 460,
+        "theta_deg": 60.481127312369416,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -9.198804023136337e-07,
+        "center_z": -0.2309307542676265,
+        "radius": 0.46797808535694074,
+        "radial_rms": 4.759579920339804e-05,
+        "points": 231,
+        "theta_deg": 60.43142572377367,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.013894407788229757,
+      "epsilon_over_h_normal": 1.7992850347445555,
+      "cells_across_transition_min": 7.492340806069905,
+      "qualified_resolution": false
+    }
+  },
+  {
+    "time": 0.38,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.4084197486322569
+      },
+      {
+        "component": 0,
+        "coordinate": 0.4084166106867601
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -3.509438576637933e-07,
+        "center_z": -0.2327997819677177,
+        "radius": 0.4694254438589144,
+        "radial_rms": 2.5297910238733615e-05,
+        "points": 150,
+        "theta_deg": 60.269240000097604,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": -8.255295099066327e-08,
+        "center_z": -0.23097549771188775,
+        "radius": 0.4681154610869269,
+        "radial_rms": 9.949309101673464e-05,
+        "points": 462,
+        "theta_deg": 60.43466888315734,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -4.943701162696864e-07,
+        "center_z": -0.23145094774306374,
+        "radius": 0.4684231907814346,
+        "radial_rms": 4.319590210733625e-05,
+        "points": 228,
+        "theta_deg": 60.389150196779134,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.01389544943366583,
+      "epsilon_over_h_normal": 1.799150154829114,
+      "cells_across_transition_min": 7.491779157262258,
+      "qualified_resolution": false
+    }
+  },
+  {
+    "time": 0.39,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.40854416115608627
+      },
+      {
+        "component": 0,
+        "coordinate": 0.40854090641284824
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -7.926272777481677e-07,
+        "center_z": -0.23313523343111395,
+        "radius": 0.46972706770688755,
+        "radial_rms": 2.3139139739794012e-05,
+        "points": 148,
+        "theta_deg": 60.24312817187081,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": 3.7003815432131546e-07,
+        "center_z": -0.23145950918617836,
+        "radius": 0.46851995148385606,
+        "radial_rms": 8.98667921935849e-05,
+        "points": 467,
+        "theta_deg": 60.394670806543516,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -7.412230446464162e-07,
+        "center_z": -0.23190181595574624,
+        "radius": 0.46880915644050825,
+        "radial_rms": 3.90450903673882e-05,
+        "points": 229,
+        "theta_deg": 60.352571714285446,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.01389637827299195,
+      "epsilon_over_h_normal": 1.799029898933328,
+      "cells_across_transition_min": 7.491278403830884,
+      "qualified_resolution": false
+    }
+  },
+  {
+    "time": 0.4,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.40865621582357786
+      },
+      {
+        "component": 0,
+        "coordinate": 0.4086528450929669
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -9.260413990916656e-07,
+        "center_z": -0.2334368718666087,
+        "radius": 0.46999826442410614,
+        "radial_rms": 2.12180235433283e-05,
+        "points": 148,
+        "theta_deg": 60.2196695304763,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": 8.77396570232963e-07,
+        "center_z": -0.2319382191835081,
+        "radius": 0.46892089159022216,
+        "radial_rms": 8.121128266478537e-05,
+        "points": 464,
+        "theta_deg": 60.35522434597208,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": 2.597353322656132e-07,
+        "center_z": -0.2323274510894663,
+        "radius": 0.46917358280492033,
+        "radial_rms": 3.5765649640059473e-05,
+        "points": 228,
+        "theta_deg": 60.31808769835702,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.01389720733826838,
+      "epsilon_over_h_normal": 1.7989225742612438,
+      "cells_across_transition_min": 7.490831496862489,
+      "qualified_resolution": false
+    }
+  },
+  {
+    "time": 0.41000000000000003,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.40875714184283013
+      },
+      {
+        "component": 0,
+        "coordinate": 0.40875365589107754
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -8.955099415909015e-07,
+        "center_z": -0.23372366689255814,
+        "radius": 0.470253775839052,
+        "radial_rms": 1.999991171221076e-05,
+        "points": 149,
+        "theta_deg": 60.19722198221008,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": -7.383675312174208e-07,
+        "center_z": -0.23235326686508617,
+        "radius": 0.4692687743602745,
+        "radial_rms": 7.444290817492512e-05,
+        "points": 467,
+        "theta_deg": 60.321084103547015,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -9.804555737539418e-07,
+        "center_z": -0.2326914931590806,
+        "radius": 0.46948481257596464,
+        "radial_rms": 3.214896125035559e-05,
+        "points": 229,
+        "theta_deg": 60.28859482015159,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.013897948009976846,
+      "epsilon_over_h_normal": 1.7988267031977228,
+      "cells_across_transition_min": 7.490432283470798,
+      "qualified_resolution": false
+    }
+  },
+  {
+    "time": 0.42,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.4088480460872466
+      },
+      {
+        "component": 0,
+        "coordinate": 0.4088444456346608
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -1.0972282488948264e-06,
+        "center_z": -0.23396438635332611,
+        "radius": 0.47047098251102715,
+        "radial_rms": 1.833423941595598e-05,
+        "points": 152,
+        "theta_deg": 60.178587336495696,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": -1.2848204792966022e-06,
+        "center_z": -0.23272970953964722,
+        "radius": 0.46958407932508867,
+        "radial_rms": 6.778342191893326e-05,
+        "points": 465,
+        "theta_deg": 60.29013778007163,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -7.752789139281083e-07,
+        "center_z": -0.2330278519871588,
+        "radius": 0.4697729170306607,
+        "radial_rms": 2.9358325875710123e-05,
+        "points": 230,
+        "theta_deg": 60.26140950227058,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.013898610251661003,
+      "epsilon_over_h_normal": 1.7987409926119977,
+      "cells_across_transition_min": 7.490075378974546,
+      "qualified_resolution": false
+    }
+  },
+  {
+    "time": 0.43,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.40892992524529637
+      },
+      {
+        "component": 0,
+        "coordinate": 0.4089262109656951
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -9.006082225556608e-07,
+        "center_z": -0.23418570413166784,
+        "radius": 0.47066955658923665,
+        "radial_rms": 1.696971228153509e-05,
+        "points": 149,
+        "theta_deg": 60.16138810894367,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": -6.639410649753629e-07,
+        "center_z": -0.23305708806261388,
+        "radius": 0.4698578600164857,
+        "radial_rms": 6.133249246725551e-05,
+        "points": 466,
+        "theta_deg": 60.26322105683872,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -7.66161297190806e-07,
+        "center_z": -0.23333379336349738,
+        "radius": 0.47003445958023277,
+        "radial_rms": 2.657762352201231e-05,
+        "points": 229,
+        "theta_deg": 60.23666972365292,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.013899202807070077,
+      "epsilon_over_h_normal": 1.7986643080913465,
+      "cells_across_transition_min": 7.489756059604811,
+      "qualified_resolution": false
+    }
+  },
+  {
+    "time": 0.44,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.40900367677749455
+      },
+      {
+        "component": 0,
+        "coordinate": 0.4089998492985674
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -1.4345233022652672e-06,
+        "center_z": -0.2343839190813421,
+        "radius": 0.47084787553816404,
+        "radial_rms": 1.5519545875447927e-05,
+        "points": 151,
+        "theta_deg": 60.1460271439372,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": -1.7075074028309045e-06,
+        "center_z": -0.23336370952298535,
+        "radius": 0.4701154277696005,
+        "radial_rms": 5.569594020516026e-05,
+        "points": 465,
+        "theta_deg": 60.238112702353554,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -6.347414628867613e-07,
+        "center_z": -0.2336094916733381,
+        "radius": 0.47027096425981707,
+        "radial_rms": 2.4569702145423792e-05,
+        "points": 228,
+        "theta_deg": 60.21445080260096,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.013899733366449896,
+      "epsilon_over_h_normal": 1.798595652226184,
+      "cells_across_transition_min": 7.4894701720827115,
+      "qualified_resolution": false
+    }
+  },
+  {
+    "time": 0.45,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.4090701087930448
+      },
+      {
+        "component": 0,
+        "coordinate": 0.4090661686974099
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -9.360512520984999e-07,
+        "center_z": -0.2345620094877508,
+        "radius": 0.4710079586815286,
+        "radial_rms": 1.4464799347672662e-05,
+        "points": 150,
+        "theta_deg": 60.13222449519309,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": -7.34839039543485e-07,
+        "center_z": -0.2336312124403771,
+        "radius": 0.47033887193933016,
+        "radial_rms": 5.028409400626716e-05,
+        "points": 462,
+        "theta_deg": 60.21613690641508,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -7.844638285323217e-07,
+        "center_z": -0.23385090610990278,
+        "radius": 0.4704775245432612,
+        "radial_rms": 2.2180034593803802e-05,
+        "points": 226,
+        "theta_deg": 60.19497189045408,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.013900208707345041,
+      "epsilon_over_h_normal": 1.7985341462383724,
+      "cells_across_transition_min": 7.489214057118489,
+      "qualified_resolution": false
+    }
+  },
+  {
+    "time": 0.46,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.4091299489492788
+      },
+      {
+        "component": 0,
+        "coordinate": 0.4091258967760423
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -7.062027208799784e-07,
+        "center_z": -0.23472101046673793,
+        "radius": 0.4711516209771154,
+        "radial_rms": 1.361795345477972e-05,
+        "points": 152,
+        "theta_deg": 60.11995925141538,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": -1.736504221034516e-07,
+        "center_z": -0.23387770549653697,
+        "radius": 0.47054608697091643,
+        "radial_rms": 4.6185209093661865e-05,
+        "points": 470,
+        "theta_deg": 60.19599340319415,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -1.3666055487870736e-06,
+        "center_z": -0.23408009190865045,
+        "radius": 0.4706732618941644,
+        "radial_rms": 2.027460080676405e-05,
+        "points": 226,
+        "theta_deg": 60.17646687149418,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.013900634814262347,
+      "epsilon_over_h_normal": 1.7984790143792189,
+      "cells_across_transition_min": 7.488984484443747,
+      "qualified_resolution": false
+    }
+  },
+  {
+    "time": 0.47000000000000003,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.4091838524681777
+      },
+      {
+        "component": 0,
+        "coordinate": 0.40917968871484345
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -1.3375195632811913e-06,
+        "center_z": -0.23486496120920358,
+        "radius": 0.4712809181294781,
+        "radial_rms": 1.2489663233788097e-05,
+        "points": 153,
+        "theta_deg": 60.1088065376079,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": -5.274613938115256e-07,
+        "center_z": -0.23409225370749795,
+        "radius": 0.47072575652515475,
+        "radial_rms": 4.1978487810466924e-05,
+        "points": 465,
+        "theta_deg": 60.17842337407806,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -8.023360809782366e-07,
+        "center_z": -0.23427991598248907,
+        "radius": 0.4708443366506137,
+        "radial_rms": 1.871844492936024e-05,
+        "points": 225,
+        "theta_deg": 60.16037124627936,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.013901016980734537,
+      "epsilon_over_h_normal": 1.7984295706312408,
+      "cells_across_transition_min": 7.488778597436726,
+      "qualified_resolution": false
+    }
+  },
+  {
+    "time": 0.48,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.4092324093559093
+      },
+      {
+        "component": 0,
+        "coordinate": 0.4092281344805184
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -1.5794690662648997e-06,
+        "center_z": -0.23499457570348764,
+        "radius": 0.4713977461650493,
+        "radial_rms": 1.1636688659008272e-05,
+        "points": 151,
+        "theta_deg": 60.09879720535781,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": -1.9641447156541857e-07,
+        "center_z": -0.23428810108449505,
+        "radius": 0.4708893484200986,
+        "radial_rms": 3.827553301983702e-05,
+        "points": 461,
+        "theta_deg": 60.16236472581618,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -4.157667341811939e-07,
+        "center_z": -0.23446069500919225,
+        "radius": 0.47099893285946415,
+        "radial_rms": 1.721874050105505e-05,
+        "points": 224,
+        "theta_deg": 60.145805402492556,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.013901359896675014,
+      "epsilon_over_h_normal": 1.7983852073335362,
+      "cells_across_transition_min": 7.488593865757606,
+      "qualified_resolution": false
+    }
+  },
+  {
+    "time": 0.49,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.409276150903499
+      },
+      {
+        "component": 0,
+        "coordinate": 0.4092717653269023
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -1.5490791082430236e-06,
+        "center_z": -0.2351096622019621,
+        "radius": 0.4715016448699555,
+        "radial_rms": 1.1015925984674692e-05,
+        "points": 152,
+        "theta_deg": 60.08992466395078,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": -9.213336837062627e-07,
+        "center_z": -0.23446717986935434,
+        "radius": 0.4710392433929857,
+        "radial_rms": 3.481669908941072e-05,
+        "points": 466,
+        "theta_deg": 60.147710171864496,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -9.260699688811989e-07,
+        "center_z": -0.23462244116900335,
+        "radius": 0.47113769149858153,
+        "radial_rms": 1.5813004878780234e-05,
+        "points": 227,
+        "theta_deg": 60.13281002739758,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.013901667723397015,
+      "epsilon_over_h_normal": 1.798345385419052,
+      "cells_across_transition_min": 7.488428044695849,
+      "qualified_resolution": false
+    }
+  },
+  {
+    "time": 0.5,
+    "crossings": [
+      {
+        "component": 0,
+        "coordinate": -0.40931555553949034
+      },
+      {
+        "component": 0,
+        "coordinate": 0.40931105964768233
+      }
+    ],
+    "fits": [
+      {
+        "center_x": -1.2884977475250416e-06,
+        "center_z": -0.23521832618757987,
+        "radius": 0.4715987718246262,
+        "radial_rms": 1.0270962376688213e-05,
+        "points": 152,
+        "theta_deg": 60.08148205993422,
+        "window": [
+          2.0,
+          6.0
+        ]
+      },
+      {
+        "center_x": -1.336532870933157e-06,
+        "center_z": -0.23462922320474183,
+        "radius": 0.4711756642725038,
+        "radial_rms": 3.172557164652794e-05,
+        "points": 472,
+        "theta_deg": 60.134510687766955,
+        "window": [
+          2.0,
+          10.0
+        ]
+      },
+      {
+        "center_x": -1.2096458279005995e-06,
+        "center_z": -0.23476674725463503,
+        "radius": 0.47126140748577133,
+        "radial_rms": 1.4603335810895796e-05,
+        "points": 223,
+        "theta_deg": 60.121215223515435,
+        "window": [
+          3.0,
+          8.0
+        ]
+      }
+    ],
+    "interface_resolution": {
+      "interface_present": true,
+      "h_normal_max_m": 0.013901944158243085,
+      "epsilon_over_h_normal": 1.7983096260084157,
+      "cells_across_transition_min": 7.4882791401663615,
+      "qualified_resolution": false
+    }
+  }
+]

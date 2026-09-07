@@ -701,3 +701,82 @@ STEP 2 является отдельной итерацией после явн�
 но глобальный small-slope gate не пройден. Неразрешённый contact corner
 нельзя выдавать за точную физику стенки.
 Production renderer, MP4 и Plotly не входят в STEP 1.6.
+
+## STEP 3A — отдельная diffuse-interface ветка, пока НЕ квалифицирована
+
+Текущий verdict: **MODEL NOT YET VALIDATED**. Это не продолжение линейного
+solver: добавлены nonlinear CHNS, sigma>0, вариационное wetting condition и
+Navier slip. Старые STEP 1–2.1, их окружение и fine HDF5 не изменены.
+См. [design/self-review](STEP3_DESIGN.md),
+[измеренный model report](STEP3_MODEL_REPORT.md) и
+[machine-readable gates](validation_results/step3/summary.json).
+
+Flat-interface и analytic operator checks прошли. Laplace pressure отличается
+от sigma/R примерно на 0.1%, но energy gate второго радиуса пока не проходит.
+Contact run дал 60.135° при theta_e=60°, однако moving interface вышел в менее
+разрешённые элементы, а начальный CH dissipation integral не разрешён по времени.
+**Эти результаты не разрешают tank bridge, water–air case или wall-film claim.**
+
+Окружение отдельно от `.venv` (команды из `sloshing_visualization/`):
+
+```bash
+docker build -t waves-step3:0.10.0 -f docker/step3/Dockerfile docker/step3
+bash docker/step3/run.sh python3 scripts/step3_stack.py
+bash docker/step3/run.sh python3 -m pytest -q \
+  tests/test_step3_model.py tests/test_step3_interface.py tests/test_step3_fenicsx.py
+```
+
+Dockerfile закрепляет официальный image digest; точные версии записаны в
+[stack.json](docker/step3/stack.json). Runtime network отключена. Wrapper
+монтирует только этот проект. На native Docker используется UID пользователя;
+Docker Desktop VirtioFS отображает его в uid 0 внутри VM. При другой установке
+можно явно задать `STEP3_DOCKER_USER`. Это не privileged container.
+
+Для повторного расчёта используйте **новый** output directory: готовый или
+failed run не перезаписывается и не принимается молча как valid cache.
+
+```bash
+# Analytic spatial operator consistency (not full solution-error MMS)
+bash docker/step3/run.sh python3 scripts/step3_benchmarks.py \
+  --benchmark operators --output validation_results/step3/reproduction/operators
+
+# Flat interface: h + CG1/CG2 phase comparison
+bash docker/step3/run.sh python3 scripts/step3_benchmarks.py \
+  --study --output validation_results/step3/reproduction/flat
+
+# Laplace baseline; no plotting/simulation of a tank
+bash docker/step3/run.sh python3 scripts/step3_benchmarks.py \
+  --benchmark laplace --output validation_results/step3/reproduction/laplace
+
+# This diagnostic currently returns a NONZERO exit status: its gate fails.
+bash docker/step3/run.sh python3 scripts/step3_benchmarks.py \
+  --benchmark contact --theta 60 \
+  --output validation_results/step3/reproduction/contact60
+
+# Analyze an already COMPLETE Laplace checkpoint without PDE timesteps
+bash docker/step3/run.sh python3 scripts/step3_benchmarks.py \
+  --benchmark laplace --analyze-only --output validation_results/step3/laplace/resolved
+
+# Regenerate measured gate summary/plots from the retained result directories
+.venv/bin/python scripts/step3_analyze.py
+```
+
+`--nx`, `--nz`, `--dt`, `--t-end`, `--phase-degree`, `--epsilon`, `--mobility`,
+`--slip-length`, `--refinement-levels`, `--refinement-band`, `--max-unknowns`
+явно переопределяют config; фактические параметры сохраняются в каждом run.
+Cost guard срабатывает до FEM assembly. `--estimate-only` показывает исходную
+структурированную сетку; точный размер после local refinement печатает mesh
+generator **до** factorization.
+
+Checkpoint API `write_checkpoint` / `load_checkpoint` сохраняет все mixed
+coefficients, оба BDF history states и energy accounting. Есть периодические
+`running` checkpoints; загрузка такого checkpoint требует явного
+`allow_running=True`. Failed checkpoint не принимается. Restart требует прежние
+config, MPI rank count и partition; автоматического CLI-продолжения interrupted
+benchmark и adaptive startup пока нет. Exact restart проверен отдельным тестом.
+
+Обычный CI старого проекта сохранён. Новый `step3.yml` запускает только небольшие
+coupled/unit tests в контейнере; expensive sweeps и tank calculation в CI не входят.
+Unit tests не заменяют scientific gates. На данный момент benchmark falling film,
+полный contact-angle/epsilon study, slip/mobility sensitivity и production
+pre-equilibration ещё **не выполнены**, film renderer не реализован.

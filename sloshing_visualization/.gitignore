@@ -23,3 +23,9 @@ validation_results/**/*.h5
 validation_results/animation_qualification/runs/
 validation_results/animation_qualification/raw/
 validation_results/animation_qualification/*.npz
+validation_results/step3/cache/
+validation_results/step3/development/
+validation_results/step3/**/checkpoint/
+validation_results/step3/**/nonlinear.csv
+validation_results/step3/**/*.xdmf
+validation_results/step3/**/*.bp/

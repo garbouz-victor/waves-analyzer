@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "budget_decreases_with_dt": true,
+  "rows": [
+    {
+      "dt": 0.0004,
+      "energy_budget_relative_max": 0.4178102429415396,
+      "initial_CH_dissipation": 205.08542028061603,
+      "final_energy": 0.0937567712831202,
+      "energy_increase_max": -6.342775502464482e-05,
+      "mass_error_max": 2.004569350017644e-15,
+      "runtime_s": 1.47743317700224
+    },
+    {
+      "dt": 0.0002,
+      "energy_budget_relative_max": 0.20598681945394373,
+      "initial_CH_dissipation": 205.08542028061603,
+      "final_energy": 0.09375568232560158,
+      "energy_increase_max": -3.095073127744319e-05,
+      "mass_error_max": 2.312964634635743e-15,
+      "runtime_s": 1.9596172439923976
+    },
+    {
+      "dt": 0.0001,
+      "energy_budget_relative_max": 0.10065564426616783,
+      "initial_CH_dissipation": 205.08542028061603,
+      "final_energy": 0.09375541121872345,
+      "energy_increase_max": -1.530586963272018e-05,
+      "mass_error_max": 3.700743415417189e-15,
+      "runtime_s": 3.081409992999397
+    }
+  ],
+  "scope": "fixed under-resolved spatial model: temporal diagnosis ONLY"
+}

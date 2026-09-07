@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "checks": {
+    "all_operator_defects_decrease": true,
+    "weak_divergence_roundoff": true,
+    "pressure_sign_negative_control_detected": true
+  },
+  "rows": [
+    {
+      "n": 6,
+      "h": 0.16666666666666666,
+      "wrong_pressure_sign": false,
+      "momentum_defect_L2": 0.04104575801193681,
+      "divergence_defect_L2": 3.77647213256857e-17,
+      "CH_defect_L2": 0.0003127657304670537,
+      "chemical_defect_L2": 0.0001843592118533918,
+      "strong_divergence_L2": 0.006074809150339794
+    },
+    {
+      "n": 12,
+      "h": 0.08333333333333333,
+      "wrong_pressure_sign": false,
+      "momentum_defect_L2": 0.012620352676151664,
+      "divergence_defect_L2": 6.895001148324458e-17,
+      "CH_defect_L2": 8.617679893234053e-05,
+      "chemical_defect_L2": 6.321110569243991e-05,
+      "strong_divergence_L2": 0.001578362996139614
+    },
+    {
+      "n": 24,
+      "h": 0.041666666666666664,
+      "wrong_pressure_sign": false,
+      "momentum_defect_L2": 0.0034465190615417733,
+      "divergence_defect_L2": 1.2006241953758988e-16,
+      "CH_defect_L2": 2.478242328815636e-05,
+      "chemical_defect_L2": 2.153684005176561e-05,
+      "strong_divergence_L2": 0.00039841184037043713
+    }
+  ],
+  "negative_control": {
+    "n": 24,
+    "h": 0.041666666666666664,
+    "wrong_pressure_sign": true,
+    "momentum_defect_L2": 0.7193947108461409,
+    "divergence_defect_L2": 1.2006241953758988e-16,
+    "CH_defect_L2": 2.478242328815636e-05,
+    "chemical_defect_L2": 2.153684005176561e-05,
+    "strong_divergence_L2": 0.00039841184037043713
+  },
+  "scope": "coupled spatial operator consistency; NOT a full solution-error convergence MMS",
+  "density_ratio": 1.2,
+  "viscosity_ratio": 2.0,
+  "forcing_in_normal_runs": false
+}

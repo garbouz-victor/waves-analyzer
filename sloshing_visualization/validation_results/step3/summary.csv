@@ -1,0 +1,12 @@
+gate,passed
+flat_interface_h_p,True
+manufactured_operator_consistency,True
+laplace_multiple_radii_energy,False
+contact_60_degree_run,False
+contact_90_120_degree_PDE_runs,False
+contact_epsilon_convergence,False
+contact_fine_startup_energy_qualified,False
+spreading_slip_mobility_study,False
+falling_film_flux_benchmark,False
+film_regularization_studies,False
+MPI_tiny_comparison,True

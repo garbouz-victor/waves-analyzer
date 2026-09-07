@@ -1,0 +1,53 @@
+{
+  "status": "failed",
+  "config": {
+    "name": "sessile_contact_matched_density_demonstration",
+    "rho_liquid": 1.0,
+    "rho_gas": 1.0,
+    "mu_liquid": 1.0,
+    "mu_gas": 1.0,
+    "sigma": 0.1,
+    "epsilon": 0.025,
+    "mobility": 1.0,
+    "slip_length_m": 0.01,
+    "theta_equilibrium_deg": 60.0,
+    "g": 0.0,
+    "a_x": 0.0,
+    "length_scale_m": 0.3,
+    "velocity_scale_m_per_s": 0.1,
+    "x_min": -0.6,
+    "x_max": 0.6,
+    "z_min": 0.0,
+    "z_max": 0.6,
+    "nx": 32,
+    "nz": 16,
+    "phase_degree": 2,
+    "dt": 0.01,
+    "t_end": 0.5,
+    "x_grading": 0.0,
+    "z_grading": 0.0,
+    "wetting_walls": [
+      "bottom"
+    ],
+    "no_slip_walls": [],
+    "free_slip_walls": [
+      "left",
+      "right",
+      "top"
+    ],
+    "time_scheme": "bdf2",
+    "quadrature_degree": 12,
+    "snes_atol": 1e-10,
+    "snes_rtol": 1e-09,
+    "snes_max_it": 30,
+    "max_unknowns": 100000,
+    "refinement_levels": 2,
+    "refinement_circle_x": 0.0,
+    "refinement_circle_z": -1.8369701987210297e-17,
+    "refinement_circle_radius": 0.3,
+    "refinement_band_m": 0.16
+  },
+  "fingerprint": "3d66309015c8aa56c2f0aa971a55e938503850b383d22375ac908c27e5c39269",
+  "error": "Ambiguous FEM contour; increase subdivisions or refine interface",
+  "runtime_s": 7.1358540399960475
+}

@@ -1,0 +1,207 @@
+{
+  "status": "MODEL NOT YET VALIDATED",
+  "gates": {
+    "flat_interface_h_p": true,
+    "manufactured_operator_consistency": true,
+    "laplace_multiple_radii_energy": false,
+    "contact_60_degree_run": false,
+    "contact_90_120_degree_PDE_runs": false,
+    "contact_epsilon_convergence": false,
+    "contact_fine_startup_energy_qualified": false,
+    "spreading_slip_mobility_study": false,
+    "falling_film_flux_benchmark": false,
+    "film_regularization_studies": false,
+    "MPI_tiny_comparison": true
+  },
+  "tank_bridge_allowed": false,
+  "film_demo_allowed": false,
+  "base_commit": "c6dcf3faf28ff2cf9f303e5d5d8832d9ed2f7517",
+  "flat_rows": [
+    {
+      "phase_degree": 2,
+      "n": 16,
+      "h": 0.0625,
+      "spurious_speed_max": 1.2417121908706666e-05,
+      "surface_energy_error_abs": 6.128848372090323e-05,
+      "mass_error_relative": 2.1011838102769076e-15,
+      "energy_increase_max": -7.147471364765678e-10,
+      "energy_budget_relative": 0.005166198358955445,
+      "transition_cells": 3.2985374062467914,
+      "runtime_s": 3.152568006000365
+    },
+    {
+      "phase_degree": 2,
+      "n": 32,
+      "h": 0.03125,
+      "spurious_speed_max": 1.2903642205502514e-06,
+      "surface_energy_error_abs": 5.775803870691765e-06,
+      "mass_error_relative": 3.1676965466919532e-15,
+      "energy_increase_max": -1.1149484113737174e-11,
+      "energy_budget_relative": 0.004443452596542426,
+      "transition_cells": 6.65306019143509,
+      "runtime_s": 17.04401526998845
+    },
+    {
+      "phase_degree": 2,
+      "n": 48,
+      "h": 0.020833333333333332,
+      "spurious_speed_max": 2.6508437899498984e-07,
+      "surface_energy_error_abs": 1.1691077411307704e-06,
+      "mass_error_relative": 4.595945714660262e-15,
+      "energy_increase_max": -4.508060591490448e-13,
+      "energy_budget_relative": 0.002818925632685454,
+      "transition_cells": 9.987304769347237,
+      "runtime_s": 57.256614579004236
+    },
+    {
+      "phase_degree": 1,
+      "n": 48,
+      "h": 0.020833333333333332,
+      "spurious_speed_max": 4.3523891950819204e-05,
+      "surface_energy_error_abs": 0.00028723931117760615,
+      "mass_error_relative": 5.7635552214618975e-15,
+      "energy_increase_max": -2.395348225325833e-08,
+      "energy_budget_relative": 0.0003564169267539671,
+      "transition_cells": 9.881286479614888,
+      "runtime_s": 50.97659159799514
+    }
+  ],
+  "operator_rows": [
+    {
+      "n": 6,
+      "h": 0.16666666666666666,
+      "wrong_pressure_sign": false,
+      "momentum_defect_L2": 0.04104575801193681,
+      "divergence_defect_L2": 3.77647213256857e-17,
+      "CH_defect_L2": 0.0003127657304670537,
+      "chemical_defect_L2": 0.0001843592118533918,
+      "strong_divergence_L2": 0.006074809150339794
+    },
+    {
+      "n": 12,
+      "h": 0.08333333333333333,
+      "wrong_pressure_sign": false,
+      "momentum_defect_L2": 0.012620352676151664,
+      "divergence_defect_L2": 6.895001148324458e-17,
+      "CH_defect_L2": 8.617679893234053e-05,
+      "chemical_defect_L2": 6.321110569243991e-05,
+      "strong_divergence_L2": 0.001578362996139614
+    },
+    {
+      "n": 24,
+      "h": 0.041666666666666664,
+      "wrong_pressure_sign": false,
+      "momentum_defect_L2": 0.0034465190615417733,
+      "divergence_defect_L2": 1.2006241953758988e-16,
+      "CH_defect_L2": 2.478242328815636e-05,
+      "chemical_defect_L2": 2.153684005176561e-05,
+      "strong_divergence_L2": 0.00039841184037043713
+    }
+  ],
+  "operator_scope": "coupled spatial operator consistency; NOT a full solution-error convergence MMS",
+  "laplace_measurements": [
+    {
+      "center_x": -3.0403581824256854e-08,
+      "center_z": -1.095132644984842e-08,
+      "radius": 0.24139379432185562,
+      "radial_rms": 8.527369303500139e-06,
+      "points": 699,
+      "pressure_inside_Pa": 0.21282944746286345,
+      "pressure_outside_Pa": -0.20101298153913788,
+      "pressure_jump_Pa": 0.4138424290020013,
+      "sigma_over_R_Pa": 0.41426085654326233,
+      "pressure_relative_error": 0.0010100581183376603,
+      "mu_std_Pa": 5.994848115225383e-07,
+      "mu_mean_Pa": 0.20752396471714993,
+      "relative_mu_std": 2.8887497997622656e-06
+    },
+    {
+      "center_x": 1.5798370703967567e-07,
+      "center_z": 1.8882741020798122e-07,
+      "radius": 0.29443771284016684,
+      "radial_rms": 8.186240038993327e-06,
+      "points": 783,
+      "pressure_inside_Pa": 0.17367635389585945,
+      "pressure_outside_Pa": -0.16562866816848099,
+      "pressure_jump_Pa": 0.33930502206434043,
+      "sigma_over_R_Pa": 0.3396304061575298,
+      "pressure_relative_error": 0.0009580534819325417,
+      "mu_std_Pa": 1.0765616130663607e-07,
+      "mu_mean_Pa": 0.17002599958731085,
+      "relative_mu_std": 6.33174700151391e-07
+    },
+    {
+      "center_x": 2.5134400157380466e-07,
+      "center_z": 8.64574901116022e-08,
+      "radius": 0.2944377084303495,
+      "radial_rms": 8.181051854559585e-06,
+      "points": 782,
+      "pressure_inside_Pa": 0.17367634663028003,
+      "pressure_outside_Pa": -0.16562867556404182,
+      "pressure_jump_Pa": 0.33930502219432185,
+      "sigma_over_R_Pa": 0.3396304112442019,
+      "pressure_relative_error": 0.0009580680619501172,
+      "mu_std_Pa": 1.07619334804916e-07,
+      "mu_mean_Pa": 0.1700260019821926,
+      "relative_mu_std": 6.329580978807426e-07
+    }
+  ],
+  "laplace_energy_increments": [
+    -1.0499934255392418e-13,
+    1.9801335660041275e-07,
+    1.6487431031553257e-08
+  ],
+  "contact_angle_measured_deg": 60.134510687766955,
+  "contact_mass_error_max": 7.393776948718925e-14,
+  "contact_first_resolution_violation_s": 0.21,
+  "contact_min_cells_across_transition": 7.4882791401663615,
+  "contact_budget_relative_max": 4839.375788706232,
+  "contact_final_cumulative_CH_unqualified_J_per_m": 456.10918847807,
+  "startup_time_rows": [
+    {
+      "dt": 0.0004,
+      "energy_budget_relative_max": 0.4178102429415396,
+      "initial_CH_dissipation": 205.08542028061603,
+      "final_energy": 0.0937567712831202,
+      "energy_increase_max": -6.342775502464482e-05,
+      "mass_error_max": 2.004569350017644e-15,
+      "runtime_s": 1.47743317700224
+    },
+    {
+      "dt": 0.0002,
+      "energy_budget_relative_max": 0.20598681945394373,
+      "initial_CH_dissipation": 205.08542028061603,
+      "final_energy": 0.09375568232560158,
+      "energy_increase_max": -3.095073127744319e-05,
+      "mass_error_max": 2.312964634635743e-15,
+      "runtime_s": 1.9596172439923976
+    },
+    {
+      "dt": 0.0001,
+      "energy_budget_relative_max": 0.10065564426616783,
+      "initial_CH_dissipation": 205.08542028061603,
+      "final_energy": 0.09375541121872345,
+      "energy_increase_max": -1.530586963272018e-05,
+      "mass_error_max": 3.700743415417189e-15,
+      "runtime_s": 3.081409992999397
+    }
+  ],
+  "MPI_absolute_differences": {
+    "E_total": 5.551115123125783e-17,
+    "phase_mass": 7.472863473856339e-17,
+    "speed_max_dof_sample": 8.131516293641283e-20,
+    "strong_divergence_L2": 2.2768245622195593e-18
+  },
+  "limitations": [
+    "Time-evolved tests are matched-density demonstration fluids, not water-air.",
+    "Unmatched-density operators have analytic consistency checks, not a production gravity validation.",
+    "Contact interface leaves the fully refined band; 8-cell policy is unchanged.",
+    "Instantaneous variational wetting plus incompatible initial angle gives stiff CH startup.",
+    "Current time-integrated dissipation is not qualified physical heat.",
+    "BDF2 does not guarantee monotone physical energy; the second-radius gate remains failed.",
+    "No falling-film PDE benchmark, epsilon/slip/mobility convergence or tank release yet.",
+    "No hydrodynamic wall film or molecular wetting claim is made."
+  ],
+  "analysis_source_sha256": "8e6623fc66ecdeba62a113ab5934ffd004f893809fa667b569c77b23812b2978",
+  "provenance_note": "Per-run configs/checkpoints are retained; analysis source hash is not retrospectively asserted to be each development run's source hash."
+}

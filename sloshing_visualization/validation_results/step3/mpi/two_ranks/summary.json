@@ -1,0 +1,53 @@
+{
+  "status": "running",
+  "config": {
+    "name": "flat_matched_density_demonstration",
+    "rho_liquid": 1.0,
+    "rho_gas": 1.0,
+    "mu_liquid": 1.0,
+    "mu_gas": 1.0,
+    "sigma": 0.1,
+    "epsilon": 0.05,
+    "mobility": 0.1,
+    "slip_length_m": 0.01,
+    "theta_equilibrium_deg": 90.0,
+    "g": 0.0,
+    "a_x": 0.0,
+    "length_scale_m": 1.0,
+    "velocity_scale_m_per_s": 0.1,
+    "x_min": -0.5,
+    "x_max": 0.5,
+    "z_min": -0.5,
+    "z_max": 0.5,
+    "nx": 8,
+    "nz": 8,
+    "phase_degree": 2,
+    "dt": 0.002,
+    "t_end": 0.004,
+    "x_grading": 0.0,
+    "z_grading": 0.0,
+    "wetting_walls": [
+      "left",
+      "right",
+      "bottom"
+    ],
+    "no_slip_walls": [
+      "bottom"
+    ],
+    "free_slip_walls": [
+      "top"
+    ],
+    "time_scheme": "bdf2",
+    "quadrature_degree": 12,
+    "snes_atol": 1e-10,
+    "snes_rtol": 1e-09,
+    "snes_max_it": 30,
+    "max_unknowns": 100000,
+    "refinement_levels": 0,
+    "refinement_circle_x": 0.0,
+    "refinement_circle_z": 0.0,
+    "refinement_circle_radius": 0.25,
+    "refinement_band_m": 0.12
+  },
+  "fingerprint": "4820c0dd551c226dee954a4d1ccc1312fd786fd4b963fe499b2bfab2aacad969"
+}

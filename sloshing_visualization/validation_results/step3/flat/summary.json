@@ -1,0 +1,61 @@
+{
+  "status": "passed",
+  "checks": {
+    "spurious_currents_decrease": true,
+    "surface_energy_error_decreases": true,
+    "mass_conservation": true,
+    "no_unexplained_energy_growth": true,
+    "finest_interface_resolved": true
+  },
+  "rows": [
+    {
+      "phase_degree": 2,
+      "n": 16,
+      "h": 0.0625,
+      "spurious_speed_max": 1.2417121908706666e-05,
+      "surface_energy_error_abs": 6.128848372090323e-05,
+      "mass_error_relative": 2.1011838102769076e-15,
+      "energy_increase_max": -7.147471364765678e-10,
+      "energy_budget_relative": 0.005166198358955445,
+      "transition_cells": 3.2985374062467914,
+      "runtime_s": 3.152568006000365
+    },
+    {
+      "phase_degree": 2,
+      "n": 32,
+      "h": 0.03125,
+      "spurious_speed_max": 1.2903642205502514e-06,
+      "surface_energy_error_abs": 5.775803870691765e-06,
+      "mass_error_relative": 3.1676965466919532e-15,
+      "energy_increase_max": -1.1149484113737174e-11,
+      "energy_budget_relative": 0.004443452596542426,
+      "transition_cells": 6.65306019143509,
+      "runtime_s": 17.04401526998845
+    },
+    {
+      "phase_degree": 2,
+      "n": 48,
+      "h": 0.020833333333333332,
+      "spurious_speed_max": 2.6508437899498984e-07,
+      "surface_energy_error_abs": 1.1691077411307704e-06,
+      "mass_error_relative": 4.595945714660262e-15,
+      "energy_increase_max": -4.508060591490448e-13,
+      "energy_budget_relative": 0.002818925632685454,
+      "transition_cells": 9.987304769347237,
+      "runtime_s": 57.256614579004236
+    },
+    {
+      "phase_degree": 1,
+      "n": 48,
+      "h": 0.020833333333333332,
+      "spurious_speed_max": 4.3523891950819204e-05,
+      "surface_energy_error_abs": 0.00028723931117760615,
+      "mass_error_relative": 5.7635552214618975e-15,
+      "energy_increase_max": -2.395348225325833e-08,
+      "energy_budget_relative": 0.0003564169267539671,
+      "transition_cells": 9.881286479614888,
+      "runtime_s": 50.97659159799514
+    }
+  ],
+  "scope": "flat matched-density benchmark only; not whole-model qualification"
+}
