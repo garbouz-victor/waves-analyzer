@@ -1,0 +1,15 @@
+{
+  "execution_base_HEAD": "c718347d81925faa9a6a8184f4dd4c2d0298aaae",
+  "all_manifest_file_bindings_passed": true,
+  "manifest_binding_to_preflight_passed": true,
+  "preflight_script_binding_passed": true,
+  "tracked_protected_files_diff_from_base": "empty",
+  "original_STEP3A9_source_guard": "failed",
+  "original_guard_exception": "ValueError: STOP: source/policy/stack/schedule changed after freeze",
+  "sole_guard_difference": "implementation.execution_base_HEAD",
+  "source_archive_members_byte_identical": true,
+  "numerical_source_sha256": "64250f222cb8fe4eda98e2abd7ec0f91be3d0045bd65a45e81f098833795b717",
+  "cost_or_PDE_work_after_failed_guard": false,
+  "continuation_authorized": false,
+  "final_commit_is_not_execution_base": true
+}

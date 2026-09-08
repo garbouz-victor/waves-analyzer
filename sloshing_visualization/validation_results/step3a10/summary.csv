@@ -1,0 +1,12 @@
+stage,status,details
+source_guard,failed,execution_base_HEAD mismatch only
+numerical_source,unchanged,all frozen production archive members byte-identical
+prefix_integrity,passed,127 accepted intervals; valid scalar/timing chains and archives
+cost_audit,not_run,stopped before estimates calibration and backtests
+continuation,not_authorized,interval128 not executed
+full_L0,incomplete,127/1068; no COMPLETE marker
+transfer,incomplete,no new full-horizon evidence
+local_host_tests,passed,7 pure preflight/provenance tests
+pinned_pure_tests,passed,7 pure preflight/provenance tests; actual source_guard failed
+remote_CI,not_observed,no push
+model,MODEL NOT YET VALIDATED,inherited qualifications unchanged

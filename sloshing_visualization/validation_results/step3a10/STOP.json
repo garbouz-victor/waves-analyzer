@@ -1,0 +1,17 @@
+{
+  "stage": "first_source_guard_before_cost_analysis",
+  "execution_status": "blocked",
+  "reason": "Only execution_base_HEAD differs: frozen 5f2d9498e1d0715f57b125ee49b4ddfd533467ae versus wrapper execution c718347d81925faa9a6a8184f4dd4c2d0298aaae",
+  "source_guard_passed": false,
+  "numerical_source_bytes_unchanged": true,
+  "prefix_integrity": "passed",
+  "prefix_manifest_sha256": "ec8421ff9f7f28c84229294fcf17cffddbae464e398efbefe76aac64c5cf4127",
+  "cost_audit": "not_run",
+  "continuation_authorized": false,
+  "interval128_executed": false,
+  "accepted_steps": 127,
+  "new_rejected_intervals": 0,
+  "complete_marker": false,
+  "requires_user_direction": true,
+  "overall_model_verdict": "MODEL NOT YET VALIDATED"
+}
