@@ -1,0 +1,65 @@
+{
+  "provenance": {
+    "implementation": {
+      "docker_image": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+      "execution_base_HEAD": "1cc78a1f4108876a1610570b48138381f29a2484",
+      "full_phase_rate_version": "matched-zero-force-full-CHNS-phase-rate-BE-v1",
+      "multiphase_source_sha256": "031f988c2aeca347c554f5124eb84ed5c748090670ac0468f458ba9bfc20ae35",
+      "original_weak_form_sha256": "64f8eb34894bd8d8209d0183007b124cc19813c1d7ac980597d509b354429c0b",
+      "runner_sha256": "9d517d735923dcd91431d73de9b260ae9e6e251512f760d25f7896ad76c2bc9d"
+    },
+    "source_archive_sha256": "3698902dca348e7d36174308b2c7da7d26da6b78e7ff52fd861adae3886f9b78",
+    "policy_sha256": "7de1ccc5132b6eaab63d0c7f31a24bfb556fb36b02eee57c1bb7441b65436e25",
+    "stack": {
+      "DOLFINx": "0.10.0",
+      "MUMPS": "5.8.1",
+      "PETSc": [
+        3,
+        24,
+        0
+      ],
+      "UFL": "2025.2.0",
+      "precision_bits": 64,
+      "rank_count": 1,
+      "scalar_precision": "float64",
+      "scipy": "1.16.2"
+    },
+    "input_hashes": {
+      "equilibrium_fingerprint": "df3a6176bc442190c15ca8e4b6faa2c885dbbe89d5126196148d92b1552809fc",
+      "initial_phi_sha256": "6e59cd0bd3ee5c421af9694508d439e8e05a565de329ed38a14af39444d4e681",
+      "optimized_plan_sha256": "5d291468a3520da5267a8d76b8015d0709f5e28b44fbaa5f8a7c6b264664e2b8",
+      "perturbation_coefficient_sha256": "831db9041c11ce04ab8974f34e841b62b56bd77474290e3c978c9b5f5af724d0"
+    },
+    "physical_config_fingerprint": "d42900144d7d75c67e4455351ac98a0c41083623ed06de5c2987c1d35a485650",
+    "postprocessing": "read-only analysis after mandatory stop; frozen implementation unchanged"
+  },
+  "stop_gate": {
+    "name": "strong_divergence_range",
+    "measured": 0.000003814612027895975,
+    "limit": 0.0000036880704671415807,
+    "overshoot_relative": 0.03431104743843716,
+    "origin": "STEP3A8 predeclared empirical same-mesh STEP3A2 envelope, NOT a universal CHNS divergence tolerance",
+    "weak_continuity_Riesz": 1.1783432940661996e-21
+  },
+  "nonlinear_solver_status": "converged",
+  "candidate_accepted": false,
+  "other_physical_gates": {
+    "certified_resolution": true,
+    "decomposition": true,
+    "energy_non_growth": true,
+    "finite": true,
+    "mass_initial": true,
+    "mass_target": true,
+    "topology": true,
+    "weak_work": true,
+    "work_identity": true
+  },
+  "full_constraints": {
+    "finite_full": true,
+    "pressure_gauge": true,
+    "strong_divergence_range": false,
+    "velocity_BC": true,
+    "weak_continuity": true
+  },
+  "interpretation": "The predeclared envelope exceeded by 3.43% is not evidence of algebraic non-equivalence or a broken weak continuity equation. Historical envelope times differ from the new moderate endpoint. No threshold modification, retry, or rate production solve follows."
+}

@@ -1,0 +1,57 @@
+{
+  "provenance": {
+    "implementation": {
+      "docker_image": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+      "execution_base_HEAD": "1cc78a1f4108876a1610570b48138381f29a2484",
+      "full_phase_rate_version": "matched-zero-force-full-CHNS-phase-rate-BE-v1",
+      "multiphase_source_sha256": "031f988c2aeca347c554f5124eb84ed5c748090670ac0468f458ba9bfc20ae35",
+      "original_weak_form_sha256": "64f8eb34894bd8d8209d0183007b124cc19813c1d7ac980597d509b354429c0b",
+      "runner_sha256": "9d517d735923dcd91431d73de9b260ae9e6e251512f760d25f7896ad76c2bc9d"
+    },
+    "source_archive_sha256": "3698902dca348e7d36174308b2c7da7d26da6b78e7ff52fd861adae3886f9b78",
+    "policy_sha256": "7de1ccc5132b6eaab63d0c7f31a24bfb556fb36b02eee57c1bb7441b65436e25",
+    "stack": {
+      "DOLFINx": "0.10.0",
+      "MUMPS": "5.8.1",
+      "PETSc": [
+        3,
+        24,
+        0
+      ],
+      "UFL": "2025.2.0",
+      "precision_bits": 64,
+      "rank_count": 1,
+      "scalar_precision": "float64",
+      "scipy": "1.16.2"
+    },
+    "input_hashes": {
+      "equilibrium_fingerprint": "df3a6176bc442190c15ca8e4b6faa2c885dbbe89d5126196148d92b1552809fc",
+      "initial_phi_sha256": "6e59cd0bd3ee5c421af9694508d439e8e05a565de329ed38a14af39444d4e681",
+      "optimized_plan_sha256": "5d291468a3520da5267a8d76b8015d0709f5e28b44fbaa5f8a7c6b264664e2b8",
+      "perturbation_coefficient_sha256": "831db9041c11ce04ab8974f34e841b62b56bd77474290e3c978c9b5f5af724d0"
+    },
+    "physical_config_fingerprint": "d42900144d7d75c67e4455351ac98a0c41083623ed06de5c2987c1d35a485650",
+    "postprocessing": "Read-only archived candidate audit after mandatory scientific STOP; no Newton/initialize/advance"
+  },
+  "operation": "Assemble div(u)^2 and P1 continuity on archived PETSc iterate; compare archived accepted phi SHA",
+  "mesh_fingerprint": "93dbd2cf76148bcd50afef9e353c55f92c15789ad0e303dbb97435a4672b9b15",
+  "independent_strong_divergence_L2": 0.000003814612027895975,
+  "independent_weak_continuity_Riesz": 1.1783432940661996e-21,
+  "accepted_initial_phi_sha256": "6e59cd0bd3ee5c421af9694508d439e8e05a565de329ed38a14af39444d4e681",
+  "saved_Function_equals_PETSc": true,
+  "accepted_state_differs_from_candidate": true,
+  "block_lengths": [
+    74306,
+    9361,
+    37153,
+    37153
+  ],
+  "accepted_initial_u_max": 0,
+  "accepted_initial_pi_max": 0,
+  "candidate_field_sha256": {
+    "u": "99e640896f767fc018dc9ac904e37bc59d14a098522a8bdd4e76f2ed4aa131e5",
+    "pi": "052782d2839ed84fadcc0919d7991ec1328ccc75c3319f460599eae504a7bd38",
+    "phi": "434818bfc7bbdd2619d2d636b86546465f53f44853743003a7310d449e533ebb",
+    "mu": "b11b7881e819844ac59d2db3e3736f733d06efdbc0b2f19a3bd8318fb83acaf3"
+  }
+}

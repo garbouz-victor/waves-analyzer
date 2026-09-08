@@ -1,0 +1,148 @@
+{
+  "BC_velocity_count": 43,
+  "Jacobian_action_relative": 4.2729814365672955e-17,
+  "arbitrary_nonzero_fields": true,
+  "finite_difference": [
+    {
+      "h": 0.01,
+      "relative_error": 3.9321600354716027e-13
+    },
+    {
+      "h": 0.005,
+      "relative_error": 9.830769064527317e-14
+    },
+    {
+      "h": 0.0025,
+      "relative_error": 2.461479086787062e-14
+    },
+    {
+      "h": 0.00125,
+      "relative_error": 6.645935551186878e-15
+    },
+    {
+      "h": 1e-05,
+      "relative_error": 2.83560417973595e-13
+    }
+  ],
+  "gates": {
+    "BC_identical_objects": true,
+    "FD_final": true,
+    "FD_second_order_until_roundoff": true,
+    "Jacobian_column_transformation": true,
+    "no_rate_BC": true,
+    "one_pressure_gauge": true,
+    "term_residuals": true
+  },
+  "implementation": {
+    "docker_image": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+    "execution_base_HEAD": "1cc78a1f4108876a1610570b48138381f29a2484",
+    "full_phase_rate_version": "matched-zero-force-full-CHNS-phase-rate-BE-v1",
+    "multiphase_source_sha256": "031f988c2aeca347c554f5124eb84ed5c748090670ac0468f458ba9bfc20ae35",
+    "original_weak_form_sha256": "64f8eb34894bd8d8209d0183007b124cc19813c1d7ac980597d509b354429c0b",
+    "runner_sha256": "9d517d735923dcd91431d73de9b260ae9e6e251512f760d25f7896ad76c2bc9d"
+  },
+  "passed": true,
+  "physical_config": {
+    "a_x": 0.0,
+    "dt": 0.002,
+    "epsilon": 1.0,
+    "free_slip_walls": [
+      "top"
+    ],
+    "g": 0.0,
+    "length_scale_m": 1.0,
+    "max_unknowns": 100000,
+    "mesh_diagonal": "right",
+    "mobility": 0.1,
+    "mu_gas": 1.0,
+    "mu_liquid": 1.0,
+    "name": "flat_matched_density_demonstration",
+    "no_slip_walls": [
+      "bottom"
+    ],
+    "nx": 4,
+    "nz": 4,
+    "phase_degree": 2,
+    "quadrature_degree": 12,
+    "refinement_band_m": 0.12,
+    "refinement_boxes": [],
+    "refinement_circle_radius": 0.25,
+    "refinement_circle_x": 0.0,
+    "refinement_circle_z": 0.0,
+    "refinement_levels": 0,
+    "rho_gas": 1.0,
+    "rho_liquid": 1.0,
+    "sigma": 0.1,
+    "slip_length_m": 0.01,
+    "snes_atol": 1e-10,
+    "snes_max_it": 30,
+    "snes_rtol": 1e-09,
+    "startup_dt": null,
+    "startup_stages": [],
+    "startup_t_end": 0.0,
+    "t_end": 0.02,
+    "theta_equilibrium_deg": 60.0,
+    "time_scheme": "bdf2",
+    "velocity_scale_m_per_s": 0.1,
+    "wetting_walls": [
+      "left",
+      "right",
+      "bottom"
+    ],
+    "x_grading": 0.0,
+    "x_max": 0.5,
+    "x_min": -0.5,
+    "z_grading": 0.0,
+    "z_max": 0.5,
+    "z_min": -0.5
+  },
+  "policy_sha256": "7de1ccc5132b6eaab63d0c7f31a24bfb556fb36b02eee57c1bb7441b65436e25",
+  "pressure_gauge_dof": 167,
+  "scope": "tiny arbitrary-field preflight, not production inputs",
+  "stack": {
+    "DOLFINx": "0.10.0",
+    "MUMPS": "5.8.1",
+    "PETSc": [
+      3,
+      24,
+      0
+    ],
+    "UFL": "2025.2.0",
+    "precision_bits": 64,
+    "rank_count": 1,
+    "scalar_precision": "float64",
+    "scipy": "1.16.2"
+  },
+  "terms_relative": {
+    "chemical": 1.2777957859433729e-15,
+    "chemical_wall": 1.8841558620952612e-17,
+    "continuity": 0.0,
+    "momentum": 4.5891081240737357e-17,
+    "navier": 0.0,
+    "phase": 1.4284101706339971e-16
+  },
+  "tiny_input_provenance": {
+    "config_fingerprint": "bdba661e4505f03bc7e5e10a47101756cd860c8ff0de5b92917cfbcb4f6d4dbc",
+    "docker_image_digest": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+    "dt_schedule": {
+      "blocks": [
+        {
+          "count": 10,
+          "dt": 0.002,
+          "end": 0.02,
+          "offset": 0,
+          "phase": "main",
+          "scheme": "bdf2",
+          "start": 0.0
+        }
+      ],
+      "switch_rule": "first main interval BE, then fixed-spacing BDF2; no micro-history reuse",
+      "total_steps": 10
+    },
+    "git_commit": "1cc78a1f4108876a1610570b48138381f29a2484",
+    "mesh_fingerprint": "d8de9cdbc1611ef4b24d4b3a2225ab108880395ccc6e94eacf1a59a812293130",
+    "mesh_fingerprint_scope": "rank-ordered geometry/connectivity; rank/partition sensitive",
+    "multiphase_source_sha256": "031f988c2aeca347c554f5124eb84ed5c748090670ac0468f458ba9bfc20ae35",
+    "rank_count": 1
+  }
+}

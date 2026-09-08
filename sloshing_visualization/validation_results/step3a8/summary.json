@@ -1,0 +1,110 @@
+{
+  "execution_status": "failed",
+  "algebraic_bridge": "passed_on_tiny_mesh",
+  "moderate_accuracy": "not_qualified",
+  "moderate_primary": {
+    "formulation": "absolute",
+    "dt": 0.000001,
+    "controls": {
+      "atol": 1e-12,
+      "factor_solver_type": "mumps",
+      "ksp_type": "preonly",
+      "line_search_type": "bt",
+      "max_it": 30,
+      "pc_type": "lu",
+      "rtol": 1e-12,
+      "snes_type": "newtonls",
+      "stol": 0
+    },
+    "SNES_reason": 2,
+    "iterations": 2,
+    "initial_residual": 0.7843890864759492,
+    "final_residual": 1.0817199474444568e-13,
+    "accepted": false,
+    "physical_checks": "failed",
+    "stop_gate": {
+      "name": "strong_divergence_range",
+      "measured": 0.000003814612027895975,
+      "limit": 0.0000036880704671415807,
+      "overshoot_relative": 0.03431104743843716,
+      "origin": "STEP3A8 predeclared empirical same-mesh STEP3A2 envelope, NOT a universal CHNS divergence tolerance",
+      "weak_continuity_Riesz": 1.1783432940661996e-21
+    }
+  },
+  "target_tiny_step": "not_run",
+  "pilot": "not_run",
+  "production_restart": "not_run",
+  "full_L0": "not_run",
+  "coupling_transfer": "not_qualified",
+  "scientific_attempts": 1,
+  "accepted_scientific_intervals": 0,
+  "rejected_moderate_candidates": 1,
+  "production_scientific_wall_s": 19.65485542299575,
+  "scientific_verdict": "TINY-MESH FULL CHNS PHASE-RATE ALGEBRAIC BRIDGE PASS; PRODUCTION MODERATE COMPARISON STOPPED BY FROZEN STRONG-DIVERGENCE NON-REGRESSION GATE; COUPLING TRANSFER NOT QUALIFIED.",
+  "overall_model": "MODEL NOT YET VALIDATED",
+  "isolated_temporal_uncertainty": {
+    "max_phi_02_L2": 3.691188008762449e-8,
+    "integrated_D_02": 7.033312454099817e-11,
+    "final_F_02": 6.0652038946784614e-12
+  },
+  "tests": {
+    "host": {
+      "passed": 289,
+      "skipped": 38,
+      "deselected": 2
+    },
+    "pinned_Docker": {
+      "passed": 212,
+      "skipped": 0
+    },
+    "remote_for_new_source": "NOT RUN; no push"
+  },
+  "not_run": [
+    "production P1 rate",
+    "production P2 absolute/rate",
+    "exact target tiny full CHNS rate",
+    "optional absolute tiny (not elected)",
+    "full 50-step prefix",
+    "production checkpoint/restart fork",
+    "production first dt-block boundary",
+    "continuous full L0",
+    "full coupling/dominance/combined-uncertainty measurements",
+    "production coupling figures",
+    "full CHNS L1/L2 (not authorized)",
+    "moving-contact/film/tank (not authorized)"
+  ],
+  "provenance": {
+    "implementation": {
+      "docker_image": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+      "execution_base_HEAD": "1cc78a1f4108876a1610570b48138381f29a2484",
+      "full_phase_rate_version": "matched-zero-force-full-CHNS-phase-rate-BE-v1",
+      "multiphase_source_sha256": "031f988c2aeca347c554f5124eb84ed5c748090670ac0468f458ba9bfc20ae35",
+      "original_weak_form_sha256": "64f8eb34894bd8d8209d0183007b124cc19813c1d7ac980597d509b354429c0b",
+      "runner_sha256": "9d517d735923dcd91431d73de9b260ae9e6e251512f760d25f7896ad76c2bc9d"
+    },
+    "source_archive_sha256": "3698902dca348e7d36174308b2c7da7d26da6b78e7ff52fd861adae3886f9b78",
+    "policy_sha256": "7de1ccc5132b6eaab63d0c7f31a24bfb556fb36b02eee57c1bb7441b65436e25",
+    "stack": {
+      "DOLFINx": "0.10.0",
+      "MUMPS": "5.8.1",
+      "PETSc": [
+        3,
+        24,
+        0
+      ],
+      "UFL": "2025.2.0",
+      "precision_bits": 64,
+      "rank_count": 1,
+      "scalar_precision": "float64",
+      "scipy": "1.16.2"
+    },
+    "input_hashes": {
+      "equilibrium_fingerprint": "df3a6176bc442190c15ca8e4b6faa2c885dbbe89d5126196148d92b1552809fc",
+      "initial_phi_sha256": "6e59cd0bd3ee5c421af9694508d439e8e05a565de329ed38a14af39444d4e681",
+      "optimized_plan_sha256": "5d291468a3520da5267a8d76b8015d0709f5e28b44fbaa5f8a7c6b264664e2b8",
+      "perturbation_coefficient_sha256": "831db9041c11ce04ab8974f34e841b62b56bd77474290e3c978c9b5f5af724d0"
+    },
+    "physical_config_fingerprint": "d42900144d7d75c67e4455351ac98a0c41083623ed06de5c2987c1d35a485650",
+    "postprocessing": "read-only analysis after mandatory stop; frozen implementation unchanged"
+  }
+}

@@ -1,0 +1,11 @@
+metric,value
+tiny_algebraic_bridge,passed
+moderate_accuracy,not_qualified
+primary_nonlinear_solver,converged
+primary_physical_gate,strong_divergence_range_failed
+target_tiny,not_run
+pilot,not_run
+full_L0,not_run
+coupling_transfer,not_qualified
+production_wall_s,19.65485542299575
+MODEL,NOT YET VALIDATED

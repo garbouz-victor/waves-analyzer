@@ -1,0 +1,85 @@
+{
+  "PETSc": {
+    "available": true,
+    "inclusive_nested_events": {
+      "KSPSolve": {
+        "count": 3,
+        "flops": 160648376.0,
+        "messageLength": 0.0,
+        "numMessages": 0.0,
+        "numReductions": 0.0,
+        "time": 0.24778961699985302
+      },
+      "MatLUFactorNum": {
+        "count": 3,
+        "flops": 104669977.0,
+        "messageLength": 0.0,
+        "numMessages": 0.0,
+        "numReductions": 0.0,
+        "time": 3.3443319659995723
+      },
+      "MatLUFactorSym": {
+        "count": 2,
+        "flops": 0.0,
+        "messageLength": 0.0,
+        "numMessages": 0.0,
+        "numReductions": 0.0,
+        "time": 1.1558827859998928
+      },
+      "MatSolve": {
+        "count": 3,
+        "flops": 160648376.0,
+        "messageLength": 0.0,
+        "numMessages": 0.0,
+        "numReductions": 0.0,
+        "time": 0.24771261900013997
+      },
+      "PCSetUp": {
+        "count": 3,
+        "flops": 104669977.0,
+        "messageLength": 0.0,
+        "numMessages": 0.0,
+        "numReductions": 0.0,
+        "time": 4.500385793000078
+      },
+      "SNESFunctionEval": {
+        "count": 3,
+        "flops": 0.0,
+        "messageLength": 0.0,
+        "numMessages": 0.0,
+        "numReductions": 0.0,
+        "time": 0.4831098699996801
+      },
+      "SNESJacobianEval": {
+        "count": 2,
+        "flops": 18740855.0,
+        "messageLength": 0.0,
+        "numMessages": 0.0,
+        "numReductions": 0.0,
+        "time": 2.4434192330004407
+      },
+      "SNESSolve": {
+        "count": 1,
+        "flops": 313023952.0,
+        "messageLength": 0.0,
+        "numMessages": 0.0,
+        "numReductions": 0.0,
+        "time": 7.386613492999913
+      }
+    }
+  },
+  "error": "One-step physical failure: {'initial': {'E_kin': 0.0, 'E_gravity': 0.0, 'E_interface': 0.05995161915611929, 'E_wall': 0.0056911635284269835, 'phase_mass': -0.6060961027499487, 'liquid_volume': 0.0569519486252139, 'viscous_dissipation': 0.0, 'CH_dissipation': 0.11400313905309394, 'slip_dissipation': 0.0, 'time': 0.0, 'E_total': 0.06564278268454628, 'strong_divergence_L2': np.float64(0.0), 'relative_strong_divergence': np.float64(0.0), 'wall_normal_velocity_L2': np.float64(0.0), 'omega_L2': np.float64(0.0), 'speed_max_dof_sample': 0.0, 'phi_min_dof': -0.9790806990532334, 'phi_max_dof': 1.0156953397485375, 'wall_relaxation_dissipation': 0.0, 'mass_error_abs': 0.0, 'mu_mean_Pa': 0.1799201039372238, 'mu_std_Pa': np.float64(0.001643190259740797), 'relative_mu_variation': np.float64(0.009132888564327002), 'mass_error_relative_to_domain': 0.0, 'liquid_volume_error_relative': 0.0, 'interval_viscous_dissipation': 0.0, 'interval_CH_dissipation': 0.0, 'interval_slip_dissipation': 0.0, 'delta_E_interval': 0.0, 'local_budget_defect': 0.0, 'cumulative_viscous_dissipation': 0.0, 'cumulative_CH_dissipation': 0.0, 'cumulative_slip_dissipation': 0.0, 'energy_budget_defect': 0.0, 'energy_budget_relative': 0.0, 'E_positive_scale': 0.06564278268454628, 'energy_budget_relative_to_initial_scale': 0.0, 'energy_change_relative_applicable': 0.0, 'energy_budget_relative_to_change': 0.0, 'energy_budget_symmetric_diagnostic': 0.0, 'energy_budget_symmetric_diagnostic_only': 1.0, 'wall_crossings': 2, 'cells_across_transition_certified_min': 8.328131075834218, 'F_CH': 0.06564278268454628, 'phi_L2': 0.8067374411889224, 'mu_L2': 0.15267363750812687, 'velocity_L2': 0.0, 'pressure_L2': 0.0, 'pressure_min_dof': 0.0, 'pressure_max_dof': 0.0, 'pressure_gauge_value': 0.0, 'velocity_BC_max': 0.0, 'velocity_BC_scaled': 0.0, 'pressure_gauge_scaled': 0.0, 'weak_continuity_algebraic': 0.0, 'weak_continuity_Riesz': 0.0, 'full_physical_checks': {'velocity_BC': True, 'pressure_gauge': True, 'weak_continuity': True, 'strong_divergence_range': True, 'finite_full': True}, 'phase_coupling_audit': {'advection_Riesz': 0.0, 'diffusion_Riesz': 283.7841311245013, 'advective_over_diffusive': 0.0, 'diffusion_significant': True, 'diagnostic_only': True}}, 'physical': {'E_kin': 2.860256305129656e-17, 'E_gravity': 0.0, 'E_interface': 0.05995161414033733, 'E_wall': 0.005691163528426991, 'phase_mass': -0.6060961027499453, 'liquid_volume': 0.05695194862521434, 'viscous_dissipation': 3.100629956378667e-11, 'CH_dissipation': 0.0036696717867036074, 'slip_dissipation': 2.440535248219972e-23, 'time': 1e-06, 'E_total': 0.06564277766876435, 'strong_divergence_L2': np.float64(3.814612027895975e-06), 'relative_strong_divergence': np.float64(0.9403747803293864), 'wall_normal_velocity_L2': np.float64(0.0), 'omega_L2': np.float64(1.3797716177197895e-06), 'speed_max_dof_sample': 1.752212550613724e-07, 'phi_min_dof': -0.9790808427897226, 'phi_max_dof': 1.0156953397485375, 'wall_relaxation_dissipation': 0.0, 'mass_error_abs': 3.4416913763379853e-15, 'mu_mean_Pa': 0.17992011055972407, 'mu_std_Pa': np.float64(0.0013222889227997386), 'relative_mu_variation': np.float64(0.0073493114176405964), 'mass_error_relative_to_domain': 4.780126911580535e-15, 'liquid_volume_error_relative': 7.797612207661221e-15, 'interval_viscous_dissipation': 1.5503149781893332e-17, 'interval_CH_dissipation': 5.883640541989877e-08, 'interval_slip_dissipation': 1.2202676241099858e-29, 'delta_E_interval': -5.01578192868557e-09, 'local_budget_defect': 5.382062350671635e-08, 'cumulative_viscous_dissipation': 1.5503149781893332e-17, 'cumulative_CH_dissipation': 5.883640541989877e-08, 'cumulative_slip_dissipation': 1.2202676241099858e-29, 'energy_budget_defect': 5.382062350671635e-08, 'energy_budget_relative': 8.199016145515549e-07, 'E_positive_scale': 0.06564277766876435, 'energy_budget_relative_to_initial_scale': 8.199016145515549e-07, 'energy_change_relative_applicable': 0.0, 'energy_budget_relative_to_change': 0.0, 'energy_budget_symmetric_diagnostic': 0.8415759604954414, 'energy_budget_symmetric_diagnostic_only': 1.0, 'wall_crossings': 2, 'cells_across_transition_certified_min': 8.328131075834218, 'F_CH': 0.06564277766876432, 'phi_L2': 0.8067374409515263, 'mu_L2': 0.15267139920381542, 'velocity_L2': 7.563407043299337e-09, 'pressure_L2': 0.001091516415835943, 'pressure_min_dof': -0.010012310635639133, 'pressure_max_dof': 0.009979210574719868, 'pressure_gauge_value': 0.0, 'velocity_BC_max': 0.0, 'velocity_BC_scaled': 0.0, 'pressure_gauge_scaled': 0.0, 'weak_continuity_algebraic': 4.594698458802348e-24, 'weak_continuity_Riesz': 1.1783432940661996e-21, 'full_physical_checks': {'velocity_BC': True, 'pressure_gauge': True, 'weak_continuity': True, 'strong_divergence_range': False, 'finite_full': True}, 'phase_coupling_audit': {'advection_Riesz': 3.1828540829583806e-06, 'diffusion_Riesz': 6.065134674195071, 'advective_over_diffusive': 5.247787978229503e-07, 'diffusion_significant': True, 'diagnostic_only': True}}, 'resolution': {'interface_present': True, 'h_normal_max_m': 0.01250000000000019, 'epsilon_over_h_normal': 1.9999999999999698, 'cells_across_transition_min': 8.328131075834218, 'qualified_resolution': True, 'cells_across_transition_p05': 8.364786275562437, 'cells_across_transition_p50': 11.512338770512198, 'cells_across_transition_p95': 14.850696399871714, 'active_cell_count': 1766, 'active_cell_count_exact': 1766, 'active_cell_count_conservative_fallback': 0, 'diameter_fallback_active_cells': 0, 'diameter_fallback_local_cells_by_rank': [[]], 'worst_cell': {'h_normal_m': 0.01250000000000019, 'h_cert': 0.01250000000000019, 'h_directional': 0.012499996273995284, 'rank': 0, 'local_cell': 9739, 'centroid': [0.002083333333333326, 0.19374999999999998], 'bounds': [[0.0, 0.18749999999999997], [0.006249999999999978, 0.19999999999999998]], 'vertices': [[0.0, 0.18749999999999997], [0.0, 0.19999999999999998], [0.006249999999999978, 0.19374999999999998]], 'phi_min_exact': -0.916826831092124, 'phi_max_exact': -0.8582404145056941, 'phi_min_bound': -0.916826831092124, 'phi_max_bound': -0.8582404145056941, 'range_status': 'exact', 'range_fallback_reason': '', 'normal_width_fallback_reason': '', 'min_witness': {'candidate_type': 'vertex', 'reference_point': [1.0, 0.0], 'physical_point': [0.0, 0.19999999999999998], 'value': -0.916826831092095}, 'max_witness': {'candidate_type': 'vertex', 'reference_point': [0.0, 0.0], 'physical_point': [0.0, 0.18749999999999997], 'value': -0.8582404145057232}}, 'worst_certified_cell': {'h_normal_m': 0.01250000000000019, 'h_cert': 0.01250000000000019, 'h_directional': 0.012499996273995284, 'rank': 0, 'local_cell': 9739, 'centroid': [0.002083333333333326, 0.19374999999999998], 'bounds': [[0.0, 0.18749999999999997], [0.006249999999999978, 0.19999999999999998]], 'vertices': [[0.0, 0.18749999999999997], [0.0, 0.19999999999999998], [0.006249999999999978, 0.19374999999999998]], 'phi_min_exact': -0.916826831092124, 'phi_max_exact': -0.8582404145056941, 'phi_min_bound': -0.916826831092124, 'phi_max_bound': -0.8582404145056941, 'range_status': 'exact', 'range_fallback_reason': '', 'normal_width_fallback_reason': '', 'min_witness': {'candidate_type': 'vertex', 'reference_point': [1.0, 0.0], 'physical_point': [0.0, 0.19999999999999998], 'value': -0.916826831092095}, 'max_witness': {'candidate_type': 'vertex', 'reference_point': [0.0, 0.0], 'physical_point': [0.0, 0.18749999999999997], 'value': -0.8582404145057232}}, 'worst_exact_active_cell': {'h_normal_m': 0.01250000000000019, 'h_cert': 0.01250000000000019, 'h_directional': 0.012499996273995284, 'rank': 0, 'local_cell': 9739, 'centroid': [0.002083333333333326, 0.19374999999999998], 'bounds': [[0.0, 0.18749999999999997], [0.006249999999999978, 0.19999999999999998]], 'vertices': [[0.0, 0.18749999999999997], [0.0, 0.19999999999999998], [0.006249999999999978, 0.19374999999999998]], 'phi_min_exact': -0.916826831092124, 'phi_max_exact': -0.8582404145056941, 'phi_min_bound': -0.916826831092124, 'phi_max_bound': -0.8582404145056941, 'range_status': 'exact', 'range_fallback_reason': '', 'normal_width_fallback_reason': '', 'min_witness': {'candidate_type': 'vertex', 'reference_point': [1.0, 0.0], 'physical_point': [0.0, 0.19999999999999998], 'value': -0.916826831092095}, 'max_witness': {'candidate_type': 'vertex', 'reference_point': [0.0, 0.0], 'physical_point': [0.0, 0.18749999999999997], 'value': -0.8582404145057232}}, 'time': 1e-06, 'algorithm_version': 'triangle-p2-extrema-gradient-cone-v2', 'activation': 'CG1 exact vertices; P2 vertices + edge extrema + interior stationary point; labelled Bernstein fallback', 'h_normal_method': 'maximum over complete affine-gradient cone; diameter for origin/near-origin hull', 'hard_gate_metric': 'cells_across_transition_certified_min', 'cells_across_transition_certified_min': 8.328131075834218, 'cells_across_transition_directional_min': 8.328131105254938, 'cells_across_transition_certified_p05': 8.364786275562437, 'cells_across_transition_certified_p50': 11.512338770512198, 'cells_across_transition_certified_p95': 14.850696399871714, 'cells_across_transition_directional_p05': 8.36478627556333, 'cells_across_transition_directional_p50': 11.512338770523419, 'cells_across_transition_directional_p95': 14.850696399883507}, 'work': {'B_BE': 1.3461097811392813e-09, 'energy_work': -3.6696718178255887e-09, 'Delta_E': -5.015781598995684e-09, 'time': 1e-06, 'step': 1, 'dt': 1e-06, 'D_old': 0.11400313905309394, 'D_new': 0.003669671817709907, 'trapezoid_integral': 5.883640543540192e-08, 'BE_endpoint_integral': 3.6696718177099067e-09, 'weak_work_defect': -1.1568203584615347e-19, 'continuum_local_defect': 5.3820623836406236e-08, 'trapezoid_gap': 5.516673361769201e-08, 'decomposition_roundoff': -3.0810823456375175e-20, 'weak_work_identity_roundoff': -3.0814338973978525e-20, 'diagnostic_only': True, 'remainder_label': 'signed discrete BE work remainder; NOT physical heat'}, 'physical_gates': {'finite': True, 'mass_initial': True, 'mass_target': True, 'certified_resolution': True, 'topology': True, 'energy_non_growth': True, 'weak_work': True, 'decomposition': True, 'work_identity': True}, 'full_physical_checks': {'velocity_BC': True, 'pressure_gauge': True, 'weak_continuity': True, 'strong_divergence_range': False, 'finite_full': True}, 'timing': {'diagnostics_s': 0.1658894659994985, 'resolution_s': 0.08746242199413246, 'full_constraint_audit_s': 0.08488900800148258, 'BE_work_s': 0.10541882299730787}}",
+  "full_path": false,
+  "implementation": {
+    "docker_image": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+    "execution_base_HEAD": "1cc78a1f4108876a1610570b48138381f29a2484",
+    "full_phase_rate_version": "matched-zero-force-full-CHNS-phase-rate-BE-v1",
+    "multiphase_source_sha256": "031f988c2aeca347c554f5124eb84ed5c748090670ac0468f458ba9bfc20ae35",
+    "original_weak_form_sha256": "64f8eb34894bd8d8209d0183007b124cc19813c1d7ac980597d509b354429c0b",
+    "runner_sha256": "9d517d735923dcd91431d73de9b260ae9e6e251512f760d25f7896ad76c2bc9d"
+  },
+  "initialization_JIT_s": 11.520139167994785,
+  "preliminary": true,
+  "status": "failed",
+  "wall_s": 19.65485542299575
+}
