@@ -1,0 +1,152 @@
+{
+  "device_id": 2053,
+  "device_major_minor": [
+    8,
+    5
+  ],
+  "docker_context": "desktop-linux",
+  "docker_storage": {
+    "ContainersRunning": 5,
+    "DockerRootDir": "/var/lib/docker",
+    "Driver": "overlay2",
+    "DriverStatus": [
+      [
+        "Backing Filesystem",
+        "extfs"
+      ],
+      [
+        "Supports d_type",
+        "true"
+      ],
+      [
+        "Using metacopy",
+        "false"
+      ],
+      [
+        "Native Overlay Diff",
+        "true"
+      ],
+      [
+        "userxattr",
+        "false"
+      ]
+    ],
+    "KernelVersion": "6.4.16-linuxkit",
+    "MemTotal": 8058716160,
+    "NCPU": 8,
+    "OperatingSystem": "Docker Desktop",
+    "ServerVersion": "24.0.6"
+  },
+  "docker_version": {
+    "Client": {
+      "ApiVersion": "1.43",
+      "Arch": "amd64",
+      "BuildTime": "Fri Apr 18 09:52:18 2025",
+      "CloudIntegration": "v1.0.35+desktop.5",
+      "Context": "desktop-linux",
+      "DefaultAPIVersion": "1.49",
+      "GitCommit": "4eba377",
+      "GoVersion": "go1.23.8",
+      "Os": "linux",
+      "Platform": {
+        "Name": "Docker Engine - Community"
+      },
+      "Version": "28.1.1"
+    },
+    "Server": {
+      "ApiVersion": "1.43",
+      "Arch": "amd64",
+      "BuildTime": "2023-09-04T12:32:16.000000000+00:00",
+      "Components": [
+        {
+          "Details": {
+            "ApiVersion": "1.43",
+            "Arch": "amd64",
+            "BuildTime": "Mon Sep  4 12:32:16 2023",
+            "Experimental": "false",
+            "GitCommit": "1a79695",
+            "GoVersion": "go1.20.7",
+            "KernelVersion": "6.4.16-linuxkit",
+            "MinAPIVersion": "1.12",
+            "Os": "linux"
+          },
+          "Name": "Engine",
+          "Version": "24.0.6"
+        },
+        {
+          "Details": {
+            "GitCommit": "8165feabfdfe38c65b599c4993d227328c231fca"
+          },
+          "Name": "containerd",
+          "Version": "1.6.22"
+        },
+        {
+          "Details": {
+            "GitCommit": "v1.1.8-0-g82f18fe"
+          },
+          "Name": "runc",
+          "Version": "1.1.8"
+        },
+        {
+          "Details": {
+            "GitCommit": "de40ad0"
+          },
+          "Name": "docker-init",
+          "Version": "0.19.0"
+        }
+      ],
+      "GitCommit": "1a79695",
+      "GoVersion": "go1.20.7",
+      "KernelVersion": "6.4.16-linuxkit",
+      "MinAPIVersion": "1.12",
+      "Os": "linux",
+      "Platform": {
+        "Name": "Docker Desktop 4.25.2 (129061)"
+      },
+      "Version": "24.0.6"
+    }
+  },
+  "findmnt": {
+    "argv": [
+      "findmnt",
+      "-J",
+      "-T",
+      "/home/victor/Projects/waves-analyzer/sloshing_visualization"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "{\n   \"filesystems\": [\n      {\n         \"target\": \"/\",\n         \"source\": \"/dev/sda5\",\n         \"fstype\": \"ext4\",\n         \"options\": \"rw,relatime,errors=remount-ro\"\n      }\n   ]\n}\n"
+  },
+  "gid": 1000,
+  "image_digest": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+  "mount": {
+    "device": "8:5",
+    "filesystem": "ext4",
+    "mountpoint": "/",
+    "options": "rw,relatime",
+    "source": "/dev/sda5",
+    "super_options": "rw,errors=remount-ro"
+  },
+  "mountinfo": "25 30 0:23 / /sys rw,nosuid,nodev,noexec,relatime shared:7 - sysfs sysfs rw\n26 30 0:24 / /proc rw,nosuid,nodev,noexec,relatime shared:12 - proc proc rw\n27 30 0:5 / /dev rw,nosuid,relatime shared:2 - devtmpfs udev rw,size=16190684k,nr_inodes=4047671,mode=755,inode64\n28 27 0:25 / /dev/pts rw,nosuid,noexec,relatime shared:3 - devpts devpts rw,gid=5,mode=620,ptmxmode=000\n29 30 0:26 / /run rw,nosuid,nodev,noexec,relatime shared:5 - tmpfs tmpfs rw,size=3247236k,mode=755,inode64\n30 1 8:5 / / rw,relatime shared:1 - ext4 /dev/sda5 rw,errors=remount-ro\n31 25 0:6 / /sys/kernel/security rw,nosuid,nodev,noexec,relatime shared:8 - securityfs securityfs rw\n32 27 0:27 / /dev/shm rw,nosuid,nodev shared:4 - tmpfs tmpfs rw,inode64\n33 29 0:28 / /run/lock rw,nosuid,nodev,noexec,relatime shared:6 - tmpfs tmpfs rw,size=5120k,inode64\n34 25 0:29 / /sys/fs/cgroup rw,nosuid,nodev,noexec,relatime shared:9 - cgroup2 cgroup2 rw,nsdelegate,memory_recursiveprot\n35 25 0:30 / /sys/fs/pstore rw,nosuid,nodev,noexec,relatime shared:10 - pstore pstore rw\n36 25 0:31 / /sys/fs/bpf rw,nosuid,nodev,noexec,relatime shared:11 - bpf bpf rw,mode=700\n37 26 0:32 / /proc/sys/fs/binfmt_misc rw,relatime shared:13 - autofs systemd-1 rw,fd=29,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=1443\n38 25 0:7 / /sys/kernel/debug rw,nosuid,nodev,noexec,relatime shared:14 - debugfs debugfs rw\n39 27 0:20 / /dev/mqueue rw,nosuid,nodev,noexec,relatime shared:15 - mqueue mqueue rw\n40 25 0:12 / /sys/kernel/tracing rw,nosuid,nodev,noexec,relatime shared:16 - tracefs tracefs rw\n41 27 0:33 / /dev/hugepages rw,relatime shared:17 - hugetlbfs hugetlbfs rw,pagesize=2M\n42 25 0:34 / /sys/fs/fuse/connections rw,nosuid,nodev,noexec,relatime shared:18 - fusectl fusectl rw\n43 25 0:21 / /sys/kernel/config rw,nosuid,nodev,noexec,relatime shared:19 - configfs configfs rw\n65 29 0:35 / /run/credentials/systemd-sysusers.service ro,nosuid,nodev,noexec,relatime shared:20 - ramfs ramfs rw,mode=700\n44 29 0:36 / /run/qemu rw,nosuid,nodev,relatime shared:21 - tmpfs tmpfs rw,mode=755,inode64\n45 30 7:0 / /snap/bare/5 ro,nodev,relatime shared:22 - squashfs /dev/loop0 ro,errors=continue,threads=single\n48 30 7:3 / /snap/core18/2999 ro,nodev,relatime shared:25 - squashfs /dev/loop3 ro,errors=continue,threads=single\n49 30 7:4 / /snap/core20/2866 ro,nodev,relatime shared:26 - squashfs /dev/loop4 ro,errors=continue,threads=single\n51 30 7:6 / /snap/core22/2411 ro,nodev,relatime shared:28 - squashfs /dev/loop6 ro,errors=continue,threads=single\n52 30 7:8 / /snap/core24/1643 ro,nodev,relatime shared:29 - squashfs /dev/loop8 ro,errors=continue,threads=single\n56 30 7:10 / /snap/ffmpeg-2204/150 ro,nodev,relatime shared:33 - squashfs /dev/loop10 ro,errors=continue,threads=single\n59 30 7:14 / /snap/gnome-3-28-1804/198 ro,nodev,relatime shared:36 - squashfs /dev/loop14 ro,errors=continue,threads=single\n61 30 7:16 / /snap/gnome-3-34-1804/93 ro,nodev,relatime shared:38 - squashfs /dev/loop16 ro,errors=continue,threads=single\n62 30 7:18 / /snap/gnome-3-38-2004/143 ro,nodev,relatime shared:39 - squashfs /dev/loop18 ro,errors=continue,threads=single\n66 30 7:20 / /snap/gnome-42-2204/263 ro,nodev,relatime shared:42 - squashfs /dev/loop20 ro,errors=continue,threads=single\n70 30 7:24 / /snap/gtk-common-themes/1535 ro,nodev,relatime shared:46 - squashfs /dev/loop24 ro,errors=continue,threads=single\n74 30 7:27 / /snap/skype/392 ro,nodev,relatime shared:50 - squashfs /dev/loop27 ro,errors=continue,threads=single\n75 30 7:29 / /snap/snap-store/1216 ro,nodev,relatime shared:51 - squashfs /dev/loop29 ro,errors=continue,threads=single\n78 30 7:32 / /snap/video-trimmer/37 ro,nodev,relatime shared:54 - squashfs /dev/loop32 ro,errors=continue,threads=single\n194 30 7:34 / /snap/vlc/3777 ro,nodev,relatime shared:56 - squashfs /dev/loop34 ro,errors=continue,threads=single\n197 30 8:2 / /boot/efi rw,relatime shared:67 - vfat /dev/sda2 rw,fmask=0077,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro\n200 37 0:37 / /proc/sys/fs/binfmt_misc rw,nosuid,nodev,noexec,relatime shared:117 - binfmt_misc binfmt_misc rw\n1894 29 0:51 / /run/user/1000 rw,nosuid,nodev,relatime shared:419 - tmpfs tmpfs rw,size=3247232k,nr_inodes=811808,mode=700,uid=1000,gid=1000,inode64\n1929 1894 0:53 / /run/user/1000/gvfs rw,nosuid,nodev,relatime shared:1049 - fuse.gvfsd-fuse gvfsd-fuse rw,user_id=1000,group_id=1000\n2130 1894 0:55 / /run/user/1000/doc rw,nosuid,nodev,relatime shared:1078 - fuse.portal portal rw,user_id=1000,group_id=1000\n2166 30 0:57 / /tmp/.mount_VanyaVnkjtHe ro,nosuid,nodev,relatime shared:1177 - fuse.VanyaVPN.AppImage VanyaVPN.AppImage ro,user_id=1000,group_id=1000\n2733 29 0:26 /snapd/ns /run/snapd/ns rw,nosuid,nodev,noexec,relatime - tmpfs tmpfs rw,size=3247236k,mode=755,inode64\n3431 2733 0:4 mnt:[4026532733] /run/snapd/ns/snap-store.mnt rw - nsfs nsfs rw\n4130 30 0:73 / /root/.cache/doc rw,nosuid,nodev,relatime shared:420 - fuse.portal portal rw,user_id=0,group_id=0\n5040 30 0:74 / /root/.cache/gvfs rw,nosuid,nodev,relatime shared:440 - fuse.gvfsd-fuse gvfsd-fuse rw,user_id=0,group_id=0\n6590 30 7:11 / /snap/gnome-46-2404/164 ro,nodev,relatime shared:471 - squashfs /dev/loop11 ro,errors=continue,threads=single\n57 30 8:1 / /media/victor/B5A1-291F rw,nosuid,nodev,relatime shared:34 - vfat /dev/sda1 rw,uid=1000,gid=1000,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,showexec,utf8,flush,errors=remount-ro\n4161 30 7:12 / /snap/mesa-2404/1839 ro,nodev,relatime shared:943 - squashfs /dev/loop12 ro,errors=continue,threads=single\n4206 2733 0:4 mnt:[4026532692] /run/snapd/ns/mesa-2404.mnt rw - nsfs nsfs rw\n607 30 0:52 / /tmp/.mount_HiddifApGMen ro,nosuid,nodev,relatime shared:145 - fuse.Hiddify-Linux-x64-AppImage.AppImage Hiddify-Linux-x64-AppImage.AppImage ro,user_id=0,group_id=0\n272 30 7:5 / /snap/snapd/27710 ro,nodev,relatime shared:43 - squashfs /dev/loop5 ro,errors=continue,threads=single\n6327 30 7:7 / /snap/core22/2437 ro,nodev,relatime shared:579 - squashfs /dev/loop7 ro,errors=continue,threads=single\n916 30 8:18 / /media/victor/A858D24D58D21A401 rw,nosuid,nodev,relatime shared:280 - fuseblk /dev/sdb2 rw,user_id=0,group_id=0,default_permissions,allow_other,blksize=4096\n150 30 8:19 / /home/victor/work rw,relatime shared:35 - ext4 /dev/sdb3 rw\n151 30 7:9 / /snap/firefox/8803 ro,nodev,relatime shared:41 - squashfs /dev/loop9 ro,errors=continue,threads=single\n152 30 7:1 / /snap/firefox/8819 ro,nodev,relatime shared:128 - squashfs /dev/loop1 ro,errors=continue,threads=single\n4611 30 7:2 / /snap/snapd/27738 ro,nodev,relatime shared:358 - squashfs /dev/loop2 ro,errors=continue,threads=single\n4568 2733 0:4 mnt:[4026532981] /run/snapd/ns/firefox.mnt rw - nsfs nsfs rw\n",
+  "path": "/home/victor/Projects/waves-analyzer/sloshing_visualization",
+  "python": "3.9.12 (main, Apr  5 2022, 06:56:58) \n[GCC 7.5.0]",
+  "stat_f": {
+    "argv": [
+      "stat",
+      "-f",
+      "/home/victor/Projects/waves-analyzer/sloshing_visualization"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "  File: \"/home/victor/Projects/waves-analyzer/sloshing_visualization\"\n    ID: 8925002ad4542e97 Namelen: 255     Type: ext2/ext3\nBlock size: 4096       Fundamental block size: 4096\nBlocks: Total: 57151331   Free: 11391028   Available: 8469697\nInodes: Total: 14589952   Free: 13005401\n"
+  },
+  "strace": "/usr/bin/strace",
+  "uid": 1000,
+  "uname": [
+    "Linux",
+    "victor-ThinkPad-W541",
+    "6.8.0-124-generic",
+    "#124~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue May 26 21:05:19 UTC ",
+    "x86_64"
+  ]
+}

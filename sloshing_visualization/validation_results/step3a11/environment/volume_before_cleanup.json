@@ -1,0 +1,29 @@
+{
+  "inspection": {
+    "CreatedAt": "2026-09-08T15:51:32Z",
+    "Driver": "local",
+    "Labels": {
+      "owner": "step3a11",
+      "purpose": "temporary-io-attribution"
+    },
+    "Mountpoint": "/var/lib/docker/volumes/step3a11-e1980d0b0bc44c9082407dc899bca286/_data",
+    "Name": "step3a11-e1980d0b0bc44c9082407dc899bca286",
+    "Options": null,
+    "Scope": "local"
+  },
+  "remaining_files": [],
+  "results_exported": [
+    "bind_burst.json",
+    "host_burst.json",
+    "container_tmp_burst.json",
+    "docker_volume_burst.json",
+    "bind_paced.json",
+    "control_fsync.json",
+    "control_fdatasync.json",
+    "control_flush_only.json",
+    "atomic_bind.json",
+    "atomic_container_tmp.json",
+    "archive_npz.json",
+    "strace_sequence.json"
+  ]
+}

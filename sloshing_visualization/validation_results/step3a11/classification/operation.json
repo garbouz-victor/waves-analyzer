@@ -1,0 +1,31 @@
+{
+  "benchmark_wilson95": [
+    0.0,
+    0.031019166418703486
+  ],
+  "checks": {
+    "five_stalls": false,
+    "median_fsync_share": false,
+    "non_fsync_p95": true,
+    "other_phase_share": false
+  },
+  "classification": "FSYNC_NOT_YET_ISOLATED",
+  "complete_N": true,
+  "historical_wilson95": [
+    0.13723724101363852,
+    0.28673333966375725
+  ],
+  "median_fsync_share": null,
+  "other_median_shares": {
+    "close": null,
+    "copy_prepare": null,
+    "flush": null,
+    "json_encode": null,
+    "open": null,
+    "record_hash": null,
+    "write": null
+  },
+  "primary_sample": "bind burst, no pooling of paced or controls",
+  "stall_count": 0,
+  "wilson_intervals_overlap": false
+}

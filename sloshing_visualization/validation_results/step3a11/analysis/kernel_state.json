@@ -1,0 +1,587 @@
+{
+  "bind": {
+    "Buffers": {
+      "nonstall": {
+        "max": 204476.0,
+        "min": 204476.0,
+        "n": 120,
+        "p50": 204476.0,
+        "p75": 204476.0,
+        "p90": 204476.0,
+        "p95": 204476.0,
+        "p99": 204476.0
+      },
+      "stall": {
+        "max": null,
+        "min": null,
+        "n": 0,
+        "p50": null,
+        "p75": null,
+        "p90": null,
+        "p95": null,
+        "p99": null
+      },
+      "units": "kB from proc/meminfo; descriptive, not causal"
+    },
+    "Cached": {
+      "nonstall": {
+        "max": 1705624.0,
+        "min": 1705460.0,
+        "n": 120,
+        "p50": 1705472.0,
+        "p75": 1705476.0,
+        "p90": 1705616.0,
+        "p95": 1705620.0,
+        "p99": 1705624.0
+      },
+      "stall": {
+        "max": null,
+        "min": null,
+        "n": 0,
+        "p50": null,
+        "p75": null,
+        "p90": null,
+        "p95": null,
+        "p99": null
+      },
+      "units": "kB from proc/meminfo; descriptive, not causal"
+    },
+    "Dirty": {
+      "nonstall": {
+        "max": 192.0,
+        "min": 184.0,
+        "n": 120,
+        "p50": 192.0,
+        "p75": 192.0,
+        "p90": 192.0,
+        "p95": 192.0,
+        "p99": 192.0
+      },
+      "stall": {
+        "max": null,
+        "min": null,
+        "n": 0,
+        "p50": null,
+        "p75": null,
+        "p90": null,
+        "p95": null,
+        "p99": null
+      },
+      "units": "kB from proc/meminfo; descriptive, not causal"
+    },
+    "Writeback": {
+      "nonstall": {
+        "max": 4.0,
+        "min": 0.0,
+        "n": 120,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p90": 0.0,
+        "p95": 4.0,
+        "p99": 4.0
+      },
+      "stall": {
+        "max": null,
+        "min": null,
+        "n": 0,
+        "p50": null,
+        "p75": null,
+        "p90": null,
+        "p95": null,
+        "p99": null
+      },
+      "units": "kB from proc/meminfo; descriptive, not causal"
+    },
+    "WritebackTmp": {
+      "nonstall": {
+        "max": 0.0,
+        "min": 0.0,
+        "n": 120,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p90": 0.0,
+        "p95": 0.0,
+        "p99": 0.0
+      },
+      "stall": {
+        "max": null,
+        "min": null,
+        "n": 0,
+        "p50": null,
+        "p75": null,
+        "p90": null,
+        "p95": null,
+        "p99": null
+      },
+      "units": "kB from proc/meminfo; descriptive, not causal"
+    }
+  },
+  "container_tmp": {
+    "Buffers": {
+      "nonstall": {
+        "max": 204480.0,
+        "min": 204476.0,
+        "n": 120,
+        "p50": 204476.0,
+        "p75": 204476.0,
+        "p90": 204476.0,
+        "p95": 204476.2,
+        "p99": 204480.0
+      },
+      "stall": {
+        "max": null,
+        "min": null,
+        "n": 0,
+        "p50": null,
+        "p75": null,
+        "p90": null,
+        "p95": null,
+        "p99": null
+      },
+      "units": "kB from proc/meminfo; descriptive, not causal"
+    },
+    "Cached": {
+      "nonstall": {
+        "max": 1707964.0,
+        "min": 1706652.0,
+        "n": 120,
+        "p50": 1707280.0,
+        "p75": 1707565.0,
+        "p90": 1707736.0,
+        "p95": 1707960.0,
+        "p99": 1707960.0
+      },
+      "stall": {
+        "max": null,
+        "min": null,
+        "n": 0,
+        "p50": null,
+        "p75": null,
+        "p90": null,
+        "p95": null,
+        "p99": null
+      },
+      "units": "kB from proc/meminfo; descriptive, not causal"
+    },
+    "Dirty": {
+      "nonstall": {
+        "max": 1356.0,
+        "min": 216.0,
+        "n": 120,
+        "p50": 216.0,
+        "p75": 216.0,
+        "p90": 216.0,
+        "p95": 216.0,
+        "p99": 216.0
+      },
+      "stall": {
+        "max": null,
+        "min": null,
+        "n": 0,
+        "p50": null,
+        "p75": null,
+        "p90": null,
+        "p95": null,
+        "p99": null
+      },
+      "units": "kB from proc/meminfo; descriptive, not causal"
+    },
+    "Writeback": {
+      "nonstall": {
+        "max": 460.0,
+        "min": 0.0,
+        "n": 120,
+        "p50": 232.0,
+        "p75": 232.0,
+        "p90": 232.0,
+        "p95": 460.0,
+        "p99": 460.0
+      },
+      "stall": {
+        "max": null,
+        "min": null,
+        "n": 0,
+        "p50": null,
+        "p75": null,
+        "p90": null,
+        "p95": null,
+        "p99": null
+      },
+      "units": "kB from proc/meminfo; descriptive, not causal"
+    },
+    "WritebackTmp": {
+      "nonstall": {
+        "max": 0.0,
+        "min": 0.0,
+        "n": 120,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p90": 0.0,
+        "p95": 0.0,
+        "p99": 0.0
+      },
+      "stall": {
+        "max": null,
+        "min": null,
+        "n": 0,
+        "p50": null,
+        "p75": null,
+        "p90": null,
+        "p95": null,
+        "p99": null
+      },
+      "units": "kB from proc/meminfo; descriptive, not causal"
+    }
+  },
+  "docker_volume": {
+    "Buffers": {
+      "nonstall": {
+        "max": 204484.0,
+        "min": 204480.0,
+        "n": 120,
+        "p50": 204480.0,
+        "p75": 204484.0,
+        "p90": 204484.0,
+        "p95": 204484.0,
+        "p99": 204484.0
+      },
+      "stall": {
+        "max": null,
+        "min": null,
+        "n": 0,
+        "p50": null,
+        "p75": null,
+        "p90": null,
+        "p95": null,
+        "p99": null
+      },
+      "units": "kB from proc/meminfo; descriptive, not causal"
+    },
+    "Cached": {
+      "nonstall": {
+        "max": 1708068.0,
+        "min": 1706708.0,
+        "n": 120,
+        "p50": 1707388.0,
+        "p75": 1707612.0,
+        "p90": 1707840.0,
+        "p95": 1707840.0,
+        "p99": 1707840.0
+      },
+      "stall": {
+        "max": null,
+        "min": null,
+        "n": 0,
+        "p50": null,
+        "p75": null,
+        "p90": null,
+        "p95": null,
+        "p99": null
+      },
+      "units": "kB from proc/meminfo; descriptive, not causal"
+    },
+    "Dirty": {
+      "nonstall": {
+        "max": 1360.0,
+        "min": 216.0,
+        "n": 120,
+        "p50": 216.0,
+        "p75": 220.0,
+        "p90": 220.0,
+        "p95": 220.0,
+        "p99": 220.0
+      },
+      "stall": {
+        "max": null,
+        "min": null,
+        "n": 0,
+        "p50": null,
+        "p75": null,
+        "p90": null,
+        "p95": null,
+        "p99": null
+      },
+      "units": "kB from proc/meminfo; descriptive, not causal"
+    },
+    "Writeback": {
+      "nonstall": {
+        "max": 188.0,
+        "min": 0.0,
+        "n": 120,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p90": 24.0,
+        "p95": 24.0,
+        "p99": 188.0
+      },
+      "stall": {
+        "max": null,
+        "min": null,
+        "n": 0,
+        "p50": null,
+        "p75": null,
+        "p90": null,
+        "p95": null,
+        "p99": null
+      },
+      "units": "kB from proc/meminfo; descriptive, not causal"
+    },
+    "WritebackTmp": {
+      "nonstall": {
+        "max": 0.0,
+        "min": 0.0,
+        "n": 120,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p90": 0.0,
+        "p95": 0.0,
+        "p99": 0.0
+      },
+      "stall": {
+        "max": null,
+        "min": null,
+        "n": 0,
+        "p50": null,
+        "p75": null,
+        "p90": null,
+        "p95": null,
+        "p99": null
+      },
+      "units": "kB from proc/meminfo; descriptive, not causal"
+    }
+  },
+  "host": {
+    "Buffers": {
+      "nonstall": {
+        "max": 713892.0,
+        "min": 713064.0,
+        "n": 120,
+        "p50": 713468.0,
+        "p75": 713698.0,
+        "p90": 713820.4,
+        "p95": 713860.4,
+        "p99": 713890.48
+      },
+      "stall": {
+        "max": null,
+        "min": null,
+        "n": 0,
+        "p50": null,
+        "p75": null,
+        "p90": null,
+        "p95": null,
+        "p99": null
+      },
+      "units": "kB from proc/meminfo; descriptive, not causal"
+    },
+    "Cached": {
+      "nonstall": {
+        "max": 15308340.0,
+        "min": 15303932.0,
+        "n": 120,
+        "p50": 15304530.0,
+        "p75": 15304838.0,
+        "p90": 15305010.0,
+        "p95": 15308280.4,
+        "p99": 15308326.48
+      },
+      "stall": {
+        "max": null,
+        "min": null,
+        "n": 0,
+        "p50": null,
+        "p75": null,
+        "p90": null,
+        "p95": null,
+        "p99": null
+      },
+      "units": "kB from proc/meminfo; descriptive, not causal"
+    },
+    "Dirty": {
+      "nonstall": {
+        "max": 3880.0,
+        "min": 2580.0,
+        "n": 120,
+        "p50": 2580.0,
+        "p75": 2608.0,
+        "p90": 2608.0,
+        "p95": 2608.0,
+        "p99": 2608.0
+      },
+      "stall": {
+        "max": null,
+        "min": null,
+        "n": 0,
+        "p50": null,
+        "p75": null,
+        "p90": null,
+        "p95": null,
+        "p99": null
+      },
+      "units": "kB from proc/meminfo; descriptive, not causal"
+    },
+    "Writeback": {
+      "nonstall": {
+        "max": 44.0,
+        "min": 0.0,
+        "n": 120,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p90": 4.0,
+        "p95": 8.0,
+        "p99": 28.960000000000036
+      },
+      "stall": {
+        "max": null,
+        "min": null,
+        "n": 0,
+        "p50": null,
+        "p75": null,
+        "p90": null,
+        "p95": null,
+        "p99": null
+      },
+      "units": "kB from proc/meminfo; descriptive, not causal"
+    },
+    "WritebackTmp": {
+      "nonstall": {
+        "max": 0.0,
+        "min": 0.0,
+        "n": 120,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p90": 0.0,
+        "p95": 0.0,
+        "p99": 0.0
+      },
+      "stall": {
+        "max": null,
+        "min": null,
+        "n": 0,
+        "p50": null,
+        "p75": null,
+        "p90": null,
+        "p95": null,
+        "p99": null
+      },
+      "units": "kB from proc/meminfo; descriptive, not causal"
+    }
+  },
+  "paced": {
+    "Buffers": {
+      "nonstall": {
+        "max": 204488.0,
+        "min": 204488.0,
+        "n": 60,
+        "p50": 204488.0,
+        "p75": 204488.0,
+        "p90": 204488.0,
+        "p95": 204488.0,
+        "p99": 204488.0
+      },
+      "stall": {
+        "max": null,
+        "min": null,
+        "n": 0,
+        "p50": null,
+        "p75": null,
+        "p90": null,
+        "p95": null,
+        "p99": null
+      },
+      "units": "kB from proc/meminfo; descriptive, not causal"
+    },
+    "Cached": {
+      "nonstall": {
+        "max": 1703060.0,
+        "min": 1702816.0,
+        "n": 60,
+        "p50": 1702860.0,
+        "p75": 1702884.0,
+        "p90": 1702982.0,
+        "p95": 1703040.0,
+        "p99": 1703057.64
+      },
+      "stall": {
+        "max": null,
+        "min": null,
+        "n": 0,
+        "p50": null,
+        "p75": null,
+        "p90": null,
+        "p95": null,
+        "p99": null
+      },
+      "units": "kB from proc/meminfo; descriptive, not causal"
+    },
+    "Dirty": {
+      "nonstall": {
+        "max": 232.0,
+        "min": 4.0,
+        "n": 60,
+        "p50": 116.0,
+        "p75": 140.0,
+        "p90": 156.0,
+        "p95": 160.2,
+        "p99": 201.31999999999982
+      },
+      "stall": {
+        "max": null,
+        "min": null,
+        "n": 0,
+        "p50": null,
+        "p75": null,
+        "p90": null,
+        "p95": null,
+        "p99": null
+      },
+      "units": "kB from proc/meminfo; descriptive, not causal"
+    },
+    "Writeback": {
+      "nonstall": {
+        "max": 12.0,
+        "min": 0.0,
+        "n": 60,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p90": 0.0,
+        "p95": 0.19999999999998863,
+        "p99": 12.0
+      },
+      "stall": {
+        "max": null,
+        "min": null,
+        "n": 0,
+        "p50": null,
+        "p75": null,
+        "p90": null,
+        "p95": null,
+        "p99": null
+      },
+      "units": "kB from proc/meminfo; descriptive, not causal"
+    },
+    "WritebackTmp": {
+      "nonstall": {
+        "max": 0.0,
+        "min": 0.0,
+        "n": 60,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p90": 0.0,
+        "p95": 0.0,
+        "p99": 0.0
+      },
+      "stall": {
+        "max": null,
+        "min": null,
+        "n": 0,
+        "p50": null,
+        "p75": null,
+        "p90": null,
+        "p95": null,
+        "p99": null
+      },
+      "units": "kB from proc/meminfo; descriptive, not causal"
+    }
+  }
+}

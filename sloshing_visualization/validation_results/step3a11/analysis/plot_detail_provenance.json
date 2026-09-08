@@ -1,0 +1,9 @@
+{
+  "input_sha256": "29a8b575127351f8d0c1cacb7b56f3425bec9d51d3a0017b10635ac4f84f6cd8",
+  "new_benchmark_measurements": false,
+  "original_full_scale_figure_unchanged": true,
+  "pdf_sha256": "1d447adc591f0b65ec6b40de338884b0d68bccffbcf8114e92482a94a9f4a328",
+  "policy_sha256": "36037021a673fcf3605b794662bf4424032f4e9385117abebf1cef92ce697444",
+  "role": "post-measurement presentation only; all original samples and rules retained",
+  "script_sha256": "9f2a7916e7f8c761f24dbdcdb29da51bb727a07100c99c3a0168b6fc569e956f"
+}

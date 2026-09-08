@@ -1,0 +1,375 @@
+{
+  "bind_file_size_latency_correlation": -0.23227816035106683,
+  "bind_stall_spacing": [],
+  "byte_boundary_remainders": {
+    "1048576": [
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 70331,
+        "step": 7
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 153626,
+        "step": 15
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 226542,
+        "step": 22
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 236926,
+        "step": 23
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 351420,
+        "step": 34
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 434550,
+        "step": 42
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 496848,
+        "step": 48
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 559198,
+        "step": 54
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 579994,
+        "step": 56
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 611158,
+        "step": 59
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 631893,
+        "step": 61
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 652645,
+        "step": 63
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 684042,
+        "step": 66
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 694417,
+        "step": 67
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 715226,
+        "step": 69
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 735998,
+        "step": 71
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 829515,
+        "step": 80
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 902268,
+        "step": 87
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 943844,
+        "step": 91
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 954229,
+        "step": 92
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 9601,
+        "step": 102
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 19978,
+        "step": 103
+      }
+    ],
+    "4096": [
+      {
+        "line_crosses_boundary": true,
+        "offset_mod": 699,
+        "step": 7
+      },
+      {
+        "line_crosses_boundary": true,
+        "offset_mod": 2074,
+        "step": 15
+      },
+      {
+        "line_crosses_boundary": true,
+        "offset_mod": 1262,
+        "step": 22
+      },
+      {
+        "line_crosses_boundary": true,
+        "offset_mod": 3454,
+        "step": 23
+      },
+      {
+        "line_crosses_boundary": true,
+        "offset_mod": 3260,
+        "step": 34
+      },
+      {
+        "line_crosses_boundary": true,
+        "offset_mod": 374,
+        "step": 42
+      },
+      {
+        "line_crosses_boundary": true,
+        "offset_mod": 1232,
+        "step": 48
+      },
+      {
+        "line_crosses_boundary": true,
+        "offset_mod": 2142,
+        "step": 54
+      },
+      {
+        "line_crosses_boundary": true,
+        "offset_mod": 2458,
+        "step": 56
+      },
+      {
+        "line_crosses_boundary": true,
+        "offset_mod": 854,
+        "step": 59
+      },
+      {
+        "line_crosses_boundary": true,
+        "offset_mod": 1109,
+        "step": 61
+      },
+      {
+        "line_crosses_boundary": true,
+        "offset_mod": 1381,
+        "step": 63
+      },
+      {
+        "line_crosses_boundary": true,
+        "offset_mod": 10,
+        "step": 66
+      },
+      {
+        "line_crosses_boundary": true,
+        "offset_mod": 2193,
+        "step": 67
+      },
+      {
+        "line_crosses_boundary": true,
+        "offset_mod": 2522,
+        "step": 69
+      },
+      {
+        "line_crosses_boundary": true,
+        "offset_mod": 2814,
+        "step": 71
+      },
+      {
+        "line_crosses_boundary": true,
+        "offset_mod": 2123,
+        "step": 80
+      },
+      {
+        "line_crosses_boundary": true,
+        "offset_mod": 1148,
+        "step": 87
+      },
+      {
+        "line_crosses_boundary": true,
+        "offset_mod": 1764,
+        "step": 91
+      },
+      {
+        "line_crosses_boundary": true,
+        "offset_mod": 3957,
+        "step": 92
+      },
+      {
+        "line_crosses_boundary": true,
+        "offset_mod": 1409,
+        "step": 102
+      },
+      {
+        "line_crosses_boundary": true,
+        "offset_mod": 3594,
+        "step": 103
+      }
+    ],
+    "65536": [
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 4795,
+        "step": 7
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 22554,
+        "step": 15
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 29934,
+        "step": 22
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 40318,
+        "step": 23
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 23740,
+        "step": 34
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 41334,
+        "step": 42
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 38096,
+        "step": 48
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 34910,
+        "step": 54
+      },
+      {
+        "line_crosses_boundary": true,
+        "offset_mod": 55706,
+        "step": 56
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 21334,
+        "step": 59
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 42069,
+        "step": 61
+      },
+      {
+        "line_crosses_boundary": true,
+        "offset_mod": 62821,
+        "step": 63
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 28682,
+        "step": 66
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 39057,
+        "step": 67
+      },
+      {
+        "line_crosses_boundary": true,
+        "offset_mod": 59866,
+        "step": 69
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 15102,
+        "step": 71
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 43083,
+        "step": 80
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 50300,
+        "step": 87
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 26340,
+        "step": 91
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 36725,
+        "step": 92
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 9601,
+        "step": 102
+      },
+      {
+        "line_crosses_boundary": false,
+        "offset_mod": 19978,
+        "step": 103
+      }
+    ]
+  },
+  "historical_correlations": {
+    "block": null,
+    "core_s": 0.11170907437043105,
+    "dt": null,
+    "line_bytes": -0.03748658751462025,
+    "offset_before": -0.06800489169689258,
+    "previous_step_core_s": 0.1858338973433463,
+    "step": -0.06802052749443394
+  },
+  "historical_stall_spacing": [
+    8,
+    7,
+    1,
+    11,
+    8,
+    6,
+    6,
+    2,
+    3,
+    2,
+    2,
+    3,
+    1,
+    2,
+    2,
+    9,
+    7,
+    4,
+    1,
+    10,
+    1
+  ],
+  "interpretation": "exploratory only; no causal or periodicity significance claim"
+}

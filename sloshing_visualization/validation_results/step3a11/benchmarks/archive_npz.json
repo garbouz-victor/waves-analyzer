@@ -1,0 +1,1466 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--network=none",
+    "--name",
+    "step3a11-worker-50f6a4273e6e",
+    "--user",
+    "0:0",
+    "--mount",
+    "type=bind,source=/home/victor/Projects/waves-analyzer/sloshing_visualization,target=/work",
+    "--env",
+    "XDG_CACHE_HOME=/tmp/step3a11-cache",
+    "--env",
+    "MPLCONFIGDIR=/tmp/step3a11-matplotlib",
+    "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+    "python3",
+    "scripts/step3a11_io_attribution.py",
+    "worker",
+    "--kind",
+    "archive",
+    "--context",
+    "bind",
+    "--base",
+    ".",
+    "--budget-s",
+    "3278.2159152701497"
+  ],
+  "context": "bind",
+  "environment": {
+    "device_id": 123,
+    "device_major_minor": [
+      0,
+      123
+    ],
+    "findmnt": {
+      "argv": [
+        "findmnt",
+        "-J",
+        "-T",
+        "/work/step3a11-h14byzmi"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n   \"filesystems\": [\n      {\n         \"target\": \"/work\",\n         \"source\": \"virtiofs0[/victor/Projects/waves-analyzer/sloshing_visualization]\",\n         \"fstype\": \"virtiofs\",\n         \"options\": \"rw,nosuid,nodev,relatime\"\n      }\n   ]\n}\n"
+    },
+    "gid": 0,
+    "mount": {
+      "device": "0:123",
+      "filesystem": "virtiofs",
+      "mountpoint": "/work",
+      "options": "rw,nosuid,nodev,relatime",
+      "source": "virtiofs0",
+      "super_options": "rw"
+    },
+    "mountinfo": "546 470 0:179 / / rw,relatime master:63 - overlay overlay rw,lowerdir=/var/lib/docker/overlay2/l/Z52YHLLKIBDOFRGMPMBIJG6LC4:/var/lib/docker/overlay2/l/2SIDHVWK4RVUDVURCS2RX5IAUQ:/var/lib/docker/overlay2/l/TAZVUIPL4FYIAS7J75LDG4JEYQ:/var/lib/docker/overlay2/l/D63NQR36NQAC2GXO3AK6AVYCA3:/var/lib/docker/overlay2/l/KHCVZEZSKHNKPSF26BKZHUIOLH:/var/lib/docker/overlay2/l/DMHOPN3CBZMCZRDWUTA4B6HSFQ:/var/lib/docker/overlay2/l/AGO35EVQPDEV742XI5QBDKKUAG:/var/lib/docker/overlay2/l/T4J5YVQ4XLMG4MY3OQUMP7DDDM:/var/lib/docker/overlay2/l/IQYAJB2G34F54MI7SGBZOBEFAR:/var/lib/docker/overlay2/l/G3XVVDH5SYPES7UFBR6IEHVW2Y:/var/lib/docker/overlay2/l/6HJZ7RSC2KDKCOOS7IJEY27GTQ:/var/lib/docker/overlay2/l/X7353JLMD2V3ENTBOL5WYN7AAE:/var/lib/docker/overlay2/l/W6GIOGPNLHIZX42LF4H3KJTLQ3:/var/lib/docker/overlay2/l/T2OVCZFVNTQL3HZ7NCWZLHJ2IC:/var/lib/docker/overlay2/l/P5HV2QCCBVPFWCDM2TCDVUWEME:/var/lib/docker/overlay2/l/FF4MEVE6XWTYLDKMONPPXT3F7N:/var/lib/docker/overlay2/l/LAE7JO3GNIYXISMS4TFUKN2J7P:/var/lib/docker/overlay2/l/N7Q4INMH3DB46ZSM7EWV5JH4LM:/var/lib/docker/overlay2/l/RKZR5VZLO3UDOCWB47NQRYE2HY:/var/lib/docker/overlay2/l/JWAFOL4EM2FJRLBF5AXAZ3FBUI:/var/lib/docker/overlay2/l/XJ2I5KAOSAOCGCQFZ75NEKXU7H,upperdir=/var/lib/docker/overlay2/b888a9aa3b2ce73fc218348a7439c247ed6645fa2e33a1b8befe4a5f72a0e8c9/diff,workdir=/var/lib/docker/overlay2/b888a9aa3b2ce73fc218348a7439c247ed6645fa2e33a1b8befe4a5f72a0e8c9/work\n547 546 0:182 / /proc rw,nosuid,nodev,noexec,relatime - proc proc rw\n548 546 0:183 / /dev rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n549 548 0:184 / /dev/pts rw,nosuid,noexec,relatime - devpts devpts rw,gid=5,mode=620,ptmxmode=666\n550 546 0:185 / /sys ro,nosuid,nodev,noexec,relatime - sysfs sysfs ro\n551 550 0:29 / /sys/fs/cgroup ro,nosuid,nodev,noexec,relatime - cgroup2 cgroup rw\n552 548 0:181 / /dev/mqueue rw,nosuid,nodev,noexec,relatime - mqueue mqueue rw\n553 548 0:186 / /dev/shm rw,nosuid,nodev,noexec,relatime - tmpfs shm rw,size=65536k\n554 546 0:123 /victor/Projects/waves-analyzer/sloshing_visualization /work rw,nosuid,nodev,relatime - virtiofs virtiofs0 rw\n555 546 254:1 /docker/containers/81fc0661ce1ee4b69b0a07d4e742639d58904438b8fb9d2ceaaa0eb3f8f6eeb2/resolv.conf /etc/resolv.conf rw,relatime - ext4 /dev/vda1 rw,discard\n556 546 254:1 /docker/containers/81fc0661ce1ee4b69b0a07d4e742639d58904438b8fb9d2ceaaa0eb3f8f6eeb2/hostname /etc/hostname rw,relatime - ext4 /dev/vda1 rw,discard\n557 546 254:1 /docker/containers/81fc0661ce1ee4b69b0a07d4e742639d58904438b8fb9d2ceaaa0eb3f8f6eeb2/hosts /etc/hosts rw,relatime - ext4 /dev/vda1 rw,discard\n471 547 0:182 /bus /proc/bus ro,nosuid,nodev,noexec,relatime - proc proc rw\n472 547 0:182 /fs /proc/fs ro,nosuid,nodev,noexec,relatime - proc proc rw\n473 547 0:182 /irq /proc/irq ro,nosuid,nodev,noexec,relatime - proc proc rw\n474 547 0:182 /sys /proc/sys ro,nosuid,nodev,noexec,relatime - proc proc rw\n475 547 0:182 /sysrq-trigger /proc/sysrq-trigger ro,nosuid,nodev,noexec,relatime - proc proc rw\n476 547 0:187 / /proc/acpi ro,relatime - tmpfs tmpfs ro\n477 547 0:183 /null /proc/kcore rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n478 547 0:183 /null /proc/keys rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n479 547 0:183 /null /proc/timer_list rw,nosuid - tmpfs tmpfs rw,size=65536k,mode=755\n480 550 0:188 / /sys/firmware ro,relatime - tmpfs tmpfs ro\n",
+    "path": "/work/step3a11-h14byzmi",
+    "python": "3.12.3 (main, Aug 14 2025, 17:47:21) [GCC 13.3.0]",
+    "stat_f": {
+      "argv": [
+        "stat",
+        "-f",
+        "/work/step3a11-h14byzmi"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "  File: \"/work/step3a11-h14byzmi\"\n    ID: 0        Namelen: 255     Type: fuseblk\nBlock size: 4096       Fundamental block size: 4096\nBlocks: Total: 57151331   Free: 11387910   Available: 8466579\nInodes: Total: 14589952   Free: 13005366\n"
+    },
+    "strace": null,
+    "uid": 0,
+    "uname": [
+      "Linux",
+      "81fc0661ce1e",
+      "6.4.16-linuxkit",
+      "#1 SMP PREEMPT_DYNAMIC Thu Nov 16 10:55:59 UTC 2023",
+      "x86_64"
+    ]
+  },
+  "expected_n": 10,
+  "host_observed_wall_s": 15.5282515110448,
+  "kind": "archive",
+  "payload_description_sha256": "9fb16893cfa69366e5c5e9f5bdd4340f878de8e124fc7e07c8dbcc43b6624592",
+  "policy_sha256": "36037021a673fcf3605b794662bf4424032f4e9385117abebf1cef92ce697444",
+  "records": [
+    {
+      "array_copy_cpu_s": 0.010048698999999939,
+      "array_copy_s": 0.010037574000307359,
+      "array_hash_cpu_s": 0.038328336000000185,
+      "array_hash_s": 0.0383211640000809,
+      "close_cpu_s": 7.817899999995603e-05,
+      "close_s": 0.00029986999288666993,
+      "diskstats_delta": null,
+      "flush_cpu_s": 5.397000000240126e-06,
+      "flush_s": 5.749010597355664e-06,
+      "fsync_cpu_s": 0.00011159299999974337,
+      "fsync_s": 0.01495482299651485,
+      "kernel_after_fsync": {
+        "diskstats": null,
+        "meminfo": {
+          "Buffers": 204488,
+          "Cached": 1707956,
+          "Dirty": 180,
+          "Writeback": 0,
+          "WritebackTmp": 0
+        },
+        "self/io": {
+          "cancelled_write_bytes": 0,
+          "wchar": 4718799,
+          "write_bytes": 0
+        },
+        "vmstat": {
+          "nr_dirty": 45,
+          "nr_writeback": 0
+        }
+      },
+      "kernel_before_fsync": {
+        "diskstats": null,
+        "meminfo": {
+          "Buffers": 204488,
+          "Cached": 1707956,
+          "Dirty": 180,
+          "Writeback": 0,
+          "WritebackTmp": 0
+        },
+        "self/io": {
+          "cancelled_write_bytes": 0,
+          "wchar": 4718799,
+          "write_bytes": 0
+        },
+        "vmstat": {
+          "nr_dirty": 45,
+          "nr_writeback": 0
+        }
+      },
+      "metadata_atomic": {
+        "close_cpu_s": 6.9821000000303e-05,
+        "close_s": 0.00020528699678834528,
+        "diskstats_delta": null,
+        "fdopen_cpu_s": 0.0001437260000001217,
+        "fdopen_s": 0.0003184489905834198,
+        "file_bytes": 7487,
+        "flush_cpu_s": 4.7919999999201934e-06,
+        "flush_s": 4.419009201228619e-06,
+        "fsync_cpu_s": 7.821099999993919e-05,
+        "fsync_s": 0.0011859399965032935,
+        "json_encode_cpu_s": 0.0003825239999999397,
+        "json_encode_s": 0.00038048399437684566,
+        "kernel_after_fsync": {
+          "diskstats": null,
+          "meminfo": {
+            "Buffers": 204488,
+            "Cached": 1707956,
+            "Dirty": 180,
+            "Writeback": 0,
+            "WritebackTmp": 0
+          },
+          "self/io": {
+            "cancelled_write_bytes": 0,
+            "wchar": 4726286,
+            "write_bytes": 0
+          },
+          "vmstat": {
+            "nr_dirty": 45,
+            "nr_writeback": 0
+          }
+        },
+        "kernel_before_fsync": {
+          "diskstats": null,
+          "meminfo": {
+            "Buffers": 204488,
+            "Cached": 1707956,
+            "Dirty": 180,
+            "Writeback": 0,
+            "WritebackTmp": 0
+          },
+          "self/io": {
+            "cancelled_write_bytes": 0,
+            "wchar": 4726286,
+            "write_bytes": 0
+          },
+          "vmstat": {
+            "nr_dirty": 45,
+            "nr_writeback": 0
+          }
+        },
+        "mkstemp_cpu_s": 0.00023091699999966409,
+        "mkstemp_s": 0.0008441410027444363,
+        "probe_after_cpu_s": 0.0007118710000000306,
+        "probe_after_s": 0.0007092440064297989,
+        "probe_before_cpu_s": 0.0013510710000002035,
+        "probe_before_s": 0.0013446460070554167,
+        "replace_cpu_s": 8.999799999998004e-05,
+        "replace_s": 0.00024504300381522626,
+        "total_atomic_cpu_s": 0.0033095709999999556,
+        "total_atomic_s": 0.005879500997252762,
+        "write_cpu_s": 0.00012715900000026537,
+        "write_s": 0.00047417599125765264
+      },
+      "metadata_atomic_cpu_s": 0.0035459939999999968,
+      "metadata_atomic_s": 0.006240447997697629,
+      "metadata_hash_cpu_s": 0.0004021039999999587,
+      "metadata_hash_s": 0.0003961690090363845,
+      "mkdtemp_cpu_s": 0.0005315530000000734,
+      "mkdtemp_s": 0.0011939290125155821,
+      "npz_bytes": 4717366,
+      "npz_compress_write_cpu_s": 0.9823390029999999,
+      "npz_compress_write_s": 1.0650874390121317,
+      "npz_sha256": "d60fd633db9a79d86cff8b23e863eb8c21db184aef0198ef39d10bea1341f189",
+      "open_cpu_s": 0.0007742959999998966,
+      "open_s": 0.001383662995067425,
+      "probe_after_cpu_s": 0.0007652210000004267,
+      "probe_after_s": 0.0007613500056322664,
+      "probe_before_cpu_s": 0.0009764829999996394,
+      "probe_before_s": 0.0009714329935377464,
+      "rename_cpu_s": 8.630500000039731e-05,
+      "rename_s": 0.0002224869967903942,
+      "repetition": 1,
+      "semantic_sha256": "bc229cc210b61b6b5ef374f9dd33ed69b88f540065652bc3b415c306e7222d21",
+      "total_archive_cpu_s": 1.039532864,
+      "total_archive_s": 1.141509421999217
+    },
+    {
+      "array_copy_cpu_s": 0.004406775000000085,
+      "array_copy_s": 0.004397525000968017,
+      "array_hash_cpu_s": 0.03728496799999981,
+      "array_hash_s": 0.03728012999636121,
+      "close_cpu_s": 7.28390000004353e-05,
+      "close_s": 0.0003463869943516329,
+      "diskstats_delta": null,
+      "flush_cpu_s": 2.3429999993496153e-06,
+      "flush_s": 1.8690043361857533e-06,
+      "fsync_cpu_s": 6.891200000058717e-05,
+      "fsync_s": 0.012554041997645982,
+      "kernel_after_fsync": {
+        "diskstats": null,
+        "meminfo": {
+          "Buffers": 204488,
+          "Cached": 1712572,
+          "Dirty": 188,
+          "Writeback": 0,
+          "WritebackTmp": 0
+        },
+        "self/io": {
+          "cancelled_write_bytes": 0,
+          "wchar": 9444495,
+          "write_bytes": 0
+        },
+        "vmstat": {
+          "nr_dirty": 47,
+          "nr_writeback": 0
+        }
+      },
+      "kernel_before_fsync": {
+        "diskstats": null,
+        "meminfo": {
+          "Buffers": 204488,
+          "Cached": 1712572,
+          "Dirty": 188,
+          "Writeback": 0,
+          "WritebackTmp": 0
+        },
+        "self/io": {
+          "cancelled_write_bytes": 0,
+          "wchar": 9444495,
+          "write_bytes": 0
+        },
+        "vmstat": {
+          "nr_dirty": 47,
+          "nr_writeback": 0
+        }
+      },
+      "metadata_atomic": {
+        "close_cpu_s": 6.269500000044559e-05,
+        "close_s": 0.00023694000265095383,
+        "diskstats_delta": null,
+        "fdopen_cpu_s": 6.385599999969571e-05,
+        "fdopen_s": 0.00011960600386373699,
+        "file_bytes": 7487,
+        "flush_cpu_s": 2.0389999999537167e-06,
+        "flush_s": 1.6789999790489674e-06,
+        "fsync_cpu_s": 7.123500000005833e-05,
+        "fsync_s": 0.0013169490121072158,
+        "json_encode_cpu_s": 0.0004028040000001454,
+        "json_encode_s": 0.000400705001084134,
+        "kernel_after_fsync": {
+          "diskstats": null,
+          "meminfo": {
+            "Buffers": 204488,
+            "Cached": 1712572,
+            "Dirty": 188,
+            "Writeback": 0,
+            "WritebackTmp": 0
+          },
+          "self/io": {
+            "cancelled_write_bytes": 0,
+            "wchar": 9451982,
+            "write_bytes": 0
+          },
+          "vmstat": {
+            "nr_dirty": 47,
+            "nr_writeback": 0
+          }
+        },
+        "kernel_before_fsync": {
+          "diskstats": null,
+          "meminfo": {
+            "Buffers": 204488,
+            "Cached": 1712572,
+            "Dirty": 188,
+            "Writeback": 0,
+            "WritebackTmp": 0
+          },
+          "self/io": {
+            "cancelled_write_bytes": 0,
+            "wchar": 9451982,
+            "write_bytes": 0
+          },
+          "vmstat": {
+            "nr_dirty": 47,
+            "nr_writeback": 0
+          }
+        },
+        "mkstemp_cpu_s": 0.00017908200000071872,
+        "mkstemp_s": 0.00048620700545143336,
+        "probe_after_cpu_s": 0.0008904400000000479,
+        "probe_after_s": 0.0008862230024533346,
+        "probe_before_cpu_s": 0.0006653190000003306,
+        "probe_before_s": 0.0006615820020670071,
+        "replace_cpu_s": 0.00012538799999983752,
+        "replace_s": 0.0003939220041502267,
+        "total_atomic_cpu_s": 0.0025942990000000776,
+        "total_atomic_s": 0.004809659993043169,
+        "write_cpu_s": 5.5029000000317296e-05,
+        "write_s": 0.0001950389996636659
+      },
+      "metadata_atomic_cpu_s": 0.0027839209999998005,
+      "metadata_atomic_s": 0.005126275005750358,
+      "metadata_hash_cpu_s": 0.0002720279999999242,
+      "metadata_hash_s": 0.00027067599876318127,
+      "mkdtemp_cpu_s": 0.0002915950000001999,
+      "mkdtemp_s": 0.0005895419890293851,
+      "npz_bytes": 4717366,
+      "npz_compress_write_cpu_s": 0.8507661740000003,
+      "npz_compress_write_s": 0.8871693940018304,
+      "npz_sha256": "d60fd633db9a79d86cff8b23e863eb8c21db184aef0198ef39d10bea1341f189",
+      "open_cpu_s": 0.0003446910000000081,
+      "open_s": 0.0007626120059285313,
+      "probe_after_cpu_s": 0.0005573190000003336,
+      "probe_after_s": 0.0005549670022446662,
+      "probe_before_cpu_s": 0.0010026009999997143,
+      "probe_before_s": 0.000996354006929323,
+      "rename_cpu_s": 0.00012888799999988265,
+      "rename_s": 0.000511473001097329,
+      "repetition": 2,
+      "semantic_sha256": "bc229cc210b61b6b5ef374f9dd33ed69b88f540065652bc3b415c306e7222d21",
+      "total_archive_cpu_s": 0.8991506360000003,
+      "total_archive_s": 0.9517977649957174
+    },
+    {
+      "array_copy_cpu_s": 0.0018141209999997798,
+      "array_copy_s": 0.0018045470060314983,
+      "array_hash_cpu_s": 0.053047781999999266,
+      "array_hash_s": 0.0530805439921096,
+      "close_cpu_s": 8.6301999999705e-05,
+      "close_s": 0.0003240209916839376,
+      "diskstats_delta": null,
+      "flush_cpu_s": 2.633999999446246e-06,
+      "flush_s": 1.9229919416829944e-06,
+      "fsync_cpu_s": 9.222100000005895e-05,
+      "fsync_s": 0.0180313230084721,
+      "kernel_after_fsync": {
+        "diskstats": null,
+        "meminfo": {
+          "Buffers": 204488,
+          "Cached": 1717152,
+          "Dirty": 188,
+          "Writeback": 0,
+          "WritebackTmp": 0
+        },
+        "self/io": {
+          "cancelled_write_bytes": 0,
+          "wchar": 14170191,
+          "write_bytes": 0
+        },
+        "vmstat": {
+          "nr_dirty": 47,
+          "nr_writeback": 0
+        }
+      },
+      "kernel_before_fsync": {
+        "diskstats": null,
+        "meminfo": {
+          "Buffers": 204488,
+          "Cached": 1717152,
+          "Dirty": 188,
+          "Writeback": 0,
+          "WritebackTmp": 0
+        },
+        "self/io": {
+          "cancelled_write_bytes": 0,
+          "wchar": 14170191,
+          "write_bytes": 0
+        },
+        "vmstat": {
+          "nr_dirty": 47,
+          "nr_writeback": 0
+        }
+      },
+      "metadata_atomic": {
+        "close_cpu_s": 6.362099999979165e-05,
+        "close_s": 0.000249600998358801,
+        "diskstats_delta": null,
+        "fdopen_cpu_s": 8.997899999929615e-05,
+        "fdopen_s": 0.00014674400154035538,
+        "file_bytes": 7487,
+        "flush_cpu_s": 3.4840000004976446e-06,
+        "flush_s": 3.0970113584771752e-06,
+        "fsync_cpu_s": 7.543200000004191e-05,
+        "fsync_s": 0.0011396310001146048,
+        "json_encode_cpu_s": 0.0005941260000001947,
+        "json_encode_s": 0.0005914950015721843,
+        "kernel_after_fsync": {
+          "diskstats": null,
+          "meminfo": {
+            "Buffers": 204488,
+            "Cached": 1717152,
+            "Dirty": 188,
+            "Writeback": 0,
+            "WritebackTmp": 0
+          },
+          "self/io": {
+            "cancelled_write_bytes": 0,
+            "wchar": 14177678,
+            "write_bytes": 0
+          },
+          "vmstat": {
+            "nr_dirty": 47,
+            "nr_writeback": 0
+          }
+        },
+        "kernel_before_fsync": {
+          "diskstats": null,
+          "meminfo": {
+            "Buffers": 204488,
+            "Cached": 1717152,
+            "Dirty": 188,
+            "Writeback": 0,
+            "WritebackTmp": 0
+          },
+          "self/io": {
+            "cancelled_write_bytes": 0,
+            "wchar": 14177678,
+            "write_bytes": 0
+          },
+          "vmstat": {
+            "nr_dirty": 47,
+            "nr_writeback": 0
+          }
+        },
+        "mkstemp_cpu_s": 0.00019401499999993632,
+        "mkstemp_s": 0.0005263519997242838,
+        "probe_after_cpu_s": 0.0007504740000001675,
+        "probe_after_s": 0.0007469839911209419,
+        "probe_before_cpu_s": 0.0009252840000000262,
+        "probe_before_s": 0.0009187440009554848,
+        "replace_cpu_s": 8.194699999997113e-05,
+        "replace_s": 0.00026336099836044014,
+        "total_atomic_cpu_s": 0.002987080000000475,
+        "total_atomic_s": 0.004995453011360951,
+        "write_cpu_s": 7.72700000002402e-05,
+        "write_s": 0.00023320999753195792
+      },
+      "metadata_atomic_cpu_s": 0.003231861000000613,
+      "metadata_atomic_s": 0.005361308009014465,
+      "metadata_hash_cpu_s": 0.0006451959999997925,
+      "metadata_hash_s": 0.0006408540066331625,
+      "mkdtemp_cpu_s": 0.0003007340000005243,
+      "mkdtemp_s": 0.0012417549878591672,
+      "npz_bytes": 4717366,
+      "npz_compress_write_cpu_s": 0.8381874069999995,
+      "npz_compress_write_s": 0.8688035390077857,
+      "npz_sha256": "d60fd633db9a79d86cff8b23e863eb8c21db184aef0198ef39d10bea1341f189",
+      "open_cpu_s": 0.0005665249999999844,
+      "open_s": 0.008545404009055346,
+      "probe_after_cpu_s": 0.0008943869999997744,
+      "probe_after_s": 0.0008848290017340332,
+      "probe_before_cpu_s": 0.0010027130000000994,
+      "probe_before_s": 0.0009971490071620792,
+      "rename_cpu_s": 7.991500000059659e-05,
+      "rename_s": 0.00020665201009251177,
+      "repetition": 3,
+      "semantic_sha256": "bc229cc210b61b6b5ef374f9dd33ed69b88f540065652bc3b415c306e7222d21",
+      "total_archive_cpu_s": 0.901305356,
+      "total_archive_s": 0.9613897039962467
+    },
+    {
+      "array_copy_cpu_s": 0.007856362000000061,
+      "array_copy_s": 0.007839476995286532,
+      "array_hash_cpu_s": 0.036467882000000174,
+      "array_hash_s": 0.036447963007958606,
+      "close_cpu_s": 9.38499999998399e-05,
+      "close_s": 0.0003710710006998852,
+      "diskstats_delta": null,
+      "flush_cpu_s": 2.699000000383478e-06,
+      "flush_s": 2.215005224570632e-06,
+      "fsync_cpu_s": 7.732299999929637e-05,
+      "fsync_s": 0.012965223999344744,
+      "kernel_after_fsync": {
+        "diskstats": null,
+        "meminfo": {
+          "Buffers": 204488,
+          "Cached": 1721804,
+          "Dirty": 192,
+          "Writeback": 0,
+          "WritebackTmp": 0
+        },
+        "self/io": {
+          "cancelled_write_bytes": 0,
+          "wchar": 18895887,
+          "write_bytes": 0
+        },
+        "vmstat": {
+          "nr_dirty": 48,
+          "nr_writeback": 0
+        }
+      },
+      "kernel_before_fsync": {
+        "diskstats": null,
+        "meminfo": {
+          "Buffers": 204488,
+          "Cached": 1721804,
+          "Dirty": 192,
+          "Writeback": 0,
+          "WritebackTmp": 0
+        },
+        "self/io": {
+          "cancelled_write_bytes": 0,
+          "wchar": 18895887,
+          "write_bytes": 0
+        },
+        "vmstat": {
+          "nr_dirty": 48,
+          "nr_writeback": 0
+        }
+      },
+      "metadata_atomic": {
+        "close_cpu_s": 0.0001957890000001683,
+        "close_s": 0.0010049499978777021,
+        "diskstats_delta": null,
+        "fdopen_cpu_s": 8.348899999965909e-05,
+        "fdopen_s": 0.00015453100786544383,
+        "file_bytes": 7487,
+        "flush_cpu_s": 2.3269999998021262e-06,
+        "flush_s": 1.8969876691699028e-06,
+        "fsync_cpu_s": 7.58019999995696e-05,
+        "fsync_s": 0.0013905010127928108,
+        "json_encode_cpu_s": 0.0004858250000001618,
+        "json_encode_s": 0.0004824319912586361,
+        "kernel_after_fsync": {
+          "diskstats": null,
+          "meminfo": {
+            "Buffers": 204488,
+            "Cached": 1721804,
+            "Dirty": 192,
+            "Writeback": 0,
+            "WritebackTmp": 0
+          },
+          "self/io": {
+            "cancelled_write_bytes": 0,
+            "wchar": 18903374,
+            "write_bytes": 0
+          },
+          "vmstat": {
+            "nr_dirty": 48,
+            "nr_writeback": 0
+          }
+        },
+        "kernel_before_fsync": {
+          "diskstats": null,
+          "meminfo": {
+            "Buffers": 204488,
+            "Cached": 1721804,
+            "Dirty": 192,
+            "Writeback": 0,
+            "WritebackTmp": 0
+          },
+          "self/io": {
+            "cancelled_write_bytes": 0,
+            "wchar": 18903374,
+            "write_bytes": 0
+          },
+          "vmstat": {
+            "nr_dirty": 48,
+            "nr_writeback": 0
+          }
+        },
+        "mkstemp_cpu_s": 0.00018450899999944426,
+        "mkstemp_s": 0.0004757619899464771,
+        "probe_after_cpu_s": 0.001007741999999645,
+        "probe_after_s": 0.0010022100032074377,
+        "probe_before_cpu_s": 0.0011709820000005422,
+        "probe_before_s": 0.001161893000244163,
+        "replace_cpu_s": 0.00017261300000015467,
+        "replace_s": 0.00044898499618284404,
+        "total_atomic_cpu_s": 0.003577052000000691,
+        "total_atomic_s": 0.0065589279984124005,
+        "write_cpu_s": 8.66020000005463e-05,
+        "write_s": 0.0002506790042389184
+      },
+      "metadata_atomic_cpu_s": 0.0038188999999997364,
+      "metadata_atomic_s": 0.006938095000805333,
+      "metadata_hash_cpu_s": 0.0009210550000000595,
+      "metadata_hash_s": 0.0009051270026247948,
+      "mkdtemp_cpu_s": 0.0006074919999994322,
+      "mkdtemp_s": 0.0013932709989603609,
+      "npz_bytes": 4717366,
+      "npz_compress_write_cpu_s": 0.8908717720000006,
+      "npz_compress_write_s": 0.9217742559994804,
+      "npz_sha256": "d60fd633db9a79d86cff8b23e863eb8c21db184aef0198ef39d10bea1341f189",
+      "open_cpu_s": 0.00037511200000039935,
+      "open_s": 0.000811930003692396,
+      "probe_after_cpu_s": 0.0007629810000002735,
+      "probe_after_s": 0.000759785994887352,
+      "probe_before_cpu_s": 0.0008036660000003693,
+      "probe_before_s": 0.0008001750102266669,
+      "rename_cpu_s": 0.0001396079999995692,
+      "rename_s": 0.00046177599870134145,
+      "repetition": 4,
+      "semantic_sha256": "bc229cc210b61b6b5ef374f9dd33ed69b88f540065652bc3b415c306e7222d21",
+      "total_archive_cpu_s": 0.9457467360000003,
+      "total_archive_s": 0.9945287659938913
+    },
+    {
+      "array_copy_cpu_s": 0.001461207999999381,
+      "array_copy_s": 0.0014445540000451729,
+      "array_hash_cpu_s": 0.04673470099999921,
+      "array_hash_s": 0.04672842599393334,
+      "close_cpu_s": 7.757799999996706e-05,
+      "close_s": 0.0003238609933760017,
+      "diskstats_delta": null,
+      "flush_cpu_s": 3.6530000002699126e-06,
+      "flush_s": 2.676999429240823e-06,
+      "fsync_cpu_s": 7.535599999997089e-05,
+      "fsync_s": 0.012060353998094797,
+      "kernel_after_fsync": {
+        "diskstats": null,
+        "meminfo": {
+          "Buffers": 204488,
+          "Cached": 1726332,
+          "Dirty": 192,
+          "Writeback": 0,
+          "WritebackTmp": 0
+        },
+        "self/io": {
+          "cancelled_write_bytes": 0,
+          "wchar": 23621583,
+          "write_bytes": 0
+        },
+        "vmstat": {
+          "nr_dirty": 48,
+          "nr_writeback": 0
+        }
+      },
+      "kernel_before_fsync": {
+        "diskstats": null,
+        "meminfo": {
+          "Buffers": 204488,
+          "Cached": 1726332,
+          "Dirty": 192,
+          "Writeback": 0,
+          "WritebackTmp": 0
+        },
+        "self/io": {
+          "cancelled_write_bytes": 0,
+          "wchar": 23621583,
+          "write_bytes": 0
+        },
+        "vmstat": {
+          "nr_dirty": 48,
+          "nr_writeback": 0
+        }
+      },
+      "metadata_atomic": {
+        "close_cpu_s": 5.7535000000719094e-05,
+        "close_s": 0.00020134700753260404,
+        "diskstats_delta": null,
+        "fdopen_cpu_s": 0.00010848800000040626,
+        "fdopen_s": 0.0002034499921137467,
+        "file_bytes": 7487,
+        "flush_cpu_s": 3.3349999997156488e-06,
+        "flush_s": 2.8700014809146523e-06,
+        "fsync_cpu_s": 0.0001153880000002161,
+        "fsync_s": 0.0023511220060754567,
+        "json_encode_cpu_s": 0.0005112980000001599,
+        "json_encode_s": 0.000507424003444612,
+        "kernel_after_fsync": {
+          "diskstats": null,
+          "meminfo": {
+            "Buffers": 204488,
+            "Cached": 1726332,
+            "Dirty": 192,
+            "Writeback": 0,
+            "WritebackTmp": 0
+          },
+          "self/io": {
+            "cancelled_write_bytes": 0,
+            "wchar": 23629070,
+            "write_bytes": 0
+          },
+          "vmstat": {
+            "nr_dirty": 48,
+            "nr_writeback": 0
+          }
+        },
+        "kernel_before_fsync": {
+          "diskstats": null,
+          "meminfo": {
+            "Buffers": 204488,
+            "Cached": 1726332,
+            "Dirty": 192,
+            "Writeback": 0,
+            "WritebackTmp": 0
+          },
+          "self/io": {
+            "cancelled_write_bytes": 0,
+            "wchar": 23629070,
+            "write_bytes": 0
+          },
+          "vmstat": {
+            "nr_dirty": 48,
+            "nr_writeback": 0
+          }
+        },
+        "mkstemp_cpu_s": 0.00021484100000002115,
+        "mkstemp_s": 0.0005034539935877547,
+        "probe_after_cpu_s": 0.0010345669999995977,
+        "probe_after_s": 0.001030594008625485,
+        "probe_before_cpu_s": 0.0009601510000001312,
+        "probe_before_s": 0.0009535689896438271,
+        "replace_cpu_s": 8.22040000008073e-05,
+        "replace_s": 0.00026613699446897954,
+        "total_atomic_cpu_s": 0.0032724640000001415,
+        "total_atomic_s": 0.00649123900802806,
+        "write_cpu_s": 9.089499999959116e-05,
+        "write_s": 0.0003057919966522604
+      },
+      "metadata_atomic_cpu_s": 0.003474133999999296,
+      "metadata_atomic_s": 0.006778419992770068,
+      "metadata_hash_cpu_s": 0.0004864729999995987,
+      "metadata_hash_s": 0.0004805729986401275,
+      "mkdtemp_cpu_s": 0.000514905999999371,
+      "mkdtemp_s": 0.0011519380059326068,
+      "npz_bytes": 4717366,
+      "npz_compress_write_cpu_s": 0.8096947889999999,
+      "npz_compress_write_s": 0.858198813002673,
+      "npz_sha256": "d60fd633db9a79d86cff8b23e863eb8c21db184aef0198ef39d10bea1341f189",
+      "open_cpu_s": 0.0004409250000003695,
+      "open_s": 0.0009513609984423965,
+      "probe_after_cpu_s": 0.0005876459999996086,
+      "probe_after_s": 0.0005841420061187819,
+      "probe_before_cpu_s": 0.0012454790000004934,
+      "probe_before_s": 0.00123681100376416,
+      "rename_cpu_s": 9.349399999969421e-05,
+      "rename_s": 0.00025302800349891186,
+      "repetition": 5,
+      "semantic_sha256": "bc229cc210b61b6b5ef374f9dd33ed69b88f540065652bc3b415c306e7222d21",
+      "total_archive_cpu_s": 0.866974431,
+      "total_archive_s": 0.9324048729904462
+    },
+    {
+      "array_copy_cpu_s": 0.0013921470000006764,
+      "array_copy_s": 0.0013839659950463101,
+      "array_hash_cpu_s": 0.039862789999999926,
+      "array_hash_s": 0.03984954199404456,
+      "close_cpu_s": 7.96530000002349e-05,
+      "close_s": 0.0003293549962108955,
+      "diskstats_delta": null,
+      "flush_cpu_s": 2.2289999996871757e-06,
+      "flush_s": 1.891996362246573e-06,
+      "fsync_cpu_s": 9.102900000002023e-05,
+      "fsync_s": 0.018826047002221458,
+      "kernel_after_fsync": {
+        "diskstats": null,
+        "meminfo": {
+          "Buffers": 204488,
+          "Cached": 1731036,
+          "Dirty": 192,
+          "Writeback": 0,
+          "WritebackTmp": 0
+        },
+        "self/io": {
+          "cancelled_write_bytes": 0,
+          "wchar": 28347279,
+          "write_bytes": 0
+        },
+        "vmstat": {
+          "nr_dirty": 48,
+          "nr_writeback": 0
+        }
+      },
+      "kernel_before_fsync": {
+        "diskstats": null,
+        "meminfo": {
+          "Buffers": 204488,
+          "Cached": 1731036,
+          "Dirty": 192,
+          "Writeback": 0,
+          "WritebackTmp": 0
+        },
+        "self/io": {
+          "cancelled_write_bytes": 0,
+          "wchar": 28347279,
+          "write_bytes": 0
+        },
+        "vmstat": {
+          "nr_dirty": 48,
+          "nr_writeback": 0
+        }
+      },
+      "metadata_atomic": {
+        "close_cpu_s": 4.9817000000729195e-05,
+        "close_s": 0.00021057898993603885,
+        "diskstats_delta": null,
+        "fdopen_cpu_s": 7.377000000019507e-05,
+        "fdopen_s": 0.00012525399506557733,
+        "file_bytes": 7487,
+        "flush_cpu_s": 2.4370000009099613e-06,
+        "flush_s": 2.001994289457798e-06,
+        "fsync_cpu_s": 7.676600000117162e-05,
+        "fsync_s": 0.002687636995688081,
+        "json_encode_cpu_s": 0.0007195279999994142,
+        "json_encode_s": 0.0007154250051826239,
+        "kernel_after_fsync": {
+          "diskstats": null,
+          "meminfo": {
+            "Buffers": 204488,
+            "Cached": 1731036,
+            "Dirty": 192,
+            "Writeback": 0,
+            "WritebackTmp": 0
+          },
+          "self/io": {
+            "cancelled_write_bytes": 0,
+            "wchar": 28354766,
+            "write_bytes": 0
+          },
+          "vmstat": {
+            "nr_dirty": 48,
+            "nr_writeback": 0
+          }
+        },
+        "kernel_before_fsync": {
+          "diskstats": null,
+          "meminfo": {
+            "Buffers": 204488,
+            "Cached": 1731036,
+            "Dirty": 192,
+            "Writeback": 0,
+            "WritebackTmp": 0
+          },
+          "self/io": {
+            "cancelled_write_bytes": 0,
+            "wchar": 28354766,
+            "write_bytes": 0
+          },
+          "vmstat": {
+            "nr_dirty": 48,
+            "nr_writeback": 0
+          }
+        },
+        "mkstemp_cpu_s": 0.00019050499999906378,
+        "mkstemp_s": 0.00046269700396806,
+        "probe_after_cpu_s": 0.0008636469999991903,
+        "probe_after_s": 0.0008598179992986843,
+        "probe_before_cpu_s": 0.0008431120000000902,
+        "probe_before_s": 0.0008375290053663775,
+        "replace_cpu_s": 9.490299999903584e-05,
+        "replace_s": 0.00034825800685212016,
+        "total_atomic_cpu_s": 0.0031134979999993817,
+        "total_atomic_s": 0.006620852000196464,
+        "write_cpu_s": 0.00011470699999982514,
+        "write_s": 0.00023942699772305787
+      },
+      "metadata_atomic_cpu_s": 0.0033508130000008407,
+      "metadata_atomic_s": 0.0069835350004723296,
+      "metadata_hash_cpu_s": 0.0006182259999993889,
+      "metadata_hash_s": 0.0006072980031603947,
+      "mkdtemp_cpu_s": 0.001152503000000138,
+      "mkdtemp_s": 0.0024485610047122464,
+      "npz_bytes": 4717366,
+      "npz_compress_write_cpu_s": 0.7638239700000007,
+      "npz_compress_write_s": 0.8107343170122476,
+      "npz_sha256": "d60fd633db9a79d86cff8b23e863eb8c21db184aef0198ef39d10bea1341f189",
+      "open_cpu_s": 0.0006007270000001341,
+      "open_s": 0.003149948999634944,
+      "probe_after_cpu_s": 0.0009963529999996723,
+      "probe_after_s": 0.0009915859991451725,
+      "probe_before_cpu_s": 0.0012880789999982767,
+      "probe_before_s": 0.0012833399960072711,
+      "rename_cpu_s": 0.00017340700000012532,
+      "rename_s": 0.0002925180015154183,
+      "repetition": 6,
+      "semantic_sha256": "bc229cc210b61b6b5ef374f9dd33ed69b88f540065652bc3b415c306e7222d21",
+      "total_archive_cpu_s": 0.8147544189999998,
+      "total_archive_s": 0.8883180959965102
+    },
+    {
+      "array_copy_cpu_s": 0.0016985730000005361,
+      "array_copy_s": 0.0016856729926075786,
+      "array_hash_cpu_s": 0.0377247220000001,
+      "array_hash_s": 0.03772278699034359,
+      "close_cpu_s": 7.43660000015467e-05,
+      "close_s": 0.0002817290078382939,
+      "diskstats_delta": null,
+      "flush_cpu_s": 2.0840000001243197e-06,
+      "flush_s": 1.7369893612340093e-06,
+      "fsync_cpu_s": 0.00010384000000129845,
+      "fsync_s": 0.018450837000273168,
+      "kernel_after_fsync": {
+        "diskstats": null,
+        "meminfo": {
+          "Buffers": 204488,
+          "Cached": 1735436,
+          "Dirty": 4,
+          "Writeback": 0,
+          "WritebackTmp": 0
+        },
+        "self/io": {
+          "cancelled_write_bytes": 0,
+          "wchar": 33072975,
+          "write_bytes": 0
+        },
+        "vmstat": {
+          "nr_dirty": 1,
+          "nr_writeback": 0
+        }
+      },
+      "kernel_before_fsync": {
+        "diskstats": null,
+        "meminfo": {
+          "Buffers": 204488,
+          "Cached": 1735436,
+          "Dirty": 4,
+          "Writeback": 0,
+          "WritebackTmp": 0
+        },
+        "self/io": {
+          "cancelled_write_bytes": 0,
+          "wchar": 33072975,
+          "write_bytes": 0
+        },
+        "vmstat": {
+          "nr_dirty": 1,
+          "nr_writeback": 0
+        }
+      },
+      "metadata_atomic": {
+        "close_cpu_s": 0.00015095200000025955,
+        "close_s": 0.0005395299958763644,
+        "diskstats_delta": null,
+        "fdopen_cpu_s": 5.541700000044614e-05,
+        "fdopen_s": 9.599400800652802e-05,
+        "file_bytes": 7487,
+        "flush_cpu_s": 1.3459999994580585e-06,
+        "flush_s": 1.0939984349533916e-06,
+        "fsync_cpu_s": 5.8149999999201896e-05,
+        "fsync_s": 0.0013134129985701293,
+        "json_encode_cpu_s": 0.00041221800000101894,
+        "json_encode_s": 0.00040937800076790154,
+        "kernel_after_fsync": {
+          "diskstats": null,
+          "meminfo": {
+            "Buffers": 204488,
+            "Cached": 1735436,
+            "Dirty": 4,
+            "Writeback": 0,
+            "WritebackTmp": 0
+          },
+          "self/io": {
+            "cancelled_write_bytes": 0,
+            "wchar": 33080462,
+            "write_bytes": 0
+          },
+          "vmstat": {
+            "nr_dirty": 1,
+            "nr_writeback": 0
+          }
+        },
+        "kernel_before_fsync": {
+          "diskstats": null,
+          "meminfo": {
+            "Buffers": 204488,
+            "Cached": 1735436,
+            "Dirty": 4,
+            "Writeback": 0,
+            "WritebackTmp": 0
+          },
+          "self/io": {
+            "cancelled_write_bytes": 0,
+            "wchar": 33080462,
+            "write_bytes": 0
+          },
+          "vmstat": {
+            "nr_dirty": 1,
+            "nr_writeback": 0
+          }
+        },
+        "mkstemp_cpu_s": 0.00015842700000057164,
+        "mkstemp_s": 0.0004724059981526807,
+        "probe_after_cpu_s": 0.0009905180000000513,
+        "probe_after_s": 0.000985619000857696,
+        "probe_before_cpu_s": 0.0007000310000009335,
+        "probe_before_s": 0.0006964810017962009,
+        "replace_cpu_s": 0.00012753799999920545,
+        "replace_s": 0.000383722988772206,
+        "total_atomic_cpu_s": 0.0028315399999989666,
+        "total_atomic_s": 0.005235566990450025,
+        "write_cpu_s": 9.794600000034848e-05,
+        "write_s": 0.00019933600560761988
+      },
+      "metadata_atomic_cpu_s": 0.003036955000000674,
+      "metadata_atomic_s": 0.0055778499954612926,
+      "metadata_hash_cpu_s": 0.000249186999999651,
+      "metadata_hash_s": 0.00024793199554551393,
+      "mkdtemp_cpu_s": 0.00020818700000013735,
+      "mkdtemp_s": 0.0005120440036989748,
+      "npz_bytes": 4717366,
+      "npz_compress_write_cpu_s": 0.7801761780000014,
+      "npz_compress_write_s": 0.815766639992944,
+      "npz_sha256": "d60fd633db9a79d86cff8b23e863eb8c21db184aef0198ef39d10bea1341f189",
+      "open_cpu_s": 0.00031315600000070276,
+      "open_s": 0.0007283729937626049,
+      "probe_after_cpu_s": 0.0010128670000000284,
+      "probe_after_s": 0.001010791995213367,
+      "probe_before_cpu_s": 0.0010477519999998464,
+      "probe_before_s": 0.0010426079970784485,
+      "rename_cpu_s": 0.00017042099999997617,
+      "rename_s": 0.00036825399729423225,
+      "repetition": 7,
+      "semantic_sha256": "bc229cc210b61b6b5ef374f9dd33ed69b88f540065652bc3b415c306e7222d21",
+      "total_archive_cpu_s": 0.8270360659999998,
+      "total_archive_s": 0.8847089780028909
+    },
+    {
+      "array_copy_cpu_s": 0.0014025600000007188,
+      "array_copy_s": 0.0013914110022597015,
+      "array_hash_cpu_s": 0.05594676299999968,
+      "array_hash_s": 0.05594040500000119,
+      "close_cpu_s": 0.00011715300000147977,
+      "close_s": 0.00035591699997894466,
+      "diskstats_delta": null,
+      "flush_cpu_s": 2.4690000000049395e-06,
+      "flush_s": 1.8999999156221747e-06,
+      "fsync_cpu_s": 8.157599999947251e-05,
+      "fsync_s": 0.012022209004499018,
+      "kernel_after_fsync": {
+        "diskstats": null,
+        "meminfo": {
+          "Buffers": 204488,
+          "Cached": 1740268,
+          "Dirty": 64,
+          "Writeback": 0,
+          "WritebackTmp": 0
+        },
+        "self/io": {
+          "cancelled_write_bytes": 0,
+          "wchar": 37798671,
+          "write_bytes": 0
+        },
+        "vmstat": {
+          "nr_dirty": 16,
+          "nr_writeback": 0
+        }
+      },
+      "kernel_before_fsync": {
+        "diskstats": null,
+        "meminfo": {
+          "Buffers": 204488,
+          "Cached": 1740268,
+          "Dirty": 64,
+          "Writeback": 0,
+          "WritebackTmp": 0
+        },
+        "self/io": {
+          "cancelled_write_bytes": 0,
+          "wchar": 37798671,
+          "write_bytes": 0
+        },
+        "vmstat": {
+          "nr_dirty": 16,
+          "nr_writeback": 0
+        }
+      },
+      "metadata_atomic": {
+        "close_cpu_s": 9.695699999845431e-05,
+        "close_s": 0.0003148700052406639,
+        "diskstats_delta": null,
+        "fdopen_cpu_s": 7.377400000052603e-05,
+        "fdopen_s": 0.00014239399752113968,
+        "file_bytes": 7487,
+        "flush_cpu_s": 2.2709999996095576e-06,
+        "flush_s": 1.7719867173582315e-06,
+        "fsync_cpu_s": 7.154200000059063e-05,
+        "fsync_s": 0.0012009529891656712,
+        "json_encode_cpu_s": 0.0005627650000015194,
+        "json_encode_s": 0.0005581250006798655,
+        "kernel_after_fsync": {
+          "diskstats": null,
+          "meminfo": {
+            "Buffers": 204488,
+            "Cached": 1740268,
+            "Dirty": 64,
+            "Writeback": 0,
+            "WritebackTmp": 0
+          },
+          "self/io": {
+            "cancelled_write_bytes": 0,
+            "wchar": 37806158,
+            "write_bytes": 0
+          },
+          "vmstat": {
+            "nr_dirty": 16,
+            "nr_writeback": 0
+          }
+        },
+        "kernel_before_fsync": {
+          "diskstats": null,
+          "meminfo": {
+            "Buffers": 204488,
+            "Cached": 1740268,
+            "Dirty": 64,
+            "Writeback": 0,
+            "WritebackTmp": 0
+          },
+          "self/io": {
+            "cancelled_write_bytes": 0,
+            "wchar": 37806158,
+            "write_bytes": 0
+          },
+          "vmstat": {
+            "nr_dirty": 16,
+            "nr_writeback": 0
+          }
+        },
+        "mkstemp_cpu_s": 0.00026133799999961127,
+        "mkstemp_s": 0.0006362050044117495,
+        "probe_after_cpu_s": 0.0012212849999997388,
+        "probe_after_s": 0.0012133400014135987,
+        "probe_before_cpu_s": 0.0009266920000001733,
+        "probe_before_s": 0.0009207709954353049,
+        "replace_cpu_s": 0.00017080199999952583,
+        "replace_s": 0.00045620498713105917,
+        "total_atomic_cpu_s": 0.003551588999998856,
+        "total_atomic_s": 0.005799308986752294,
+        "write_cpu_s": 5.674999999882857e-05,
+        "write_s": 0.0001793749979697168
+      },
+      "metadata_atomic_cpu_s": 0.009928721999999723,
+      "metadata_atomic_s": 0.012268353995750658,
+      "metadata_hash_cpu_s": 0.00027319900000044584,
+      "metadata_hash_s": 0.00027163400955032557,
+      "mkdtemp_cpu_s": 0.0002703519999993631,
+      "mkdtemp_s": 0.0007111630111467093,
+      "npz_bytes": 4717366,
+      "npz_compress_write_cpu_s": 0.8138132559999995,
+      "npz_compress_write_s": 0.869868793990463,
+      "npz_sha256": "d60fd633db9a79d86cff8b23e863eb8c21db184aef0198ef39d10bea1341f189",
+      "open_cpu_s": 0.0004171670000001626,
+      "open_s": 0.0009090520034078509,
+      "probe_after_cpu_s": 0.0006320379999991133,
+      "probe_after_s": 0.0006293159967754036,
+      "probe_before_cpu_s": 0.0008028319999997535,
+      "probe_before_s": 0.0007997650100151077,
+      "rename_cpu_s": 0.00015682499999947197,
+      "rename_s": 0.0003366839955560863,
+      "repetition": 8,
+      "semantic_sha256": "bc229cc210b61b6b5ef374f9dd33ed69b88f540065652bc3b415c306e7222d21",
+      "total_archive_cpu_s": 0.8849502390000001,
+      "total_archive_s": 0.95668654498877
+    },
+    {
+      "array_copy_cpu_s": 0.007882330000001048,
+      "array_copy_s": 0.007864908999181353,
+      "array_hash_cpu_s": 0.02946785399999996,
+      "array_hash_s": 0.029465676998370327,
+      "close_cpu_s": 0.00013409800000019345,
+      "close_s": 0.0004454729933058843,
+      "diskstats_delta": null,
+      "flush_cpu_s": 3.811999999214777e-06,
+      "flush_s": 2.4859909899532795e-06,
+      "fsync_cpu_s": 0.00010033899999939422,
+      "fsync_s": 0.015419550996739417,
+      "kernel_after_fsync": {
+        "diskstats": null,
+        "meminfo": {
+          "Buffers": 204488,
+          "Cached": 1744884,
+          "Dirty": 64,
+          "Writeback": 0,
+          "WritebackTmp": 0
+        },
+        "self/io": {
+          "cancelled_write_bytes": 0,
+          "wchar": 42524367,
+          "write_bytes": 0
+        },
+        "vmstat": {
+          "nr_dirty": 16,
+          "nr_writeback": 0
+        }
+      },
+      "kernel_before_fsync": {
+        "diskstats": null,
+        "meminfo": {
+          "Buffers": 204488,
+          "Cached": 1744884,
+          "Dirty": 64,
+          "Writeback": 0,
+          "WritebackTmp": 0
+        },
+        "self/io": {
+          "cancelled_write_bytes": 0,
+          "wchar": 42524367,
+          "write_bytes": 0
+        },
+        "vmstat": {
+          "nr_dirty": 16,
+          "nr_writeback": 0
+        }
+      },
+      "metadata_atomic": {
+        "close_cpu_s": 8.067900000163775e-05,
+        "close_s": 0.0003081869945162907,
+        "diskstats_delta": null,
+        "fdopen_cpu_s": 0.0001193959999987726,
+        "fdopen_s": 0.00020550700719468296,
+        "file_bytes": 7487,
+        "flush_cpu_s": 3.3089999984525775e-06,
+        "flush_s": 2.8709910111501813e-06,
+        "fsync_cpu_s": 9.845499999983076e-05,
+        "fsync_s": 0.0016722190048312768,
+        "json_encode_cpu_s": 0.0004168750000008714,
+        "json_encode_s": 0.00041337800212204456,
+        "kernel_after_fsync": {
+          "diskstats": null,
+          "meminfo": {
+            "Buffers": 204488,
+            "Cached": 1744884,
+            "Dirty": 64,
+            "Writeback": 0,
+            "WritebackTmp": 0
+          },
+          "self/io": {
+            "cancelled_write_bytes": 0,
+            "wchar": 42531854,
+            "write_bytes": 0
+          },
+          "vmstat": {
+            "nr_dirty": 16,
+            "nr_writeback": 0
+          }
+        },
+        "kernel_before_fsync": {
+          "diskstats": null,
+          "meminfo": {
+            "Buffers": 204488,
+            "Cached": 1744884,
+            "Dirty": 64,
+            "Writeback": 0,
+            "WritebackTmp": 0
+          },
+          "self/io": {
+            "cancelled_write_bytes": 0,
+            "wchar": 42531854,
+            "write_bytes": 0
+          },
+          "vmstat": {
+            "nr_dirty": 16,
+            "nr_writeback": 0
+          }
+        },
+        "mkstemp_cpu_s": 0.00020172600000023522,
+        "mkstemp_s": 0.0006242860108613968,
+        "probe_after_cpu_s": 0.0010536289999993897,
+        "probe_after_s": 0.0010497059993213043,
+        "probe_before_cpu_s": 0.0012038610000004724,
+        "probe_before_s": 0.001196778001030907,
+        "replace_cpu_s": 0.00010967700000108493,
+        "replace_s": 0.0003076209977734834,
+        "total_atomic_cpu_s": 0.0034778820000003208,
+        "total_atomic_s": 0.006169571992359124,
+        "write_cpu_s": 8.431200000025285e-05,
+        "write_s": 0.00022288899344857782
+      },
+      "metadata_atomic_cpu_s": 0.0037725860000001887,
+      "metadata_atomic_s": 0.006621216991334222,
+      "metadata_hash_cpu_s": 0.00025474900000155287,
+      "metadata_hash_s": 0.00025315399398095906,
+      "mkdtemp_cpu_s": 0.0001985150000010094,
+      "mkdtemp_s": 0.0005842700047651306,
+      "npz_bytes": 4717366,
+      "npz_compress_write_cpu_s": 0.7104927970000006,
+      "npz_compress_write_s": 0.7324231859965948,
+      "npz_sha256": "d60fd633db9a79d86cff8b23e863eb8c21db184aef0198ef39d10bea1341f189",
+      "open_cpu_s": 0.00023391399999894702,
+      "open_s": 0.0005833629984408617,
+      "probe_after_cpu_s": 0.0018165630000002153,
+      "probe_after_s": 0.0018057269917335361,
+      "probe_before_cpu_s": 0.0009866289999997946,
+      "probe_before_s": 0.0009836079989327118,
+      "rename_cpu_s": 0.00013144200000070327,
+      "rename_s": 0.0003255620104027912,
+      "repetition": 9,
+      "semantic_sha256": "bc229cc210b61b6b5ef374f9dd33ed69b88f540065652bc3b415c306e7222d21",
+      "total_archive_cpu_s": 0.7577997720000003,
+      "total_archive_s": 0.7991905070084613
+    },
+    {
+      "array_copy_cpu_s": 0.0021870449999994435,
+      "array_copy_s": 0.0021768300066469237,
+      "array_hash_cpu_s": 0.0354000929999998,
+      "array_hash_s": 0.03539812700182665,
+      "close_cpu_s": 5.8366000001086604e-05,
+      "close_s": 0.000295445992378518,
+      "diskstats_delta": null,
+      "flush_cpu_s": 2.7889999998365056e-06,
+      "flush_s": 2.362998202443123e-06,
+      "fsync_cpu_s": 8.379199999986042e-05,
+      "fsync_s": 0.011912401008885354,
+      "kernel_after_fsync": {
+        "diskstats": null,
+        "meminfo": {
+          "Buffers": 204488,
+          "Cached": 1749500,
+          "Dirty": 100,
+          "Writeback": 0,
+          "WritebackTmp": 0
+        },
+        "self/io": {
+          "cancelled_write_bytes": 0,
+          "wchar": 47250063,
+          "write_bytes": 0
+        },
+        "vmstat": {
+          "nr_dirty": 25,
+          "nr_writeback": 0
+        }
+      },
+      "kernel_before_fsync": {
+        "diskstats": null,
+        "meminfo": {
+          "Buffers": 204488,
+          "Cached": 1749500,
+          "Dirty": 100,
+          "Writeback": 0,
+          "WritebackTmp": 0
+        },
+        "self/io": {
+          "cancelled_write_bytes": 0,
+          "wchar": 47250063,
+          "write_bytes": 0
+        },
+        "vmstat": {
+          "nr_dirty": 25,
+          "nr_writeback": 0
+        }
+      },
+      "metadata_atomic": {
+        "close_cpu_s": 9.099999999939712e-05,
+        "close_s": 0.00042444000428076833,
+        "diskstats_delta": null,
+        "fdopen_cpu_s": 6.573799999998187e-05,
+        "fdopen_s": 0.00014071399345993996,
+        "file_bytes": 7487,
+        "flush_cpu_s": 1.8989999990282058e-06,
+        "flush_s": 1.6400008462369442e-06,
+        "fsync_cpu_s": 6.623500000024762e-05,
+        "fsync_s": 0.0011746059899451211,
+        "json_encode_cpu_s": 0.00038237000000052035,
+        "json_encode_s": 0.00037947499367874116,
+        "kernel_after_fsync": {
+          "diskstats": null,
+          "meminfo": {
+            "Buffers": 204488,
+            "Cached": 1749500,
+            "Dirty": 100,
+            "Writeback": 0,
+            "WritebackTmp": 0
+          },
+          "self/io": {
+            "cancelled_write_bytes": 0,
+            "wchar": 47257550,
+            "write_bytes": 0
+          },
+          "vmstat": {
+            "nr_dirty": 25,
+            "nr_writeback": 0
+          }
+        },
+        "kernel_before_fsync": {
+          "diskstats": null,
+          "meminfo": {
+            "Buffers": 204488,
+            "Cached": 1749500,
+            "Dirty": 100,
+            "Writeback": 0,
+            "WritebackTmp": 0
+          },
+          "self/io": {
+            "cancelled_write_bytes": 0,
+            "wchar": 47257550,
+            "write_bytes": 0
+          },
+          "vmstat": {
+            "nr_dirty": 25,
+            "nr_writeback": 0
+          }
+        },
+        "mkstemp_cpu_s": 0.00018043000000034226,
+        "mkstemp_s": 0.00046378599654417485,
+        "probe_after_cpu_s": 0.0008247309999998009,
+        "probe_after_s": 0.0008192920067813247,
+        "probe_before_cpu_s": 0.0006356369999984679,
+        "probe_before_s": 0.0006314269994618371,
+        "replace_cpu_s": 0.00011389799999861339,
+        "replace_s": 0.0003603850054787472,
+        "total_atomic_cpu_s": 0.0024853609999997417,
+        "total_atomic_s": 0.004698535005445592,
+        "write_cpu_s": 5.3142999998812e-05,
+        "write_s": 0.00018928901408798993
+      },
+      "metadata_atomic_cpu_s": 0.0026691840000001577,
+      "metadata_atomic_s": 0.004965546002495103,
+      "metadata_hash_cpu_s": 0.00042104899999984013,
+      "metadata_hash_s": 0.0004177800001343712,
+      "mkdtemp_cpu_s": 0.00024008699999988892,
+      "mkdtemp_s": 0.0008461979887215421,
+      "npz_bytes": 4717366,
+      "npz_compress_write_cpu_s": 0.7122398860000008,
+      "npz_compress_write_s": 0.7459046699950704,
+      "npz_sha256": "d60fd633db9a79d86cff8b23e863eb8c21db184aef0198ef39d10bea1341f189",
+      "open_cpu_s": 0.00025052700000038897,
+      "open_s": 0.0005425330018624663,
+      "probe_after_cpu_s": 0.0005922649999998697,
+      "probe_after_s": 0.0005890290049137548,
+      "probe_before_cpu_s": 0.0009182010000010621,
+      "probe_before_s": 0.0009146740048890933,
+      "rename_cpu_s": 0.00012563399999976355,
+      "rename_s": 0.0004966580017935485,
+      "repetition": 10,
+      "semantic_sha256": "bc229cc210b61b6b5ef374f9dd33ed69b88f540065652bc3b415c306e7222d21",
+      "total_archive_cpu_s": 0.7562651259999988,
+      "total_archive_s": 0.8055992640001932
+    }
+  ],
+  "returncode": 0,
+  "start_UTC": "2026-09-08T15:56:42.653916+00:00",
+  "starting_journal_bytes": 1328774,
+  "starting_journal_sha256": "5916da0860220fb0fa785c208897cbb6cab062fc465cada5ee4a1e0cac7f6a91",
+  "status": "complete",
+  "stderr": "",
+  "temporary_files_removed": true,
+  "wall_before_cleanup_s": 11.281677684004535,
+  "wall_s": 11.348071594999055
+}

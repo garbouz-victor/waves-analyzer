@@ -1,0 +1,14 @@
+[
+  {
+    "CreatedAt": "2026-09-08T15:51:32Z",
+    "Driver": "local",
+    "Labels": {
+      "owner": "step3a11",
+      "purpose": "temporary-io-attribution"
+    },
+    "Mountpoint": "/var/lib/docker/volumes/step3a11-e1980d0b0bc44c9082407dc899bca286/_data",
+    "Name": "step3a11-e1980d0b0bc44c9082407dc899bca286",
+    "Options": null,
+    "Scope": "local"
+  }
+]

@@ -1,0 +1,770 @@
+[
+  {
+    "file_size_after": 7379,
+    "line_bytes": 7379,
+    "offset_before": 0,
+    "step": 0
+  },
+  {
+    "file_size_after": 17987,
+    "line_bytes": 10608,
+    "offset_before": 7379,
+    "step": 1
+  },
+  {
+    "file_size_after": 28573,
+    "line_bytes": 10586,
+    "offset_before": 17987,
+    "step": 2
+  },
+  {
+    "file_size_after": 38947,
+    "line_bytes": 10374,
+    "offset_before": 28573,
+    "step": 3
+  },
+  {
+    "file_size_after": 49539,
+    "line_bytes": 10592,
+    "offset_before": 38947,
+    "step": 4
+  },
+  {
+    "file_size_after": 59920,
+    "line_bytes": 10381,
+    "offset_before": 49539,
+    "step": 5
+  },
+  {
+    "file_size_after": 70331,
+    "line_bytes": 10411,
+    "offset_before": 59920,
+    "step": 6
+  },
+  {
+    "file_size_after": 80729,
+    "line_bytes": 10398,
+    "offset_before": 70331,
+    "step": 7
+  },
+  {
+    "file_size_after": 91328,
+    "line_bytes": 10599,
+    "offset_before": 80729,
+    "step": 8
+  },
+  {
+    "file_size_after": 101706,
+    "line_bytes": 10378,
+    "offset_before": 91328,
+    "step": 9
+  },
+  {
+    "file_size_after": 112084,
+    "line_bytes": 10378,
+    "offset_before": 101706,
+    "step": 10
+  },
+  {
+    "file_size_after": 122475,
+    "line_bytes": 10391,
+    "offset_before": 112084,
+    "step": 11
+  },
+  {
+    "file_size_after": 132860,
+    "line_bytes": 10385,
+    "offset_before": 122475,
+    "step": 12
+  },
+  {
+    "file_size_after": 143246,
+    "line_bytes": 10386,
+    "offset_before": 132860,
+    "step": 13
+  },
+  {
+    "file_size_after": 153626,
+    "line_bytes": 10380,
+    "offset_before": 143246,
+    "step": 14
+  },
+  {
+    "file_size_after": 164015,
+    "line_bytes": 10389,
+    "offset_before": 153626,
+    "step": 15
+  },
+  {
+    "file_size_after": 174614,
+    "line_bytes": 10599,
+    "offset_before": 164015,
+    "step": 16
+  },
+  {
+    "file_size_after": 185002,
+    "line_bytes": 10388,
+    "offset_before": 174614,
+    "step": 17
+  },
+  {
+    "file_size_after": 195388,
+    "line_bytes": 10386,
+    "offset_before": 185002,
+    "step": 18
+  },
+  {
+    "file_size_after": 205763,
+    "line_bytes": 10375,
+    "offset_before": 195388,
+    "step": 19
+  },
+  {
+    "file_size_after": 216146,
+    "line_bytes": 10383,
+    "offset_before": 205763,
+    "step": 20
+  },
+  {
+    "file_size_after": 226542,
+    "line_bytes": 10396,
+    "offset_before": 216146,
+    "step": 21
+  },
+  {
+    "file_size_after": 236926,
+    "line_bytes": 10384,
+    "offset_before": 226542,
+    "step": 22
+  },
+  {
+    "file_size_after": 247328,
+    "line_bytes": 10402,
+    "offset_before": 236926,
+    "step": 23
+  },
+  {
+    "file_size_after": 257709,
+    "line_bytes": 10381,
+    "offset_before": 247328,
+    "step": 24
+  },
+  {
+    "file_size_after": 268108,
+    "line_bytes": 10399,
+    "offset_before": 257709,
+    "step": 25
+  },
+  {
+    "file_size_after": 278521,
+    "line_bytes": 10413,
+    "offset_before": 268108,
+    "step": 26
+  },
+  {
+    "file_size_after": 288906,
+    "line_bytes": 10385,
+    "offset_before": 278521,
+    "step": 27
+  },
+  {
+    "file_size_after": 299284,
+    "line_bytes": 10378,
+    "offset_before": 288906,
+    "step": 28
+  },
+  {
+    "file_size_after": 309661,
+    "line_bytes": 10377,
+    "offset_before": 299284,
+    "step": 29
+  },
+  {
+    "file_size_after": 320046,
+    "line_bytes": 10385,
+    "offset_before": 309661,
+    "step": 30
+  },
+  {
+    "file_size_after": 330430,
+    "line_bytes": 10384,
+    "offset_before": 320046,
+    "step": 31
+  },
+  {
+    "file_size_after": 341030,
+    "line_bytes": 10600,
+    "offset_before": 330430,
+    "step": 32
+  },
+  {
+    "file_size_after": 351420,
+    "line_bytes": 10390,
+    "offset_before": 341030,
+    "step": 33
+  },
+  {
+    "file_size_after": 361810,
+    "line_bytes": 10390,
+    "offset_before": 351420,
+    "step": 34
+  },
+  {
+    "file_size_after": 372214,
+    "line_bytes": 10404,
+    "offset_before": 361810,
+    "step": 35
+  },
+  {
+    "file_size_after": 382606,
+    "line_bytes": 10392,
+    "offset_before": 372214,
+    "step": 36
+  },
+  {
+    "file_size_after": 393002,
+    "line_bytes": 10396,
+    "offset_before": 382606,
+    "step": 37
+  },
+  {
+    "file_size_after": 403381,
+    "line_bytes": 10379,
+    "offset_before": 393002,
+    "step": 38
+  },
+  {
+    "file_size_after": 413762,
+    "line_bytes": 10381,
+    "offset_before": 403381,
+    "step": 39
+  },
+  {
+    "file_size_after": 424165,
+    "line_bytes": 10403,
+    "offset_before": 413762,
+    "step": 40
+  },
+  {
+    "file_size_after": 434550,
+    "line_bytes": 10385,
+    "offset_before": 424165,
+    "step": 41
+  },
+  {
+    "file_size_after": 444936,
+    "line_bytes": 10386,
+    "offset_before": 434550,
+    "step": 42
+  },
+  {
+    "file_size_after": 455345,
+    "line_bytes": 10409,
+    "offset_before": 444936,
+    "step": 43
+  },
+  {
+    "file_size_after": 465738,
+    "line_bytes": 10393,
+    "offset_before": 455345,
+    "step": 44
+  },
+  {
+    "file_size_after": 476124,
+    "line_bytes": 10386,
+    "offset_before": 465738,
+    "step": 45
+  },
+  {
+    "file_size_after": 486466,
+    "line_bytes": 10342,
+    "offset_before": 476124,
+    "step": 46
+  },
+  {
+    "file_size_after": 496848,
+    "line_bytes": 10382,
+    "offset_before": 486466,
+    "step": 47
+  },
+  {
+    "file_size_after": 507234,
+    "line_bytes": 10386,
+    "offset_before": 496848,
+    "step": 48
+  },
+  {
+    "file_size_after": 517651,
+    "line_bytes": 10417,
+    "offset_before": 507234,
+    "step": 49
+  },
+  {
+    "file_size_after": 528072,
+    "line_bytes": 10421,
+    "offset_before": 517651,
+    "step": 50
+  },
+  {
+    "file_size_after": 538472,
+    "line_bytes": 10400,
+    "offset_before": 528072,
+    "step": 51
+  },
+  {
+    "file_size_after": 548820,
+    "line_bytes": 10348,
+    "offset_before": 538472,
+    "step": 52
+  },
+  {
+    "file_size_after": 559198,
+    "line_bytes": 10378,
+    "offset_before": 548820,
+    "step": 53
+  },
+  {
+    "file_size_after": 569587,
+    "line_bytes": 10389,
+    "offset_before": 559198,
+    "step": 54
+  },
+  {
+    "file_size_after": 579994,
+    "line_bytes": 10407,
+    "offset_before": 569587,
+    "step": 55
+  },
+  {
+    "file_size_after": 590390,
+    "line_bytes": 10396,
+    "offset_before": 579994,
+    "step": 56
+  },
+  {
+    "file_size_after": 600778,
+    "line_bytes": 10388,
+    "offset_before": 590390,
+    "step": 57
+  },
+  {
+    "file_size_after": 611158,
+    "line_bytes": 10380,
+    "offset_before": 600778,
+    "step": 58
+  },
+  {
+    "file_size_after": 621551,
+    "line_bytes": 10393,
+    "offset_before": 611158,
+    "step": 59
+  },
+  {
+    "file_size_after": 631893,
+    "line_bytes": 10342,
+    "offset_before": 621551,
+    "step": 60
+  },
+  {
+    "file_size_after": 642265,
+    "line_bytes": 10372,
+    "offset_before": 631893,
+    "step": 61
+  },
+  {
+    "file_size_after": 652645,
+    "line_bytes": 10380,
+    "offset_before": 642265,
+    "step": 62
+  },
+  {
+    "file_size_after": 663030,
+    "line_bytes": 10385,
+    "offset_before": 652645,
+    "step": 63
+  },
+  {
+    "file_size_after": 673652,
+    "line_bytes": 10622,
+    "offset_before": 663030,
+    "step": 64
+  },
+  {
+    "file_size_after": 684042,
+    "line_bytes": 10390,
+    "offset_before": 673652,
+    "step": 65
+  },
+  {
+    "file_size_after": 694417,
+    "line_bytes": 10375,
+    "offset_before": 684042,
+    "step": 66
+  },
+  {
+    "file_size_after": 704813,
+    "line_bytes": 10396,
+    "offset_before": 694417,
+    "step": 67
+  },
+  {
+    "file_size_after": 715226,
+    "line_bytes": 10413,
+    "offset_before": 704813,
+    "step": 68
+  },
+  {
+    "file_size_after": 725627,
+    "line_bytes": 10401,
+    "offset_before": 715226,
+    "step": 69
+  },
+  {
+    "file_size_after": 735998,
+    "line_bytes": 10371,
+    "offset_before": 725627,
+    "step": 70
+  },
+  {
+    "file_size_after": 746381,
+    "line_bytes": 10383,
+    "offset_before": 735998,
+    "step": 71
+  },
+  {
+    "file_size_after": 756757,
+    "line_bytes": 10376,
+    "offset_before": 746381,
+    "step": 72
+  },
+  {
+    "file_size_after": 767151,
+    "line_bytes": 10394,
+    "offset_before": 756757,
+    "step": 73
+  },
+  {
+    "file_size_after": 777553,
+    "line_bytes": 10402,
+    "offset_before": 767151,
+    "step": 74
+  },
+  {
+    "file_size_after": 787937,
+    "line_bytes": 10384,
+    "offset_before": 777553,
+    "step": 75
+  },
+  {
+    "file_size_after": 798322,
+    "line_bytes": 10385,
+    "offset_before": 787937,
+    "step": 76
+  },
+  {
+    "file_size_after": 808717,
+    "line_bytes": 10395,
+    "offset_before": 798322,
+    "step": 77
+  },
+  {
+    "file_size_after": 819113,
+    "line_bytes": 10396,
+    "offset_before": 808717,
+    "step": 78
+  },
+  {
+    "file_size_after": 829515,
+    "line_bytes": 10402,
+    "offset_before": 819113,
+    "step": 79
+  },
+  {
+    "file_size_after": 839890,
+    "line_bytes": 10375,
+    "offset_before": 829515,
+    "step": 80
+  },
+  {
+    "file_size_after": 850268,
+    "line_bytes": 10378,
+    "offset_before": 839890,
+    "step": 81
+  },
+  {
+    "file_size_after": 860656,
+    "line_bytes": 10388,
+    "offset_before": 850268,
+    "step": 82
+  },
+  {
+    "file_size_after": 871054,
+    "line_bytes": 10398,
+    "offset_before": 860656,
+    "step": 83
+  },
+  {
+    "file_size_after": 881457,
+    "line_bytes": 10403,
+    "offset_before": 871054,
+    "step": 84
+  },
+  {
+    "file_size_after": 891860,
+    "line_bytes": 10403,
+    "offset_before": 881457,
+    "step": 85
+  },
+  {
+    "file_size_after": 902268,
+    "line_bytes": 10408,
+    "offset_before": 891860,
+    "step": 86
+  },
+  {
+    "file_size_after": 912667,
+    "line_bytes": 10399,
+    "offset_before": 902268,
+    "step": 87
+  },
+  {
+    "file_size_after": 923055,
+    "line_bytes": 10388,
+    "offset_before": 912667,
+    "step": 88
+  },
+  {
+    "file_size_after": 933436,
+    "line_bytes": 10381,
+    "offset_before": 923055,
+    "step": 89
+  },
+  {
+    "file_size_after": 943844,
+    "line_bytes": 10408,
+    "offset_before": 933436,
+    "step": 90
+  },
+  {
+    "file_size_after": 954229,
+    "line_bytes": 10385,
+    "offset_before": 943844,
+    "step": 91
+  },
+  {
+    "file_size_after": 964618,
+    "line_bytes": 10389,
+    "offset_before": 954229,
+    "step": 92
+  },
+  {
+    "file_size_after": 975005,
+    "line_bytes": 10387,
+    "offset_before": 964618,
+    "step": 93
+  },
+  {
+    "file_size_after": 985389,
+    "line_bytes": 10384,
+    "offset_before": 975005,
+    "step": 94
+  },
+  {
+    "file_size_after": 995768,
+    "line_bytes": 10379,
+    "offset_before": 985389,
+    "step": 95
+  },
+  {
+    "file_size_after": 1006154,
+    "line_bytes": 10386,
+    "offset_before": 995768,
+    "step": 96
+  },
+  {
+    "file_size_after": 1016567,
+    "line_bytes": 10413,
+    "offset_before": 1006154,
+    "step": 97
+  },
+  {
+    "file_size_after": 1026978,
+    "line_bytes": 10411,
+    "offset_before": 1016567,
+    "step": 98
+  },
+  {
+    "file_size_after": 1037368,
+    "line_bytes": 10390,
+    "offset_before": 1026978,
+    "step": 99
+  },
+  {
+    "file_size_after": 1047771,
+    "line_bytes": 10403,
+    "offset_before": 1037368,
+    "step": 100
+  },
+  {
+    "file_size_after": 1058177,
+    "line_bytes": 10406,
+    "offset_before": 1047771,
+    "step": 101
+  },
+  {
+    "file_size_after": 1068554,
+    "line_bytes": 10377,
+    "offset_before": 1058177,
+    "step": 102
+  },
+  {
+    "file_size_after": 1078940,
+    "line_bytes": 10386,
+    "offset_before": 1068554,
+    "step": 103
+  },
+  {
+    "file_size_after": 1089320,
+    "line_bytes": 10380,
+    "offset_before": 1078940,
+    "step": 104
+  },
+  {
+    "file_size_after": 1099715,
+    "line_bytes": 10395,
+    "offset_before": 1089320,
+    "step": 105
+  },
+  {
+    "file_size_after": 1110103,
+    "line_bytes": 10388,
+    "offset_before": 1099715,
+    "step": 106
+  },
+  {
+    "file_size_after": 1120491,
+    "line_bytes": 10388,
+    "offset_before": 1110103,
+    "step": 107
+  },
+  {
+    "file_size_after": 1130885,
+    "line_bytes": 10394,
+    "offset_before": 1120491,
+    "step": 108
+  },
+  {
+    "file_size_after": 1141286,
+    "line_bytes": 10401,
+    "offset_before": 1130885,
+    "step": 109
+  },
+  {
+    "file_size_after": 1151689,
+    "line_bytes": 10403,
+    "offset_before": 1141286,
+    "step": 110
+  },
+  {
+    "file_size_after": 1162073,
+    "line_bytes": 10384,
+    "offset_before": 1151689,
+    "step": 111
+  },
+  {
+    "file_size_after": 1172470,
+    "line_bytes": 10397,
+    "offset_before": 1162073,
+    "step": 112
+  },
+  {
+    "file_size_after": 1182861,
+    "line_bytes": 10391,
+    "offset_before": 1172470,
+    "step": 113
+  },
+  {
+    "file_size_after": 1193268,
+    "line_bytes": 10407,
+    "offset_before": 1182861,
+    "step": 114
+  },
+  {
+    "file_size_after": 1203682,
+    "line_bytes": 10414,
+    "offset_before": 1193268,
+    "step": 115
+  },
+  {
+    "file_size_after": 1214070,
+    "line_bytes": 10388,
+    "offset_before": 1203682,
+    "step": 116
+  },
+  {
+    "file_size_after": 1224458,
+    "line_bytes": 10388,
+    "offset_before": 1214070,
+    "step": 117
+  },
+  {
+    "file_size_after": 1234809,
+    "line_bytes": 10351,
+    "offset_before": 1224458,
+    "step": 118
+  },
+  {
+    "file_size_after": 1245202,
+    "line_bytes": 10393,
+    "offset_before": 1234809,
+    "step": 119
+  },
+  {
+    "file_size_after": 1255596,
+    "line_bytes": 10394,
+    "offset_before": 1245202,
+    "step": 120
+  },
+  {
+    "file_size_after": 1265991,
+    "line_bytes": 10395,
+    "offset_before": 1255596,
+    "step": 121
+  },
+  {
+    "file_size_after": 1276593,
+    "line_bytes": 10602,
+    "offset_before": 1265991,
+    "step": 122
+  },
+  {
+    "file_size_after": 1287203,
+    "line_bytes": 10610,
+    "offset_before": 1276593,
+    "step": 123
+  },
+  {
+    "file_size_after": 1297578,
+    "line_bytes": 10375,
+    "offset_before": 1287203,
+    "step": 124
+  },
+  {
+    "file_size_after": 1307986,
+    "line_bytes": 10408,
+    "offset_before": 1297578,
+    "step": 125
+  },
+  {
+    "file_size_after": 1318371,
+    "line_bytes": 10385,
+    "offset_before": 1307986,
+    "step": 126
+  },
+  {
+    "file_size_after": 1328774,
+    "line_bytes": 10403,
+    "offset_before": 1318371,
+    "step": 127
+  }
+]

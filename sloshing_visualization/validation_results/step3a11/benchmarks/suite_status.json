@@ -1,0 +1,25 @@
+{
+  "actual_cap_pass": true,
+  "cap_s": 3600.0,
+  "completed_batches": [
+    "bind_burst.json",
+    "host_burst.json",
+    "container_tmp_burst.json",
+    "docker_volume_burst.json",
+    "bind_paced.json",
+    "control_fsync.json",
+    "control_fdatasync.json",
+    "control_flush_only.json",
+    "atomic_bind.json",
+    "atomic_container_tmp.json",
+    "archive_npz.json",
+    "strace_sequence.json"
+  ],
+  "end_UTC": "2026-09-08T15:56:57.436827+00:00",
+  "policy_sha256": "36037021a673fcf3605b794662bf4424032f4e9385117abebf1cef92ce697444",
+  "start_UTC": "2026-09-08T15:51:31.951996+00:00",
+  "status": "complete",
+  "volume": "step3a11-e1980d0b0bc44c9082407dc899bca286",
+  "volume_removed_after_empty_check": true,
+  "wall_s": 325.48498050961643
+}

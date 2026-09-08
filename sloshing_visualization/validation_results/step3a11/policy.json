@@ -1,0 +1,316 @@
+{
+  "base_HEAD": "f78f90ce2c690ab444de5224c3c395ba2f8a4213",
+  "budget_s": 3600.0,
+  "cleanup_reserve_s": 15.0,
+  "context_order": [
+    "bind",
+    "host",
+    "container_tmp",
+    "docker_volume"
+  ],
+  "counts": {
+    "archive": 10,
+    "atomic": 30,
+    "burst": 120,
+    "paced": 60,
+    "sync_control": 30,
+    "trace": 20
+  },
+  "docker_context": "desktop-linux",
+  "exploratory_byte_boundaries": [
+    4096,
+    65536,
+    1048576
+  ],
+  "image_digest": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+  "kernel_probes": "before/after durability call; overhead included in total/non_fsync, not fsync",
+  "no_PDE": true,
+  "no_continuation_authorization": true,
+  "no_production_storage_changes": true,
+  "operation": {
+    "median_fsync_fraction_min": 0.9,
+    "min_stalls": 5,
+    "non_fsync_p95_max_s": 0.1,
+    "other_phase_median_fraction_strict_max": 0.2,
+    "primary": "bind_burst ONLY"
+  },
+  "paced_delays": [
+    {
+      "core_s": 4.419267489000049,
+      "step": 3
+    },
+    {
+      "core_s": 4.108780197006126,
+      "step": 5
+    },
+    {
+      "core_s": 4.105370863995631,
+      "step": 6
+    },
+    {
+      "core_s": 4.306200554005045,
+      "step": 7
+    },
+    {
+      "core_s": 4.401801820000401,
+      "step": 9
+    },
+    {
+      "core_s": 4.6526869049994275,
+      "step": 10
+    },
+    {
+      "core_s": 4.287865148995479,
+      "step": 11
+    },
+    {
+      "core_s": 4.697248660995683,
+      "step": 12
+    },
+    {
+      "core_s": 4.22968196299189,
+      "step": 13
+    },
+    {
+      "core_s": 4.529106447000231,
+      "step": 14
+    },
+    {
+      "core_s": 4.214052706003713,
+      "step": 15
+    },
+    {
+      "core_s": 3.4316571919989656,
+      "step": 17
+    },
+    {
+      "core_s": 3.653736404994561,
+      "step": 18
+    },
+    {
+      "core_s": 4.180643414998485,
+      "step": 19
+    },
+    {
+      "core_s": 3.7532012479932746,
+      "step": 20
+    },
+    {
+      "core_s": 3.914296385999478,
+      "step": 21
+    },
+    {
+      "core_s": 4.3328359960069065,
+      "step": 22
+    },
+    {
+      "core_s": 3.459786081999482,
+      "step": 23
+    },
+    {
+      "core_s": 3.465748253001948,
+      "step": 24
+    },
+    {
+      "core_s": 3.902729413995985,
+      "step": 29
+    },
+    {
+      "core_s": 4.235524910996901,
+      "step": 30
+    },
+    {
+      "core_s": 3.8829918690025806,
+      "step": 31
+    },
+    {
+      "core_s": 4.145947511002305,
+      "step": 33
+    },
+    {
+      "core_s": 3.8042129880050197,
+      "step": 34
+    },
+    {
+      "core_s": 3.67627511399769,
+      "step": 35
+    },
+    {
+      "core_s": 4.089045637003437,
+      "step": 36
+    },
+    {
+      "core_s": 4.0391311299972585,
+      "step": 37
+    },
+    {
+      "core_s": 4.020385344003444,
+      "step": 38
+    },
+    {
+      "core_s": 3.7384902049961966,
+      "step": 39
+    },
+    {
+      "core_s": 3.9662764219974633,
+      "step": 40
+    },
+    {
+      "core_s": 3.729206731004524,
+      "step": 41
+    },
+    {
+      "core_s": 4.345593061996624,
+      "step": 42
+    },
+    {
+      "core_s": 3.334768092005106,
+      "step": 43
+    },
+    {
+      "core_s": 3.759769612996024,
+      "step": 44
+    },
+    {
+      "core_s": 4.290905241003202,
+      "step": 45
+    },
+    {
+      "core_s": 4.226985781999247,
+      "step": 46
+    },
+    {
+      "core_s": 4.150573014005204,
+      "step": 47
+    },
+    {
+      "core_s": 4.299989844002994,
+      "step": 48
+    },
+    {
+      "core_s": 3.943088597006863,
+      "step": 49
+    },
+    {
+      "core_s": 6.79030236700055,
+      "step": 51
+    },
+    {
+      "core_s": 5.191500297994935,
+      "step": 52
+    },
+    {
+      "core_s": 4.960597910998331,
+      "step": 53
+    },
+    {
+      "core_s": 5.072964774997672,
+      "step": 54
+    },
+    {
+      "core_s": 4.560135330997582,
+      "step": 55
+    },
+    {
+      "core_s": 4.16845447900414,
+      "step": 56
+    },
+    {
+      "core_s": 4.475041235004028,
+      "step": 57
+    },
+    {
+      "core_s": 4.356410625005083,
+      "step": 58
+    },
+    {
+      "core_s": 4.663294395002595,
+      "step": 59
+    },
+    {
+      "core_s": 4.501360612004646,
+      "step": 60
+    },
+    {
+      "core_s": 5.205523376003839,
+      "step": 61
+    },
+    {
+      "core_s": 4.36319751800329,
+      "step": 62
+    },
+    {
+      "core_s": 4.587500745001307,
+      "step": 63
+    },
+    {
+      "core_s": 4.913474746987049,
+      "step": 65
+    },
+    {
+      "core_s": 4.6440047129945015,
+      "step": 66
+    },
+    {
+      "core_s": 4.3365162320042145,
+      "step": 67
+    },
+    {
+      "core_s": 4.116965301000164,
+      "step": 68
+    },
+    {
+      "core_s": 4.358982853998896,
+      "step": 69
+    },
+    {
+      "core_s": 4.948759254999459,
+      "step": 70
+    },
+    {
+      "core_s": 4.129102850005438,
+      "step": 71
+    },
+    {
+      "core_s": 3.699581148001016,
+      "step": 72
+    }
+  ],
+  "pacing_cap_s": null,
+  "path": {
+    "bind_p95_ratio_min": 5.0,
+    "fast_stall_fraction_max": 0.02,
+    "host_bind_ratio_strict_max": 2.0,
+    "materially_faster_ratio": 5.0,
+    "p95_floor_s": 1e-06,
+    "required_fast_controls": 2,
+    "slow_stall_fraction_min": 0.05
+  },
+  "payload_steps": [
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109
+  ],
+  "percentile": "linear interpolation",
+  "phase_timer": "perf_counter wall + process_time CPU",
+  "source_sha256": {
+    "STEP3A11_DESIGN.md": "9d933db7d739d08a23f82645b200a0ff89d02fac6bc5da122757b0ddce9c7d3b",
+    "scripts/step3a11_host_io.py": "7d64e9f54a8fac898129ee936226fa3028b3afcb1c06e7b185aa0f147dac345c",
+    "scripts/step3a11_io_attribution.py": "7a9db8a76c67b414398f30ef1fa61a73449a29814c34b286a3bbd62795a006b0",
+    "scripts/step3a11_report.py": "eaa4fd73fc2b39ff35420b927df99b4e688973b2fccf87d83dc9c913082e9168",
+    "tests/test_step3a11_io.py": "0cecee63d5773ad2259185ca1a273ad627f3a687d40aebae7ac4ba4f4ba24733"
+  },
+  "stall_s": 1.0,
+  "starting_journal_bytes": 1328774,
+  "starting_journal_sha256": "5916da0860220fb0fa785c208897cbb6cab062fc465cada5ee4a1e0cac7f6a91",
+  "timestamp_UTC": "2026-09-08T15:39:31.050918+00:00",
+  "version": "step3a11-latency-attribution-v1",
+  "wilson_z": 1.959963984540054
+}

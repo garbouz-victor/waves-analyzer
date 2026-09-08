@@ -1,0 +1,19 @@
+{
+  "COMPLETE_exists": false,
+  "FAILED_exists": false,
+  "accepted_steps": 127,
+  "administrative_guard_version": "step3a10-numerical-identity-with-separate-session-lineage-v1",
+  "all_inherited_bindings_unchanged": true,
+  "archive_members_identical": 72,
+  "checkpoint_sha256": "bc229cc210b61b6b5ef374f9dd33ed69b88f540065652bc3b415c306e7222d21",
+  "current_session_HEAD": "f78f90ce2c690ab444de5224c3c395ba2f8a4213",
+  "historical_checkpoint_identity_role": "immutable trajectory origin, NOT current session HEAD",
+  "historical_execution_base_HEAD": "5f2d9498e1d0715f57b125ee49b4ddfd533467ae",
+  "interval128_executed": false,
+  "numerical_guard": "PASS",
+  "numerical_identity_sha256": "3c5750c879403b190ec02f9b88592d80348034c649cc48007410ca2061ba090e",
+  "prefix_guard": "PASS",
+  "primary_sessions": 2,
+  "time": 6.148107277665776e-10,
+  "timestamp_UTC": "2026-09-08T15:57:57.724912+00:00"
+}
