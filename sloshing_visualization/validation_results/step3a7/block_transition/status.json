@@ -1,0 +1,62 @@
+{
+  "before_iterations": [
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "first_block_end": 122,
+  "first_post_boundary": 123,
+  "passed": true,
+  "post_boundary": {
+    "actual_controls": {
+      "atol": 1e-10,
+      "factor_solver_type": "mumps",
+      "ksp_type": "preonly",
+      "line_search_type": "bt",
+      "max_it": 30,
+      "pc_type": "lu",
+      "rtol": 1e-09,
+      "snes_type": "newtonls",
+      "stol": 0.0
+    },
+    "dt": 9.315314057069358e-12,
+    "dt_reductions": 0,
+    "dt_times_rate_max_abs": 2.895378395728337e-08,
+    "effective_target": 1e-10,
+    "formulation": "isolated-CH-BE-phase-rate-v2-transactional-retained",
+    "guess": {
+      "L2": 102.1389234485376,
+      "max_abs": 3151.8053751521347,
+      "policy": "previous accepted rate, unscaled",
+      "sha256": "0a793c9d0cee95b1b8ab1c5ae729b51c78a6e51b42be2905ed12f65c96996333"
+    },
+    "initial_residual": 4.15548491130545e-09,
+    "mu_L2": 0.15267337185532617,
+    "rate_L2": 101.39968724130613,
+    "rate_max_abs": 3108.1919278191644,
+    "reason": 2,
+    "residual": 1.0118177987671685e-14,
+    "retained_rate_sha256": "6c221855844e53bdd3dd3fe8498325b58e8430212cecf703c8137e3f3eca7e10",
+    "runtime_s": 0.7020380830003887,
+    "snes_iterations": 1,
+    "step": 123,
+    "time": 5.775494715383002e-10,
+    "trace": [
+      {
+        "KSP_iterations": null,
+        "KSP_reason": null,
+        "iteration": 0,
+        "residual": 4.15548491130545e-09
+      },
+      {
+        "KSP_iterations": 1,
+        "KSP_reason": 4,
+        "iteration": 1,
+        "residual": 1.0118177987671685e-14
+      }
+    ]
+  },
+  "previous_rate_not_rescaled": true
+}

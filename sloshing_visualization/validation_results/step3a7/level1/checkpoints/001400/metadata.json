@@ -1,0 +1,142 @@
+{
+  "accepted": true,
+  "accepted_steps": 1400,
+  "archive_version": "accepted-phase-rate-trajectory-v1",
+  "array_sha256": {
+    "mu": "4b775c386f4d8080d192daddcc0cdfdf614869f5d68061f0f3548be931cf46d0",
+    "mu_map": "348e21cf3e5cd7784c3ec8a1f4b593ff4d5f7b35310feaede686d6c453dc72c3",
+    "old": "e125d1e81a697586bdd294a8916561e827e401aa253820b4086a0c167dbe469e",
+    "older": "f44ffb1145b29fbe086ffcb313b1965025b8be26ee610ebeded3fb31e09608f1",
+    "phase_rate": "fafe8403b7038f4497b5e7449bdfb85da0d1450c74273231c810edf199a51a0b",
+    "phi": "46e8226f689f8ffaf0d5da1eb593d12a9e12f983dfde30a59f89c0792c2bd072",
+    "physical_mu_map": "43f39adbeec2fdddd8c302b76ad82e240166441965f939c2600a8e4f713069be",
+    "physical_phi_map": "10b48e7f85fbcb99fcc70b3e50ae277ec68666c969b111077aa760e52eecdd78",
+    "rate_map": "1f0061f0e9f1fcf7fa41a46c57fc1fa63aa1b6699ad175a4bb2ed333e693fbe5",
+    "state": "e125d1e81a697586bdd294a8916561e827e401aa253820b4086a0c167dbe469e"
+  },
+  "current_dt": 3.815552637775609e-08,
+  "current_phase": "isolated_ch_phase_rate_be",
+  "diagnostics": {
+    "cumulative": {
+      "CH": 1.1144711244666772e-08,
+      "slip": 0.0,
+      "viscous": 0.0
+    },
+    "initial": {
+      "CH_dissipation": 0.11400313905309394,
+      "E_gravity": 0.0,
+      "E_interface": 0.05995161915611929,
+      "E_kin": 0.0,
+      "E_total": 0.06564278268454628,
+      "E_wall": 0.0056911635284269835,
+      "liquid_volume": 0.0569519486252139,
+      "mu_integral": 0.12954247483480114,
+      "mu_squared_integral": 0.023309239590008007,
+      "omega_L2": 0.0,
+      "phase_mass": -0.6060961027499487,
+      "phi_max_dof": 1.0156953397485375,
+      "phi_min_dof": -0.9790806990532334,
+      "relative_strong_divergence": 0.0,
+      "slip_dissipation": 0.0,
+      "speed_max_dof_sample": 0.0,
+      "strong_divergence_L2": 0.0,
+      "time": 0.0,
+      "viscous_dissipation": 0.0,
+      "wall_normal_velocity_L2": 0.0,
+      "wall_relaxation_dissipation": 0.0
+    },
+    "previous": {
+      "CH_dissipation": 0.001641703801487007,
+      "E_gravity": 0.0,
+      "E_interface": 0.0599516080233225,
+      "E_kin": 0.0,
+      "E_positive_scale": 0.06564277155174951,
+      "E_total": 0.06564277155174951,
+      "E_wall": 0.005691163528427015,
+      "cumulative_CH_dissipation": 1.1144711244666772e-08,
+      "cumulative_slip_dissipation": 0.0,
+      "cumulative_viscous_dissipation": 0.0,
+      "delta_E_interval": -6.271182184658386e-11,
+      "energy_budget_defect": 1.1914476879105363e-11,
+      "energy_budget_relative": 1.8150475028399864e-10,
+      "energy_budget_relative_to_change": 0.0,
+      "energy_budget_relative_to_initial_scale": 1.8150475028399864e-10,
+      "energy_budget_symmetric_diagnostic": 0.0005324309066261639,
+      "energy_budget_symmetric_diagnostic_only": 1.0,
+      "energy_change_relative_applicable": 0.0,
+      "interval_CH_dissipation": 6.278637057713552e-11,
+      "interval_slip_dissipation": 0.0,
+      "interval_viscous_dissipation": 0.0,
+      "liquid_volume": 0.05695194862521329,
+      "liquid_volume_error_relative": -1.0599879094789473e-14,
+      "local_budget_defect": 7.454873055165579e-14,
+      "mass_error_abs": 2.5979218776228663e-14,
+      "mass_error_relative_to_domain": 3.608224830031759e-14,
+      "mu_mean_Pa": 0.17992012350589676,
+      "mu_std_Pa": 0.0011818323130912353,
+      "omega_L2": 0.0,
+      "phase_mass": -0.6060961027499228,
+      "phi_max_dof": 1.0156953397485273,
+      "phi_min_dof": -0.9790744837450042,
+      "relative_mu_variation": 0.006568649965674915,
+      "relative_strong_divergence": 0.0,
+      "slip_dissipation": 0.0,
+      "speed_max_dof_sample": 0.0,
+      "strong_divergence_L2": 0.0,
+      "time": 3.7492648629455035e-06,
+      "viscous_dissipation": 0.0,
+      "wall_normal_velocity_L2": 0.0,
+      "wall_relaxation_dissipation": 0.0
+    }
+  },
+  "has_accepted_rate": true,
+  "identity": {
+    "implementation": {
+      "docker_image": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+      "execution_base_HEAD": "dfe272049123ecbd9d200af8ff070ae4eb4b08d3",
+      "multiphase_source_sha256": "e762d8a21f3b0b35c72a49efa5cff581f0153d9bebc40c0c266ecb31265808f9",
+      "phase_rate_version": "isolated-CH-BE-phase-rate-v2-transactional-retained",
+      "runner_source_sha256": "6fef8605de514ba61de71a49e129a84177c803b5dd7f87f17627ebc0f8e64e27"
+    },
+    "input_hashes": {
+      "equilibrium_fingerprint": "df3a6176bc442190c15ca8e4b6faa2c885dbbe89d5126196148d92b1552809fc",
+      "initial_phi_sha256": "6e59cd0bd3ee5c421af9694508d439e8e05a565de329ed38a14af39444d4e681",
+      "optimized_plan_sha256": "5d291468a3520da5267a8d76b8015d0709f5e28b44fbaa5f8a7c6b264664e2b8",
+      "perturbation_coefficient_sha256": "831db9041c11ce04ab8974f34e841b62b56bd77474290e3c978c9b5f5af724d0"
+    },
+    "level": 1,
+    "mesh_fingerprint": "93dbd2cf76148bcd50afef9e353c55f92c15789ad0e303dbb97435a4672b9b15",
+    "parent_plan_sha256": "5d291468a3520da5267a8d76b8015d0709f5e28b44fbaa5f8a7c6b264664e2b8",
+    "physical_config_fingerprint": "d42900144d7d75c67e4455351ac98a0c41083623ed06de5c2987c1d35a485650",
+    "policy_sha256": "1113da00ba12ddc746e362841eeee44c20a6ee87422342fe6e78b9c798dc2a47",
+    "rank_count": 1,
+    "schedule_sha256": "a289d4ea7769f6d0be6e06d5bd4b1aad5c587696c9303f7d05e68a68e9753a08",
+    "stack": {
+      "DOLFINx": "0.10.0",
+      "MUMPS": "5.8.1",
+      "PETSc": [
+        3,
+        24,
+        0
+      ],
+      "UFL": "2025.2.0",
+      "precision_bits": 64,
+      "rank_count": 1,
+      "scalar_precision": "float64",
+      "scipy": "1.16.2"
+    }
+  },
+  "journal_prefix": {
+    "bytes": 12478546,
+    "records": 1401,
+    "sha256": "305d44c205b5947e51450ab3aaca087616ec94c56da1777e83989e4760c035a5"
+  },
+  "semantic_sha256": "4f65cc80763048dca3999b9729471b0be5df5bb805563da6986251e8981389fe",
+  "time": 3.7492648629455035e-06,
+  "work_sums": {
+    "BE_endpoint_integral": 1.11209712338516e-08,
+    "B_BE": 1.182666611019948e-11,
+    "Delta_E": -1.1132797899832583e-08,
+    "weak_work_defect": 1.9190955951127274e-19
+  }
+}

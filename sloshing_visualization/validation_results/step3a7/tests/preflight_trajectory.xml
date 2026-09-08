@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="6" time="26.505" timestamp="2026-09-07T21:42:43.881188+00:00" hostname="bc6c1e1e4d8d"><testcase classname="tests.test_step3a7_trajectory" name="test_multistep_block_transition_and_retained_unscaled_guess" time="16.797" /><testcase classname="tests.test_step3a7_trajectory" name="test_restart_in_new_process_across_dt_boundary" time="4.472"><failure message="subprocess.CalledProcessError: Command '['/dolfinx-env/bin/python3', '-c', 'from test_step3a7_trajectory import make_runner; import sys; r=make_runner(sys.argv[1],resume=True); r.run_until(6); r.close()', '/tmp/pytest-of-root/pytest-0/test_restart_in_new_process_ac0/split']' returned non-zero exit status 1.">tmp_path = PosixPath('/tmp/pytest-of-root/pytest-0/test_restart_in_new_process_ac0')
+
+    def test_restart_in_new_process_across_dt_boundary(tmp_path):
+        full=make_runner(tmp_path/"full"); split=make_runner(tmp_path/"split")
+        try:
+            full.run_until(6); split.run_until(3)
+        finally: full.close(); split.close()
+        # Fresh Python/FEniCSx runner; the resumed first interval changes dt.
+        code="from test_step3a7_trajectory import make_runner; import sys; r=make_runner(sys.argv[1],resume=True); r.run_until(6); r.close()"
+        env=dict(os.environ,PYTHONPATH=os.pathsep.join([str(Path("tests").resolve()),str(Path("src").resolve())]))
+&gt;       subprocess.run([sys.executable,"-c",code,str(tmp_path/"split")],check=True,env=env,timeout=180)
+
+tests/test_step3a7_trajectory.py:55: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = None, capture_output = False, timeout = 180, check = True
+popenargs = (['/dolfinx-env/bin/python3', '-c', 'from test_step3a7_trajectory import make_runner; import sys; r=make_runner(sys.argv[1],resume=True); r.run_until(6); r.close()', '/tmp/pytest-of-root/pytest-0/test_restart_in_new_process_ac0/split'],)
+kwargs = {'env': {'CMAKE_PREFIX_PATH': '/usr/local/dolfinx-real/lib/cmake:', 'HOME': '/root', 'HOSTNAME': 'bc6c1e1e4d8d', 'LC_CTYPE': 'C.UTF-8', ...}}
+process = &lt;Popen: returncode: 1 args: ['/dolfinx-env/bin/python3', '-c', 'from test_st...&gt;
+stdout = None, stderr = None, retcode = 1
+
+    def run(*popenargs,
+            input=None, capture_output=False, timeout=None, check=False, **kwargs):
+        """Run command with arguments and return a CompletedProcess instance.
+    
+        The returned instance will have attributes args, returncode, stdout and
+        stderr. By default, stdout and stderr are not captured, and those attributes
+        will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,
+        or pass capture_output=True to capture both.
+    
+        If check is True and the exit code was non-zero, it raises a
+        CalledProcessError. The CalledProcessError object will have the return code
+        in the returncode attribute, and output &amp; stderr attributes if those streams
+        were captured.
+    
+        If timeout is given, and the process takes too long, a TimeoutExpired
+        exception will be raised.
+    
+        There is an optional argument "input", allowing you to
+        pass bytes or a string to the subprocess's stdin.  If you use this argument
+        you may not also use the Popen constructor's "stdin" argument, as
+        it will be used internally.
+    
+        By default, all communication is in bytes, and therefore any "input" should
+        be bytes, and the stdout and stderr will be bytes. If in text mode, any
+        "input" should be a string, and stdout and stderr will be strings decoded
+        according to locale encoding, or by "encoding" if set. Text mode is
+        triggered by setting any of text, encoding, errors or universal_newlines.
+    
+        The other arguments are the same as for the Popen constructor.
+        """
+        if input is not None:
+            if kwargs.get('stdin') is not None:
+                raise ValueError('stdin and input arguments may not both be used.')
+            kwargs['stdin'] = PIPE
+    
+        if capture_output:
+            if kwargs.get('stdout') is not None or kwargs.get('stderr') is not None:
+                raise ValueError('stdout and stderr arguments may not be used '
+                                 'with capture_output.')
+            kwargs['stdout'] = PIPE
+            kwargs['stderr'] = PIPE
+    
+        with Popen(*popenargs, **kwargs) as process:
+            try:
+                stdout, stderr = process.communicate(input, timeout=timeout)
+            except TimeoutExpired as exc:
+                process.kill()
+                if _mswindows:
+                    # Windows accumulates the output in a single blocking
+                    # read() call run on child threads, with the timeout
+                    # being done in a join() on those threads.  communicate()
+                    # _after_ kill() is required to collect that and add it
+                    # to the exception.
+                    exc.stdout, exc.stderr = process.communicate()
+                else:
+                    # POSIX _communicate already populated the output so
+                    # far into the TimeoutExpired exception.
+                    process.wait()
+                raise
+            except:  # Including KeyboardInterrupt, communicate handled that.
+                process.kill()
+                # We don't call process.wait() as .__exit__ does that for us.
+                raise
+            retcode = process.poll()
+            if check and retcode:
+&gt;               raise CalledProcessError(retcode, process.args,
+                                         output=stdout, stderr=stderr)
+E               subprocess.CalledProcessError: Command '['/dolfinx-env/bin/python3', '-c', 'from test_step3a7_trajectory import make_runner; import sys; r=make_runner(sys.argv[1],resume=True); r.run_until(6); r.close()', '/tmp/pytest-of-root/pytest-0/test_restart_in_new_process_ac0/split']' returned non-zero exit status 1.
+
+/usr/lib/python3.12/subprocess.py:571: CalledProcessError</failure></testcase><testcase classname="tests.test_step3a7_trajectory" name="test_failed_step_preserves_accepted_history_rate_and_checkpoint[SNES]" time="0.517" /><testcase classname="tests.test_step3a7_trajectory" name="test_failed_step_preserves_accepted_history_rate_and_checkpoint[material]" time="0.450" /><testcase classname="tests.test_step3a7_trajectory" name="test_failed_step_preserves_accepted_history_rate_and_checkpoint[work]" time="0.418" /><testcase classname="tests.test_step3a7_trajectory" name="test_tiny_three_level_nonlinear_convergence" time="3.560" /></testsuite></testsuites>

@@ -1,0 +1,49 @@
+{
+  "archive_version": "accepted-phase-rate-trajectory-v1",
+  "array_sha256": {
+    "mu": "43161705b81897f1f88f54b15a34b2057d30e8e30756c902c2a1be19d5824aa5",
+    "phase_rate": "0a793c9d0cee95b1b8ab1c5ae729b51c78a6e51b42be2905ed12f65c96996333",
+    "phi": "91ff7c5218789f1e00b617b6de05098785a752bdd8a50ad409142cc24d2984e6"
+  },
+  "dt": 4.657657028534679e-12,
+  "identity": {
+    "implementation": {
+      "docker_image": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+      "execution_base_HEAD": "dfe272049123ecbd9d200af8ff070ae4eb4b08d3",
+      "multiphase_source_sha256": "e762d8a21f3b0b35c72a49efa5cff581f0153d9bebc40c0c266ecb31265808f9",
+      "phase_rate_version": "isolated-CH-BE-phase-rate-v2-transactional-retained",
+      "runner_source_sha256": "6fef8605de514ba61de71a49e129a84177c803b5dd7f87f17627ebc0f8e64e27"
+    },
+    "input_hashes": {
+      "equilibrium_fingerprint": "df3a6176bc442190c15ca8e4b6faa2c885dbbe89d5126196148d92b1552809fc",
+      "initial_phi_sha256": "6e59cd0bd3ee5c421af9694508d439e8e05a565de329ed38a14af39444d4e681",
+      "optimized_plan_sha256": "5d291468a3520da5267a8d76b8015d0709f5e28b44fbaa5f8a7c6b264664e2b8",
+      "perturbation_coefficient_sha256": "831db9041c11ce04ab8974f34e841b62b56bd77474290e3c978c9b5f5af724d0"
+    },
+    "level": 0,
+    "mesh_fingerprint": "93dbd2cf76148bcd50afef9e353c55f92c15789ad0e303dbb97435a4672b9b15",
+    "parent_plan_sha256": "5d291468a3520da5267a8d76b8015d0709f5e28b44fbaa5f8a7c6b264664e2b8",
+    "physical_config_fingerprint": "d42900144d7d75c67e4455351ac98a0c41083623ed06de5c2987c1d35a485650",
+    "policy_sha256": "1113da00ba12ddc746e362841eeee44c20a6ee87422342fe6e78b9c798dc2a47",
+    "rank_count": 1,
+    "schedule_sha256": "21545943a51bdf364a714fde6ad07f3c6879ad48ac792f0aed901afad6776e31",
+    "stack": {
+      "DOLFINx": "0.10.0",
+      "MUMPS": "5.8.1",
+      "PETSc": [
+        3,
+        24,
+        0
+      ],
+      "UFL": "2025.2.0",
+      "precision_bits": 64,
+      "rank_count": 1,
+      "scalar_precision": "float64",
+      "scipy": "1.16.2"
+    }
+  },
+  "rate_role": "retained accepted BE unknown",
+  "semantic_sha256": "e1c6651bdfc3c96eae91eaa080924dec37afbbc886004f03263e692069166cfd",
+  "step": 122,
+  "time": 5.682341574812308e-10
+}

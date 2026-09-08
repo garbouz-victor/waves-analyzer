@@ -1,0 +1,12 @@
+{
+  "identity": {
+    "docker_image": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+    "execution_base_HEAD": "dfe272049123ecbd9d200af8ff070ae4eb4b08d3",
+    "multiphase_source_sha256": "e762d8a21f3b0b35c72a49efa5cff581f0153d9bebc40c0c266ecb31265808f9",
+    "phase_rate_version": "isolated-CH-BE-phase-rate-v2-transactional-retained",
+    "runner_source_sha256": "6fef8605de514ba61de71a49e129a84177c803b5dd7f87f17627ebc0f8e64e27"
+  },
+  "level": 0,
+  "role": "restart diagnostic fork; never replaces primary",
+  "target": 28
+}

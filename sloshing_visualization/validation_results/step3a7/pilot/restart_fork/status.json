@@ -1,0 +1,81 @@
+{
+  "DeltaF": -1.1981193814847302e-11,
+  "accepted_steps": 28,
+  "complete_marker": null,
+  "execution_status": "incomplete",
+  "expected_steps": 1068,
+  "final_F": 0.06564278267256508,
+  "final_budget_defect": 4.3585451214009544e-14,
+  "integrated_D_CH": 1.2024779266061311e-11,
+  "max_mass_domain": 1.3723590165505408e-14,
+  "min_certified_cells": 8.328131075834218,
+  "minimum_resolution_time": 0.0,
+  "minimum_resolution_witness": {
+    "bounds": [
+      [
+        0.0,
+        0.18749999999999997
+      ],
+      [
+        0.006249999999999978,
+        0.19999999999999998
+      ]
+    ],
+    "centroid": [
+      0.002083333333333326,
+      0.19374999999999998
+    ],
+    "h_cert": 0.01250000000000019,
+    "h_directional": 0.012499996273875102,
+    "h_normal_m": 0.01250000000000019,
+    "local_cell": 9739,
+    "max_witness": {
+      "candidate_type": "vertex",
+      "physical_point": [
+        0.0,
+        0.18749999999999997
+      ],
+      "reference_point": [
+        0.0,
+        0.0
+      ],
+      "value": -0.858240414692023
+    },
+    "min_witness": {
+      "candidate_type": "vertex",
+      "physical_point": [
+        0.0,
+        0.19999999999999998
+      ],
+      "reference_point": [
+        1.0,
+        0.0
+      ],
+      "value": -0.9168268302529072
+    },
+    "normal_width_fallback_reason": "",
+    "phi_max_bound": -0.8582404146919939,
+    "phi_max_exact": -0.8582404146919939,
+    "phi_min_bound": -0.9168268302529363,
+    "phi_min_exact": -0.9168268302529363,
+    "range_fallback_reason": "",
+    "range_status": "exact",
+    "rank": 0,
+    "vertices": [
+      [
+        0.0,
+        0.18749999999999997
+      ],
+      [
+        0.0,
+        0.19999999999999998
+      ],
+      [
+        0.006249999999999978,
+        0.19374999999999998
+      ]
+    ]
+  },
+  "physical_status": "passed",
+  "solver_status": "converged"
+}

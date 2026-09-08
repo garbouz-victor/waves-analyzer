@@ -1,0 +1,127 @@
+{
+  "design_sha256": "9aacf26566794f48c9a39e245add3b11fef533e10daeeca587861df8648f469d",
+  "historical_input_provenance": {
+    "config_fingerprint": "fc852830b59288fdec8d6d7ac7df08892c5cead61151456d0253283cff90dbb6",
+    "docker_image_digest": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+    "dt_schedule": {
+      "blocks": [
+        {
+          "count": 100,
+          "dt": 1e-05,
+          "end": 0.001,
+          "offset": 0,
+          "phase": "main",
+          "scheme": "be",
+          "start": 0.0
+        }
+      ],
+      "switch_rule": "first main interval BE, then fixed-spacing BDF2; no micro-history reuse",
+      "total_steps": 100
+    },
+    "equilibrium_fingerprint": "df3a6176bc442190c15ca8e4b6faa2c885dbbe89d5126196148d92b1552809fc",
+    "git_commit": "29d40b6cbddb882d5b6248dc2f52df5f8f93b2eb",
+    "initial_phi_sha256": "6e59cd0bd3ee5c421af9694508d439e8e05a565de329ed38a14af39444d4e681",
+    "input_recovery": "replay unchanged historical initializer; require BOTH archived coefficient hashes",
+    "mesh_fingerprint": "93dbd2cf76148bcd50afef9e353c55f92c15789ad0e303dbb97435a4672b9b15",
+    "mesh_fingerprint_scope": "rank-ordered geometry/connectivity; rank/partition sensitive",
+    "mobility": 1.0,
+    "multiphase_source_sha256": "6120797457f880dd022ee5da8d5aa14bf672868a7d530f901d40a3bf5e0173db",
+    "perturbation_coefficient_sha256": "831db9041c11ce04ab8974f34e841b62b56bd77474290e3c978c9b5f5af724d0",
+    "quadrature_degree": 12,
+    "rank_count": 1,
+    "spectrum_algorithm_version": "mass-zero-sparse-linearized-ch-v1",
+    "target_mass": -0.6060961027495515
+  },
+  "implementation": {
+    "docker_image": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+    "execution_base_HEAD": "dfe272049123ecbd9d200af8ff070ae4eb4b08d3",
+    "multiphase_source_sha256": "e762d8a21f3b0b35c72a49efa5cff581f0153d9bebc40c0c266ecb31265808f9",
+    "phase_rate_version": "isolated-CH-BE-phase-rate-v2-transactional-retained",
+    "runner_source_sha256": "6fef8605de514ba61de71a49e129a84177c803b5dd7f87f17627ebc0f8e64e27"
+  },
+  "policy": {
+    "controls": {
+      "atol": 1e-10,
+      "factor_solver_type": "mumps",
+      "ksp_type": "preonly",
+      "line_search_type": "bt",
+      "max_it": 30,
+      "pc_type": "lu",
+      "rtol": 1e-09,
+      "snes_type": "newtonls",
+      "stol": 0.0
+    },
+    "cost_statistic": "1.25*max(mean,p95) measured complete accepted intervals",
+    "expected_wall_crossings": 2,
+    "first_guess": "semidiscrete",
+    "following_guess": "previous accepted phase_rate, no rescaling",
+    "full_CHNS_authorized": false,
+    "hashes": {
+      "equilibrium_fingerprint": "df3a6176bc442190c15ca8e4b6faa2c885dbbe89d5126196148d92b1552809fc",
+      "initial_phi_sha256": "6e59cd0bd3ee5c421af9694508d439e8e05a565de329ed38a14af39444d4e681",
+      "optimized_plan_sha256": "5d291468a3520da5267a8d76b8015d0709f5e28b44fbaa5f8a7c6b264664e2b8",
+      "perturbation_coefficient_sha256": "831db9041c11ce04ab8974f34e841b62b56bd77474290e3c978c9b5f5af724d0"
+    },
+    "inherited": {
+      "analysis_stage_wall_s": 3600.0,
+      "analysis_total_wall_s": 7200.0,
+      "certified_cells": 8.0,
+      "coupling_energy_relative": 0.001,
+      "coupling_field_floor_fraction": 1e-12,
+      "coupling_hydro_over_CH": 0.0001,
+      "coupling_kinetic_over_excess": 0.0001,
+      "coupling_phi_relative": 0.001,
+      "coupling_power_floor_fraction": 1e-08,
+      "coupling_power_relative": 0.01,
+      "coupling_wall_s": 7200.0,
+      "energy_growth_J_per_m": 1e-09,
+      "final_budget_relative": 0.05,
+      "isolated_level0_wall_s": 7200.0,
+      "isolated_pilot_steps": 50,
+      "isolated_series_wall_s": 28800.0,
+      "last_D_difference_relative": 0.05,
+      "linear_limits": {
+        "endpoint_relative_L2_error": 0.001,
+        "integrated_D2_relative_error": 0.01,
+        "max_checkpoint_relative_L2_error": 0.001,
+        "max_quadratic_energy_relative_error": 0.001
+      },
+      "linear_mass_domain": 1e-11,
+      "nonlinear_SNESTolerances_changed": false,
+      "nonlinear_mass_domain": 1e-10,
+      "optimizer_cpu_s": 1800.0,
+      "optimizer_evaluations": 5000,
+      "optimizer_max_splits": 3,
+      "optimizer_rounds": 24,
+      "t_end": 0.0001,
+      "version": "step3a4-policy-v1",
+      "weak_work_J_per_m": 1e-12
+    },
+    "inherited_policy_sha256": "f28b662ff5d7d5c55093efffdeeb644d4406b2bb8221921ab41bafcb62e07d6a",
+    "initial_D_CH": 0.11400313905309394,
+    "initial_certified_cells": 8.328131075834218,
+    "physical_config_fingerprint": "d42900144d7d75c67e4455351ac98a0c41083623ed06de5c2987c1d35a485650",
+    "restart_D_relative": 1e-10,
+    "restart_energy_absolute": 1e-12,
+    "restart_field_relative": 1e-10,
+    "spectrum_optimizer_authorized": false,
+    "target_mass": -0.6060961027495515,
+    "version": "step3a7-v1"
+  },
+  "policy_sha256": "1113da00ba12ddc746e362841eeee44c20a6ee87422342fe6e78b9c798dc2a47",
+  "source_archive_sha256": "057e8f54e6bd3997877e2f83d1b0bb7f9b9ac8bac557f7111827f2d42d15c9e0",
+  "stack": {
+    "DOLFINx": "0.10.0",
+    "MUMPS": "5.8.1",
+    "PETSc": [
+      3,
+      24,
+      0
+    ],
+    "UFL": "2025.2.0",
+    "precision_bits": 64,
+    "rank_count": 1,
+    "scalar_precision": "float64",
+    "scipy": "1.16.2"
+  }
+}

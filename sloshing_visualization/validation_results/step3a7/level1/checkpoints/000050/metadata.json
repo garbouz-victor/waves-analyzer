@@ -1,0 +1,142 @@
+{
+  "accepted": true,
+  "accepted_steps": 50,
+  "archive_version": "accepted-phase-rate-trajectory-v1",
+  "array_sha256": {
+    "mu": "f8a6b44e1306dc0bb4f8a6da570057803697c5e5609532a5d3605bceb2b7029b",
+    "mu_map": "348e21cf3e5cd7784c3ec8a1f4b593ff4d5f7b35310feaede686d6c453dc72c3",
+    "old": "d119fc7fb28a3c26e61e8820e9f98c1060234a23ea69877a6503e15c09e97f61",
+    "older": "8724056358e0cde4186c2deef869caedf1963952401da72c5617c2f75303d932",
+    "phase_rate": "51114150f3f39ffcfff5cd7c1399975c330013de69dea0b4383b93e30d31cd6e",
+    "phi": "87f74c8c11d7f555ecac9c81e173cf99812dd0f211905efb370a2e092ec7a4c4",
+    "physical_mu_map": "43f39adbeec2fdddd8c302b76ad82e240166441965f939c2600a8e4f713069be",
+    "physical_phi_map": "10b48e7f85fbcb99fcc70b3e50ae277ec68666c969b111077aa760e52eecdd78",
+    "rate_map": "1f0061f0e9f1fcf7fa41a46c57fc1fa63aa1b6699ad175a4bb2ed333e693fbe5",
+    "state": "d119fc7fb28a3c26e61e8820e9f98c1060234a23ea69877a6503e15c09e97f61"
+  },
+  "current_dt": 2.3288285142673395e-12,
+  "current_phase": "isolated_ch_phase_rate_be",
+  "diagnostics": {
+    "cumulative": {
+      "CH": 1.092840486573249e-11,
+      "slip": 0.0,
+      "viscous": 0.0
+    },
+    "initial": {
+      "CH_dissipation": 0.11400313905309394,
+      "E_gravity": 0.0,
+      "E_interface": 0.05995161915611929,
+      "E_kin": 0.0,
+      "E_total": 0.06564278268454628,
+      "E_wall": 0.0056911635284269835,
+      "liquid_volume": 0.0569519486252139,
+      "mu_integral": 0.12954247483480114,
+      "mu_squared_integral": 0.023309239590008007,
+      "omega_L2": 0.0,
+      "phase_mass": -0.6060961027499487,
+      "phi_max_dof": 1.0156953397485375,
+      "phi_min_dof": -0.9790806990532334,
+      "relative_strong_divergence": 0.0,
+      "slip_dissipation": 0.0,
+      "speed_max_dof_sample": 0.0,
+      "strong_divergence_L2": 0.0,
+      "time": 0.0,
+      "viscous_dissipation": 0.0,
+      "wall_normal_velocity_L2": 0.0,
+      "wall_relaxation_dissipation": 0.0
+    },
+    "previous": {
+      "CH_dissipation": 0.0790572185595315,
+      "E_gravity": 0.0,
+      "E_interface": 0.05995161914521057,
+      "E_kin": 0.0,
+      "E_positive_scale": 0.06564278267363756,
+      "E_total": 0.06564278267363756,
+      "E_wall": 0.0056911635284269835,
+      "cumulative_CH_dissipation": 1.092840486573249e-11,
+      "cumulative_slip_dissipation": 0.0,
+      "cumulative_viscous_dissipation": 0.0,
+      "delta_E_interval": -1.8490764475131982e-13,
+      "energy_budget_defect": 1.968649267308969e-14,
+      "energy_budget_relative": 2.999033841647958e-13,
+      "energy_budget_relative_to_change": 0.0,
+      "energy_budget_relative_to_initial_scale": 2.999033841647958e-13,
+      "energy_budget_symmetric_diagnostic": 0.00016158041284761458,
+      "energy_budget_symmetric_diagnostic_only": 1.0,
+      "energy_change_relative_applicable": 0.0,
+      "interval_CH_dissipation": 1.84618973075828e-13,
+      "interval_slip_dissipation": 0.0,
+      "interval_viscous_dissipation": 0.0,
+      "liquid_volume": 0.05695194862521395,
+      "liquid_volume_error_relative": 9.747015259576526e-16,
+      "local_budget_defect": -2.88671675491834e-16,
+      "mass_error_abs": 4.107825191113079e-15,
+      "mass_error_relative_to_domain": 5.705312765434833e-15,
+      "mu_mean_Pa": 0.1799201039388072,
+      "mu_std_Pa": 0.0016284549866874447,
+      "omega_L2": 0.0,
+      "phase_mass": -0.6060961027499446,
+      "phi_max_dof": 1.0156953397485375,
+      "phi_min_dof": -0.9790806951889712,
+      "relative_mu_variation": 0.009050989583917205,
+      "relative_strong_divergence": 0.0,
+      "slip_dissipation": 0.0,
+      "speed_max_dof_sample": 0.0,
+      "strong_divergence_L2": 0.0,
+      "time": 1.1644142571336697e-10,
+      "viscous_dissipation": 0.0,
+      "wall_normal_velocity_L2": 0.0,
+      "wall_relaxation_dissipation": 0.0
+    }
+  },
+  "has_accepted_rate": true,
+  "identity": {
+    "implementation": {
+      "docker_image": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+      "execution_base_HEAD": "dfe272049123ecbd9d200af8ff070ae4eb4b08d3",
+      "multiphase_source_sha256": "e762d8a21f3b0b35c72a49efa5cff581f0153d9bebc40c0c266ecb31265808f9",
+      "phase_rate_version": "isolated-CH-BE-phase-rate-v2-transactional-retained",
+      "runner_source_sha256": "6fef8605de514ba61de71a49e129a84177c803b5dd7f87f17627ebc0f8e64e27"
+    },
+    "input_hashes": {
+      "equilibrium_fingerprint": "df3a6176bc442190c15ca8e4b6faa2c885dbbe89d5126196148d92b1552809fc",
+      "initial_phi_sha256": "6e59cd0bd3ee5c421af9694508d439e8e05a565de329ed38a14af39444d4e681",
+      "optimized_plan_sha256": "5d291468a3520da5267a8d76b8015d0709f5e28b44fbaa5f8a7c6b264664e2b8",
+      "perturbation_coefficient_sha256": "831db9041c11ce04ab8974f34e841b62b56bd77474290e3c978c9b5f5af724d0"
+    },
+    "level": 1,
+    "mesh_fingerprint": "93dbd2cf76148bcd50afef9e353c55f92c15789ad0e303dbb97435a4672b9b15",
+    "parent_plan_sha256": "5d291468a3520da5267a8d76b8015d0709f5e28b44fbaa5f8a7c6b264664e2b8",
+    "physical_config_fingerprint": "d42900144d7d75c67e4455351ac98a0c41083623ed06de5c2987c1d35a485650",
+    "policy_sha256": "1113da00ba12ddc746e362841eeee44c20a6ee87422342fe6e78b9c798dc2a47",
+    "rank_count": 1,
+    "schedule_sha256": "a289d4ea7769f6d0be6e06d5bd4b1aad5c587696c9303f7d05e68a68e9753a08",
+    "stack": {
+      "DOLFINx": "0.10.0",
+      "MUMPS": "5.8.1",
+      "PETSc": [
+        3,
+        24,
+        0
+      ],
+      "UFL": "2025.2.0",
+      "precision_bits": 64,
+      "rank_count": 1,
+      "scalar_precision": "float64",
+      "scipy": "1.16.2"
+    }
+  },
+  "journal_prefix": {
+    "bytes": 451466,
+    "records": 51,
+    "sha256": "b8536e6a5d72e90b77a7fa23d97a87f1ff5b693bfb0c9ac208c07d98783b51ee"
+  },
+  "semantic_sha256": "7b7c67ae01946fb3dbd2107dceffcd72087fb4e065add62971f50019a629dbe8",
+  "time": 1.1644142571336697e-10,
+  "work_sums": {
+    "BE_endpoint_integral": 1.0887713337681131e-11,
+    "B_BE": 2.024967306666141e-14,
+    "Delta_E": -1.0907963038665591e-11,
+    "weak_work_defect": -3.838060383455853e-20
+  }
+}

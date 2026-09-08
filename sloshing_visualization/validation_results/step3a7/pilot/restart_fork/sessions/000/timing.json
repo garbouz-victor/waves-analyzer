@@ -1,0 +1,77 @@
+{
+  "PETSc": {
+    "available": true,
+    "inclusive_nested_events": {
+      "KSPSolve": {
+        "count": 4,
+        "flops": 60286052.0,
+        "messageLength": 0.0,
+        "numMessages": 0.0,
+        "numReductions": 0.0,
+        "time": 0.15879052400001115
+      },
+      "MatLUFactorNum": {
+        "count": 4,
+        "flops": 34160667.0,
+        "messageLength": 0.0,
+        "numMessages": 0.0,
+        "numReductions": 0.0,
+        "time": 1.5599191780000012
+      },
+      "MatLUFactorSym": {
+        "count": 2,
+        "flops": 0.0,
+        "messageLength": 0.0,
+        "numMessages": 0.0,
+        "numReductions": 0.0,
+        "time": 1.1183194139999841
+      },
+      "MatSolve": {
+        "count": 4,
+        "flops": 60286052.0,
+        "messageLength": 0.0,
+        "numMessages": 0.0,
+        "numReductions": 0.0,
+        "time": 0.15870386399998893
+      },
+      "PCSetUp": {
+        "count": 4,
+        "flops": 34160667.0,
+        "messageLength": 0.0,
+        "numMessages": 0.0,
+        "numReductions": 0.0,
+        "time": 2.67848890099998
+      },
+      "SNESFunctionEval": {
+        "count": 6,
+        "flops": 0.0,
+        "messageLength": 0.0,
+        "numMessages": 0.0,
+        "numReductions": 0.0,
+        "time": 0.5756293389999882
+      },
+      "SNESJacobianEval": {
+        "count": 3,
+        "flops": 6303740.0,
+        "messageLength": 0.0,
+        "numMessages": 0.0,
+        "numReductions": 0.0,
+        "time": 0.9279283999999848
+      },
+      "SNESSolve": {
+        "count": 3,
+        "flops": 106025066.0,
+        "messageLength": 0.0,
+        "numMessages": 0.0,
+        "numReductions": 0.0,
+        "time": 3.949440439
+      }
+    }
+  },
+  "accepted_steps": 28,
+  "initialization_JIT_s": 4.655509902000176,
+  "level": 0,
+  "role": "restart diagnostic fork; never replaces primary",
+  "target_steps": 28,
+  "wall_s": 12.826955682000062
+}

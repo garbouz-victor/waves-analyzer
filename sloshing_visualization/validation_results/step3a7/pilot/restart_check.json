@@ -1,0 +1,41 @@
+{
+  "comparisons": [
+    {
+      "errors": {
+        "D": 0.0,
+        "F": 0.0,
+        "budget": 0.0,
+        "mu": 0.0,
+        "phase_rate": 0.0,
+        "phi": 0.0
+      },
+      "passed": true,
+      "step": 26
+    },
+    {
+      "errors": {
+        "D": 0.0,
+        "F": 0.0,
+        "budget": 0.0,
+        "mu": 0.0,
+        "phase_rate": 0.0,
+        "phi": 0.0
+      },
+      "passed": true,
+      "step": 27
+    },
+    {
+      "errors": {
+        "D": 0.0,
+        "F": 0.0,
+        "budget": 0.0,
+        "mu": 0.0,
+        "phase_rate": 0.0,
+        "phi": 0.0
+      },
+      "passed": true,
+      "step": 28
+    }
+  ],
+  "restart_check": "passed"
+}

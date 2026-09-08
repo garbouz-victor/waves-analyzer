@@ -1,0 +1,26 @@
+{
+  "chemical_rate_expression": {
+    "Riesz_L2": 8.283867085303216e-16,
+    "algebraic_norm": 2.6146553180911807e-18
+  },
+  "chemical_reconstructed": {
+    "Riesz_L2": 2.039336214446953e-14,
+    "algebraic_norm": 5.63414032364883e-17
+  },
+  "coefficient_difference_sparse": {
+    "Riesz_L2": 8.907896320042275e-06,
+    "algebraic_norm": 3.6016832607228024e-08
+  },
+  "literal_absolute_UFL": {
+    "Riesz_L2": 1.2801434127923532e-05,
+    "algebraic_norm": 4.930710375203283e-08
+  },
+  "retained_rate_UFL": {
+    "Riesz_L2": 3.4284804254391232e-12,
+    "algebraic_norm": 9.482329247531196e-15
+  },
+  "retained_rate_sparse": {
+    "Riesz_L2": 1.5459029643208086e-11,
+    "algebraic_norm": 5.117492707669412e-14
+  }
+}

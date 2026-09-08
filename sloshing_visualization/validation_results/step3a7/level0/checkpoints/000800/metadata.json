@@ -1,0 +1,142 @@
+{
+  "accepted": true,
+  "accepted_steps": 800,
+  "archive_version": "accepted-phase-rate-trajectory-v1",
+  "array_sha256": {
+    "mu": "7946a9386197e5aa322672a53ac2cdef743d5015a4e86e22ea49432ff08f0db8",
+    "mu_map": "348e21cf3e5cd7784c3ec8a1f4b593ff4d5f7b35310feaede686d6c453dc72c3",
+    "old": "4af30392d4a7855cc696dfec0b9520ffde6ec5c312f0ab490eb3362526189738",
+    "older": "14c853960348213f5c4a622ec7258f1bc0681625cd1bea5e01bb899b7f2aecea",
+    "phase_rate": "f3bbe8d53b265136a5d12588761d66c3e1738c35ec623cc8481230bf756b723a",
+    "phi": "8e51d29abb1d403c7e32b5c9ce8249e390a95f0d3fd7b5db5deba0c9a4cdbda7",
+    "physical_mu_map": "43f39adbeec2fdddd8c302b76ad82e240166441965f939c2600a8e4f713069be",
+    "physical_phi_map": "10b48e7f85fbcb99fcc70b3e50ae277ec68666c969b111077aa760e52eecdd78",
+    "rate_map": "1f0061f0e9f1fcf7fa41a46c57fc1fa63aa1b6699ad175a4bb2ed333e693fbe5",
+    "state": "4af30392d4a7855cc696dfec0b9520ffde6ec5c312f0ab490eb3362526189738"
+  },
+  "current_dt": 3.052442110220487e-07,
+  "current_phase": "isolated_ch_phase_rate_be",
+  "diagnostics": {
+    "cumulative": {
+      "CH": 2.5396884205814175e-08,
+      "slip": 0.0,
+      "viscous": 0.0
+    },
+    "initial": {
+      "CH_dissipation": 0.11400313905309394,
+      "E_gravity": 0.0,
+      "E_interface": 0.05995161915611929,
+      "E_kin": 0.0,
+      "E_total": 0.06564278268454628,
+      "E_wall": 0.0056911635284269835,
+      "liquid_volume": 0.0569519486252139,
+      "mu_integral": 0.12954247483480114,
+      "mu_squared_integral": 0.023309239590008007,
+      "omega_L2": 0.0,
+      "phase_mass": -0.6060961027499487,
+      "phi_max_dof": 1.0156953397485375,
+      "phi_min_dof": -0.9790806990532334,
+      "relative_strong_divergence": 0.0,
+      "slip_dissipation": 0.0,
+      "speed_max_dof_sample": 0.0,
+      "strong_divergence_L2": 0.0,
+      "time": 0.0,
+      "viscous_dissipation": 0.0,
+      "wall_normal_velocity_L2": 0.0,
+      "wall_relaxation_dissipation": 0.0
+    },
+    "previous": {
+      "CH_dissipation": 0.0006126075294988609,
+      "E_gravity": 0.0,
+      "E_interface": 0.059951593820359084,
+      "E_kin": 0.0,
+      "E_positive_scale": 0.0656427573488532,
+      "E_total": 0.0656427573488532,
+      "E_wall": 0.005691163528494121,
+      "cumulative_CH_dissipation": 2.5396884205814175e-08,
+      "cumulative_slip_dissipation": 0.0,
+      "cumulative_viscous_dissipation": 0.0,
+      "delta_E_interval": -1.8766893594701628e-10,
+      "energy_budget_defect": 6.119113453192461e-11,
+      "energy_budget_relative": 9.321837379439784e-10,
+      "energy_budget_relative_to_change": 0.0,
+      "energy_budget_relative_to_initial_scale": 9.321837379439784e-10,
+      "energy_budget_symmetric_diagnostic": 0.0012037779276537967,
+      "energy_budget_symmetric_diagnostic_only": 1.0,
+      "energy_change_relative_applicable": 0.0,
+      "interval_CH_dissipation": 1.8835023274130805e-10,
+      "interval_slip_dissipation": 0.0,
+      "interval_viscous_dissipation": 0.0,
+      "liquid_volume": 0.05695194862521869,
+      "liquid_volume_error_relative": 8.418984430459225e-14,
+      "local_budget_defect": 6.812967942917721e-13,
+      "mass_error_abs": 1.0658141036401503e-14,
+      "mass_error_relative_to_domain": 1.4802973661668755e-14,
+      "mu_mean_Pa": 0.1799201591910687,
+      "mu_std_Pa": 0.0009230646831727415,
+      "omega_L2": 0.0,
+      "phase_mass": -0.6060961027499381,
+      "phi_max_dof": 1.01569533982766,
+      "phi_min_dof": -0.9788612800368259,
+      "relative_mu_variation": 0.005130412774882442,
+      "relative_strong_divergence": 0.0,
+      "slip_dissipation": 0.0,
+      "speed_max_dof_sample": 0.0,
+      "strong_divergence_L2": 0.0,
+      "time": 1.8400986992003843e-05,
+      "viscous_dissipation": 0.0,
+      "wall_normal_velocity_L2": 0.0,
+      "wall_relaxation_dissipation": 0.0
+    }
+  },
+  "has_accepted_rate": true,
+  "identity": {
+    "implementation": {
+      "docker_image": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+      "execution_base_HEAD": "dfe272049123ecbd9d200af8ff070ae4eb4b08d3",
+      "multiphase_source_sha256": "e762d8a21f3b0b35c72a49efa5cff581f0153d9bebc40c0c266ecb31265808f9",
+      "phase_rate_version": "isolated-CH-BE-phase-rate-v2-transactional-retained",
+      "runner_source_sha256": "6fef8605de514ba61de71a49e129a84177c803b5dd7f87f17627ebc0f8e64e27"
+    },
+    "input_hashes": {
+      "equilibrium_fingerprint": "df3a6176bc442190c15ca8e4b6faa2c885dbbe89d5126196148d92b1552809fc",
+      "initial_phi_sha256": "6e59cd0bd3ee5c421af9694508d439e8e05a565de329ed38a14af39444d4e681",
+      "optimized_plan_sha256": "5d291468a3520da5267a8d76b8015d0709f5e28b44fbaa5f8a7c6b264664e2b8",
+      "perturbation_coefficient_sha256": "831db9041c11ce04ab8974f34e841b62b56bd77474290e3c978c9b5f5af724d0"
+    },
+    "level": 0,
+    "mesh_fingerprint": "93dbd2cf76148bcd50afef9e353c55f92c15789ad0e303dbb97435a4672b9b15",
+    "parent_plan_sha256": "5d291468a3520da5267a8d76b8015d0709f5e28b44fbaa5f8a7c6b264664e2b8",
+    "physical_config_fingerprint": "d42900144d7d75c67e4455351ac98a0c41083623ed06de5c2987c1d35a485650",
+    "policy_sha256": "1113da00ba12ddc746e362841eeee44c20a6ee87422342fe6e78b9c798dc2a47",
+    "rank_count": 1,
+    "schedule_sha256": "21545943a51bdf364a714fde6ad07f3c6879ad48ac792f0aed901afad6776e31",
+    "stack": {
+      "DOLFINx": "0.10.0",
+      "MUMPS": "5.8.1",
+      "PETSc": [
+        3,
+        24,
+        0
+      ],
+      "UFL": "2025.2.0",
+      "precision_bits": 64,
+      "rank_count": 1,
+      "scalar_precision": "float64",
+      "scipy": "1.16.2"
+    }
+  },
+  "journal_prefix": {
+    "bytes": 7132246,
+    "records": 801,
+    "sha256": "4603a26b39e8975cc0125d8621d61a2595f10b5b8741914ca37d871a74c287dc"
+  },
+  "semantic_sha256": "d86b5ad6cc7a38d9500b4995a5211a6c64db7fb0786dc8903ade5e0e4e035124",
+  "time": 1.8400986992003843e-05,
+  "work_sums": {
+    "BE_endpoint_integral": 2.527524148082892e-08,
+    "B_BE": 6.044285819223814e-11,
+    "Delta_E": -2.5335684339167743e-08,
+    "weak_work_defect": -2.3873111999277604e-19
+  }
+}

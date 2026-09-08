@@ -1,0 +1,22 @@
+{
+  "authorized": true,
+  "level0_cost_ok": true,
+  "mean_s": 1.5824248449448926,
+  "p95_s": 2.474090010199916,
+  "projected_level0_wall_s": 3159.6652661286516,
+  "projected_s_per_step": 3.092612512749895,
+  "projected_series_wall_s": 23005.996861163978,
+  "remaining_counts": [
+    941,
+    2136,
+    4272
+  ],
+  "remaining_wall_s": [
+    2924.5836811646514,
+    6620.255633900776,
+    13226.075961134553
+  ],
+  "safety_factor": 1.25,
+  "series_cost_ok": true,
+  "spent_wall_s": 235.08158496400029
+}

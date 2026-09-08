@@ -1,0 +1,142 @@
+{
+  "accepted": true,
+  "accepted_steps": 400,
+  "archive_version": "accepted-phase-rate-trajectory-v1",
+  "array_sha256": {
+    "mu": "38b9fb1c47ab16b65644dacabb57c01a4c0398b0e7afd0e10d583bf6a4cfe062",
+    "mu_map": "348e21cf3e5cd7784c3ec8a1f4b593ff4d5f7b35310feaede686d6c453dc72c3",
+    "old": "0595446ab3b6ba57717fe957ac7ccb7830f57657bc422b4db735ed14f89e69d4",
+    "older": "b0c173c76bdcd91509dde1fa2d3f154d8bf1c0395a1a4f3b2a704bc5d757da51",
+    "phase_rate": "4192e7ca647b9faf9bfb84e55ea439347f32683baec49870c58db2ed5bae90a7",
+    "phi": "54384c00e5f51d8da00ea3b8aa031644de3a97d06417e59204e80c6c093c0781",
+    "physical_mu_map": "43f39adbeec2fdddd8c302b76ad82e240166441965f939c2600a8e4f713069be",
+    "physical_phi_map": "10b48e7f85fbcb99fcc70b3e50ae277ec68666c969b111077aa760e52eecdd78",
+    "rate_map": "1f0061f0e9f1fcf7fa41a46c57fc1fa63aa1b6699ad175a4bb2ed333e693fbe5",
+    "state": "0595446ab3b6ba57717fe957ac7ccb7830f57657bc422b4db735ed14f89e69d4"
+  },
+  "current_dt": 9.315314057069358e-12,
+  "current_phase": "isolated_ch_phase_rate_be",
+  "diagnostics": {
+    "cumulative": {
+      "CH": 7.56457676119989e-11,
+      "slip": 0.0,
+      "viscous": 0.0
+    },
+    "initial": {
+      "CH_dissipation": 0.11400313905309394,
+      "E_gravity": 0.0,
+      "E_interface": 0.05995161915611929,
+      "E_kin": 0.0,
+      "E_total": 0.06564278268454628,
+      "E_wall": 0.0056911635284269835,
+      "liquid_volume": 0.0569519486252139,
+      "mu_integral": 0.12954247483480114,
+      "mu_squared_integral": 0.023309239590008007,
+      "omega_L2": 0.0,
+      "phase_mass": -0.6060961027499487,
+      "phi_max_dof": 1.0156953397485375,
+      "phi_min_dof": -0.9790806990532334,
+      "relative_strong_divergence": 0.0,
+      "slip_dissipation": 0.0,
+      "speed_max_dof_sample": 0.0,
+      "strong_divergence_L2": 0.0,
+      "time": 0.0,
+      "viscous_dissipation": 0.0,
+      "wall_normal_velocity_L2": 0.0,
+      "wall_relaxation_dissipation": 0.0
+    },
+    "previous": {
+      "CH_dissipation": 0.03638813105213213,
+      "E_gravity": 0.0,
+      "E_interface": 0.059951619080528526,
+      "E_kin": 0.0,
+      "E_positive_scale": 0.06564278260895551,
+      "E_total": 0.06564278260895551,
+      "E_wall": 0.005691163528426984,
+      "cumulative_CH_dissipation": 7.56457676119989e-11,
+      "cumulative_slip_dissipation": 0.0,
+      "cumulative_viscous_dissipation": 0.0,
+      "delta_E_interval": -3.397282455352979e-13,
+      "energy_budget_defect": 5.499785728022704e-14,
+      "energy_budget_relative": 8.37835555273843e-13,
+      "energy_budget_relative_to_change": 0.0,
+      "energy_budget_relative_to_initial_scale": 8.37835555273843e-13,
+      "energy_budget_symmetric_diagnostic": 0.000218908674099219,
+      "energy_budget_symmetric_diagnostic_only": 1.0,
+      "energy_change_relative_applicable": 0.0,
+      "interval_CH_dissipation": 3.392481248178878e-13,
+      "interval_slip_dissipation": 0.0,
+      "interval_viscous_dissipation": 0.0,
+      "liquid_volume": 0.05695194862521366,
+      "liquid_volume_error_relative": -4.142481485320024e-15,
+      "local_budget_defect": -4.801207174100926e-16,
+      "mass_error_abs": -3.1086244689504383e-15,
+      "mass_error_relative_to_domain": -4.317533984653387e-15,
+      "mu_mean_Pa": 0.17992010395656713,
+      "mu_std_Pa": 0.0015940124259762754,
+      "omega_L2": 0.0,
+      "phase_mass": -0.6060961027499518,
+      "phi_max_dof": 1.0156953397485375,
+      "phi_min_dof": -0.9790806972267039,
+      "relative_mu_variation": 0.008859557052952079,
+      "relative_strong_divergence": 0.0,
+      "slip_dissipation": 0.0,
+      "speed_max_dof_sample": 0.0,
+      "strong_divergence_L2": 0.0,
+      "time": 1.509080877245236e-09,
+      "viscous_dissipation": 0.0,
+      "wall_normal_velocity_L2": 0.0,
+      "wall_relaxation_dissipation": 0.0
+    }
+  },
+  "has_accepted_rate": true,
+  "identity": {
+    "implementation": {
+      "docker_image": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+      "execution_base_HEAD": "dfe272049123ecbd9d200af8ff070ae4eb4b08d3",
+      "multiphase_source_sha256": "e762d8a21f3b0b35c72a49efa5cff581f0153d9bebc40c0c266ecb31265808f9",
+      "phase_rate_version": "isolated-CH-BE-phase-rate-v2-transactional-retained",
+      "runner_source_sha256": "6fef8605de514ba61de71a49e129a84177c803b5dd7f87f17627ebc0f8e64e27"
+    },
+    "input_hashes": {
+      "equilibrium_fingerprint": "df3a6176bc442190c15ca8e4b6faa2c885dbbe89d5126196148d92b1552809fc",
+      "initial_phi_sha256": "6e59cd0bd3ee5c421af9694508d439e8e05a565de329ed38a14af39444d4e681",
+      "optimized_plan_sha256": "5d291468a3520da5267a8d76b8015d0709f5e28b44fbaa5f8a7c6b264664e2b8",
+      "perturbation_coefficient_sha256": "831db9041c11ce04ab8974f34e841b62b56bd77474290e3c978c9b5f5af724d0"
+    },
+    "level": 1,
+    "mesh_fingerprint": "93dbd2cf76148bcd50afef9e353c55f92c15789ad0e303dbb97435a4672b9b15",
+    "parent_plan_sha256": "5d291468a3520da5267a8d76b8015d0709f5e28b44fbaa5f8a7c6b264664e2b8",
+    "physical_config_fingerprint": "d42900144d7d75c67e4455351ac98a0c41083623ed06de5c2987c1d35a485650",
+    "policy_sha256": "1113da00ba12ddc746e362841eeee44c20a6ee87422342fe6e78b9c798dc2a47",
+    "rank_count": 1,
+    "schedule_sha256": "a289d4ea7769f6d0be6e06d5bd4b1aad5c587696c9303f7d05e68a68e9753a08",
+    "stack": {
+      "DOLFINx": "0.10.0",
+      "MUMPS": "5.8.1",
+      "PETSc": [
+        3,
+        24,
+        0
+      ],
+      "UFL": "2025.2.0",
+      "precision_bits": 64,
+      "rank_count": 1,
+      "scalar_precision": "float64",
+      "scipy": "1.16.2"
+    }
+  },
+  "journal_prefix": {
+    "bytes": 3570079,
+    "records": 401,
+    "sha256": "48baefe29fd9a9f703f67c77369fd614193151febec85617ab1d9505a3f9e61a"
+  },
+  "semantic_sha256": "4038e860bf51374dbc8eeae092391f357a1abf8f933e9e5ca7cac1b0d20289a7",
+  "time": 1.509080877245236e-09,
+  "work_sums": {
+    "BE_endpoint_integral": 7.553426577143923e-11,
+    "B_BE": 5.556079041216164e-14,
+    "Delta_E": -7.558982636819061e-11,
+    "weak_work_defect": 1.7796453227678294e-19
+  }
+}
