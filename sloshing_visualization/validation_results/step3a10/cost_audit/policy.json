@@ -1,0 +1,70 @@
+{
+  "administrative_files_sha256": {
+    "STEP3A10_RESUMPTION_DESIGN.md": "e4689b84568889a597ab1f051163da49f40d497e5f00aa228b503e3eddedc40a",
+    "scripts/step3a10_admin.py": "608d127902df6e40fb9846e9ff7af61ce0f495c3df36475dfcab3dbdf762d9d9",
+    "scripts/step3a10_continue.py": "f6709a7d87063567eb0a84ef702344d16ed0c92ada6babce9b587f26c6e1b215",
+    "scripts/step3a10_cost_audit.py": "994662039fa0d5ce026bb7e2b704fc4d3b1b9125805ce71b41d53f287cbdf076",
+    "scripts/step3a10_report.py": "2a41bc83ee8a22937d1b806cb650e9b74aefa8042e84e37b02277b7d730da946",
+    "tests/test_step3a10_resumption.py": "7bc5709a7bb82839e77a4fe3a08a8e8c574cc00468d2128a59fe54df8863b14f"
+  },
+  "administrative_guard_version": "step3a10-numerical-identity-with-separate-session-lineage-v1",
+  "archive_classes": [
+    "is_field",
+    "is_checkpoint",
+    "is_audit"
+  ],
+  "backtest_gate": "actual <= predicted for ALL windows; no tolerance",
+  "backtests": [
+    [
+      50,
+      51,
+      64
+    ],
+    [
+      64,
+      65,
+      96
+    ],
+    [
+      96,
+      97,
+      127
+    ],
+    [
+      50,
+      1,
+      127
+    ]
+  ],
+  "calibration_filesystem": "same /work bind, temporary cost_audit subdirectory",
+  "calibration_repetitions": 5,
+  "calibration_wall_charged_to_total_forecast": true,
+  "core_classes": "is_audit only",
+  "current_session_HEAD": "2e7ff2f80c6ce23eb4a7a72e02ffde79999c70d3",
+  "expected_steps": 1068,
+  "frozen_at_UTC": "2026-09-08T14:27:56.949021+00:00",
+  "full_L0_cap_s": 14400.0,
+  "full_runner_audit_storage": "full observer audit values are in scalar journal, not isolated residual_audits",
+  "full_runner_separate_residual_json_writes": false,
+  "future_sessions": 1,
+  "historical_checkpoint_identity_role": "immutable trajectory origin, NOT current session HEAD",
+  "historical_execution_base_HEAD": "5f2d9498e1d0715f57b125ee49b4ddfd533467ae",
+  "initialization": "1.25 * max completed primary initialization_JIT_s",
+  "n_1": "2.00 * sample",
+  "n_2_to_4": "1.50 * max",
+  "n_ge_5": "1.25 * empirical_p95",
+  "negative_core_roundoff_s": 1e-09,
+  "negative_session_overhead_stop_s": -1.0,
+  "numerical_identity_sha256": "3c5750c879403b190ec02f9b88592d80348034c649cc48007410ca2061ba090e",
+  "numerical_policy_sha256": "557896045044c8af06efe09744944a0549160051e64cfde5e02b808cbae9935d",
+  "numerical_source_archive_sha256": "f81b460f8a73f7cddbcd0f77e6427601b207419abb39bfa48d55568138ad9f6e",
+  "observed_last_step": 127,
+  "percentile_method": "linear",
+  "prefix_manifest_sha256": "ec8421ff9f7f28c84229294fcf17cffddbae464e398efbefe76aac64c5cf4127",
+  "session_overhead": "1.50 * max(overhead, 0)",
+  "source_changes_or_factor_retuning_after_measurement": false,
+  "total_cap_s": 19800.0,
+  "unseen_archive": "5 replays; 1.50 * max",
+  "unseen_core": "fail",
+  "version": "step3a10-schedule-aware-cost-v1"
+}

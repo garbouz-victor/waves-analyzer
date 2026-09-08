@@ -1,0 +1,19 @@
+{
+  "administrative_guard_version": "step3a10-numerical-identity-with-separate-session-lineage-v1",
+  "checkpoint127_modified": false,
+  "current_session_HEAD": "2e7ff2f80c6ce23eb4a7a72e02ffde79999c70d3",
+  "environment_modified": false,
+  "guard_source_sha256": "608d127902df6e40fb9846e9ff7af61ce0f495c3df36475dfcab3dbdf762d9d9",
+  "historical_checkpoint_identity_role": "immutable trajectory origin, NOT current session HEAD",
+  "historical_execution_base_HEAD": "5f2d9498e1d0715f57b125ee49b4ddfd533467ae",
+  "numerical_identity_sha256": "3c5750c879403b190ec02f9b88592d80348034c649cc48007410ca2061ba090e",
+  "old_guard_modified": false,
+  "passed": true,
+  "policy_sha256": "557896045044c8af06efe09744944a0549160051e64cfde5e02b808cbae9935d",
+  "prefix_integrity": "passed",
+  "prefix_manifest_sha256": "ec8421ff9f7f28c84229294fcf17cffddbae464e398efbefe76aac64c5cf4127",
+  "schedule_sha256": "21545943a51bdf364a714fde6ad07f3c6879ad48ac792f0aed901afad6776e31",
+  "source_archive_members_byte_identical": 72,
+  "source_archive_sha256": "f81b460f8a73f7cddbcd0f77e6427601b207419abb39bfa48d55568138ad9f6e",
+  "timestamp_UTC": "2026-09-08T14:16:28.594980+00:00"
+}

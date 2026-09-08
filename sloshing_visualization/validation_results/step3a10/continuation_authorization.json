@@ -1,0 +1,24 @@
+{
+  "STEP3A9_production_policy_sha256": "557896045044c8af06efe09744944a0549160051e64cfde5e02b808cbae9935d",
+  "STEP3A9_source_archive_sha256": "f81b460f8a73f7cddbcd0f77e6427601b207419abb39bfa48d55568138ad9f6e",
+  "administrative_files_sha256": {
+    "STEP3A10_RESUMPTION_DESIGN.md": "e4689b84568889a597ab1f051163da49f40d497e5f00aa228b503e3eddedc40a",
+    "scripts/step3a10_admin.py": "608d127902df6e40fb9846e9ff7af61ce0f495c3df36475dfcab3dbdf762d9d9",
+    "scripts/step3a10_continue.py": "f6709a7d87063567eb0a84ef702344d16ed0c92ada6babce9b587f26c6e1b215",
+    "scripts/step3a10_cost_audit.py": "994662039fa0d5ce026bb7e2b704fc4d3b1b9125805ce71b41d53f287cbdf076",
+    "scripts/step3a10_report.py": "2a41bc83ee8a22937d1b806cb650e9b74aefa8042e84e37b02277b7d730da946",
+    "tests/test_step3a10_resumption.py": "7bc5709a7bb82839e77a4fe3a08a8e8c574cc00468d2128a59fe54df8863b14f"
+  },
+  "administrative_guard_version": "step3a10-numerical-identity-with-separate-session-lineage-v1",
+  "authorized": false,
+  "cost_decision_sha256": "d2c8d93fc1e338a197556b837e4778e54b85f1d55b4ab2155c370e53a72a1b2a",
+  "cost_policy_sha256": "476dae1d71bacd7a25df47ec175cf67000525ee9cc2335860440ab3e0b707d1d",
+  "current_session_HEAD": "2e7ff2f80c6ce23eb4a7a72e02ffde79999c70d3",
+  "external_continuation_controller_sha256": "f6709a7d87063567eb0a84ef702344d16ed0c92ada6babce9b587f26c6e1b215",
+  "historical_checkpoint_identity_role": "immutable trajectory origin, NOT current session HEAD",
+  "historical_execution_base_HEAD": "5f2d9498e1d0715f57b125ee49b4ddfd533467ae",
+  "numerical_identity_sha256": "3c5750c879403b190ec02f9b88592d80348034c649cc48007410ca2061ba090e",
+  "prefix_manifest_sha256": "ec8421ff9f7f28c84229294fcf17cffddbae464e398efbefe76aac64c5cf4127",
+  "schedule_sha256": "21545943a51bdf364a714fde6ad07f3c6879ad48ac792f0aed901afad6776e31",
+  "timestamp_UTC": "2026-09-08T14:28:40.023773+00:00"
+}

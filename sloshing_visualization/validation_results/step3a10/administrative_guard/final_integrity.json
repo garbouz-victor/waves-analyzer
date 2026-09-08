@@ -1,0 +1,55 @@
+{
+  "COMPLETE_exists": false,
+  "FAILED_exists": false,
+  "accepted_steps": 127,
+  "administrative_frozen_files": "PASS",
+  "administrative_guard_version": "step3a10-numerical-identity-with-separate-session-lineage-v1",
+  "archive_members_byte_identical": 72,
+  "current_session_HEAD": "2e7ff2f80c6ce23eb4a7a72e02ffde79999c70d3",
+  "earlier_read_only_check_invocation_error": {
+    "cause": "The diagnostic command replaced container PYTHONPATH; no guard pass or PDE execution occurred in that invocation",
+    "error": "ModuleNotFoundError: No module named dolfinx",
+    "resolution": "Preserved original wrapper environment and added only /work/scripts to Python script search path; no source or environment identity was spoofed"
+  },
+  "historical_checkpoint_identity_role": "immutable trajectory origin, NOT current session HEAD",
+  "historical_execution_base_HEAD": "5f2d9498e1d0715f57b125ee49b4ddfd533467ae",
+  "interval128_executed": false,
+  "new_numerical_guard": "PASS",
+  "numerical_identity_sha256": "3c5750c879403b190ec02f9b88592d80348034c649cc48007410ca2061ba090e",
+  "old_source_guard": {
+    "error": "STOP: source/policy/stack/schedule changed after freeze",
+    "historical_guard_unchanged": true,
+    "only_implementation_difference": [
+      "execution_base_HEAD"
+    ],
+    "passed": false
+  },
+  "policy_decision_authorization_bindings": "PASS",
+  "prefix_guard": "PASS",
+  "primary_sessions": 2,
+  "remote_CI": "not observed; no push",
+  "tests": {
+    "resumption_docker_full.xml": {
+      "errors": "0",
+      "failures": "0",
+      "hostname": "c2f02f56d7d2",
+      "name": "pytest",
+      "skipped": "0",
+      "tests": "254",
+      "time": "82.453",
+      "timestamp": "2026-09-08T14:32:18.324303+00:00"
+    },
+    "resumption_host_full.xml": {
+      "errors": "0",
+      "failures": "0",
+      "hostname": "victor-ThinkPad-W541",
+      "name": "pytest",
+      "skipped": "46",
+      "tests": "369",
+      "time": "50.812",
+      "timestamp": "2026-09-08T17:32:16.684698"
+    }
+  },
+  "time": 6.148107277665776e-10,
+  "timestamp_UTC": "2026-09-08T14:47:20.670308+00:00"
+}

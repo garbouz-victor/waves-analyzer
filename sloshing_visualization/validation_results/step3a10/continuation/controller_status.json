@@ -1,0 +1,22 @@
+{
+  "execution_status": "not_run",
+  "record_origin": "read-only administrative refusal check; no continuation session started",
+  "refusal_reason": "Continuation is not authorized",
+  "authorization_sha256": "f4c41892840e92f74c7117b58a680365a0fbaf3c43c8feebd0b8a997d36576ff",
+  "external_continuation_controller_sha256": "f6709a7d87063567eb0a84ef702344d16ed0c92ada6babce9b587f26c6e1b215",
+  "planned_start_accepted_step": 127,
+  "actual_start_step": null,
+  "expected_final_step": 1068,
+  "start_checkpoint_sha256": "bc229cc210b61b6b5ef374f9dd33ed69b88f540065652bc3b415c306e7222d21",
+  "numerical_guard": "passed before cost audit; no pre-continuation entry because authorization is false",
+  "historical_execution_base_HEAD": "5f2d9498e1d0715f57b125ee49b4ddfd533467ae",
+  "current_administrative_HEAD": "2e7ff2f80c6ce23eb4a7a72e02ffde79999c70d3",
+  "full_L0_cap_s": 14400,
+  "total_cap_s": 19800,
+  "PDE_classes_imported_during_refusal_check": false,
+  "interval128_executed": false,
+  "final_accepted_step": 127,
+  "new_rejected_intervals": 0,
+  "COMPLETE_exists": false,
+  "historical_prefix_bytes_preserved": true
+}

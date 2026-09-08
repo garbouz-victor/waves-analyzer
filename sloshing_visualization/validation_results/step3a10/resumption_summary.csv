@@ -1,0 +1,13 @@
+metric,value
+administrative_guard,passed
+cost_authorized,False
+full_L0_complete,False
+coupling_transfer,False
+scientific_verdict,SCHEDULE-AWARE COST AUDIT DID NOT AUTHORIZE COMPLETION; FULL-CHNS TRANSFER REMAINS INCOMPLETE.
+overall_model,MODEL NOT YET VALIDATED
+old_complete_L0_forecast_s,15942.5699042599
+new_complete_L0_forecast_s,16354.593801770276
+actual_complete_L0_s,
+actual_primary_L0_spent_s,753.6905173360065
+actual_total_scientific_s,1010.1497828350184
+forecast_over_actual,

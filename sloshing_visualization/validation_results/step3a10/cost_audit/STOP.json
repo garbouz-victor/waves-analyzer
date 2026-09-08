@@ -1,0 +1,18 @@
+{
+  "stage": "schedule_aware_cost_authorization",
+  "numerical_guard": "passed",
+  "backtests": "all_four_passed",
+  "projected_complete_L0_s": 16354.593801770276,
+  "full_L0_cap_s": 14400,
+  "full_L0_cost_gate": "failed",
+  "projected_total_scientific_s": 16611.053067269288,
+  "total_cap_s": 19800,
+  "total_cost_gate": "passed",
+  "authorized": false,
+  "interval128_executed": false,
+  "policy_sha256": "476dae1d71bacd7a25df47ec175cf67000525ee9cc2335860440ab3e0b707d1d",
+  "decision_sha256": "d2c8d93fc1e338a197556b837e4778e54b85f1d55b4ab2155c370e53a72a1b2a",
+  "cost_verdict": "SCHEDULE-AWARE COST AUDIT DID NOT AUTHORIZE COMPLETION WITHIN THE FROZEN 14400s L0 CAP.",
+  "transfer_verdict": "FULL-CHNS COUPLING TRANSFER REMAINS INCOMPLETE DUE TO COST GATE.",
+  "overall_model": "MODEL NOT YET VALIDATED"
+}

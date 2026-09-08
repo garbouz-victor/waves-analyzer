@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="7" skipped="0" tests="30" time="0.777" timestamp="2026-09-08T17:26:23.799010" hostname="victor-ThinkPad-W541"><testcase classname="tests.test_step3a10_cost" name="test_failed_first_gate_never_authorizes_cost_or_pde[False-False]" time="0.003" /><testcase classname="tests.test_step3a10_cost" name="test_failed_first_gate_never_authorizes_cost_or_pde[False-True]" time="0.002" /><testcase classname="tests.test_step3a10_cost" name="test_failed_first_gate_never_authorizes_cost_or_pde[True-False]" time="0.002" /><testcase classname="tests.test_step3a10_cost" name="test_even_passed_preflight_does_not_substitute_for_cost_authorization" time="0.002" /><testcase classname="tests.test_step3a10_cost" name="test_prefix_binding_detects_same_size_mutation" time="0.009" /><testcase classname="tests.test_step3a10_cost" name="test_prefix_binding_detects_size_mismatch" time="0.004" /><testcase classname="tests.test_step3a10_cost" name="test_new_files_are_outside_frozen_multiphase_tree" time="0.001" /><testcase classname="tests.test_step3a10_resumption" name="test_lineage_diff_is_separate_and_never_mutated" time="0.002" /><testcase classname="tests.test_step3a10_resumption" name="test_any_numerical_difference_fails[source]" time="0.002" /><testcase classname="tests.test_step3a10_resumption" name="test_any_numerical_difference_fails[stack]" time="0.002" /><testcase classname="tests.test_step3a10_resumption" name="test_any_numerical_difference_fails[unexpected]" time="0.003" /><testcase classname="tests.test_step3a10_resumption" name="test_event_class_and_exact_future_counts" time="0.002" /><testcase classname="tests.test_step3a10_resumption" name="test_n_ge5_linear_p95" time="0.001"><failure message="TypeError: _percentile_dispatcher() got an unexpected keyword argument 'method'">def test_n_ge5_linear_p95():
+&gt;       assert cost.estimate([1,2,3,4,10])["upper_s"]==pytest.approx(1.25*np.percentile([1,2,3,4,10],95))
+
+tests/test_step3a10_resumption.py:45: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/step3a10_cost_audit.py:72: in estimate
+    value, rule = 1.25*float(np.percentile(a, 95, method="linear")), "1.25*p95"
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (array([ 1.,  2.,  3.,  4., 10.]), 95), kwargs = {'method': 'linear'}
+
+&gt;   ???
+E   TypeError: _percentile_dispatcher() got an unexpected keyword argument 'method'
+
+&lt;__array_function__ internals&gt;:4: TypeError</failure></testcase><testcase classname="tests.test_step3a10_resumption" name="test_n2to4_max_rule[a0]" time="0.002"><failure message="TypeError: _percentile_dispatcher() got an unexpected keyword argument 'method'">a = [2, 3]
+
+    @pytest.mark.parametrize("a",[[2,3],[1,4,2],[4,3,2,1]])
+&gt;   def test_n2to4_max_rule(a):assert cost.estimate(a)["upper_s"]==1.5*max(a)
+
+tests/test_step3a10_resumption.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/step3a10_cost_audit.py:85: in estimate
+    "samples_s": a.tolist(), "p95_s": float(np.percentile(a,95,method="linear")) if n else None}
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (array([2., 3.]), 95), kwargs = {'method': 'linear'}
+
+&gt;   ???
+E   TypeError: _percentile_dispatcher() got an unexpected keyword argument 'method'
+
+&lt;__array_function__ internals&gt;:4: TypeError</failure></testcase><testcase classname="tests.test_step3a10_resumption" name="test_n2to4_max_rule[a1]" time="0.002"><failure message="TypeError: _percentile_dispatcher() got an unexpected keyword argument 'method'">a = [1, 4, 2]
+
+    @pytest.mark.parametrize("a",[[2,3],[1,4,2],[4,3,2,1]])
+&gt;   def test_n2to4_max_rule(a):assert cost.estimate(a)["upper_s"]==1.5*max(a)
+
+tests/test_step3a10_resumption.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/step3a10_cost_audit.py:85: in estimate
+    "samples_s": a.tolist(), "p95_s": float(np.percentile(a,95,method="linear")) if n else None}
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (array([1., 4., 2.]), 95), kwargs = {'method': 'linear'}
+
+&gt;   ???
+E   TypeError: _percentile_dispatcher() got an unexpected keyword argument 'method'
+
+&lt;__array_function__ internals&gt;:4: TypeError</failure></testcase><testcase classname="tests.test_step3a10_resumption" name="test_n2to4_max_rule[a2]" time="0.002"><failure message="TypeError: _percentile_dispatcher() got an unexpected keyword argument 'method'">a = [4, 3, 2, 1]
+
+    @pytest.mark.parametrize("a",[[2,3],[1,4,2],[4,3,2,1]])
+&gt;   def test_n2to4_max_rule(a):assert cost.estimate(a)["upper_s"]==1.5*max(a)
+
+tests/test_step3a10_resumption.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/step3a10_cost_audit.py:85: in estimate
+    "samples_s": a.tolist(), "p95_s": float(np.percentile(a,95,method="linear")) if n else None}
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (array([4., 3., 2., 1.]), 95), kwargs = {'method': 'linear'}
+
+&gt;   ???
+E   TypeError: _percentile_dispatcher() got an unexpected keyword argument 'method'
+
+&lt;__array_function__ internals&gt;:4: TypeError</failure></testcase><testcase classname="tests.test_step3a10_resumption" name="test_singleton_and_unseen" time="0.002"><failure message="TypeError: _percentile_dispatcher() got an unexpected keyword argument 'method'">def test_singleton_and_unseen():
+&gt;       assert cost.estimate([3])["upper_s"]==6
+
+tests/test_step3a10_resumption.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/step3a10_cost_audit.py:85: in estimate
+    "samples_s": a.tolist(), "p95_s": float(np.percentile(a,95,method="linear")) if n else None}
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (array([3.]), 95), kwargs = {'method': 'linear'}
+
+&gt;   ???
+E   TypeError: _percentile_dispatcher() got an unexpected keyword argument 'method'
+
+&lt;__array_function__ internals&gt;:4: TypeError</failure></testcase><testcase classname="tests.test_step3a10_resumption" name="test_unseen_core_never_uses_archive_calibration" time="0.004" /><testcase classname="tests.test_step3a10_resumption" name="test_no_whole_step_p95_path_and_sparse_events_never_dropped" time="0.003"><failure message="TypeError: _percentile_dispatcher() got an unexpected keyword argument 'method'">def test_no_whole_step_p95_path_and_sparse_events_never_dropped():
+        train=[sample(i,archive=.1) for i in range(1,10)]+[sample(10,archive=10,checkpoint=True)]
+        target=[sample(i) for i in range(11,110)]+[sample(110,checkpoint=True)]
+&gt;       p=cost.predict(train,target,{})
+
+tests/test_step3a10_resumption.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/step3a10_cost_audit.py:112: in predict
+    est = estimate(samples, calibration=replay)
+scripts/step3a10_cost_audit.py:72: in estimate
+    value, rule = 1.25*float(np.percentile(a, 95, method="linear")), "1.25*p95"
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (array([1., 1., 1., 1., 1., 1., 1., 1., 1., 1.]), 95)
+kwargs = {'method': 'linear'}
+
+&gt;   ???
+E   TypeError: _percentile_dispatcher() got an unexpected keyword argument 'method'
+
+&lt;__array_function__ internals&gt;:4: TypeError</failure></testcase><testcase classname="tests.test_step3a10_resumption" name="test_backtest_underprediction_denies_authorization" time="0.002"><failure message="TypeError: _percentile_dispatcher() got an unexpected keyword argument 'method'">def test_backtest_underprediction_denies_authorization():
+&gt;       p=cost.backtest([sample(i) for i in range(1,6)],[sample(6)],{},100.)
+
+tests/test_step3a10_resumption.py:77: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/step3a10_cost_audit.py:123: in backtest
+    prediction = predict(training,target,calibration)
+scripts/step3a10_cost_audit.py:112: in predict
+    est = estimate(samples, calibration=replay)
+scripts/step3a10_cost_audit.py:72: in estimate
+    value, rule = 1.25*float(np.percentile(a, 95, method="linear")), "1.25*p95"
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (array([1., 1., 1., 1., 1.]), 95), kwargs = {'method': 'linear'}
+
+&gt;   ???
+E   TypeError: _percentile_dispatcher() got an unexpected keyword argument 'method'
+
+&lt;__array_function__ internals&gt;:4: TypeError</failure></testcase><testcase classname="tests.test_step3a10_resumption" name="test_both_caps_without_slack[14400-19800-True]" time="0.003" /><testcase classname="tests.test_step3a10_resumption" name="test_both_caps_without_slack[14400.001-19000-False]" time="0.002" /><testcase classname="tests.test_step3a10_resumption" name="test_both_caps_without_slack[13000-19800.001-False]" time="0.003" /><testcase classname="tests.test_step3a10_resumption" name="test_both_caps_without_slack[nan-100-False]" time="0.002" /><testcase classname="tests.test_step3a10_resumption" name="test_initialization_session_overhead_and_negative_accounting" time="0.003" /><testcase classname="tests.test_step3a10_resumption" name="test_negative_core_roundoff_is_explicit_and_bounded" time="0.001" /><testcase classname="tests.test_step3a10_resumption" name="test_hash_binding_blocks_controller[cost_audit/decision.json]" time="0.007" /><testcase classname="tests.test_step3a10_resumption" name="test_hash_binding_blocks_controller[cost_audit/policy.json]" time="0.006" /><testcase classname="tests.test_step3a10_resumption" name="test_hash_binding_blocks_controller[inherited_prefix_manifest.json]" time="0.006" /><testcase classname="tests.test_step3a10_resumption" name="test_no_authorization_no_pde_import" time="0.007" /></testsuite></testsuites>
