@@ -1,0 +1,66 @@
+{
+  "archive_version": "accepted-phase-rate-trajectory-v1",
+  "array_sha256": {
+    "increment_from_physical_states": "487e12cace4ee8def94608959ec3fa30d3e28558a12e8fe2b57740d327b8cb8d",
+    "increment_from_rate": "2c9e6ec25bba3036db3a06f9c97c0603a162c5657228eb03cacf2456eac556c8",
+    "mu": "1760c36e7badc68032a9f1aef6a0e20f680819eaea4b15be9244c3c44dfda350",
+    "phase_rate": "30bd8db99fe08e3edf4b4e8d9fed76edfa26ddbb54b97a78087ff119c69e2343",
+    "phase_rate_recovered_from_rounded_phi": "56ef8e6e85119e557c67063f36715aab7f63c3f6beb5dd35b3cbfbb90807d1d6",
+    "phi": "d62241ae661c25af82f027ecf6f1afc539cd094b82b5d4e9294f2706d8cf9c27",
+    "phi_old": "b7c0b310728510225821005e8e4e0f5e33d179f0158d052756e409754cf59df7",
+    "pi": "ab0e402d5de6dc48c16e4c189b936990602b1e89923b337e5f19100c73cc7147",
+    "u": "80e6106adc890f76ac5d52848fa967ba36f82c07b104ddd0dedc6b40927bbc6b"
+  },
+  "dt": 4.657657028534679e-12,
+  "identity": {
+    "implementation": {
+      "diagnostics_sha256": "fb34424408f5758b77d0465afca856d0b2a4956adcf09260605222c1fa39b963",
+      "docker_image": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+      "execution_base_HEAD": "5f2d9498e1d0715f57b125ee49b4ddfd533467ae",
+      "full_phase_rate_version": "matched-zero-force-full-CHNS-phase-rate-BE-v1",
+      "multiphase_source_sha256": "64250f222cb8fe4eda98e2abd7ec0f91be3d0045bd65a45e81f098833795b717",
+      "original_weak_form_sha256": "64f8eb34894bd8d8209d0183007b124cc19813c1d7ac980597d509b354429c0b",
+      "projection_sha256": "7f825701209bb62b7f39c15a433949beefa4f03adc78e9801a04976c27fc9b2a",
+      "runner_sha256": "00163e66320f118de853b3de07cee5ab453759dc8976ff9c6aefd5e03d96e839",
+      "solver_core_sha256": {
+        "boundary.py": "278f7ce91c0d78ac8e86467b568f34fb33adf1e4f09fcd58d40ac5bbab7b02da",
+        "free_energy.py": "a32150277bd096d975166177dd62a15f1b86e4b064a18733cae7530ee4e82339",
+        "full_phase_rate.py": "1b77319afc8be0e9fbdf3188ea3a6293a927f8d25d6f19f4a6285c06b2778600",
+        "full_rate_bridge.py": "bdcde77ba10eb5f46709b8a6ccd8ec4944bd150647e1776cc6d8e06d250053b1",
+        "material.py": "1860ae5d39aec57be0248e395f61c814385e0724392296d8d71839185de57307",
+        "weak_form.py": "64f8eb34894bd8d8209d0183007b124cc19813c1d7ac980597d509b354429c0b"
+      }
+    },
+    "input_hashes": {
+      "equilibrium_fingerprint": "df3a6176bc442190c15ca8e4b6faa2c885dbbe89d5126196148d92b1552809fc",
+      "initial_phi_sha256": "6e59cd0bd3ee5c421af9694508d439e8e05a565de329ed38a14af39444d4e681",
+      "optimized_plan_sha256": "5d291468a3520da5267a8d76b8015d0709f5e28b44fbaa5f8a7c6b264664e2b8",
+      "perturbation_coefficient_sha256": "831db9041c11ce04ab8974f34e841b62b56bd77474290e3c978c9b5f5af724d0"
+    },
+    "level": "full_CHNS_L0",
+    "mesh_fingerprint": "93dbd2cf76148bcd50afef9e353c55f92c15789ad0e303dbb97435a4672b9b15",
+    "physical_config_fingerprint": "d42900144d7d75c67e4455351ac98a0c41083623ed06de5c2987c1d35a485650",
+    "policy_sha256": "557896045044c8af06efe09744944a0549160051e64cfde5e02b808cbae9935d",
+    "rank_count": 1,
+    "schedule_sha256": "21545943a51bdf364a714fde6ad07f3c6879ad48ac792f0aed901afad6776e31",
+    "source_archive_sha256": "f81b460f8a73f7cddbcd0f77e6427601b207419abb39bfa48d55568138ad9f6e",
+    "stack": {
+      "DOLFINx": "0.10.0",
+      "MUMPS": "5.8.1",
+      "PETSc": [
+        3,
+        24,
+        0
+      ],
+      "UFL": "2025.2.0",
+      "precision_bits": 64,
+      "rank_count": 1,
+      "scalar_precision": "float64",
+      "scipy": "1.16.2"
+    }
+  },
+  "rate_role": "retained full BE unknown",
+  "semantic_sha256": "7e49ff215f0d99eb8913346fe53e78b15c0bbea2518b3323322d4e8d41777646",
+  "step": 28,
+  "time": 1.30414396798971e-10
+}

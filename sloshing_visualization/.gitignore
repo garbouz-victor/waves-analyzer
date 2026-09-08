@@ -50,3 +50,5 @@ validation_results/step3a5/cache/
 validation_results/step3a6/cache/
 validation_results/step3a7/cache/
 validation_results/step3a8/cache/
+validation_results/step3a9/cache/
+validation_results/step3a9/**/.writer.lock

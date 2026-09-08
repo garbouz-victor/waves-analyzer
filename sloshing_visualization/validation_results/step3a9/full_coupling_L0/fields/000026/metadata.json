@@ -1,0 +1,66 @@
+{
+  "archive_version": "accepted-phase-rate-trajectory-v1",
+  "array_sha256": {
+    "increment_from_physical_states": "818ad16b76ed9cbf87b5909876081132732484c0d8b2fd261e34a86c283d570d",
+    "increment_from_rate": "2e1a292ab4a8c139a0a48eca1c265be5c915a9f51a2577aa8d890a204c4a5954",
+    "mu": "f0dee519c89c50369ba9c5e7d50dba6eb4f07eab6e582cbc89e1e64a53b494b1",
+    "phase_rate": "b3249ea33e4887b4349147b4b090f9c8ed9c3476b16467eccd79d8748c4b2102",
+    "phase_rate_recovered_from_rounded_phi": "7ef47ab5b78d10cf0e2195ce2694bd9d7181181f94d81e1d063b1cd64b236133",
+    "phi": "898aa04113802caae4a7a2e3734d3404c4928cac715381e13b8ce1569191bb9c",
+    "phi_old": "1ddec502cf9b0590e9ec1453fa899de6b0f3f9c2ee897c74af18c516e44cbc1f",
+    "pi": "7a15c7add3d41af2bb4ae3b64ee21e4f981f6281fc8d2e8583ee9a8f86dea837",
+    "u": "bdb7dba6820f3726475bf224b0b839e9549b66e435274fc4e4a9ce931d5f6a34"
+  },
+  "dt": 4.657657028534679e-12,
+  "identity": {
+    "implementation": {
+      "diagnostics_sha256": "fb34424408f5758b77d0465afca856d0b2a4956adcf09260605222c1fa39b963",
+      "docker_image": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+      "execution_base_HEAD": "5f2d9498e1d0715f57b125ee49b4ddfd533467ae",
+      "full_phase_rate_version": "matched-zero-force-full-CHNS-phase-rate-BE-v1",
+      "multiphase_source_sha256": "64250f222cb8fe4eda98e2abd7ec0f91be3d0045bd65a45e81f098833795b717",
+      "original_weak_form_sha256": "64f8eb34894bd8d8209d0183007b124cc19813c1d7ac980597d509b354429c0b",
+      "projection_sha256": "7f825701209bb62b7f39c15a433949beefa4f03adc78e9801a04976c27fc9b2a",
+      "runner_sha256": "00163e66320f118de853b3de07cee5ab453759dc8976ff9c6aefd5e03d96e839",
+      "solver_core_sha256": {
+        "boundary.py": "278f7ce91c0d78ac8e86467b568f34fb33adf1e4f09fcd58d40ac5bbab7b02da",
+        "free_energy.py": "a32150277bd096d975166177dd62a15f1b86e4b064a18733cae7530ee4e82339",
+        "full_phase_rate.py": "1b77319afc8be0e9fbdf3188ea3a6293a927f8d25d6f19f4a6285c06b2778600",
+        "full_rate_bridge.py": "bdcde77ba10eb5f46709b8a6ccd8ec4944bd150647e1776cc6d8e06d250053b1",
+        "material.py": "1860ae5d39aec57be0248e395f61c814385e0724392296d8d71839185de57307",
+        "weak_form.py": "64f8eb34894bd8d8209d0183007b124cc19813c1d7ac980597d509b354429c0b"
+      }
+    },
+    "input_hashes": {
+      "equilibrium_fingerprint": "df3a6176bc442190c15ca8e4b6faa2c885dbbe89d5126196148d92b1552809fc",
+      "initial_phi_sha256": "6e59cd0bd3ee5c421af9694508d439e8e05a565de329ed38a14af39444d4e681",
+      "optimized_plan_sha256": "5d291468a3520da5267a8d76b8015d0709f5e28b44fbaa5f8a7c6b264664e2b8",
+      "perturbation_coefficient_sha256": "831db9041c11ce04ab8974f34e841b62b56bd77474290e3c978c9b5f5af724d0"
+    },
+    "level": "full_CHNS_L0",
+    "mesh_fingerprint": "93dbd2cf76148bcd50afef9e353c55f92c15789ad0e303dbb97435a4672b9b15",
+    "physical_config_fingerprint": "d42900144d7d75c67e4455351ac98a0c41083623ed06de5c2987c1d35a485650",
+    "policy_sha256": "557896045044c8af06efe09744944a0549160051e64cfde5e02b808cbae9935d",
+    "rank_count": 1,
+    "schedule_sha256": "21545943a51bdf364a714fde6ad07f3c6879ad48ac792f0aed901afad6776e31",
+    "source_archive_sha256": "f81b460f8a73f7cddbcd0f77e6427601b207419abb39bfa48d55568138ad9f6e",
+    "stack": {
+      "DOLFINx": "0.10.0",
+      "MUMPS": "5.8.1",
+      "PETSc": [
+        3,
+        24,
+        0
+      ],
+      "UFL": "2025.2.0",
+      "precision_bits": 64,
+      "rank_count": 1,
+      "scalar_precision": "float64",
+      "scipy": "1.16.2"
+    }
+  },
+  "rate_role": "retained full BE unknown",
+  "semantic_sha256": "39d6fec99f16bcad3396f4b756ac717c984d0365b92cd54cd50a7e4431ff4194",
+  "step": 26,
+  "time": 1.2109908274190165e-10
+}

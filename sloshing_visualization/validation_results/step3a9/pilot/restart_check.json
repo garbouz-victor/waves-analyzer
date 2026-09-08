@@ -1,0 +1,113 @@
+{
+  "comparisons": [
+    {
+      "checks": {
+        "E_total": true,
+        "cumulative_CH_dissipation": true,
+        "cumulative_slip_dissipation": true,
+        "cumulative_viscous_dissipation": true,
+        "energy_budget_defect": true,
+        "mu": true,
+        "orthogonal_divergence_L2": true,
+        "phase_rate": true,
+        "phi": true,
+        "pi_scaled": true,
+        "projected_divergence_L2": true,
+        "strong_divergence_L2": true,
+        "u_scaled": true,
+        "weak_continuity_Riesz": true
+      },
+      "errors": {
+        "E_total": 0.0,
+        "cumulative_CH_dissipation": 0.0,
+        "cumulative_slip_dissipation": 0.0,
+        "cumulative_viscous_dissipation": 0.0,
+        "energy_budget_defect": 0.0,
+        "mu": 0.0,
+        "orthogonal_divergence_L2": 0.0,
+        "phase_rate": 0.0,
+        "phi": 0.0,
+        "pi_scaled": 0.0,
+        "projected_divergence_L2": 0.0,
+        "strong_divergence_L2": 0.0,
+        "u_scaled": 0.0,
+        "weak_continuity_Riesz": 0.0
+      },
+      "passed": true,
+      "step": 26
+    },
+    {
+      "checks": {
+        "E_total": true,
+        "cumulative_CH_dissipation": true,
+        "cumulative_slip_dissipation": true,
+        "cumulative_viscous_dissipation": true,
+        "energy_budget_defect": true,
+        "mu": true,
+        "orthogonal_divergence_L2": true,
+        "phase_rate": true,
+        "phi": true,
+        "pi_scaled": true,
+        "projected_divergence_L2": true,
+        "strong_divergence_L2": true,
+        "u_scaled": true,
+        "weak_continuity_Riesz": true
+      },
+      "errors": {
+        "E_total": 0.0,
+        "cumulative_CH_dissipation": 0.0,
+        "cumulative_slip_dissipation": 0.0,
+        "cumulative_viscous_dissipation": 0.0,
+        "energy_budget_defect": 0.0,
+        "mu": 0.0,
+        "orthogonal_divergence_L2": 0.0,
+        "phase_rate": 0.0,
+        "phi": 0.0,
+        "pi_scaled": 0.0,
+        "projected_divergence_L2": 0.0,
+        "strong_divergence_L2": 0.0,
+        "u_scaled": 0.0,
+        "weak_continuity_Riesz": 0.0
+      },
+      "passed": true,
+      "step": 27
+    },
+    {
+      "checks": {
+        "E_total": true,
+        "cumulative_CH_dissipation": true,
+        "cumulative_slip_dissipation": true,
+        "cumulative_viscous_dissipation": true,
+        "energy_budget_defect": true,
+        "mu": true,
+        "orthogonal_divergence_L2": true,
+        "phase_rate": true,
+        "phi": true,
+        "pi_scaled": true,
+        "projected_divergence_L2": true,
+        "strong_divergence_L2": true,
+        "u_scaled": true,
+        "weak_continuity_Riesz": true
+      },
+      "errors": {
+        "E_total": 0.0,
+        "cumulative_CH_dissipation": 0.0,
+        "cumulative_slip_dissipation": 0.0,
+        "cumulative_viscous_dissipation": 0.0,
+        "energy_budget_defect": 0.0,
+        "mu": 0.0,
+        "orthogonal_divergence_L2": 0.0,
+        "phase_rate": 0.0,
+        "phi": 0.0,
+        "pi_scaled": 0.0,
+        "projected_divergence_L2": 0.0,
+        "strong_divergence_L2": 0.0,
+        "u_scaled": 0.0,
+        "weak_continuity_Riesz": 0.0
+      },
+      "passed": true,
+      "step": 28
+    }
+  ],
+  "restart_check": "passed"
+}

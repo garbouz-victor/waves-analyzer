@@ -1,0 +1,98 @@
+{
+  "bridge": {
+    "BC_velocity_count": 43,
+    "Jacobian_action_relative": 4.2729814365672955e-17,
+    "arbitrary_nonzero_fields": true,
+    "finite_difference": [
+      {
+        "h": 0.01,
+        "relative_error": 3.9321600354716027e-13
+      },
+      {
+        "h": 0.005,
+        "relative_error": 9.830769064527317e-14
+      },
+      {
+        "h": 0.0025,
+        "relative_error": 2.461479086787062e-14
+      },
+      {
+        "h": 0.00125,
+        "relative_error": 6.645935551186878e-15
+      },
+      {
+        "h": 1e-05,
+        "relative_error": 2.83560417973595e-13
+      }
+    ],
+    "gates": {
+      "BC_identical_objects": true,
+      "FD_final": true,
+      "FD_second_order_until_roundoff": true,
+      "Jacobian_column_transformation": true,
+      "no_rate_BC": true,
+      "one_pressure_gauge": true,
+      "term_residuals": true
+    },
+    "passed": true,
+    "pressure_gauge_dof": 167,
+    "terms_relative": {
+      "chemical": 1.2777957859433729e-15,
+      "chemical_wall": 1.8841558620952612e-17,
+      "continuity": 0.0,
+      "momentum": 4.5891081240737357e-17,
+      "navier": 0.0,
+      "phase": 1.4284101706339971e-16
+    }
+  },
+  "implementation": {
+    "docker_image": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+    "execution_base_HEAD": "5f2d9498e1d0715f57b125ee49b4ddfd533467ae",
+    "multiphase_source_sha256": "6f84f21df52f5811e0095814b45c55df5b565a8a8bfe95f67489238c8d2b90a7",
+    "runner_sha256": "7ed5c6213064e0f640ce0a786d5666a990585a5ee51dce9e1f75b1e1b4f546ca",
+    "solver_core_sha256": {
+      "boundary.py": "278f7ce91c0d78ac8e86467b568f34fb33adf1e4f09fcd58d40ac5bbab7b02da",
+      "free_energy.py": "a32150277bd096d975166177dd62a15f1b86e4b064a18733cae7530ee4e82339",
+      "full_phase_rate.py": "1b77319afc8be0e9fbdf3188ea3a6293a927f8d25d6f19f4a6285c06b2778600",
+      "full_rate_bridge.py": "bdcde77ba10eb5f46709b8a6ccd8ec4944bd150647e1776cc6d8e06d250053b1",
+      "material.py": "1860ae5d39aec57be0248e395f61c814385e0724392296d8d71839185de57307",
+      "weak_form.py": "64f8eb34894bd8d8209d0183007b124cc19813c1d7ac980597d509b354429c0b"
+    }
+  },
+  "kernel": {
+    "B_u_algebraic": 2.64682281402495e-17,
+    "grad_u_L2": 2.2408309848383747,
+    "kernel_dimension": 95,
+    "orthogonal_divergence_L2": 1.656157614782705,
+    "passed": true,
+    "projected_divergence_L2": 2.727992707505946e-16,
+    "projection_agrees": true,
+    "projection_difference": 0.0,
+    "projection_fraction": 1.6471818160035872e-16,
+    "projection_linear_residual": 1.0809255004238441e-32,
+    "projection_tolerance": 2.353541524915524e-14,
+    "pythagorean_pass": true,
+    "pythagorean_relative_error": 3.2381494234392217e-16,
+    "strong_divergence_L2": 1.6561576147827053,
+    "symgrad_u_L2": 1.970302203675168,
+    "velocity_coefficient_norm": 1.0,
+    "weak_continuity_Riesz": 2.727992707505946e-16,
+    "weak_continuity_algebraic_independent": 3.7997785931906593e-17
+  },
+  "passed": true,
+  "scope": "tiny mathematical FE preflight only",
+  "stack": {
+    "DOLFINx": "0.10.0",
+    "MUMPS": "5.8.1",
+    "PETSc": [
+      3,
+      24,
+      0
+    ],
+    "UFL": "2025.2.0",
+    "precision_bits": 64,
+    "rank_count": 1,
+    "scalar_precision": "float64",
+    "scipy": "1.16.2"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "authorized": false,
+  "conservative_s_per_step": 16.130412448626885,
+  "mean_s_per_accepted": 5.785959464960374,
+  "p95_s_per_accepted": 12.904329958901508,
+  "projected_full_L0_wall_s": 15942.5699042599,
+  "projected_total_wall_s": 16181.252679854915,
+  "remaining_steps": 941,
+  "remaining_wall_s": 15188.879386923894
+}

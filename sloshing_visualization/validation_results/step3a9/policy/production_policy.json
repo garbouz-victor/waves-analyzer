@@ -1,0 +1,93 @@
+{
+  "audit_decision_sha256": "9cf8c6de0d75e13f768f583a797a94cd14067a493076774723e50668af36f686",
+  "policy": {
+    "BC_scaled": 1e-12,
+    "D_relative": 0.01,
+    "FD_final_relative": 1e-07,
+    "F_relative": 0.001,
+    "audit_wall_s": 3600.0,
+    "bridge_relative": 1e-11,
+    "controls": {
+      "P0": {
+        "atol": 1e-10,
+        "factor_solver_type": "mumps",
+        "ksp_type": "preonly",
+        "line_search_type": "bt",
+        "max_it": 30,
+        "pc_type": "lu",
+        "rtol": 1e-09,
+        "snes_type": "newtonls",
+        "stol": 0.0
+      },
+      "P1": {
+        "atol": 1e-12,
+        "factor_solver_type": "mumps",
+        "ksp_type": "preonly",
+        "line_search_type": "bt",
+        "max_it": 30,
+        "pc_type": "lu",
+        "rtol": 1e-12,
+        "snes_type": "newtonls",
+        "stol": 0.0
+      },
+      "P2": {
+        "atol": 3e-13,
+        "factor_solver_type": "mumps",
+        "ksp_type": "preonly",
+        "line_search_type": "bt",
+        "max_it": 30,
+        "pc_type": "lu",
+        "rtol": 3e-13,
+        "snes_type": "newtonls",
+        "stol": 0.0
+      }
+    },
+    "cost_safety_factor": 1.25,
+    "current_field_floor_fraction": 1e-06,
+    "divergence_role": "spatial diagnostic after qualified refinement audit",
+    "energy_precision_floor": 1e-13,
+    "final_budget_relative": 0.05,
+    "first_guess": "semidiscrete CH at u=0",
+    "full_CHNS_L1_L2_authorized": false,
+    "full_L0_wall_s": 14400.0,
+    "historical_metadata": {
+      "STEP3A8_STOP_value": 3.814612027895975e-06,
+      "STEP3A8_envelope": 3.6880704671415807e-06,
+      "active_hard_gate": false,
+      "source": "STEP3A2 stiff bump dt=2.5e-6, same mesh; no relative strong-divergence hard policy exists"
+    },
+    "hydro_relative": 0.0001,
+    "initial_D": 0.11400313905309394,
+    "initial_cells": 8.328131075834218,
+    "initial_excess": 5.542888467657825e-08,
+    "isolated_rerun_authorized": false,
+    "kinetic_relative": 0.0001,
+    "moderate_dt": 1e-06,
+    "moderate_energy_mass_absolute": 1e-12,
+    "moderate_levels": [
+      "P1",
+      "P2"
+    ],
+    "moderate_phi_mu_D_relative": 1e-10,
+    "moderate_u_pi_scaled": 1e-09,
+    "moving_contact_authorized": false,
+    "next_guess": "previous accepted phase_rate, unscaled at dt changes",
+    "optional_absolute_tiny": false,
+    "phi_relative": 0.001,
+    "power_floor_fraction": 1e-08,
+    "preliminary_wall_s": 1800.0,
+    "projection_fraction_max": 1e-06,
+    "restart_D_relative": 1e-10,
+    "restart_energy_absolute": 1e-12,
+    "restart_field_relative": 1e-10,
+    "restart_u_pi_scaled": 1e-10,
+    "strong_same_root_relative": 0.0001,
+    "strong_significance_floor": 1e-12,
+    "tiny_dt": 4.657657028534679e-12,
+    "total_wall_s": 19800.0,
+    "version": "step3a9-v1",
+    "weak_continuity": 1e-12,
+    "weak_continuity_role": "hard mixed-FEM incompressibility gate"
+  },
+  "policy_sha256": "557896045044c8af06efe09744944a0549160051e64cfde5e02b808cbae9935d"
+}

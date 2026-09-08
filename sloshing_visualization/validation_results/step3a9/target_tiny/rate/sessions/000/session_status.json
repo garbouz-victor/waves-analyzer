@@ -1,0 +1,95 @@
+{
+  "PETSc": {
+    "available": true,
+    "inclusive_nested_events": {
+      "KSPSolve": {
+        "count": 2,
+        "flops": 82981880.0,
+        "messageLength": 0.0,
+        "numMessages": 0.0,
+        "numReductions": 0.0,
+        "time": 0.10601028499968379
+      },
+      "MatLUFactorNum": {
+        "count": 2,
+        "flops": 53478560.0,
+        "messageLength": 0.0,
+        "numMessages": 0.0,
+        "numReductions": 0.0,
+        "time": 1.5820724949999203
+      },
+      "MatLUFactorSym": {
+        "count": 2,
+        "flops": 0.0,
+        "messageLength": 0.0,
+        "numMessages": 0.0,
+        "numReductions": 0.0,
+        "time": 1.0939562869998554
+      },
+      "MatSolve": {
+        "count": 2,
+        "flops": 82981880.0,
+        "messageLength": 0.0,
+        "numMessages": 0.0,
+        "numReductions": 0.0,
+        "time": 0.10597696399963752
+      },
+      "PCSetUp": {
+        "count": 2,
+        "flops": 53478560.0,
+        "messageLength": 0.0,
+        "numMessages": 0.0,
+        "numReductions": 0.0,
+        "time": 2.6761681940001836
+      },
+      "SNESFunctionEval": {
+        "count": 2,
+        "flops": 0.0,
+        "messageLength": 0.0,
+        "numMessages": 0.0,
+        "numReductions": 0.0,
+        "time": 0.33555710699965857
+      },
+      "SNESJacobianEval": {
+        "count": 1,
+        "flops": 5233943.0,
+        "messageLength": 0.0,
+        "numMessages": 0.0,
+        "numReductions": 0.0,
+        "time": 1.2238558270000794
+      },
+      "SNESSolve": {
+        "count": 1,
+        "flops": 152533464.0,
+        "messageLength": 0.0,
+        "numMessages": 0.0,
+        "numReductions": 0.0,
+        "time": 4.009127819999776
+      }
+    }
+  },
+  "error": null,
+  "full_path": false,
+  "implementation": {
+    "diagnostics_sha256": "fb34424408f5758b77d0465afca856d0b2a4956adcf09260605222c1fa39b963",
+    "docker_image": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+    "execution_base_HEAD": "5f2d9498e1d0715f57b125ee49b4ddfd533467ae",
+    "full_phase_rate_version": "matched-zero-force-full-CHNS-phase-rate-BE-v1",
+    "multiphase_source_sha256": "64250f222cb8fe4eda98e2abd7ec0f91be3d0045bd65a45e81f098833795b717",
+    "original_weak_form_sha256": "64f8eb34894bd8d8209d0183007b124cc19813c1d7ac980597d509b354429c0b",
+    "projection_sha256": "7f825701209bb62b7f39c15a433949beefa4f03adc78e9801a04976c27fc9b2a",
+    "runner_sha256": "00163e66320f118de853b3de07cee5ab453759dc8976ff9c6aefd5e03d96e839",
+    "solver_core_sha256": {
+      "boundary.py": "278f7ce91c0d78ac8e86467b568f34fb33adf1e4f09fcd58d40ac5bbab7b02da",
+      "free_energy.py": "a32150277bd096d975166177dd62a15f1b86e4b064a18733cae7530ee4e82339",
+      "full_phase_rate.py": "1b77319afc8be0e9fbdf3188ea3a6293a927f8d25d6f19f4a6285c06b2778600",
+      "full_rate_bridge.py": "bdcde77ba10eb5f46709b8a6ccd8ec4944bd150647e1776cc6d8e06d250053b1",
+      "material.py": "1860ae5d39aec57be0248e395f61c814385e0724392296d8d71839185de57307",
+      "weak_form.py": "64f8eb34894bd8d8209d0183007b124cc19813c1d7ac980597d509b354429c0b"
+    }
+  },
+  "initialization_JIT_s": 6.546335875005752,
+  "preliminary": true,
+  "status": "complete",
+  "wall_s": 11.920352906003245
+}

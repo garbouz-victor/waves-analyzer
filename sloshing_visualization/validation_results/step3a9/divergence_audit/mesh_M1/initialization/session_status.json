@@ -1,0 +1,37 @@
+{
+  "budget_remaining_s": 3589.1112461879966,
+  "decision_rule_sha256": "b2a4a12c7557647e437cb63df2689322136f6bbff5f66c3d48b265a87426a8ca",
+  "equilibrium_s": 7.578195810994657,
+  "error": null,
+  "execution_status": "complete",
+  "implementation": {
+    "docker_image": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+    "execution_base_HEAD": "5f2d9498e1d0715f57b125ee49b4ddfd533467ae",
+    "multiphase_source_sha256": "6f84f21df52f5811e0095814b45c55df5b565a8a8bfe95f67489238c8d2b90a7",
+    "runner_sha256": "7ed5c6213064e0f640ce0a786d5666a990585a5ee51dce9e1f75b1e1b4f546ca",
+    "solver_core_sha256": {
+      "boundary.py": "278f7ce91c0d78ac8e86467b568f34fb33adf1e4f09fcd58d40ac5bbab7b02da",
+      "free_energy.py": "a32150277bd096d975166177dd62a15f1b86e4b064a18733cae7530ee4e82339",
+      "full_phase_rate.py": "1b77319afc8be0e9fbdf3188ea3a6293a927f8d25d6f19f4a6285c06b2778600",
+      "full_rate_bridge.py": "bdcde77ba10eb5f46709b8a6ccd8ec4944bd150647e1776cc6d8e06d250053b1",
+      "material.py": "1860ae5d39aec57be0248e395f61c814385e0724392296d8d71839185de57307",
+      "weak_form.py": "64f8eb34894bd8d8209d0183007b124cc19813c1d7ac980597d509b354429c0b"
+    }
+  },
+  "source_archive_sha256": "c4e21e4908ba655ba70d99d8783267ec37a53d34e5b16d6418e8f11536983408",
+  "stack": {
+    "DOLFINx": "0.10.0",
+    "MUMPS": "5.8.1",
+    "PETSc": [
+      3,
+      24,
+      0
+    ],
+    "UFL": "2025.2.0",
+    "precision_bits": 64,
+    "rank_count": 1,
+    "scalar_precision": "float64",
+    "scipy": "1.16.2"
+  },
+  "wall_s": 11.448119968998071
+}

@@ -1,0 +1,78 @@
+{
+  "comparisons": [
+    {
+      "errors": {
+        "D_relative": 1.751487843648647e-12,
+        "energy_absolute": 4.163336342344337e-17,
+        "mass_absolute": 0.0,
+        "mu_relative": 2.797916446095754e-12,
+        "phi_relative": 5.1194897566121926e-15,
+        "pi_scaled": 2.817053985087031e-13,
+        "u_scaled": 5.96841655906335e-17
+      },
+      "gates": {
+        "D_relative": true,
+        "energy_absolute": true,
+        "mass_absolute": true,
+        "mu_relative": true,
+        "phi_relative": true,
+        "pi_scaled": true,
+        "u_scaled": true
+      },
+      "level": "P1",
+      "limits": {
+        "D_relative": 1e-10,
+        "energy_absolute": 1e-12,
+        "mass_absolute": 1e-12,
+        "mu_relative": 1e-10,
+        "phi_relative": 1e-10,
+        "pi_scaled": 1e-09,
+        "u_scaled": 1e-09
+      },
+      "passed": true,
+      "strong_divergence_same_root": {
+        "passed": true,
+        "relative_difference": 1.1854449183272188e-11,
+        "threshold": 0.0001
+      }
+    },
+    {
+      "errors": {
+        "D_relative": 3.907985046680551e-14,
+        "energy_absolute": 0.0,
+        "mass_absolute": 0.0,
+        "mu_relative": 2.4410638274535124e-15,
+        "phi_relative": 3.8310962695764985e-17,
+        "pi_scaled": 3.7346864477505023e-16,
+        "u_scaled": 1.3715888696585393e-20
+      },
+      "gates": {
+        "D_relative": true,
+        "energy_absolute": true,
+        "mass_absolute": true,
+        "mu_relative": true,
+        "phi_relative": true,
+        "pi_scaled": true,
+        "u_scaled": true
+      },
+      "level": "P2",
+      "limits": {
+        "D_relative": 1e-10,
+        "energy_absolute": 1e-12,
+        "mass_absolute": 1e-12,
+        "mu_relative": 1e-10,
+        "phi_relative": 1e-10,
+        "pi_scaled": 1e-09,
+        "u_scaled": 1e-09
+      },
+      "passed": true,
+      "strong_divergence_same_root": {
+        "passed": true,
+        "relative_difference": 1.6542692706091952e-14,
+        "threshold": 0.0001
+      }
+    }
+  ],
+  "passed": true,
+  "temporal_qualification": false
+}

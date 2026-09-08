@@ -1,0 +1,155 @@
+{
+  "DeltaF": -3.942120241351432e-11,
+  "accepted_steps": 127,
+  "complete_marker": null,
+  "cost_projection": {
+    "authorized": false,
+    "conservative_s_per_step": 16.130412448626885,
+    "mean_s_per_accepted": 5.785959464960374,
+    "p95_s_per_accepted": 12.904329958901508,
+    "projected_full_L0_wall_s": 15942.5699042599,
+    "projected_total_wall_s": 16181.252679854915,
+    "remaining_steps": 941,
+    "remaining_wall_s": 15188.879386923894
+  },
+  "divergence_statistics": {
+    "orthogonal_divergence_L2": {
+      "max": 6.044641155438897e-08,
+      "max_step": 127,
+      "max_time": 6.148107277665776e-10,
+      "mean": 3.1590989922508554e-08,
+      "min": 0.0,
+      "p50": 3.263664111387802e-08,
+      "p95": 5.615297465930906e-08
+    },
+    "projected_divergence_L2": {
+      "max": 2.284066203705889e-23,
+      "max_step": 95,
+      "max_time": 4.424774177107945e-10,
+      "mean": 7.008374459993363e-24,
+      "min": 0.0,
+      "p50": 6.224171746296456e-24,
+      "p95": 1.67114121459402e-23
+    },
+    "projection_fraction": {
+      "max": 4.979369080447153e-16,
+      "max_step": 56,
+      "max_time": 2.60828793597942e-10,
+      "mean": 2.1404043274382494e-16,
+      "min": 0.0,
+      "p50": 1.8831416179969468e-16,
+      "p95": 3.9434685267523777e-16
+    },
+    "strong_divergence_L2": {
+      "max": 6.044641155438896e-08,
+      "max_step": 127,
+      "max_time": 6.148107277665776e-10,
+      "mean": 3.1590989922508554e-08,
+      "min": 0.0,
+      "p50": 3.263664111387802e-08,
+      "p95": 5.615297465930906e-08
+    }
+  },
+  "execution_status": "incomplete",
+  "expected_steps": 1068,
+  "final_F": 0.06564278264512508,
+  "final_F_CH": 0.06564278264512508,
+  "final_budget_defect": 8.041375785564643e-14,
+  "final_pilot_time": 6.148107277665776e-10,
+  "first_block_crossed": true,
+  "full_physical_status": "passed",
+  "integrated_D_CH": 3.9501616171368146e-11,
+  "integrated_D_slip": 2.6559264407930295e-35,
+  "integrated_D_visc": 1.8212101212920134e-24,
+  "level0_authorized": false,
+  "max_Newton": 1,
+  "max_mass_domain": 1.9737298215558338e-14,
+  "max_relative_divergence": 0.9286959525079348,
+  "max_speed": 3.077952787977087e-09,
+  "max_strong_divergence": 6.044641155438896e-08,
+  "max_strong_divergence_state": {
+    "CH_dissipation": 0.04663873343088977,
+    "E_kin": 5.0626060988162314e-21,
+    "dt": 9.315314057069358e-12,
+    "projection_fraction": 2.1814287450053514e-16,
+    "step": 127,
+    "time": 6.148107277665776e-10,
+    "velocity_L2": 1.0062411340047978e-10,
+    "viscous_dissipation": 7.890139235800417e-15,
+    "weak_continuity_Riesz": 1.3185953969718893e-23
+  },
+  "max_weak_continuity": 2.2840662037059463e-23,
+  "max_weak_work": 8.936723280342688e-20,
+  "min_certified_cells": 8.328131075834218,
+  "minimum_resolution_time": 0.0,
+  "minimum_resolution_witness": {
+    "bounds": [
+      [
+        0.0,
+        0.18749999999999997
+      ],
+      [
+        0.006249999999999978,
+        0.19999999999999998
+      ]
+    ],
+    "centroid": [
+      0.002083333333333326,
+      0.19374999999999998
+    ],
+    "h_cert": 0.01250000000000019,
+    "h_directional": 0.012499996273875102,
+    "h_normal_m": 0.01250000000000019,
+    "local_cell": 9739,
+    "max_witness": {
+      "candidate_type": "vertex",
+      "physical_point": [
+        0.0,
+        0.18749999999999997
+      ],
+      "reference_point": [
+        0.0,
+        0.0
+      ],
+      "value": -0.858240414692023
+    },
+    "min_witness": {
+      "candidate_type": "vertex",
+      "physical_point": [
+        0.0,
+        0.19999999999999998
+      ],
+      "reference_point": [
+        1.0,
+        0.0
+      ],
+      "value": -0.9168268302529072
+    },
+    "normal_width_fallback_reason": "",
+    "phi_max_bound": -0.8582404146919939,
+    "phi_max_exact": -0.8582404146919939,
+    "phi_min_bound": -0.9168268302529363,
+    "phi_min_exact": -0.9168268302529363,
+    "range_fallback_reason": "",
+    "range_status": "exact",
+    "rank": 0,
+    "vertices": [
+      [
+        0.0,
+        0.18749999999999997
+      ],
+      [
+        0.0,
+        0.19999999999999998
+      ],
+      [
+        0.006249999999999978,
+        0.19374999999999998
+      ]
+    ]
+  },
+  "physical_status": "passed",
+  "restart_check": "passed",
+  "solver_status": "converged",
+  "strong_divergence_role": "spatial diagnostic; no historical temporal envelope"
+}

@@ -1,0 +1,20 @@
+{
+  "checks": {
+    "exact_hierarchy": true,
+    "non_divergence_physical": true,
+    "projection_Riesz_agreement": true,
+    "refinement_slope": true,
+    "solver_success": true,
+    "strict_decrease": true,
+    "weak_continuity_all": true
+  },
+  "decision_rule_sha256": "b2a4a12c7557647e437cb63df2689322136f6bbff5f66c3d48b265a87426a8ca",
+  "interpretation": "measured refinement slope, not formal optimal FE order",
+  "p_div": 1.2013838200148381,
+  "pairwise_ratios": [
+    0.7627963786585386,
+    0.8055993652797345
+  ],
+  "passed": true,
+  "production_authorized": true
+}

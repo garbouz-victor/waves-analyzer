@@ -1,0 +1,12 @@
+{
+  "certified_cells": 8.328131075834218,
+  "equilibrium_checks": {
+    "CH_zero": true,
+    "constant_mu": true,
+    "mass": true,
+    "resolved": true,
+    "stationarity": true
+  },
+  "initial_D": 0.11400313905309394,
+  "passed": true
+}

@@ -1,0 +1,30 @@
+{
+  "accepted": true,
+  "actual_controls": {
+    "atol": 1e-12,
+    "factor_solver_type": "mumps",
+    "ksp_type": "preonly",
+    "line_search_type": "bt",
+    "max_it": 30,
+    "pc_type": "lu",
+    "rtol": 1e-12,
+    "snes_type": "newtonls",
+    "stol": 0.0
+  },
+  "archive_version": "accepted-phase-rate-trajectory-v1",
+  "array_sha256": {
+    "PETSc_solution": "24891da29db6fef872a86cd33481b47d2e73b7d249971947860fb26f94095bbd",
+    "dt": "7b0355ed5a68124501a73561e1be6ccc44d9d9920beea11896f7f1dd926b2012",
+    "mixed_Function": "24891da29db6fef872a86cd33481b47d2e73b7d249971947860fb26f94095bbd",
+    "mu_new": "b4aebe0218ef79c8bafed174fb9403b8e829285b4899cffac7200fdcc118acc4",
+    "phi_new": "fa0bab596c639282b9eed0a6e1b7cb6b44fabd0f4dd611e61171871112c3de7e",
+    "phi_old": "5e11804290b6d47587a5e77f6d25008b14926be768f49e6da0e198ccff3c0539",
+    "physical_state": "24891da29db6fef872a86cd33481b47d2e73b7d249971947860fb26f94095bbd",
+    "pi_new": "bd5897c333c5bf81c76986012b9bc54af5c6bafafd52ca0080065d533aa0487e",
+    "u_new": "9d19756283cae6a3f54853bed76388f40061dc2b2a62fa436a8e406c447a9401"
+  },
+  "dt": 1e-06,
+  "initialization_metadata_sha256": "0111cf39ac5ad41de91e4988a4f836b93f7e66746aaca9b03ff79aff1058eb68",
+  "role": "spatial audit only",
+  "semantic_sha256": "25ceac22befe4831d3c708330c34020257b6d0f2dbcdbe8108aabcbc2acc2f6f"
+}

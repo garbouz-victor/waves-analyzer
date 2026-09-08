@@ -1,0 +1,82 @@
+{
+  "PETSc_Function_equal": true,
+  "accepted": false,
+  "cellwise": {
+    "cells": 18432,
+    "localization": {
+      "bulk": {
+        "cells": 12702,
+        "squared_norm_fraction": 0.9999999053502688
+      },
+      "contact_near": {
+        "cells": 388,
+        "squared_norm_fraction": 8.076553047680538e-14
+      },
+      "interface_active": {
+        "cells": 1766,
+        "squared_norm_fraction": 4.1364830324118835e-09
+      },
+      "wall_near": {
+        "cells": 4352,
+        "squared_norm_fraction": 9.051332897688333e-08
+      }
+    },
+    "localization_note": "interface/wall/contact regions overlap; bulk excludes interface and wall",
+    "max_cell_contribution": 1.2825469058445928e-13,
+    "percentiles": {
+      "50": 7.587429430153372e-27,
+      "90": 1.5689278282312555e-17,
+      "95": 1.384416162531867e-15,
+      "99": 2.068374937732617e-14
+    },
+    "sum_divergence_squared": 1.4551264923382768e-11,
+    "top_percent_norm_fractions": {
+      "1": 0.7697796646707069,
+      "10": 0.9999160642668132,
+      "5": 0.9886983118607591
+    },
+    "top_percent_squared_norm_fractions": {
+      "1": 0.592560732140546,
+      "10": 0.9998321355788338,
+      "5": 0.9775243518763148
+    }
+  },
+  "grad_u_L2": 4.0564805731602304e-06,
+  "historical_existing_observer": {
+    "F_CH": 0.06564277766876432,
+    "full_physical_checks": {
+      "finite_full": true,
+      "pressure_gauge": true,
+      "strong_divergence_range": false,
+      "velocity_BC": true,
+      "weak_continuity": true
+    },
+    "mu_L2": 0.15267139920381542,
+    "phi_L2": 0.8067374409515263,
+    "pressure_L2": 0.001091516415835943,
+    "pressure_gauge_scaled": 0.0,
+    "pressure_gauge_value": 0.0,
+    "pressure_max_dof": 0.009979210574719868,
+    "pressure_min_dof": -0.010012310635639133,
+    "velocity_BC_max": 0.0,
+    "velocity_BC_scaled": 0.0,
+    "velocity_L2": 7.563407043299337e-09,
+    "weak_continuity_Riesz": 1.1783432940661996e-21,
+    "weak_continuity_algebraic": 4.594698458802348e-24
+  },
+  "original_archive_sha256": "d47a16340dbe28e2df5a41bbccdedc85408d5a99fe60dbc0fcf8527fa645d492",
+  "orthogonal_divergence_L2": 3.8146120278959753e-06,
+  "projected_divergence_L2": 1.1783432940660683e-21,
+  "projection_agrees": true,
+  "projection_difference": 1.3127920909983307e-34,
+  "projection_fraction": 3.0890252677046345e-16,
+  "projection_linear_residual": 1.0127972269919485e-39,
+  "projection_tolerance": 5.4208897323303577e-20,
+  "pythagorean_pass": true,
+  "pythagorean_relative_error": 2.2205452823528433e-16,
+  "role": "read-only historical REJECTED candidate; no solve or publication",
+  "strong_divergence_L2": 3.814612027895975e-06,
+  "symgrad_u_L2": 3.93740393938612e-06,
+  "weak_continuity_Riesz": 1.1783432940661996e-21,
+  "weak_continuity_algebraic_independent": 4.594698458802348e-24
+}

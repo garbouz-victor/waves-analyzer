@@ -1,0 +1,84 @@
+{
+  "accepted": true,
+  "actual_controls": {
+    "atol": 3e-13,
+    "factor_solver_type": "mumps",
+    "ksp_type": "preonly",
+    "line_search_type": "bt",
+    "max_it": 30,
+    "pc_type": "lu",
+    "rtol": 3e-13,
+    "snes_type": "newtonls",
+    "stol": 0.0
+  },
+  "archive_version": "accepted-phase-rate-trajectory-v1",
+  "array_sha256": {
+    "PETSc_solution": "5e46e967cdcb143642fc975ec61a37624d2c235b648823bbf70b60c57c6d0730",
+    "dt": "7b0355ed5a68124501a73561e1be6ccc44d9d9920beea11896f7f1dd926b2012",
+    "increment_from_physical_states": "7277c5c836f363a50e81e09c67e7b0207ce8ad4ce270118a003aaf91aebac7f8",
+    "increment_from_rate": "67425f3fffe9562abec7dd24b78a924fd8e3ac77b769a769c8e4e00ac31c55ad",
+    "mixed_Function": "5e46e967cdcb143642fc975ec61a37624d2c235b648823bbf70b60c57c6d0730",
+    "mu_map": "43f39adbeec2fdddd8c302b76ad82e240166441965f939c2600a8e4f713069be",
+    "mu_new": "cfea4f73df2ff9b6ba737c46763bae8497f30f02b01ed9a06d62d5116b6d81e7",
+    "phase_rate": "8c228e4098a2d451feefb06fd66d1605eb727be158e151e506afc86a0a5d30d4",
+    "phase_rate_recovered_from_rounded_phi": "3aaca371c8edb4a6be128f0ed7b2b67232691df245cd91e7a4c05324a356fa98",
+    "phi_new": "71bcec04494cfc1c3134d0b4e6dad262d78b0aba7eb1443c615ea41100c4a008",
+    "phi_old": "6e59cd0bd3ee5c421af9694508d439e8e05a565de329ed38a14af39444d4e681",
+    "physical_state": "df7d46db79c098cf0bdaf3ce324ca2518bdf139c6265d4129250ff2da2036ddc",
+    "pi_map": "1657e1e28be32766d2bf116796c0e850d586c6917b68e2a2e944705c6d3f0d48",
+    "pi_new": "c8217661209de13ee792b3eda5ba0df82a26a8b90484afc149ccf6b1cd1250a9",
+    "rate_map": "10b48e7f85fbcb99fcc70b3e50ae277ec68666c969b111077aa760e52eecdd78",
+    "u_map": "703bdf1a6f292879d7c780e3e745c1feb63cb647c3a64caa014faee13381496d",
+    "u_new": "3f86e3b7cbb8f6fb06dc444f5670215c1a42fcefa584d9461765757d4ca16359"
+  },
+  "dt": 1e-06,
+  "formulation": "rate",
+  "identity": {
+    "implementation": {
+      "diagnostics_sha256": "fb34424408f5758b77d0465afca856d0b2a4956adcf09260605222c1fa39b963",
+      "docker_image": "sha256:b1cd670d366e54d00cf53541dd69bdf260265cb293f34bc9c2c69669181c6ec8",
+      "execution_base_HEAD": "5f2d9498e1d0715f57b125ee49b4ddfd533467ae",
+      "full_phase_rate_version": "matched-zero-force-full-CHNS-phase-rate-BE-v1",
+      "multiphase_source_sha256": "64250f222cb8fe4eda98e2abd7ec0f91be3d0045bd65a45e81f098833795b717",
+      "original_weak_form_sha256": "64f8eb34894bd8d8209d0183007b124cc19813c1d7ac980597d509b354429c0b",
+      "projection_sha256": "7f825701209bb62b7f39c15a433949beefa4f03adc78e9801a04976c27fc9b2a",
+      "runner_sha256": "00163e66320f118de853b3de07cee5ab453759dc8976ff9c6aefd5e03d96e839",
+      "solver_core_sha256": {
+        "boundary.py": "278f7ce91c0d78ac8e86467b568f34fb33adf1e4f09fcd58d40ac5bbab7b02da",
+        "free_energy.py": "a32150277bd096d975166177dd62a15f1b86e4b064a18733cae7530ee4e82339",
+        "full_phase_rate.py": "1b77319afc8be0e9fbdf3188ea3a6293a927f8d25d6f19f4a6285c06b2778600",
+        "full_rate_bridge.py": "bdcde77ba10eb5f46709b8a6ccd8ec4944bd150647e1776cc6d8e06d250053b1",
+        "material.py": "1860ae5d39aec57be0248e395f61c814385e0724392296d8d71839185de57307",
+        "weak_form.py": "64f8eb34894bd8d8209d0183007b124cc19813c1d7ac980597d509b354429c0b"
+      }
+    },
+    "input_hashes": {
+      "equilibrium_fingerprint": "df3a6176bc442190c15ca8e4b6faa2c885dbbe89d5126196148d92b1552809fc",
+      "initial_phi_sha256": "6e59cd0bd3ee5c421af9694508d439e8e05a565de329ed38a14af39444d4e681",
+      "optimized_plan_sha256": "5d291468a3520da5267a8d76b8015d0709f5e28b44fbaa5f8a7c6b264664e2b8",
+      "perturbation_coefficient_sha256": "831db9041c11ce04ab8974f34e841b62b56bd77474290e3c978c9b5f5af724d0"
+    },
+    "level": "full_CHNS_L0",
+    "mesh_fingerprint": "93dbd2cf76148bcd50afef9e353c55f92c15789ad0e303dbb97435a4672b9b15",
+    "physical_config_fingerprint": "d42900144d7d75c67e4455351ac98a0c41083623ed06de5c2987c1d35a485650",
+    "policy_sha256": "557896045044c8af06efe09744944a0549160051e64cfde5e02b808cbae9935d",
+    "rank_count": 1,
+    "schedule_sha256": "21545943a51bdf364a714fde6ad07f3c6879ad48ac792f0aed901afad6776e31",
+    "source_archive_sha256": "f81b460f8a73f7cddbcd0f77e6427601b207419abb39bfa48d55568138ad9f6e",
+    "stack": {
+      "DOLFINx": "0.10.0",
+      "MUMPS": "5.8.1",
+      "PETSc": [
+        3,
+        24,
+        0
+      ],
+      "UFL": "2025.2.0",
+      "precision_bits": 64,
+      "rank_count": 1,
+      "scalar_precision": "float64",
+      "scipy": "1.16.2"
+    }
+  },
+  "semantic_sha256": "e335832f48f8c5a0728803c14b263663e8df672041b5f6b985def80930c139f6"
+}

@@ -1,0 +1,14 @@
+{
+  "absolute": {
+    "P1": 3.814612027895975e-06,
+    "P2": 3.814612027895975e-06,
+    "diagnostic_only": true,
+    "relative_change": 0.0
+  },
+  "rate": {
+    "P1": 3.8146120278507548e-06,
+    "P2": 3.814612027895912e-06,
+    "diagnostic_only": true,
+    "relative_change": 1.1837906490566292e-11
+  }
+}

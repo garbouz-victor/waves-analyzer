@@ -1,0 +1,16 @@
+{
+  "accepted": false,
+  "archive_version": "accepted-phase-rate-trajectory-v1",
+  "array_sha256": {
+    "contact_near": "ef63b80e2bd9c9b4b557b00eeae87c589613bb9f2d215e616e17bce0654f4659",
+    "contributions": "a22ffa233a4e1eceaa46ed05ec985cce1f2dda00e626e78c5b0a996410c8683e",
+    "interface_active": "ee7eb4fca741f0f777ee70709cb62fae4946dee56f86c8d5efc020795995633a",
+    "phi_vertices": "3814558967e94ec189af3350daa8c9395f245def653b59cfa1afe054427aab6c",
+    "projected_divergence": "8ad6f39e7fab7acacf6fa968ec18781dcb8a01c315205c3b766e26a68a646f14",
+    "triangles": "10fc547555a1a904de6735fd65fc7b6102523bc281c89ac7e26e3cec4174c4b6",
+    "wall_near": "47dbc61ec67144567b3ccb2e0b08607616f8afefda241211fb6ac53dc3ca1412"
+  },
+  "historical_archive": "d47a16340dbe28e2df5a41bbccdedc85408d5a99fe60dbc0fcf8527fa645d492",
+  "role": "read-only diagnostic",
+  "semantic_sha256": "d852b6adfb572dc7c29ab6271a0cf7797ab7eaf317b8e8e027ed10420d6aa2b5"
+}

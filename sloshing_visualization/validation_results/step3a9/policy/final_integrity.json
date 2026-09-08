@@ -1,0 +1,18 @@
+{
+  "execution_base_HEAD": "5f2d9498e1d0715f57b125ee49b4ddfd533467ae",
+  "production_source_sha256": "64250f222cb8fe4eda98e2abd7ec0f91be3d0045bd65a45e81f098833795b717",
+  "source_policy_stack_guard": "passed after scientific STOP and final tests",
+  "STEP3A6_STEP3A7_STEP3A8_historical_git_diff": "empty",
+  "six_solver_core_files_git_diff": "empty",
+  "accepted_prefix_intervals": 127,
+  "scalar_records_including_initial": 128,
+  "scalar_history_sha256": "5916da0860220fb0fa785c208897cbb6cab062fc465cada5ee4a1e0cac7f6a91",
+  "checkpoint_127_semantic_sha256": "bc229cc210b61b6b5ef374f9dd33ed69b88f540065652bc3b415c306e7222d21",
+  "checkpoint_127_metadata_file_sha256": "106e974cd9c7d44ff450b443c8b61962acf0938f08118fc20d3a8f93888e0b34",
+  "prefix_final_time": 6.148107277665776e-10,
+  "full_L0_COMPLETE_exists": false,
+  "rejected_primary_intervals_in_observed_prefix": 0,
+  "stop": "frozen full-L0 cost forecast 15942.5699042599 seconds exceeds 14400 seconds",
+  "remote_CI": "not observed for unpushed source",
+  "later_commit_is_execution_HEAD": false
+}

@@ -1,0 +1,61 @@
+{
+  "before_iterations": [
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "first_block_end": 122,
+  "first_post_boundary": 123,
+  "passed": true,
+  "post": {
+    "actual_controls": {
+      "atol": 1e-10,
+      "factor_solver_type": "mumps",
+      "ksp_type": "preonly",
+      "line_search_type": "bt",
+      "max_it": 30,
+      "pc_type": "lu",
+      "rtol": 1e-09,
+      "snes_type": "newtonls",
+      "stol": 0.0
+    },
+    "dt": 9.315314057069358e-12,
+    "dt_reductions": 0,
+    "dt_times_rate_max_abs": 2.8953783962227945e-08,
+    "effective_target": 1e-10,
+    "formulation": "matched-zero-force-full-CHNS-phase-rate-BE-v1",
+    "guess": {
+      "L2": 102.13892347952356,
+      "max_abs": 3151.805375710677,
+      "policy": "previous accepted rate, unscaled",
+      "sha256": "74a8023c51c96d99a56e184fd0dd9260a49496521ddf4a4b3ba273d9cae6aba5"
+    },
+    "initial_residual": 0.0005286613444480789,
+    "mu_L2": 0.15267337185532615,
+    "rate_L2": 101.39968727273875,
+    "rate_max_abs": 3108.191928349965,
+    "reason": 2,
+    "residual": 1.0167266503333782e-14,
+    "retained_rate_sha256": "4b2f43e752e6060bb815cd0910f590ba308a8212b43fcb6d580837899cc4a4fb",
+    "runtime_s": 3.788359660000424,
+    "snes_iterations": 1,
+    "step": 123,
+    "time": 5.775494715383002e-10,
+    "trace": [
+      {
+        "KSP_iterations": null,
+        "KSP_reason": null,
+        "iteration": 0,
+        "residual": 0.0005286613444480789
+      },
+      {
+        "KSP_iterations": 1,
+        "KSP_reason": 4,
+        "iteration": 1,
+        "residual": 1.0167266503333782e-14
+      }
+    ]
+  }
+}
