@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "historical_symmetric_artifacts_checked": 48,
+  "historical_symmetric_native_runs_checked": 5,
+  "old_COMPLETE_snapshot_matches_published_commit": true,
+  "original_no_slip_STOP_and_symmetric_model_sources_unchanged": true,
+  "failures": [],
+  "not_scientific_evidence_for_corrected_model": true
+}

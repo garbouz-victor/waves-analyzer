@@ -1,0 +1,541 @@
+{
+  "command": [
+    "/tmp/pw1-clean-env-0cSgIabD/venv/bin/python",
+    "sloshing_visualization/scripts/pinned_wetting_mission.py",
+    "verify",
+    "--corrected"
+  ],
+  "process_exit_code": 2,
+  "report": {
+    "status": "NEEDS_MODEL_DECISION",
+    "passed": false,
+    "model_id": "PW1_LEFT_NAVIER_RIGHT_NOSLIP_V1",
+    "target_5s": "NOT_RUN",
+    "qualified_final_animation": "NOT_CREATED",
+    "blocker": {
+      "code": "PW1_PINNED_RIGHT_LINEAR_APPLICABILITY",
+      "description": "Pinned RIGHT creates an unqualified steep linear-surface transition: exact all-edge slope hard screen fails on every real pilot; finer spatial surface comparison also exceeds 5%.",
+      "hard_slope_limit": 0.3,
+      "fine_max_slope": 15.701210855077933,
+      "fine_first_failure": {
+        "time_s": 0.0775,
+        "state_id": "leftnavier-pilot_space-afafc6be0b5f:31",
+        "accepted_step": 31,
+        "edge_index": 47,
+        "edge_bounds_m": [
+          0.9911874962269392,
+          1.0
+        ],
+        "x_m": 1.0,
+        "one_sided_edge_endpoint": "right",
+        "eta_x": 0.31426027000805234,
+        "absolute_slope": 0.31426027000805234,
+        "hard_limit": 0.3
+      },
+      "spatial_normalized_surface_Linf": 0.18241059059806036,
+      "reproduction": "PYTHONPATH=src python -c 'from pathlib import Path; from sloshing.pinned_wetting.asymmetric_verify import surface_applicability; print(surface_applicability(Path(\"results/pinned_wetting/left_navier_right_noslip/leftnavier-pilot_space-afafc6be0b5f/native.h5\")))' (cwd: sloshing_visualization)",
+      "not_claimed": "No proof of continuum impossibility, no wrong-BC defect, no reliable physical P3/P4 prediction beyond the violated screen."
+    },
+    "scientific_blocker_confirmed": true,
+    "discrete_equations_and_BCs_passed": true,
+    "linear_applicability_passed": false,
+    "native_reports": {
+      "pilot": {
+        "passed": false,
+        "numerical_checks_passed": true,
+        "passed_equations_and_BCs": true,
+        "linear_applicability_passed": false,
+        "scope": "LEFT_NAVIER_RIGHT_NOSLIP_NATIVE",
+        "model_id": "PW1_LEFT_NAVIER_RIGHT_NOSLIP_V1",
+        "native": "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/results/pinned_wetting/left_navier_right_noslip/leftnavier-pilot-1cd509f8b814/native.h5",
+        "mesh_coordinate_roundoff": {
+          "surface": {
+            "passed": true,
+            "shape_exact": true,
+            "finite": true,
+            "absolute_tolerance_m": 1.7763568394002505e-15,
+            "max_absolute_difference_m": 2.220446049250313e-16
+          },
+          "bulk": {
+            "passed": true,
+            "shape_exact": true,
+            "finite": true,
+            "absolute_tolerance_m": [
+              [
+                1.7763568394002505e-15
+              ],
+              [
+                1.7763568394002505e-14
+              ]
+            ],
+            "max_absolute_difference_m": 1.1102230246251565e-16
+          },
+          "topology_exact": true
+        },
+        "run_id": "leftnavier-pilot-1cd509f8b814",
+        "source_hash": "56eb2a28f09b77e4100177cba45f9b11b78e817bee2eeb0c078a57c8b580b222",
+        "physical_config_hash": "e96c44f3533ad33cd8dce270e2a72459d92b54b1924d6a70e722d49b50244d42",
+        "physical": {
+          "model_id": "PW1_LEFT_NAVIER_RIGHT_NOSLIP_V1",
+          "a_m": 1.0,
+          "d_m": 10.0,
+          "g_m_s2": 9.81,
+          "nu_m2_s": 0.01,
+          "alpha_deg": 2.0,
+          "left_slip_length_m": 0.5,
+          "sigma_N_m": 0.0,
+          "bottom": "no_slip",
+          "left_wall": "impermeable_Navier_tangential_slip",
+          "right_wall": "no_slip",
+          "geometry": "linearized_free_surface",
+          "layer": "irreversible_lower_connected_zero_volume_one_way"
+        },
+        "native_sha256": "16506731fea1875f5f49d91a551058cbf527d740e40ddf396793ffa703ea41bf",
+        "time_range": [
+          0.0,
+          1.0
+        ],
+        "accepted_states": 201,
+        "maxima": {
+          "stage_momentum_relative": 1.0433991889925149e-13,
+          "weak_divergence": 9.52618049129315e-15,
+          "mass_relative": 3.924811864397526e-18,
+          "endpoint_kinematic_absolute": 6.938893903907228e-18,
+          "split_energy_relative": 8.428622524146414e-16,
+          "energy_budget_relative": 1.6866436140674457e-14,
+          "max_eta_over_a": 0.03492076949174773,
+          "max_slope": 9.444582438831212,
+          "max_eta_over_left_b": 0.06984153898349546,
+          "convective_indicator": 1.897709068530224,
+          "kinematic_indicator": 0.8700571368204064,
+          "left_wall_traction_L2": 9.165268726922671e-05,
+          "right_velocity_max": 0.0,
+          "left_normal_velocity_max": 0.0,
+          "bottom_velocity_max": 0.0
+        },
+        "endpoint_trace_rows_nonzeros": [
+          1,
+          0
+        ],
+        "full_wall_support": "left_only",
+        "right_eta_and_H_initial_z2": true,
+        "final_integrals_per_density": {
+          "bulk": 0.0006452991125753484,
+          "LEFT_wall": 2.9799274844579665e-05,
+          "signed_RK": -2.0843953179545233e-08
+        },
+        "H_final_m": [
+          0.024025594873437837,
+          0.03492076949174773
+        ],
+        "markers": [
+          {
+            "marker_id": "P1",
+            "side": "L",
+            "height_m": -0.03492076949174773,
+            "created_at_s": 0.0,
+            "state_id": "leftnavier-pilot-1cd509f8b814:0"
+          },
+          {
+            "marker_id": "P2",
+            "side": "R",
+            "height_m": 0.03492076949174773,
+            "created_at_s": 0.0,
+            "state_id": "leftnavier-pilot-1cd509f8b814:0"
+          },
+          {
+            "marker_id": "P3",
+            "side": "L",
+            "height_m": 0.024025594873437837,
+            "created_at_s": 0.79,
+            "state_id": "leftnavier-pilot-1cd509f8b814:157"
+          }
+        ],
+        "numerical_check_scope": "All source/structural/accepted-field/equation/BC/coating/energy checks; only amplitude/slope screens excluded.",
+        "maximum_slope_witness": {
+          "time_s": 1.0,
+          "state_id": "leftnavier-pilot-1cd509f8b814:200",
+          "accepted_step": 200,
+          "edge_index": 23,
+          "edge_bounds_m": [
+            0.9810432220032226,
+            1.0
+          ],
+          "x_m": 1.0,
+          "one_sided_edge_endpoint": "right",
+          "eta_x": 9.444582438831212,
+          "absolute_slope": 9.444582438831212,
+          "hard_limit": 0.3
+        },
+        "first_slope_screen_failure": {
+          "time_s": 0.09,
+          "state_id": "leftnavier-pilot-1cd509f8b814:18",
+          "accepted_step": 18,
+          "edge_index": 23,
+          "edge_bounds_m": [
+            0.9810432220032226,
+            1.0
+          ],
+          "x_m": 1.0,
+          "one_sided_edge_endpoint": "right",
+          "eta_x": 0.30761389045634563,
+          "absolute_slope": 0.30761389045634563,
+          "hard_limit": 0.3
+        },
+        "applicability_note": "Hard amplitude/slope screens include the pinned RIGHT corner; no uniform physical-error bound is claimed.",
+        "failures": [
+          "limit:max_slope"
+        ]
+      },
+      "pilot_time": {
+        "passed": false,
+        "numerical_checks_passed": true,
+        "passed_equations_and_BCs": true,
+        "linear_applicability_passed": false,
+        "scope": "LEFT_NAVIER_RIGHT_NOSLIP_NATIVE",
+        "model_id": "PW1_LEFT_NAVIER_RIGHT_NOSLIP_V1",
+        "native": "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/results/pinned_wetting/left_navier_right_noslip/leftnavier-pilot_time-f7f1448325e8/native.h5",
+        "mesh_coordinate_roundoff": {
+          "surface": {
+            "passed": true,
+            "shape_exact": true,
+            "finite": true,
+            "absolute_tolerance_m": 1.7763568394002505e-15,
+            "max_absolute_difference_m": 2.220446049250313e-16
+          },
+          "bulk": {
+            "passed": true,
+            "shape_exact": true,
+            "finite": true,
+            "absolute_tolerance_m": [
+              [
+                1.7763568394002505e-15
+              ],
+              [
+                1.7763568394002505e-14
+              ]
+            ],
+            "max_absolute_difference_m": 1.1102230246251565e-16
+          },
+          "topology_exact": true
+        },
+        "run_id": "leftnavier-pilot_time-f7f1448325e8",
+        "source_hash": "56eb2a28f09b77e4100177cba45f9b11b78e817bee2eeb0c078a57c8b580b222",
+        "physical_config_hash": "e96c44f3533ad33cd8dce270e2a72459d92b54b1924d6a70e722d49b50244d42",
+        "physical": {
+          "model_id": "PW1_LEFT_NAVIER_RIGHT_NOSLIP_V1",
+          "a_m": 1.0,
+          "d_m": 10.0,
+          "g_m_s2": 9.81,
+          "nu_m2_s": 0.01,
+          "alpha_deg": 2.0,
+          "left_slip_length_m": 0.5,
+          "sigma_N_m": 0.0,
+          "bottom": "no_slip",
+          "left_wall": "impermeable_Navier_tangential_slip",
+          "right_wall": "no_slip",
+          "geometry": "linearized_free_surface",
+          "layer": "irreversible_lower_connected_zero_volume_one_way"
+        },
+        "native_sha256": "9e99ad8a80eb74c3605c056744cc8adf800b1acbff8a9160fa123e226c6e7e9e",
+        "time_range": [
+          0.0,
+          1.0
+        ],
+        "accepted_states": 401,
+        "maxima": {
+          "stage_momentum_relative": 2.12538430551599e-13,
+          "weak_divergence": 2.06891464451314e-14,
+          "mass_relative": 1.452830911130576e-18,
+          "endpoint_kinematic_absolute": 6.938893903907228e-18,
+          "split_energy_relative": 9.78807776997648e-16,
+          "energy_budget_relative": 3.032423967318254e-14,
+          "max_eta_over_a": 0.03492076949174773,
+          "max_slope": 9.444574595957965,
+          "max_eta_over_left_b": 0.06984153898349546,
+          "convective_indicator": 1.8977069910937723,
+          "kinematic_indicator": 0.8700793742986475,
+          "left_wall_traction_L2": 9.165293009673166e-05,
+          "right_velocity_max": 0.0,
+          "left_normal_velocity_max": 0.0,
+          "bottom_velocity_max": 0.0
+        },
+        "endpoint_trace_rows_nonzeros": [
+          1,
+          0
+        ],
+        "full_wall_support": "left_only",
+        "right_eta_and_H_initial_z2": true,
+        "final_integrals_per_density": {
+          "bulk": 0.0006453054697236278,
+          "LEFT_wall": 2.9799406989662793e-05,
+          "signed_RK": -5.341474760208321e-09
+        },
+        "H_final_m": [
+          0.02402552681352029,
+          0.03492076949174773
+        ],
+        "markers": [
+          {
+            "marker_id": "P1",
+            "side": "L",
+            "height_m": -0.03492076949174773,
+            "created_at_s": 0.0,
+            "state_id": "leftnavier-pilot_time-f7f1448325e8:0"
+          },
+          {
+            "marker_id": "P2",
+            "side": "R",
+            "height_m": 0.03492076949174773,
+            "created_at_s": 0.0,
+            "state_id": "leftnavier-pilot_time-f7f1448325e8:0"
+          },
+          {
+            "marker_id": "P3",
+            "side": "L",
+            "height_m": 0.02402552681352029,
+            "created_at_s": 0.7875,
+            "state_id": "leftnavier-pilot_time-f7f1448325e8:314"
+          }
+        ],
+        "numerical_check_scope": "All source/structural/accepted-field/equation/BC/coating/energy checks; only amplitude/slope screens excluded.",
+        "maximum_slope_witness": {
+          "time_s": 1.0,
+          "state_id": "leftnavier-pilot_time-f7f1448325e8:400",
+          "accepted_step": 400,
+          "edge_index": 23,
+          "edge_bounds_m": [
+            0.9810432220032226,
+            1.0
+          ],
+          "x_m": 1.0,
+          "one_sided_edge_endpoint": "right",
+          "eta_x": 9.444574595957965,
+          "absolute_slope": 9.444574595957965,
+          "hard_limit": 0.3
+        },
+        "first_slope_screen_failure": {
+          "time_s": 0.09,
+          "state_id": "leftnavier-pilot_time-f7f1448325e8:36",
+          "accepted_step": 36,
+          "edge_index": 23,
+          "edge_bounds_m": [
+            0.9810432220032226,
+            1.0
+          ],
+          "x_m": 1.0,
+          "one_sided_edge_endpoint": "right",
+          "eta_x": 0.30761712868234675,
+          "absolute_slope": 0.30761712868234675,
+          "hard_limit": 0.3
+        },
+        "applicability_note": "Hard amplitude/slope screens include the pinned RIGHT corner; no uniform physical-error bound is claimed.",
+        "failures": [
+          "limit:max_slope"
+        ]
+      },
+      "pilot_space": {
+        "passed": false,
+        "numerical_checks_passed": true,
+        "passed_equations_and_BCs": true,
+        "linear_applicability_passed": false,
+        "scope": "LEFT_NAVIER_RIGHT_NOSLIP_NATIVE",
+        "model_id": "PW1_LEFT_NAVIER_RIGHT_NOSLIP_V1",
+        "native": "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/results/pinned_wetting/left_navier_right_noslip/leftnavier-pilot_space-afafc6be0b5f/native.h5",
+        "mesh_coordinate_roundoff": {
+          "surface": {
+            "passed": true,
+            "shape_exact": true,
+            "finite": true,
+            "absolute_tolerance_m": 1.7763568394002505e-15,
+            "max_absolute_difference_m": 1.1102230246251565e-16
+          },
+          "bulk": {
+            "passed": true,
+            "shape_exact": true,
+            "finite": true,
+            "absolute_tolerance_m": [
+              [
+                1.7763568394002505e-15
+              ],
+              [
+                1.7763568394002505e-14
+              ]
+            ],
+            "max_absolute_difference_m": 1.1102230246251565e-16
+          },
+          "topology_exact": true
+        },
+        "run_id": "leftnavier-pilot_space-afafc6be0b5f",
+        "source_hash": "56eb2a28f09b77e4100177cba45f9b11b78e817bee2eeb0c078a57c8b580b222",
+        "physical_config_hash": "e96c44f3533ad33cd8dce270e2a72459d92b54b1924d6a70e722d49b50244d42",
+        "physical": {
+          "model_id": "PW1_LEFT_NAVIER_RIGHT_NOSLIP_V1",
+          "a_m": 1.0,
+          "d_m": 10.0,
+          "g_m_s2": 9.81,
+          "nu_m2_s": 0.01,
+          "alpha_deg": 2.0,
+          "left_slip_length_m": 0.5,
+          "sigma_N_m": 0.0,
+          "bottom": "no_slip",
+          "left_wall": "impermeable_Navier_tangential_slip",
+          "right_wall": "no_slip",
+          "geometry": "linearized_free_surface",
+          "layer": "irreversible_lower_connected_zero_volume_one_way"
+        },
+        "native_sha256": "aa648d440f49b58fd58349351d0637f5e2d581276dfe057517cdb3b4dc48eff5",
+        "time_range": [
+          0.0,
+          1.0
+        ],
+        "accepted_states": 401,
+        "maxima": {
+          "stage_momentum_relative": 2.1452126610887764e-13,
+          "weak_divergence": 2.7173882506499492e-14,
+          "mass_relative": 1.734723475976807e-18,
+          "endpoint_kinematic_absolute": 6.938893903907228e-18,
+          "split_energy_relative": 1.250698826163661e-15,
+          "energy_budget_relative": 4.636473228234461e-14,
+          "max_eta_over_a": 0.03492076949174773,
+          "max_slope": 15.701210855077933,
+          "max_eta_over_left_b": 0.06984153898349546,
+          "convective_indicator": 2.3456975930727255,
+          "kinematic_indicator": 1.5095258467098915,
+          "left_wall_traction_L2": 3.913117536186759e-05,
+          "right_velocity_max": 0.0,
+          "left_normal_velocity_max": 0.0,
+          "bottom_velocity_max": 0.0
+        },
+        "endpoint_trace_rows_nonzeros": [
+          1,
+          0
+        ],
+        "full_wall_support": "left_only",
+        "right_eta_and_H_initial_z2": true,
+        "final_integrals_per_density": {
+          "bulk": 0.000652878392138532,
+          "LEFT_wall": 2.9800577573441527e-05,
+          "signed_RK": -5.348114922968544e-09
+        },
+        "H_final_m": [
+          0.024030200793949314,
+          0.03492076949174773
+        ],
+        "markers": [
+          {
+            "marker_id": "P1",
+            "side": "L",
+            "height_m": -0.03492076949174773,
+            "created_at_s": 0.0,
+            "state_id": "leftnavier-pilot_space-afafc6be0b5f:0"
+          },
+          {
+            "marker_id": "P2",
+            "side": "R",
+            "height_m": 0.03492076949174773,
+            "created_at_s": 0.0,
+            "state_id": "leftnavier-pilot_space-afafc6be0b5f:0"
+          },
+          {
+            "marker_id": "P3",
+            "side": "L",
+            "height_m": 0.024030200793949314,
+            "created_at_s": 0.7875,
+            "state_id": "leftnavier-pilot_space-afafc6be0b5f:314"
+          }
+        ],
+        "numerical_check_scope": "All source/structural/accepted-field/equation/BC/coating/energy checks; only amplitude/slope screens excluded.",
+        "maximum_slope_witness": {
+          "time_s": 1.0,
+          "state_id": "leftnavier-pilot_space-afafc6be0b5f:400",
+          "accepted_step": 400,
+          "edge_index": 47,
+          "edge_bounds_m": [
+            0.9911874962269392,
+            1.0
+          ],
+          "x_m": 1.0,
+          "one_sided_edge_endpoint": "right",
+          "eta_x": 15.701210855077933,
+          "absolute_slope": 15.701210855077933,
+          "hard_limit": 0.3
+        },
+        "first_slope_screen_failure": {
+          "time_s": 0.0775,
+          "state_id": "leftnavier-pilot_space-afafc6be0b5f:31",
+          "accepted_step": 31,
+          "edge_index": 47,
+          "edge_bounds_m": [
+            0.9911874962269392,
+            1.0
+          ],
+          "x_m": 1.0,
+          "one_sided_edge_endpoint": "right",
+          "eta_x": 0.31426027000805234,
+          "absolute_slope": 0.31426027000805234,
+          "hard_limit": 0.3
+        },
+        "applicability_note": "Hard amplitude/slope screens include the pinned RIGHT corner; no uniform physical-error bound is claimed.",
+        "failures": [
+          "limit:max_slope"
+        ]
+      }
+    },
+    "max_t_abs_eta_right_minus_z2_m": 0.0,
+    "max_t_abs_H_right_minus_z2_m": 0.0,
+    "pilot_refinement": {
+      "temporal": {
+        "normalized_surface_Linf": 1.3841193696935004e-05,
+        "normalized_macro_Linf": 8.044847060711405e-06,
+        "normalized_H_Linf": 6.061568060312426e-06,
+        "first_peak_time_fraction": 0.0,
+        "first_peak_height_normalized": 9.744905186239453e-07
+      },
+      "spatial": {
+        "normalized_surface_Linf": 0.18241059059806036,
+        "normalized_macro_Linf": 0.00018643662541413807,
+        "normalized_H_Linf": 8.030693601215942e-05,
+        "first_peak_time_fraction": 0.0,
+        "first_peak_height_normalized": 6.692264370244468e-05
+      }
+    },
+    "videos": [
+      {
+        "file": "preview/preview_extension.mp4",
+        "full_decode_passed": true,
+        "probe": {
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "25/1",
+          "duration": "4.040000",
+          "nb_read_frames": "101"
+        }
+      },
+      {
+        "file": "preview/wall_detail_preview.mp4",
+        "full_decode_passed": true,
+        "probe": {
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "25/1",
+          "duration": "4.040000",
+          "nb_read_frames": "101"
+        }
+      }
+    ],
+    "artifact_integrity_passed": true,
+    "integrity_failures": [],
+    "local_tests": {
+      "tests": 489,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 46
+    },
+    "local_tests_passed": true,
+    "verifier_source_sha256": "c173d7e0c6354de10e88aa6718395fdf13a50dc120add567072b2ab072c211c0",
+    "verifier_source_snapshot": "asymmetric_verifier_source.py",
+    "independent_review_status": "PASS_DISCRETE_EQUATIONS_REJECT_TARGET"
+  },
+  "stderr": "Transforming over 1000 elements to C_CONTIGUOUS.\nTransforming over 1000 elements to C_CONTIGUOUS.\nTransforming over 1000 elements to C_CONTIGUOUS.\n"
+}

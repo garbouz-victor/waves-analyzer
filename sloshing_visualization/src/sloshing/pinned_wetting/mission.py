@@ -198,7 +198,9 @@ def resolve(root, cfg, args):
 def main(root):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("command", choices=["doctor", "run", "status", "resume", "verify", "render", "package", "blocker-check", "pilot"])
-    parser.add_argument("--extension", action="store_true", help="Run the explicitly authorized finite Navier-slip model")
+    variant = parser.add_mutually_exclusive_group()
+    variant.add_argument("--extension", action="store_true", help="Historical symmetric Navier/Navier variant, NOT the corrected target")
+    variant.add_argument("--corrected", action="store_true", help="PW1 LEFT Navier / RIGHT no-slip corrective mission")
     parser.add_argument("--mesh-level", type=int, default=0, choices=[0, 1, 2])
     parser.add_argument("--dt-scale", type=float, default=1.)
     parser.add_argument("--reference-t-end", type=float, default=1.)
@@ -208,6 +210,9 @@ def main(root):
     args = parser.parse_args()
     mission = root / "mission/pinned_wetting"
     cfg = yaml.safe_load((mission / "CONFIG.yaml").read_text())
+    if args.corrected:
+        from .asymmetric_mission import corrected_main
+        return corrected_main(root, cfg, args)
     if args.extension:
         from .extension import extension_main
         return extension_main(root, cfg, args)

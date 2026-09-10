@@ -1,0 +1,35 @@
+version: '1.0'
+model_id: PW1_LEFT_NAVIER_RIGHT_NOSLIP_V1
+authorization: explicit_user_corrective_contract_after_eb11edb2
+inherits: ../CONFIG.yaml
+supersedes: ../extension/CONFIG.yaml
+historical_variant: HISTORICAL_SYMMETRIC_SIDE_SLIP_VARIANT
+physical_model_label: DECLARED_EXTENSION — LEFT NAVIER / RIGHT NO-SLIP
+left_slip_length_m: 0.50
+slip_origin: explicit_user_baseline_not_fitted_not_mesh_linked
+slip_applies_to: [left]
+left_wall: impermeable_Navier_tangential_slip
+right_wall: no_slip
+bottom: no_slip
+sigma_N_m: 0.0
+geometry_model: linearized_free_surface_about_z0
+layer: irreversible_lower_connected_zero_volume_one_way_subgrid_state
+pilot_t_end_s: 1.0
+target_t_end_s: 5.0
+baseline_mesh: [24, 48]
+baseline_dt_s: 0.005
+temporal_refinement_factor: 0.5
+spatial_refinement_factor: 2
+left_slip_sensitivity_m: [0.25, 1.00]
+record_height_tolerance_m: 0.0001
+record_creation: first_accepted_state_confirming_a_local_new_LEFT_record_peak
+detector_samples: every_accepted_step_actual_LEFT_endpoint
+right_contact: fixed_initial_P2_by_FEM_Dirichlet
+render_sample_dt_s: 0.01
+output_root: sloshing_visualization/output/pinned_wetting/left_navier_right_noslip
+runs_root: sloshing_visualization/results/pinned_wetting/left_navier_right_noslip
+linear_applicability:
+  max_amplitude_over_half_width: 0.05
+  max_exact_surface_slope_all_edges: 0.30
+  wall_adjacent_edges_included: true
+  indicators_not_rigorous_physical_error_bounds: true

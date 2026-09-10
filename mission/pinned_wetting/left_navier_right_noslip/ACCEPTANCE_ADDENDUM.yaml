@@ -1,0 +1,66 @@
+version: '1.0'
+model_id: PW1_LEFT_NAVIER_RIGHT_NOSLIP_V1
+inherits_unchanged_gates_from: ../ACCEPTANCE.yaml
+replaces_historical_symmetric_variant_not_original_STOP: true
+boundaries:
+  left: impermeable_Navier_tangential_slip
+  right: full_no_slip
+  bottom: full_no_slip
+  sigma_N_m: 0.0
+  slip_applies_to: [left]
+  left_slip_length_m: 0.50
+endpoint:
+  left_vertical_endpoint_DOF_is_free: true
+  right_vertical_endpoint_DOF_is_fixed: true
+  reduced_endpoint_trace_nonzeros: [1, 0]
+  right_endpoint_height_constant: true
+  right_current_contact_equals_z2: true
+  right_retained_height_equals_z2: true
+  no_new_right_record_above_P2: true
+  right_height_absolute_tolerance_m: 1.0e-12
+  constrained_velocity_absolute_tolerance_m_s: 1.0e-12
+  left_contact_from_actual_trace_not_extrapolation: true
+  right_current_endpoint_not_renderer_correction: true
+energy:
+  Navier_loss_support: left_only
+  full_wall_matrix_matches_independent_left_assembly: true
+  bulk_and_left_wall_losses_nonnegative: true
+  signed_RK_correction_separate: true
+  momentum_residual_relative_max: 1.0e-9
+linear_applicability:
+  max_amplitude_over_half_width: 0.05
+  max_exact_surface_slope_including_both_wall_edges: 0.30
+  report_omitted_convective_and_kinematic_indicators: true
+  nonzero_omitted_indicator_alone_is_not_failure: true
+  no_b_tuning_on_failure: true
+refinement:
+  physical_b_left_fixed: true
+  right_no_slip_in_every_run: true
+  separate_dt_and_mesh: true
+  compare_surface_R_L_H_L_P2_records_and_energy: true
+  max_normalized_height_difference: 0.05
+  max_relative_energy_observable_difference: 0.05
+sensitivity:
+  left_slip_lengths_m: [0.25, 0.50, 1.00]
+  same_mesh_and_dt: true
+  distinct_from_numerical_refinement: true
+layer:
+  left_H_is_every_accepted_endpoint_maximum: true
+  retained_intervals_lower_connected: true
+  persists_without_renderer_and_through_resume: true
+  thickness_volume_inertia_separate_feedback_not_computed: true
+negative_tests:
+  - right_vertical_DOF_freed
+  - right_Navier_term_added_even_if_reduced_away
+  - left_Navier_term_removed
+  - wrong_left_Navier_sign
+  - renderer_fixed_P2_but_native_endpoint_moved
+  - H_R_differs_from_z2
+  - symmetric_identity_relabelled
+  - symmetric_run_used_in_corrected_refinement
+engineering:
+  PyYAML_declared_in_project_dependencies: true
+  numerical_reuse_independent_of_execution_HEAD: true
+  execution_HEAD_provenance_history_retained: true
+  tested_refinement_command_after_HEAD_change: true
+allowed_complete_status: COMPLETE_FOR_DECLARED_MODEL

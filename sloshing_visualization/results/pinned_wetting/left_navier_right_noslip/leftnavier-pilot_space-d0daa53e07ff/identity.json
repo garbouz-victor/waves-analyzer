@@ -1,0 +1,40 @@
+{
+  "model_id": "PW1_LEFT_NAVIER_RIGHT_NOSLIP_V1",
+  "run_id": "leftnavier-pilot_space-d0daa53e07ff",
+  "source_hash": "56eb2a28f09b77e4100177cba45f9b11b78e817bee2eeb0c078a57c8b580b222",
+  "source_files": {
+    "config.py": "38f47c48b52554a6a90df40eeafc4dc8f7687ebce402bb095d0e1c28a1945e7d",
+    "mesh.py": "cce53e6e89ddef48686f207dd246ee52af77911d6485237cb7a92576ced7a68a",
+    "fem_spaces.py": "c937b9b8f523395c3ff12efd0ba5cc456d8f3f581ca08e2e2d1f8d18d7367d54",
+    "problems.py": "99e893ae7570f1a064448f7601edfb661c508f9d43df38a5255eb020b9f1dd7d",
+    "time_integrator.py": "9074fd396fa9e3556ed72829dfd86dd2c3e27ff2009a567e215986ee683180a2",
+    "diagnostics.py": "acdd50b0da557bd12ff828ba3f0dac73a5b3ad1439a3d0fc52102abb7a87c711",
+    "pinned_wetting/coating.py": "6dfb1b4a16799bc10bf326a924a503814da8e4785ef3d74d8c96436dee2dc313",
+    "pinned_wetting/navier.py": "c03d8f6f906ff9522ab34b20410d8a85dabb4df6219395f78c84077a2492922d",
+    "pinned_wetting/extension_run.py": "cf856e20e4ecd96ae2456b9ba5139dffb6ad6fa196d482b5c970f41271e0871e",
+    "pinned_wetting/asymmetric.py": "7335ba28d885f66a10513150c8d6e05e22aa24b2c740eb7c8d9c6ce46407dd42",
+    "pinned_wetting/asymmetric_run.py": "32c0cd796718f0bd8856a7195e27d2f47cd8881324431937f62e8529db56a72d"
+  },
+  "physical_config_hash": "e96c44f3533ad33cd8dce270e2a72459d92b54b1924d6a70e722d49b50244d42",
+  "physical": {
+    "model_id": "PW1_LEFT_NAVIER_RIGHT_NOSLIP_V1",
+    "a_m": 1.0,
+    "d_m": 10.0,
+    "g_m_s2": 9.81,
+    "nu_m2_s": 0.01,
+    "alpha_deg": 2.0,
+    "left_slip_length_m": 0.5,
+    "sigma_N_m": 0.0,
+    "bottom": "no_slip",
+    "left_wall": "impermeable_Navier_tangential_slip",
+    "right_wall": "no_slip",
+    "geometry": "linearized_free_surface",
+    "layer": "irreversible_lower_connected_zero_volume_one_way"
+  },
+  "physical_model_label": "DECLARED_EXTENSION — LEFT NAVIER / RIGHT NO-SLIP",
+  "source_kind": "declared_left_Navier_right_noslip_linear_FEM",
+  "synthetic": false,
+  "role": "pilot_space",
+  "execution_HEAD": "eb11edb2f16d4b1d510dc87bffa30e75df8f06c2",
+  "execution_HEAD_at_creation": "eb11edb2f16d4b1d510dc87bffa30e75df8f06c2"
+}

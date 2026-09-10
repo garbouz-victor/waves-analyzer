@@ -16,7 +16,7 @@ from sloshing.pinned_wetting.navier import LABEL, NavierConfig, NavierDiagnostic
 ROOT = Path(__file__).resolve().parents[2]
 
 
-def make_case(directory, *, slip=.5, t_end=.02):
+def make_case(directory, *, slip=.5, t_end=.02, fem_factory=NavierFEM):
     import hashlib
     directory.mkdir()
     c = NavierConfig(nx=8, nz=12, dt=.005, t_end=t_end, snapshot_dt=.01, integrator="sdirk2", slip_length_m=slip)
@@ -35,7 +35,7 @@ def make_case(directory, *, slip=.5, t_end=.02):
         dest = directory / "source_snapshot" / name
         dest.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(ROOT / "sloshing_visualization/src/sloshing" / name, dest)
-    extension_run.execute_case(ROOT, directory, c, identity, {}, lambda *args: None)
+    extension_run.execute_case(ROOT, directory, c, identity, {}, lambda *args: None, fem_factory=fem_factory)
     return directory / "native.h5"
 
 
@@ -162,9 +162,12 @@ def test_wrong_wall_friction_sign_cannot_self_validate(tmp_path, monkeypatch):
             self.K = self.K_bulk + self.K_wall
     # Deliberately disable production guards to manufacture a physically wrong
     # trajectory; the independent verifier still uses positive Navier friction.
-    monkeypatch.setattr(extension_run, "NavierFEM", NegativeFriction)
     monkeypatch.setattr(NavierDiagnostics, "validate", lambda *args: None)
-    native = make_case(tmp_path / "wrong_friction_sign")
+    # The shared executor now exposes an explicit FEM factory. Inject through
+    # that API; replacing a module global cannot replace a bound default value.
+    native = make_case(tmp_path / "wrong_friction_sign", fem_factory=NegativeFriction)
+    with h5py.File(native) as h:
+        assert json.loads(h["accepted/4"].attrs["integrator_scalars"])["wall_dissipated_energy"] < 0
     report = verify_native(native)
     assert not report["passed"]
     assert "limit:stage_momentum_relative" in report["failures"], report

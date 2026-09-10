@@ -2,6 +2,7 @@ numpy>=1.21.5,<3
 scipy>=1.7.3,<2
 scikit-fem==11.0.0
 h5py>=3.6,<4
+PyYAML>=6,<7
 pytest>=7,<9
 sympy>=1.10,<2
 matplotlib>=3.5,<4

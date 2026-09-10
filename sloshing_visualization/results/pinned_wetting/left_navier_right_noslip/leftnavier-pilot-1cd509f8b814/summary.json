@@ -1,0 +1,53 @@
+{
+  "completed": true,
+  "run_id": "leftnavier-pilot-1cd509f8b814",
+  "native": "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/results/pinned_wetting/left_navier_right_noslip/leftnavier-pilot-1cd509f8b814/native.h5",
+  "time_s": 1.0,
+  "accepted_states": 201,
+  "max_eta_over_a": 0.03492076949174773,
+  "max_slope": 9.444582438831212,
+  "max_eta_over_b": 0.06984153898349546,
+  "max_convective_indicator": 1.897709068530224,
+  "max_kinematic_indicator": 0.8700571368204064,
+  "max_wall_traction_L2": 9.165268726922498e-05,
+  "max_momentum_relative_residual": 1.0556779591213745e-13,
+  "max_weak_divergence": 9.158341321583795e-15,
+  "max_mass_relative_error": 4.0223900599212216e-18,
+  "max_energy_relative_error": 1.609595011062799e-14,
+  "H_final_m": [
+    0.024025594873437837,
+    0.03492076949174773
+  ],
+  "markers": [
+    {
+      "marker_id": "P1",
+      "side": "L",
+      "height_m": -0.03492076949174773,
+      "created_at_s": 0.0,
+      "state_id": "leftnavier-pilot-1cd509f8b814:0"
+    },
+    {
+      "marker_id": "P2",
+      "side": "R",
+      "height_m": 0.03492076949174773,
+      "created_at_s": 0.0,
+      "state_id": "leftnavier-pilot-1cd509f8b814:0"
+    },
+    {
+      "marker_id": "P3",
+      "side": "L",
+      "height_m": 0.024025594873437837,
+      "created_at_s": 0.79,
+      "state_id": "leftnavier-pilot-1cd509f8b814:157"
+    }
+  ],
+  "final_wall_loss_per_density": 2.9799274844579665e-05,
+  "final_bulk_loss_per_density": 0.0006452991125753512,
+  "final_numerical_remainder_per_density": -2.084395317954443e-08,
+  "max_right_endpoint_error": 0.0,
+  "max_right_u_max": 0.0,
+  "max_right_w_max": 0.0,
+  "max_left_u_max": 0.0,
+  "max_bottom_u_max": 0.0,
+  "max_bottom_w_max": 0.0
+}

@@ -1,0 +1,52 @@
+{
+  "status": "PASS_COORDINATE_PORTABILITY_ONLY",
+  "model_id": "PW1_LEFT_NAVIER_RIGHT_NOSLIP_V1",
+  "reviewer_context": "/root/physics_review",
+  "target_acceptance_passed": false,
+  "scientific_blocker_unchanged": "PW1_PINNED_RIGHT_LINEAR_APPLICABILITY",
+  "old_signed_review_sha256": "3f246febc8eee894a82c76ffec54b3b9ce974a94e88a186faf5f252a817d5063",
+  "old_full_native_audit_sha256": "7e7151c01ae17858e3f611be1919ad27233c3e3a2a1b6411c1496c027c598d85",
+  "artifact_hashes": {
+    "native_auditor_portability_source.py": "c173d7e0c6354de10e88aa6718395fdf13a50dc120add567072b2ab072c211c0",
+    "mesh_portability_numpy_2.0.2.json": "6caf2489124f370d9b8d898fe0f3cf84121eabe273e30561591184431c0f3f13",
+    "mesh_portability_numpy_1.21.5.json": "a9be9e52a957ac151fa4c51f13f422fa0d71536039bf04ba3cd1142599e6dc40",
+    "portability_native_probe.json": "e33fe5c7aa95b49445a9e7b14caa2fb2858da8542d6c9ff2b9dd58dd7568ea0c",
+    "reviewer_portability_tests.xml": "9646dd17e1a422f2a4b0d96d10e599dfadd2f15c4eef94a1401f61257a49fd39",
+    "portability_review.md": "384f4e6f1960dd21a0b9b4501029c80fc4ffe716d36dd54715e7223bdae6bb4b"
+  },
+  "native_files_unchanged": {
+    "pilot": {
+      "run_id": "leftnavier-pilot-1cd509f8b814",
+      "path": "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/results/pinned_wetting/left_navier_right_noslip/leftnavier-pilot-1cd509f8b814/native.h5",
+      "sha256": "16506731fea1875f5f49d91a551058cbf527d740e40ddf396793ffa703ea41bf"
+    },
+    "pilot_time": {
+      "run_id": "leftnavier-pilot_time-f7f1448325e8",
+      "path": "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/results/pinned_wetting/left_navier_right_noslip/leftnavier-pilot_time-f7f1448325e8/native.h5",
+      "sha256": "9e99ad8a80eb74c3605c056744cc8adf800b1acbff8a9160fa123e226c6e7e9e"
+    },
+    "pilot_space": {
+      "run_id": "leftnavier-pilot_space-afafc6be0b5f",
+      "path": "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/results/pinned_wetting/left_navier_right_noslip/leftnavier-pilot_space-afafc6be0b5f/native.h5",
+      "sha256": "aa648d440f49b58fd58349351d0637f5e2d581276dfe057517cdb3b4dc48eff5"
+    }
+  },
+  "coordinate_tolerance": {
+    "formula": "8 * float64 machine epsilon * physical axis extent",
+    "horizontal_absolute_m": 1.7763568394002505e-15,
+    "vertical_absolute_m": 1.7763568394002505e-14,
+    "relative_tolerance": 0.0,
+    "shape_and_topology_remain_exact": true
+  },
+  "maximum_measured_coordinate_difference_m": 2.220446049250313e-16,
+  "test_evidence": {
+    "path": "reviewer_portability_tests.xml",
+    "sha256": "9646dd17e1a422f2a4b0d96d10e599dfadd2f15c4eef94a1401f61257a49fd39",
+    "tests": 21,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "additional_full_native_probe": "One unchanged actual pilot, every accepted stage; numerical/BC/energy PASS, sole failure limit:max_slope.",
+  "scope": "Coordinate-comparison portability only; no production/native mutation, no physical/residual/slope gate change, no old evidence rewrite. Original and clean runtimes measured on all three meshes; clean full operator re-audit here covers one pilot, not the forthcoming full package audit."
+}

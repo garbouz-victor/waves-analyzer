@@ -1,0 +1,129 @@
+{
+  "status": "PASS_DISCRETE_EQUATIONS_REJECT_TARGET",
+  "passed": false,
+  "model_id": "PW1_LEFT_NAVIER_RIGHT_NOSLIP_V1",
+  "reviewer_context": "/root/physics_review",
+  "reviewed_at_utc": "2026-09-10T16:19:23.392998+00:00",
+  "numerical_checks_passed": true,
+  "passed_equations_and_BCs": true,
+  "linear_applicability_passed": false,
+  "temporal_pilot_height_refinement_passed": true,
+  "spatial_pilot_height_refinement_passed": false,
+  "target_acceptance_passed": false,
+  "target_5s": "NOT_RUN",
+  "target_energy_refinement": "NOT_RUN",
+  "left_slip_sensitivity": "NOT_RUN",
+  "final_animation": "NOT_RUN_NOT_QUALIFIED",
+  "visual_native_reviewed": true,
+  "visual_scope": "main PNG t=0,.79,1 and detail PNG t=1; full raw CSV/frame-map readback; this review did not decode MP4",
+  "full_operator_audit_performed": true,
+  "operator_audit_reused": false,
+  "numerical_scope": "Every accepted SDIRK2 stage, source identity/snapshot, independent asymmetric free/fixed sets and full LEFT wall matrix, divergence, eta kinematics, mass, split physical losses and signed RK energy, native coating and markers. Not continuum or refinement qualification.",
+  "native_audit": {
+    "path": "native_audit.json",
+    "sha256": "7e7151c01ae17858e3f611be1919ad27233c3e3a2a1b6411c1496c027c598d85",
+    "scope": "INDEPENDENT_ASYMMETRIC_THREE_PILOT_FULL_OPERATOR_AUDIT",
+    "auditor_source_sha256": "1e9b470333e68770e8b50d1c4074f00b9ce9e3fa7d7571f24cc8a527f16d95b0",
+    "auditor_source_snapshot_path": "native_auditor_source.py",
+    "measured_audit_wall_s": 42.061106590001145
+  },
+  "native_runs": {
+    "pilot": {
+      "run_id": "leftnavier-pilot-1cd509f8b814",
+      "native": "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/results/pinned_wetting/left_navier_right_noslip/leftnavier-pilot-1cd509f8b814/native.h5",
+      "native_sha256": "16506731fea1875f5f49d91a551058cbf527d740e40ddf396793ffa703ea41bf",
+      "source_hash": "56eb2a28f09b77e4100177cba45f9b11b78e817bee2eeb0c078a57c8b580b222",
+      "physical_config_hash": "e96c44f3533ad33cd8dce270e2a72459d92b54b1924d6a70e722d49b50244d42"
+    },
+    "pilot_time": {
+      "run_id": "leftnavier-pilot_time-f7f1448325e8",
+      "native": "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/results/pinned_wetting/left_navier_right_noslip/leftnavier-pilot_time-f7f1448325e8/native.h5",
+      "native_sha256": "9e99ad8a80eb74c3605c056744cc8adf800b1acbff8a9160fa123e226c6e7e9e",
+      "source_hash": "56eb2a28f09b77e4100177cba45f9b11b78e817bee2eeb0c078a57c8b580b222",
+      "physical_config_hash": "e96c44f3533ad33cd8dce270e2a72459d92b54b1924d6a70e722d49b50244d42"
+    },
+    "pilot_space": {
+      "run_id": "leftnavier-pilot_space-afafc6be0b5f",
+      "native": "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/results/pinned_wetting/left_navier_right_noslip/leftnavier-pilot_space-afafc6be0b5f/native.h5",
+      "native_sha256": "aa648d440f49b58fd58349351d0637f5e2d581276dfe057517cdb3b4dc48eff5",
+      "source_hash": "56eb2a28f09b77e4100177cba45f9b11b78e817bee2eeb0c078a57c8b580b222",
+      "physical_config_hash": "e96c44f3533ad33cd8dce270e2a72459d92b54b1924d6a70e722d49b50244d42"
+    }
+  },
+  "test_evidence": {
+    "path": "reviewer_tests.xml",
+    "original_path": "/home/victor/Projects/waves-pinned-wetting/mission/pinned_wetting/left_navier_right_noslip/reviewer_tests.xml",
+    "sha256": "609d809f60b07d5dddee6b29b97414e7cd226cdd74a0a71879c74f6fa4e4d098",
+    "tests": 16,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "scope": "Independently executed asymmetric verifier tests only; not full repository CI"
+  },
+  "preview_readback": {
+    "path": "preview_readback.json",
+    "sha256": "7f0807904c02bfd44602211f17408901dd7e5314280d0d01916a92b94d3aa9d2",
+    "passed": true,
+    "checks": 21,
+    "measured_wall_s": 1.638320867990842
+  },
+  "artifact_hashes": {
+    "native_audit.json": "7e7151c01ae17858e3f611be1919ad27233c3e3a2a1b6411c1496c027c598d85",
+    "native_auditor_source.py": "1e9b470333e68770e8b50d1c4074f00b9ce9e3fa7d7571f24cc8a527f16d95b0",
+    "preview_readback.json": "7f0807904c02bfd44602211f17408901dd7e5314280d0d01916a92b94d3aa9d2",
+    "review.md": "3ab5cb195972d5584d266fba0c40071ca643c053c2f80657787fb0a1628fda5e",
+    "reviewer_tests.xml": "609d809f60b07d5dddee6b29b97414e7cd226cdd74a0a71879c74f6fa4e4d098",
+    "preview/surface_history.csv": "e8f917419fe392e011ac2f34cae0adfd786c928f44957fd865f5be54c9f619a0",
+    "preview/surface_snapshots.csv": "4ac7c54594c53130df282c513d61f7f943434abde833ae3aa9e2e0719d91a74b",
+    "preview/wetting_history.csv": "2db0e43f3a3fc6c32e4abb07cbe4ebba68df79f82bcac800758e44e43b532e0a",
+    "preview/energy_history.csv": "1653bf34730b3e9c23f48c3c9578174b96d22b43a3be7ed035f3f05d9051661d",
+    "preview/marker_catalog.csv": "a6ba3140ce7392a683e08de9c5c15d29f1dbdfd7b836fdf46ce8b04452986bc9",
+    "preview/marker_tracks.csv": "0ae4a43c8beb443ba57f2973bf0c2e22513785ebab367100d340c9bfd154577a",
+    "preview/runup_summary.json": "32cda2c9d1db9a879ff15b301869ec905e7b6560a1aa295a9ad642754366c6a2",
+    "preview/render_manifest.json": "699097bede41cc783398fa52aa9ce5256bea4fafd65183e48b7d76c04faeefef",
+    "preview/render_evidence.json": "1b88ec81afc647d62c93c29f82de5e4f3f6632ca2fa54a77b85b8858813b96ed",
+    "preview/main_frame_0000.png": "71d3b2b19b6644983018de3f6162ce58a04b87aeabaf24a96b478a67c3d56f34",
+    "preview/main_frame_0079.png": "c8b227a629e5f7f82e56b80bb88472deeb05f615aac58f128a06027e0be5ae3b",
+    "preview/main_frame_0100.png": "5ec21ba9c8dab3ee435b3553fe385706104f84235b2f20bb5b06190fe9aaf7f0",
+    "preview/detail_frame_0100.png": "c64db5d4bba4a4154690420d97a8d22ca7f34090124a5af5fb17e0bc147a6750",
+    "preview/preview_extension.mp4": "6dd8ac3ba764475be152228a964fe69d74e43656432f0e2477321f54c32ebeec",
+    "preview/wall_detail_preview.mp4": "edb8dcb964927e9fff8bece1a8c6d07e1a502b99fb1048634444166d3b19e1c3"
+  },
+  "contract_hashes": {
+    "CONFIG.yaml": "12eaa408ccc1affe3e2a0127311215fe057d6fedf7076779618bcd037cf0e01b",
+    "model_decision.md": "0184c34c921551740ac95b2ce204314262964ceefd6ceddc517fcad99d2d2672",
+    "ACCEPTANCE_ADDENDUM.yaml": "73e7a5cd224ed05e267b1065d4b5bb8bb87487b9a4bed0b1954d6de237f353a2"
+  },
+  "blocker": {
+    "code": "PW1_PINNED_RIGHT_LINEAR_APPLICABILITY",
+    "description": "Pinned RIGHT creates an unqualified steep linear-surface transition: exact all-edge slope hard screen fails on every real pilot; finer spatial surface comparison also exceeds 5%.",
+    "hard_slope_limit": 0.3,
+    "fine_max_slope": 15.701210855077933,
+    "fine_first_failure": {
+      "time_s": 0.0775,
+      "state_id": "leftnavier-pilot_space-afafc6be0b5f:31",
+      "accepted_step": 31,
+      "edge_index": 47,
+      "edge_bounds_m": [
+        0.9911874962269392,
+        1.0
+      ],
+      "x_m": 1.0,
+      "one_sided_edge_endpoint": "right",
+      "eta_x": 0.31426027000805234,
+      "absolute_slope": 0.31426027000805234,
+      "hard_limit": 0.3
+    },
+    "spatial_normalized_surface_Linf": 0.18241059059806036,
+    "reproduction": "PYTHONPATH=src python -c 'from pathlib import Path; from sloshing.pinned_wetting.asymmetric_verify import surface_applicability; print(surface_applicability(Path(\"results/pinned_wetting/left_navier_right_noslip/leftnavier-pilot_space-afafc6be0b5f/native.h5\")))' (cwd: sloshing_visualization)",
+    "not_claimed": "No proof of continuum impossibility, no wrong-BC defect, no reliable physical P3/P4 prediction beyond the violated screen."
+  },
+  "limitations": [
+    "Only computed 0–1 s linear trajectories, not qualified 0–5 s physical result.",
+    "Uniform C1 corner regularity and continuum convergence are not established; right-edge screen is not waived.",
+    "Coating thickness, volume, inertia and feedback not resolved; explicit one-way zero-volume law.",
+    "Record time comes from accepted samples and predeclared0.1mm detector floor; P3 occurs after applicability fails.",
+    "Own full MP4 decoding is not claimed; inspected representative PNGs and native-bound frame maps.",
+    "Historical symmetric and original no-slip data/reviews are not evidence of this corrected target."
+  ]
+}

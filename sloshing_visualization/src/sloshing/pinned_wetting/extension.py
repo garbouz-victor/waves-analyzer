@@ -39,8 +39,22 @@ def run_case(root, cfg, controls, role, state, heartbeat, stop_after=None):
             dest = run_dir / "source_snapshot" / name
             dest.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(root / "sloshing_visualization/src/sloshing" / name, dest)
-    elif read_json(run_dir / "identity.json") != identity:
-        raise ValueError("Existing extension run identity differs")
+    else:
+        previous = read_json(run_dir / "identity.json")
+        numerical = lambda value: {k:v for k,v in value.items() if k not in ("execution_HEAD","execution_HEAD_at_creation","execution_HEAD_history")}
+        if numerical(previous) != numerical(identity):
+            raise ValueError("Existing extension numerical identity differs")
+        # Native creation identity is immutable; a documentation-only HEAD change
+        # belongs to provenance, not to a physically different trajectory.
+        current_head = identity["execution_HEAD"]
+        identity = previous
+        provenance_path = run_dir / "provenance.json"
+        provenance = read_json(provenance_path) if provenance_path.exists() else {
+            "execution_HEAD_at_creation":previous["execution_HEAD"],
+            "execution_HEAD_history":[previous["execution_HEAD"]],"run_id":run_id}
+        if provenance["execution_HEAD_history"][-1] != current_head:
+            provenance["execution_HEAD_history"].append(current_head)
+            write_json(provenance_path,provenance)
     if run_id not in state["run_ids"]:
         state["run_ids"].append(run_id)
     state.update(current_run_id=run_id, current_run_scope="DECLARED_EXTENSION", target_run_executed=controls.t_end==5.)

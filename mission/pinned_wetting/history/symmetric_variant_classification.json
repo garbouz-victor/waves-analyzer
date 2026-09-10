@@ -1,0 +1,14 @@
+{
+  "classification": "HISTORICAL_SYMMETRIC_SIDE_SLIP_VARIANT",
+  "published_commit": "eb11edb2f16d4b1d510dc87bffa30e75df8f06c2",
+  "left_wall": "Navier",
+  "right_wall": "Navier",
+  "superseded_reason": "requested model is left Navier / right no-slip",
+  "historical_bundle": "sloshing_visualization/output/pinned_wetting/declared_extension",
+  "historical_runs": "sloshing_visualization/results/pinned_wetting/declared_extension",
+  "historical_decision": "mission/pinned_wetting/extension/model_decision.md",
+  "completed_state_snapshot": "mission/pinned_wetting/history/symmetric_Navier_Navier_COMPLETE_state.json",
+  "native_data_modified": false,
+  "usable_for_corrected_refinement": false,
+  "successor_model_id": "PW1_LEFT_NAVIER_RIGHT_NOSLIP_V1"
+}

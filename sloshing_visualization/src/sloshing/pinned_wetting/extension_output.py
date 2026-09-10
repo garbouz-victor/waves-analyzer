@@ -42,6 +42,10 @@ def render_bundle(root, native, output, *, final=False, heartbeat=lambda: None):
             "reason":"Separate nearby historical marker captions without moving world coordinates."})
     d = load_native(native)
     c, times, x, eta, H = d["config"], d["times"], d["x"], d["eta"], d["H"]
+    corrected = d["identity"].get("model_id") == "PW1_LEFT_NAVIER_RIGHT_NOSLIP_V1"
+    label = d["identity"].get("physical_model_label", LABEL)
+    if corrected and (np.max(abs(eta[:,-1]-eta[0,-1]))>1e-12 or np.max(abs(H[:,1]-eta[0,-1]))>1e-12):
+        raise ValueError("Native RIGHT endpoint/H is not fixed P2; renderer cannot repair it")
     resolved = read_json(native.parent / "resolved_case.json")
     rho = resolved["original_case"]["physics"]["density_kg_m3"]
     frame_times = np.arange(round(times[-1]/.01)+1)*.01
@@ -50,8 +54,9 @@ def render_bundle(root, native, output, *, final=False, heartbeat=lambda: None):
         raise ValueError("Render cadence is not on accepted solver states")
     for name in ("resolved_case.json",):
         shutil.copyfile(native.parent / name, output / name)
-    shutil.copyfile(root / "mission/pinned_wetting/extension/model_decision.md", output / "model_decision.md")
-    shutil.copyfile(root / "mission/pinned_wetting/extension/ACCEPTANCE_ADDENDUM.yaml", output / "ACCEPTANCE_ADDENDUM.yaml")
+    decision_dir = root / "mission/pinned_wetting" / ("left_navier_right_noslip" if corrected else "extension")
+    shutil.copyfile(decision_dir / "model_decision.md", output / "model_decision.md")
+    shutil.copyfile(decision_dir / "ACCEPTANCE_ADDENDUM.yaml", output / "ACCEPTANCE_ADDENDUM.yaml")
     header = ["time_s", "point_index", "x_m", "z_m", "component_id", "state_id"]
     def surface_rows(selected):
         return ((times[i], j, xx, zz, "main", d["ids"][i]) for i in selected for j, (xx, zz) in enumerate(zip(x, eta[i])))
@@ -76,7 +81,7 @@ def render_bundle(root, native, output, *, final=False, heartbeat=lambda: None):
          for i, r in enumerate(d["diagnostics"])))
     peaks = [{**m, "peak_time_s": float(times[int(m["state_id"].rsplit(":",1)[1])])} for m in markers if m["marker_id"] not in ("P1","P2")]
     left_peaks = [p for p in peaks if p["side"] == "L"]
-    write_json(output / "runup_summary.json", {"model": LABEL, "run_id": d["identity"]["run_id"],
+    write_json(output / "runup_summary.json", {"model": label, "run_id": d["identity"]["run_id"],
         "first_left_peak": left_peaks[0] if left_peaks else None,
         "later_left_new_record": left_peaks[1] if len(left_peaks)>1 else None,
         "no_later_record_reason": "No later resolved local peak exceeded the retained record plus the predeclared 0.1 mm detector floor." if len(left_peaks)<2 else None,
@@ -84,10 +89,10 @@ def render_bundle(root, native, output, *, final=False, heartbeat=lambda: None):
         "first_left_rise_from_P1_m": left_peaks[0]["height_m"]-eta[0,0] if left_peaks else None,
         "left_record_exceeds_initial_P2": bool(H[-1,0] > eta[0,-1]), "records": peaks,
         "uncertainty": "See independent mesh/time comparisons in refinement.json; two levels are not an error bound."})
-    names = ["final_animation.mp4", "wall_detail.mp4"] if final else ["preview_extension.mp4"]
+    names = ["final_animation.mp4", "wall_detail.mp4"] if final else (["preview_extension.mp4", "wall_detail_preview.mp4"] if corrected else ["preview_extension.mp4"])
     render_records = []
     for name in names:
-        detail = name == "wall_detail.mp4"
+        detail = name.startswith("wall_detail")
         record = render_video(output/name, d, indices, frame_times, detail=detail, heartbeat=heartbeat)
         render_records.append(record)
     expected_frames = len(indices)
@@ -100,7 +105,7 @@ def render_bundle(root, native, output, *, final=False, heartbeat=lambda: None):
             raise ValueError("Video cadence/size mismatch")
         record = next(r for r in render_records if r["video"] == video)
         record["probe"], record["full_decode"] = probe, True
-    write_json(output / "render_evidence.json", {"model": LABEL, "film_label": FILM_LABEL,
+    write_json(output / "render_evidence.json", {"model": label, "film_label": FILM_LABEL,
         "time_range_s": [float(times[0]), float(times[-1])], "frame_dt_s": .01, "videos": render_records})
     frames = sorted(output.glob("main_frame_*.png"))
     montage = Image.new("RGB", (1920, 540*((len(frames)+1)//2)), "white")
@@ -113,9 +118,11 @@ def render_bundle(root, native, output, *, final=False, heartbeat=lambda: None):
         "status": "RENDERED_NOT_YET_FINAL_VERIFIED" if final else "PREVIEW_ONLY"})
     links = ["surface_history.csv", "surface_snapshots.csv", "wetting_history.csv", "marker_catalog.csv", "marker_tracks.csv",
              "energy_history.csv", "runup_summary.json", "key_frames.png", "model_decision.md", "resolved_case.json"]
+    slip = c["left_slip_length_m"] if corrected else c["slip_length_m"]
+    boundary_text = ("LEFT: Navier; RIGHT: no-slip; BOTTOM: no-slip. P2 — неподвижный текущий правый endpoint. " if corrected else "")
     (output/"index.html").write_text('<!doctype html><html lang="ru"><meta charset="utf-8"><title>PW1 — Navier</title>'
         '<style>body{max-width:1150px;margin:40px auto;font:18px sans-serif;background:#f7f9fc}video{width:100%}li{margin:10px}</style>'
-        f'<h1>{LABEL}</h1><p>Основная жидкость: линейная модель, b={c["slip_length_m"]} м, σ=0. '
+        f'<h1>{label}</h1><p>{boundary_text}Основная жидкость: линейная модель, b={slip} м, σ=0. '
         'Остаточное покрытие — отдельный необратимый подсеточный закон; толщина и отдельная динамика не вычислялись.</p>'
         ''.join(f'<video controls preload="metadata" src="{n}"></video>' for n in names) + '<ul>' +
         ''.join(f'<li><a href="{n}">{n}</a></li>' for n in links) + '</ul></html>')
@@ -123,6 +130,9 @@ def render_bundle(root, native, output, *, final=False, heartbeat=lambda: None):
 
 def render_video(path, d, indices, times, *, detail, heartbeat):
     c, x, eta, H = d["config"], d["x"], d["eta"], d["H"]
+    corrected = d["identity"].get("model_id") == "PW1_LEFT_NAVIER_RIGHT_NOSLIP_V1"
+    label = d["identity"].get("physical_model_label", LABEL)
+    slip = c["left_slip_length_m"] if corrected else c["slip_length_m"]
     markers = d["coatings"][-1]["markers"]
     fig = plt.figure(figsize=(19.2,10.8), dpi=100, facecolor="#f7f9fc")
     axes = ([fig.add_axes([.08,.38,.25,.43]),fig.add_axes([.41,.38,.25,.43]),
@@ -162,6 +172,8 @@ def render_video(path, d, indices, times, *, detail, heartbeat):
         side_strips = []
         for j,side in enumerate((-c["a"],c["a"])):
             strip = Rectangle((side if j==0 else side-.012, limits[0]*1000), .012, 0, color="#15bac3",zorder=6)
+            if corrected and j==1:
+                strip.set_visible(False)  # RIGHT current contact never recedes from P2
             ax.add_patch(strip); side_strips.append(strip)
         strips.append(side_strips)
         ma = []
@@ -193,17 +205,22 @@ def render_video(path, d, indices, times, *, detail, heartbeat):
     inset.set_aspect("equal"); inset.fill_between([-1,1],-c["d"],0,color="#bcdbef")
     inset.plot([-1,-1,1,1],[.1,-c["d"],-c["d"],.1],c="#243b55")
     inset.axhspan(*limits,color="#dd9543",alpha=.7); inset.set_xticks([-1,1])
-    fig.text(.08,.94,LABEL,fontsize=22,weight="bold",c="#184265")
-    fig.text(.08,.89,f'Линейные гравитационные колебания • b = {c["slip_length_m"]:.2f} м • σ = 0 • ν = {c["nu"]} м²/с',fontsize=16)
+    fig.text(.08,.94,label,fontsize=22,weight="bold",c="#184265")
+    fig.text(.08,.89,f'Линейные гравитационные колебания • {"b слева" if corrected else "b"} = {slip:.2f} м • σ = 0 • ν = {c["nu"]} м²/с',fontsize=16)
     if path.name not in ("final_animation.mp4", "wall_detail.mp4"):
-        fig.text(.08,.845,"PREVIEW / NOT FINAL — уточнение и итоговая проверка ещё не завершены",fontsize=13,c="#a14b20")
+        slope = max(r["max_slope"] for r in d["diagnostics"])
+        preview_note = (f"PREVIEW / NOT FINAL — LINEAR APPLICABILITY FAILED: max |η_x| = {slope:.3f} > 0.30" if corrected and slope>.30 else
+                        "PREVIEW / NOT FINAL — уточнение и итоговая проверка ещё не завершены")
+        fig.text(.08,.845,preview_note,fontsize=13,c="#a14b20")
     else:
         fig.text(.08,.845,"Пунктир: начальная прямая и уровни P1/P2. В увеличениях масштабы x (м) и z (мм) различны.",fontsize=12,c="#526277")
     timer = fig.text(.82,.89,"",fontsize=20,weight="bold")
     values = fig.text(.08,.325,"",fontsize=14)
     fig.text(.08,.065,FILM_LABEL,fontsize=14,c="#28596b")
     fig.text(.08,.032,"Покрытие задано подсеточно: объём, инерция и отдельная динамика не вычислялись. Навье и память покрытия — разные законы.",fontsize=12)
-    fig.text(.86,.23,"Боковые стенки:\nнепроницаемы,\nNavier slip.\nДно: no-slip.\nЗамедление ×4.",fontsize=12)
+    wall_note = ("Слева: Navier.\nСправа: no-slip.\nP2 = endpoint.\nДно: no-slip.\nЗамедление ×4." if corrected else
+                 "Боковые стенки:\nнепроницаемы,\nNavier slip.\nДно: no-slip.\nЗамедление ×4.")
+    fig.text(.86,.23,wall_note,fontsize=12)
     representative = set(np.rint(np.linspace(0,len(indices)-1,6)).astype(int))
     for marker in markers[2:]:
         representative.add(min(len(indices)-1,int(np.ceil(marker["created_at_s"]/.01-1e-10))))

@@ -5,6 +5,71 @@
 самостоятельное уточнение и проверка результата для объявленной модели.
 
 ## Текущее состояние
+**CORRECTIVE CONTINUATION — scientific blocker confirmed; not COMPLETE.**
+Current model: PW1_LEFT_NAVIER_RIGHT_NOSLIP_V1.
+Published HEAD eb11edb2f16d4b1d510dc87bffa30e75df8f06c2 audited; same branch,
+initial worktree clean. User corrected wall BC: LEFT Navier b_left=.50m only,
+RIGHT full no-slip, BOTTOM full no-slip; sigma0, same linear model. P2 is BOTH
+historical marker AND current endpoint for every accepted state. Required trace
+structure [1,0], not previous [1,1]. New native/output roots left_navier_right_noslip.
+Old COMPLETE state is snapshotted before mutation in history/symmetric_Navier_Navier_COMPLETE_state.json.
+Symmetric result is HISTORICAL_SYMMETRIC_SIDE_SLIP_VARIANT, superseded because right BC
+was not the requested one. Its native/bundle/decision and original no-slip STOP remain untouched.
+Budget continues from5459.059063s charged,4.908GB output, original12h/40GiB caps.
+Kernel lock idle confirmed before correction. No duplicate job or new branch.
+Current implementation: explicit left-only FEM, structural native matrix evidence,
+independent asymmetric verifier/negative tests (/root/physics_review), PyYAML dependency,
+HEAD provenance versus numerical identity regression. Then real pilot+preview,
+hard linear screens (including pinned-right edges), target/refinements/sensitivity/final verify
+if screens pass. No b tuning and no use of old P3/P4 numbers as corrected evidence.
+
+Corrected physical qualification now has a real scientific blocker, not a runtime
+forecast: three new0–1s runs completed (24×48/.005,24×48/.0025,48×96/.0025).
+Independent full native/stage audits all PASS for equations/BC/coating/energy,
+but exact max slopes9.444582/9.444575/15.701211 exceed the unchanged.30 hard screen.
+Right eta/H deviations and both right velocity traces are exactly0; P2 is truly fixed.
+Temporal surface difference.00138412%, spatial18.241059% (limit5%).
+Single blocker PW1_PINNED_RIGHT_LINEAR_APPLICABILITY; nonlinear geometry needs a
+new physical decision. Target5s/sensitivity/final MP4 NOT_RUN, no qualifiedP3/P4.
+Two real preview0–1s videos and all native checkpoints retained under the new roots.
+Independent signed review and16 negative/positive reviewer tests are complete.
+Fresh isolated venv installed from requirements (includingPyYAML6.0.3), CLI doctor
+andpipcheckPASS. First full pytest found one old negative fixture whose global
+monkeypatch no longer injected into the explicit FEM-factory API; fixture updated
+to actually compute negative-friction fields (also asserting negative wall loss).
+No numerical source or historical native changed for that correction.
+Final clean pytest including validation, real-commit/int-float reuse and mesh
+portability regressions:443PASS,46optional historical backend skips,0failures,0deselected.
+First real extra-mesh smoke exposed t_end JSON1/1.0 digest duplication: interrupted
+the unwanted partial run d0daa53e07ff, retained it separately, never used for evidence.
+CLI now restores exact saved control payload; repeated smoke reused audited fine
+afafc6be0b5f in2.305s, no native bytes or directory set changed. A concurrent package
+attempt was refused by the kernel lock (no second heavy job). Old histories intact.
+Clean NumPy2.0.2 showed mesh regeneration roundoff2.22e−16m vs saved NumPy1.21.5.
+Independent guard now allows only8eps of axis scale, exact topology/DOFs unchanged;
+21 targeted tests and actual pilot re-audit PASS for discrete equations, slopeFAIL
+unchanged. Original audit/signature retained; portability_review_addendum.json is additive.
+
+Corrected blocker package saved. Final actual `verify --corrected` session47992
+returned expected exit2: scientific_blocker_confirmed=true, discrete equations/BCs
+PASS, artifact integrityPASS, both MP4 complete decodePASS,489 tests total/443PASS/
+46optional skips. Right eta and H deviations0.0m. No final_animation.mp4 or5s target
+is claimed. Readback: left_navier_right_noslip/final_verify_readback.json.
+Index: sloshing_visualization/output/pinned_wetting/left_navier_right_noslip/index.html.
+FINAL_REPORT, verification.json(passed=false), manifest, all three native paths,
+pilot refinement/energy and explicitlyNOT_RUN b sensitivity are in that bundle.
+Finer-pilot command (same b, already-tested reuse; expected scientific exit2):
+`python sloshing_visualization/scripts/pinned_wetting_mission.py pilot --corrected --mesh-level 1 --dt-scale 0.5`.
+Tested interpreter: /tmp/pw1-clean-env-0cSgIabD/venv/bin/python; requirements installed
+normally in this isolated venv. GitHub CI not run; local Python3.9 rather than CI3.11.
+HEAD remains eb11edb2f16d4b1d510dc87bffa30e75df8f06c2 on feature/pinned-wetting-history;
+corrective edits uncommitted, no push. State job-close ledger is authoritative.
+Only remaining decision: nonlinear free-surface/wall-corner geometry at unchanged
+requested BCs; uniform linear applicability/convergence is not established.
+NEEDS_MODEL_DECISION, not COMPLETE. No PDE solve remains authorized/required
+without that physical decision; no background continuation is promised.
+
+## Superseded symmetric completion (historical, not current acceptance)
 **COMPLETE_FOR_DECLARED_MODEL — DECLARED_EXTENSION, 2026-09-10.**
 `package --extension` session51685 завершён exit0 после112.509s. Все обязательные
 gates PASS: contract, physics, wetting, numerical_refinement, rendering,
