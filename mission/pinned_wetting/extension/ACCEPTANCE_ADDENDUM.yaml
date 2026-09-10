@@ -1,0 +1,40 @@
+version: '1.0'
+model_id: PW1_NAVIER_DECLARED_EXTENSION
+inherits_unchanged_gates_from: ../ACCEPTANCE.yaml
+original_acceptance_and_STOP_are_not_rewritten: true
+only_physical_boundary_replacement:
+  side_no_slip: finite_Navier_slip_with_impermeability
+  slip_length_fixed_for_mesh_and_dt_refinement_m: 0.50
+  bottom: no_slip
+  surface_tension_N_m: 0.0
+endpoint:
+  vertical_wall_endpoint_DOF_is_free: true
+  height_derivative_from_actual_FE_trace: true
+  extrapolation_for_contact_forbidden: true
+energy:
+  positive_wall_friction_matrix: true
+  bulk_and_wall_dissipation_separately_integrated_on_RK_stages: true
+  RK_correction_is_signed_numerical_term: true
+  weak_momentum_and_boundary_condition_residual_relative_max: 1.0e-9
+linear_applicability:
+  max_amplitude_over_half_width: 0.05
+  max_exact_surface_slope_including_wall_edges: 0.30
+  report_eta_over_slip_length: true
+  report_omitted_kinematic_and_convective_indicators: true
+  passing_does_not_prove_five_percent_physical_error: true
+  failed_gate_does_not_allow_slip_parameter_tuning: true
+sensitivity:
+  slip_lengths_m: [0.25, 1.00]
+  distinct_physics_not_numerical_refinement: true
+  use_same_mesh_and_dt_for_parameter_comparison: true
+additional_negative_tests:
+  - wrong_wall_friction_sign
+  - fixed_vertical_endpoint_DOF
+  - mixed_slip_lengths_in_same_physics_refinement
+  - omitted_wall_friction_energy
+  - no_slip_reference_relabelled_as_Navier_target
+layer:
+  independent_of_Navier_slip_law: true
+  irreversible_lower_connected_model_state_in_checkpoints: true
+  thickness_volume_inertia_separate_feedback_not_computed: true
+allowed_complete_status: COMPLETE_FOR_DECLARED_MODEL

@@ -1,0 +1,54 @@
+{
+  "completed": true,
+  "run_id": "navier-space_refined-dd9d8f7c74f0",
+  "native": "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/results/pinned_wetting/declared_extension/navier-space_refined-dd9d8f7c74f0/native.h5",
+  "time_s": 5.0,
+  "accepted_states": 2001,
+  "max_eta_over_a": 0.03492076949174773,
+  "max_slope": 0.10358936947424055,
+  "max_eta_over_b": 0.06984153898349546,
+  "max_convective_indicator": 0.125357164789845,
+  "max_kinematic_indicator": 0.08953257691362275,
+  "max_wall_traction_L2": 5.581395673143051e-05,
+  "max_momentum_relative_residual": 1.3888145468141161e-12,
+  "max_weak_divergence": 2.8227242689085568e-14,
+  "max_mass_relative_error": 4.276838757276413e-18,
+  "max_energy_relative_error": 2.1838289069014184e-13,
+  "H_final_m": [
+    0.025349900359708896,
+    0.03492076949174773
+  ],
+  "markers": [
+    {
+      "marker_id": "P1",
+      "side": "L",
+      "height_m": -0.03492076949174773,
+      "created_at_s": 0.0,
+      "state_id": "navier-space_refined-dd9d8f7c74f0:0"
+    },
+    {
+      "marker_id": "P2",
+      "side": "R",
+      "height_m": 0.03492076949174773,
+      "created_at_s": 0.0,
+      "state_id": "navier-space_refined-dd9d8f7c74f0:0"
+    },
+    {
+      "marker_id": "P3",
+      "side": "L",
+      "height_m": 0.024740857401271514,
+      "created_at_s": 0.79,
+      "state_id": "navier-space_refined-dd9d8f7c74f0:315"
+    },
+    {
+      "marker_id": "P4",
+      "side": "L",
+      "height_m": 0.025349900359708896,
+      "created_at_s": 2.4050000000000002,
+      "state_id": "navier-space_refined-dd9d8f7c74f0:961"
+    }
+  ],
+  "final_wall_loss_per_density": 0.00026283078502420095,
+  "final_bulk_loss_per_density": 0.0014436150733804936,
+  "final_numerical_remainder_per_density": -1.0758521307170917e-08
+}

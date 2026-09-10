@@ -1,0 +1,19 @@
+{
+  "python": "/home/victor/Projects/waves-analyzer/sloshing_visualization/.venv/bin/python",
+  "versions": {
+    "numpy": "1.21.5",
+    "scipy": "1.7.3",
+    "scikit-fem": "11.0.0",
+    "h5py": "3.6.0",
+    "matplotlib": "3.5.1",
+    "PyYAML": "6.0"
+  },
+  "cpu_count": 8,
+  "mem_total_bytes": 33251659776,
+  "mem_available_bytes": 15619055616,
+  "disk_available_bytes": 44543389696,
+  "ffmpeg": "/usr/bin/ffmpeg",
+  "ffprobe": "/usr/bin/ffprobe",
+  "execution_HEAD": "7f0c45f192520b218838d535b0182facf43133d3",
+  "status": "READY_FOR_REFERENCE"
+}

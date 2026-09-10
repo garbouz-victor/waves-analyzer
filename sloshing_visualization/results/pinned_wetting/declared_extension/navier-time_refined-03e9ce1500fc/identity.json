@@ -1,0 +1,34 @@
+{
+  "run_id": "navier-time_refined-03e9ce1500fc",
+  "source_hash": "dc21c6d119fcea6367cdf212dd78a53cf429d085ad984d78eb48ffc26fc3522a",
+  "source_files": {
+    "config.py": "38f47c48b52554a6a90df40eeafc4dc8f7687ebce402bb095d0e1c28a1945e7d",
+    "mesh.py": "cce53e6e89ddef48686f207dd246ee52af77911d6485237cb7a92576ced7a68a",
+    "fem_spaces.py": "c937b9b8f523395c3ff12efd0ba5cc456d8f3f581ca08e2e2d1f8d18d7367d54",
+    "problems.py": "99e893ae7570f1a064448f7601edfb661c508f9d43df38a5255eb020b9f1dd7d",
+    "time_integrator.py": "9074fd396fa9e3556ed72829dfd86dd2c3e27ff2009a567e215986ee683180a2",
+    "diagnostics.py": "acdd50b0da557bd12ff828ba3f0dac73a5b3ad1439a3d0fc52102abb7a87c711",
+    "pinned_wetting/coating.py": "6dfb1b4a16799bc10bf326a924a503814da8e4785ef3d74d8c96436dee2dc313",
+    "pinned_wetting/navier.py": "c03d8f6f906ff9522ab34b20410d8a85dabb4df6219395f78c84077a2492922d",
+    "pinned_wetting/extension_run.py": "27bd74436b1ad9987838784f460c5da9d1ec7f469ba48d547f5df0a894bb792c"
+  },
+  "physical_config_hash": "96391ac3c53b1d51581154aaa31a54329dd786864346ee707bcb46ef3f973699",
+  "physical": {
+    "a_m": 1.0,
+    "d_m": 10.0,
+    "g_m_s2": 9.81,
+    "nu_m2_s": 0.01,
+    "alpha_deg": 2.0,
+    "slip_length_m": 0.5,
+    "sigma_N_m": 0.0,
+    "bottom": "no_slip",
+    "sides": "impermeable_Navier",
+    "geometry": "linearized_free_surface",
+    "layer": "irreversible_lower_connected_zero_volume_one_way"
+  },
+  "physical_model_label": "DECLARED_EXTENSION — конечное скольжение Навье",
+  "synthetic": false,
+  "source_kind": "declared_Navier_linear_FEM",
+  "execution_HEAD": "7f0c45f192520b218838d535b0182facf43133d3",
+  "role": "time_refined"
+}

@@ -1,0 +1,117 @@
+version: '1.0'
+mission_id: pinned-wetting-PW1
+# Критерии proposed engineering release, не обещанная математическая точность.
+# Агент реализует конечный verifier; bundled CSV checker проверяет только subset.
+allowed_complete_status: COMPLETE_FOR_DECLARED_MODEL
+no_complete_when: [PREVIEW_ONLY, NEEDS_MODEL_DECISION, RESOURCE_LIMIT, FAILED]
+
+contract:
+  initial_surface_exact_type: straight_line
+  z2_greater_than_z1: true
+  initial_velocity: zero
+  wetting_is_irreversible_model_state: true
+  wetting_has_connected_lower_closure: true
+  current_bulk_height_distinct_from_total_wet_height: true
+  film_thickness_is_not_computed_or_claimed: true
+  all_marker_coordinates_immutable_after_creation: true
+  physical_parameters_have_origin_tags: true
+  model_change_is_never_hidden: true
+  extrapolated_fixed_endpoint_is_not_valid_wall_contact: true
+  initial_global_precursor_is_not_initial_physical_wetting: true
+  final_target_not_old_linear_reference_renamed: true
+  forced_new_wave_record_forbidden: true
+
+simulation:
+  t_end_s: 5.0
+  required_snapshots_s: [0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0]
+  finite_fields: true
+  rejected_state_in_accepted_history: false
+  mass_relative_tolerance: 1.0e-6
+  mass_includes_resolved_film_if_any: true
+  unresolved_film_mass_is_explicit_leading_order_approximation: true
+  actual_wall_conditions_verified: true
+  incompressibility_verified_in_method_appropriate_norm: true
+  mixed_FEM_pointwise_divergence_not_silently_required_zero: true
+  energy_work_and_numerical_loss_separate: true
+  final_energy_budget_relative_target: 0.05
+  energy_denominator: max(abs(total_energy_change), positive_initial_disturbance_energy_scale)
+  wetting_adsorption_work_if_modeled_is_accounted: true
+  checkpoint_preserves_wetting_and_marker_state: true
+  every_record_links_to_solver_run_and_accepted_state: true
+
+wetting:
+  recurrence: 'H_i[n] = max(H_i[n-1], R_i[n])'
+  recurrence_on_detector_samples_not_render_frames: true
+  initial_H_L: z1
+  initial_H_R: z2
+  lower_connected: true
+  no_unobserved_new_wet_points_except_user_lower_closure: true
+  tolerances_are_numerical_not_visible_clamps: true
+  marker_1_2_never_reused: true
+  new_marker_on_resolved_new_record_only: true
+  no_marker_3_4_is_a_valid_outcome: true
+  decrease_in_H_is_fail: true
+  merely_monotone_H_without_matching_contact_evidence_is_fail: true
+
+refinement:
+  same_physics: true
+  check_time_independently: true
+  check_space_independently: true
+  compare_on_common_physical_times: true
+  at_least_two_resolutions_each_direction: true
+  no_formal_order_claim_from_two_levels: true
+  max_normalized_surface_difference: 0.05
+  max_normalized_macro_runup_difference: 0.05
+  max_normalized_wet_front_difference: 0.05
+  height_normalization: abs(z2-z1)
+  first_peak_time_difference_fraction_of_first_peak_time: 0.05
+  time_test_not_applicable_if_no_resolved_peak: true
+  near_threshold_record_identity_may_be_uncertain_and_reported: true
+  contact_detector_or_regularizer_sensitivity_reported: true
+  user_command_to_increase_mesh_and_time_resolution: true
+
+artifacts:
+  required:
+    - index.html
+    - final_animation.mp4
+    - wall_detail.mp4
+    - resolved_case.json
+    - model_decision.md
+    - surface_history.csv
+    - wetting_history.csv
+    - marker_catalog.csv
+    - marker_tracks.csv
+    - runup_summary.json
+    - energy_history.csv
+    - refinement.json
+    - key_frames.png
+    - FINAL_REPORT.md
+    - manifest.json
+    - verification.json
+  fields_or_native_checkpoints_reachable_from_manifest: true
+  optional: [explorer.html, FINAL_REPORT.pdf, key_frames.pdf]
+  missing_optional_does_not_block_done: true
+  placeholder_zero_arrays_for_NOT_RUN_forbidden: true
+  large_native_files_may_be_local_not_committed: true
+  local_file_paths_must_actually_exist: true
+
+rendering:
+  scientific_curves_from_accepted_states: true
+  full_video_decode: true
+  fixed_axes: true
+  fixed_world_marker_coordinates: true
+  initial_frame_line_between_P1_P2: true
+  visible_retained_strip_reaches_H_on_both_walls: true
+  strip_never_disappears_after_bulk_recedes: true
+  strip_width_label: 'Остаточный слой показан условно; толщина не рассчитывалась'
+  physical_time_label_each_frame: true
+  all_visual_scalings_explicit: true
+  high_point_above_wall_not_mistaken_for_wall_contact: true
+  no_changes_to_physics_for_aesthetics: true
+
+independent_review:
+  raw_contact_vs_memory_cross_check: true
+  negative_tests_required: true
+  review_input: [PHYSICS.md, resolved_case.json, model_decision.md, native_data, rendered_frames]
+  self_report_only_is_not_verification: true
+  signoff_with_evidence_paths: true

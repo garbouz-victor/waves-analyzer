@@ -1,0 +1,225 @@
+{
+  "model_id": "PW1_NAVIER_DECLARED_EXTENSION",
+  "physical_model_label": "DECLARED_EXTENSION — конечное скольжение Навье",
+  "physical": {
+    "a_m": 1.0,
+    "d_m": 10.0,
+    "g_m_s2": 9.81,
+    "nu_m2_s": 0.01,
+    "alpha_deg": 2.0,
+    "slip_length_m": 1.0,
+    "sigma_N_m": 0.0,
+    "bottom": "no_slip",
+    "sides": "impermeable_Navier",
+    "geometry": "linearized_free_surface",
+    "layer": "irreversible_lower_connected_zero_volume_one_way"
+  },
+  "controls": {
+    "a": 1.0,
+    "alpha_deg": 2.0,
+    "contact_tolerance": 1e-12,
+    "d": 10.0,
+    "divergence_relative_warning": 0.15,
+    "dt": 0.0025,
+    "energy_relative_tolerance": 1e-08,
+    "g": 9.81,
+    "integrator": "sdirk2",
+    "mesh": "medium",
+    "nu": 0.01,
+    "nx": 48,
+    "nz": 96,
+    "slip_length_m": 1.0,
+    "small_slope_limit": 0.3,
+    "snapshot_dt": 0.01,
+    "t_end": 5.0,
+    "visualization_nx": 81,
+    "visualization_nz": 241,
+    "volume_tolerance": 1e-10,
+    "wall_tolerance": 1e-12,
+    "weak_divergence_tolerance": 1e-09,
+    "x_grading": 1.8,
+    "z_grading": 4.0
+  },
+  "extension_contract": {
+    "version": "1.0",
+    "model_id": "PW1_NAVIER_DECLARED_EXTENSION",
+    "authorization": "explicit_user_message_following_no_slip_STOP",
+    "inherits": "../CONFIG.yaml",
+    "physical_model_label": "DECLARED_EXTENSION — конечное скольжение Навье",
+    "slip_length_m": 0.5,
+    "slip_origin": "agent_selected_illustrative_dimensionful_parameter_before_any_extension_run",
+    "slip_applies_to": [
+      "left",
+      "right"
+    ],
+    "slip_selection": "one_quarter_vessel_width_macroscopic_example_not_material_fit_or_film_thickness",
+    "side_normal_velocity": "zero",
+    "bottom_bc": "no_slip",
+    "sigma_N_m": 0.0,
+    "geometry_model": "linearized_free_surface_about_z0",
+    "layer": "irreversible_lower_connected_zero_volume_one_way_subgrid_state",
+    "pilot_t_end_s": 1.0,
+    "target_t_end_s": 5.0,
+    "baseline_mesh": [
+      24,
+      48
+    ],
+    "baseline_dt_s": 0.005,
+    "temporal_refinement_factor": 0.5,
+    "spatial_refinement_factor": 2,
+    "slip_sensitivity_m": [
+      0.25,
+      1.0
+    ],
+    "record_height_tolerance_m": 0.0001,
+    "record_creation": "first_accepted_state_confirming_a_local_new_record_peak",
+    "detector_samples": "every_accepted_step_endpoint",
+    "render_sample_dt_s": 0.01,
+    "output_root": "sloshing_visualization/output/pinned_wetting/declared_extension",
+    "runs_root": "sloshing_visualization/results/pinned_wetting/declared_extension",
+    "linear_applicability": {
+      "max_amplitude_over_half_width": 0.05,
+      "max_exact_surface_slope_all_edges": 0.3,
+      "indicators_not_rigorous_physical_error_bounds": true
+    }
+  },
+  "original_case": {
+    "version": "1.0",
+    "mission_id": "pinned-wetting-PW1",
+    "repository": "garbouz-victor/waves-analyzer",
+    "base_ref_observed": "master",
+    "base_sha_observed": "7f0c45f192520b218838d535b0182facf43133d3",
+    "new_branch": "feature/pinned-wetting-history",
+    "scope": "one_declared_case_to_final_animation",
+    "geometry": {
+      "half_width_m": 1.0,
+      "depth_m": 10.0,
+      "mean_level_m": 0.0,
+      "origin": "inherited_task",
+      "interpretation": "finite_computational_vessel",
+      "top_is_closed_lid": false,
+      "top_headroom_m": null,
+      "deep_vessel_claim_requires_bottom_sensitivity": true
+    },
+    "initial": {
+      "surface": "straight_line",
+      "alpha_deg": 2.0,
+      "alpha_origin": "package_proposal_from_repository_default",
+      "angle_units": "degrees",
+      "velocity": "zero",
+      "continuing_horizontal_force": 0.0,
+      "points_1_2": "derived_from_same_initial_line"
+    },
+    "physics": {
+      "gravity_m_s2": 9.81,
+      "kinematic_viscosity_m2_s": 0.01,
+      "viscosity_origin": "package_proposal_from_repository_default",
+      "density_kg_m3": 1000.0,
+      "density_origin": "illustrative_scale_only_not_material_identification",
+      "original_wall_bc": "no_slip",
+      "original_surface_tension_N_m": 0.0,
+      "irreversible_wetting": true,
+      "connected_retained_layer": true,
+      "dewetting_or_evaporation": false,
+      "film_thickness_required": false,
+      "molecular_simulation_required": false,
+      "initial_dry_region_precoated": false,
+      "macro_geometry_may_be_nonlinear_if_declared": true,
+      "subgrid_retained_layer_allowed": true,
+      "negligible_layer_volume_feedback_is_explicit_approximation": true,
+      "physical_slip_or_nonzero_sigma_requires_separate_model_decision": true
+    },
+    "simulation": {
+      "t_start_s": 0.0,
+      "t_end_s": 5.0,
+      "requested_snapshot_times_s": [
+        0.0,
+        0.5,
+        1.0,
+        1.5,
+        2.0,
+        2.5,
+        3.0,
+        3.5,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "render_sample_dt_s": 0.01,
+      "numerical_dt_s": null,
+      "wetting_update": "accepted_states_and_qualified_internal_extrema",
+      "render_frames_are_not_contact_detection_grid": true
+    },
+    "quality": {
+      "default_profile": "standard",
+      "available_profiles": [
+        "preview",
+        "standard",
+        "refined"
+      ],
+      "controls_required": [
+        "mesh_resolution",
+        "timestep_resolution"
+      ],
+      "spatial_and_temporal_checks_separate": true,
+      "target_relative_observable_difference": 0.05,
+      "normalization": "initial_height_difference",
+      "physical_parameters_fixed_across_refinement": true,
+      "rigorous_error_bound_claim": false,
+      "extra_targeted_refinement_attempts": 1
+    },
+    "visualization": {
+      "language": "ru",
+      "width_px": 1920,
+      "height_px": 1080,
+      "fps": 25,
+      "playback_slowdown": 4.0,
+      "axes_limits_fixed_over_movie": true,
+      "film_band_is_schematic": true,
+      "marker_positions_in_world_coordinates": true,
+      "new_record_marker_not_required_to_exist": true,
+      "include_top_surface_zoom": true,
+      "include_full_geometry_inset": true,
+      "main_video": "final_animation.mp4",
+      "wall_video": "wall_detail.mp4"
+    },
+    "output": {
+      "root": "sloshing_visualization/output/pinned_wetting",
+      "runs_root": "sloshing_visualization/results/pinned_wetting",
+      "overwrite_existing_results": false
+    },
+    "resources": {
+      "values_origin": "package_proposal_accepted_only_when_user_starts_mission",
+      "max_total_local_job_wall_hours": 12.0,
+      "max_new_disk_GiB": 40.0,
+      "max_memory_fraction_of_host": 0.65,
+      "max_parallel_heavy_jobs": 1,
+      "auxiliary_infrastructure_fraction": 0.1,
+      "forecast": "advisory",
+      "actual_budget": "hard",
+      "budget_survives_agent_resume": true,
+      "budget_near_limit_requires_safe_checkpoint": true
+    },
+    "permissions": {
+      "create_new_feature_branch": true,
+      "local_commits": true,
+      "git_push": false,
+      "new_paid_services_or_cloud_jobs": false,
+      "paid_API_key_fallback": false,
+      "destructive_git_commands": false,
+      "modify_historical_results": false,
+      "run_system_wide_package_upgrade": false,
+      "install_project_deps_in_isolated_env": true,
+      "background_jobs_without_identifiers": false
+    }
+  },
+  "origins": {
+    "slip": "agent_selected_illustrative_dimensionful_parameter_before_any_extension_run",
+    "geometry": "inherited_task",
+    "alpha_and_nu": "package_proposals_accepted_for_mission",
+    "density": "illustrative_energy_scale_only"
+  },
+  "headroom": "Unbounded graph eta; z=0 is linearization plane, not a closed upper lid.",
+  "film_thickness_m": null,
+  "retained_layer_volume_feedback": "neglected_at_leading_order"
+}

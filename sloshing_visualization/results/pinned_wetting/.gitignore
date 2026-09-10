@@ -1,0 +1,2 @@
+# Native accepted states stay reachable locally; do not accidentally commit bulk data.
+**/native.h5

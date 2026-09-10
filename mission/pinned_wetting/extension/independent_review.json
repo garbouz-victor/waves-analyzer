@@ -1,0 +1,213 @@
+{
+  "schema_version": "PW1_INDEPENDENT_DECLARED_EXTENSION_REVIEW_1.0",
+  "status": "PASS_DECLARED_EXTENSION",
+  "reviewer": "/root/physics_review — separate agent context; independent verifier implementation and visual/raw review",
+  "date": "2026-09-10",
+  "run_id": "navier-space_refined-dd9d8f7c74f0",
+  "native_sha256": "1df646370375e3e8c19d882302e857e5e8b95fbc7118a23e8bfc255c5a07d6b7",
+  "physical_model_label": "DECLARED_EXTENSION — конечное скольжение Навье",
+  "physical_config_hash": "96391ac3c53b1d51581154aaa31a54329dd786864346ee707bcb46ef3f973699",
+  "source_hash": "dc21c6d119fcea6367cdf212dd78a53cf429d085ad984d78eb48ffc26fc3522a",
+  "visual_native_reviewed": true,
+  "native_audit": {
+    "path": "native_audit.json",
+    "sha256": "1aa192e491321d177ecc87400a598c72e988974846fef7fa7eec843e970ef264",
+    "scope": "FULL_STAGE_OPERATOR_NATIVE_AUDIT",
+    "auditor_source_sha256": "b204e52f75ab03f96c954607cc4d8b3c1db2777f3ab2828b59ed0f9e6749d196"
+  },
+  "artifact_hashes": {
+    "ACCEPTANCE_ADDENDUM.yaml": "1408059649235483c31a0633d12b37781f2369aebfd88157b74419b61ee1fa29",
+    "boundary_benchmark.json": "04cdcdbf9cf01733585b305065d38edb8a4634f01dc9a1aa96cd2f31b3afad79",
+    "case_summaries.json": "20202bd990d20694c8f390b12aa7780dba6565cea06bf837fd304e8ccf96b9b9",
+    "detector_sensitivity.json": "0e769bafcdadaf19af98d00194566f8a8feb13c0ed0e4c6b13e02a437d576286",
+    "energy_history.csv": "5625f2f83168f4f334ef47ae590c758cb3abc7064638b62c8c7d690927de33c2",
+    "final_animation.mp4": "695be5634a12240341a1a8948c12d950fdcb5f3cc707508faae002b0e0e4fed5",
+    "key_frames.png": "a4ccc87f283f861fe6361098a049fa9ad6fd87666a6342b74146c6704206e7f4",
+    "marker_catalog.csv": "7cbc316aee3b351e5e03c7e264c2f41681a7053106d1e6dca7ed56f071b4b83f",
+    "marker_tracks.csv": "c8368c4045395c3f91fb164a64238f717c84f2186e2cf2ad6cbd89998837f5ea",
+    "model_decision.md": "f6d3a8c97ceea889f97398e35ad3ffbf92620acd7101ef0f73f06b83b039ed2b",
+    "native_audit.json": "1aa192e491321d177ecc87400a598c72e988974846fef7fa7eec843e970ef264",
+    "native_auditor_source.py": "b204e52f75ab03f96c954607cc4d8b3c1db2777f3ab2828b59ed0f9e6749d196",
+    "record_stability.json": "52ab5c01af8e4206e5f996d78ff938c776927226e67256950d009e8951bc6435",
+    "refinement.json": "303e6b16f6ee626b12fd54581a684a26184c9645ce82d3460c537f617dc4425a",
+    "render_evidence.json": "cea6ebc87a81e3b82d4d203183ab2a2485a9cd0bd6f1c42d135122c590d8f3c7",
+    "render_manifest.json": "dff7048165d8c56060627707a2dc757efc4476d9f4ea6864ba6e3c22f08e320b",
+    "renderer_source.py": "c5e7d27955220231cf0f5b9fe74da2b2ed7a3d924cddefb09cb0d49212bee4c7",
+    "resolved_case.json": "5929c6ad52065f66a9feaa821173865e1a1067ab0f61147da9586443c7cde3fb",
+    "runup_summary.json": "b79b1af6148ca2bcf6244e39ea30e887265d28541a082a183c0823b909315a47",
+    "sensitivity.json": "51b6c751a0948c1e320da111e6908cb15ddbc647a12b1555f69c156e88c43013",
+    "surface_history.csv": "d054ffaaeb34c065b3f0ee56720bc2c1f71c8243ab85b902c076cae8f435dea1",
+    "surface_snapshots.csv": "d2625aa7958fcee4cefe9427597d8214d56557e23f0f527e9928375a45289a4f",
+    "tests.xml": "73b42832bbf22f06ca22e0f4540672d56fe9b27c8ebf024aa78e738099f881bc",
+    "verifier_source.py": "a8b222a3db48a6e84a5a20ecba3194d9f8e011e331b7b730f2fa45d31c778602",
+    "wall_detail.mp4": "954cb18e20e2417d0e0709095e4165763ee87e6b6bdec6cee6f98138352206b5",
+    "wetting_history.csv": "ac5d2058e066f72b399275dd2012baec4ac1a478ee15906d208813da8894249a",
+    "main_frame_0000.png": "426f1708281e540a7fff625b034688a6c41a02a1de587771e9a58d154c26457e",
+    "main_frame_0079.png": "b15aa812cc65fee1c2134b00435e742df5485948d27d68456b7684fb3cbbe94c",
+    "main_frame_0241.png": "aa2a9b9fa5f2fe16a407bed26bb8f01528e77cf2fd7778606734b73fd0a2b254",
+    "main_frame_0500.png": "ba15528717a1b6dfe5ec19081dc4fd896ea6c5675caf10cd968ffea3a036f677",
+    "detail_frame_0000.png": "9c9f058f14f29e2a5ca08971d6f58ef113faa15fc4a9769339e917c882c9adad",
+    "detail_frame_0079.png": "60663a58d0c312877775504d16960711917de3b75b69b17ff94e3dacd7b0d5db",
+    "detail_frame_0241.png": "d2372dd8958c25972ed3e247fb6cbc8cf48c750c9b4644ce07434b56544e87fe",
+    "detail_frame_0500.png": "e5f4ff3aaec8448139998c3a890f986065cc10d33c81b0e97fc03dd86a2e0bae"
+  },
+  "test_evidence": {
+    "path": "tests.xml",
+    "sha256": "73b42832bbf22f06ca22e0f4540672d56fe9b27c8ebf024aa78e738099f881bc",
+    "tests": 60,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "evidence_paths": [
+    "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/output/pinned_wetting/declared_extension/review.md",
+    "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/output/pinned_wetting/declared_extension/native_audit.json",
+    "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/output/pinned_wetting/declared_extension/native_auditor_source.py",
+    "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/output/pinned_wetting/declared_extension/tests.xml",
+    "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/output/pinned_wetting/declared_extension/refinement.json",
+    "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/output/pinned_wetting/declared_extension/detector_sensitivity.json",
+    "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/output/pinned_wetting/declared_extension/record_stability.json",
+    "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/output/pinned_wetting/declared_extension/model_decision.md",
+    "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/results/pinned_wetting/declared_extension/navier-baseline-6b042d9d8353/native.h5",
+    "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/results/pinned_wetting/declared_extension/navier-time_refined-03e9ce1500fc/native.h5",
+    "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/results/pinned_wetting/declared_extension/navier-space_refined-dd9d8f7c74f0/native.h5",
+    "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/results/pinned_wetting/declared_extension/navier-slip_low-62f92521a3d1/native.h5",
+    "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/results/pinned_wetting/declared_extension/navier-slip_high-6eaa7fb099eb/native.h5",
+    "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/output/pinned_wetting/declared_extension/final_animation.mp4",
+    "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/output/pinned_wetting/declared_extension/key_frames.png",
+    "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/output/pinned_wetting/declared_extension/wall_detail.mp4",
+    "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/output/pinned_wetting/declared_extension/main_frame_0000.png",
+    "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/output/pinned_wetting/declared_extension/main_frame_0079.png",
+    "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/output/pinned_wetting/declared_extension/main_frame_0241.png",
+    "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/output/pinned_wetting/declared_extension/main_frame_0500.png",
+    "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/output/pinned_wetting/declared_extension/detail_frame_0000.png",
+    "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/output/pinned_wetting/declared_extension/detail_frame_0079.png",
+    "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/output/pinned_wetting/declared_extension/detail_frame_0241.png",
+    "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/output/pinned_wetting/declared_extension/detail_frame_0500.png"
+  ],
+  "direct_review": {
+    "scope": "DIRECT_NATIVE_ETA_H_MARKERS_EXPORTS_REFINEMENT_AND_DECODED_FRAME_REVIEW",
+    "native_operator_audit_recomputed": false,
+    "previous_full_operator_audit_inspected": true,
+    "previous_audit_all_five_native_passed": true,
+    "previous_audit_overall_failure_only": "independent_review_missing",
+    "reuse_reason": "Only renderer/labels changed after the real full operator audit. All five native SHA256 and the exact auditor source snapshot SHA256 were checked again; no solver self-diagnostic substitutes for the independent operator audit.",
+    "all_native_hashes_rechecked": {
+      "navier-baseline-6b042d9d8353": "065572a728d05cc65a86d4c41340f258133aa8da27a7c2b73724a9947a80dff5",
+      "navier-time_refined-03e9ce1500fc": "2cbf7cd3c314ed3fc87c50aadf5955e73a4010460517697e60830ba0f21c5c7f",
+      "navier-space_refined-dd9d8f7c74f0": "1df646370375e3e8c19d882302e857e5e8b95fbc7118a23e8bfc255c5a07d6b7",
+      "navier-slip_low-62f92521a3d1": "45f2f2732931ed2c11b995d26cb223caa48a518029c8930602c8363426a59401",
+      "navier-slip_high-6eaa7fb099eb": "abad249cb094c0ae76ec103f15930ad49e528e03c8a7515f85ba364a14cc9c2c"
+    },
+    "primary_accepted_states": 2001,
+    "time_range_s": [
+      0,
+      5
+    ],
+    "exact_accepted_sample_H_recurrence": true,
+    "lower_connected_intervals": true,
+    "primary_surface_csv_and_11_snapshots_checked": true,
+    "wetting_csv_marker_catalog_and_all_frame_tracks_checked": true,
+    "final_R_m": [
+      -0.015561430771932006,
+      0.015561430771931985
+    ],
+    "final_H_m": [
+      0.025349900359708896,
+      0.03492076949174773
+    ],
+    "recomputed_refinement": {
+      "time": {
+        "normalized_surface_Linf": 0.00007159858875835693,
+        "normalized_macro_Linf": 0.0000706022488747028,
+        "normalized_H_Linf": 0.00000782851965353871,
+        "first_peak_time_fraction": 0.003174603174603107,
+        "first_peak_height_normalized": 0.0000058789152800962756
+      },
+      "space": {
+        "normalized_surface_Linf": 0.0013900646516030526,
+        "normalized_macro_Linf": 0.0005812000413933945,
+        "normalized_H_Linf": 0.00035747077984391376,
+        "first_peak_time_fraction": 0,
+        "first_peak_height_normalized": 0.0000915571150415848
+      }
+    },
+    "viewed_physical_times_s": [
+      0,
+      0.79,
+      2.41,
+      5
+    ],
+    "decoded_representative_frames": [
+      {
+        "video": "final_animation.mp4",
+        "frame": 0,
+        "mean_absolute_pixel_error": 0.6041205311213992,
+        "zoom_mean_absolute_pixel_error": 0.7886089914055575
+      },
+      {
+        "video": "final_animation.mp4",
+        "frame": 79,
+        "mean_absolute_pixel_error": 0.6027221579218107,
+        "zoom_mean_absolute_pixel_error": 0.852693953058157
+      },
+      {
+        "video": "final_animation.mp4",
+        "frame": 241,
+        "mean_absolute_pixel_error": 0.6041957626028807,
+        "zoom_mean_absolute_pixel_error": 0.8625072262689328
+      },
+      {
+        "video": "final_animation.mp4",
+        "frame": 500,
+        "mean_absolute_pixel_error": 0.8301258680555555,
+        "zoom_mean_absolute_pixel_error": 0.9947137434000077
+      },
+      {
+        "video": "wall_detail.mp4",
+        "frame": 0,
+        "mean_absolute_pixel_error": 0.5454005915637861,
+        "zoom_mean_absolute_pixel_error": 0.5869816356418854
+      },
+      {
+        "video": "wall_detail.mp4",
+        "frame": 79,
+        "mean_absolute_pixel_error": 0.5786908436213992,
+        "zoom_mean_absolute_pixel_error": 0.7486438701969399
+      },
+      {
+        "video": "wall_detail.mp4",
+        "frame": 241,
+        "mean_absolute_pixel_error": 0.5942648855452675,
+        "zoom_mean_absolute_pixel_error": 0.8114440012332832
+      },
+      {
+        "video": "wall_detail.mp4",
+        "frame": 500,
+        "mean_absolute_pixel_error": 0.8004018775720164,
+        "zoom_mean_absolute_pixel_error": 0.8553286507110649
+      }
+    ],
+    "diagnostic_elapsed_s": 41.98926145400037
+  },
+  "limitations": [
+    "PASS is only for the explicitly authorized finite Navier-slip linear free-surface model and separate irreversible zero-volume coating law. Original no-slip model and historical STOP are not reclassified.",
+    "Slip length b=0.50 m is a preselected illustrative macroscopic parameter, not a measured material value, film thickness, mesh parameter, or fit to P3/P4.",
+    "The coating has no computed thickness, volume, inertia, adsorption energy, separate dynamics, or bulk feedback; lower-connected irreversible liquid presence is a declared one-way subgrid model state.",
+    "Linear amplitude/slope screens are passed on the tested meshes; they are not a rigorous nonlinear physical error bound. Selected convective and kinematic omission indicators are approximately 0.12536 and 0.08953.",
+    "Exact surface slope increases from 0.08203 to 0.10359 on refinement. No uniform C1 convergence or uniform physical accuracy at the mathematical free-surface/Robin corner is claimed. A moving corner is interpreted in the weak face-wise sense, not with mutually incompatible classical C1 stresses.",
+    "Two-level temporal/spatial agreement supports the reported observables but is not a formal order or rigorous error bound. Slip sensitivity b=0.25/1.00 m uses one common fine mesh/time step and is distinct physics.",
+    "Record detection uses accepted dt=0.0025 s samples with a predeclared 0.1 mm floor and next-sample confirmation, not a continuous within-step extremum search.",
+    "The final release must still pass package verification, including fresh export/refinement/frame/full-video checks and this exact signature binding. This reviewer does not mutate mission completion status."
+  ],
+  "budget_observation": {
+    "active_heavy_jobs_at_review_start": 0,
+    "measured_managed_wall_s": 4146.549642577025,
+    "charged_with_auxiliary_upper_bound_s": 5346.549642577025,
+    "new_output_bytes": 4907955319,
+    "selected_limit_wall_hours": 12,
+    "selected_limit_disk_GiB": 40,
+    "review_diagnostic_wall_s": 41.98926145400037
+  }
+}
+

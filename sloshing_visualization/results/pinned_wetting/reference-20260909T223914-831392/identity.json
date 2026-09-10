@@ -1,0 +1,19 @@
+{
+  "run_id": "reference-20260909T223914-831392",
+  "source_hash": "de2193c9cc0f3e578cf8e335f66528a40ba370a0e14194ef982bf3a28626c3e0",
+  "source_files": {
+    "config.py": "38f47c48b52554a6a90df40eeafc4dc8f7687ebce402bb095d0e1c28a1945e7d",
+    "mesh.py": "cce53e6e89ddef48686f207dd246ee52af77911d6485237cb7a92576ced7a68a",
+    "fem_spaces.py": "c937b9b8f523395c3ff12efd0ba5cc456d8f3f581ca08e2e2d1f8d18d7367d54",
+    "solver.py": "cf806da506f364342b6495e1986626333827f26b98927302ff8c92ff024fb864",
+    "problems.py": "99e893ae7570f1a064448f7601edfb661c508f9d43df38a5255eb020b9f1dd7d",
+    "time_integrator.py": "9074fd396fa9e3556ed72829dfd86dd2c3e27ff2009a567e215986ee683180a2",
+    "diagnostics.py": "acdd50b0da557bd12ff828ba3f0dac73a5b3ad1439a3d0fc52102abb7a87c711",
+    "pinned_wetting/reference.py": "cb7d1948d9d135c027777f16bee1a96e1469a156ceb6cb2289a26e7836fa2c12",
+    "pinned_wetting/coating.py": "6dfb1b4a16799bc10bf326a924a503814da8e4785ef3d74d8c96436dee2dc313"
+  },
+  "physical_config_hash": "9aaaf0090b24a22b85e554ab43f9be1ef1a23a516fcf58d7976763017fb6c18b",
+  "execution_HEAD": "7f0c45f192520b218838d535b0182facf43133d3",
+  "physical_model_label": "REFERENCE / NOT TARGET",
+  "synthetic": false
+}

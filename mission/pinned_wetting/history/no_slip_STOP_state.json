@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0",
+  "mission_id": "pinned-wetting-PW1",
+  "status": "NEEDS_MODEL_DECISION",
+  "milestones": {
+    "M0": "PREVIEW_AND_MODEL_BLOCKER",
+    "M1": "RETAINED_STATE_ONLY_CONTACT_BLOCKED",
+    "M2": "NOT_RUN",
+    "M3": "BLOCKER_HANDOFF_REVIEWED_TARGET_NOT_RUN"
+  },
+  "solver_implemented_by_pack": false,
+  "scientific_run_performed_by_pack": false,
+  "active_jobs": [],
+  "run_ids": [
+    "reference-20260909T222724-02a9a3",
+    "reference-20260909T223914-831392"
+  ],
+  "accepted_step": 400,
+  "physical_time_s": 1.0,
+  "current_run_scope": "REFERENCE_NOT_TARGET",
+  "reference_runs_completed": 2,
+  "target_run_executed": false,
+  "budget": {
+    "actual_local_job_wall_s": 82.9421454139956,
+    "accounting_scope": "Measured managed solver/render/package wall intervals; short diagnostic/test jobs charged separately by a conservative upper bound, not claimed as a measurement.",
+    "auxiliary_wall_time_upper_bound_s": 600.0,
+    "charged_local_job_wall_s": 682.9421454139956,
+    "new_output_bytes": 70246082,
+    "limits": {
+      "values_origin": "package_proposal_accepted_only_when_user_starts_mission",
+      "max_total_local_job_wall_hours": 12.0,
+      "max_new_disk_GiB": 40.0,
+      "max_memory_fraction_of_host": 0.65,
+      "max_parallel_heavy_jobs": 1,
+      "auxiliary_infrastructure_fraction": 0.1,
+      "forecast": "advisory",
+      "actual_budget": "hard",
+      "budget_survives_agent_resume": true,
+      "budget_near_limit_requires_safe_checkpoint": true
+    }
+  },
+  "model_decision": "/home/victor/Projects/waves-pinned-wetting/mission/pinned_wetting/model_decision.md",
+  "last_checkpoint": "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/results/pinned_wetting/reference-20260909T223914-831392/native.h5",
+  "last_error": {
+    "code": "PW1_CONTACT_CLOSURE",
+    "detail": "PW1_CONTACT_CLOSURE: a law and scale for new wall contact are not qualified. Sharp no-slip material endpoints are fixed; setting sigma=0 in the existing CHNS removes interfacial/wall free energy. Retained coating alone does not close R(t).",
+    "reproduce": "/home/victor/Projects/waves-analyzer/sloshing_visualization/.venv/bin/python sloshing_visualization/scripts/pinned_wetting_mission.py blocker-check"
+  },
+  "next_action": "Specify and authorize a contact transport/relaxation law and scale; preserve no-slip/sigma=0 or explicitly approve an extension.",
+  "artifact_paths": {
+    "index": "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/output/pinned_wetting/index.html",
+    "preview": "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/output/pinned_wetting/reference-20260909T223914-831392/preview_reference.mp4",
+    "output_directory": "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/output/pinned_wetting/reference-20260909T223914-831392",
+    "native": "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/results/pinned_wetting/reference-20260909T223914-831392/native.h5",
+    "package_directory": "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/output/pinned_wetting",
+    "final_report": "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/output/pinned_wetting/FINAL_REPORT.md"
+  },
+  "verification": {
+    "scientific": "TARGET_NOT_RUN",
+    "reference": "PASS",
+    "rendering": "PASS_REFERENCE_DECODE",
+    "independent_review": "PASS_REFERENCE_REJECT_TARGET",
+    "pack_integrity": "PACKAGE_OK",
+    "negative_tests": "46_PASS_NO_SKIPS"
+  },
+  "current_run_id": "reference-20260909T223914-831392",
+  "job_history": [
+    {
+      "pid": 2,
+      "start_ticks": "9812650",
+      "pid_namespace": "pid:[4026533034]",
+      "boot_id": "6f6db763-0449-4529-a34b-2459b6e6de1c",
+      "command": "sloshing_visualization/scripts/pinned_wetting_mission.py run --stop-after 40",
+      "started_epoch_s": 1788992844.0100667,
+      "heartbeat_epoch_s": 1788992846.1262457,
+      "wall_s": 2.1151887320011156,
+      "memory_cap_bytes": 4294967296,
+      "exit_code": 0,
+      "finished_epoch_s": 1788992846.1273339,
+      "exit_status": "FINISHED"
+    },
+    {
+      "pid": 2,
+      "start_ticks": "9848499",
+      "pid_namespace": "pid:[4026533034]",
+      "boot_id": "6f6db763-0449-4529-a34b-2459b6e6de1c",
+      "command": "sloshing_visualization/scripts/pinned_wetting_mission.py resume",
+      "started_epoch_s": 1788993202.453119,
+      "heartbeat_epoch_s": 1788993239.3802655,
+      "wall_s": 36.92614598899672,
+      "memory_cap_bytes": 4294967296,
+      "exit_code": 2,
+      "exit_code_correction_evidence": "Unified exec session 52777 returned exit_code 2; initial ledger incorrectly recorded context-manager completion as CLI success. Ledger implementation now records model-blocked exit 2.",
+      "finished_epoch_s": 1788993239.3821046,
+      "exit_status": "MODEL_BLOCKED"
+    },
+    {
+      "pid": 2,
+      "start_ticks": "9883704",
+      "pid_namespace": "pid:[4026532979]",
+      "boot_id": "6f6db763-0449-4529-a34b-2459b6e6de1c",
+      "command": "sloshing_visualization/scripts/pinned_wetting_mission.py run --stop-after 40",
+      "started_epoch_s": 1788993554.6287618,
+      "heartbeat_epoch_s": 1788993556.9721148,
+      "wall_s": 2.341569487005472,
+      "memory_cap_bytes": 4294967296,
+      "exit_code": 0,
+      "finished_epoch_s": 1788993556.973595,
+      "exit_status": "FINISHED"
+    },
+    {
+      "pid": 2,
+      "start_ticks": "9890819",
+      "pid_namespace": "pid:[4026533199]",
+      "boot_id": "6f6db763-0449-4529-a34b-2459b6e6de1c",
+      "command": "sloshing_visualization/scripts/pinned_wetting_mission.py resume",
+      "started_epoch_s": 1788993625.2149675,
+      "heartbeat_epoch_s": 1788993659.9166117,
+      "wall_s": 34.70091488100297,
+      "memory_cap_bytes": 4294967296,
+      "exit_code": 2,
+      "finished_epoch_s": 1788993659.9217863,
+      "exit_status": "MODEL_BLOCKED"
+    },
+    {
+      "pid": 2,
+      "start_ticks": "9924305",
+      "pid_namespace": "pid:[4026533063]",
+      "boot_id": "6f6db763-0449-4529-a34b-2459b6e6de1c",
+      "command": "sloshing_visualization/scripts/pinned_wetting_mission.py package",
+      "started_epoch_s": 1788993960.0982566,
+      "heartbeat_epoch_s": 1788993964.1212938,
+      "wall_s": 4.022162756999023,
+      "memory_cap_bytes": 4294967296,
+      "exit_code": 2,
+      "finished_epoch_s": 1788993964.1237202,
+      "exit_status": "MODEL_BLOCKED"
+    },
+    {
+      "pid": 2,
+      "start_ticks": "9933843",
+      "pid_namespace": "pid:[4026533065]",
+      "boot_id": "6f6db763-0449-4529-a34b-2459b6e6de1c",
+      "command": "sloshing_visualization/scripts/pinned_wetting_mission.py run",
+      "started_epoch_s": 1788994055.4605157,
+      "heartbeat_epoch_s": 1788994058.297676,
+      "wall_s": 2.8361635679902975,
+      "memory_cap_bytes": 4294967296,
+      "exit_code": 2,
+      "finished_epoch_s": 1788994058.302638,
+      "exit_status": "MODEL_BLOCKED"
+    }
+  ]
+}

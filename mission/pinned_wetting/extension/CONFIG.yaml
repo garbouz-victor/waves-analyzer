@@ -1,0 +1,31 @@
+version: '1.0'
+model_id: PW1_NAVIER_DECLARED_EXTENSION
+authorization: explicit_user_message_following_no_slip_STOP
+inherits: ../CONFIG.yaml
+physical_model_label: DECLARED_EXTENSION — конечное скольжение Навье
+slip_length_m: 0.50
+slip_origin: agent_selected_illustrative_dimensionful_parameter_before_any_extension_run
+slip_applies_to: [left, right]
+slip_selection: one_quarter_vessel_width_macroscopic_example_not_material_fit_or_film_thickness
+side_normal_velocity: zero
+bottom_bc: no_slip
+sigma_N_m: 0.0
+geometry_model: linearized_free_surface_about_z0
+layer: irreversible_lower_connected_zero_volume_one_way_subgrid_state
+pilot_t_end_s: 1.0
+target_t_end_s: 5.0
+baseline_mesh: [24, 48]
+baseline_dt_s: 0.005
+temporal_refinement_factor: 0.5
+spatial_refinement_factor: 2
+slip_sensitivity_m: [0.25, 1.00]
+record_height_tolerance_m: 0.0001
+record_creation: first_accepted_state_confirming_a_local_new_record_peak
+detector_samples: every_accepted_step_endpoint
+render_sample_dt_s: 0.01
+output_root: sloshing_visualization/output/pinned_wetting/declared_extension
+runs_root: sloshing_visualization/results/pinned_wetting/declared_extension
+linear_applicability:
+  max_amplitude_over_half_width: 0.05
+  max_exact_surface_slope_all_edges: 0.30
+  indicators_not_rigorous_physical_error_bounds: true

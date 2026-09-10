@@ -1,0 +1,47 @@
+{
+  "completed": true,
+  "run_id": "navier-pilot-3ef311facf94",
+  "native": "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/results/pinned_wetting/declared_extension/navier-pilot-3ef311facf94/native.h5",
+  "time_s": 1.0,
+  "accepted_states": 201,
+  "max_eta_over_a": 0.03492076949174773,
+  "max_slope": 0.08202627527587082,
+  "max_eta_over_b": 0.06984153898349546,
+  "max_convective_indicator": 0.11071799387939615,
+  "max_kinematic_indicator": 0.08159765847019981,
+  "max_wall_traction_L2": 0.0001307228096870148,
+  "max_momentum_relative_residual": 1.2118139278929855e-13,
+  "max_weak_divergence": 1.003113960435461e-14,
+  "max_mass_relative_error": 2.7572616499021983e-18,
+  "max_energy_relative_error": 1.9793668379285774e-14,
+  "H_final_m": [
+    0.024746841298600192,
+    0.03492076949174773
+  ],
+  "markers": [
+    {
+      "marker_id": "P1",
+      "side": "L",
+      "height_m": -0.03492076949174773,
+      "created_at_s": 0.0,
+      "state_id": "navier-pilot-3ef311facf94:0"
+    },
+    {
+      "marker_id": "P2",
+      "side": "R",
+      "height_m": 0.03492076949174773,
+      "created_at_s": 0.0,
+      "state_id": "navier-pilot-3ef311facf94:0"
+    },
+    {
+      "marker_id": "P3",
+      "side": "L",
+      "height_m": 0.024746841298600192,
+      "created_at_s": 0.79,
+      "state_id": "navier-pilot-3ef311facf94:157"
+    }
+  ],
+  "final_wall_loss_per_density": 6.1818152373812e-05,
+  "final_bulk_loss_per_density": 0.0003294234240053466,
+  "final_numerical_remainder_per_density": -1.3041538315090369e-08
+}
