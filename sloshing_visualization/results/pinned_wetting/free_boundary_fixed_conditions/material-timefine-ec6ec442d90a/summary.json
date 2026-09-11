@@ -1,0 +1,81 @@
+{
+  "run_id": "material-timefine-ec6ec442d90a",
+  "native": "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/results/pinned_wetting/free_boundary_fixed_conditions/material-timefine-ec6ec442d90a/native.h5",
+  "time_s": 1.4999999999999893,
+  "accepted_step": 300,
+  "completed": false,
+  "target_5s": false,
+  "rejected_this_call": 0,
+  "diagnostics": {
+    "volume_m2": 20.0,
+    "kinetic": 0.0004953144981868921,
+    "potential": 0.002372532986293692,
+    "energy": 0.002867847484480584,
+    "dt_s": 0.005,
+    "nonlinear_iterations": 5,
+    "nonlinear_error": 6.246982098279119e-12,
+    "linear_solver": {
+      "factorizations": 1,
+      "krylov_iterations": 16,
+      "direct_fallbacks": 0,
+      "maximum_true_block_residual": 1.2422517441795788e-14
+    },
+    "momentum_residual": 1.2450598278063163e-14,
+    "weak_divergence": 1.0480169249788007e-16,
+    "bulk_loss": 1.4633655445850416e-06,
+    "left_wall_loss": 3.418035958888694e-08,
+    "numerical_grad_div_work": -8.986077430945076e-08,
+    "raw_geometry_kinetic_work": 1.926089342409603e-12,
+    "raw_geometry_potential_work": -1.4497985680339865e-08,
+    "geometric_divergence_work": 1.63222755413929e-12,
+    "hydrostatic_split_work": 1.4496217686965362e-08,
+    "geometry_kinetic_work": 2.938617882703129e-13,
+    "geometry_potential_work": -1.767993374502774e-12,
+    "min_jacobian": 5.24082880563341e-05,
+    "min_jacobian_cell": 716,
+    "cumulative_bulk_loss": 0.0010626835682726508,
+    "cumulative_left_wall_loss": 4.796322678801323e-05,
+    "cumulative_geometry_kinetic_work": -1.0197574954527711e-10,
+    "cumulative_geometry_potential_work": -4.746425048805558e-10,
+    "cumulative_numerical_grad_div_work": -9.226428234285629e-06,
+    "last_rezone_time_s": 1.4499999999999904,
+    "rezone_work": 0.0,
+    "cumulative_rezone_work": 8.66204496281428e-08,
+    "continuous_energy_error": -0.0022921820146841643,
+    "split_energy_error": -1.3802212411179182e-11
+  },
+  "coating": {
+    "run_id": "material-timefine-ec6ec442d90a",
+    "bottom": -10.0,
+    "H": [
+      0.024442539812613125,
+      0.03492076949174773
+    ],
+    "markers": [
+      {
+        "marker_id": "P1",
+        "side": "L",
+        "height_m": -0.03492076949174773,
+        "created_at_s": 0.0,
+        "state_id": "material-timefine-ec6ec442d90a:0"
+      },
+      {
+        "marker_id": "P2",
+        "side": "R",
+        "height_m": 0.03492076949174773,
+        "created_at_s": 0.0,
+        "state_id": "material-timefine-ec6ec442d90a:0"
+      },
+      {
+        "marker_id": "P3",
+        "side": "L",
+        "height_m": 0.024442539812613125,
+        "created_at_s": 0.785,
+        "state_id": "material-timefine-ec6ec442d90a:156"
+      }
+    ],
+    "accepted_step": 300,
+    "time": 1.4999999999999893
+  },
+  "model_id": "PW2_FULL_NS_LEFT_NAVIER_RIGHT_NOSLIP_MATERIAL_P2_V1"
+}

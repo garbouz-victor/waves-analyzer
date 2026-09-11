@@ -1,0 +1,93 @@
+{
+  "model_id": "PW2_FULL_NS_LEFT_NAVIER_RIGHT_NOSLIP_MATERIAL_P2_V1",
+  "physical_contract": {
+    "geometry": {
+      "dimension": 2,
+      "half_width_m": 1.0,
+      "depth_m": 10.0,
+      "mean_level_m": 0.0,
+      "bottom_is_physical": true,
+      "lid": false
+    },
+    "initial": {
+      "interface": "z=x*tan(alpha)",
+      "alpha_deg": 2.0,
+      "velocity": "zero",
+      "horizontal_forcing_after_release_m_s2": 0.0
+    },
+    "material": {
+      "kinematic_viscosity_m2_s": 0.01,
+      "density_kg_m3": 1000.0,
+      "gravity_m_s2": 9.81,
+      "surface_tension_N_m": 0.0,
+      "external_pressure": "constant_atmospheric",
+      "gas_dynamics": "neglected"
+    },
+    "boundaries": {
+      "left": {
+        "type": "Navier",
+        "impermeable": true,
+        "slip_length_m": 0.5
+      },
+      "right": {
+        "type": "no_slip",
+        "impermeable": true
+      },
+      "bottom": {
+        "type": "no_slip",
+        "impermeable": true
+      }
+    },
+    "wetting": {
+      "irreversible": true,
+      "connected_lower_closure": true,
+      "thickness_required": false,
+      "evaporation": false,
+      "dewetting": false,
+      "retained_layer": "inherited_zero_volume_one_way_state",
+      "resolved_film_must_be_mass_conserved": true,
+      "initial_global_precursor": false
+    },
+    "right_contact": {
+      "material_contact_at_P2_is_fixed": true,
+      "new_right_slip_forbidden": true,
+      "detached_bulk_height_is_not_wall_contact": true
+    },
+    "target_equations": "full_incompressible_Navier_Stokes_on_evolving_liquid_domain",
+    "target_free_surface": "material_interface_with_actual_normals_and_zero_gauge_traction"
+  },
+  "controls": {
+    "nx": 18,
+    "nz": 36,
+    "dt": 0.005,
+    "t_end": 5.0,
+    "x_grading": 2.0,
+    "z_grading": 4.0,
+    "local_right_levels": 1,
+    "intorder": 8,
+    "nonlinear_tolerance": 2e-11,
+    "nonlinear_iterations": 15,
+    "minimum_dt": 1e-06,
+    "max_halvings": 8,
+    "rezone_interval_s": 0.05,
+    "hydrostatic_split": true,
+    "skew_divergence": true,
+    "rezone_strategy": "straight_interior"
+  },
+  "source_hashes": {
+    "pinned_wetting/free_boundary.py": "df019300706f9a04689f47c33c04bd1101be3d88b43f798fd3f4b6664a611865",
+    "pinned_wetting/free_boundary_run.py": "fb570141f852c6d38b828282ef83ca63298892c5693786e156299438a21290ad",
+    "pinned_wetting/free_boundary_remesh.py": "2e995f502520880d5d328b00eeb5542a2f2679e6fbedef17469f2280516370fd",
+    "pinned_wetting/coating.py": "6dfb1b4a16799bc10bf326a924a503814da8e4785ef3d74d8c96436dee2dc313",
+    "mesh.py": "cce53e6e89ddef48686f207dd246ee52af77911d6485237cb7a92576ced7a68a",
+    "config.py": "38f47c48b52554a6a90df40eeafc4dc8f7687ebce402bb095d0e1c28a1945e7d"
+  },
+  "libraries": {
+    "numpy": "2.0.2",
+    "scipy": "1.13.1",
+    "scikit-fem": "11.0.0",
+    "h5py": "3.14.0"
+  },
+  "method": "full_material_P2_P1_nonlinear_midpoint",
+  "synthetic": false
+}

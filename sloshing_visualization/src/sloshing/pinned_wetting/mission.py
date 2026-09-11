@@ -167,6 +167,8 @@ def job(root, command, limits):
                 exitcode = state.pop("_job_exit_code", exitcode)
                 state["active_jobs"] = []
                 exit_status=("REVIEW_OR_VERIFICATION_PENDING" if state.get("current_run_scope")=="DECLARED_EXTENSION" else "MODEL_BLOCKED") if exitcode==2 else ("FINISHED" if not exitcode else "STOPPED")
+                if exitcode==2 and state.get("current_run_scope")=="PW2_FREE_BOUNDARY_FIXED_CONDITIONS":
+                    exit_status="NUMERICAL_REVIEW_INCOMPLETE"
                 state.setdefault("job_history", []).append({**job_record, "exit_code": exitcode,
                     "finished_epoch_s": time.time(), "exit_status": exit_status})
                 write_json(mission / "state.json", state)
@@ -201,6 +203,15 @@ def main(root):
     variant = parser.add_mutually_exclusive_group()
     variant.add_argument("--extension", action="store_true", help="Historical symmetric Navier/Navier variant, NOT the corrected target")
     variant.add_argument("--corrected", action="store_true", help="PW1 LEFT Navier / RIGHT no-slip corrective mission")
+    variant.add_argument("--free-boundary", action="store_true", help="PW2 full moving-domain NS, same fixed physical conditions")
+    parser.add_argument("--horizon", type=float, help="PW2 physical end time (default pilot1s / target5s)")
+    parser.add_argument("--right-refine", type=int, default=0, choices=[0,1,2,3,4], help="PW2 initial local refinement levels")
+    parser.add_argument("--case-role", help="PW2 run role, kept separate from physics")
+    parser.add_argument("--rezone-interval", type=float, default=0., help="PW2 conservative same-domain rezoning interval, seconds; 0 disables")
+    parser.add_argument("--hydrostatic-split", action="store_true", help="PW2 approximate pi=p+gz and apply actual free-surface gravity traction")
+    parser.add_argument("--skew-divergence", action="store_true", help="PW2 consistent half-divergence material inertia correction")
+    parser.add_argument("--grad-div-gamma",type=float,default=0.,help="PW2 consistent numerical grad-div coefficient in m2/s, separate from physical viscosity")
+    parser.add_argument("--rezone-strategy", choices=["harmonic_p2","straight_interior","quality_optimized"], default="harmonic_p2")
     parser.add_argument("--mesh-level", type=int, default=0, choices=[0, 1, 2])
     parser.add_argument("--dt-scale", type=float, default=1.)
     parser.add_argument("--reference-t-end", type=float, default=1.)
@@ -210,6 +221,9 @@ def main(root):
     args = parser.parse_args()
     mission = root / "mission/pinned_wetting"
     cfg = yaml.safe_load((mission / "CONFIG.yaml").read_text())
+    if args.free_boundary:
+        from .free_boundary_run import free_boundary_main
+        return free_boundary_main(root, cfg, args)
     if args.corrected:
         from .asymmetric_mission import corrected_main
         return corrected_main(root, cfg, args)

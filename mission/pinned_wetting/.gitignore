@@ -1,2 +1,4 @@
 job.lock
 *.tmp
+# Large local native trajectories for nonlinear free-boundary PW1
+sloshing_visualization/results/pinned_wetting/free_boundary_fixed_conditions/**/*.h5

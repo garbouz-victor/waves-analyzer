@@ -1,6 +1,568 @@
-# EXECPLAN — pinned-wetting-PW1
+# EXECPLAN — pinned-wetting-PW1 / PW2 continuation
+
+## Active successor: PW2 full free-boundary, fixed physical conditions
+
+CURRENT TERMINAL STATUS: RESOURCE_LIMIT, NOT COMPLETE. The managed guard/test/
+fresh-run/audit job has exited and released the lock. Fresh guarded3 native
+contains298states through1.4657091140746972s, SHA
+f85ac4ae9693599a01d8d8089d3362d1e45b9c83c2fc2dd1e5dff018a14467aa.
+The independent full PDE/geometry audit was stopped at state220/t1.10s by
+the actual shared budget; audit_complete=false, passed=false. The remaining
+fresh states are NOT independently qualified. Light post-stop raw-field
+inventory finds P2/rightu/rightw/H_R/H_L-history/marker errors0 for all298
+states, but is expressly NOT a substitute for the unfinished PDE/geometry audit.
+At managed exit charged43219.652856s/43200s (measured40639.652856+aux2580):
+heartbeat enforcement overshot by19.652856s. Strict budget execution is NOT
+marked PASS. A pending45s conservative short-review/metadata allowance is
+also disclosed, producing final charged43264.652856s; no new compute budget.
+The wrapper's secondary KeyError(actual_5s_trajectory) caused raw statusFAILED;
+raw state is preserved, status corrected to RESOURCE_LIMIT from the actual
+audit exception. No further solve/PDE audit/test/render/fresh replay/finer
+smoke is launched. Bounded metadata copying and raw inventory are complete.
+Independent document review approved only the truthful NONFINAL RESOURCE_LIMIT
+handoff, with exact SHA bindings for ten evidence files; target_passed=false.
+Existing two fine-local2 PREVIEW0–1.5s
+and full-prefix native audit are preserved separately; full h1.5 FAIL remains.
+Resource handoff: output/pinned_wetting/free_boundary_fixed_conditions/index.html,
+FINAL_REPORT.md, verification.json (false), native_manifest.json and runtime.json.
+
+## Chronological evidence below — superseded progress snapshots, not active jobs
+
+Fresh repaired-guard run `material-guarded3-94cc4c83d0e3` has now stopped at
+accepted297/t=1.4657091140746972s. First geometric rejection was from293/
+1.465s with dt=.005s; repeated midpoint/endpoint quadratic crossings remain
+down to5.9604644775390625e-6s. Attempts2.9802322387695312e-6s and
+1.4901161193847656e-6s also fail the unchanged mixed residual gate1e-13
+(1.0658141036401503e-13 and2.0724414480275212e-13). No invalid trial was
+promoted, no physical BC/source changed, no5s result exists. The SAME managed
+job is now independently auditing every accepted/midpoint state and remap.
+Do not restart this failed trajectory unchanged. A source-snapshot replay of
+the actual recorded trial and the final non-final evidence review remain
+after the audit; UNRESOLVED_REGION is not assigned as an audited handoff yet.
+
+CURRENT GUARD CORRECTION: independent audit of OLDlocal3 found five exact
+quadratic intersection events in accepted294–296 and two intervening
+midpoints. The64-chord early guard missed these tiny adjacent loops. The
+entire oldnative SHAeb62852c08f380741169b3e0b27c1913d51c225120aea0ef27d7f6e35c835111
+is preserved as an UNQUALIFIED historical numerical attempt, not a PASS.
+An additional production adjacent-quadratic cubic/rational guard now detects
+exactly those5events among all593actual configurations, with no extra flags.
+It is independent of the verifier's full-quadratic elimination.14focused
+testsPASS; the current full suite has completed:724PASS,56optional legacy
+skips,0fail/error,187.90s, frozen-source evidence in tests.xml and
+pytest_evidence.json. ONE managed job is now advancing the FRESH
+exact-initial24×48/RIGHT-local3,.005s,γ=.1 target
+`material-guarded3-94cc4c83d0e3`, followed by its independent full native
+audit. At the latest inspected checkpoint120/t.6s,P2drift0. Numerical source
+identity changed; no old
+checkpoint/invalid state is resumed under it. Physics and all operators
+are unchanged. Remaining before the new job5233.013943s/43200s.
+Source-snapshot replay is now explicitly supported and actually tested:
+--source-snapshot reproduced the exact prior trial NPZcf1773e6...9bc8 after
+the production fix, native unchanged. No5s/final claim, paid compute orpush.
+The paragraphs below preserve the preceding chronological state, not a claim
+that those terminal accepted geometries passed independent verification.
+Two new fine-local2 PREVIEW movies (actual0–1.5s,151frames each,1080p25fps)
+have full decode/frame-map checks. Independent visual/export review inspected
+8decoded frames and all301native contact/coating states: errors0. These are
+the independently valid prefix of the PREVIOUS guard-version fine run, not
+5s, not a spatial-accuracy PASS, and not a substitute for the fresh guarded3
+audit. Refreshed whole-curve temporal upper difference.863479870mm PASS;
+global spatial upper4.243162163mm/6.075413%initial span FAIL. Its lower
+bound3.739316562mm also exceeds the3.492076949mm gate. Additional localh
+comparison only0–1.46s gives upper1.297733224mm/1.858111% PASS for that prefix.
+
+CURRENT: additional local-h remedy `material-local3-5fe3c1d6d207` has stopped
+at accepted296/t1.4667626953124902s, before its planned1.5s pause. It uses
+24×48/RIGHT-local3,dt=.005s,fixed numericalγ=.1,requested5s,exact tilt/rest.
+First rejection: from293/t1.465,dt=.005,full-curve midpoint crossing;
+crossings persist through dt4.76837e-6s. Final1.19209e-6s also fails the
+unchanged rawmixed tolerance (2.91323e-13>1e-13). No rejected candidate is
+accepted, no right contact is moved. The solver exited and released its lock.
+The seven numerical source files remain unchanged. A ONE-trial read-only
+replay now runs under the same lock/budget, then independent all-state audit,
+explicit common-prefix h comparison, full tests, two preview movies and
+evidence packaging will follow. No blind restart of the failed trajectory.
+Remaining at solver exit6910.149809s/43200s, before pending45s short-test
+charge; this is not a RESOURCE_LIMIT claim.
+
+Prior fine-local2 trial was independently reproduced (exit0,8.37s managed):
+fine304/t1.52/dt.005 has two strictly interior transverse quadratic crossings
+at midpoint and two at endpoint, aroundx=.99473–.99487m,z=.00908–.00954m.
+Native SHAfc400d2ea466d206830f7a5d399905650010179c7935d85f0f0c1ea06abf4086;
+candidate557cd629962cad1ea5bfebd7f621190ad8c494b0b8349a185a73ceea49015f46.
+It is never accepted; P2drift0 and positiveJ do not cure global overlap.
+No5s, final-movie, whole-boundary accuracy, continuum-impossibility claim,
+native overwrite, paid compute or push.
+
+## Previous PW2 updates — chronological evidence, not live status
+
+Latest outcome: spacefine `material-spacefine-e9edb937f4e8` now ends at
+accepted309/t1.5219157600402722s. Persistent midpoint/end crossings remain
+under bounded halving; finaldt1.862645e-6s exceeds rawmixed tolerance by a
+small amount (1.033664e-13>1e-13). Its immutable1.5s pilot independently
+PASSES all301states/601curves/29remaps: P2/right/H/coating errors0;
+volume relative5.33e-16, momentum6.10e-14, weak-middiv1.96e-16,
+rawphysicalenergy2.62350e-4E0, split1.35e-10E0. Full h remains FAIL.
+ONE read-only recorded-trial replay is now being tested; native remains
+unchanged. Next is24×48/RIGHT-local3,.005s, fixed γ=.1 from exact initial
+state, requested5s, as an additional targeted local h remedy. No source7
+changes/physics changes/duplicate restart. Remaining before replay:
+9930.377669s of43200s shared charged budget. No5s or final animation claim.
+
+Current case: `material-spacefine-e9edb937f4e8`, 24×48 / RIGHT-local2,
+dt=.005s, fixed numerical γ=.1m²/s, requested0–5s. It has reached the actual
+1.5s pause /300accepted steps, zero rejected trials,2171.14s measured stepping.
+Immutable pilot SHA66ae4cbd7530950c2552ef3b495aad2f58d18dc7d3ee9c672cf3963601e50507.
+P2 drift0, minJ7.04081181e-6m², volume20.000000000000004m²;
+R_L(1.5)=−20.381114975mm, H_L/P3=24.409837066mm atsource.78s,
+confirmed.785s; no P4 in this prefix. Raw physical energy−.000262350257E0,
+split4.99e-11E0. ONE managed followthrough job now computes the full h1.5s
+comparison and independent all-state audit, then resumes this SAME native
+toward5s if the audit passes. The old solver process has exited; no duplicate.
+The12×24 dt.01/.005 pair has independently audited immutable1.5s pilots,
+but both continuations reject full-curve intersections near1.66s. Those are
+not5s results. Temporal comparison over0–1.5s passes. The corresponding h
+comparison now FAILS: sampled whole-curve Hausdorff3.741314804mm, controlled
+upper4.243162163mm (6.075413%initial span), maximal at1.5s. Even subtracting
+the two chord-error bounds from the sampled distance exceeds the5%gate.
+LEFT R difference37.963533µm and H/P3 difference32.702747µm are small, but do
+not qualify the unresolved full boundary. All5s qualification remains open.
+Accepted and midpoint geometry now uses independently residual-checked
+quadratic intersections; the seven numerical-source files remain frozen.
+Do not restart the failed coarse runs unchanged or label a preview final.
+Independent quadratic verifier now frozen (SHA0b080a372e0f805f9863285406908ecbdfa07bc9279bd13f19ccfe83155caf19):
+20focused geometry/native-gate tests PASS. All accepted/end and actual midpoint
+curves will be checked, including exact known-join exclusion and coincident
+segments. Empty finite-precision roots are NOT a rigorous separation certificate.
+The old679full-suite/audit evidence is versioned prior-verifier evidence; refresh
+before release. A bounded7.44s read-only quadrature check on the coarse γ run
+finds order8→16 free momentum action changes1.37e-7 at1.5s and4.42e-6 at its
+terminal1.663425s; powers change much less (terminal grad-div≈0.1%). Therefore
+the tiny saved momentum residual is specifically the discrete order8 residual,
+not a quadrature-exact continuum residual. No gate or physical parameter is
+changed. Evidence: independent_gamma_quadrature_sensitivity.json. The full h
+comparison remains the immediate numerical-resolution check.
+
+Current numerical remedy (declared before solve): fixed consistent grad-div
+γ=.1m²/s, separate from physical viscosity, with independent momentum/energy
+and physical-versus-augmented traction auditing. The500-iteration localRIGHT3
+quality probe completed in246.47s: minJ1.96549e-10m², all surface coordinates
+unchanged, next.005s candidate still inverts. Fixed free-edge tangent nearly
+vanishes (2.05142e-7m); interior r-motion alone cannot cure it. No continuum
+impossibility inferred and no native state overwritten. Shared charged jobs
+28108.637325s/43200s; remaining15091.362675s before this new attempt.
+Implementing new-source runs from the exact initial state:12×24/RIGHTlocal2,
+dt.01/.005;24×48/RIGHTlocal2,dt.005; γ fixed in all comparisons. Target first
+pauses at1.5s, then continues automatically if valid. Physical contract and
+raw energy/refinement gates unchanged. γ=0 records below remain historical.
+
+New γ=.1 target `material-target-874ef6e44ba8` now paused at1.5s/150steps,
+zero rejected trials,368.96s measured stepping time. P2/right drift0;
+minJ5.14935e-5m²,volume20.000000000000004m²; rawenergy−.00129714551E0,
+split1.32618e-11E0. Signed grad-div work−9.24290688e-6 per unit density,
+separate from bulk/LEFT physical dissipation. This is beyond the old γ=0
+obstruction, but not an accuracy/5s PASS. Immutable pilot_1p5s.h5 and a new
+two-video PREVIEW are being generated before full independent pilot audit.
+Core tests17PASS; independent grad-div18PASS including intentional corruptions;
+complete source-bound suite will run next. No duplicate solver or source edits.
+Both γ=.1 preview MP4 now fully decoded:1920×1080,25fps,151 native frames,
+0–1.5s, with complete frame maps and explicit PREVIEW/grad-div/subgrid labels.
+Pilot nativeSHA429263387b04c4578f46540d3ecb8f706ae2cf7a015b3f96cd3f50c579c86984.
+One managed job now runs full pytest, then independent all-state pilot audit,
+then compatible resume of the SAME target to5s if the audit passes. Independent
+γ focused tests18+25+1PASS/31.57s;45s conservative auxiliary charge also covers
+root core tests2.76s,pipcheck3.3s and the short distance check. Isolated venv has
+system site packages disabled and pip check reports no broken requirements.
+Complete frozen-source suite now679PASS,56optional historical backend skips,
+0fail/error,186.64s. Independent pilot audit checks all151states/29remaps and
+PASSES for its actual0–1.5s interval: P2/right/H_R0, volume relative3.55e-16,
+momentum2.45e-13, weak-middiv8.04e-16, rawenergy.00129715E0, split8.72e-11E0.
+The gamma operator/work/physical-versus-augmented traction checks are active.
+Finite-resolution limits are NOT hidden: sampled strongdiv3.2254/s, accepted
+weakdiv8.67e-6, maximum remap surface velocity change.05167m/s, L2projection
+relative.02025; these require dt/h comparison, not a pointwise accuracy claim.
+The SAME native target now resumes1.5→5s automatically in the existing job;
+no repeated prefix, no changed numerical source, no old-method refinement reuse.
+The resumed target subsequently stops at1.663425374031067s/accepted171.
+Full-curve midpoint/end crossings persist under bounded dt halving; the final
+1.86265e-6s trial also exceeds the unchanged mixed residual gate1e-13. Last
+accepted minJ remains positive (about2.62e-5m²), so this is a full-boundary
+topology obstruction, not merely the old interior cell inversion. Rejected
+geometries/coating are never accepted. Now running the SAME12×24/RIGHTlocal2,
+γ=.1 with dt=.005s from the exact initial line/velocity0; first pause1.5s
+for a full-curve temporal comparison, then continue if admissible.24×48 at
+the same dt remains the independently spatial refinement. No numerical or
+physical source changes during the new controlled set. Complete5s is NOT met.
+Independent preview review inspects8decoded frames and all151contact histories:
+visual PASS only, explicitly no PDE/dt/h/resolution/final PASS. Evidence:
+independent_preview_grad_div_review.json, bound to the immutable pilot/render.
+Timefine `material-timefine-ec6ec442d90a` now has300accepted steps to1.5s,
+zero rejected,485.37s stepping. Its immutable pilot SHA is
+fc82305ab2518148dfdf347198dc5536c28cab4d49f3aca7dacd93747744f439.
+Independent full-curve temporal comparison over301union accepted times PASSES
+for0–1.5s only: sampled Hausdorff.361681mm, controlled upper.863480mm
+(1.23634%initial span); maxLEFT R/H difference.361402mm. P3height difference
+.129913mm, source peak time.78s in both, confirmation differs.005s. It does
+NOT qualify the missing5s interval. All-state fine pilot audit is running,
+then continuation uses the same native/source without a repeated prefix.
+
+Actual first target rejection was reproduced from native step166/t1.66 with
+its exact saved dt.009999999999999787, no remesh due. Independent polynomial
+elimination/Newton residual checks on the stored trial NPZ confirm two STRICT
+interior intersections of full quadratic edges19/20 at midpoint and endpoint.
+Midpoint roots are(.996502484441,.017460365361)m and
+(.995531303897,.013923547463)m, residuals<1.3e-17m; P2/right trace0 and
+positive local Jacobians do not prevent this global overlap. Thus the64-chord
+guard is not a false positive for THIS reproduced trial. No assertion about
+unrecorded tiny-trial geometry or continuum impossibility is made. Native
+unchangedSHA bbee3fcae25d5fa35603cd399e427767d3851f5e43c25ba40b68bde47de89914.
+Trial artifact/review: rejected_trial_material-target-874ef6e44ba8_166.npz/json
+and independent_gamma_rejected_trial_review.json. It is NEVER an accepted state.
+Timefine all301pilot states independently PASS: P2/right/H_R0, volume3.55e-16,
+momentum1.75e-14, weak-middiv1.94e-16, rawenergy.00229218E0, split6.32e-11E0.
+Surface-velocity remap maximum falls to.0127653m/s from.0516735m/s at dt.01,
+but sampled strong divergence remains3.19056/s; no pointwise accuracy claim.
+Its automatic continuation then stops at accepted339/t1.659879302978515s,
+with persistent surface-crossing rejection and final tiny-dt linear residual
+1.82965e-13. Difference of last accepted times from dt.01 is3.54607ms; these
+finite-policy stop times are NOT established physical singularity times.
+Now launching24×48/RIGHTlocal2, dt.005, fixed γ=.1 and all other controls
+unchanged from the exact initial state, requested5s with first pause at1.5s.
+This is the spatial remedy/comparison, not a changed physical case or b fit.
+
+Historical γ=0 attempt: guarded `quality_optimized` run
+`material-spacefine-3cffee480bcf`, 24×48 with two local RIGHT refinement
+levels, dt=.005 s, requested horizon5 s. A new exact-initial-state native
+trajectory was computed; previous straight-interior prefixes are historical
+numerical evidence, not refinement partners for this changed mesh method.
+Full local suite before launch:635 passed,56 optional historical backend
+skips,0 failures/errors,194.94 s; source-bound evidence saved. No numerical
+source edits during this run. Both midpoint and accepted endpoint are screened
+for resolved curve crossings before coating/time acceptance. The independent
+verifier separately checks their exact parametric geometry. Interior r-mesh
+optimization preserves every free-boundary coordinate and all physical BCs;
+its positive-J recovery probe was NOT accepted because independent geometry
+found a surface self-intersection. The new run applies quality recovery earlier.
+The single solver job closed without duplicate restart. This run
+passed1.0s/200steps without rejection (1332.53s measured stepping time),
+P2 drift0m, R_L(1)=16.888285060mm, raw continuous-energy defect7.00316e-6E0;
+it continued beyond1s in the same process. It ends at accepted294,
+t=1.4606738281249902s: subsequent full-curve midpoint/endpoint intersections
+persist under bounded dt halving. At the smallest attempts the mixed linear
+residual also exceeds1e-13. Neither rejected geometry nor coating is accepted.
+Independent exact geometry review of four last accepted/collocation pairs
+found positive exact Jacobians, fixedP2 and no verified quadratic crossing or
+extra wall contact (36.67s managed audit). The native shoulder node-to-curve
+clearance shrinks from540.272µm at1.45s to.296172µm at the last saved state;
+this is neither a molecular-film thickness nor a global separation certificate.
+Reports: independent_quality_terminal_geometry_3cffee480bcf.json and
+independent_quality_shoulder_clearance_3cffee480bcf.json in the PW2 output root.
+Next targeted remedy now RUNNING: `material-local3-e0c86408a2be`, local RIGHT level3
+at the same24×48,dt.005,quality strategy,physics and horizon5. It halves the
+initial material edges feeding the failing shoulder (x≈.98561–.99640m), without
+smoothing, cutting or prescribing its later shape. No source edits/relabelled
+checkpoints; new controls create a new run from the exact initial state.
+This is not a5s/accuracy PASS. Charged shared budget after solver exit:
+24843.380459s of43200s, about5.10h remaining before the bounded review.
+The actual standardCLI launches5804triangles/55full-surfaceP2edges with a fresh
+native initial state. The one heavy lock was checked free after the review;
+no duplicate job. Numerical solver sources remain those covered by635passing
+full-suite tests. The independent comparison now uses exact nearest-vertex
+upper bounds and conservative midpoint-ball candidates before the unchanged
+segment-distance formula;21brute-reference/degeneracy/bound tests passed.
+No surface samples, times, distance bounds or gates change. Full pytest will
+be rerun for the updated comparison/test hashes before any release.
+LocalRIGHT3 has now reached1s/200acceptedsteps without rejection,
+2024.39s measured stepping wall time; R_L(1)=16.888474281mm, P2 drift0m,
+raw continuous-energy defect7.01702e-6E0. It continues in the same process
+past this pilot horizon toward5s; full geometry/dt/h qualification is still open.
+LocalRIGHT3 subsequently stops at t=1.3953323364257728s, accepted282:
+mid/end cell inversion persists under dt halving, then tiny-dt mixed residuals
+exceed the unchanged linear gate. Thus extra initial spatial resolution alone
+has not cured the moving-mesh obstruction; no continuum impossibility is inferred.
+Native and rejected attempts are preserved. A bounded read-only500-iteration
+same-boundary quality probe now tests whether the80-iteration mesh optimizer
+left a recoverable interior-map defect, followed by a trial .005s step.
+Probe candidates cannot be appended as accepted trajectory. Remaining charged
+budget before the probe:15338.424453s of the inherited43200s total.
+
+2026-09-11: user explicitly authorized full nonlinear Navier–Stokes on the
+moving domain. HEAD ac418484d48dff5f8104d2177b5c2b1f703a232a, same feature worktree.
+The previous linear slope FAIL is historical evidence, NOT this mission's stop.
+Contract: solve_to_animation_v2/CONTRACT.json. LEFT Navier b=.50 m; RIGHT/BOTTOM
+no-slip; sigma0; exact initial tilted line, velocity0. Method selected and
+audited before first solve in solve_to_animation_v2/MODEL_NOTES.md: material
+isoparametric P2/P1 midpoint FEM, full geometry and material convection.
+Independent reviewer /root/pw2_independent derived GCL/energy split separately.
+Initial audit: no active jobs / free kernel lock. Inherited charged budget
+7029.091415s of43200s, not reset. Existing historical outputs are read-only.
+Implementing moving-domain core and minimal --free-boundary adapter. Next:
+real short solve beyond .0775s, preview,1s pilot, targeted numerical recovery
+if needed,5s target, independent dt/h, native audit and final package.
+
+The sections below preserve the previous PW1 history and are not active stops.
+
+PW2 real proof-of-concept completed: material-poc-adb61f4e3f6c,12×24,
+dt=.0025s,48 accepted steps to.12s (beyond the old.0775s linear failure),
+34.73s stepping wall time, zero rejected trials. Right contact deviation0m;
+volume19.999999999999996m²; continuous energy defect1.97952e-5 E0;
+split defect−8.41e-12 E0. Full material geometry stored, not linear output.
+Flat-rest startup acceleration7.32e-13m/s² and one-step speed3.89e-14m/s.
+Early two-video preview in progress, then nonlinear1s pilot without a prompt.
+Preview now complete: two fully decoded1920×1080 MP4 and index under
+output/pinned_wetting/free_boundary_fixed_conditions/preview/material-poc-adb61f4e3f6c.
+Original12×24 material pilot reaches.825045166s, then RIGHT subsurface cell573
+degenerates (last positive J1.19e−10); bounded dt reductions do not cure it.
+Targeted remedy1: initial local RIGHT refinement, reaches.826984901s before
+the same geometric obstruction; original and refined histories retained.
+No old slope screen applied, no continuum impossibility inferred. Remedy2
+implemented: same-domain harmonic rezoning with full interface unchanged,
+constrained L2 velocity transfer preserving mass and both momenta. Independent
+review approved the same-physics hydrostatic pressure-space split and consistent
+half-divergence stabilization, now explicit optional controls in MODEL_NOTES.
+Tiny remap test: volume change0, momentum error8.97e−18, inverse-map1.07e−14m,
+surface-coordinate change0. New1s rezone/local pilot launched; one shared lock.
+
+P2 harmonic rezoning trial material-rezone1-3c19f21a6c96 retained through.5s;
+next proposal had negative Jacobian cell611 and was rejected before transfer.
+Targeted remedy3: bounded P1-harmonic interior vertices/straight P2 interior edges,
+with every full quadratic free-boundary coordinate unchanged. Trial
+material-straight-0b9ac7e2c74b reaches1.0s (200steps,dt.005), beyond the previous
+.825s mesh failure; P2 error0, raw energy defect4.32651e-5 E0, Jmin1.18831e-4.
+All native states committed. Summary-only NumPy boolean serialization error
+identified and repaired with explicit JSON scalar conversion, regression added.
+The conservative full-source identity deliberately changes for this small fix;
+the trial remains independently auditable pilot evidence, not silently relabelled
+or reused as a new-source refinement. Frozen corrected sources next produce the
+target and matching independent dt/h trajectories. Heavy audit now owns the lock.
+
+Independent1s audit PASS: all201states/19remaps, P2/BC/H defects0,
+volume relative1.78e-16, momentum4.75e-14, midpoint divergence5.81e-16,
+rawenergy4.32651e-5, split1.31e-10 E0. Non-gating resolution diagnostics are
+explicit: endpoint weakdiv1.266e-6, pointwise stage div6.98/s, local step
+dilation.0349, remap surface-velocity change.00754m/s. These require refinement;
+no global accuracy claim yet. Locked controlled set: target dt.01, timefine
+same12×24+localRIGHT1 dt.005, spacefine24×48+localRIGHT1 dt.005, all same
+hydrostatic/skew/straight_interior and rezone interval.05. Each horizon5 checkpoint
+first paused at1s for pilot comparison, then resumed without repeating its prefix.
+New-source target launched. Focused tests99PASS (including external guard tests).
+Target prefix material-target-8994b41b3420 now has100acceptedsteps to1s,
+zero rejections,435.69s measured stepping time, rawenergy6.67828e-4 E0,
+rightP2error0. P3 candidate24.550539mm at.78s, confirmation.79s is PILOT ONLY,
+not final record claim. Real1s two-video preview rendering, then same-source
+timefine/spatial pilots. Actual temporary-git documentation-commit CLI resume
+regressionPASS; newHEAD provenance recorded and checkpointprefix/native reuse
+preserved. Isolated venv `pip check`: no broken requirements. No repo commit/push.
+
+Before starting the h case, select a global1.5× refinement (18×36, same local
+RIGHT level1) instead of the tentative24×48. Measured timefine first50steps:
+205.39s for.25physicalseconds. This smaller but global refinement keeps useful
+budget for recovery and independent all-state audits. It is not a physics change
+or a tuned shape/peak choice; engineering full-boundary tolerance stays5%.
+Both h levels retain dt.005 and identical forms/remap controls. If the comparison
+fails, increase resolution further within the inherited actual budget. Saved
+controls support normal --run-id resume; standard --mesh-level1 supplies24×48
+for a subsequent, genuinely finer user run. No formal order is claimed.
+
+The controlled spacefine18×36/.005 pilot reached .95s/190 accepted steps,
+then conservative remap point location failed for13 quadrature points. Its
+last accepted minimum Jacobian is2.11166e-5, raw continuous-energy defect
+4.15872e-6 E0, P2 drift0. Native and rejected remap evidence are preserved in
+material-spacefine-5451846be9bc. This is a numerical recovery task, not a
+physical STOP. Independent audits of immutable target/timefine1s and spacefine
+.95s copies run first, including exact full-curve wall/topology checks; next
+reproduce the inverse-map failure and repair its cause without altering BCs,
+the interface or the physical parameters. Current controlled data are pilots,
+not qualified final data.
+
+Independent single-time h diagnostic at .95s proves the12/18 pair inadequate:
+full-curve Hausdorff bracket[5.411712,5.915684]mm, lower bound7.75% of the
+69.841539mm initial span, already above5%. LEFT contact differs only.033588mm.
+Thus endpoint agreement alone is insufficient. Last fine geometry is valid,
+with no extra wall contact/self-intersection and exact P2. A bounded Bernstein
+candidate/multistart inverse-map fallback is implemented, awaiting the exact
+failed-remap regression. The next controlled accuracy set is18×36 dt.01/.005
+and24×48 dt.005, same localRIGHT1, forms and rezone.05. This additional global
+refinement addresses measured full-boundary error; thresholds/physics stay
+fixed. New source identity requires new prefixes; no administrative lineage
+framework or alteration of old native is introduced. Actual shared budget,
+not a runtime forecast, remains the hard limit.
+
+Exact .95s recovery regression PASS: previous fast search misses13 points;
+Bernstein/multistart fallback locates all13, maximum inverse error3.94385e-11m,
+surface change0, volume change0, momentum8.33e-17, projection residual4.31e-16.
+Read-only native SHA preserved. Evidence: locator_recovery_095.json. A tiny
+actual-cell1565 test reproduces the failure and checks repaired interpolation;
+20 focused root tests PASS. Also fixed the marker edge case of a later local
+peak below an earlier unmarked plateau (no old marker/state is edited).
+New production sources now frozen for the18/24 controlled set. First launch
+18×36/.005 timefine to1s, then24×48/.005 spacefine;18×36/.01 is the separate
+temporal partner. Restore exact saved controls for subsequent5s continuation.
+
+Repaired material-timefine-3e41db77081f reached1s/200 accepted steps,
+zero rejections,1695.44s measured stepping wall time. The .95s remap passed
+inside the real trajectory. At1s: R_L16.885241mm, H_L24.394369mm; P3 source.78s,
+confirmation.785s (pilot only); P2/H_R34.920769mm with drift0. Volume20m²,
+rawenergy1.87015e-6 E0, minimum J1.80869e-5. Independent verifier now uses
+algebraically equivalent LinearForm actions for ordinary midpoint checks,
+retaining full initial/unreduced-wall/startup/remap matrix audits;8 pure
+curved/straight algebra tests PASS. Full pytest now owns the one heavy lock,
+including validation-marked tests. Next:24×48/.005 pilot and full-curve h gate.
+CSV export gets a separate direct native P2 reconstruction check: all ordered
+points, not just endpoints; drop/linearize/x-sort branch mutations rejected.
+
+Full current local pytest PASS:568 passed,56 optional historical dolfinx/
+petsc4py-dependent skips,0 failures/errors,297.33s; validation tests and PW2
+mission guards included, no deselection. XML and source-bound pytest_evidence
+are in PW2 output; source hashes unchanged during test. No remote CI claim.
+Lock released by reviewer, immediately launch standard CLI spacefine24×48,
+dt=.005, localRIGHT1, same forms/rezone/physics, horizon5 paused at200steps/1s.
 
 ## Финиш
+
+PW2 cost-driven numerical implementation repair (same equations/BC/quadrature):
+24×48 direct case material-spacefine-ab2c2aa408b8 safely stopped after76 committed
+steps/.38s; kernel lock released, native remains readable and unchanged under
+read-only replay. Actual profile:20.43s/step,10.86s assembly and5.75s repeated LU.
+Exact scalar-P2 block assembly plus current-matrix GMRES with fresh-per-step
+lagged-LU preconditioning now takes2.66s for that SAME saved step. X/v/p maximum
+differences1.11e-16/1.28e-15/1.68e-14, true block residual<1e-16, no fallback.
+The more distorted18×36 step at1s agrees similarly (1.80s replay). COLAMD stays:
+actual alternate orderings were slower, so no speculative ordering change.
+Independent algebra/fallback tests and full pytest run before new trajectories.
+New numerical-source identity means all three controlled18/24 cases restart
+from the exact initial state in NEW native runs; old bytes are never migrated
+or relabelled. This bounded optimization addresses measured cost, not a runtime
+forecast STOP, and leaves room for full5s/refinement/audits in the actual ledger.
+
+Accelerated-source full suite:588PASS,56 optional historical skips,0fail/error,
+157.48s, source-bound tests.xml/evidence current. Independent acceleration
+cases20PASS include original full vector operators, changing mixed matrices,
+false Krylov convergence in each residual block, and direct fallback failures.
+Immediately launch NEW timefine18/.005 and spacefine24/.005 to1s, in one
+sequential managed job; then full-boundary h comparison and18/.01 temporal
+partner. Exact controls are unchanged except the equivalently assembled and
+preconditioned numerical source implementation.
+
+New material-timefine-3e4b6e897f2f pilot0–1s completed200acceptedsteps/0rejects,
+654.24s stepping wall time. R_L(1)=16.885241051mm,H_L=24.394368726mm,
+P3 source.780/confirmation.785s; P2 drift0. Raw energy defect1.87010e-6E0,
+volume19.999999999999996m², minJ1.80869e-5, last momentum1.73e-16,
+weakdiv3.80e-17. Immutable pilot_1s.h5 preserved. The same managed job now
+executes new24×48 spacefine; no final/refinement PASS is inferred from this pilot.
+
+Measured conservative-transfer bottleneck then addressed in the SAME numerical
+optimization: direct global-momentum constraint rows caused38.21s of48.65s
+for one actual24×48 remap. Exact2×2 Schur elimination retains every original
+equation and multiplier, validates the full mixed residual, and has full-direct
+fallback. Independent reviewer identified the straight tilted-boundary rank
+dependency; rank-revealing consistent solve checks ALL constraints without
+regularization. Actual replay4.14s, unchanged geometry/cells/refs, full residual
+2.50e-16. Difficult18t.95replay6.25s, residual2.36e-16, native bytes unchanged.
+The locator is NOT modified. material-spacefine-98821b8e3b05 was intentionally
+paused after a committed checkpoint around.25s for this measured repair, not
+scientifically failed. The controlled prefixes get new IDs after final
+independent Schur tests/full pytest; old1s/partial native remain evidence.
+
+Final frozen implementation (fb a0e12b44..., remesh51be6412...):597 full tests
+PASS/56 optional historical skips,0failure/error,326.89s; independent acceleration
+and Schur negatives29PASS. No source change after suite. Shared job immediately
+starts controlled18/.005 and24/.005 prefixes with exact Schur transfer; immutable
+pilot copies are saved at1s, then full-boundary comparison and onward5s.
+
+Current frozen-source timefine pilot material-timefine-adeb60f297c5 completed
+0–1s/200steps/0rejects (596.90s stepping). Native and pilot_1s.h5 preserved.
+R_L(1)=16.885241050mm, H_L/P3=24.394368726mm (source.780,confirmation.785s),
+P2/H_R=34.920769492mm, drift0. Volume20.000000000000004m², rawenergy1.87012e-6E0,
+split1.69e-10E0, minJ1.80869e-5. The same job now advances the24×48 pilot.
+
+Frozen24/localRIGHT1 material-spacefine-cc9333b8f057 reaches.930114936829s,
+190acceptedstates after bounded step reductions, then geometric rejection down
+to1.49e-6s. LastJmin9.03586e-11, cell2849 at surface vertex1546 near
+(x,z)=(.993120489,−.006284678)m; not the P2 endpoint. Independent2-state
+geometry check finds no extra wall contact/self-intersection and P2drift0.
+Single-time h at.9 brackets full-curve distance[2.557116,3.060856]mm (upper4.3826%
+initialspan), NOT full hPASS. An immediate off-schedule conservative rezone
+of lastnative chooses unchanged geometry and cannot take the next.005s trial;
+evidence recovery_rezone_cc933_last.json, no nativewrite. Next targeted remedy:
+NEW24×48/localRIGHT2, same frozen sources/forms/.005dt/.05rezone/b=.5, horizon5
+paused at1s. This is numerical local refinement, not a changed physical wall
+length, extra slip or a reason to apply the old linear slopeSTOP.
+
+Active local2 pilot is material-spacefine-567c375e5426, unified session94380;
+the shared state/lock is authoritative. At.5s:100accepted, no rejection,
+P2drift0, rawenergy5.12333e-7E0. While this unchanged frozen-source run advances,
+an OPTIONAL pure mesh-quality optimizer is prepared in free_boundary_mesh_quality.py.
+It is NOT yet imported by the solver and NOT part of this run's numerical identity.
+Dimensionless per-cell neo-Hookean quality plus explicit vertex log barrier,
+exact all-triangle positive-J trial gate; fixed full free-boundary P2 coordinates,
+wall-normal mesh coordinates and bottom. Independent small algebra/geometry tests
+are being added. Enabling it, if the actual local2 trajectory needs recovery,
+requires an explicit new numerical source identity and new controlled runs;
+no old checkpoint will silently change method. This is a mesh objective, not
+physical elasticity, film thickness, contact angle or a Navier law change.
+
+material-spacefine-567c375e5426 completes its1s pause successfully:200steps,
+0rejects,1191.8058s stepping, volume20m², P2drift0, rawenergy7.00316e-6E0,
+split−1.31368e-10E0, minJ8.53089e-6. H_L/P3=24.396302552mm (source.780,
+confirmation.785s); R_L(1)=16.888285060mm. These are PILOT values, not final
+5s records. The independent reviewer now owns the sole heavy job for full
+0–1s native/geometry/remap audit and entire-boundary h comparison against
+18×36/localRIGHT1 material-timefine-adeb60f297c5. If qualified, continue the
+finest run to5s first, then matching timefine/target; no manual prompt.
+Optional mesh-quality tests:12PASS/.60s; still unused in actual PDE runs.
+Declared SciPy minimum raised1.7.3→1.12 in both normal dependency lists because
+PW2 uses GMRES rtol/atol API. Verified against official SciPy1.12 documentation;
+actual isolated environment remains SciPy1.13.1, no install or numerical-byte
+change. The complete source-bound suite must be rerun after final code freeze;
+the previous597PASS remains historical test evidence, not current full-suite PASS.
+
+Independent localRIGHT2 pilot audit PASS:201acceptedstates/allremaps,
+P2/rightvelocity/H_R defects0, momentum3.9933e-14, midpointweakdiv4.8008e-16,
+volume relative3.5527e-16, rawenergy7.00316e-6E0, split1.93995e-10E0.
+Full0–1s hPASS (upper3.155922mm=4.518690%span), RL/HL max4.283796µm;
+evidence independent_localright2_pilot_1s.json and
+independent_spatial_localright2_pilot_1s.json. Immutable pilot SHA
+c77db977a194bef360c27985ae809f5a6ca56dd0cd2ddc22c9796f47dcbea628.
+Independent managed job5444 finished exit0 and released lock. Continue existing
+material-spacefine-567c375e5426 to5s, with no repeated prefix or numerical edits.
+Package now also requires a real finer CLI smoke/native audit and records exact
+dirty-worktree provenance;23 focused release-guard testsPASS. These package-only
+changes do not alter the running numerical identity.
+Fine pilot non-gating resolution diagnostics remain visible: maximum strong
+stage divergence1.86385/s, accepted-end weakdiv3.13044e-6, remap L2 velocity
+projection relative.00529540, largest surface-velocity remap change.0230961m/s.
+At1s one endpoint-near normal-ray gap is.172616mm versus adjacent-cell normal
+width2.794046mm (ratio.0617801); this tends small near pinnedP2 and is not a
+new physical film-thickness threshold. It is not concealed by the hPASS or by
+exact endpoint Dirichlet values. No rigorous continuum-error bound is claimed.
+
+Fine continuation reaches1.458327941895s/295accepted, then surface-attached
+cell3000 degenerates at an interior free-edge reference point(.19604321,0),
+world(.991387637,.002004107)m, minJ1.06069e-10. NotP2; boundary tangent is nonzero,
+interior mesh DOFs remain movable. Native SHA4c407c178d8b216d9953e91b78a0a8f59e11ddd5c85b473f17c9dde4b60052ed.
+Independent last-state geometry has no wall contact/self-intersection.
+The optional r-mesh optimizer's initial SciPy line search stalled without
+improvement; replaced with feasible Armijo L-BFGS and an EXACT minimum-J witness
+barrier (not just vertices/Gauss points).21 independent algebra/negative testsPASS.
+Actual unchanged-boundary mesh recovery improvesJ to8.12449e-7. Conservative
+transfer and a .005 PDE trial pass residual/GCL/energy checks, BUT independent
+audit confirms transverse self-intersections in midpoint and trial. That trial
+is NOT accepted or appended. Evidence independent_quality_recovery_probe_567c375e_295.json
+and independent_quality_probe_intersection_567c375e_295.json.
+
+New numerical strategy quality_optimized is now implemented, before its first
+trajectory: original .05s rezone plus exact relative-J<.01 adaptive trigger;
+bounded optimizer when candidate relative-J<.2. Full curve/wall-normal positions
+fixed; same conservative velocity transfer. Equations, physical b and coating
+unchanged. Separate production resolved-polyline crossing guard rejects both
+midpoint/end candidates before coating update; independent controlled/exact
+geometry audit remains mandatory. New source identity includes mesh optimizer;
+old prefixes/h evidence remain historical and are not silently migrated.
+Next: focused integration tests, then fresh controlled trajectories from initial
+straight interface, using same18/local1 and24/local2 levels if they qualify.
+
 Реальные surface data 0–5 с, необратимое связное wall wetting, final MP4,
 самостоятельное уточнение и проверка результата для объявленной модели.
 

@@ -1,0 +1,73 @@
+{
+  "run_id": "material-timefine-d0b39dd79cdd",
+  "native": "/home/victor/Projects/waves-pinned-wetting/sloshing_visualization/results/pinned_wetting/free_boundary_fixed_conditions/material-timefine-d0b39dd79cdd/native.h5",
+  "time_s": 1.0,
+  "accepted_step": 200,
+  "completed": false,
+  "target_5s": false,
+  "rejected_this_call": 0,
+  "diagnostics": {
+    "volume_m2": 20.0,
+    "kinetic": 0.0015529666947377506,
+    "potential": 0.0017246499772778634,
+    "energy": 0.003277616672015614,
+    "dt_s": 0.005,
+    "nonlinear_iterations": 5,
+    "nonlinear_error": 8.441025656225065e-13,
+    "momentum_residual": 4.926614671774132e-16,
+    "weak_divergence": 3.7366011435176205e-17,
+    "bulk_loss": 3.357635470755769e-06,
+    "left_wall_loss": 1.4261320248618556e-07,
+    "raw_geometry_kinetic_work": -5.766938064512246e-10,
+    "raw_geometry_potential_work": 1.1505536811525477e-09,
+    "geometric_divergence_work": -5.739439398787995e-10,
+    "hydrostatic_split_work": -1.1394238438897564e-09,
+    "geometry_kinetic_work": -2.7498665724250917e-12,
+    "geometry_potential_work": 1.1129837262791372e-11,
+    "min_jacobian": 0.00011883109897865227,
+    "min_jacobian_cell": 562,
+    "cumulative_bulk_loss": 0.000679519556982915,
+    "cumulative_left_wall_loss": 3.0670960488804014e-05,
+    "cumulative_geometry_kinetic_work": -8.97367718055162e-11,
+    "cumulative_geometry_potential_work": -1.4782353503798465e-09,
+    "last_rezone_time_s": 0.9500000000000001,
+    "rezone_work": 0.0,
+    "cumulative_rezone_work": 1.7409306825267798e-07,
+    "continuous_energy_error": 4.326511896702316e-05,
+    "split_energy_error": 9.830500814284526e-11
+  },
+  "coating": {
+    "run_id": "material-timefine-d0b39dd79cdd",
+    "bottom": -10.0,
+    "H": [
+      0.02442032622008545,
+      0.03492076949174773
+    ],
+    "markers": [
+      {
+        "marker_id": "P1",
+        "side": "L",
+        "height_m": -0.03492076949174773,
+        "created_at_s": 0.0,
+        "state_id": "material-timefine-d0b39dd79cdd:0"
+      },
+      {
+        "marker_id": "P2",
+        "side": "R",
+        "height_m": 0.03492076949174773,
+        "created_at_s": 0.0,
+        "state_id": "material-timefine-d0b39dd79cdd:0"
+      },
+      {
+        "marker_id": "P3",
+        "side": "L",
+        "height_m": 0.02442032622008545,
+        "created_at_s": 0.785,
+        "state_id": "material-timefine-d0b39dd79cdd:156"
+      }
+    ],
+    "accepted_step": 200,
+    "time": 1.0
+  },
+  "model_id": "PW2_FULL_NS_LEFT_NAVIER_RIGHT_NOSLIP_MATERIAL_P2_V1"
+}
